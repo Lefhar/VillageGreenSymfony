@@ -1,0 +1,127 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection}{}\doxysection{Lazy\+Criteria\+Collection Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection}\index{LazyCriteriaCollection@{LazyCriteriaCollection}}
+Inheritance diagram for Lazy\+Criteria\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a1b218dc7e23f9f4b7873a73dba9126a7}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a1b218dc7e23f9f4b7873a73dba9126a7}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_entity_persister}{Entity\+Persister}} \$entity\+Persister, \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} \$criteria)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_aedcc52b3673b8df9425e52f13accb2a1}{is\+Empty}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a13c5d8a1f5c3552eea74839799acebab}{contains}} (\$element)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_acb78394bf2d5e907c3286db303595970}{matching}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} \$criteria)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a5e1fb8c6363bdf6331b2021b1029e76d}{do\+Initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a0fee24d5c7456ded9b20e3c38e184e4a}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a0fee24d5c7456ded9b20e3c38e184e4a}} 
+{\bfseries \$entity\+Persister}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a095f2061791cf4be58c4b41a5790dc85}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a095f2061791cf4be58c4b41a5790dc85}} 
+{\bfseries \$criteria}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A lazy collection that allows a fast count when using criteria object Once count gets executed once without collection being initialized, result is cached and returned on subsequent calls until collection gets loaded, then returning the number of loaded results. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a13c5d8a1f5c3552eea74839799acebab}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a13c5d8a1f5c3552eea74839799acebab}} 
+\index{LazyCriteriaCollection@{LazyCriteriaCollection}!contains@{contains}}
+\index{contains@{contains}!LazyCriteriaCollection@{LazyCriteriaCollection}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{}]{\$element }\end{DoxyParamCaption})}
+
+Do an optimized search of an element
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_abstract_lazy_collection_a13c5d8a1f5c3552eea74839799acebab}{Abstract\+Lazy\+Collection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{LazyCriteriaCollection@{LazyCriteriaCollection}!count@{count}}
+\index{count@{count}!LazyCriteriaCollection@{LazyCriteriaCollection}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Do an efficient count on the collection
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_abstract_lazy_collection_ac751e87b3d4c4bf2feb03bee8b092755}{Abstract\+Lazy\+Collection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a5e1fb8c6363bdf6331b2021b1029e76d}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_a5e1fb8c6363bdf6331b2021b1029e76d}} 
+\index{LazyCriteriaCollection@{LazyCriteriaCollection}!doInitialize@{doInitialize}}
+\index{doInitialize@{doInitialize}!LazyCriteriaCollection@{LazyCriteriaCollection}}
+\doxysubsubsection{\texorpdfstring{doInitialize()}{doInitialize()}}
+{\footnotesize\ttfamily do\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do the initialization logic
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_abstract_lazy_collection_a5e1fb8c6363bdf6331b2021b1029e76d}{Abstract\+Lazy\+Collection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_aedcc52b3673b8df9425e52f13accb2a1}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_aedcc52b3673b8df9425e52f13accb2a1}} 
+\index{LazyCriteriaCollection@{LazyCriteriaCollection}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!LazyCriteriaCollection@{LazyCriteriaCollection}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+check if collection is empty without loading it
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if the collection is empty, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_abstract_lazy_collection_aedcc52b3673b8df9425e52f13accb2a1}{Abstract\+Lazy\+Collection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_acb78394bf2d5e907c3286db303595970}\label{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_acb78394bf2d5e907c3286db303595970}} 
+\index{LazyCriteriaCollection@{LazyCriteriaCollection}!matching@{matching}}
+\index{matching@{matching}!LazyCriteriaCollection@{LazyCriteriaCollection}}
+\doxysubsubsection{\texorpdfstring{matching()}{matching()}}
+{\footnotesize\ttfamily matching (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}}]{\$criteria }\end{DoxyParamCaption})}
+
+Selects all elements from a selectable that match the expression and returns a new collection containing these elements.
+
+\begin{DoxyReturn}{Returns}
+Collection$<$mixed$>$ @psalm-\/return Collection$<$\+TKey,\+T$>$
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_selectable_acb78394bf2d5e907c3286db303595970}{Selectable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Lazy\+Criteria\+Collection.\+php\end{DoxyCompactItemize}

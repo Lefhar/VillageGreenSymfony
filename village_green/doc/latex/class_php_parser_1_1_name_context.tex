@@ -1,0 +1,175 @@
+\hypertarget{class_php_parser_1_1_name_context}{}\doxysection{Name\+Context Class Reference}
+\label{class_php_parser_1_1_name_context}\index{NameContext@{NameContext}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a04d9a6673d674c7fd6945ef19caa84e5}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} \$error\+Handler)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a5d8fa69126edd79ae8c7a9fe7716e3fa}{start\+Namespace}} (\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} \$namespace=null)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a2dc06c178ad90cd80021a7b9c3e187d5}{add\+Alias}} (\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} \$name, string \$alias\+Name, int \$type, array \$error\+Attrs=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a2614df64646ac71b70b1e1074258052b}{get\+Namespace}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a7833f3c89047307275577179655bc1d0}{get\+Resolved\+Name}} (\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} \$name, int \$type)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a296a4d5945baa8d4a94d0b5445446639}{get\+Resolved\+Class\+Name}} (\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} \$name)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a0c6605719d680c70c64e01ed363e64ff}{get\+Possible\+Names}} (string \$name, int \$type)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_name_context_a906b170cd260b11e880b9b9cb512d75d}{get\+Short\+Name}} (string \$name, int \$type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a3825c9b9060c2d6ef594385997cd60aa}\label{class_php_parser_1_1_name_context_a3825c9b9060c2d6ef594385997cd60aa}} 
+{\bfseries \$namespace}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a7e6d29edbd9ec5d8ec9d478cf98fba03}\label{class_php_parser_1_1_name_context_a7e6d29edbd9ec5d8ec9d478cf98fba03}} 
+{\bfseries \$aliases} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_ac3519ae6bc7cbadded54ee2d7bb6ad70}\label{class_php_parser_1_1_name_context_ac3519ae6bc7cbadded54ee2d7bb6ad70}} 
+{\bfseries \$orig\+Aliases} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_ac17770954233f7d662f4c9d08c7f35cc}\label{class_php_parser_1_1_name_context_ac17770954233f7d662f4c9d08c7f35cc}} 
+{\bfseries \$error\+Handler}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a04d9a6673d674c7fd6945ef19caa84e5}\label{class_php_parser_1_1_name_context_a04d9a6673d674c7fd6945ef19caa84e5}} 
+\index{NameContext@{NameContext}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}}}]{\$error\+Handler }\end{DoxyParamCaption})}
+
+Create a name context.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} & {\em \$error\+Handler} & \mbox{\hyperlink{class_php_parser_1_1_error}{Error}} handling used to report errors \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a2dc06c178ad90cd80021a7b9c3e187d5}\label{class_php_parser_1_1_name_context_a2dc06c178ad90cd80021a7b9c3e187d5}} 
+\index{NameContext@{NameContext}!addAlias@{addAlias}}
+\index{addAlias@{addAlias}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{addAlias()}{addAlias()}}
+{\footnotesize\ttfamily add\+Alias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}}]{\$name,  }\item[{string}]{\$alias\+Name,  }\item[{int}]{\$type,  }\item[{array}]{\$error\+Attrs = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Add an alias / import.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Name & {\em \$name} & Original name \\
+\hline
+string & {\em \$alias\+Name} & Aliased name \\
+\hline
+int & {\em \$type} & One of Stmt\textbackslash{}\+Use\+\_\+\+::\+TYPE\+\_\+$\ast$ \\
+\hline
+array & {\em \$error\+Attrs} & Attributes to use to report an error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a2614df64646ac71b70b1e1074258052b}\label{class_php_parser_1_1_name_context_a2614df64646ac71b70b1e1074258052b}} 
+\index{NameContext@{NameContext}!getNamespace@{getNamespace}}
+\index{getNamespace@{getNamespace}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{getNamespace()}{getNamespace()}}
+{\footnotesize\ttfamily get\+Namespace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get current namespace.
+
+\begin{DoxyReturn}{Returns}
+null$\vert$\+Name Namespace (or null if global namespace) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a0c6605719d680c70c64e01ed363e64ff}\label{class_php_parser_1_1_name_context_a0c6605719d680c70c64e01ed363e64ff}} 
+\index{NameContext@{NameContext}!getPossibleNames@{getPossibleNames}}
+\index{getPossibleNames@{getPossibleNames}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{getPossibleNames()}{getPossibleNames()}}
+{\footnotesize\ttfamily get\+Possible\+Names (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{int}]{\$type }\end{DoxyParamCaption})}
+
+Get possible ways of writing a fully qualified name (e.\+g., by making use of aliases).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Fully-\/qualified name (without leading namespace separator) \\
+\hline
+int & {\em \$type} & One of Stmt\textbackslash{}\+Use\+\_\+\+::\+TYPE\+\_\+$\ast$\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name\mbox{[}\mbox{]} Possible representations of the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a296a4d5945baa8d4a94d0b5445446639}\label{class_php_parser_1_1_name_context_a296a4d5945baa8d4a94d0b5445446639}} 
+\index{NameContext@{NameContext}!getResolvedClassName@{getResolvedClassName}}
+\index{getResolvedClassName@{getResolvedClassName}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{getResolvedClassName()}{getResolvedClassName()}}
+{\footnotesize\ttfamily get\+Resolved\+Class\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}}]{\$name }\end{DoxyParamCaption})}
+
+Get resolved class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Name & {\em \$name} & Class ame to resolve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name Resolved name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a7833f3c89047307275577179655bc1d0}\label{class_php_parser_1_1_name_context_a7833f3c89047307275577179655bc1d0}} 
+\index{NameContext@{NameContext}!getResolvedName@{getResolvedName}}
+\index{getResolvedName@{getResolvedName}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{getResolvedName()}{getResolvedName()}}
+{\footnotesize\ttfamily get\+Resolved\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}}]{\$name,  }\item[{int}]{\$type }\end{DoxyParamCaption})}
+
+Get resolved name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Name & {\em \$name} & Name to resolve \\
+\hline
+int & {\em \$type} & One of Stmt\textbackslash{}\+Use\+\_\+\+::\+TYPE\+\_\+\{FUNCTION$\vert$\+CONSTANT\}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null$\vert$\+Name Resolved name, or null if static resolution is not possible 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a906b170cd260b11e880b9b9cb512d75d}\label{class_php_parser_1_1_name_context_a906b170cd260b11e880b9b9cb512d75d}} 
+\index{NameContext@{NameContext}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{getShortName()}{getShortName()}}
+{\footnotesize\ttfamily get\+Short\+Name (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{int}]{\$type }\end{DoxyParamCaption})}
+
+Get shortest representation of this fully-\/qualified name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Fully-\/qualified name (without leading namespace separator) \\
+\hline
+int & {\em \$type} & One of Stmt\textbackslash{}\+Use\+\_\+\+::\+TYPE\+\_\+$\ast$\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name Shortest representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_name_context_a5d8fa69126edd79ae8c7a9fe7716e3fa}\label{class_php_parser_1_1_name_context_a5d8fa69126edd79ae8c7a9fe7716e3fa}} 
+\index{NameContext@{NameContext}!startNamespace@{startNamespace}}
+\index{startNamespace@{startNamespace}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{startNamespace()}{startNamespace()}}
+{\footnotesize\ttfamily start\+Namespace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}}]{\$namespace = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Start a new namespace.
+
+This also resets the alias table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Name | null & {\em \$namespace} & Null is the global namespace \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/Name\+Context.\+php\end{DoxyCompactItemize}

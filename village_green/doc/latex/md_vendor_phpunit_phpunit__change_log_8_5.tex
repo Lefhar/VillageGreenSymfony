@@ -1,0 +1,172 @@
+All notable changes of the PHPUnit 8.\+5 release series are documented in this file using the \href{https://keepachangelog.com/}{\texttt{ Keep a CHANGELOG}} principles.\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md880}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+22...\+8.\+5.\+23\char`\"{} $>$8.\+5.\+23$<$/a$>$ -\/ 2022-\/01-\/21}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md880}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md881}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md881}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4799}{\texttt{ \#4799}}\+: Memory leaks in {\ttfamily PHPUnit\textbackslash{}Framework\textbackslash{}Test\+Suite} class
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4857}{\texttt{ \#4857}}\+: Result of {\ttfamily debug\+\_\+backtrace()} is not used correctly
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md882}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+21...\+8.\+5.\+22\char`\"{} $>$8.\+5.\+22$<$/a$>$ -\/ 2021-\/12-\/25}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md882}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md883}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md883}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4812}{\texttt{ \#4812}}\+: Do not enforce time limits when a debugging session through DBGp is active
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4835}{\texttt{ \#4835}}\+: Support for `\$\+GLOBALS\mbox{[}'\+\_\+composer\+\_\+autoload\+\_\+path\textquotesingle{}\mbox{]}\`{} introduced in Composer 2.\+2
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md884}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md884}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4840}{\texttt{ \#4840}}\+: Test\+Dox prettifying for class names does not correctly handle diacritics
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4846}{\texttt{ \#4846}}\+: Composer proxy script is not ignored
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md885}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+20...\+8.\+5.\+21\char`\"{} $>$8.\+5.\+21$<$/a$>$ -\/ 2021-\/09-\/25}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md885}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md886}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md886}
+
+\begin{DoxyItemize}
+\item PHPUnit no longer converts PHP deprecations to exceptions by default (configure {\ttfamily convert\+Deprecations\+To\+Exceptions=\char`\"{}true\char`\"{}} to enable this)
+\item The PHPUnit XML configuration file generator now configures {\ttfamily convert\+Deprecations\+To\+Exceptions=\char`\"{}true\char`\"{}}
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md887}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md887}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4772}{\texttt{ \#4772}}\+: Test\+Dox HTML report not displayed correctly when browser has custom colour settings
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md888}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+19...\+8.\+5.\+20\char`\"{} $>$8.\+5.\+20$<$/a$>$ -\/ 2021-\/08-\/31}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md888}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md889}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md889}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4751}{\texttt{ \#4751}}\+: Configuration validation fails when using brackets in glob pattern
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md890}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+18...\+8.\+5.\+19\char`\"{} $>$8.\+5.\+19$<$/a$>$ -\/ 2021-\/07-\/31}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md890}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md891}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md891}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4740}{\texttt{ \#4740}}\+: {\ttfamily phpunit.\+phar} does not work with PHP 8.\+1
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md892}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+17...\+8.\+5.\+18\char`\"{} $>$8.\+5.\+18$<$/a$>$ -\/ 2021-\/07-\/19}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md892}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md893}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md893}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4720}{\texttt{ \#4720}}\+: PHPUnit does not verify its own PHP extension requirements
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md894}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+16...\+8.\+5.\+17\char`\"{} $>$8.\+5.\+17$<$/a$>$ -\/ 2021-\/06-\/23}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md894}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md895}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md895}
+
+\begin{DoxyItemize}
+\item PHPUnit now errors out on startup when {\ttfamily PHP\+\_\+\+VERSION} contains a value that is not compatible with {\ttfamily version\+\_\+compare()}, for instance {\ttfamily X.\+Y.\+Z-\/(to be removed in future mac\+OS)}
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md896}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+15...\+8.\+5.\+16\char`\"{} $>$8.\+5.\+16$<$/a$>$ -\/ 2021-\/06-\/05}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md896}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md897}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md897}
+
+\begin{DoxyItemize}
+\item The test result cache (the storage for which is implemented in {\ttfamily PHPUnit\textbackslash{}Runner\textbackslash{}Default\+Test\+Result\+Cache}) no longer uses PHP\textquotesingle{}s {\ttfamily serialize()} and {\ttfamily unserialize()} functions for persistence. It now uses a versioned JSON format instead that is independent of PHP implementation details (see \href{https://github.com/sebastianbergmann/phpunit/issues/3581}{\texttt{ \#3581}} and \href{https://github.com/sebastianbergmann/phpunit/pull/4662}{\texttt{ \#4662}} for examples why this is a problem). When PHPUnit tries to load the test result cache from a file that does not exist, or from a file that does not contain data in JSON format, or from a file that contains data in a JSON format version other than the one used by the currently running PHPUnit version, then this is considered to be a \char`\"{}cache miss\char`\"{}. An empty {\ttfamily Default\+Test\+Result\+Cache} object is created in this case. This should also prevent PHPUnit from crashing when trying to load a test result cache file created by a different version of PHPUnit (see \href{https://github.com/sebastianbergmann/phpunit/issues/4580}{\texttt{ \#4580}} for example).
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md898}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md898}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4663}{\texttt{ \#4663}}\+: {\ttfamily Test\+Case\+::expect\+Error()} works on PHP 7.\+3, but not on PHP \texorpdfstring{$>$}{>}= 7.\+4
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4678}{\texttt{ \#4678}}\+: Stubbed methods with {\ttfamily iterable} return types should return empty array by default
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4692}{\texttt{ \#4692}}\+: Annotations in single-\/line doc-\/comments are not handled correctly
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4694}{\texttt{ \#4694}}\+: {\ttfamily Test\+Case\+::get\+Mock\+From\+Wsdl()} does not work with PHP 8.\+1-\/dev
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md899}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+14...\+8.\+5.\+15\char`\"{} $>$8.\+5.\+15$<$/a$>$ -\/ 2021-\/03-\/17}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md899}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md900}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md900}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4591}{\texttt{ \#4591}}\+: Team\+City logger logs warnings as test failures
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md901}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+13...\+8.\+5.\+14\char`\"{} $>$8.\+5.\+14$<$/a$>$ -\/ 2021-\/01-\/17}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md901}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md902}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md902}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4535}{\texttt{ \#4535}}\+: {\ttfamily get\+Mock\+From\+Wsdl()} does not handle methods that do not have parameters correctly
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4572}{\texttt{ \#4572}}\+: Schema validation does not work with {\ttfamily xx} sequences in path to {\ttfamily phpunit.\+xsd}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4575}{\texttt{ \#4575}}\+: PHPUnit 8.\+5 incompatibility with PHP 8.\+1
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md903}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+12...\+8.\+5.\+13\char`\"{} $>$8.\+5.\+13$<$/a$>$ -\/ 2020-\/12-\/01}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md903}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md904}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md904}
+
+\begin{DoxyItemize}
+\item Running tests in isolated processes did not work with PHP 8 on Windows
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md905}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+11...\+8.\+5.\+12\char`\"{} $>$8.\+5.\+12$<$/a$>$ -\/ 2020-\/11-\/30}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md905}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md906}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md906}
+
+\begin{DoxyItemize}
+\item Changed PHP version constraint in {\ttfamily composer.\+json} from {\ttfamily $^\wedge$7.2} to {\ttfamily \texorpdfstring{$>$}{>}=7.\+2} to allow the installation of PHPUnit 8.\+5 on PHP 8. Please note that the code coverage functionality is not available for PHPUnit 8.\+5 on PHP 8.
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md907}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md907}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4529}{\texttt{ \#4529}}\+: Debug mode of Xdebug 2 is not disabled for PHPT tests
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md908}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+10...\+8.\+5.\+11\char`\"{} $>$8.\+5.\+11$<$/a$>$ -\/ 2020-\/11-\/27}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md908}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md909}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md909}
+
+\begin{DoxyItemize}
+\item Bumped required version of {\ttfamily phpunit/php-\/code-\/coverage}
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md910}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+9...\+8.\+5.\+10\char`\"{} $>$8.\+5.\+10$<$/a$>$ -\/ 2020-\/11-\/27}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md910}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md911}{}\doxysubsection{Added}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md911}
+
+\begin{DoxyItemize}
+\item Support for Xdebug 3
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md912}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md912}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4516}{\texttt{ \#4516}}\+: {\ttfamily phpunit/phpunit-\/selenium} does not work with PHPUnit 8.\+5.\+9
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md913}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+8...\+8.\+5.\+9\char`\"{} $>$8.\+5.\+9$<$/a$>$ -\/ 2020-\/11-\/10}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md913}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md914}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md914}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3965}{\texttt{ \#3965}}\+: Process Isolation throws exceptions when PHPDBG is used
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/4470}{\texttt{ \#4470}}\+: Infinite recursion when {\ttfamily -\/-\/static-\/backup -\/-\/strict-\/global-\/state} is used
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md915}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+7...\+8.\+5.\+8\char`\"{} $>$8.\+5.\+8$<$/a$>$ -\/ 2020-\/06-\/22}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md915}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md916}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md916}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4312}{\texttt{ \#4312}}\+: Fix for \href{https://github.com/sebastianbergmann/phpunit/issues/4299}{\texttt{ \#4299}} breaks backward compatibility
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md917}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+6...\+8.\+5.\+7\char`\"{} $>$8.\+5.\+7$<$/a$>$ -\/ 2020-\/06-\/21}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md917}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md918}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md918}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4299}{\texttt{ \#4299}}\+: \char`\"{}\+No tests executed\char`\"{} does not always result in exit code {\ttfamily 1}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4306}{\texttt{ \#4306}}\+: Exceptions during code coverage driver initialization are not handled correctly
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md919}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+5...\+8.\+5.\+6\char`\"{} $>$8.\+5.\+6$<$/a$>$ -\/ 2020-\/06-\/15}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md919}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md920}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md920}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4211}{\texttt{ \#4211}}\+: {\ttfamily phpdbg\+\_\+$\ast$()} functions are scoped to {\ttfamily PHPUnit\textbackslash{}phpdbg\+\_\+$\ast$()}
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md921}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+4...\+8.\+5.\+5\char`\"{} $>$8.\+5.\+5$<$/a$>$ -\/ 2020-\/05-\/22}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md921}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md922}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md922}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4033}{\texttt{ \#4033}}\+: Unexpected behaviour when {\ttfamily \$\+GLOBALS} is deleted
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md923}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+3...\+8.\+5.\+4\char`\"{} $>$8.\+5.\+4$<$/a$>$ -\/ 2020-\/04-\/23}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md923}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md924}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md924}
+
+\begin{DoxyItemize}
+\item Changed how {\ttfamily PHPUnit\textbackslash{}Text\+UI\textbackslash{}Command} passes warnings to {\ttfamily PHPUnit\textbackslash{}Text\+UI\textbackslash{}Test\+Runner}
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md925}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+2...\+8.\+5.\+3\char`\"{} $>$8.\+5.\+3$<$/a$>$ -\/ 2020-\/03-\/31}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md925}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md926}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md926}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4017}{\texttt{ \#4017}}\+: Do not suggest refactoring to something that is also deprecated
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4133}{\texttt{ \#4133}}\+: {\ttfamily expect\+Exception\+Message\+Reg\+Exp()} has been removed in PHPUnit 9 without a deprecation warning being given in PHPUnit 8
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4139}{\texttt{ \#4139}}\+: Cannot double interfaces that declare a constructor with PHP 8
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/4144}{\texttt{ \#4144}}\+: Empty objects are converted to empty arrays in JSON comparison failure diff
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md927}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+1...\+8.\+5.\+2\char`\"{} $>$8.\+5.\+2$<$/a$>$ -\/ 2020-\/01-\/08}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md927}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md928}{}\doxysubsection{Removed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md928}
+
+\begin{DoxyItemize}
+\item {\ttfamily eval-\/stdin.\+php} has been removed, it was not used anymore since PHPUnit 7.\+2.\+7
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md929}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+5.\+0...\+8.\+5.\+1\char`\"{} $>$8.\+5.\+1$<$/a$>$ -\/ 2019-\/12-\/25}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md929}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md930}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md930}
+
+\begin{DoxyItemize}
+\item {\ttfamily eval-\/stdin.\+php} can now only be executed with {\ttfamily cli} and {\ttfamily phpdbg}
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md931}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md931}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3983}{\texttt{ \#3983}}\+: Deprecation warning given too eagerly
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md932}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/sebastianbergmann/phpunit/compare/8.\+4.\+3...\+8.\+5.\+0\char`\"{} $>$8.\+5.\+0$<$/a$>$ -\/ 2019-\/12-\/06}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md932}
+\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md933}{}\doxysubsection{Added}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md933}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3911}{\texttt{ \#3911}}\+: Support combined use of {\ttfamily add\+Methods()} and {\ttfamily only\+Methods()}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3949}{\texttt{ \#3949}}\+: Introduce specialized assertions {\ttfamily assert\+File\+Equals\+Canonicalizing()}, {\ttfamily assert\+File\+Equals\+Ignoring\+Case()}, {\ttfamily assert\+String\+Equals\+File\+Canonicalizing()}, {\ttfamily assert\+String\+Equals\+File\+Ignoring\+Case()}, {\ttfamily assert\+File\+Not\+Equals\+Canonicalizing()}, {\ttfamily assert\+File\+Not\+Equals\+Ignoring\+Case()}, {\ttfamily assert\+String\+Not\+Equals\+File\+Canonicalizing()}, and {\ttfamily assert\+String\+Not\+Equals\+File\+Ignoring\+Case()} as alternative to using {\ttfamily assert\+File\+Equals()} etc. with optional parameters
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md934}{}\doxysubsection{Changed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md934}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/3860}{\texttt{ \#3860}}\+: Deprecate invoking PHPUnit commandline test runner with just a class name
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3950}{\texttt{ \#3950}}\+: Deprecate optional parameters of {\ttfamily assert\+File\+Equals()} etc.
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3955}{\texttt{ \#3955}}\+: Deprecate support for doubling multiple interfaces
+\end{DoxyItemize}\hypertarget{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md935}{}\doxysubsection{Fixed}\label{md_vendor_phpunit_phpunit__change_log_8_5_autotoc_md935}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3953}{\texttt{ \#3953}}\+: Code Coverage for test executed in isolation does not work when the PHAR is used
+\item \href{https://github.com/sebastianbergmann/phpunit/issues/3967}{\texttt{ \#3967}}\+: Cannot double interface that extends interface that extends {\ttfamily \textbackslash{}Throwable}
+\item \href{https://github.com/sebastianbergmann/phpunit/pull/3968}{\texttt{ \#3968}}\+: Test class run in a separate PHP process are passing when {\ttfamily exit} called inside 
+\end{DoxyItemize}

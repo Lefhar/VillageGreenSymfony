@@ -1,0 +1,59 @@
+\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1705}{}\doxysection{6.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1705}
+
+\begin{DoxyItemize}
+\item Remove {\ttfamily Set\+Up\+Tear\+Down\+Trait}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1706}{}\doxysection{5.\+3}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1706}
+
+\begin{DoxyItemize}
+\item bumped the minimum PHP version to 7.\+1.\+3
+\item bumped the minimum PHPUnit version to 7.\+5
+\item deprecated the {\ttfamily Set\+Up\+Tear\+Down\+Trait} trait, use original methods with \char`\"{}void\char`\"{} return typehint.
+\item added {\ttfamily log\+File} option to write deprecations to a file instead of echoing them
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1707}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1707}
+
+\begin{DoxyItemize}
+\item ignore verbosity settings when the build fails because of deprecations
+\item added per-\/group verbosity
+\item added {\ttfamily Expect\+Deprecation\+Trait} to be able to define an expected deprecation from inside a test
+\item deprecated the {\ttfamily @expected\+Deprecation} annotation, use the {\ttfamily Expect\+Deprecation\+Trait\+::expect\+Deprecation()} method instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1708}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1708}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily weak\+\_\+vendor} mode, use {\ttfamily max\mbox{[}self\mbox{]}=0} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1709}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1709}
+
+\begin{DoxyItemize}
+\item made the bridge act as a polyfill for newest PHPUnit features
+\item added {\ttfamily Set\+Up\+Tear\+Down\+Trait} to allow working around the {\ttfamily void} return-\/type added by PHPUnit 8
+\item added namespace aliases for PHPUnit \texorpdfstring{$<$}{<} 6
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1710}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1710}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Class\+Exists\+Mock}
+\item bumped PHP version from 5.\+3.\+3 to 5.\+5.\+9
+\item split simple-\/phpunit bin into php file with code and a shell script
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1711}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1711}
+
+\begin{DoxyItemize}
+\item Search for {\ttfamily SYMFONY\+\_\+\+PHPUNIT\+\_\+\+VERSION}, {\ttfamily SYMFONY\+\_\+\+PHPUNIT\+\_\+\+REMOVE}, {\ttfamily SYMFONY\+\_\+\+PHPUNIT\+\_\+\+DIR} env var in {\ttfamily phpunit.\+xml} then in {\ttfamily phpunit.\+xml.\+dist}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1712}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1712}
+
+\begin{DoxyItemize}
+\item support for the {\ttfamily test\+Legacy} prefix in method names to mark a test as legacy has been dropped, use the {\ttfamily @group legacy} notation instead
+\item support for the {\ttfamily Legacy} prefix in class names to mark tests as legacy has been dropped, use the {\ttfamily @group legacy} notation instead
+\item support for passing an array of mocked namespaces not indexed by the mock feature to the constructor of the {\ttfamily Symfony\+Tests\+Listener\+Trait} class was dropped
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1713}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1713}
+
+\begin{DoxyItemize}
+\item added a {\ttfamily Coverage\+Listener} to enhance the code coverage report
+\item all deprecations but those from tests marked with {\ttfamily @group legacy} are always displayed when not in {\ttfamily weak} mode
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1714}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1714}
+
+\begin{DoxyItemize}
+\item using the {\ttfamily test\+Legacy} prefix in method names to mark a test as legacy is deprecated, use the {\ttfamily @group legacy} notation instead
+\item using the {\ttfamily Legacy} prefix in class names to mark a test as legacy is deprecated, use the {\ttfamily @group legacy} notation instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1715}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_phpunit_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1715}
+
+\begin{DoxyItemize}
+\item passing a numerically indexed array to the constructor of the {\ttfamily Symfony\+Tests\+Listener\+Trait} is deprecated, pass an array of namespaces indexed by the mocked feature instead 
+\end{DoxyItemize}

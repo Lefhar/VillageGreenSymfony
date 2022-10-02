@@ -1,0 +1,93 @@
+\hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler}{}\doxysection{Send\+Grid\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_send_grid_handler}\index{SendGridHandler@{SendGridHandler}}
+Inheritance diagram for Send\+Grid\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_send_grid_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_send_grid_handler_abb0ab490fcb802f31bf0a85f86b19688}{\+\_\+\+\_\+construct}} (string \$api\+User, string \$api\+Key, string \$from, \$to, string \$subject, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_send_grid_handler_a7986db5d2c2ac3aee83038720fde8b45}{send}} (string \$content, array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_ad58b2152603f4732b109b0f1b10f294d}\label{class_monolog_1_1_handler_1_1_send_grid_handler_ad58b2152603f4732b109b0f1b10f294d}} 
+{\bfseries \$api\+User}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_a084e3db37d1b117a3cc7212cf2eed533}\label{class_monolog_1_1_handler_1_1_send_grid_handler_a084e3db37d1b117a3cc7212cf2eed533}} 
+{\bfseries \$api\+Key}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_a0bb7e2b3d541598cc9c9e3b11bee859c}\label{class_monolog_1_1_handler_1_1_send_grid_handler_a0bb7e2b3d541598cc9c9e3b11bee859c}} 
+{\bfseries \$from}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_ac19f839b525d6d99d063fe56bf2a6d3b}\label{class_monolog_1_1_handler_1_1_send_grid_handler_ac19f839b525d6d99d063fe56bf2a6d3b}} 
+{\bfseries \$to}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_afea90503726cd5ad2eb80baf0b6d217d}\label{class_monolog_1_1_handler_1_1_send_grid_handler_afea90503726cd5ad2eb80baf0b6d217d}} 
+{\bfseries \$subject}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Send\+Gridr\+Handler uses the Send\+Grid API v2 function to send Log emails, more information in \href{https://sendgrid.com/docs/API_Reference/Web_API/mail.html}{\texttt{ https\+://sendgrid.\+com/docs/\+API\+\_\+\+Reference/\+Web\+\_\+\+API/mail.\+html}}
+
+\begin{DoxyAuthor}{Author}
+Ricardo Fontanelli \href{mailto:ricardo.fontanelli@hotmail.com}{\texttt{ ricardo.\+fontanelli@hotmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_abb0ab490fcb802f31bf0a85f86b19688}\label{class_monolog_1_1_handler_1_1_send_grid_handler_abb0ab490fcb802f31bf0a85f86b19688}} 
+\index{SendGridHandler@{SendGridHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SendGridHandler@{SendGridHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$api\+User,  }\item[{string}]{\$api\+Key,  }\item[{string}]{\$from,  }\item[{}]{\$to,  }\item[{string}]{\$subject,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$api\+User} & The Send\+Grid API User \\
+\hline
+string & {\em \$api\+Key} & The Send\+Grid API Key \\
+\hline
+string & {\em \$from} & The sender of the email \\
+\hline
+string | string\mbox{[}$\,$\mbox{]} & {\em \$to} & The recipients of the email \\
+\hline
+string & {\em \$subject} & The subject of the mail \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_send_grid_handler_a7986db5d2c2ac3aee83038720fde8b45}\label{class_monolog_1_1_handler_1_1_send_grid_handler_a7986db5d2c2ac3aee83038720fde8b45}} 
+\index{SendGridHandler@{SendGridHandler}!send@{send}}
+\index{send@{send}!SendGridHandler@{SendGridHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{string}]{\$content,  }\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send a mail with the given content
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & formatted email body to be sent \\
+\hline
+array & {\em \$records} & the array of log records that formed this content\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}{Mail\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Send\+Grid\+Handler.\+php\end{DoxyCompactItemize}

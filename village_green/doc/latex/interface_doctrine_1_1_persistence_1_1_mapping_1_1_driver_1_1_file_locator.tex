@@ -1,0 +1,124 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}{}\doxysection{File\+Locator Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}\index{FileLocator@{FileLocator}}
+Inheritance diagram for File\+Locator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a4b00ba178190dd08cade939786a68cbe}{find\+Mapping\+File}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}{get\+All\+Class\+Names}} (\$global\+Basename)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}{file\+Exists}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a3872a8fe71c89ed326681ef568e5498a}{get\+Paths}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}{get\+File\+Extension}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Locates the file that contains the metadata information for a given class name.
+
+This behavior is independent of the actual content of the file. It just detects the file which is responsible for the given class name. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}} 
+\index{FileLocator@{FileLocator}!fileExists@{fileExists}}
+\index{fileExists@{fileExists}!FileLocator@{FileLocator}}
+\doxysubsubsection{\texorpdfstring{fileExists()}{fileExists()}}
+{\footnotesize\ttfamily file\+Exists (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Checks if a file can be found for this class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}{Default\+File\+Locator}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_symfony_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}{Symfony\+File\+Locator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a4b00ba178190dd08cade939786a68cbe}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a4b00ba178190dd08cade939786a68cbe}} 
+\index{FileLocator@{FileLocator}!findMappingFile@{findMappingFile}}
+\index{findMappingFile@{findMappingFile}!FileLocator@{FileLocator}}
+\doxysubsubsection{\texorpdfstring{findMappingFile()}{findMappingFile()}}
+{\footnotesize\ttfamily find\+Mapping\+File (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Locates mapping file for the given class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a4b00ba178190dd08cade939786a68cbe}{Default\+File\+Locator}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_symfony_file_locator_a4b00ba178190dd08cade939786a68cbe}{Symfony\+File\+Locator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}} 
+\index{FileLocator@{FileLocator}!getAllClassNames@{getAllClassNames}}
+\index{getAllClassNames@{getAllClassNames}!FileLocator@{FileLocator}}
+\doxysubsubsection{\texorpdfstring{getAllClassNames()}{getAllClassNames()}}
+{\footnotesize\ttfamily get\+All\+Class\+Names (\begin{DoxyParamCaption}\item[{}]{\$global\+Basename }\end{DoxyParamCaption})}
+
+Gets all class names that are found with this file locator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$global\+Basename} & Passed to allow excluding the basename.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} @psalm-\/return list\texorpdfstring{$<$}{<}class-\/string\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}{Default\+File\+Locator}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_symfony_file_locator_aef41db059d82ce2ef9014d551284c923}{Symfony\+File\+Locator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}} 
+\index{FileLocator@{FileLocator}!getFileExtension@{getFileExtension}}
+\index{getFileExtension@{getFileExtension}!FileLocator@{FileLocator}}
+\doxysubsubsection{\texorpdfstring{getFileExtension()}{getFileExtension()}}
+{\footnotesize\ttfamily get\+File\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the file extension that mapping files are suffixed with.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}{Default\+File\+Locator}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_symfony_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}{Symfony\+File\+Locator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a3872a8fe71c89ed326681ef568e5498a}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a3872a8fe71c89ed326681ef568e5498a}} 
+\index{FileLocator@{FileLocator}!getPaths@{getPaths}}
+\index{getPaths@{getPaths}!FileLocator@{FileLocator}}
+\doxysubsubsection{\texorpdfstring{getPaths()}{getPaths()}}
+{\footnotesize\ttfamily get\+Paths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all the paths that this file locator looks for mapping files.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a3872a8fe71c89ed326681ef568e5498a}{Default\+File\+Locator}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_symfony_file_locator_a3872a8fe71c89ed326681ef568e5498a}{Symfony\+File\+Locator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/\+Driver/File\+Locator.\+php\end{DoxyCompactItemize}

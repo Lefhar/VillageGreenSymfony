@@ -1,0 +1,52 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_schema_dumper}{}\doxysection{Schema\+Dumper Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_schema_dumper}\index{SchemaDumper@{SchemaDumper}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_schema_dumper_a1a2d46c0650363d4fc9d914960f7b714}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}{Abstract\+Schema\+Manager}} \$schema\+Manager, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_generator}{Generator}} \$migration\+Generator, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_sql_generator}{Sql\+Generator}} \$migration\+Sql\+Generator, array \$excluded\+Tables\+Regexes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_schema_dumper_ab060cf6b1b51f1792d4b96afdd8e352d}{dump}} (string \$fqcn, array \$excluded\+Tables\+Regexes=\mbox{[}$\,$\mbox{]}, bool \$formatted=false, int \$line\+Length=120)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_schema_dumper}{Schema\+Dumper}} class is responsible for dumping the current state of your database schema to a migration. This is to be used in conjunction with the \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_rollup}{Rollup}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_schema_dumper_a1a2d46c0650363d4fc9d914960f7b714}\label{class_doctrine_1_1_migrations_1_1_schema_dumper_a1a2d46c0650363d4fc9d914960f7b714}} 
+\index{SchemaDumper@{SchemaDumper}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SchemaDumper@{SchemaDumper}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}{Abstract\+Schema\+Manager}}}]{\$schema\+Manager,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_generator}{Generator}}}]{\$migration\+Generator,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_sql_generator}{Sql\+Generator}}}]{\$migration\+Sql\+Generator,  }\item[{array}]{\$excluded\+Tables\+Regexes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Abstract\+Schema\+Manager$<$\+Abstract\+Platform$>$} & \$schema\+Manager \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$excluded\+Tables\+Regexes} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_schema_dumper_ab060cf6b1b51f1792d4b96afdd8e352d}\label{class_doctrine_1_1_migrations_1_1_schema_dumper_ab060cf6b1b51f1792d4b96afdd8e352d}} 
+\index{SchemaDumper@{SchemaDumper}!dump@{dump}}
+\index{dump@{dump}!SchemaDumper@{SchemaDumper}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily dump (\begin{DoxyParamCaption}\item[{string}]{\$fqcn,  }\item[{array}]{\$excluded\+Tables\+Regexes = {\ttfamily \mbox{[}\mbox{]}},  }\item[{bool}]{\$formatted = {\ttfamily false},  }\item[{int}]{\$line\+Length = {\ttfamily 120} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$excluded\+Tables\+Regexes} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em No\+Tables\+Found} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/Schema\+Dumper.\+php\end{DoxyCompactItemize}

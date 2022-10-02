@@ -1,0 +1,96 @@
+\hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach__}{}\doxysection{Foreach\+\_\+ Class Reference}
+\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach__}\index{Foreach\_@{Foreach\_}}
+Inheritance diagram for Foreach\+\_\+\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_php_parser_1_1_node_1_1_stmt_1_1_foreach__}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___acd344b2054666315c2261e9f985033ea}{\+\_\+\+\_\+construct}} (Node\textbackslash{}\+Expr \$expr, Node\textbackslash{}\+Expr \$value\+Var, array \$sub\+Nodes=\mbox{[}$\,$\mbox{]}, array \$attributes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a7e06a91cc526dc52826d18313e64798a}{get\+Sub\+Node\+Names}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___aa660a3177eb257a767c0323f967d877f}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___aa660a3177eb257a767c0323f967d877f}} 
+{\bfseries \$expr}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a77e9952807e46f87fb9f7269263bccec}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a77e9952807e46f87fb9f7269263bccec}} 
+{\bfseries \$key\+Var}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a5649918e8bd2664fff6709e4e8d1e52f}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a5649918e8bd2664fff6709e4e8d1e52f}} 
+{\bfseries \$by\+Ref}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a570dcfcb738ab7384c6ec4c492b7cdf4}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a570dcfcb738ab7384c6ec4c492b7cdf4}} 
+{\bfseries \$value\+Var}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a2c2c15e99eca72b05beb20ae91729fda}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a2c2c15e99eca72b05beb20ae91729fda}} 
+{\bfseries \$stmts}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___acd344b2054666315c2261e9f985033ea}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___acd344b2054666315c2261e9f985033ea}} 
+\index{Foreach\_@{Foreach\_}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Foreach\_@{Foreach\_}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Node\textbackslash{}\+Expr}]{\$expr,  }\item[{Node\textbackslash{}\+Expr}]{\$value\+Var,  }\item[{array}]{\$sub\+Nodes = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs a foreach node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Node\textbackslash{}\+Expr & {\em \$expr} & \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_expression}{Expression}} to iterate \\
+\hline
+Node\textbackslash{}\+Expr & {\em \$value\+Var} & Variable to assign value to \\
+\hline
+array & {\em \$sub\+Nodes} & Array of the following optional subnodes\+: \textquotesingle{}key\+Var\textquotesingle{} =\texorpdfstring{$>$}{>} null \+: Variable to assign key to \textquotesingle{}by\+Ref\textquotesingle{} =\texorpdfstring{$>$}{>} false \+: Whether to assign value by reference \textquotesingle{}stmts\textquotesingle{} =\texorpdfstring{$>$}{>} array()\+: Statements \\
+\hline
+array & {\em \$attributes} & Additional attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a7e06a91cc526dc52826d18313e64798a}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a7e06a91cc526dc52826d18313e64798a}} 
+\index{Foreach\_@{Foreach\_}!getSubNodeNames@{getSubNodeNames}}
+\index{getSubNodeNames@{getSubNodeNames}!Foreach\_@{Foreach\_}}
+\doxysubsubsection{\texorpdfstring{getSubNodeNames()}{getSubNodeNames()}}
+{\footnotesize\ttfamily get\+Sub\+Node\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of the sub nodes.
+
+\begin{DoxyReturn}{Returns}
+array Names of sub nodes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a7e06a91cc526dc52826d18313e64798a}{Node}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a830b5c75df72b32396701bc563fbe3c7}\label{class_php_parser_1_1_node_1_1_stmt_1_1_foreach___a830b5c75df72b32396701bc563fbe3c7}} 
+\index{Foreach\_@{Foreach\_}!getType@{getType}}
+\index{getType@{getType}!Foreach\_@{Foreach\_}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the type of the node.
+
+\begin{DoxyReturn}{Returns}
+string Type of the node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a830b5c75df72b32396701bc563fbe3c7}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Stmt/Foreach\+\_\+.\+php\end{DoxyCompactItemize}

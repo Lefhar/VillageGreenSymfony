@@ -1,0 +1,64 @@
+\hypertarget{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler}{}\doxysection{IFTTTHandler Class Reference}
+\label{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler}\index{IFTTTHandler@{IFTTTHandler}}
+Inheritance diagram for IFTTTHandler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_a7ade2f24dce6739136b847c303eaef6e}{\+\_\+\+\_\+construct}} (string \$event\+Name, string \$secret\+Key, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler}{IFTTTHandler}} uses c\+URL to trigger IFTTT Maker actions
+
+Register a secret key and trigger/event name at \href{https://ifttt.com/maker}{\texttt{ https\+://ifttt.\+com/maker}}
+
+value1 will be the channel from monolog\textquotesingle{}s \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} constructor, value2 will be the level name (ERROR, WARNING, ..) value3 will be the log record\textquotesingle{}s message
+
+\begin{DoxyAuthor}{Author}
+Nehal Patel \href{mailto:nehal@nehalpatel.me}{\texttt{ nehal@nehalpatel.\+me}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_a7ade2f24dce6739136b847c303eaef6e}\label{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_a7ade2f24dce6739136b847c303eaef6e}} 
+\index{IFTTTHandler@{IFTTTHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!IFTTTHandler@{IFTTTHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$event\+Name,  }\item[{string}]{\$secret\+Key,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the IFTTT Maker event that should be triggered \\
+\hline
+string & {\em \$secret\+Key} & A valid IFTTT secret key \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{IFTTTHandler@{IFTTTHandler}!write@{write}}
+\index{write@{write}!IFTTTHandler@{IFTTTHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/IFTTTHandler.\+php\end{DoxyCompactItemize}

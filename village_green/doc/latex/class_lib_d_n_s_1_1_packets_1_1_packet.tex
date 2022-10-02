@@ -1,0 +1,119 @@
+\hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet}{}\doxysection{Packet Class Reference}
+\label{class_lib_d_n_s_1_1_packets_1_1_packet}\index{Packet@{Packet}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_ab845622247b5c380f01bb56191365195}{\+\_\+\+\_\+construct}} (string \$data=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_abdf6cd8ba922e3019fce3cc378895cdd}{read}} (int \$length=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_a8c29af408105ba75bc2b973aa4bc1bf7}{write}} (string \$data)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_af1df25980cf1c41f38a43fdc718c1516}{get\+Pointer}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_ab5488c3ac7166d1612dc1d53bcac3984}{get\+Length}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_a3f07a153d017c650196482efdd8046f4}{get\+Bytes\+Remaining}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_ab845622247b5c380f01bb56191365195}\label{class_lib_d_n_s_1_1_packets_1_1_packet_ab845622247b5c380f01bb56191365195}} 
+\index{Packet@{Packet}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$data = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & The initial packet raw data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_a3f07a153d017c650196482efdd8046f4}\label{class_lib_d_n_s_1_1_packets_1_1_packet_a3f07a153d017c650196482efdd8046f4}} 
+\index{Packet@{Packet}!getBytesRemaining@{getBytesRemaining}}
+\index{getBytesRemaining@{getBytesRemaining}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{getBytesRemaining()}{getBytesRemaining()}}
+{\footnotesize\ttfamily get\+Bytes\+Remaining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the number of remaining bytes from the pointer position
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_ab5488c3ac7166d1612dc1d53bcac3984}\label{class_lib_d_n_s_1_1_packets_1_1_packet_ab5488c3ac7166d1612dc1d53bcac3984}} 
+\index{Packet@{Packet}!getLength@{getLength}}
+\index{getLength@{getLength}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data length
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_af1df25980cf1c41f38a43fdc718c1516}\label{class_lib_d_n_s_1_1_packets_1_1_packet_af1df25980cf1c41f38a43fdc718c1516}} 
+\index{Packet@{Packet}!getPointer@{getPointer}}
+\index{getPointer@{getPointer}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{getPointer()}{getPointer()}}
+{\footnotesize\ttfamily get\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the pointer index
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_abdf6cd8ba922e3019fce3cc378895cdd}\label{class_lib_d_n_s_1_1_packets_1_1_packet_abdf6cd8ba922e3019fce3cc378895cdd}} 
+\index{Packet@{Packet}!read@{read}}
+\index{read@{read}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}\item[{int}]{\$length = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Read bytes from the packet data
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$length} & The number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Out\+Of\+Bounds\+Exception When the pointer position is invalid or the supplied length is negative \mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_a4a20559544fdf4dcb457e258dc976cf8}\label{class_lib_d_n_s_1_1_packets_1_1_packet_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{Packet@{Packet}!reset@{reset}}
+\index{reset@{reset}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the read pointer \mbox{\Hypertarget{class_lib_d_n_s_1_1_packets_1_1_packet_a8c29af408105ba75bc2b973aa4bc1bf7}\label{class_lib_d_n_s_1_1_packets_1_1_packet_a8c29af408105ba75bc2b973aa4bc1bf7}} 
+\index{Packet@{Packet}!write@{write}}
+\index{write@{write}!Packet@{Packet}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+Append data to the packet
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & The data to append \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of bytes written 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Packets/Packet.\+php\end{DoxyCompactItemize}

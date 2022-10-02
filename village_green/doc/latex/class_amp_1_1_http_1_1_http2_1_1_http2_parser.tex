@@ -1,0 +1,175 @@
+\hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser}{}\doxysection{Http2\+Parser Class Reference}
+\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser}\index{Http2Parser@{Http2Parser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a80d5cb4461f9978e88eb1ec2c441c57c}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a80d5cb4461f9978e88eb1ec2c441c57c}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}} \$handler)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a3dcf2a6979fdf5380433d7cd442b17c2}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a3dcf2a6979fdf5380433d7cd442b17c2}} 
+{\bfseries parse} (string \$settings=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a84803bfa4c62994928844750f0c46dac}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a84803bfa4c62994928844750f0c46dac}} 
+static {\bfseries get\+Frame\+Name} (int \$type)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ac4b17bdeb1b519556dfbed81c4bd2844}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ac4b17bdeb1b519556dfbed81c4bd2844}} 
+static {\bfseries log\+Debug\+Frame} (string \$action, int \$frame\+Type, int \$frame\+Flags, int \$stream\+Id, int \$frame\+Length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a38f32b40005ad47de63f6fa4b3a6774a}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a38f32b40005ad47de63f6fa4b3a6774a}} 
+const {\bfseries PREFACE} = \char`\"{}PRI $\ast$ HTTP/2.\+0\textbackslash{}r\textbackslash{}n\textbackslash{}r\textbackslash{}n\+SM\textbackslash{}r\textbackslash{}n\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+const \mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a62cf782ed20cdfd35ce9cd20ae5e8c21}{KNOWN\+\_\+\+RESPONSE\+\_\+\+PSEUDO\+\_\+\+HEADERS}}
+\item 
+const \mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abc44282861855a8c50a5aa47dd550c16}{KNOWN\+\_\+\+REQUEST\+\_\+\+PSEUDO\+\_\+\+HEADERS}}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a6891395c3121188cf1b4ac569e35d50b}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a6891395c3121188cf1b4ac569e35d50b}} 
+const {\bfseries ACK} = 0x01
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a9e243e32dbcfe199832f6721d80e0a29}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a9e243e32dbcfe199832f6721d80e0a29}} 
+const {\bfseries NO\+\_\+\+FLAG} = 0x00
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab9f9eb8728a696411fba4130be88e3c2}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab9f9eb8728a696411fba4130be88e3c2}} 
+const {\bfseries END\+\_\+\+STREAM} = 0x01
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a6588fc24be15e468524a871285ee4753}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a6588fc24be15e468524a871285ee4753}} 
+const {\bfseries END\+\_\+\+HEADERS} = 0x04
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a4f53b8b708fddb522fb0d5e986a4af79}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a4f53b8b708fddb522fb0d5e986a4af79}} 
+const {\bfseries PADDED} = 0x08
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ada7f61e282d83394bde122ca976d5fbb}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ada7f61e282d83394bde122ca976d5fbb}} 
+const {\bfseries PRIORITY\+\_\+\+FLAG} = 0x20
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a59322b745f918a8b5f747b08d9d5ddec}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a59322b745f918a8b5f747b08d9d5ddec}} 
+const {\bfseries DATA} = 0x00
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a8b17c0b2a3e13c7af90a77bf1369e7e1}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a8b17c0b2a3e13c7af90a77bf1369e7e1}} 
+const {\bfseries HEADERS} = 0x01
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a41fcab6d5500b825a3458ee7b7cf0b7b}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a41fcab6d5500b825a3458ee7b7cf0b7b}} 
+const {\bfseries PRIORITY} = 0x02
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ae686f1904d0dcc37d3800cb4fc7347ee}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ae686f1904d0dcc37d3800cb4fc7347ee}} 
+const {\bfseries RST\+\_\+\+STREAM} = 0x03
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abbe278c3597b5d576e02ae9234b67acc}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abbe278c3597b5d576e02ae9234b67acc}} 
+const {\bfseries SETTINGS} = 0x04
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ade5f69d039087060f54b1946cac69367}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ade5f69d039087060f54b1946cac69367}} 
+const {\bfseries PUSH\+\_\+\+PROMISE} = 0x05
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a8e2cba2c6f7b874fc6b5d972533f728b}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a8e2cba2c6f7b874fc6b5d972533f728b}} 
+const {\bfseries PING} = 0x06
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_aadb77c135ff7ed8811f37d37c5f98491}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_aadb77c135ff7ed8811f37d37c5f98491}} 
+const {\bfseries GOAWAY} = 0x07
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a08b5f21cb1befdca9208f8ef81d403bf}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a08b5f21cb1befdca9208f8ef81d403bf}} 
+const {\bfseries WINDOW\+\_\+\+UPDATE} = 0x08
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_aba9cb50d64b275a29d1027b5c18a95f4}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_aba9cb50d64b275a29d1027b5c18a95f4}} 
+const {\bfseries CONTINUATION} = 0x09
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a88c21323d4412bd07df3c2259e53f89a}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a88c21323d4412bd07df3c2259e53f89a}} 
+const {\bfseries HEADER\+\_\+\+TABLE\+\_\+\+SIZE} = 0x1
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a51f7b30894eb74db6acd1e8597427910}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a51f7b30894eb74db6acd1e8597427910}} 
+const {\bfseries ENABLE\+\_\+\+PUSH} = 0x2
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a1f9f6a55e9a289e26ddb3c251122bc6b}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a1f9f6a55e9a289e26ddb3c251122bc6b}} 
+const {\bfseries MAX\+\_\+\+CONCURRENT\+\_\+\+STREAMS} = 0x3
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a64492289f859e53be893ed61e20ea52f}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a64492289f859e53be893ed61e20ea52f}} 
+const {\bfseries INITIAL\+\_\+\+WINDOW\+\_\+\+SIZE} = 0x4
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abd92c150bd80db7b2008ee82da90e162}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abd92c150bd80db7b2008ee82da90e162}} 
+const {\bfseries MAX\+\_\+\+FRAME\+\_\+\+SIZE} = 0x5
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a9cd2809ae092e696aed94af4be93ecb4}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a9cd2809ae092e696aed94af4be93ecb4}} 
+const {\bfseries MAX\+\_\+\+HEADER\+\_\+\+LIST\+\_\+\+SIZE} = 0x6
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ac4b0ac184de4c2ce3e9a9bb29c25073e}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ac4b0ac184de4c2ce3e9a9bb29c25073e}} 
+const {\bfseries GRACEFUL\+\_\+\+SHUTDOWN} = 0x0
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab07b9d4773a33a3aec2ac8ee73d86e44}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab07b9d4773a33a3aec2ac8ee73d86e44}} 
+const {\bfseries PROTOCOL\+\_\+\+ERROR} = 0x1
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_aa588612a3535cb05534de80bfeb98e9a}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_aa588612a3535cb05534de80bfeb98e9a}} 
+const {\bfseries INTERNAL\+\_\+\+ERROR} = 0x2
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab9479e3725b2872560fa2af4c1228bdf}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab9479e3725b2872560fa2af4c1228bdf}} 
+const {\bfseries FLOW\+\_\+\+CONTROL\+\_\+\+ERROR} = 0x3
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ae3f1a7b35dfe148f5affc6989b4286e1}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ae3f1a7b35dfe148f5affc6989b4286e1}} 
+const {\bfseries SETTINGS\+\_\+\+TIMEOUT} = 0x4
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a9cd272c2a38d935fdffb4637146f4d8f}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a9cd272c2a38d935fdffb4637146f4d8f}} 
+const {\bfseries STREAM\+\_\+\+CLOSED} = 0x5
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_af1dd64319bafbe14b42c3773db38cf99}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_af1dd64319bafbe14b42c3773db38cf99}} 
+const {\bfseries FRAME\+\_\+\+SIZE\+\_\+\+ERROR} = 0x6
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ae38a3bb872be1468c321ca1c315b424d}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ae38a3bb872be1468c321ca1c315b424d}} 
+const {\bfseries REFUSED\+\_\+\+STREAM} = 0x7
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a092480f48a5b72edaf48e75b1546f9c5}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a092480f48a5b72edaf48e75b1546f9c5}} 
+const {\bfseries CANCEL} = 0x8
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a381418581e0806e78347db2fb357bf89}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a381418581e0806e78347db2fb357bf89}} 
+const {\bfseries COMPRESSION\+\_\+\+ERROR} = 0x9
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abcd0f61c90df757081d026751ddee8cf}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abcd0f61c90df757081d026751ddee8cf}} 
+const {\bfseries CONNECT\+\_\+\+ERROR} = 0xa
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab6093f6546fc213fe8fe29a4d025f72e}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_ab6093f6546fc213fe8fe29a4d025f72e}} 
+const {\bfseries ENHANCE\+\_\+\+YOUR\+\_\+\+CALM} = 0xb
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abbdb5bcb486c6aee69ead24dcbae1fc8}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abbdb5bcb486c6aee69ead24dcbae1fc8}} 
+const {\bfseries INADEQUATE\+\_\+\+SECURITY} = 0xc
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a7ea760488870c8dd9ae22dc1c307ba8e}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a7ea760488870c8dd9ae22dc1c307ba8e}} 
+const {\bfseries HTTP\+\_\+1\+\_\+1\+\_\+\+REQUIRED} = 0xd
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abc44282861855a8c50a5aa47dd550c16}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_abc44282861855a8c50a5aa47dd550c16}} 
+\index{Http2Parser@{Http2Parser}!KNOWN\_REQUEST\_PSEUDO\_HEADERS@{KNOWN\_REQUEST\_PSEUDO\_HEADERS}}
+\index{KNOWN\_REQUEST\_PSEUDO\_HEADERS@{KNOWN\_REQUEST\_PSEUDO\_HEADERS}!Http2Parser@{Http2Parser}}
+\doxysubsubsection{\texorpdfstring{KNOWN\_REQUEST\_PSEUDO\_HEADERS}{KNOWN\_REQUEST\_PSEUDO\_HEADERS}}
+{\footnotesize\ttfamily const KNOWN\+\_\+\+REQUEST\+\_\+\+PSEUDO\+\_\+\+HEADERS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}:method"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}:authority"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}:path"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}:scheme"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a62cf782ed20cdfd35ce9cd20ae5e8c21}\label{class_amp_1_1_http_1_1_http2_1_1_http2_parser_a62cf782ed20cdfd35ce9cd20ae5e8c21}} 
+\index{Http2Parser@{Http2Parser}!KNOWN\_RESPONSE\_PSEUDO\_HEADERS@{KNOWN\_RESPONSE\_PSEUDO\_HEADERS}}
+\index{KNOWN\_RESPONSE\_PSEUDO\_HEADERS@{KNOWN\_RESPONSE\_PSEUDO\_HEADERS}!Http2Parser@{Http2Parser}}
+\doxysubsubsection{\texorpdfstring{KNOWN\_RESPONSE\_PSEUDO\_HEADERS}{KNOWN\_RESPONSE\_PSEUDO\_HEADERS}}
+{\footnotesize\ttfamily const KNOWN\+\_\+\+RESPONSE\+\_\+\+PSEUDO\+\_\+\+HEADERS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}:status"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http/src/\+Http2/Http2\+Parser.\+php\end{DoxyCompactItemize}

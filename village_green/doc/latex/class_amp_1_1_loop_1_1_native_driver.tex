@@ -1,0 +1,186 @@
+\hypertarget{class_amp_1_1_loop_1_1_native_driver}{}\doxysection{Native\+Driver Class Reference}
+\label{class_amp_1_1_loop_1_1_native_driver}\index{NativeDriver@{NativeDriver}}
+Inheritance diagram for Native\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_loop_1_1_native_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_native_driver_a2af2d247dc088bf47fde4df24646f1b7}{on\+Signal}} (int \$signo, callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_native_driver_a6266ee8214f93f0309edf7036f5f98c7}{now}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_native_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{get\+Handle}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_native_driver_a19b11129dd58c3181cabf99650d1e107}{dispatch}} (bool \$blocking)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_native_driver_a93e1cf21b8a596cee99004644f90d8a0}{activate}} (array \$watchers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_native_driver_a1327821d0ed999d648c0c0d8ad552e58}{deactivate}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} \$watcher)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_native_driver_a93e1cf21b8a596cee99004644f90d8a0}\label{class_amp_1_1_loop_1_1_native_driver_a93e1cf21b8a596cee99004644f90d8a0}} 
+\index{NativeDriver@{NativeDriver}!activate@{activate}}
+\index{activate@{activate}!NativeDriver@{NativeDriver}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily activate (\begin{DoxyParamCaption}\item[{array}]{\$watchers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Activates (enables) all the given watchers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}\mbox{[}$\,$\mbox{]} & {\em \$watchers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a93e1cf21b8a596cee99004644f90d8a0}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_native_driver_a1327821d0ed999d648c0c0d8ad552e58}\label{class_amp_1_1_loop_1_1_native_driver_a1327821d0ed999d648c0c0d8ad552e58}} 
+\index{NativeDriver@{NativeDriver}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!NativeDriver@{NativeDriver}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily deactivate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}}]{\$watcher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Deactivates (disables) the given watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a1327821d0ed999d648c0c0d8ad552e58}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_native_driver_a19b11129dd58c3181cabf99650d1e107}\label{class_amp_1_1_loop_1_1_native_driver_a19b11129dd58c3181cabf99650d1e107}} 
+\index{NativeDriver@{NativeDriver}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!NativeDriver@{NativeDriver}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{bool}]{\$blocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$blocking} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Throwable 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a19b11129dd58c3181cabf99650d1e107}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_native_driver_a4b28feacbac39dacb8204a26d1a0ba7b}\label{class_amp_1_1_loop_1_1_native_driver_a4b28feacbac39dacb8204a26d1a0ba7b}} 
+\index{NativeDriver@{NativeDriver}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!NativeDriver@{NativeDriver}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Get the underlying loop handle.
+
+Example\+: the {\ttfamily uv\+\_\+loop} resource for {\ttfamily libuv} or the {\ttfamily Ev\+Loop} object for {\ttfamily libev} or {\ttfamily null} for a native driver.
+
+Note\+: This function is {\itshape not} exposed in the {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop}{Loop}}} class. Users shall access it directly on the respective loop instance.
+
+\begin{DoxyReturn}{Returns}
+null$\vert$object$\vert$resource The loop handle the event loop operates on. {\ttfamily null} if there is none.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_native_driver_a6266ee8214f93f0309edf7036f5f98c7}\label{class_amp_1_1_loop_1_1_native_driver_a6266ee8214f93f0309edf7036f5f98c7}} 
+\index{NativeDriver@{NativeDriver}!now@{now}}
+\index{now@{now}!NativeDriver@{NativeDriver}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily int Internal timestamp for now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the current loop time in millisecond increments. Note this value does not necessarily correlate to wall-\/clock time, rather the value returned is meant to be used in relative comparisons to prior values returned by this method (intervals, expiration calculations, etc.) and is only updated once per loop tick.
+
+Extending classes should override this function to return a value cached once per loop tick.
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a80593ccdc0339775ddd5d82c37ca4f6b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_native_driver_a2af2d247dc088bf47fde4df24646f1b7}\label{class_amp_1_1_loop_1_1_native_driver_a2af2d247dc088bf47fde4df24646f1b7}} 
+\index{NativeDriver@{NativeDriver}!onSignal@{onSignal}}
+\index{onSignal@{onSignal}!NativeDriver@{NativeDriver}}
+\doxysubsubsection{\texorpdfstring{onSignal()}{onSignal()}}
+{\footnotesize\ttfamily on\+Signal (\begin{DoxyParamCaption}\item[{int}]{\$signo,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Execute a callback when a signal is received.
+
+Warning\+: Installing the same signal on different instances of this interface is deemed undefined behavior. Implementations MAY try to detect this, if possible, but are not required to. This is due to technical limitations of the signals being registered globally per process.
+
+Multiple watchers on the same signal MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$signo} & The signal number to monitor. \\
+\hline
+ & {\em callable} & (string \$watcher\+Id, int \$signo, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the \$data parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_unsupported_feature_exception}{Unsupported\+Feature\+Exception}}} & If signal handling is not supported.\\
+\hline
+\end{DoxyExceptions}
+\}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Amp\textbackslash{}\+Loop\textbackslash{}\+Unsupported\+Feature\+Exception If the pcntl extension is not available. 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a2af2d247dc088bf47fde4df24646f1b7}{Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Loop/Native\+Driver.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+\hypertarget{class_app_1_1_controller_1_1_api_controller}{}\doxysection{Api\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_api_controller}\index{ApiController@{ApiController}}
+Inheritance diagram for Api\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_api_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a5bf5918994a6b7e4f82ad22b3a2b931c}{Produits\+Liste}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$repo)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a99c08858c994b4b0e3a328990c74bd3c}{Produit}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}} \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a26b16dcaa5717f72bbf7e3a41c7282c2}{Categorie\+Liste}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$repo)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a59a9bd49f11d858050a02e2813cbf183}{Categorie}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}} \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a7b005a39e6a19d0fb342ff7d8a58bb1c}{Employee\+Liste}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_employees_repository}{Employees\+Repository}} \$repo)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a5cdbf100d8088922982594d11e241a5a}{Employee}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_employees}{Employees}} \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a9a6e7a503e29be61496d40eaa0c8e0f4}{Insert\+Produit}} (Request \$request, Entity\+Manager\+Interface \$em, Validator\+Interface \$validator, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_employees_repository}{Employees\+Repository}} \$emp)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a86d22e349447f55a3e5b4bc9971169ff}{Insert\+Categorie}} (Request \$request, Entity\+Manager\+Interface \$em, Validator\+Interface \$validator, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a952e7972f9abe77d2b5b963a0d2e4cf9}{Update\+Categorie}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}} \$id, Entity\+Manager\+Interface \$em, Validator\+Interface \$validator, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a3ee820ea49ee77e5a172c979eb0f170d}{Update\+Produit}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}} \$id, Entity\+Manager\+Interface \$em, Validator\+Interface \$validator, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_employees_repository}{Employees\+Repository}} \$emp)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a690c4369b993fc5604c24c73b97d4a2c}{Delete\+Produit}} (Request \$request, \mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$prod, Entity\+Manager\+Interface \$em, Validator\+Interface \$validator)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a1d0f55402761c90ed861612fdeedf6ff}{Delete\+Categorie}} (Request \$request, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, Entity\+Manager\+Interface \$em, Validator\+Interface \$validator)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_api_controller_a4aab275a6c883ad532c483ed48adc997}{Upload\+File}} (Request \$request, \$table, \$id, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$prod)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Route(\char`\"{}/api/\char`\"{}) @api(name=\char`\"{}api\char`\"{}, description=\char`\"{}api rest village green\char`\"{}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a59a9bd49f11d858050a02e2813cbf183}\label{class_app_1_1_controller_1_1_api_controller_a59a9bd49f11d858050a02e2813cbf183}} 
+\index{ApiController@{ApiController}!Categorie@{Categorie}}
+\index{Categorie@{Categorie}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{Categorie()}{Categorie()}}
+{\footnotesize\ttfamily Categorie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}}}]{\$id }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}categorie/\{id\}\char`\"{}, name=\char`\"{}categorie\char`\"{}, methods=\{\char`\"{}get\char`\"{}\}) @api( name=\char`\"{}\+Catégorie\char`\"{}, description=\char`\"{}catégorie chargé par l\textquotesingle{}id en get\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a26b16dcaa5717f72bbf7e3a41c7282c2}\label{class_app_1_1_controller_1_1_api_controller_a26b16dcaa5717f72bbf7e3a41c7282c2}} 
+\index{ApiController@{ApiController}!CategorieListe@{CategorieListe}}
+\index{CategorieListe@{CategorieListe}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{CategorieListe()}{CategorieListe()}}
+{\footnotesize\ttfamily Categorie\+Liste (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$repo }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}categorie\char`\"{}, name=\char`\"{}\+Categorie\+Liste\char`\"{}, methods=\{\char`\"{}get\char`\"{}\}) @api( name=\char`\"{}liste des catégories\char`\"{}, description=\char`\"{}liste des catégorie en get\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a1d0f55402761c90ed861612fdeedf6ff}\label{class_app_1_1_controller_1_1_api_controller_a1d0f55402761c90ed861612fdeedf6ff}} 
+\index{ApiController@{ApiController}!DeleteCategorie@{DeleteCategorie}}
+\index{DeleteCategorie@{DeleteCategorie}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{DeleteCategorie()}{DeleteCategorie()}}
+{\footnotesize\ttfamily Delete\+Categorie (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{Entity\+Manager\+Interface}]{\$em,  }\item[{Validator\+Interface}]{\$validator }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}categorie\char`\"{}, name=\char`\"{}\+Delete\+Categorie\char`\"{}, methods=\{\char`\"{}\+DELETE\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}delete categorie\char`\"{}, description=\char`\"{}suppréssion du produit\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a690c4369b993fc5604c24c73b97d4a2c}\label{class_app_1_1_controller_1_1_api_controller_a690c4369b993fc5604c24c73b97d4a2c}} 
+\index{ApiController@{ApiController}!DeleteProduit@{DeleteProduit}}
+\index{DeleteProduit@{DeleteProduit}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{DeleteProduit()}{DeleteProduit()}}
+{\footnotesize\ttfamily Delete\+Produit (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$prod,  }\item[{Entity\+Manager\+Interface}]{\$em,  }\item[{Validator\+Interface}]{\$validator }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}produits\char`\"{}, name=\char`\"{}\+Delete\+Produit\char`\"{}, methods=\{\char`\"{}\+DELETE\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}delete produit\char`\"{}, description=\char`\"{}suppréssion du produit\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a5cdbf100d8088922982594d11e241a5a}\label{class_app_1_1_controller_1_1_api_controller_a5cdbf100d8088922982594d11e241a5a}} 
+\index{ApiController@{ApiController}!Employee@{Employee}}
+\index{Employee@{Employee}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{Employee()}{Employee()}}
+{\footnotesize\ttfamily Employee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_employees}{Employees}}}]{\$id }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}employee/\{id\}\char`\"{}, name=\char`\"{}employee\char`\"{}, methods=\{\char`\"{}get\char`\"{}\}) @api( name=\char`\"{}\+Employée\char`\"{}, description=\char`\"{}employée chargé par l\textquotesingle{}id dans la méthode get\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a7b005a39e6a19d0fb342ff7d8a58bb1c}\label{class_app_1_1_controller_1_1_api_controller_a7b005a39e6a19d0fb342ff7d8a58bb1c}} 
+\index{ApiController@{ApiController}!EmployeeListe@{EmployeeListe}}
+\index{EmployeeListe@{EmployeeListe}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{EmployeeListe()}{EmployeeListe()}}
+{\footnotesize\ttfamily Employee\+Liste (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_employees_repository}{Employees\+Repository}}}]{\$repo }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}employee\char`\"{}, name=\char`\"{}\+Employee\+Liste\char`\"{}, methods=\{\char`\"{}get\char`\"{}\}) @api( name=\char`\"{}\+Liste des employées\char`\"{}, description=\char`\"{}liste des employées en get\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a86d22e349447f55a3e5b4bc9971169ff}\label{class_app_1_1_controller_1_1_api_controller_a86d22e349447f55a3e5b4bc9971169ff}} 
+\index{ApiController@{ApiController}!InsertCategorie@{InsertCategorie}}
+\index{InsertCategorie@{InsertCategorie}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{InsertCategorie()}{InsertCategorie()}}
+{\footnotesize\ttfamily Insert\+Categorie (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Entity\+Manager\+Interface}]{\$em,  }\item[{Validator\+Interface}]{\$validator,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}categorie\char`\"{}, name=\char`\"{}\+Insert\+Categorie\char`\"{}, methods=\{\char`\"{}post\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}\+Insert categorie\char`\"{}, description=\char`\"{}\+Insertion de la categorie\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a9a6e7a503e29be61496d40eaa0c8e0f4}\label{class_app_1_1_controller_1_1_api_controller_a9a6e7a503e29be61496d40eaa0c8e0f4}} 
+\index{ApiController@{ApiController}!InsertProduit@{InsertProduit}}
+\index{InsertProduit@{InsertProduit}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{InsertProduit()}{InsertProduit()}}
+{\footnotesize\ttfamily Insert\+Produit (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Entity\+Manager\+Interface}]{\$em,  }\item[{Validator\+Interface}]{\$validator,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_employees_repository}{Employees\+Repository}}}]{\$emp }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}produits\char`\"{}, name=\char`\"{}\+Insert\+Produit\char`\"{}, methods=\{\char`\"{}post\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}\+Insert produit\char`\"{}, description=\char`\"{}\+Insertion du produit\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a99c08858c994b4b0e3a328990c74bd3c}\label{class_app_1_1_controller_1_1_api_controller_a99c08858c994b4b0e3a328990c74bd3c}} 
+\index{ApiController@{ApiController}!Produit@{Produit}}
+\index{Produit@{Produit}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{Produit()}{Produit()}}
+{\footnotesize\ttfamily Produit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}}}]{\$id }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}produits/\{id\}\char`\"{}, name=\char`\"{}produit\char`\"{}, methods=\{\char`\"{}get\char`\"{}\}) @api( name=\char`\"{}produit\char`\"{}, description=\char`\"{}detail du produit appelé par l\textquotesingle{}id\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a5bf5918994a6b7e4f82ad22b3a2b931c}\label{class_app_1_1_controller_1_1_api_controller_a5bf5918994a6b7e4f82ad22b3a2b931c}} 
+\index{ApiController@{ApiController}!ProduitsListe@{ProduitsListe}}
+\index{ProduitsListe@{ProduitsListe}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{ProduitsListe()}{ProduitsListe()}}
+{\footnotesize\ttfamily Produits\+Liste (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$repo }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}produits\char`\"{}, name=\char`\"{}\+Produits\+Liste\char`\"{}, methods=\{\char`\"{}get\char`\"{}\}) @api( name=\char`\"{}\+Produits\+Liste\char`\"{}, description=\char`\"{}liste de produits en get\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a952e7972f9abe77d2b5b963a0d2e4cf9}\label{class_app_1_1_controller_1_1_api_controller_a952e7972f9abe77d2b5b963a0d2e4cf9}} 
+\index{ApiController@{ApiController}!UpdateCategorie@{UpdateCategorie}}
+\index{UpdateCategorie@{UpdateCategorie}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{UpdateCategorie()}{UpdateCategorie()}}
+{\footnotesize\ttfamily Update\+Categorie (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}}}]{\$id,  }\item[{Entity\+Manager\+Interface}]{\$em,  }\item[{Validator\+Interface}]{\$validator,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}categorie/\{id\}\char`\"{}, name=\char`\"{}\+Update\+Categorie\char`\"{}, methods=\{\char`\"{}put\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}update categorie\char`\"{}, description=\char`\"{}mise à jour de la categorie\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a3ee820ea49ee77e5a172c979eb0f170d}\label{class_app_1_1_controller_1_1_api_controller_a3ee820ea49ee77e5a172c979eb0f170d}} 
+\index{ApiController@{ApiController}!UpdateProduit@{UpdateProduit}}
+\index{UpdateProduit@{UpdateProduit}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{UpdateProduit()}{UpdateProduit()}}
+{\footnotesize\ttfamily Update\+Produit (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}}}]{\$id,  }\item[{Entity\+Manager\+Interface}]{\$em,  }\item[{Validator\+Interface}]{\$validator,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_employees_repository}{Employees\+Repository}}}]{\$emp }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}produits/\{id\}\char`\"{}, name=\char`\"{}\+Update\+Produit\char`\"{}, methods=\{\char`\"{}put\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}update produit\char`\"{}, description=\char`\"{}mise à jour d\textquotesingle{}un produit\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_api_controller_a4aab275a6c883ad532c483ed48adc997}\label{class_app_1_1_controller_1_1_api_controller_a4aab275a6c883ad532c483ed48adc997}} 
+\index{ApiController@{ApiController}!UploadFile@{UploadFile}}
+\index{UploadFile@{UploadFile}!ApiController@{ApiController}}
+\doxysubsubsection{\texorpdfstring{UploadFile()}{UploadFile()}}
+{\footnotesize\ttfamily Upload\+File (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{}]{\$table,  }\item[{}]{\$id,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$prod }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}files/\{table\}/\{id\}\char`\"{}, name=\char`\"{}\+Upload\+File\char`\"{}, methods=\{\char`\"{}\+POST\char`\"{}\}) @\+Is\+Granted(\char`\"{}\+ROLE\+\_\+\+ADMIN\char`\"{}) @api( name=\char`\"{}upload du fichier \char`\"{}, description=\char`\"{}upload de photo suivant la table\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Api\+Controller.\+php\end{DoxyCompactItemize}

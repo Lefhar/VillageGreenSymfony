@@ -1,0 +1,77 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_trailers}{}\doxysection{Trailers Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_trailers}\index{Trailers@{Trailers}}
+Inheritance diagram for Trailers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_trailers}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_trailers_ac16a6e7a4fa6163768d294dc9fd3dc05}{\+\_\+\+\_\+construct}} (array \$headers)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_trailers_ab49b07b0e23b9762a04c6d45b082787e}{DISALLOWED\+\_\+\+TRAILERS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_trailers_ac16a6e7a4fa6163768d294dc9fd3dc05}\label{class_amp_1_1_http_1_1_client_1_1_trailers_ac16a6e7a4fa6163768d294dc9fd3dc05}} 
+\index{Trailers@{Trailers}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Trailers@{Trailers}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$headers} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_invalid_header_exception}{Invalid\+Header\+Exception}}} & Thrown if a disallowed field is in the header values. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_trailers_ab49b07b0e23b9762a04c6d45b082787e}\label{class_amp_1_1_http_1_1_client_1_1_trailers_ab49b07b0e23b9762a04c6d45b082787e}} 
+\index{Trailers@{Trailers}!DISALLOWED\_TRAILERS@{DISALLOWED\_TRAILERS}}
+\index{DISALLOWED\_TRAILERS@{DISALLOWED\_TRAILERS}!Trailers@{Trailers}}
+\doxysubsubsection{\texorpdfstring{DISALLOWED\_TRAILERS}{DISALLOWED\_TRAILERS}}
+{\footnotesize\ttfamily const DISALLOWED\+\_\+\+TRAILERS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}authorization"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}content-\/encoding"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}content-\/length"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}content-\/range"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}content-\/type"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}cookie"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}expect"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}host"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}pragma"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}proxy-\/authenticate"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}proxy-\/authorization"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}range"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}te"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}trailer"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}transfer-\/encoding"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}www-\/authenticate"{}} => \textcolor{keyword}{true},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc7230\#section-4.1.2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc7230\#section-\/4.\+1.\+2}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/Trailers.\+php\end{DoxyCompactItemize}

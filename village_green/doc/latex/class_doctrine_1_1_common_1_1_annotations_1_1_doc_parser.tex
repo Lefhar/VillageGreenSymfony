@@ -1,0 +1,173 @@
+\hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser}{}\doxysection{Doc\+Parser Class Reference}
+\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser}\index{DocParser@{DocParser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_ae4c011b64f9ee09f085add9cb788cd67}{set\+Ignored\+Annotation\+Names}} (array \$names)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a2cbdc69beb2ab46a37f9c6449b67c8c8}{set\+Ignored\+Annotation\+Namespaces}} (\$ignored\+Annotation\+Namespaces)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a402e6c73ed7285ce32e912ec05cd0458}{set\+Ignore\+Not\+Imported\+Annotations}} (\$bool)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a3a98db34b50c199a8ad70b7eb4932986}{add\+Namespace}} (\$namespace)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_aaedc05891e92a501502d335705ad43c5}{set\+Imports}} (array \$imports)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a67db5a56c9949f916f1b3d0629ff08ea}{set\+Target}} (\$target)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a5b83cff23fbd4e6721fecce064525f7c}{parse}} (\$input, \$context=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A parser for docblock annotations.
+
+It is strongly discouraged to change the default annotation parsing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a095c5d389db211932136b53f25f39685}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a095c5d389db211932136b53f25f39685}} 
+\index{DocParser@{DocParser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser}{Doc\+Parser}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a3a98db34b50c199a8ad70b7eb4932986}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a3a98db34b50c199a8ad70b7eb4932986}} 
+\index{DocParser@{DocParser}!addNamespace@{addNamespace}}
+\index{addNamespace@{addNamespace}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{addNamespace()}{addNamespace()}}
+{\footnotesize\ttfamily add\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$namespace }\end{DoxyParamCaption})}
+
+Sets the default namespaces.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$namespace} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a5b83cff23fbd4e6721fecce064525f7c}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a5b83cff23fbd4e6721fecce064525f7c}} 
+\index{DocParser@{DocParser}!parse@{parse}}
+\index{parse@{parse}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}\item[{}]{\$input,  }\item[{}]{\$context = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Parses the given docblock string for annotations.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & The docblock string to parse. \\
+\hline
+string & {\em \$context} & The parsing context.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_exception}{Annotation\+Exception}}} & \\
+\hline
+{\em Reflection\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+@phpstan-\/return list$<$object$>$ Array of annotations. If no annotations are found, an empty array is returned. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_ae4c011b64f9ee09f085add9cb788cd67}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_ae4c011b64f9ee09f085add9cb788cd67}} 
+\index{DocParser@{DocParser}!setIgnoredAnnotationNames@{setIgnoredAnnotationNames}}
+\index{setIgnoredAnnotationNames@{setIgnoredAnnotationNames}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{setIgnoredAnnotationNames()}{setIgnoredAnnotationNames()}}
+{\footnotesize\ttfamily set\+Ignored\+Annotation\+Names (\begin{DoxyParamCaption}\item[{array}]{\$names }\end{DoxyParamCaption})}
+
+Sets the annotation names that are ignored during the parsing process.
+
+The names are supposed to be the raw names as used in the class, not the fully qualified class names.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool\mbox{[}$\,$\mbox{]} & {\em \$names} & indexed by annotation name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a2cbdc69beb2ab46a37f9c6449b67c8c8}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a2cbdc69beb2ab46a37f9c6449b67c8c8}} 
+\index{DocParser@{DocParser}!setIgnoredAnnotationNamespaces@{setIgnoredAnnotationNamespaces}}
+\index{setIgnoredAnnotationNamespaces@{setIgnoredAnnotationNamespaces}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{setIgnoredAnnotationNamespaces()}{setIgnoredAnnotationNamespaces()}}
+{\footnotesize\ttfamily set\+Ignored\+Annotation\+Namespaces (\begin{DoxyParamCaption}\item[{}]{\$ignored\+Annotation\+Namespaces }\end{DoxyParamCaption})}
+
+Sets the annotation namespaces that are ignored during the parsing process.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool\mbox{[}$\,$\mbox{]} & {\em \$ignored\+Annotation\+Namespaces} & indexed by annotation namespace name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a402e6c73ed7285ce32e912ec05cd0458}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a402e6c73ed7285ce32e912ec05cd0458}} 
+\index{DocParser@{DocParser}!setIgnoreNotImportedAnnotations@{setIgnoreNotImportedAnnotations}}
+\index{setIgnoreNotImportedAnnotations@{setIgnoreNotImportedAnnotations}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{setIgnoreNotImportedAnnotations()}{setIgnoreNotImportedAnnotations()}}
+{\footnotesize\ttfamily set\+Ignore\+Not\+Imported\+Annotations (\begin{DoxyParamCaption}\item[{}]{\$bool }\end{DoxyParamCaption})}
+
+Sets ignore on not-\/imported annotations.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_aaedc05891e92a501502d335705ad43c5}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_aaedc05891e92a501502d335705ad43c5}} 
+\index{DocParser@{DocParser}!setImports@{setImports}}
+\index{setImports@{setImports}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{setImports()}{setImports()}}
+{\footnotesize\ttfamily set\+Imports (\begin{DoxyParamCaption}\item[{array}]{\$imports }\end{DoxyParamCaption})}
+
+Sets the imports.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,class-\/string$>$} & \$imports\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a67db5a56c9949f916f1b3d0629ff08ea}\label{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser_a67db5a56c9949f916f1b3d0629ff08ea}} 
+\index{DocParser@{DocParser}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!DocParser@{DocParser}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily set\+Target (\begin{DoxyParamCaption}\item[{}]{\$target }\end{DoxyParamCaption})}
+
+Sets current target context as bitmask.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$target} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/annotations/lib/\+Doctrine/\+Common/\+Annotations/Doc\+Parser.\+php\end{DoxyCompactItemize}

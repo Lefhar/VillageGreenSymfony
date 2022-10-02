@@ -1,0 +1,49 @@
+\hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_exception_converter}{}\doxysection{Exception\+Converter Interface Reference}
+\label{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_exception_converter}\index{ExceptionConverter@{ExceptionConverter}}
+Inheritance diagram for Exception\+Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.414141cm]{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_exception_converter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{convert}} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}} \$exception, ?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} \$query)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}\label{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}} 
+\index{ExceptionConverter@{ExceptionConverter}!convert@{convert}}
+\index{convert@{convert}!ExceptionConverter@{ExceptionConverter}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}}]{\$exception,  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}}}]{\$query }\end{DoxyParamCaption})}
+
+Converts a given driver-\/level exception into a DBAL-\/level driver exception.
+
+Implementors should use the vendor-\/specific error code and SQLSTATE of the exception and instantiate the most appropriate specialized \{\begin{DoxySeeAlso}{See also}
+Driver\+Exception\} subclass.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}} & {\em \$exception} & The driver exception to convert. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} | null & {\em \$query} & The SQL query that triggered the exception, if any.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Driver\+Exception An instance of \{
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Driver\+Exception\} or one of its subclasses. 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_i_b_m_d_b2_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{Exception\+Converter}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_my_s_q_l_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{Exception\+Converter}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_o_c_i_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{Exception\+Converter}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_postgre_s_q_l_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{Exception\+Converter}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_s_q_lite_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{Exception\+Converter}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_a_p_i_1_1_s_q_l_srv_1_1_exception_converter_a6f2bc545e1d4b2006e4160268410f4ba}{Exception\+Converter}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Driver/\+API/Exception\+Converter.\+php\end{DoxyCompactItemize}

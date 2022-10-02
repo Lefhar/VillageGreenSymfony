@@ -1,0 +1,126 @@
+
+\begin{DoxyRefList}
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_a2ba53ad60e49d854bf30df01d2319a4f}{Abstract\+Hydrator\+::register\+Managed}} (Class\+Metadata \$class, \$entity, array \$data)]\label{todo__todo000007}%
+\Hypertarget{todo__todo000007}%
+The \char`\"{}\$id\char`\"{} generation is the same of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9466c36d0a529a0efe43065f1a8d845c}{Unit\+Of\+Work\+::create\+Entity}}. Remove this duplication somehow  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} ]\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+Remove any unnecessary methods.  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_abstract_sql_executor}{Abstract\+Sql\+Executor}} ]\label{todo__todo000025}%
+\Hypertarget{todo__todo000025}%
+Rename\+: Abstract\+SQLExecutor  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a6b7773cdce495414dc0f379cbfa6f87f}{Basic\+Entity\+Persister\+::delete\+Join\+Table\+Records}} (array \$identifier, array \$types)]\label{todo__todo000019}%
+\Hypertarget{todo__todo000019}%
+Add check for platform if it supports foreign keys/cascading.  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a6576418787ff9311ac6b02d23b51f2d7}{Basic\+Entity\+Persister\+::get\+SQLTable\+Alias}} (\$class\+Name, \$assoc\+Name=\textquotesingle{}\textquotesingle{})]\label{todo__todo000020}%
+\Hypertarget{todo__todo000020}%
+Reconsider. Binding table aliases to class names is not such a good idea.  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} ]\label{todo__todo000008}%
+\Hypertarget{todo__todo000008}%
+remove or rename \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} to \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} @template-\/covariant T of object @template-\/extends Class\+Metadata\+Info$<$\+T$>$  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a7516ca30af0db3cdbf9a7739b48ce91d}{Class\+Metadata\+Info\+::\+\_\+\+\_\+to\+String}} ()]\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+Construct meaningful string representation.  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_adb5403824aab8d35365cc42e693fabde}{Class\+Metadata\+Info\+::get\+Sequence\+Name}} (Abstract\+Platform \$platform)]\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+Sequence names should be computed in DBAL depending on the platform  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a78a4bd579ccde55047538f51d19916f4}{Class\+Metadata\+Info\+::get\+Sequence\+Prefix}} (Abstract\+Platform \$platform)]\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Sequence names should be computed in DBAL depending on the platform  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a9275e42d578aefabb6d796c6af740237}{Class\+Metadata\+Info\+::get\+Type\+Of\+Field}} (\$field\+Name)]\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+3.\+0 Remove this. Persister\+Helper should fix it somehow  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a614974767de148d8848984bb22cdb2ad}{Class\+Metadata\+Info\+::set\+Identifier\+Values}} (\$entity, array \$id)]\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+Rename to assign\+Identifier()  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration_ae4eb7ae5398bf03453c7017fc8360f25}{Configuration\+::set\+Metadata\+Driver\+Impl}} (Mapping\+Driver \$driver\+Impl)]\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+Force parameter to be a Closure to ensure lazy evaluation (as soon as a metadata cache is in effect, the driver never needs to initialize).  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_quote_strategy_a9a41f117978bad1e9662feb3002f13ec}{Default\+Quote\+Strategy\+::get\+Table\+Name}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, Abstract\+Platform \$platform)]\label{todo__todo000018}%
+\Hypertarget{todo__todo000018}%
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_table}{Table}} names should be computed in DBAL depending on the platform  
+\item[Global \mbox{\hyperlink{class_p_h_p_unit_1_1_util_1_1_annotation_1_1_doc_block_a1b3ee24e7c7ec93bf0acc5adbe3aa9b0}{Doc\+Block\+::REGEX\+\_\+\+DATA\+\_\+\+PROVIDER}} ]\label{todo__todo000048}%
+\Hypertarget{todo__todo000048}%
+This constant should be private (it\textquotesingle{}s public because of Test\+Test\+::test\+Get\+Provided\+Data\+Reg\+Ex)  
+\item[Global \mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_doc_block_reflection_a278338a00e1596bbb1e906bdcf6b0a18}{Doc\+Block\+Reflection\+::export}} ()]\label{todo__todo000044}%
+\Hypertarget{todo__todo000044}%
+What should this do?  
+\item[Global \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_entity_persister_a398cf0c1b5d1b9d9f3c2fef2dd4f72cd}{Entity\+Persister\+::load}} (array \$criteria, \$entity=null, \$assoc=null, array \$hints=\mbox{[}\mbox{]}, \$lock\+Mode=null, \$limit=null, ?array \$order\+By=null)]\label{todo__todo000021}%
+\Hypertarget{todo__todo000021}%
+Check identity map? load\+By\+Id method? Try to guess whether \$criteria is the id?  
+\item[Global \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_entity_persister_ad4e37c13e134bf60aa379b3fd1861f32}{Entity\+Persister\+::load\+By\+Id}} (array \$identifier, \$entity=null)]\label{todo__todo000022}%
+\Hypertarget{todo__todo000022}%
+Check parameters  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_aac0f9c88ca5e1bacd5816e9039290610}{Entity\+Repository\+::count}} (array \$criteria)]\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+Add this method to {\ttfamily Object\+Repository} interface in the next major release  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}} ]\label{todo__todo000027}%
+\Hypertarget{todo__todo000027}%
+Rename\+: Expression\+Builder  
+\item[Global \mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_doc_block_1_1_tag_1_1_generic_tag_a7516ca30af0db3cdbf9a7739b48ce91d}{Generic\+Tag\+::\+\_\+\+\_\+to\+String}} ()]\label{todo__todo000043}%
+\Hypertarget{todo__todo000043}%
+What should this do?  
+\item[Class \mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_property_reflection}{Property\+Reflection}} ]\label{todo__todo000045}%
+\Hypertarget{todo__todo000045}%
+implement line numbers  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_a01cf5342d2200e6b4140a250cde94428}{Query\+::HINT\+\_\+\+FORCE\+\_\+\+PARTIAL\+\_\+\+LOAD}} ]\label{todo__todo000023}%
+\Hypertarget{todo__todo000023}%
+Rename\+: HINT\+\_\+\+OPTIMIZE  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} ]\label{todo__todo000028}%
+\Hypertarget{todo__todo000028}%
+Think about whether the number of lookup maps can be reduced.  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a22618cb52fe4012c59b7f41a9a9ca755}{Result\+Set\+Mapping\+::add\+Entity\+Result}} (\$class, \$alias, \$result\+Alias=null)]\label{todo__todo000029}%
+\Hypertarget{todo__todo000029}%
+Rename\+: add\+Root\+Entity  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a0ab2b41f514b80b73bd30ebecd6f59a4}{Result\+Set\+Mapping\+::add\+Field\+Result}} (\$alias, \$column\+Name, \$field\+Name, \$declaring\+Class=null)]\label{todo__todo000033}%
+\Hypertarget{todo__todo000033}%
+Rename\+: add\+Field  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a0c6f12f5bb7a91a5eb85fd5c211a47c4}{Result\+Set\+Mapping\+::add\+Joined\+Entity\+Result}} (\$class, \$alias, \$parent\+Alias, \$relation)]\label{todo__todo000034}%
+\Hypertarget{todo__todo000034}%
+Rename\+: add\+Joined\+Entity  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a76759c8df80a348acefac3d64a8d21ee}{Result\+Set\+Mapping\+::add\+Meta\+Result}} (\$alias, \$column\+Name, \$field\+Name, \$is\+Identifier\+Column=false, \$type=null)]\label{todo__todo000037}%
+\Hypertarget{todo__todo000037}%
+Make all methods of this class require all parameters and not infer anything  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a87abf8d51216a8c7e93192c8e5912cc2}{Result\+Set\+Mapping\+::add\+Scalar\+Result}} (\$column\+Name, \$alias, \$type=\textquotesingle{}string\textquotesingle{})]\label{todo__todo000035}%
+\Hypertarget{todo__todo000035}%
+Rename\+: add\+Scalar  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a1621c4811504feea9ea87d89e5672814}{Result\+Set\+Mapping\+::has\+Index\+By}} (\$alias)]\label{todo__todo000031}%
+\Hypertarget{todo__todo000031}%
+Rename\+: is\+Indexed(\$alias)  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a3601f42bbb9184bb2dd3a1c58c1978e2}{Result\+Set\+Mapping\+::is\+Field\+Result}} (\$column\+Name)]\label{todo__todo000032}%
+\Hypertarget{todo__todo000032}%
+Rename\+: is\+Field  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_aab77830b56c4c7353cea85de0b309481}{Result\+Set\+Mapping\+::is\+Scalar\+Result}} (\$column\+Name)]\label{todo__todo000036}%
+\Hypertarget{todo__todo000036}%
+Rename\+: is\+Scalar  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_a05d6eab380c65f42741415904c192ab0}{Result\+Set\+Mapping\+::set\+Discriminator\+Column}} (\$alias, \$discr\+Column)]\label{todo__todo000030}%
+\Hypertarget{todo__todo000030}%
+Rename\+: add\+Discriminator\+Column  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_table_delete_update_executor}{Single\+Table\+Delete\+Update\+Executor}} ]\label{todo__todo000026}%
+\Hypertarget{todo__todo000026}%
+This is exactly the same as \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor}{Single\+Select\+Executor}}. Unify in Single\+Statement\+Executor.  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_functions_1_1_size_function_afedee95704ce796dd30e5d9e189a29e9}{Size\+Function\+::get\+Sql}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} \$sql\+Walker)]\label{todo__todo000024}%
+\Hypertarget{todo__todo000024}%
+If the collection being counted is already joined, the SQL can be simpler (more efficient).  
+\item[Class \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_sqlite_platform}{Sqlite\+Platform}} ]\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+Rename\+: SQLite\+Platform  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a1079716efc88aab78c6f1d0d44d6354e}{Static\+PHPDriver\+::get\+All\+Class\+Names}} ()]\label{todo__todo000042}%
+\Hypertarget{todo__todo000042}%
+Same code exists in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_annotation_driver}{Annotation\+Driver}}, should we re-\/use it somehow or not worry about it?  
+\item[Global \mbox{\hyperlink{class_p_h_p_unit_1_1_framework_1_1_test_suite_ac751e87b3d4c4bf2feb03bee8b092755}{Test\+Suite\+::count}} ()]\label{todo__todo000047}%
+\Hypertarget{todo__todo000047}%
+refactor usage of num\+Tests in Default\+Result\+Printer  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{Type\+::get\+Name}} ()]\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+Needed?  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9466c36d0a529a0efe43065f1a8d845c}{Unit\+Of\+Work\+::create\+Entity}} (\$class\+Name, array \$data, \&\$hints=\mbox{[}\mbox{]})]\label{todo__todo000039}%
+\Hypertarget{todo__todo000039}%
+Rename\+: get\+Or\+Create\+Entity  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab83faee8c6f41441df1587d00cf2e48e}{Unit\+Of\+Work\+::load\+Collection}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$collection)]\label{todo__todo000040}%
+\Hypertarget{todo__todo000040}%
+Maybe later move to Entity\+Manager\+::initialize(\$proxy\+Or\+Collection). See DDC-\/733.  
+\item[Global \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4fbd4b082458adad1d3e2e8286fb0b9a}{Unit\+Of\+Work\+::schedule\+For\+Dirty\+Check}} (\$entity)]\label{todo__todo000041}%
+\Hypertarget{todo__todo000041}%
+Rename\+: schedule\+For\+Synchronization 
+\end{DoxyRefList}

@@ -1,0 +1,82 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node}{}\doxysection{Node Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node}\index{Node@{Node}}
+Inheritance diagram for Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{dispatch}} (\$walker)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_ad0ab5ebd4587f04539fd8630eab66dc9}{dump}} (\$obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class of an AST node.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{Node@{Node}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dumps the AST \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node}{Node}} into a string representation for information purpose only.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}} 
+\index{Node@{Node}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$walker }\end{DoxyParamCaption})}
+
+Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_factor_a4f994f3cbd9dd5b71d5b3526cc187e22}{Arithmetic\+Factor}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_term_a4f994f3cbd9dd5b71d5b3526cc187e22}{Arithmetic\+Term}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_between_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Between\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_coalesce_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Coalesce\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_comparison_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Comparison\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_conditional_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Conditional\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_conditional_factor_a4f994f3cbd9dd5b71d5b3526cc187e22}{Conditional\+Factor}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_conditional_primary_a4f994f3cbd9dd5b71d5b3526cc187e22}{Conditional\+Primary}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_conditional_term_a4f994f3cbd9dd5b71d5b3526cc187e22}{Conditional\+Term}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Delete\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_statement_a4f994f3cbd9dd5b71d5b3526cc187e22}{Delete\+Statement}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_empty_collection_comparison_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Empty\+Collection\+Comparison\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_exists_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Exists\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_from_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{From\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_functions_1_1_function_node_a4f994f3cbd9dd5b71d5b3526cc187e22}{Function\+Node}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{General\+Case\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_group_by_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Group\+By\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_having_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Having\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_identification_variable_declaration_a4f994f3cbd9dd5b71d5b3526cc187e22}{Identification\+Variable\+Declaration}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_index_by_a4f994f3cbd9dd5b71d5b3526cc187e22}{Index\+By}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_in_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{In\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Instance\+Of\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_a4f994f3cbd9dd5b71d5b3526cc187e22}{Join}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_declaration_a4f994f3cbd9dd5b71d5b3526cc187e22}{Join\+Association\+Declaration}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Join\+Association\+Path\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_like_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Like\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_new_object_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{New\+Object\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_null_comparison_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Null\+Comparison\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_null_if_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Null\+If\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_order_by_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Order\+By\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_order_by_item_a4f994f3cbd9dd5b71d5b3526cc187e22}{Order\+By\+Item}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Quantified\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Select\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Select\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement_a4f994f3cbd9dd5b71d5b3526cc187e22}{Select\+Statement}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_arithmetic_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Simple\+Arithmetic\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_case_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Simple\+Case\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Simple\+Select\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{Simple\+Select\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_when_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Simple\+When\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect_a4f994f3cbd9dd5b71d5b3526cc187e22}{Subselect}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect_from_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Subselect\+From\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Update\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a4f994f3cbd9dd5b71d5b3526cc187e22}{Update\+Item}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_statement_a4f994f3cbd9dd5b71d5b3526cc187e22}{Update\+Statement}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_when_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{When\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_where_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{Where\+Clause}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_aggregate_expression_a9242968cc8550364eac9b9fb259abb46}{Aggregate\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a9242968cc8550364eac9b9fb259abb46}{Arithmetic\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a9242968cc8550364eac9b9fb259abb46}{Collection\+Member\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_input_parameter_a9242968cc8550364eac9b9fb259abb46}{Input\+Parameter}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_class_path_expression_a9242968cc8550364eac9b9fb259abb46}{Join\+Class\+Path\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_variable_declaration_a9242968cc8550364eac9b9fb259abb46}{Join\+Variable\+Declaration}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_literal_a9242968cc8550364eac9b9fb259abb46}{Literal}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_parenthesis_expression_a9242968cc8550364eac9b9fb259abb46}{Parenthesis\+Expression}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a9242968cc8550364eac9b9fb259abb46}{Path\+Expression}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_range_variable_declaration_a9242968cc8550364eac9b9fb259abb46}{Range\+Variable\+Declaration}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_ad0ab5ebd4587f04539fd8630eab66dc9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_ad0ab5ebd4587f04539fd8630eab66dc9}} 
+\index{Node@{Node}!dump@{dump}}
+\index{dump@{dump}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily dump (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Node.\+php\end{DoxyCompactItemize}

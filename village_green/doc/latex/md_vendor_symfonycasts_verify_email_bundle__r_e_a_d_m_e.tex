@@ -1,0 +1,180 @@
+Don\textquotesingle{}t know if your user\textquotesingle{}s have a valid email address? The Verify\+Email\+Bundle can help!
+
+Verify\+Email\+Bundle generates -\/ and validates -\/ a secure, signed URL that can be emailed to users to confirm their email address. It does this without needing any storage, so you can use your existing entities with minor modifications. This bundle provides\+:
+
+1) A generator to create a signed URL that should be emailed to the user.
+
+2) A signed URL validator.
+
+3) Peace of mind knowing that this is done without leaking the user\textquotesingle{}s email address into your server logs (avoiding PII problems).\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2007}{}\doxysection{Installation}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2007}
+Using Composer of course!
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require symfonycasts/verify-\/email-\/bundle}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2008}{}\doxysection{Usage}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2008}
+We strongly suggest using Symfony Maker\+Bundle\textquotesingle{}s {\ttfamily make\+:registration-\/form} to get a feel for how the bundle should be used. It\textquotesingle{}s super simple! Answer a couple questions, and you\textquotesingle{}ll have a fully functional secure registration system with email verification.\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2009}{}\doxysection{Setting things up manually}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2009}
+If you want to set things up manually, you can! But do so carefully\+: email verification is a sensitive, security process. We\textquotesingle{}ll guide you through the important stuff. Using {\ttfamily make\+:registration-\/form} is still the easiest and simplest way.
+
+The example below demonstrates the basic steps to generate a signed URL that is to be emailed to a user after they have registered. The URL is then validated once the user \char`\"{}clicks\char`\"{} the link in their email.
+
+The example below utilizes Symfony\textquotesingle{}s {\ttfamily Abstract\+Controller} available in the \href{https://github.com/symfony/framework-bundle}{\texttt{ Framework Bundle}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// RegistrationController.php}}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_twig_1_1_mime_1_1_templated_email}{Symfony\(\backslash\)Bridge\(\backslash\)Twig\(\backslash\)Mime\(\backslash\)TemplatedEmail}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_symfony_1_1_component_1_1_mailer_1_1_mailer_interface}{Symfony\(\backslash\)Component\(\backslash\)Mailer\(\backslash\)MailerInterface}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_symfony_casts_1_1_bundle_1_1_verify_email_1_1_verify_email_helper_interface}{SymfonyCasts\(\backslash\)Bundle\(\backslash\)VerifyEmail\(\backslash\)VerifyEmailHelperInterface}};}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{class RegistrationController extends AbstractController}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \$verifyEmailHelper;}
+\DoxyCodeLine{    \textcolor{keyword}{private} \$mailer;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \_\_construct(VerifyEmailHelperInterface \$helper, MailerInterface \$mailer)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>verifyEmailHelper = \$helper;}
+\DoxyCodeLine{        \$this-\/>mailer = \$mailer;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \textcolor{keyword}{register}(): Response}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$user = \textcolor{keyword}{new} User();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{        \textcolor{comment}{// handle the user registration form and persist the new user...}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{        \$signatureComponents = \$this-\/>verifyEmailHelper-\/>generateSignature(}
+\DoxyCodeLine{                \textcolor{stringliteral}{'registration\_confirmation\_route'},}
+\DoxyCodeLine{                \$user-\/>getId(),}
+\DoxyCodeLine{                \$user-\/>getEmail()}
+\DoxyCodeLine{            );}
+\DoxyCodeLine{        }
+\DoxyCodeLine{        \$email = \textcolor{keyword}{new} TemplatedEmail();}
+\DoxyCodeLine{        \$email-\/>from(\textcolor{stringliteral}{'send@example.com'});}
+\DoxyCodeLine{        \$email-\/>to(\$user-\/>getEmail());}
+\DoxyCodeLine{        \$email-\/>htmlTemplate(\textcolor{stringliteral}{'registration/confirmation\_email.html.twig'});}
+\DoxyCodeLine{        \$email-\/>context([\textcolor{stringliteral}{'signedUrl'} => \$signatureComponents-\/>getSignedUrl()]);}
+\DoxyCodeLine{        }
+\DoxyCodeLine{        \$this-\/>mailer-\/>send(\$email);}
+\DoxyCodeLine{    }
+\DoxyCodeLine{        \textcolor{comment}{// generate and return a response for the browser}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+Once the user has received their email and clicked on the link, the Registration\+Controller would then validate the signed URL in following method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// RegistrationController.php}}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_symfony_casts_1_1_bundle_1_1_verify_email_1_1_exception_1_1_verify_email_exception_interface}{SymfonyCasts\(\backslash\)Bundle\(\backslash\)VerifyEmail\(\backslash\)Exception\(\backslash\)VerifyEmailExceptionInterface}};}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} verifyUserEmail(Request \$request): Response}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>denyAccessUnlessGranted(\textcolor{stringliteral}{'IS\_AUTHENTICATED\_FULLY'});}
+\DoxyCodeLine{        \$user = \$this-\/>getUser();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Do not get the User's Id or Email Address from the Request object}}
+\DoxyCodeLine{        \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{            \$this-\/>verifyEmailHelper-\/>validateEmailConfirmation(\$request-\/>getUri(), \$user-\/>getId(), \$user-\/>getEmail());}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (VerifyEmailExceptionInterface \$e) \{}
+\DoxyCodeLine{            \$this-\/>addFlash(\textcolor{stringliteral}{'verify\_email\_error'}, \$e-\/>getReason());}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>redirectToRoute(\textcolor{stringliteral}{'app\_register'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Mark your user as verified. e.g. switch a User::verified property to true}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>addFlash(\textcolor{stringliteral}{'success'}, \textcolor{stringliteral}{'Your e-\/mail address has been verified.'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>redirectToRoute(\textcolor{stringliteral}{'app\_home'});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2010}{}\doxysection{Anonymous Validation}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2010}
+It is also possible to allow users to verify their email address without having to be authenticated. A use case for this would be if a user registers on their laptop, but clicks the verification link on their phone. Normally, the user would be required to log in before their email was verified.
+
+We can overcome this by passing a user identifier as a query parameter in the signed url. The diff below demonstrate how this is done based off of the previous examples.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// RegistrationController.php}
+\DoxyCodeLine{}
+\DoxyCodeLine{    public function register(): Response}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$user = new User();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{        // handle the user registration form and persist the new user...}
+\DoxyCodeLine{    }
+\DoxyCodeLine{        \$signatureComponents = \$this-\/>verifyEmailHelper-\/>generateSignature(}
+\DoxyCodeLine{                'registration\_confirmation\_route',}
+\DoxyCodeLine{                \$user-\/>getId(),}
+\DoxyCodeLine{-\/               \$user-\/>getEmail()}
+\DoxyCodeLine{+               \$user-\/>getEmail(),}
+\DoxyCodeLine{+               ['id' => \$user-\/>getId()] // add the user's id as an extra query param}
+\DoxyCodeLine{         );}
+
+\end{DoxyCode}
+
+
+Once the user has received their email and clicked on the link, the Registration\+Controller would then validate the signed URL in the following method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// RegistrationController.php}
+\DoxyCodeLine{}
+\DoxyCodeLine{+ use App\(\backslash\)Repository\(\backslash\)UserRepository;}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/   public function verifyUserEmail(Request \$request): Response}
+\DoxyCodeLine{+   public function verifyUserEmail(Request \$request, UserRepository \$userRepository): Response}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{-\/       \$this-\/>denyAccessUnlessGranted('IS\_AUTHENTICATED\_FULLY');}
+\DoxyCodeLine{-\/       \$user = \$this-\/>getUser();}
+\DoxyCodeLine{}
+\DoxyCodeLine{+       \$id = \$request-\/>get('id'); // retrieve the user id from the url}
+\DoxyCodeLine{+}
+\DoxyCodeLine{+       // Verify the user id exists and is not null}
+\DoxyCodeLine{+       if (null === \$id) \{}
+\DoxyCodeLine{+           return \$this-\/>redirectToRoute('app\_home');}
+\DoxyCodeLine{+       \}}
+\DoxyCodeLine{+}
+\DoxyCodeLine{+       \$user = \$userRepository-\/>find(\$id);}
+\DoxyCodeLine{+}
+\DoxyCodeLine{+       // Ensure the user exists in persistence}
+\DoxyCodeLine{+       if (null === \$user) \{}
+\DoxyCodeLine{+           return \$this-\/>redirectToRoute('app\_home');}
+\DoxyCodeLine{+       \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        try \{}
+\DoxyCodeLine{            \$this-\/>verifyEmailHelper-\/>validateEmailConfirmation(\$request-\/>getUri(), \$user-\/>getId(), \$user-\/>getEmail());}
+\DoxyCodeLine{        \} catch (VerifyEmailExceptionInterface \$e) \{}
+\DoxyCodeLine{        // ...}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2011}{}\doxysection{Configuration}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2011}
+You can change the default configuration parameters for the bundle by creating a {\ttfamily config/packages/verify\+\_\+email.\+yaml} config file.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{symfonycasts\_verify\_email:}
+\DoxyCodeLine{    lifetime: 3600}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2012}{}\doxysubsubsection{$<$tt$>$lifetime$<$/tt$>$}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2012}
+{\itshape Optional} -\/ Defaults to {\ttfamily 3600} seconds
+
+This is the length of time a signed URL is valid for in seconds after it has been created.\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2013}{}\doxysection{Support}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2013}
+Feel free to open an issue for questions, problems, or suggestions with our bundle. Issues pertaining to Symfony\textquotesingle{}s Maker Bundle, specifically {\ttfamily make\+:registration-\/form}, should be addressed in the \href{https://github.com/symfony/maker-bundle}{\texttt{ Symfony Maker repository}}.\hypertarget{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2014}{}\doxysection{Security Issues}\label{md_vendor_symfonycasts_verify_email_bundle__r_e_a_d_m_e_autotoc_md2014}
+For {\bfseries{security related vulnerabilities}}, we ask that you send an email to {\ttfamily ryan \mbox{[}at\mbox{]} symfonycasts.\+com} instead of creating an issue.
+
+This will give us the opportunity to address the issue without exposing the vulnerability before a fix can be published. 

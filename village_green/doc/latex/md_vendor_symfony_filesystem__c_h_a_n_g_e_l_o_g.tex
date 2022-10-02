@@ -1,0 +1,66 @@
+\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1502}{}\doxysection{5.\+4}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1502}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Path} class
+\item Add {\ttfamily \$lock} argument to {\ttfamily Filesystem\+::append\+To\+File()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1503}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1503}
+
+\begin{DoxyItemize}
+\item {\ttfamily Filesystem\+::dump\+File()} and {\ttfamily append\+To\+File()} don\textquotesingle{}t accept arrays anymore
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1504}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1504}
+
+\begin{DoxyItemize}
+\item support for passing a {\ttfamily null} value to {\ttfamily Filesystem\+::is\+Absolute\+Path()} is deprecated and will be removed in 5.\+0
+\item {\ttfamily tempnam()} now accepts a third argument {\ttfamily \$suffix}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1505}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1505}
+
+\begin{DoxyItemize}
+\item support for passing arrays to {\ttfamily Filesystem\+::dump\+File()} is deprecated and will be removed in 5.\+0
+\item support for passing arrays to {\ttfamily Filesystem\+::append\+To\+File()} is deprecated and will be removed in 5.\+0
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1506}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1506}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Lock\+Handler}
+\item Support for passing relative paths to {\ttfamily Filesystem\+::make\+Path\+Relative()} has been removed.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1507}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1507}
+
+\begin{DoxyItemize}
+\item support for passing relative paths to {\ttfamily Filesystem\+::make\+Path\+Relative()} is deprecated and will be removed in 4.\+0
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1508}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1508}
+
+\begin{DoxyItemize}
+\item added {\ttfamily append\+To\+File()} to append contents to existing files
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1509}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1509}
+
+\begin{DoxyItemize}
+\item added {\ttfamily readlink()} as a platform independent method to read links
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1510}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1510}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily \$mode} argument from {\ttfamily Filesystem\+::dump\+File()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1511}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1511}
+
+\begin{DoxyItemize}
+\item added tempnam() a stream aware version of PHP\textquotesingle{}s native tempnam()
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1512}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1512}
+
+\begin{DoxyItemize}
+\item added Lock\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1513}{}\doxysection{2.\+3.\+12}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1513}
+
+\begin{DoxyItemize}
+\item deprecated dump\+File() file mode argument.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1514}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1514}
+
+\begin{DoxyItemize}
+\item added the dump\+File() method to atomically write files
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1515}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1515}
+
+\begin{DoxyItemize}
+\item added a delete option for the mirror() method
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1516}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_filesystem__c_h_a_n_g_e_l_o_g_autotoc_md1516}
+
+\begin{DoxyItemize}
+\item 24eb396 \+: BC Break \+: mkdir() function now throws exception in case of failure instead of returning Boolean value
+\item created the component 
+\end{DoxyItemize}

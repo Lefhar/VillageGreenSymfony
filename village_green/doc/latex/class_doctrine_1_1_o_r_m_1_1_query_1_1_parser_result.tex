@@ -1,0 +1,134 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{}\doxysection{Parser\+Result Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}\index{ParserResult@{ParserResult}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_ac5cd7f0e30351154812bb92721eae657}{get\+Result\+Set\+Mapping}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a77da99ef272448224e7d9ca36c8fe62f}{set\+Result\+Set\+Mapping}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} \$rsm)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a62cd7ca482167818f804824d3d23d347}{set\+Sql\+Executor}} (\$executor)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_ae2b8ed6a4eb1e431ed83293e40f102a5}{get\+Sql\+Executor}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a6c83661ab914742cae7dc3040ed5c97d}{add\+Parameter\+Mapping}} (\$dql\+Position, \$sql\+Position)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_abfcf467951a7e0667002e4ed426e1cd8}{get\+Parameter\+Mappings}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a2eaf5a8dec01f183cf2c0491fd0cead5}{get\+Sql\+Parameter\+Positions}} (\$dql\+Position)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates the resulting components from a DQL query parsing process that can be serialized.
+
+\mbox{\hyperlink{}{http\+://www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a095c5d389db211932136b53f25f39685}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a095c5d389db211932136b53f25f39685}} 
+\index{ParserResult@{ParserResult}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializes a new instance of the {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}}} class. The new instance is initialized with an empty {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a6c83661ab914742cae7dc3040ed5c97d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a6c83661ab914742cae7dc3040ed5c97d}} 
+\index{ParserResult@{ParserResult}!addParameterMapping@{addParameterMapping}}
+\index{addParameterMapping@{addParameterMapping}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{addParameterMapping()}{addParameterMapping()}}
+{\footnotesize\ttfamily add\+Parameter\+Mapping (\begin{DoxyParamCaption}\item[{}]{\$dql\+Position,  }\item[{}]{\$sql\+Position }\end{DoxyParamCaption})}
+
+Adds a DQL to SQL parameter mapping. One DQL parameter name/position can map to several SQL parameter positions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$dql\+Position} & \\
+\hline
+int & {\em \$sql\+Position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_abfcf467951a7e0667002e4ed426e1cd8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_abfcf467951a7e0667002e4ed426e1cd8}} 
+\index{ParserResult@{ParserResult}!getParameterMappings@{getParameterMappings}}
+\index{getParameterMappings@{getParameterMappings}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{getParameterMappings()}{getParameterMappings()}}
+{\footnotesize\ttfamily get\+Parameter\+Mappings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all DQL to SQL parameter mappings.
+
+@psalm-\/return array\texorpdfstring{$<$}{<}int$\vert$string, list$<$int$>$\texorpdfstring{$>$}{>} The parameter mappings. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_ac5cd7f0e30351154812bb92721eae657}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_ac5cd7f0e30351154812bb92721eae657}} 
+\index{ParserResult@{ParserResult}!getResultSetMapping@{getResultSetMapping}}
+\index{getResultSetMapping@{getResultSetMapping}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{getResultSetMapping()}{getResultSetMapping()}}
+{\footnotesize\ttfamily get\+Result\+Set\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} for the parsed query.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} The result set mapping of the parsed query 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_ae2b8ed6a4eb1e431ed83293e40f102a5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_ae2b8ed6a4eb1e431ed83293e40f102a5}} 
+\index{ParserResult@{ParserResult}!getSqlExecutor@{getSqlExecutor}}
+\index{getSqlExecutor@{getSqlExecutor}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{getSqlExecutor()}{getSqlExecutor()}}
+{\footnotesize\ttfamily get\+Sql\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the SQL executor used by this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}}.
+
+\begin{DoxyReturn}{Returns}
+Abstract\+Sql\+Executor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a2eaf5a8dec01f183cf2c0491fd0cead5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a2eaf5a8dec01f183cf2c0491fd0cead5}} 
+\index{ParserResult@{ParserResult}!getSqlParameterPositions@{getSqlParameterPositions}}
+\index{getSqlParameterPositions@{getSqlParameterPositions}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{getSqlParameterPositions()}{getSqlParameterPositions()}}
+{\footnotesize\ttfamily get\+Sql\+Parameter\+Positions (\begin{DoxyParamCaption}\item[{}]{\$dql\+Position }\end{DoxyParamCaption})}
+
+Gets the SQL parameter positions for a DQL parameter name/position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$dql\+Position} & The name or position of the DQL parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} The positions of the corresponding SQL parameters. @psalm-\/return list$<$int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a77da99ef272448224e7d9ca36c8fe62f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a77da99ef272448224e7d9ca36c8fe62f}} 
+\index{ParserResult@{ParserResult}!setResultSetMapping@{setResultSetMapping}}
+\index{setResultSetMapping@{setResultSetMapping}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{setResultSetMapping()}{setResultSetMapping()}}
+{\footnotesize\ttfamily set\+Result\+Set\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}}}]{\$rsm }\end{DoxyParamCaption})}
+
+Sets the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} of the parsed query.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a62cd7ca482167818f804824d3d23d347}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result_a62cd7ca482167818f804824d3d23d347}} 
+\index{ParserResult@{ParserResult}!setSqlExecutor@{setSqlExecutor}}
+\index{setSqlExecutor@{setSqlExecutor}!ParserResult@{ParserResult}}
+\doxysubsubsection{\texorpdfstring{setSqlExecutor()}{setSqlExecutor()}}
+{\footnotesize\ttfamily set\+Sql\+Executor (\begin{DoxyParamCaption}\item[{}]{\$executor }\end{DoxyParamCaption})}
+
+Sets the SQL executor that should be used for this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Abstract\+Sql\+Executor & {\em \$executor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Parser\+Result.\+php\end{DoxyCompactItemize}

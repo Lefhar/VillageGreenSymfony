@@ -1,0 +1,131 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter}{}\doxysection{Elasticsearch\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter}\index{ElasticsearchFormatter@{ElasticsearchFormatter}}
+Inheritance diagram for Elasticsearch\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_formatter_1_1_elasticsearch_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a595158f87a9f616fb2d4261f97a1841e}{\+\_\+\+\_\+construct}} (string \$index, string \$type)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a09e05874cec9afe26d34d8d5835fa870}{get\+Index}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_ac606c26283150c50fd4b8a6d6f7acd3b}{get\+Document}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a23e53dfd2b001b81c9946fa05ec90e6f}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a23e53dfd2b001b81c9946fa05ec90e6f}} 
+{\bfseries \$index}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a9a4a6fba2208984cabb3afacadf33919}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a9a4a6fba2208984cabb3afacadf33919}} 
+{\bfseries \$type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Format a log message into an Elasticsearch record
+
+\begin{DoxyAuthor}{Author}
+Avtandil Kikabidze \href{mailto:akalongman@gmail.com}{\texttt{ akalongman@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a595158f87a9f616fb2d4261f97a1841e}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a595158f87a9f616fb2d4261f97a1841e}} 
+\index{ElasticsearchFormatter@{ElasticsearchFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ElasticsearchFormatter@{ElasticsearchFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$index,  }\item[{string}]{\$type }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & Elasticsearch index name \\
+\hline
+string & {\em \$type} & Elasticsearch record type \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{ElasticsearchFormatter@{ElasticsearchFormatter}!format@{format}}
+\index{format@{format}!ElasticsearchFormatter@{ElasticsearchFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Normalizer\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_ac606c26283150c50fd4b8a6d6f7acd3b}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_ac606c26283150c50fd4b8a6d6f7acd3b}} 
+\index{ElasticsearchFormatter@{ElasticsearchFormatter}!getDocument@{getDocument}}
+\index{getDocument@{getDocument}!ElasticsearchFormatter@{ElasticsearchFormatter}}
+\doxysubsubsection{\texorpdfstring{getDocument()}{getDocument()}}
+{\footnotesize\ttfamily get\+Document (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a log message into an Elasticsearch record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & Log message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a09e05874cec9afe26d34d8d5835fa870}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a09e05874cec9afe26d34d8d5835fa870}} 
+\index{ElasticsearchFormatter@{ElasticsearchFormatter}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!ElasticsearchFormatter@{ElasticsearchFormatter}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily get\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter index
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a830b5c75df72b32396701bc563fbe3c7}\label{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{ElasticsearchFormatter@{ElasticsearchFormatter}!getType@{getType}}
+\index{getType@{getType}!ElasticsearchFormatter@{ElasticsearchFormatter}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter type
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Elasticsearch\+Formatter.\+php\end{DoxyCompactItemize}

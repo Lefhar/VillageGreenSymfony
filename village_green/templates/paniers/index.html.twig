@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre paniers{% endblock %}
+{% block description %}Listes de vos articles dans votre paniers{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Panier</li>
+                </ol>
+            </nav>
+            <div class="row p-4">
+                <h2>Panier</h2>
+            </div>
+            <div class="row pt-2 pb-2">
+                {% if panier %}
+                    <div class="col-sm-3 pl-5  d-none d-sm-block">
+                        <strong>Produit</strong>
+                    </div>
+                    <div class="col-sm-3 d-none d-sm-block">
+                        <strong>Nom</strong>
+                    </div>
+                    <div class="col-sm-3  d-none d-sm-block">
+                        <strong>Quantité</strong>
+                    </div>
+                    <div class="col-sm-2 d-none d-sm-block">
+                        <strong>Prix Unitaire HT</strong>
+                    </div>
+                    <hr class="my-4 w-100">
+            </div></div>
+                    {% set total =0 %}
+                    {% set quantite =0 %}
+                    {% for  key,row in panier %}
+                        {% if key matches '/^\\d+$/' %}
+        <div class="container bg-center" id="prod{{ key }}">
+            <div class="row p-4" >
+
+                            <div class="col-sm-3 col-12 pl-5 text">
+                                <a href="{{ path('produit_details', {id : key}) }}">
+                                    <img height="150px" src="/assets/src/{{ row.photo }}" alt="{{ row.name }}">
+                                </a>
+                            </div>
+                            <div class="col-sm-3  col-12">
+                                {{ row.name }}
+                            </div>
+                            <div class="col-sm-3 col-12">
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <form action="{{ path('paniers_update') }}" method="post">
+                                            <input type="hidden" name="id" id="{{ key }}" value="{{ key }}">
+
+                                            <input type="number" class="form-control" name="qte" id="qte[{{ key }}]"
+                                                   value="{{ row.qte }}" min="0" max="{{ row.stock }}"
+                                                   onchange="updateProduit(this.form)">
+
+                                        </form>
+                                        <form action="{{ path('paniers_update') }}" method="post">
+                                            <input type="hidden" name="id" value="{{ key }}">
+
+                                            <input type="hidden" class="form-control" name="qte" id="qte[{{ key }}]"
+                                                   value="0"
+                                            >
+                                            <button type="submit" class="btn btn-link">Supprimer</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-2 col-12">
+
+                                {{ row.prix }} €
+                            </div>
+
+
+                            <hr class="my-4 w-100">
+                            {% set total = total + row.qte*row.prix %}
+                            {% set quantite = quantite + row.qte %}
+                        {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% else %}
+                    <div class="col-sm-12 text-center pb-4">
+                        <span class="fa fa-shopping-cart fa-10x bgcaddie"></span>
+                        <h2>Votre panier est vide <a href="{{ path('produits') }}">Commencez à le remplir </a></h2>
+
+                    </div>
+
+
+                {% endif %}
+                {% if panier %}
+            </div>
+
+            <div class="row pt-2 pb-2 bg-center">
+                <div class="col-sm-6">
+                    <h2> Sous-total ({{ quantite }} article{% if quantite >1 %}s{% endif %}) : <span
+                                class="text-success" id="totalpanier"> {{ total }} €</span></h2>
+                </div>
+                <div class="col-sm-6">
+                    <a type="submit" href="{{ path('livraison') }}" class="btn btn-success btn-block">Valider le
+                        panier</a>
+
+                </div>
+
+            </div>
+
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

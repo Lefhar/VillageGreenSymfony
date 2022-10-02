@@ -1,0 +1,94 @@
+\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1725}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1725}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Process\+::set\+Options()} to set {\ttfamily Process} specific options
+\item added option {\ttfamily create\+\_\+new\+\_\+console} to allow a subprocess to continue to run after the main script exited, both on Linux and on Windows
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1726}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1726}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Process\+::get\+Start\+Time()} to retrieve the start time of the process as float
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1727}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1727}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Process\+::inherit\+Environment\+Variables()}
+\item removed {\ttfamily Php\+Process\+::set\+Php\+Binary()}
+\item {\ttfamily Process} must be instantiated with a command array, use {\ttfamily Process\+::from\+Shell\+Commandline()} when the command should be parsed by the shell
+\item removed {\ttfamily Process\+::set\+Command\+Line()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1728}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1728}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Process\+::inherit\+Environment\+Variables()}\+: env variables are always inherited.
+\item added {\ttfamily Process\+::get\+Last\+Output\+Time()} method
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1729}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1729}
+
+\begin{DoxyItemize}
+\item added the {\ttfamily Process\+::from\+Shell\+Commandline()} to run commands in a shell wrapper
+\item deprecated passing a command as string when creating a {\ttfamily Process} instance
+\item deprecated the {\ttfamily Process\+::set\+Commandline()} and the {\ttfamily Php\+Process\+::set\+Php\+Binary()} methods
+\item added the {\ttfamily Process\+::wait\+Until()} method to wait for the process only for a specific output, then continue the normal execution of your application
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1730}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1730}
+
+\begin{DoxyItemize}
+\item added the {\ttfamily Process\+::is\+Tty\+Supported()} method that allows to check for TTY support
+\item made {\ttfamily Php\+Executable\+Finder} look for the {\ttfamily PHP\+\_\+\+BINARY} env var when searching the php binary
+\item added the {\ttfamily Process\+Signaled\+Exception} class to properly catch signaled process errors
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1731}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1731}
+
+\begin{DoxyItemize}
+\item environment variables will always be inherited
+\item added a second {\ttfamily array \$env = \mbox{[}\mbox{]}} argument to the {\ttfamily start()}, {\ttfamily run()}, {\ttfamily must\+Run()}, and {\ttfamily restart()} methods of the {\ttfamily Process} class
+\item added a second {\ttfamily array \$env = \mbox{[}\mbox{]}} argument to the {\ttfamily start()} method of the {\ttfamily Php\+Process} class
+\item the {\ttfamily Process\+Utils\+::escape\+Argument()} method has been removed
+\item the {\ttfamily are\+Environment\+Variables\+Inherited()}, {\ttfamily get\+Options()}, and {\ttfamily set\+Options()} methods of the {\ttfamily Process} class have been removed
+\item support for passing {\ttfamily proc\+\_\+open()} options has been removed
+\item removed the {\ttfamily Process\+Builder} class, use the {\ttfamily Process} class instead
+\item removed the {\ttfamily get\+Enhance\+Windows\+Compatibility()} and {\ttfamily set\+Enhance\+Windows\+Compatibility()} methods of the {\ttfamily Process} class
+\item passing a not existing working directory to the constructor of the {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Process\textbackslash{}Process} class is not supported anymore
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1732}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1732}
+
+\begin{DoxyItemize}
+\item deprecated the Process\+Builder class
+\item deprecated calling {\ttfamily Process\+::start()} without setting a valid working directory beforehand (via {\ttfamily set\+Working\+Directory()} or constructor)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1733}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1733}
+
+\begin{DoxyItemize}
+\item added command line arrays in the {\ttfamily Process} class
+\item added {\ttfamily \$env} argument to {\ttfamily Process\+::start()}, {\ttfamily run()}, {\ttfamily must\+Run()} and {\ttfamily restart()} methods
+\item deprecated the {\ttfamily Process\+Utils\+::escape\+Argument()} method
+\item deprecated not inheriting environment variables
+\item deprecated configuring {\ttfamily proc\+\_\+open()} options
+\item deprecated configuring enhanced Windows compatibility
+\item deprecated configuring enhanced sigchild compatibility
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1734}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1734}
+
+\begin{DoxyItemize}
+\item added support for PTY mode
+\item added the convenience method \char`\"{}must\+Run\char`\"{}
+\item deprecation\+: Process\+::set\+Stdin() is deprecated in favor of Process\+::set\+Input()
+\item deprecation\+: Process\+::get\+Stdin() is deprecated in favor of Process\+::get\+Input()
+\item deprecation\+: Process\+::set\+Input() and Process\+Builder\+::set\+Input() do not accept non-\/scalar types
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1735}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1735}
+
+\begin{DoxyItemize}
+\item added the ability to define an idle timeout
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1736}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1736}
+
+\begin{DoxyItemize}
+\item added Process\+Utils\+::escape\+Argument() to fix the bug in escapeshellarg() function on Windows
+\item added Process\+::signal()
+\item added Process\+::get\+Pid()
+\item added support for a TTY mode
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1737}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1737}
+
+\begin{DoxyItemize}
+\item added Process\+Builder\+::set\+Arguments() to reset the arguments on a builder
+\item added a way to retrieve the standard and error output incrementally
+\item added Process\+:restart()
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1738}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_process__c_h_a_n_g_e_l_o_g_autotoc_md1738}
+
+\begin{DoxyItemize}
+\item added support for non-\/blocking processes (start(), wait(), is\+Running(), stop())
+\item enhanced Windows compatibility
+\item added Process\+::get\+Exit\+Code\+Text() that returns a string representation for the exit code returned by the process
+\item added Process\+Builder 
+\end{DoxyItemize}

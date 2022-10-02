@@ -1,0 +1,265 @@
+\hypertarget{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{}\doxysection{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}
+Primary-\/\+Replica Connection
+
+Connection can be used with primary-\/replica setups.
+
+Important for the understanding of this connection should be how and when it picks the replica or primary.
+
+
+\begin{DoxyEnumerate}
+\item Replica if primary was never picked before and ONLY if \textquotesingle{}get\+Wrapped\+Connection\textquotesingle{} or \textquotesingle{}execute\+Query\textquotesingle{} is used.
+\item Primary picked when \textquotesingle{}execute\+Statement\textquotesingle{}, \textquotesingle{}insert\textquotesingle{}, \textquotesingle{}delete\textquotesingle{}, \textquotesingle{}update\textquotesingle{}, \textquotesingle{}create\+Savepoint\textquotesingle{}, \textquotesingle{}release\+Savepoint\textquotesingle{}, \textquotesingle{}begin\+Transaction\textquotesingle{}, \textquotesingle{}rollback\textquotesingle{}, \textquotesingle{}commit\textquotesingle{} or \textquotesingle{}prepare\textquotesingle{} is called.
+\item If Primary was picked once during the lifetime of the connection it will always get picked afterwards.
+\item One replica connection is randomly picked ONCE during a request.
+\end{DoxyEnumerate}
+
+ATTENTION\+: You can write to the replica with this connection if you execute a write query without opening up a transaction. For example\+: \begin{DoxyVerb} $conn = DriverManager::getConnection(...);
+ $conn->executeQuery("DELETE FROM table");
+\end{DoxyVerb}
+ Be aware that Connection\+::execute\+Query is a method specifically for READ operations only.
+
+Use Connection\+::execute\+Statement for any SQL statement that changes/updates state in the database (UPDATE, INSERT, DELETE or DDL statements).
+
+This connection is limited to replica operations using the Connection\+::execute\+Query operation only, because it wouldn\textquotesingle{}t be compatible with the ORM or Schema\+Manager code otherwise. Both use all the other operations in a context where writes could happen to a replica, which makes this restricted approach necessary.
+
+You can manually connect to the primary at any time by calling\+: \begin{DoxyVerb} $conn->ensureConnectedToPrimary();
+\end{DoxyVerb}
+ Instantiation through the Driver\+Manager looks like\+:
+
+@psalm-\/import-\/type Params from Driver\+Manager
+
+\$conn = Driver\+Manager\+::get\+Connection(array( \textquotesingle{}wrapper\+Class\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Connections\textbackslash{}\+Primary\+Read\+Replica\+Connection\textquotesingle{}, \textquotesingle{}driver\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}pdo\+\_\+mysql\textquotesingle{}, \textquotesingle{}primary\textquotesingle{} =\texorpdfstring{$>$}{>} array(\textquotesingle{}user\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, \textquotesingle{}password\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, \textquotesingle{}host\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, \textquotesingle{}dbname\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}), \textquotesingle{}replica\textquotesingle{} =\texorpdfstring{$>$}{>} array( array(\textquotesingle{}user\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}replica1\textquotesingle{}, \textquotesingle{}password\textquotesingle{}, \textquotesingle{}host\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, \textquotesingle{}dbname\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}), array(\textquotesingle{}user\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}replica2\textquotesingle{}, \textquotesingle{}password\textquotesingle{}, \textquotesingle{}host\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, \textquotesingle{}dbname\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}), ) ));
+
+You can also pass \textquotesingle{}driver\+Options\textquotesingle{} and any other documented option to each of this drivers to pass additional information.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }Doctrine\(\backslash\)DBAL\(\backslash\)Connections;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Doctrine\(\backslash\)Common\(\backslash\)EventManager}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Doctrine\(\backslash\)DBAL\(\backslash\)Configuration}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Doctrine\(\backslash\)DBAL\(\backslash\)Connection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Doctrine\(\backslash\)DBAL\(\backslash\)Driver}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Doctrine\(\backslash\)DBAL\(\backslash\)Driver\(\backslash\)Connection}} as DriverConnection;}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Doctrine\(\backslash\)DBAL\(\backslash\)Driver\(\backslash\)Exception}} as DriverException;}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_manager}{Doctrine\(\backslash\)DBAL\(\backslash\)DriverManager}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_connection_event_args}{Doctrine\(\backslash\)DBAL\(\backslash\)Event\(\backslash\)ConnectionEventArgs}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_events}{Doctrine\(\backslash\)DBAL\(\backslash\)Events}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Doctrine\(\backslash\)DBAL\(\backslash\)Exception}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_statement}{Doctrine\(\backslash\)DBAL\(\backslash\)Statement}};}
+\DoxyCodeLine{use InvalidArgumentException;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \textcolor{keyword}{function} array\_rand;}
+\DoxyCodeLine{use \textcolor{keyword}{function} count;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }PrimaryReadReplicaConnection \textcolor{keyword}{extends} Connection}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$connections = [\textcolor{stringliteral}{'primary'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'replica'} => \textcolor{keyword}{null}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$keepReplica = \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a6e3c5b805d1bc87fab80314d58793ce5}{\_\_construct}}(}
+\DoxyCodeLine{        array \$params,}
+\DoxyCodeLine{        Driver \$driver,}
+\DoxyCodeLine{        ?Configuration \$config = \textcolor{keyword}{null},}
+\DoxyCodeLine{        ?EventManager \$eventManager = \textcolor{keyword}{null}}
+\DoxyCodeLine{    ) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! isset(\$params[\textcolor{stringliteral}{'replica'}], \$params[\textcolor{stringliteral}{'primary'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(\textcolor{stringliteral}{'primary or replica configuration missing'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (count(\$params[\textcolor{stringliteral}{'replica'}]) === 0) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(\textcolor{stringliteral}{'You have to configure at least one replica.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$params[\textcolor{stringliteral}{'driver'}])) \{}
+\DoxyCodeLine{            \$params[\textcolor{stringliteral}{'primary'}][\textcolor{stringliteral}{'driver'}] = \$params[\textcolor{stringliteral}{'driver'}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$params[\textcolor{stringliteral}{'replica'}] as \$replicaKey => \$replica) \{}
+\DoxyCodeLine{                \$params[\textcolor{stringliteral}{'replica'}][\$replicaKey][\textcolor{stringliteral}{'driver'}] = \$params[\textcolor{stringliteral}{'driver'}];}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>keepReplica = (bool) (\$params[\textcolor{stringliteral}{'keepReplica'}] ?? \textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        parent::\_\_construct(\$params, \$driver, \$config, \$eventManager);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a172d6679b9fc2462de310e0728ccb7ca}{isConnectedToPrimary}}(): bool}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_conn !== \textcolor{keyword}{null} \&\& \$this-\/>\_conn === \$this-\/>connections[\textcolor{stringliteral}{'primary'}];}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a78572828d11dcdf2a498497d9001d557}{connect}}(\$connectionName = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$connectionName !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(}
+\DoxyCodeLine{                \textcolor{stringliteral}{'Passing a connection name as first argument is not supported anymore.'}}
+\DoxyCodeLine{                    . \textcolor{stringliteral}{' Use ensureConnectedToPrimary()/ensureConnectedToReplica() instead.'}}
+\DoxyCodeLine{            );}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>performConnect();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} performConnect(?\textcolor{keywordtype}{string} \$connectionName = \textcolor{keyword}{null}): bool}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$requestedConnectionChange = (\$connectionName !== \textcolor{keyword}{null});}
+\DoxyCodeLine{        \$connectionName            = \$connectionName ?? \textcolor{stringliteral}{'replica'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$connectionName !== \textcolor{stringliteral}{'replica'} \&\& \$connectionName !== \textcolor{stringliteral}{'primary'}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(\textcolor{stringliteral}{'Invalid option to connect(), only primary or replica allowed.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// If we have a connection open, and this is not an explicit connection}}
+\DoxyCodeLine{        \textcolor{comment}{// change request, then abort right here, because we are already done.}}
+\DoxyCodeLine{        \textcolor{comment}{// This prevents writes to the replica in case of "{}keepReplica"{} option enabled.}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_conn !== \textcolor{keyword}{null} \&\& ! \$requestedConnectionChange) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$forcePrimaryAsReplica = \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a74aed9b813f90aaf883c20d7bd052408}{getTransactionNestingLevel}}() > 0) \{}
+\DoxyCodeLine{            \$connectionName        = \textcolor{stringliteral}{'primary'};}
+\DoxyCodeLine{            \$forcePrimaryAsReplica = \textcolor{keyword}{true};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$this-\/>connections[\$connectionName])) \{}
+\DoxyCodeLine{            \$this-\/>\_conn = \$this-\/>connections[\$connectionName];}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$forcePrimaryAsReplica \&\& ! \$this-\/>keepReplica) \{}
+\DoxyCodeLine{                \$this-\/>connections[\textcolor{stringliteral}{'replica'}] = \$this-\/>\_conn;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$connectionName === \textcolor{stringliteral}{'primary'}) \{}
+\DoxyCodeLine{            \$this-\/>connections[\textcolor{stringliteral}{'primary'}] = \$this-\/>\_conn = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af156759262c721342d102dbe7b7b9026}{connectTo}}(\$connectionName);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{comment}{// Set replica connection to primary to avoid invalid reads}}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! \$this-\/>keepReplica) \{}
+\DoxyCodeLine{                \$this-\/>connections[\textcolor{stringliteral}{'replica'}] = \$this-\/>connections[\textcolor{stringliteral}{'primary'}];}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            \$this-\/>connections[\textcolor{stringliteral}{'replica'}] = \$this-\/>\_conn = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af156759262c721342d102dbe7b7b9026}{connectTo}}(\$connectionName);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_eventManager-\/>hasListeners(Events::postConnect)) \{}
+\DoxyCodeLine{            \$eventArgs = \textcolor{keyword}{new} ConnectionEventArgs(\$this);}
+\DoxyCodeLine{            \$this-\/>\_eventManager-\/>dispatchEvent(Events::postConnect, \$eventArgs);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}(): bool}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>performConnect(\textcolor{stringliteral}{'primary'});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abafa240fcfd9c5a75907dc1b758a147f}{ensureConnectedToReplica}}(): bool}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>performConnect(\textcolor{stringliteral}{'replica'});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af156759262c721342d102dbe7b7b9026}{connectTo}}(\$connectionName)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$params = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ae32cd7c32721b02d676bb63b4b1366db}{getParams}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$connectionParams = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abcdaea31efc77bc4ae34e89557d3b9af}{chooseConnectionConfiguration}}(\$connectionName, \$params);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\_driver-\/>connect(\$connectionParams);}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (DriverException \$e) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \$this-\/>convertException(\$e);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abcdaea31efc77bc4ae34e89557d3b9af}{chooseConnectionConfiguration}}(\$connectionName, \$params)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$connectionName === \textcolor{stringliteral}{'primary'}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$params[\textcolor{stringliteral}{'primary'}];}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$config = \$params[\textcolor{stringliteral}{'replica'}][array\_rand(\$params[\textcolor{stringliteral}{'replica'}])];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! isset(\$config[\textcolor{stringliteral}{'charset'}]) \&\& isset(\$params[\textcolor{stringliteral}{'primary'}][\textcolor{stringliteral}{'charset'}])) \{}
+\DoxyCodeLine{            \$config[\textcolor{stringliteral}{'charset'}] = \$params[\textcolor{stringliteral}{'primary'}][\textcolor{stringliteral}{'charset'}];}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$config;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a116b619379bad860f5730ba8e658e4a0}{executeStatement}}(\$sql, array \$params = [], array \$types = [])}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} parent::executeStatement(\$sql, \$params, \$types);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af3380f3b13931d581fa973a382946b32}{beginTransaction}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} parent::beginTransaction();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af5674c27d4a92f6228565010eacbb9cb}{commit}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} parent::commit();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aebaea4cae21e0e75ec1489c1648caeb3}{rollBack}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} parent::rollBack();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        unset(\$this-\/>connections[\textcolor{stringliteral}{'primary'}], \$this-\/>connections[\textcolor{stringliteral}{'replica'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        parent::close();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_conn       = \textcolor{keyword}{null};}
+\DoxyCodeLine{        \$this-\/>connections = [\textcolor{stringliteral}{'primary'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'replica'} => \textcolor{keyword}{null}];}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a57a252644e309a73b4dbee4a564779ce}{createSavepoint}}(\$savepoint)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        parent::createSavepoint(\$savepoint);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a640cada9593ba5f9d2be8e2f800da774}{releaseSavepoint}}(\$savepoint)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        parent::releaseSavepoint(\$savepoint);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_adcfb14588f49281d8b62bbbe7533d1ff}{rollbackSavepoint}}(\$savepoint)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        parent::rollbackSavepoint(\$savepoint);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0f741e7b39d5685c909a704708ed1033}{prepare}}(\textcolor{keywordtype}{string} \$sql): Statement}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensureConnectedToPrimary}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} parent::prepare(\$sql);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

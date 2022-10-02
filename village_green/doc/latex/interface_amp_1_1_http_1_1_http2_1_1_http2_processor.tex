@@ -1,0 +1,88 @@
+\hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{}\doxysection{Http2\+Processor Interface Reference}
+\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}\index{Http2Processor@{Http2Processor}}
+Inheritance diagram for Http2\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a8013a2339908827c2920bc1ce0ad1d25}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a8013a2339908827c2920bc1ce0ad1d25}} 
+{\bfseries handle\+Pong} (string \$data)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a9f6d9e51da9183f20b8037fcf7c61513}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a9f6d9e51da9183f20b8037fcf7c61513}} 
+{\bfseries handle\+Ping} (string \$data)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}{handle\+Shutdown}} (int \$last\+Id, int \$error)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa10ae260e4a883db7cc89bb3a5d304e2}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa10ae260e4a883db7cc89bb3a5d304e2}} 
+{\bfseries handle\+Stream\+Window\+Increment} (int \$stream\+Id, int \$window\+Size)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a9b276e4c42ccefab9776cf2a3fad6800}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a9b276e4c42ccefab9776cf2a3fad6800}} 
+{\bfseries handle\+Connection\+Window\+Increment} (int \$window\+Size)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a8c00e4590fabb1afaf80f23c721a1181}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a8c00e4590fabb1afaf80f23c721a1181}} 
+{\bfseries handle\+Headers} (int \$stream\+Id, array \$pseudo, array \$headers, bool \$stream\+Ended)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a4b1e256eeff9638b1f87f9b88199fcfa}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a4b1e256eeff9638b1f87f9b88199fcfa}} 
+{\bfseries handle\+Push\+Promise} (int \$stream\+Id, int \$push\+Id, array \$pseudo, array \$headers)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_ab901512d8cbef7adcaed211817fe83b4}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_ab901512d8cbef7adcaed211817fe83b4}} 
+{\bfseries handle\+Priority} (int \$stream\+Id, int \$parent\+Id, int \$weight)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_ae9afb97a5a40b2a02cc5e514244cbf78}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_ae9afb97a5a40b2a02cc5e514244cbf78}} 
+{\bfseries handle\+Stream\+Reset} (int \$stream\+Id, int \$error\+Code)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa82ddd5a8cde1359bb1f70a128221f3e}{handle\+Stream\+Exception}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_stream_exception}{Http2\+Stream\+Exception}} \$exception)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a61c51a7416e309ee685e745e1f6de490}{handle\+Connection\+Exception}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_connection_exception}{Http2\+Connection\+Exception}} \$exception)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa32f8df71da16e489da0ffcca7cb1a0d}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa32f8df71da16e489da0ffcca7cb1a0d}} 
+{\bfseries handle\+Data} (int \$stream\+Id, string \$data)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a3c06993d45a80b88a94cfd480b6350f0}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a3c06993d45a80b88a94cfd480b6350f0}} 
+{\bfseries handle\+Settings} (array \$settings)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa24d224f5d33b6fb00d55393ab271b2c}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa24d224f5d33b6fb00d55393ab271b2c}} 
+{\bfseries handle\+Stream\+End} (int \$stream\+Id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a61c51a7416e309ee685e745e1f6de490}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_a61c51a7416e309ee685e745e1f6de490}} 
+\index{Http2Processor@{Http2Processor}!handleConnectionException@{handleConnectionException}}
+\index{handleConnectionException@{handleConnectionException}!Http2Processor@{Http2Processor}}
+\doxysubsubsection{\texorpdfstring{handleConnectionException()}{handleConnectionException()}}
+{\footnotesize\ttfamily handle\+Connection\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_connection_exception}{Http2\+Connection\+Exception}}}]{\$exception }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a61c51a7416e309ee685e745e1f6de490}{Http2\+Connection\+Processor}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}} 
+\index{Http2Processor@{Http2Processor}!handleShutdown@{handleShutdown}}
+\index{handleShutdown@{handleShutdown}!Http2Processor@{Http2Processor}}
+\doxysubsubsection{\texorpdfstring{handleShutdown()}{handleShutdown()}}
+{\footnotesize\ttfamily handle\+Shutdown (\begin{DoxyParamCaption}\item[{int}]{\$last\+Id,  }\item[{int}]{\$error }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}{Http2\+Connection\+Processor}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa82ddd5a8cde1359bb1f70a128221f3e}\label{interface_amp_1_1_http_1_1_http2_1_1_http2_processor_aa82ddd5a8cde1359bb1f70a128221f3e}} 
+\index{Http2Processor@{Http2Processor}!handleStreamException@{handleStreamException}}
+\index{handleStreamException@{handleStreamException}!Http2Processor@{Http2Processor}}
+\doxysubsubsection{\texorpdfstring{handleStreamException()}{handleStreamException()}}
+{\footnotesize\ttfamily handle\+Stream\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_stream_exception}{Http2\+Stream\+Exception}}}]{\$exception }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa82ddd5a8cde1359bb1f70a128221f3e}{Http2\+Connection\+Processor}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http/src/\+Http2/Http2\+Processor.\+php\end{DoxyCompactItemize}

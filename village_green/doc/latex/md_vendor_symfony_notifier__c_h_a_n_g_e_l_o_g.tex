@@ -1,0 +1,36 @@
+\hypertarget{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1688}{}\doxysection{5.\+4}\label{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1688}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Sent\+Message\+Event} and {\ttfamily Failed\+Message\+Event}
+\item Add {\ttfamily push} channel
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1689}{}\doxysection{5.\+3}\label{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1689}
+
+\begin{DoxyItemize}
+\item The component is not marked as {\ttfamily @experimental} anymore
+\item \mbox{[}BC BREAK\mbox{]} Change signature of {\ttfamily Dsn\+::\+\_\+\+\_\+construct()} method from\+: {\ttfamily public function \+\_\+\+\_\+construct(string \$scheme, string \$host, ?string \$user = null, ?string \$password = null, ?int \$port = null, array \$options = \mbox{[}\mbox{]}, ?string \$path = null)} to\+: {\ttfamily public function \+\_\+\+\_\+construct(string \$dsn)}
+\item \mbox{[}BC BREAK\mbox{]} Remove {\ttfamily Dsn\+::from\+String()} method
+\item \mbox{[}BC BREAK\mbox{]} Changed the return type of {\ttfamily Abstract\+Transport\+Factory\+::get\+Endpoint()} from {\ttfamily ?string} to {\ttfamily string}
+\item Added {\ttfamily DSN\+::get\+Required\+Option} method which throws a new {\ttfamily Missing\+Required\+Option\+Exception}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1690}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1690}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} The {\ttfamily Transport\+Interface\+::send()} and {\ttfamily Abstract\+Transport\+::do\+Send()} methods changed to return a {\ttfamily ?Sent\+Message} instance instead of {\ttfamily void}.
+\item The {\ttfamily Email\+Recipient\+Interface} and {\ttfamily Recipient\+Interface} were introduced.
+\item Added {\ttfamily email} and {\ttfamily phone} properties to {\ttfamily Recipient}.
+\item \mbox{[}BC BREAK\mbox{]} Changed the type-\/hint of the {\ttfamily \$recipient} argument in the {\ttfamily as$\ast$\+Message()} method of {\ttfamily Email\+Notification\+Interface} and {\ttfamily Sms\+Notification\+Interface} to {\ttfamily Email\+Recipient\+Interface} and {\ttfamily Sms\+Recipient\+Interface}.
+\item \mbox{[}BC BREAK\mbox{]} Removed the {\ttfamily Admin\+Recipient}.
+\item The {\ttfamily Email\+Recipient\+Interface} and {\ttfamily Sms\+Recipient\+Interface} now extend the {\ttfamily Recipient\+Interface}.
+\item The {\ttfamily Email\+Recipient} and {\ttfamily Sms\+Recipient} were introduced.
+\item \mbox{[}BC BREAK\mbox{]} Changed the type-\/hint of the {\ttfamily \$recipient} argument in {\ttfamily Notifier\+Interface\+::send()}, {\ttfamily Notifier\+::get\+Channels()}, {\ttfamily Channel\+Interface\+::notifiy()} and {\ttfamily Channel\+Interface\+::supports()} to {\ttfamily Recipient\+Interface}.
+\item Changed {\ttfamily Email\+Channel} to only support recipients which implement the {\ttfamily Email\+Recipient\+Interface}.
+\item Changed {\ttfamily Sms\+Channel} to only support recipients which implement the {\ttfamily Sms\+Recipient\+Interface}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1691}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1691}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} The {\ttfamily Chat\+Message\+::from\+Notification()} method\textquotesingle{}s {\ttfamily \$recipient} and {\ttfamily \$transport} arguments were removed.
+\item \mbox{[}BC BREAK\mbox{]} The {\ttfamily Email\+Message\+::from\+Notification()} and {\ttfamily Sms\+Message\+::from\+Notification()} methods\textquotesingle{} {\ttfamily \$transport} argument was removed.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1692}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_notifier__c_h_a_n_g_e_l_o_g_autotoc_md1692}
+
+\begin{DoxyItemize}
+\item Introduced the component as experimental 
+\end{DoxyItemize}

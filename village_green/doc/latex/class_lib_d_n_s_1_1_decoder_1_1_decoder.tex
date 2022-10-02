@@ -1,0 +1,71 @@
+\hypertarget{class_lib_d_n_s_1_1_decoder_1_1_decoder}{}\doxysection{Decoder Class Reference}
+\label{class_lib_d_n_s_1_1_decoder_1_1_decoder}\index{Decoder@{Decoder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_decoder_1_1_decoder_ac4fce8fba738699c100ff83e1e5138cb}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_factory}{Packet\+Factory}} \$packet\+Factory, \mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_factory}{Message\+Factory}} \$message\+Factory, \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_question_factory}{Question\+Factory}} \$question\+Factory, \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_builder}{Resource\+Builder}} \$resource\+Builder, \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_type_builder}{Type\+Builder}} \$type\+Builder, \mbox{\hyperlink{class_lib_d_n_s_1_1_decoder_1_1_decoding_context_factory}{Decoding\+Context\+Factory}} \$decoding\+Context\+Factory, bool \$allow\+Trailing\+Data=true)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_decoder_1_1_decoder_a900b6df88861755e5612db3b923df181}{decode}} (string \$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_decoder_1_1_decoder_ac4fce8fba738699c100ff83e1e5138cb}\label{class_lib_d_n_s_1_1_decoder_1_1_decoder_ac4fce8fba738699c100ff83e1e5138cb}} 
+\index{Decoder@{Decoder}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Decoder@{Decoder}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_packets_1_1_packet_factory}{Packet\+Factory}}}]{\$packet\+Factory,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_factory}{Message\+Factory}}}]{\$message\+Factory,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_question_factory}{Question\+Factory}}}]{\$question\+Factory,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_builder}{Resource\+Builder}}}]{\$resource\+Builder,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_type_builder}{Type\+Builder}}}]{\$type\+Builder,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_decoder_1_1_decoding_context_factory}{Decoding\+Context\+Factory}}}]{\$decoding\+Context\+Factory,  }\item[{bool}]{\$allow\+Trailing\+Data = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Packets\textbackslash{}\+Packet\+Factory & {\em \$packet\+Factory} & \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Messages\textbackslash{}\+Message\+Factory & {\em \$message\+Factory} & \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Question\+Factory & {\em \$question\+Factory} & \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Resource\+Builder & {\em \$resource\+Builder} & \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Types\textbackslash{}\+Type\+Builder & {\em \$type\+Builder} & \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Decoder\textbackslash{}\+Decoding\+Context\+Factory & {\em \$decoding\+Context\+Factory} & \\
+\hline
+bool & {\em \$allow\+Trailing\+Data} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_decoder_1_1_decoder_a900b6df88861755e5612db3b923df181}\label{class_lib_d_n_s_1_1_decoder_1_1_decoder_a900b6df88861755e5612db3b923df181}} 
+\index{Decoder@{Decoder}!decode@{decode}}
+\index{decode@{decode}!Decoder@{Decoder}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily decode (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+Decode a Message from raw network data
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & The data string to decode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Messages\textbackslash{}\+Message 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception When the packet data is invalid 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception When a type subtype is unknown 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Decoder/Decoder.\+php\end{DoxyCompactItemize}

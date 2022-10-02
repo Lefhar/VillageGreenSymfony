@@ -1,0 +1,115 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type}{}\doxysection{Small\+Int\+Type Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type}\index{SmallIntType@{SmallIntType}}
+Inheritance diagram for Small\+Int\+Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a24d8db42c7d978d2989826ad48135c02}{get\+SQLDeclaration}} (array \$column, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a02576e237bf410008f15a806928d2374}{convert\+To\+PHPValue}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_aef753ffa2d91080520c65abe57d8f182}{get\+Binding\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} that maps a database SMALLINT to a PHP integer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a02576e237bf410008f15a806928d2374}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a02576e237bf410008f15a806928d2374}} 
+\index{SmallIntType@{SmallIntType}!convertToPHPValue@{convertToPHPValue}}
+\index{convertToPHPValue@{convertToPHPValue}!SmallIntType@{SmallIntType}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValue()}{convertToPHPValue()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Converts a value from its database representation to its PHP representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The PHP representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02576e237bf410008f15a806928d2374}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_aef753ffa2d91080520c65abe57d8f182}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_aef753ffa2d91080520c65abe57d8f182}} 
+\index{SmallIntType@{SmallIntType}!getBindingType@{getBindingType}}
+\index{getBindingType@{getBindingType}!SmallIntType@{SmallIntType}}
+\doxysubsubsection{\texorpdfstring{getBindingType()}{getBindingType()}}
+{\footnotesize\ttfamily get\+Binding\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the (preferred) binding type for values of this type that can be used when binding parameters to prepared statements.
+
+This method should return one of the \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type}{Parameter\+Type}}\} constants.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_aef753ffa2d91080520c65abe57d8f182}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a3d0963e68bb313b163a73f2803c64600}} 
+\index{SmallIntType@{SmallIntType}!getName@{getName}}
+\index{getName@{getName}!SmallIntType@{SmallIntType}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the name of this type.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Needed? \end{DoxyRefDesc}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a24d8db42c7d978d2989826ad48135c02}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a24d8db42c7d978d2989826ad48135c02}} 
+\index{SmallIntType@{SmallIntType}!getSQLDeclaration@{getSQLDeclaration}}
+\index{getSQLDeclaration@{getSQLDeclaration}!SmallIntType@{SmallIntType}}
+\doxysubsubsection{\texorpdfstring{getSQLDeclaration()}{getSQLDeclaration()}}
+{\footnotesize\ttfamily get\+SQLDeclaration (\begin{DoxyParamCaption}\item[{array}]{\$column,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Gets the SQL declaration snippet for a column of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & The column definition \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a24d8db42c7d978d2989826ad48135c02}{Type}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Small\+Int\+Type.\+php\end{DoxyCompactItemize}

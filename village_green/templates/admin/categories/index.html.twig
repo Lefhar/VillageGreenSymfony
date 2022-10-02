@@ -1,0 +1,55 @@
+{% extends 'base.admin.html.twig' %}
+{% block title %}Categories index{% endblock %}
+
+{% block body %}
+<section>
+    <div class="container bg-center">
+        <div class="row">
+
+            <div class="col-12">
+    <h1>Liste des categories</h1>
+                <a href="{{ path('categories_admin_new') }}" class="btn-block btn btn-primary">Ajouter une Catégorie</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Nom</th>
+                <th>parent</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                {% if category.souscat is  null %}
+                <td><img src="/assets/src/{{ category.picture }}" class="img-fluid" width="120px"></td>
+                <td>Catégorie {{ category.name }}</td>
+                <td></td>
+                <td>
+                    <a href="{{ path('categories_admin_show', {'id': category.id}) }}">Voir</a>
+                    <a href="{{ path('categories_admin_edit', {'id': category.id}) }}">Editer</a>
+                </td>
+                {% endif %}
+                {% if category.souscat is not null %}
+                <td><img src="/assets/src/{{ category.picture }}" class="img-fluid" width="120px"></td>
+                <td>Sous catégorie {{ category.name }}</td>
+                <td>{{ category.souscat.name }}</td>
+                <td>
+                    <a href="{{ path('categories_admin_show', {'id': category.id}) }}">Voir</a>
+                    <a href="{{ path('categories_admin_edit', {'id': category.id}) }}">Editer</a>
+                </td>
+                {% endif %}
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

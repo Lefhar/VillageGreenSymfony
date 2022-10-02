@@ -1,0 +1,115 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister}{}\doxysection{Abstract\+Entity\+Inheritance\+Persister Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister}\index{AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}}
+Inheritance diagram for Abstract\+Entity\+Inheritance\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a07d3bb587229d5cbf202f0dbeb177af3}{prepare\+Insert\+Data}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a1121f57ab48416b629dd88fa345f0514}{get\+Discriminator\+Column\+Table\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a45910cb5773f7ad994fccc83c6a68327}{get\+Select\+Column\+SQL}} (\$field, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, \$alias=\textquotesingle{}r\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a6bed6a50bf33525089e328855c6da375}{get\+Select\+Join\+Column\+SQL}} (\$table\+Alias, \$join\+Column\+Name, \$quoted\+Column\+Name, \$type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for entity persisters that implement a certain inheritance mapping strategy. All these persisters are assumed to use a discriminator column to discriminate entity types in the hierarchy. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a1121f57ab48416b629dd88fa345f0514}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a1121f57ab48416b629dd88fa345f0514}} 
+\index{AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}!getDiscriminatorColumnTableName@{getDiscriminatorColumnTableName}}
+\index{getDiscriminatorColumnTableName@{getDiscriminatorColumnTableName}!AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}}
+\doxysubsubsection{\texorpdfstring{getDiscriminatorColumnTableName()}{getDiscriminatorColumnTableName()}}
+{\footnotesize\ttfamily get\+Discriminator\+Column\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Gets the name of the table that contains the discriminator column.
+
+\begin{DoxyReturn}{Returns}
+string The table name. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a1121f57ab48416b629dd88fa345f0514}{Joined\+Subclass\+Persister}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a1121f57ab48416b629dd88fa345f0514}{Single\+Table\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a45910cb5773f7ad994fccc83c6a68327}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a45910cb5773f7ad994fccc83c6a68327}} 
+\index{AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}!getSelectColumnSQL@{getSelectColumnSQL}}
+\index{getSelectColumnSQL@{getSelectColumnSQL}!AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}}
+\doxysubsubsection{\texorpdfstring{getSelectColumnSQL()}{getSelectColumnSQL()}}
+{\footnotesize\ttfamily get\+Select\+Column\+SQL (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{}]{\$alias = {\ttfamily \textquotesingle{}r\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the SQL snippet of a qualified column name for the given field name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & The field name. \\
+\hline
+Class\+Metadata & {\em \$class} & The class that declares this field. The table this class is mapped to must own the column for the given field. \\
+\hline
+string & {\em \$alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a45910cb5773f7ad994fccc83c6a68327}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a6bed6a50bf33525089e328855c6da375}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a6bed6a50bf33525089e328855c6da375}} 
+\index{AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}!getSelectJoinColumnSQL@{getSelectJoinColumnSQL}}
+\index{getSelectJoinColumnSQL@{getSelectJoinColumnSQL}!AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}}
+\doxysubsubsection{\texorpdfstring{getSelectJoinColumnSQL()}{getSelectJoinColumnSQL()}}
+{\footnotesize\ttfamily get\+Select\+Join\+Column\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table\+Alias,  }\item[{}]{\$join\+Column\+Name,  }\item[{}]{\$quoted\+Column\+Name,  }\item[{}]{\$type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+Alias} & \\
+\hline
+string & {\em \$join\+Column\+Name} & \\
+\hline
+string & {\em \$quoted\+Column\+Name} & \\
+\hline
+string & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a07d3bb587229d5cbf202f0dbeb177af3}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a07d3bb587229d5cbf202f0dbeb177af3}} 
+\index{AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}!prepareInsertData@{prepareInsertData}}
+\index{prepareInsertData@{prepareInsertData}!AbstractEntityInheritancePersister@{AbstractEntityInheritancePersister}}
+\doxysubsubsection{\texorpdfstring{prepareInsertData()}{prepareInsertData()}}
+{\footnotesize\ttfamily prepare\+Insert\+Data (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Prepares the data changeset of a managed entity for database insertion (initial INSERT). The changeset of the entity is obtained from the currently running \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+The default insert data preparation is the same as for updates.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a0f72a0872cf8a6c53783b8379cb9de4b}{prepare\+Update\+Data}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity for which to prepare the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}\mbox{[}\mbox{]} The prepared data for the tables to update. @psalm-\/return array$<$string, mixed\mbox{[}$\,$\mbox{]}$>$
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a07d3bb587229d5cbf202f0dbeb177af3}{Basic\+Entity\+Persister}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Persisters/\+Entity/Abstract\+Entity\+Inheritance\+Persister.\+php\end{DoxyCompactItemize}

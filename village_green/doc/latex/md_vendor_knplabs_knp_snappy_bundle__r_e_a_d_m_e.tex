@@ -1,0 +1,176 @@
+ \href{https://scrutinizer-ci.com/g/KnpLabs/KnpSnappyBundle/?branch=master}{\texttt{ }} \href{https://styleci.io/repos/743218}{\texttt{ }}
+
+\href{https://github.com/KnpLabs/snappy}{\texttt{ Snappy}} is a PHP wrapper for the \href{http://wkhtmltopdf.org}{\texttt{ wkhtmltopdf}} conversion utility. It allows you to generate either pdf or image files from your html documents, using the webkit engine.
+
+The Knp\+Snappy\+Bundle provides a simple integration for your Symfony project.\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md386}{}\doxysection{Installation}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md386}
+With \href{https://getcomposer.org}{\texttt{ composer}}, require\+:
+
+{\ttfamily composer require knplabs/knp-\/snappy-\/bundle}
+
+Then enable it in your kernel (optional if you are using the Flex recipe with Symfony \texorpdfstring{$>$}{>}= 4) \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// config/bundles.php}}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} [}
+\DoxyCodeLine{    \textcolor{comment}{//...}}
+\DoxyCodeLine{    Knp\(\backslash\)Bundle\(\backslash\)SnappyBundle\(\backslash\)KnpSnappyBundle::class => [\textcolor{stringliteral}{'all'} => \textcolor{keyword}{true}],}
+\DoxyCodeLine{    \textcolor{comment}{//...}}
+\DoxyCodeLine{];}
+
+\end{DoxyCode}
+ \hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md387}{}\doxysection{Configuration}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md387}
+If you need to change the binaries, change the instance options or even disable one or both services, you can do it through the configuration.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# app/config/config.yml (or config/packages/knp\_snappy.yaml if using Symfony4 and the Flex recipe)}
+\DoxyCodeLine{knp\_snappy:}
+\DoxyCodeLine{    pdf:}
+\DoxyCodeLine{        enabled:    true}
+\DoxyCodeLine{        binary:     /usr/local/bin/wkhtmltopdf \#"{}\(\backslash\)"{}C:\(\backslash\)\(\backslash\)Program Files\(\backslash\)\(\backslash\)wkhtmltopdf\(\backslash\)\(\backslash\)bin\(\backslash\)\(\backslash\)wkhtmltopdf.exe\(\backslash\)"{}"{} for Windows users}
+\DoxyCodeLine{        options:    []}
+\DoxyCodeLine{    image:}
+\DoxyCodeLine{        enabled:    true}
+\DoxyCodeLine{        binary:     /usr/local/bin/wkhtmltoimage \#"{}\(\backslash\)"{}C:\(\backslash\)\(\backslash\)Program Files\(\backslash\)\(\backslash\)wkhtmltopdf\(\backslash\)\(\backslash\)bin\(\backslash\)\(\backslash\)wkhtmltoimage.exe\(\backslash\)"{}"{} for Windows users}
+\DoxyCodeLine{        options:    []}
+
+\end{DoxyCode}
+
+
+If you want to change temporary folder which is {\ttfamily sys\+\_\+get\+\_\+temp\+\_\+dir()} by default, you can use
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# app/config/config.yml (or config/packages/knp\_snappy.yaml if using Symfony4 and the Flex recipe)}
+\DoxyCodeLine{knp\_snappy:}
+\DoxyCodeLine{    temporary\_folder: "{}\%kernel.cache\_dir\%/snappy"{}}
+
+\end{DoxyCode}
+
+
+You can also configure the timeout used by the generators with {\ttfamily process\+\_\+timeout}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# app/config/config.yml (or config/packages/knp\_snappy.yaml if using Symfony4 and the Flex recipe)}
+\DoxyCodeLine{knp\_snappy:}
+\DoxyCodeLine{    process\_timeout: 20 \# In seconds}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md388}{}\doxysection{Usage}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md388}
+The bundle registers two services\+:
+
+
+\begin{DoxyItemize}
+\item the {\ttfamily knp\+\_\+snappy.\+image} service allows you to generate images;
+\item the {\ttfamily knp\+\_\+snappy.\+pdf} service allows you to generate pdf files.
+\end{DoxyItemize}\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md389}{}\doxysubsection{Generate an image from a URL}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md389}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// @var Knp\(\backslash\)Snappy\(\backslash\)Image}}
+\DoxyCodeLine{\$knpSnappyImage-\/>generate(\textcolor{stringliteral}{'http://www.google.fr'}, \textcolor{stringliteral}{'/path/to/the/image.jpg'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md390}{}\doxysubsection{Generate a pdf document from a URL}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md390}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// @var Knp\(\backslash\)Snappy\(\backslash\)Pdf}}
+\DoxyCodeLine{\$knpSnappyPdf-\/>generate(\textcolor{stringliteral}{'http://www.google.fr'}, \textcolor{stringliteral}{'/path/to/the/file.pdf'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md391}{}\doxysubsection{Generate a pdf document from multiple URLs}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md391}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// @var Knp\(\backslash\)Snappy\(\backslash\)Pdf}}
+\DoxyCodeLine{\$knpSnappyPdf-\/>generate(array(\textcolor{stringliteral}{'http://www.google.fr'}, \textcolor{stringliteral}{'http://www.knplabs.com'}, \textcolor{stringliteral}{'http://www.google.com'}), \textcolor{stringliteral}{'/path/to/the/file.pdf'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md392}{}\doxysubsection{Generate a pdf document from a twig view}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md392}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// @var Knp\(\backslash\)Snappy\(\backslash\)Pdf}}
+\DoxyCodeLine{\$knpSnappyPdf-\/>generateFromHtml(}
+\DoxyCodeLine{    \$this-\/>renderView(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'MyBundle:Foo:bar.html.twig'},}
+\DoxyCodeLine{        array(}
+\DoxyCodeLine{            \textcolor{stringliteral}{'some'}  => \$vars}
+\DoxyCodeLine{        )}
+\DoxyCodeLine{    ),}
+\DoxyCodeLine{    \textcolor{stringliteral}{'/path/to/the/file.pdf'}}
+\DoxyCodeLine{);}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md393}{}\doxysubsection{Render an image as response from a controller}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md393}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_response_1_1_jpeg_response}{Knp\(\backslash\)Bundle\(\backslash\)SnappyBundle\(\backslash\)Snappy\(\backslash\)Response\(\backslash\)JpegResponse}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bundle_1_1_framework_bundle_1_1_controller_1_1_abstract_controller}{Symfony\(\backslash\)Bundle\(\backslash\)FrameworkBundle\(\backslash\)Controller\(\backslash\)AbstractController}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }SomeController \textcolor{keyword}{extends} AbstractController}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} imageAction(Knp\(\backslash\)Snappy\(\backslash\)Image \$knpSnappyImage)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$html = \$this-\/>renderView(\textcolor{stringliteral}{'MyBundle:Foo:bar.html.twig'}, array(}
+\DoxyCodeLine{            \textcolor{stringliteral}{'some'}  => \$vars}
+\DoxyCodeLine{        ));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} JpegResponse(}
+\DoxyCodeLine{            \$knpSnappyImage-\/>getOutputFromHtml(\$html),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'image.jpg'}}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md394}{}\doxysubsection{Render a pdf document as response from a controller}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md394}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_response_1_1_pdf_response}{Knp\(\backslash\)Bundle\(\backslash\)SnappyBundle\(\backslash\)Snappy\(\backslash\)Response\(\backslash\)PdfResponse}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bundle_1_1_framework_bundle_1_1_controller_1_1_abstract_controller}{Symfony\(\backslash\)Bundle\(\backslash\)FrameworkBundle\(\backslash\)Controller\(\backslash\)AbstractController}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }SomeController \textcolor{keyword}{extends} AbstractController}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} pdfAction(Knp\(\backslash\)Snappy\(\backslash\)Pdf \$knpSnappyPdf)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$html = \$this-\/>renderView(\textcolor{stringliteral}{'MyBundle:Foo:bar.html.twig'}, array(}
+\DoxyCodeLine{            \textcolor{stringliteral}{'some'}  => \$vars}
+\DoxyCodeLine{        ));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} PdfResponse(}
+\DoxyCodeLine{            \$knpSnappyPdf-\/>getOutputFromHtml(\$html),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'file.pdf'}}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md395}{}\doxysubsection{Render a pdf document with a relative url inside like css files}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md395}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_response_1_1_pdf_response}{Knp\(\backslash\)Bundle\(\backslash\)SnappyBundle\(\backslash\)Snappy\(\backslash\)Response\(\backslash\)PdfResponse}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bundle_1_1_framework_bundle_1_1_controller_1_1_abstract_controller}{Symfony\(\backslash\)Bundle\(\backslash\)FrameworkBundle\(\backslash\)Controller\(\backslash\)AbstractController}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }SomeController \textcolor{keyword}{extends} AbstractController}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} pdfAction(Knp\(\backslash\)Snappy\(\backslash\)Pdf \$knpSnappyPdf)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$pageUrl = \$this-\/>generateUrl(\textcolor{stringliteral}{'homepage'}, array(), \textcolor{keyword}{true}); \textcolor{comment}{// use absolute path!}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} PdfResponse(}
+\DoxyCodeLine{            \$knpSnappyPdf-\/>getOutput(\$pageUrl),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'file.pdf'}}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md396}{}\doxysection{Maintainers}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md396}
+KNPLabs is looking for maintainers (\href{https://knplabs.com/en/blog/news-for-our-foss-projects-maintenance}{\texttt{ see why}}).
+
+If you are interested, feel free to open a PR to ask to be added as a maintainer.
+
+We’ll be glad to hear from you \+:)\hypertarget{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md397}{}\doxysection{Credits}\label{md_vendor_knplabs_knp_snappy_bundle__r_e_a_d_m_e_autotoc_md397}
+Snappy\+Bundle and \href{https://github.com/KnpLabs/snappy}{\texttt{ Snappy}} are based on the awesome \href{http://wkhtmltopdf.org}{\texttt{ wkhtmltopdf}}. Snappy\+Bundle has been developed by \href{http://www.knplabs.com}{\texttt{ Knp\+Labs}}. 

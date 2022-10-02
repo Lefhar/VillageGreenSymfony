@@ -1,0 +1,100 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister}{}\doxysection{Read\+Write\+Cached\+Collection\+Persister Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister}\index{ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}}
+Inheritance diagram for Read\+Write\+Cached\+Collection\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a4972837fdbe580bc168db4f71d622acc}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_collection_1_1_collection_persister}{Collection\+Persister}} \$persister, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region}{Concurrent\+Region}} \$region, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, array \$association)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a69fd009392446b047b2b1fa09345680d}{after\+Transaction\+Complete}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a070eb74b461495bcaeba211fcd775f0a}{after\+Transaction\+Rolled\+Back}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a0aabca120c95d35e12d0438b0ced40f3}{delete}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$collection)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_abb8e2489c041c3f361a70393d623cdfc}{update}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$collection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a4972837fdbe580bc168db4f71d622acc}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a4972837fdbe580bc168db4f71d622acc}} 
+\index{ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_collection_1_1_collection_persister}{Collection\+Persister}}}]{\$persister,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region}{Concurrent\+Region}}}]{\$region,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{array}]{\$association }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Collection\+Persister & {\em \$persister} & The collection persister that will be cached. \\
+\hline
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region}{Concurrent\+Region}} & {\em \$region} & The collection region. \\
+\hline
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} & {\em \$em} & The entity manager. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$association} & The association mapping. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a69fd009392446b047b2b1fa09345680d}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a69fd009392446b047b2b1fa09345680d}} 
+\index{ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}!afterTransactionComplete@{afterTransactionComplete}}
+\index{afterTransactionComplete@{afterTransactionComplete}!ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{afterTransactionComplete()}{afterTransactionComplete()}}
+{\footnotesize\ttfamily after\+Transaction\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Perform whatever processing is encapsulated here after completion of the transaction.\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a69fd009392446b047b2b1fa09345680d}{Cached\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a070eb74b461495bcaeba211fcd775f0a}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a070eb74b461495bcaeba211fcd775f0a}} 
+\index{ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}!afterTransactionRolledBack@{afterTransactionRolledBack}}
+\index{afterTransactionRolledBack@{afterTransactionRolledBack}!ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{afterTransactionRolledBack()}{afterTransactionRolledBack()}}
+{\footnotesize\ttfamily after\+Transaction\+Rolled\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Perform whatever processing is encapsulated here after completion of the rolled-\/back.\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a070eb74b461495bcaeba211fcd775f0a}{Cached\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a0aabca120c95d35e12d0438b0ced40f3}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a0aabca120c95d35e12d0438b0ced40f3}} 
+\index{ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}!delete@{delete}}
+\index{delete@{delete}!ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$collection }\end{DoxyParamCaption})}
+
+\{Deletes the persistent state represented by the given collection.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_collection_1_1_collection_persister_a0aabca120c95d35e12d0438b0ced40f3}{Collection\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_abb8e2489c041c3f361a70393d623cdfc}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_abb8e2489c041c3f361a70393d623cdfc}} 
+\index{ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}!update@{update}}
+\index{update@{update}!ReadWriteCachedCollectionPersister@{ReadWriteCachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$collection }\end{DoxyParamCaption})}
+
+\{Updates the given collection, synchronizing its state with the database by inserting, updating and deleting individual elements.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_collection_1_1_collection_persister_abb8e2489c041c3f361a70393d623cdfc}{Collection\+Persister}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/\+Persister/\+Collection/Read\+Write\+Cached\+Collection\+Persister.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream}{}\doxysection{Resource\+Input\+Stream Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_resource_input_stream}\index{ResourceInputStream@{ResourceInputStream}}
+Inheritance diagram for Resource\+Input\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_resource_input_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_a3fa92579f6739d88f0deff992c172965}{\+\_\+\+\_\+construct}} (\$stream, int \$chunk\+Size=self\+::\+DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_a8c5a689e9be7d35d0d01d0194637a7d2}{get\+Resource}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_a905a179d8462e758e2e26b3db7b222c5}{set\+Chunk\+Size}} (int \$chunk\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa46bdf577fe031bf1287312dfbebb9a6}{reference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_a8098142e52cdc2bf80db924208412038}{unreference}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_a0ff55380fb3b64bee19cfb8cc966d3ff}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_a0ff55380fb3b64bee19cfb8cc966d3ff}} 
+const {\bfseries DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE} = 8192
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input stream abstraction for PHP\textquotesingle{}s stream resources. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_a3fa92579f6739d88f0deff992c172965}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_a3fa92579f6739d88f0deff992c172965}} 
+\index{ResourceInputStream@{ResourceInputStream}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{int}]{\$chunk\+Size = {\ttfamily self\+:\+:DEFAULT\+\_\+CHUNK\+\_\+SIZE} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$stream} & Stream resource. \\
+\hline
+int & {\em \$chunk\+Size} & Chunk size per read operation.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If an invalid stream or parameter has been passed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{ResourceInputStream@{ResourceInputStream}!close@{close}}
+\index{close@{close}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the stream forcefully. Multiple {\ttfamily \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close()}}} calls are ignored.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Invalid\+Property\+Assignment\+Value\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_a8c5a689e9be7d35d0d01d0194637a7d2}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_a8c5a689e9be7d35d0d01d0194637a7d2}} 
+\index{ResourceInputStream@{ResourceInputStream}!getResource@{getResource}}
+\index{getResource@{getResource}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null The stream resource or null if the stream has closed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_a64571309bfb3238c65fd3c2898f92440}} 
+\index{ResourceInputStream@{ResourceInputStream}!read@{read}}
+\index{read@{read}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_pending_read_error}{Pending\+Read\+Error}}} & Thrown if another read operation is still pending.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa46bdf577fe031bf1287312dfbebb9a6}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_aa46bdf577fe031bf1287312dfbebb9a6}} 
+\index{ResourceInputStream@{ResourceInputStream}!reference@{reference}}
+\index{reference@{reference}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+References the read watcher, so the loop keeps running in case there\textquotesingle{}s an active read.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}{Loop\+::reference()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_a905a179d8462e758e2e26b3db7b222c5}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_a905a179d8462e758e2e26b3db7b222c5}} 
+\index{ResourceInputStream@{ResourceInputStream}!setChunkSize@{setChunkSize}}
+\index{setChunkSize@{setChunkSize}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{setChunkSize()}{setChunkSize()}}
+{\footnotesize\ttfamily set\+Chunk\+Size (\begin{DoxyParamCaption}\item[{int}]{\$chunk\+Size }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_input_stream_a8098142e52cdc2bf80db924208412038}\label{class_amp_1_1_byte_stream_1_1_resource_input_stream_a8098142e52cdc2bf80db924208412038}} 
+\index{ResourceInputStream@{ResourceInputStream}!unreference@{unreference}}
+\index{unreference@{unreference}!ResourceInputStream@{ResourceInputStream}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Unreferences the read watcher, so the loop doesn\textquotesingle{}t keep running even if there are active reads.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}{Loop\+::unreference()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/Resource\+Input\+Stream.\+php\end{DoxyCompactItemize}

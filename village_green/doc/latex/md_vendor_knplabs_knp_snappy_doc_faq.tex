@@ -1,0 +1,177 @@
+\doxysubparagraph*{{\itshape Q}\+: It does not work and everything is broken.}
+
+{\itshape A}\+: Please, try to execute the command manually in your shell. Snappy is a thin PHP wrapper and most likely your issue is with wkhtmltopdf itself or is already described in this FAQ. If not, feel free to open the issue in Snappy issue tracker.
+
+Please, note that wkhtmltopdf takes only input URL(s) or file name(s) as source.
+
+\doxysubparagraph*{{\itshape Q}\+: How to get the command executed by Snappy?}
+
+{\itshape A}\+: You need to install any PSR-\/3 compliant logging library and call {\ttfamily set\+Logger()} method on the generator. It will log every command executed, its env vars and timeout. It will also log stdout and stderr whenever a command finishes, even if it fails.
+
+\doxysubparagraph*{{\itshape Q}\+: My tables are broken when it is rendered on multiple pages with break.}
+
+{\itshape A}\+: Add {\ttfamily thead} and {\ttfamily tbody} tags. Add the following css 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{table \{ page-\/break-\/inside:auto; \}}
+\DoxyCodeLine{tr    \{ page-\/break-\/inside:avoid; page-\/break-\/after:auto; \}}
+\DoxyCodeLine{thead \{ display:table-\/header-\/group; \}}
+\DoxyCodeLine{tfoot \{ display:table-\/footer-\/group; \}}
+
+\end{DoxyCode}
+
+
+\doxysubparagraph*{{\itshape Q}\+: I have a PNG with a transparent background. When generating a PDF, the background turns black.}
+
+{\itshape A}\+: It is wkhtmltopdf bug as described in \href{https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2214}{\texttt{ https\+://github.\+com/wkhtmltopdf/wkhtmltopdf/issues/2214}}. You should update wkhtmltopdf to at least 0.\+12.\+3-\/dev
+
+\doxysubparagraph*{{\itshape Q}\+: Is there a way to secure the pdf so it can\textquotesingle{}t be edited?}
+
+{\itshape A}\+: There is no way to add a password via wkhtmltopdf, but there is a way via other linux tools like pdftk
+
+\doxysubparagraph*{{\itshape Q}\+: We are using wkhtmltopdf to export html to pdf. It breaks the HTML in two pages of pdf. Can we add a break?}
+
+{\itshape A}\+: It is known problem of {\ttfamily wkhtmltopdf}. You can use css {\ttfamily page-\/break-\/after}, like\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<style type="{}text/css"{}>}
+\DoxyCodeLine{    .page \{}
+\DoxyCodeLine{        overflow: hidden;}
+\DoxyCodeLine{        page-\/break-\/after: always;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{</style>}
+\DoxyCodeLine{}
+\DoxyCodeLine{<div class="{}page"{}>}
+\DoxyCodeLine{   new page}
+\DoxyCodeLine{</div>}
+
+\end{DoxyCode}
+
+
+\doxysubparagraph*{{\itshape Q}\+: It says {\ttfamily wkhtmltopdf\+: cannot connect to X server} or {\ttfamily xvfb-\/run\+: error\+: Xvfb failed to start.}}
+
+{\itshape A}\+: Please, check your {\ttfamily wkhtmltopdf} version. It is recommended to use at least {\ttfamily 0.\+12.\+2.\+1} and what is important -\/ starting from {\ttfamily wkhtmltopdf \texorpdfstring{$>$}{>}= 0.\+12.\+2} it doesn\textquotesingle{}t require X server or emulation anymore. You can download new version from \href{http://wkhtmltopdf.org/downloads.html}{\texttt{ http\+://wkhtmltopdf.\+org/downloads.\+html}} or install via composer for Linux servers as stated in \href{https://github.com/KnpLabs/snappy\#wkhtmltopdf-binary-as-composer-dependencies}{\texttt{ README}}. If there is no possibility to update {\ttfamily wkhtmltopdf}, please check \href{http://stackoverflow.com/questions/9604625/wkhtmltopdf-cannot-connect-to-x-server}{\texttt{ http\+://stackoverflow.\+com/questions/9604625/wkhtmltopdf-\/cannot-\/connect-\/to-\/x-\/server}}
+
+\doxysubparagraph*{{\itshape Q}\+: PDF generation failed with wkhtmltopdf returning error code 1 due to Content\+Not\+Found\+Error, how do I deal with that?}
+
+{\itshape A}\+: This is a known problem with wkhtmltopdf. Several issues has been raised\+: \href{https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1855}{\texttt{ issue 1855}}, \href{https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2051}{\texttt{ issue 2051}}. To catch that error, {\ttfamily generate} method will throw a {\ttfamily Runtime\+Exception} with error code equals to the error code returned with wkhtmltopdf, catch this exception and check for the error code and then deal with this exception in appropriate ways.
+
+\doxysubparagraph*{{\itshape Q}\+: My PDF is always generated for a small screen resolution\textbackslash{}I always receive a mobile version.}
+
+{\itshape A}\+: It is well-\/known issue of wkhtmltopdf, you can check \href{https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1508}{\texttt{ https\+://github.\+com/wkhtmltopdf/wkhtmltopdf/issues/1508}}. One of solutions is to use xvfb and to setup xvfb resolution to desired one though a simple bit of css such as {\ttfamily zoom\+: .75;} would be sufficient in most cases.
+
+\doxysubparagraph*{{\itshape Q}\+: My chars with accents in HTML document are not correctly rendered.}
+
+{\itshape A}\+: Make sure that you have set {\ttfamily \texorpdfstring{$<$}{<}meta charset=\char`\"{}\+UTF-\/8\char`\"{} /\texorpdfstring{$>$}{>}} in your HTML document, and you used the option {\ttfamily \char`\"{}encoding\char`\"{} =\texorpdfstring{$>$}{>} \char`\"{}utf-\/8\char`\"{}}.
+
+\doxysubparagraph*{{\itshape Q}\+: My document text is not correctly rendered, it is just black squares}
+
+{\itshape A}\+: Make sure you have installed {\ttfamily xfonts-\/base}, {\ttfamily xfonts-\/75dpi} and {\ttfamily urw-\/fonts}
+
+\doxysubparagraph*{{\itshape Q}\+: How to convert page with relative links from stdin / How to use relative media URLs}
+
+{\itshape A}\+: When you convert an HTML file with relative links/media URLs into PDF, you need to either\+:
+\begin{DoxyItemize}
+\item Switch to absolute links/media URLs
+\item Or use {\ttfamily \texorpdfstring{$<$}{<}base\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/base\texorpdfstring{$>$}{>}} tag to specify what\textquotesingle{}s the base URL of those relative links.
+\end{DoxyItemize}
+
+\doxysubparagraph*{{\itshape Q}\+: How to generate a single PDF from multiple sources?}
+
+{\itshape A}\+: Snappy and wkhtmltopdf both support generating a single PDF from multiple sources. To do so, you need to provide an array of input rather than a string.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$pdf = new \(\backslash\)Knp\(\backslash\)Snappy\(\backslash\)Pdf(\_\_DIR\_\_ . \textcolor{stringliteral}{'/vendor/bin/wkhtmltopdf-\/amd64'});}
+\DoxyCodeLine{\$pdf-\/>generate([\textcolor{stringliteral}{'https://google.com'}, \textcolor{stringliteral}{'https://google.jp'}], \textcolor{stringliteral}{'/tmp/out/test.pdf'});}
+\DoxyCodeLine{\textcolor{comment}{// or}}
+\DoxyCodeLine{\$pdf-\/>generateFromHtml([\textcolor{stringliteral}{'<html><body>Doc 1</body></html>'}, \textcolor{stringliteral}{'<html><body>Doc 2</body></html>'}], \textcolor{stringliteral}{'/tmp/out/test.pdf'});}
+
+\end{DoxyCode}
+
+
+\doxysubparagraph*{{\itshape Q}\+: My chars with accents passed to wkhtmltopdf options are not correctly rendered, i.\+e. `footer-\/right =\texorpdfstring{$>$}{>} \textquotesingle{}Página \mbox{[}page\mbox{]} de \mbox{[}to\+Page\mbox{]}'` is converted to \textquotesingle{}PÃ¡gina 1 de 1'.}
+
+{\itshape A}\+: The answer is long here. We use {\ttfamily escapeshellarg} function to escape all the option value passed to {\ttfamily wkhtmltox}. {\ttfamily escapeshellarg} makes its escape based on server locale, so if you are experiencing this issue -\/ you can set 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{setlocale(LC\_CTYPE, \textcolor{stringliteral}{'es\_ES.UTF-\/8'})}
+
+\end{DoxyCode}
+
+
+or any locale which is suitable for you. You should take into account that if given locale is not configured on the server -\/ you will still have an issue. Check your locales installed via running 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{locale -\/a}
+
+\end{DoxyCode}
+ If the needed locale is missing on the server -\/ you should install/configure it.
+
+\doxysubparagraph*{{\itshape Q}\+: How to put an header/footer on every page of the PDF?}
+
+{\itshape A}\+: You need to provide either a valid file path or some HTML content. Note that your HTML document(s) needs to start with a valid doctype and have html, head and body tags, or wkhtmltopdf will fail to render the PDF properly.
+
+{\itshape Note that this feature does not work with wkhtmltopdf compiled against unpatched Qt. Most of the time, wkhtmltopdf packages from Linux distributions are not fine. You should rather rely on the official version available on \href{https://wkhtmltopdf.org}{\texttt{ wkhtmltopdf.\+org}} or the version available from {\ttfamily h4cc/wkhtmltopdf} package.}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{require \_\_DIR\_\_ . \textcolor{stringliteral}{'/vendor/autoload.php'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$header = <<<HTML}
+\DoxyCodeLine{<!DOCTYPE html>}
+\DoxyCodeLine{<html>}
+\DoxyCodeLine{  <head><style type=\textcolor{stringliteral}{"{}text/css"{}}>p \{ color: \#FF0000; \}</style></head>}
+\DoxyCodeLine{  <body><p>Lorem ipsum</p></body>}
+\DoxyCodeLine{</html>}
+\DoxyCodeLine{HTML;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$footer = <<<HTML}
+\DoxyCodeLine{<!DOCTYPE html>}
+\DoxyCodeLine{<html>}
+\DoxyCodeLine{  <head><style type=\textcolor{stringliteral}{"{}text/css"{}}>p \{ color: \#0000FF; \}</style></head>}
+\DoxyCodeLine{  <body><p>Lorem ipsum</p></body>}
+\DoxyCodeLine{</html>}
+\DoxyCodeLine{HTML;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Without html extension you might face following error:}}
+\DoxyCodeLine{\textcolor{comment}{// Exit with code 1, due to unknown error.}}
+\DoxyCodeLine{\$footerPath = tempnam(\textcolor{stringliteral}{'/tmp'}, \textcolor{stringliteral}{'footer'}) . \textcolor{stringliteral}{'.html'};}
+\DoxyCodeLine{file\_put\_contents(\$footerPath, \$footer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$pdf = new \(\backslash\)Knp\(\backslash\)Snappy\(\backslash\)Pdf(\_\_DIR\_\_ . \textcolor{stringliteral}{'/vendor/bin/wkhtmltopdf-\/amd64'});}
+\DoxyCodeLine{\$pdf-\/>generateFromHtml(\textcolor{stringliteral}{''}, \textcolor{stringliteral}{'/tmp/out/test.pdf'}, [\textcolor{stringliteral}{'header-\/html'} => \$header, \textcolor{stringliteral}{'footer-\/html'} => \$footerPath], \textcolor{keyword}{true});}
+
+\end{DoxyCode}
+
+
+\doxysubparagraph*{{\itshape Q}\+: Is it possible to include an header and/or footer only on some specific pages?}
+
+{\itshape A}\+: No, wkhtmtopdf does not allow this.
+
+\doxysubparagraph*{{\itshape Q}\+: When running wkhtmltopdf through Snappy, I got an exit code 5 or 6}
+
+{\itshape A}\+: It\textquotesingle{}s usually due to bad environment variables. For example, on Mac\+OS, you need to check the value of {\ttfamily DYLD\+\_\+\+LIBRARY\+\_\+\+PATH} (see \href{https://github.com/KnpLabs/snappy/issues/27\#issuecomment-7199659}{\texttt{ \#27}}). On Linux, you should check the value of {\ttfamily LD\+\_\+\+LIBRARY\+\_\+\+PATH}. Also note that, depending on the way you execute PHP, your environment variables might be reset for security reasons (for instance, look at {\ttfamily clear\+\_\+env} on php-\/fpm).
+
+\doxysubparagraph*{{\itshape Q}\+: On Windows, when I generate a PDF nothing happens (there\textquotesingle{}s no PDF file written)}
+
+{\itshape A}\+: You should check with sysinternals procmon if you experience {\ttfamily ACCESS\+\_\+\+DENIED} error. If that\textquotesingle{}s the case, you need to give execution permission to IIS users on wkhtmltopdf binary. Also, your user(s) should have write permissions on the temporary folder.
+
+For more details see \href{https://github.com/KnpLabs/snappy/issues/123}{\texttt{ \#123}}.
+
+\doxysubparagraph*{{\itshape Q}\+: Snappy takes an endless amount of time to generate a PDF and eventually fails due to timeout}
+
+{\itshape A}\+: This is generally indicating some networking issues. It might be bad DNS record(s), some sporadic packet losses, unresponsive HTTP server ...
+
+Note that if you use the PHP embedded server, you can\textquotesingle{}t generate a PDF from an HTML page accessible from the same embedded server. Indeed, the embedded server never forks and does not use threads. That means it\textquotesingle{}s not able to process two requests at the same time\+: it processes the first one, send the first response and only then starts to process the second one.
+
+\doxysubparagraph*{{\itshape Q}\+: How to proceed when experiencing {\ttfamily Content\+Not\+Found}, {\ttfamily Connection\+Refused\+Error} or timeouts?}
+
+{\itshape A}\+: When you experience errors like {\ttfamily Content\+Not\+Found} or {\ttfamily Connection\+Refused\+Error}, try to turn off {\ttfamily quiet} option and look at Snappy logs (you have to set up a logger first).
+
+If you experience timeouts, it might be hard to know what is failing. The best you can do to narrow the scope of the bug is to slightly change your HTML code until you found the culprit. Start by removing whole parts, like document body to know if it comes from something in the body or something in the head. If that\textquotesingle{}s now working, re-\/add it but now remove one half of its content. And repeat again and again until you find which URLs is buggy.
+
+There\textquotesingle{}s one more (better) way though\+: fire up tcpdump or wireshark and listen for http requests. You should see which request(s) is failing, and you can even check the content of the request/response.
+
+\doxysubparagraph*{{\itshape Q}\+: My custom fonts aren\textquotesingle{}t smooth}
+
+According to \#326, you shall prefer using SVG versions of your custom fonts to have a better font smoothing. 

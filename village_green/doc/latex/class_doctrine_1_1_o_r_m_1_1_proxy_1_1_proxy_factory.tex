@@ -1,0 +1,91 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory}{}\doxysection{Proxy\+Factory Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory}\index{ProxyFactory@{ProxyFactory}}
+Inheritance diagram for Proxy\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2b7205afe91dafec33e8a9ed7538e552}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \$proxy\+Dir, \$proxy\+Ns, \$auto\+Generate=\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a95b8b76822f43ba5edbedc77855ba04a}{Abstract\+Proxy\+Factory\+::\+AUTOGENERATE\+\_\+\+NEVER}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}{skip\+Class}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}{create\+Proxy\+Definition}} (\$class\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This factory is used to create proxy objects for entities at runtime.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000280}{Deprecated}}]2.\+7 This class is being removed from the ORM and won\textquotesingle{}t have any replacement \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2b7205afe91dafec33e8a9ed7538e552}\label{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2b7205afe91dafec33e8a9ed7538e552}} 
+\index{ProxyFactory@{ProxyFactory}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ProxyFactory@{ProxyFactory}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{}]{\$proxy\+Dir,  }\item[{}]{\$proxy\+Ns,  }\item[{}]{\$auto\+Generate = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a95b8b76822f43ba5edbedc77855ba04a}{Abstract\+Proxy\+Factory\+::\+AUTOGENERATE\+\_\+\+NEVER}}} }\end{DoxyParamCaption})}
+
+Initializes a new instance of the {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory}{Proxy\+Factory}}} class that is connected to the given {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} & {\em \$em} & The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} the new factory works for. \\
+\hline
+string & {\em \$proxy\+Dir} & The directory to use for the proxy classes. It must exist. \\
+\hline
+string & {\em \$proxy\+Ns} & The namespace to use for the proxy classes. \\
+\hline
+bool | int & {\em \$auto\+Generate} & The strategy for automatically generating proxy classes. Possible values are constants of Doctrine\textbackslash{}\+Common\textbackslash{}\+Proxy\textbackslash{}\+Abstract\+Proxy\+Factory. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}\label{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}} 
+\index{ProxyFactory@{ProxyFactory}!createProxyDefinition@{createProxyDefinition}}
+\index{createProxyDefinition@{createProxyDefinition}!ProxyFactory@{ProxyFactory}}
+\doxysubsubsection{\texorpdfstring{createProxyDefinition()}{createProxyDefinition()}}
+{\footnotesize\ttfamily create\+Proxy\+Definition (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_proxy_definition}{Proxy\+Definition}}
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}{Abstract\+Proxy\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}\label{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}} 
+\index{ProxyFactory@{ProxyFactory}!skipClass@{skipClass}}
+\index{skipClass@{skipClass}!ProxyFactory@{ProxyFactory}}
+\doxysubsubsection{\texorpdfstring{skipClass()}{skipClass()}}
+{\footnotesize\ttfamily skip\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Determine if this class should be skipped during proxy generation.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}{Abstract\+Proxy\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Proxy/Proxy\+Factory.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression}{}\doxysection{Quantified\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression}\index{QuantifiedExpression@{QuantifiedExpression}}
+Inheritance diagram for Quantified\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a07b08a4c1e92ac030172f1809f31f3f6}{\+\_\+\+\_\+construct}} (\$subselect)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a44879848652bb908cbae93c3056f7754}{is\+All}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a5c69c1d4cfa1745c4e9a121517ca7ba4}{is\+Any}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_aae8aafaf3fa59dabbc881e17dffb806c}{is\+Some}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a9a4a6fba2208984cabb3afacadf33919}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a9a4a6fba2208984cabb3afacadf33919}} 
+{\bfseries \$type}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_afa185578294f8726b0298e6522a90dff}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_afa185578294f8726b0298e6522a90dff}} 
+{\bfseries \$subselect}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression}{Quantified\+Expression}} \+::= (\char`\"{}\+ALL\char`\"{} $\vert$ \char`\"{}\+ANY\char`\"{} $\vert$ \char`\"{}\+SOME\char`\"{}) \char`\"{}(\char`\"{} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect}{Subselect}} \char`\"{})\char`\"{}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a07b08a4c1e92ac030172f1809f31f3f6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a07b08a4c1e92ac030172f1809f31f3f6}} 
+\index{QuantifiedExpression@{QuantifiedExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!QuantifiedExpression@{QuantifiedExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$subselect }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect}{Subselect}} & {\em \$subselect} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{QuantifiedExpression@{QuantifiedExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!QuantifiedExpression@{QuantifiedExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a44879848652bb908cbae93c3056f7754}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a44879848652bb908cbae93c3056f7754}} 
+\index{QuantifiedExpression@{QuantifiedExpression}!isAll@{isAll}}
+\index{isAll@{isAll}!QuantifiedExpression@{QuantifiedExpression}}
+\doxysubsubsection{\texorpdfstring{isAll()}{isAll()}}
+{\footnotesize\ttfamily is\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a5c69c1d4cfa1745c4e9a121517ca7ba4}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_a5c69c1d4cfa1745c4e9a121517ca7ba4}} 
+\index{QuantifiedExpression@{QuantifiedExpression}!isAny@{isAny}}
+\index{isAny@{isAny}!QuantifiedExpression@{QuantifiedExpression}}
+\doxysubsubsection{\texorpdfstring{isAny()}{isAny()}}
+{\footnotesize\ttfamily is\+Any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_aae8aafaf3fa59dabbc881e17dffb806c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression_aae8aafaf3fa59dabbc881e17dffb806c}} 
+\index{QuantifiedExpression@{QuantifiedExpression}!isSome@{isSome}}
+\index{isSome@{isSome}!QuantifiedExpression@{QuantifiedExpression}}
+\doxysubsubsection{\texorpdfstring{isSome()}{isSome()}}
+{\footnotesize\ttfamily is\+Some (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Quantified\+Expression.\+php\end{DoxyCompactItemize}

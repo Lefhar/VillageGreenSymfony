@@ -1,0 +1,52 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler}{}\doxysection{Hydration\+Complete\+Handler Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler}\index{HydrationCompleteHandler@{HydrationCompleteHandler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_a1e61ca42d291b6375e0398322a01920f}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker}{Listeners\+Invoker}} \$listeners\+Invoker, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_a1b705bd51182841d9fc8a5ed6c54328a}{defer\+Post\+Load\+Invoking}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_ace93b16fb5c4785a501182ab08b6f13b}{hydration\+Complete}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class, which can handle completion of hydration cycle and produce some of tasks. In current implementation triggers deferred post\+Load event. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_a1e61ca42d291b6375e0398322a01920f}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_a1e61ca42d291b6375e0398322a01920f}} 
+\index{HydrationCompleteHandler@{HydrationCompleteHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HydrationCompleteHandler@{HydrationCompleteHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker}{Listeners\+Invoker}}}]{\$listeners\+Invoker,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+Constructor for this object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_a1b705bd51182841d9fc8a5ed6c54328a}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_a1b705bd51182841d9fc8a5ed6c54328a}} 
+\index{HydrationCompleteHandler@{HydrationCompleteHandler}!deferPostLoadInvoking@{deferPostLoadInvoking}}
+\index{deferPostLoadInvoking@{deferPostLoadInvoking}!HydrationCompleteHandler@{HydrationCompleteHandler}}
+\doxysubsubsection{\texorpdfstring{deferPostLoadInvoking()}{deferPostLoadInvoking()}}
+{\footnotesize\ttfamily defer\+Post\+Load\+Invoking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Method schedules invoking of post\+Load entity to the very end of current hydration cycle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_ace93b16fb5c4785a501182ab08b6f13b}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_complete_handler_ace93b16fb5c4785a501182ab08b6f13b}} 
+\index{HydrationCompleteHandler@{HydrationCompleteHandler}!hydrationComplete@{hydrationComplete}}
+\index{hydrationComplete@{hydrationComplete}!HydrationCompleteHandler@{HydrationCompleteHandler}}
+\doxysubsubsection{\texorpdfstring{hydrationComplete()}{hydrationComplete()}}
+{\footnotesize\ttfamily hydration\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method should me called after any hydration cycle completed.
+
+Method fires all deferred invocations of post\+Load events 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Internal/Hydration\+Complete\+Handler.\+php\end{DoxyCompactItemize}

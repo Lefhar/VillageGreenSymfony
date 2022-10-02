@@ -1,0 +1,114 @@
+\hypertarget{class_monolog_1_1_handler_1_1_swift_mailer_handler}{}\doxysection{Swift\+Mailer\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_swift_mailer_handler}\index{SwiftMailerHandler@{SwiftMailerHandler}}
+Inheritance diagram for Swift\+Mailer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.297297cm]{class_monolog_1_1_handler_1_1_swift_mailer_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_swift_mailer_handler_af37a22e4b4975b25d67640d85aa8455b}{\+\_\+\+\_\+construct}} (\textbackslash{}Swift\+\_\+\+Mailer \$mailer, \$message, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_swift_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}{send}} (string \$content, array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_swift_mailer_handler_ab7d97addfc9ba1452cac5b453f5c9be9}{get\+Subject\+Formatter}} (?string \$format)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_swift_mailer_handler_a53a49fc8ab0a34773fc29d7e0747060c}{build\+Message}} (string \$content, array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_swift_mailer_handler_a510f86466a19c6f0cb20ff94c2fe47fd}\label{class_monolog_1_1_handler_1_1_swift_mailer_handler_a510f86466a19c6f0cb20ff94c2fe47fd}} 
+{\bfseries \$mailer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_swift_mailer_handler}{Swift\+Mailer\+Handler}} uses Swift\+\_\+\+Mailer to send the emails
+
+\begin{DoxyAuthor}{Author}
+Gyula Sallai
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_swift_mailer_handler_af37a22e4b4975b25d67640d85aa8455b}\label{class_monolog_1_1_handler_1_1_swift_mailer_handler_af37a22e4b4975b25d67640d85aa8455b}} 
+\index{SwiftMailerHandler@{SwiftMailerHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SwiftMailerHandler@{SwiftMailerHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\textbackslash{}Swift\+\_\+\+Mailer}]{\$mailer,  }\item[{}]{\$message,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@psalm-\/param Swift\+\_\+\+Message$\vert$callable(string, Record\mbox{[}\mbox{]})\+: Swift\+\_\+\+Message \$message
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Swift\+\_\+\+Mailer & {\em \$mailer} & The mailer to use \\
+\hline
+callable | Swift\+\_\+\+Message & {\em \$message} & An example message for real messages, only the body will be replaced \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_swift_mailer_handler_a53a49fc8ab0a34773fc29d7e0747060c}\label{class_monolog_1_1_handler_1_1_swift_mailer_handler_a53a49fc8ab0a34773fc29d7e0747060c}} 
+\index{SwiftMailerHandler@{SwiftMailerHandler}!buildMessage@{buildMessage}}
+\index{buildMessage@{buildMessage}!SwiftMailerHandler@{SwiftMailerHandler}}
+\doxysubsubsection{\texorpdfstring{buildMessage()}{buildMessage()}}
+{\footnotesize\ttfamily build\+Message (\begin{DoxyParamCaption}\item[{string}]{\$content,  }\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates instance of Swift\+\_\+\+Message to be sent
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & formatted email body to be sent \\
+\hline
+array & {\em \$records} & Log records that formed the content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Swift\+\_\+\+Message
+\end{DoxyReturn}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records @phpstan-\/ignore-\/next-\/line
+
+@phpstan-\/ignore-\/next-\/line\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_swift_mailer_handler_ab7d97addfc9ba1452cac5b453f5c9be9}\label{class_monolog_1_1_handler_1_1_swift_mailer_handler_ab7d97addfc9ba1452cac5b453f5c9be9}} 
+\index{SwiftMailerHandler@{SwiftMailerHandler}!getSubjectFormatter@{getSubjectFormatter}}
+\index{getSubjectFormatter@{getSubjectFormatter}!SwiftMailerHandler@{SwiftMailerHandler}}
+\doxysubsubsection{\texorpdfstring{getSubjectFormatter()}{getSubjectFormatter()}}
+{\footnotesize\ttfamily get\+Subject\+Formatter (\begin{DoxyParamCaption}\item[{?string}]{\$format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the formatter for the Swift\+\_\+\+Message subject.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$format} & The format of the subject \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_swift_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}\label{class_monolog_1_1_handler_1_1_swift_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}} 
+\index{SwiftMailerHandler@{SwiftMailerHandler}!send@{send}}
+\index{send@{send}!SwiftMailerHandler@{SwiftMailerHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{string}]{\$content,  }\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send a mail with the given content
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & formatted email body to be sent \\
+\hline
+array & {\em \$records} & the array of log records that formed this content\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}{Mail\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Swift\+Mailer\+Handler.\+php\end{DoxyCompactItemize}

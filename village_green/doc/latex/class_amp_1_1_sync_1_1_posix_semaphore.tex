@@ -1,0 +1,169 @@
+\hypertarget{class_amp_1_1_sync_1_1_posix_semaphore}{}\doxysection{Posix\+Semaphore Class Reference}
+\label{class_amp_1_1_sync_1_1_posix_semaphore}\index{PosixSemaphore@{PosixSemaphore}}
+Inheritance diagram for Posix\+Semaphore\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_sync_1_1_posix_semaphore}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_aaf11785905da71774e052912d784e3b4}{\+\_\+\+\_\+sleep}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_a12251d0c022e9e21c137a105ff683f13}\label{class_amp_1_1_sync_1_1_posix_semaphore_a12251d0c022e9e21c137a105ff683f13}} 
+{\bfseries get\+Id} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_a98e8f81c4e0869a6adf4a36ca1a6860a}{get\+Permissions}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_a6f893f6b91ddb0a856e0090b3117a616}{set\+Permissions}} (int \$mode)
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_afb36e5d94e5d65b937c6eec4830313e7}{acquire}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_a0ff27a57b5ca3acb647b8cc0cdc7ed36}{create}} (string \$id, int \$max\+Locks, int \$permissions=0600)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_aa7830fddd9a40c8d7c9509b7d0cd1218}\label{class_amp_1_1_sync_1_1_posix_semaphore_aa7830fddd9a40c8d7c9509b7d0cd1218}} 
+const {\bfseries LATENCY\+\_\+\+TIMEOUT} = 10
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_ad4f4803aa59b110b525724c653102bf9}\label{class_amp_1_1_sync_1_1_posix_semaphore_ad4f4803aa59b110b525724c653102bf9}} 
+return {\bfseries \$semaphore}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore_aca528d50aca20f75649202637a199c95}{release}} (int \$id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A non-\/blocking, inter-\/process POSIX semaphore.
+
+Uses a POSIX message queue to store a queue of permits in a lock-\/free data structure. This semaphore implementation is preferred over other implementations when available, as it provides the best performance.
+
+Not compatible with Windows. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_a421831a265621325e1fdd19aace0c758}\label{class_amp_1_1_sync_1_1_posix_semaphore_a421831a265621325e1fdd19aace0c758}} 
+\index{PosixSemaphore@{PosixSemaphore}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the semaphore if it still exists.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}}} & If the operation failed. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_aaf11785905da71774e052912d784e3b4}\label{class_amp_1_1_sync_1_1_posix_semaphore_aaf11785905da71774e052912d784e3b4}} 
+\index{PosixSemaphore@{PosixSemaphore}!\_\_sleep@{\_\_sleep}}
+\index{\_\_sleep@{\_\_sleep}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{\_\_sleep()}{\_\_sleep()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prevent serialization. \mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_afb36e5d94e5d65b937c6eec4830313e7}\label{class_amp_1_1_sync_1_1_posix_semaphore_afb36e5d94e5d65b937c6eec4830313e7}} 
+\index{PosixSemaphore@{PosixSemaphore}!acquire@{acquire}}
+\index{acquire@{acquire}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acquires a lock on the semaphore.
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Lock$>$ Resolves with an integer keyed lock object. Identifiers returned by the locks should be 0-\/indexed. Releasing an identifier MUST make that same identifier available. May fail with a \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}} if an error occurs when attempting to obtain the lock (e.\+g. a shared memory segment closed). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_sync_1_1_semaphore_afb36e5d94e5d65b937c6eec4830313e7}{Semaphore}}.
+
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_a0ff27a57b5ca3acb647b8cc0cdc7ed36}\label{class_amp_1_1_sync_1_1_posix_semaphore_a0ff27a57b5ca3acb647b8cc0cdc7ed36}} 
+\index{PosixSemaphore@{PosixSemaphore}!create@{create}}
+\index{create@{create}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}\item[{string}]{\$id,  }\item[{int}]{\$max\+Locks,  }\item[{int}]{\$permissions = {\ttfamily 0600} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new semaphore with a given ID and number of locks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The unique name for the new semaphore. \\
+\hline
+int & {\em \$max\+Locks} & The maximum number of locks that can be acquired from the semaphore. \\
+\hline
+int & {\em \$permissions} & Permissions to access the semaphore. Use file permission format specified as 0xxx.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_posix_semaphore}{Posix\+Semaphore}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}}} & If the semaphore could not be created due to an internal error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_a98e8f81c4e0869a6adf4a36ca1a6860a}\label{class_amp_1_1_sync_1_1_posix_semaphore_a98e8f81c4e0869a6adf4a36ca1a6860a}} 
+\index{PosixSemaphore@{PosixSemaphore}!getPermissions@{getPermissions}}
+\index{getPermissions@{getPermissions}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{getPermissions()}{getPermissions()}}
+{\footnotesize\ttfamily get\+Permissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the access permissions of the semaphore.
+
+\begin{DoxyReturn}{Returns}
+int A permissions mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_aca528d50aca20f75649202637a199c95}\label{class_amp_1_1_sync_1_1_posix_semaphore_aca528d50aca20f75649202637a199c95}} 
+\index{PosixSemaphore@{PosixSemaphore}!release@{release}}
+\index{release@{release}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily release (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Releases a lock from the semaphore.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \mbox{\hyperlink{class_amp_1_1_sync_1_1_lock}{Lock}} identifier.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}}} & If the operation failed. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_posix_semaphore_a6f893f6b91ddb0a856e0090b3117a616}\label{class_amp_1_1_sync_1_1_posix_semaphore_a6f893f6b91ddb0a856e0090b3117a616}} 
+\index{PosixSemaphore@{PosixSemaphore}!setPermissions@{setPermissions}}
+\index{setPermissions@{setPermissions}!PosixSemaphore@{PosixSemaphore}}
+\doxysubsubsection{\texorpdfstring{setPermissions()}{setPermissions()}}
+{\footnotesize\ttfamily set\+Permissions (\begin{DoxyParamCaption}\item[{int}]{\$mode }\end{DoxyParamCaption})}
+
+Sets the access permissions of the semaphore.
+
+The current user must have access to the semaphore in order to change the permissions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$mode} & A permissions mode to set.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}}} & If the operation failed. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/Posix\+Semaphore.\+php\end{DoxyCompactItemize}

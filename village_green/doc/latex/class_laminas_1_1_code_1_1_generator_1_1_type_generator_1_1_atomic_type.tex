@@ -1,0 +1,122 @@
+\hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type}{}\doxysection{Atomic\+Type Class Reference}
+\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type}\index{AtomicType@{AtomicType}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a0c754c5ed2754267850a965125919fff}{fully\+Qualified\+Name}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a04f76224d9869dc388cb5a3bf1159986}{assert\+Can\+Union\+With}} (array \$others)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a37a2e8e470172f0a9d2d85e899cbf884}{assert\+Can\+Intersect\+With}} (array \$others)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a3cdfb6eb90bd2792a6aaf930324dc520}{assert\+Can\+Be\+AStandalone\+Type}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a8797ec28dfcfa1e4f254351b58ea1b10}{assert\+Can\+Be\+Standalone\+Nullable}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a69800936b9008ba41c567291d9e10d63}{from\+String}} (string \$type)
+\item 
+static \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a4b510eedba3787d8abceaf660482b84a}{null}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a454e837c3906e2c01c3e453a559c5cab}{\$sort\+Index}}
+\item 
+string \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_aa40cc7876dc0b694eda3c898140a0ac8}{\$type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single/indivisible (atomic) type, as supported by PHP. This means that this object can be composed into more complex union, intersection and nullable types. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a3cdfb6eb90bd2792a6aaf930324dc520}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a3cdfb6eb90bd2792a6aaf930324dc520}} 
+\index{AtomicType@{AtomicType}!assertCanBeAStandaloneType@{assertCanBeAStandaloneType}}
+\index{assertCanBeAStandaloneType@{assertCanBeAStandaloneType}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{assertCanBeAStandaloneType()}{assertCanBeAStandaloneType()}}
+{\footnotesize\ttfamily assert\+Can\+Be\+AStandalone\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a8797ec28dfcfa1e4f254351b58ea1b10}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a8797ec28dfcfa1e4f254351b58ea1b10}} 
+\index{AtomicType@{AtomicType}!assertCanBeStandaloneNullable@{assertCanBeStandaloneNullable}}
+\index{assertCanBeStandaloneNullable@{assertCanBeStandaloneNullable}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{assertCanBeStandaloneNullable()}{assertCanBeStandaloneNullable()}}
+{\footnotesize\ttfamily assert\+Can\+Be\+Standalone\+Nullable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a37a2e8e470172f0a9d2d85e899cbf884}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a37a2e8e470172f0a9d2d85e899cbf884}} 
+\index{AtomicType@{AtomicType}!assertCanIntersectWith@{assertCanIntersectWith}}
+\index{assertCanIntersectWith@{assertCanIntersectWith}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{assertCanIntersectWith()}{assertCanIntersectWith()}}
+{\footnotesize\ttfamily assert\+Can\+Intersect\+With (\begin{DoxyParamCaption}\item[{array}]{\$others }\end{DoxyParamCaption})}
+
+@psalm-\/param non-\/empty-\/array$<$self$>$ \$others 
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a04f76224d9869dc388cb5a3bf1159986}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a04f76224d9869dc388cb5a3bf1159986}} 
+\index{AtomicType@{AtomicType}!assertCanUnionWith@{assertCanUnionWith}}
+\index{assertCanUnionWith@{assertCanUnionWith}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{assertCanUnionWith()}{assertCanUnionWith()}}
+{\footnotesize\ttfamily assert\+Can\+Union\+With (\begin{DoxyParamCaption}\item[{array}]{\$others }\end{DoxyParamCaption})}
+
+@psalm-\/param non-\/empty-\/array$<$self$>$ \$others 
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a69800936b9008ba41c567291d9e10d63}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a69800936b9008ba41c567291d9e10d63}} 
+\index{AtomicType@{AtomicType}!fromString@{fromString}}
+\index{fromString@{fromString}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}}
+{\footnotesize\ttfamily static from\+String (\begin{DoxyParamCaption}\item[{string}]{\$type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@psalm-\/pure 
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a0c754c5ed2754267850a965125919fff}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a0c754c5ed2754267850a965125919fff}} 
+\index{AtomicType@{AtomicType}!fullyQualifiedName@{fullyQualifiedName}}
+\index{fullyQualifiedName@{fullyQualifiedName}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{fullyQualifiedName()}{fullyQualifiedName()}}
+{\footnotesize\ttfamily fully\+Qualified\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@psalm-\/return non-\/empty-\/string \mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a4b510eedba3787d8abceaf660482b84a}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a4b510eedba3787d8abceaf660482b84a}} 
+\index{AtomicType@{AtomicType}!null@{null}}
+\index{null@{null}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{null()}{null()}}
+{\footnotesize\ttfamily static null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@psalm-\/pure 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a454e837c3906e2c01c3e453a559c5cab}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_a454e837c3906e2c01c3e453a559c5cab}} 
+\index{AtomicType@{AtomicType}!\$sortIndex@{\$sortIndex}}
+\index{\$sortIndex@{\$sortIndex}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{\$sortIndex}{$sortIndex}}
+{\footnotesize\ttfamily int \$sort\+Index}
+
+@psalm-\/var value-\/of\texorpdfstring{$<$}{<}Atomic\+Type\+::\+BUILT\+\_\+\+IN\+\_\+\+TYPES\+\_\+\+PRECEDENCE\texorpdfstring{$>$}{>}$\vert$0 \mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_aa40cc7876dc0b694eda3c898140a0ac8}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_1_1_atomic_type_aa40cc7876dc0b694eda3c898140a0ac8}} 
+\index{AtomicType@{AtomicType}!\$type@{\$type}}
+\index{\$type@{\$type}!AtomicType@{AtomicType}}
+\doxysubsubsection{\texorpdfstring{\$type}{$type}}
+{\footnotesize\ttfamily string \$type}
+
+@psalm-\/var non-\/empty-\/string 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/laminas/laminas-\/code/src/\+Generator/\+Type\+Generator/Atomic\+Type.\+php\end{DoxyCompactItemize}

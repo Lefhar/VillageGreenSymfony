@@ -1,0 +1,186 @@
+\hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator}{}\doxysection{Trait\+Generator Class Reference}
+\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator}\index{TraitGenerator@{TraitGenerator}}
+Inheritance diagram for Trait\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_laminas_1_1_code_1_1_generator_1_1_trait_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_ab159f739531e6eef836f71de611a5dc4}{set\+Flags}} (\$flags)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a71581e4ce3c4df3a2052f10bbd2d50be}{add\+Flag}} (\$flag)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a908e28e0b91f05d33ad7ec8e3cb4d953}{remove\+Flag}} (\$flag)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a3338fe4a11066e6729f37901cca06f4e}{set\+Final}} (\$\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_af5e2c93992e760dc57f31b31ed354cfa}{is\+Final}})
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a1c6283abdbcc69d95be17354219e38a5}{set\+Extended\+Class}} (\$extended\+Class)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a213528de1e7d92ca452eb525d9f52736}{set\+Implemented\+Interfaces}} (array \$implemented\+Interfaces)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a786429d0409443e7a22510c62bd6299f}{set\+Abstract}} (\$\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_acc4237def73fe195ba526291e953acec}{is\+Abstract}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a982d40c4de9cf574818338e94a7b82d4}{from\+Reflection}} (\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_class_reflection}{Class\+Reflection}} \$class\+Reflection)
+\item 
+static \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_af4aa77224a40b38f995dabf96b3cc055}{from\+Array}} (array \$array)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a510ee95752435bb73fcd1d1e31c65dae}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a510ee95752435bb73fcd1d1e31c65dae}} 
+const {\bfseries OBJECT\+\_\+\+TYPE} = \textquotesingle{}trait\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a71581e4ce3c4df3a2052f10bbd2d50be}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a71581e4ce3c4df3a2052f10bbd2d50be}} 
+\index{TraitGenerator@{TraitGenerator}!addFlag@{addFlag}}
+\index{addFlag@{addFlag}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{addFlag()}{addFlag()}}
+{\footnotesize\ttfamily add\+Flag (\begin{DoxyParamCaption}\item[{}]{\$flag }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a71581e4ce3c4df3a2052f10bbd2d50be}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_af4aa77224a40b38f995dabf96b3cc055}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_af4aa77224a40b38f995dabf96b3cc055}} 
+\index{TraitGenerator@{TraitGenerator}!fromArray@{fromArray}}
+\index{fromArray@{fromArray}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{fromArray()}{fromArray()}}
+{\footnotesize\ttfamily static from\+Array (\begin{DoxyParamCaption}\item[{array}]{\$array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Generate from array
+
+@configkey name string \mbox{[}required\mbox{]} Class Name @configkey filegenerator \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_file_generator}{File\+Generator}} File generator that holds this class @configkey namespacename string The namespace for this class @configkey docblock string The docblock information @configkey properties @configkey methods 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception 
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_af4aa77224a40b38f995dabf96b3cc055}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a982d40c4de9cf574818338e94a7b82d4}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a982d40c4de9cf574818338e94a7b82d4}} 
+\index{TraitGenerator@{TraitGenerator}!fromReflection@{fromReflection}}
+\index{fromReflection@{fromReflection}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{fromReflection()}{fromReflection()}}
+{\footnotesize\ttfamily static from\+Reflection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_class_reflection}{Class\+Reflection}}}]{\$class\+Reflection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Build a Code Generation Php Object from a Class Reflection
+
+\begin{DoxyReturn}{Returns}
+static 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a982d40c4de9cf574818338e94a7b82d4}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a908e28e0b91f05d33ad7ec8e3cb4d953}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a908e28e0b91f05d33ad7ec8e3cb4d953}} 
+\index{TraitGenerator@{TraitGenerator}!removeFlag@{removeFlag}}
+\index{removeFlag@{removeFlag}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{removeFlag()}{removeFlag()}}
+{\footnotesize\ttfamily remove\+Flag (\begin{DoxyParamCaption}\item[{}]{\$flag }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a908e28e0b91f05d33ad7ec8e3cb4d953}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a786429d0409443e7a22510c62bd6299f}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a786429d0409443e7a22510c62bd6299f}} 
+\index{TraitGenerator@{TraitGenerator}!setAbstract@{setAbstract}}
+\index{setAbstract@{setAbstract}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{setAbstract()}{setAbstract()}}
+{\footnotesize\ttfamily set\+Abstract (\begin{DoxyParamCaption}\item[{}]{\$is\+Abstract }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a786429d0409443e7a22510c62bd6299f}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a1c6283abdbcc69d95be17354219e38a5}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a1c6283abdbcc69d95be17354219e38a5}} 
+\index{TraitGenerator@{TraitGenerator}!setExtendedClass@{setExtendedClass}}
+\index{setExtendedClass@{setExtendedClass}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{setExtendedClass()}{setExtendedClass()}}
+{\footnotesize\ttfamily set\+Extended\+Class (\begin{DoxyParamCaption}\item[{}]{\$extended\+Class }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$extended\+Class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a1c6283abdbcc69d95be17354219e38a5}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a3338fe4a11066e6729f37901cca06f4e}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a3338fe4a11066e6729f37901cca06f4e}} 
+\index{TraitGenerator@{TraitGenerator}!setFinal@{setFinal}}
+\index{setFinal@{setFinal}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{setFinal()}{setFinal()}}
+{\footnotesize\ttfamily set\+Final (\begin{DoxyParamCaption}\item[{}]{\$is\+Final }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a3338fe4a11066e6729f37901cca06f4e}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_ab159f739531e6eef836f71de611a5dc4}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_ab159f739531e6eef836f71de611a5dc4}} 
+\index{TraitGenerator@{TraitGenerator}!setFlags@{setFlags}}
+\index{setFlags@{setFlags}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{setFlags()}{setFlags()}}
+{\footnotesize\ttfamily set\+Flags (\begin{DoxyParamCaption}\item[{}]{\$flags }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+\begin{DoxyParams}[1]{Parameters}
+int\mbox{[}$\,$\mbox{]} | int & {\em \$flags} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_ab159f739531e6eef836f71de611a5dc4}{Class\+Generator}}.
+
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a213528de1e7d92ca452eb525d9f52736}\label{class_laminas_1_1_code_1_1_generator_1_1_trait_generator_a213528de1e7d92ca452eb525d9f52736}} 
+\index{TraitGenerator@{TraitGenerator}!setImplementedInterfaces@{setImplementedInterfaces}}
+\index{setImplementedInterfaces@{setImplementedInterfaces}!TraitGenerator@{TraitGenerator}}
+\doxysubsubsection{\texorpdfstring{setImplementedInterfaces()}{setImplementedInterfaces()}}
+{\footnotesize\ttfamily set\+Implemented\+Interfaces (\begin{DoxyParamCaption}\item[{array}]{\$implemented\+Interfaces }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a213528de1e7d92ca452eb525d9f52736}{Class\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/laminas/laminas-\/code/src/\+Generator/Trait\+Generator.\+php\end{DoxyCompactItemize}

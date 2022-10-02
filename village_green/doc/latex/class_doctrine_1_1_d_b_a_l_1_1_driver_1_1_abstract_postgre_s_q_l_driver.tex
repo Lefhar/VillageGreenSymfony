@@ -1,0 +1,98 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver}{}\doxysection{Abstract\+Postgre\+SQLDriver Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver}\index{AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}}
+Inheritance diagram for Abstract\+Postgre\+SQLDriver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_aa0588e688eda40590023638e7413b5b1}{create\+Database\+Platform\+For\+Version}} (\$version)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_a602d4b79ea2e33e68be7054e042aab99}{get\+Database\+Platform}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_ade15633613bcb8a3b8ac2a1ac6eb778f}{get\+Schema\+Manager}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$conn, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_adad0053e43d59994525ef35fafd50150}{get\+Exception\+Converter}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base implementation of the \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}}\} interface for Postgre\+SQL based drivers. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_aa0588e688eda40590023638e7413b5b1}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_aa0588e688eda40590023638e7413b5b1}} 
+\index{AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}!createDatabasePlatformForVersion@{createDatabasePlatformForVersion}}
+\index{createDatabasePlatformForVersion@{createDatabasePlatformForVersion}!AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}}
+\doxysubsubsection{\texorpdfstring{createDatabasePlatformForVersion()}{createDatabasePlatformForVersion()}}
+{\footnotesize\ttfamily create\+Database\+Platform\+For\+Version (\begin{DoxyParamCaption}\item[{}]{\$version }\end{DoxyParamCaption})}
+
+\{Factory method for creating the appropriate platform instance for the given version.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$version} & The platform/server version string to evaluate. This should be given in the notation the underlying database vendor uses.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Abstract\+Platform
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If the given version string could not be evaluated.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_version_aware_platform_driver_aa0588e688eda40590023638e7413b5b1}{Version\+Aware\+Platform\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_a602d4b79ea2e33e68be7054e042aab99}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_a602d4b79ea2e33e68be7054e042aab99}} 
+\index{AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}!getDatabasePlatform@{getDatabasePlatform}}
+\index{getDatabasePlatform@{getDatabasePlatform}!AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}}
+\doxysubsubsection{\texorpdfstring{getDatabasePlatform()}{getDatabasePlatform()}}
+{\footnotesize\ttfamily get\+Database\+Platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the Database\+Platform instance that provides all the metadata about the platform this driver connects to.
+
+\begin{DoxyReturn}{Returns}
+Abstract\+Platform The database platform.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_a602d4b79ea2e33e68be7054e042aab99}{Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_adad0053e43d59994525ef35fafd50150}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_adad0053e43d59994525ef35fafd50150}} 
+\index{AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}!getExceptionConverter@{getExceptionConverter}}
+\index{getExceptionConverter@{getExceptionConverter}!AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}}
+\doxysubsubsection{\texorpdfstring{getExceptionConverter()}{getExceptionConverter()}}
+{\footnotesize\ttfamily get\+Exception\+Converter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Exception\+Converter that can be used to convert driver-\/level exceptions into DBAL exceptions. 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_adad0053e43d59994525ef35fafd50150}{Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_ade15633613bcb8a3b8ac2a1ac6eb778f}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_abstract_postgre_s_q_l_driver_ade15633613bcb8a3b8ac2a1ac6eb778f}} 
+\index{AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}!getSchemaManager@{getSchemaManager}}
+\index{getSchemaManager@{getSchemaManager}!AbstractPostgreSQLDriver@{AbstractPostgreSQLDriver}}
+\doxysubsubsection{\texorpdfstring{getSchemaManager()}{getSchemaManager()}}
+{\footnotesize\ttfamily get\+Schema\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}}]{\$conn,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Gets the Schema\+Manager that can be used to inspect and change the underlying database schema of the platform this driver connects to.
+
+\begin{DoxyReturn}{Returns}
+Abstract\+Schema\+Manager
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_ade15633613bcb8a3b8ac2a1ac6eb778f}{Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Driver/Abstract\+Postgre\+SQLDriver.\+php\end{DoxyCompactItemize}

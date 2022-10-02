@@ -1,0 +1,97 @@
+\hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface}{}\doxysection{Uri\+Component\+Interface Interface Reference}
+\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface}\index{UriComponentInterface@{UriComponentInterface}}
+Inheritance diagram for Uri\+Component\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.783440cm]{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a58e43f09a06ce4e29b192c4e17ce7915}{get\+Content}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_ad402d8679325bc514874370f02b5c2ac}{json\+Serialize}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a4164db14e8425915ba23f4490a7d3185}{get\+Uri\+Component}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a7f4bbcbaf9eed721dd0a3f6482e79f48}{with\+Content}} (?string \$content)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a7516ca30af0db3cdbf9a7739b48ce91d}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{UriComponentInterface@{UriComponentInterface}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!UriComponentInterface@{UriComponentInterface}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the instance string representation.
+
+If the instance is defined, the value returned MUST be percent-\/encoded, but MUST NOT double-\/encode any characters. To determine what characters to encode, please refer to RFC 3986, Sections 2 and 3.
+
+If the instance is not defined an empty string is returned \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a58e43f09a06ce4e29b192c4e17ce7915}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a58e43f09a06ce4e29b192c4e17ce7915}} 
+\index{UriComponentInterface@{UriComponentInterface}!getContent@{getContent}}
+\index{getContent@{getContent}!UriComponentInterface@{UriComponentInterface}}
+\doxysubsubsection{\texorpdfstring{getContent()}{getContent()}}
+{\footnotesize\ttfamily get\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the instance content.
+
+If the instance is defined, the value returned MUST be encoded according to the selected encoding algorithm. In any case, the value MUST NOT double-\/encode any character depending on the selected encoding algorithm.
+
+To determine what characters to encode, please refer to RFC 3986, Sections 2 and 3. or RFC 3987 Section 3. By default the content is encoded according to RFC3986
+
+If the instance is not defined null is returned \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a4164db14e8425915ba23f4490a7d3185}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a4164db14e8425915ba23f4490a7d3185}} 
+\index{UriComponentInterface@{UriComponentInterface}!getUriComponent@{getUriComponent}}
+\index{getUriComponent@{getUriComponent}!UriComponentInterface@{UriComponentInterface}}
+\doxysubsubsection{\texorpdfstring{getUriComponent()}{getUriComponent()}}
+{\footnotesize\ttfamily get\+Uri\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the instance string representation with its optional URI delimiters.
+
+The value returned MUST be percent-\/encoded, but MUST NOT double-\/encode any characters. To determine what characters to encode, please refer to RFC 3986, Sections 2 and 3.
+
+If the instance is not defined an empty string is returned \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_ad402d8679325bc514874370f02b5c2ac}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_ad402d8679325bc514874370f02b5c2ac}} 
+\index{UriComponentInterface@{UriComponentInterface}!jsonSerialize@{jsonSerialize}}
+\index{jsonSerialize@{jsonSerialize}!UriComponentInterface@{UriComponentInterface}}
+\doxysubsubsection{\texorpdfstring{jsonSerialize()}{jsonSerialize()}}
+{\footnotesize\ttfamily json\+Serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the instance json representation.
+
+If the instance is defined, the value returned MUST be percent-\/encoded, but MUST NOT double-\/encode any characters. To determine what characters to encode, please refer to RFC 3986 or RFC 1738.
+
+If the instance is not defined null is returned \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a7f4bbcbaf9eed721dd0a3f6482e79f48}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_component_interface_a7f4bbcbaf9eed721dd0a3f6482e79f48}} 
+\index{UriComponentInterface@{UriComponentInterface}!withContent@{withContent}}
+\index{withContent@{withContent}!UriComponentInterface@{UriComponentInterface}}
+\doxysubsubsection{\texorpdfstring{withContent()}{withContent()}}
+{\footnotesize\ttfamily with\+Content (\begin{DoxyParamCaption}\item[{?string}]{\$content }\end{DoxyParamCaption})}
+
+Returns an instance with the specified content.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified content.
+
+Users can provide both encoded and decoded content characters.
+
+A null value is equivalent to removing the component content.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$content\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+{\em Idn\+Support\+Missing} & for component or transformations requiring IDN support when IDN support is not present or misconfigured. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/league/uri-\/interfaces/src/\+Contracts/Uri\+Component\+Interface.\+php\end{DoxyCompactItemize}

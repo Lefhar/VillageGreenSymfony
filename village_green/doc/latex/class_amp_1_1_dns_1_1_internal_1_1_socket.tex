@@ -1,0 +1,161 @@
+\hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket}{}\doxysection{Socket Class Reference}
+\label{class_amp_1_1_dns_1_1_internal_1_1_socket}\index{Socket@{Socket}}
+Inheritance diagram for Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_amp_1_1_dns_1_1_internal_1_1_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_ae10c9580dd0c7283de4783ff0e5a135b}{is\+Alive}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_abde6de49e12887fddc6041c88a64e9db}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_abde6de49e12887fddc6041c88a64e9db}} 
+{\bfseries get\+Last\+Activity} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_ab6185197c486cdf574c11a28fa7eaf40}{ask}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_question}{Question}} \$question, int \$timeout)
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_a9964fbed0dfdfa7066b90f9ecf3119cf}{connect}} (string \$uri)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_a53b193576b154638522d4902ca05d1b5}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_a53b193576b154638522d4902ca05d1b5}} 
+const {\bfseries MAX\+\_\+\+CONCURRENT\+\_\+\+REQUESTS} = 500
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_a80ef0f210368e617d78e5685e229d587}{send}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message}{Message}} \$message)
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_ac805eb3a4eb25b19c1ab093023da4d35}{receive}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_a8c29af408105ba75bc2b973aa4bc1bf7}{write}} (string \$data)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_ad2f2c65e63a731bb0091347bcc1649e3}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_ad2f2c65e63a731bb0091347bcc1649e3}} 
+{\bfseries create\+Message} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_question}{Question}} \$question, int \$id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_ab6185197c486cdf574c11a28fa7eaf40}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_ab6185197c486cdf574c11a28fa7eaf40}} 
+\index{Socket@{Socket}!ask@{ask}}
+\index{ask@{ask}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{ask()}{ask()}}
+{\footnotesize\ttfamily ask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_question}{Question}}}]{\$question,  }\item[{int}]{\$timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Question & {\em \$question} & \\
+\hline
+int & {\em \$timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Amp\textbackslash{}\+Promise\texorpdfstring{$<$}{<}\textbackslash{}\+Lib\+DNS\textbackslash{}\+Messages\textbackslash{}\+Message\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{Socket@{Socket}!close@{close}}
+\index{close@{close}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Resource\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_a9964fbed0dfdfa7066b90f9ecf3119cf}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_a9964fbed0dfdfa7066b90f9ecf3119cf}} 
+\index{Socket@{Socket}!connect@{connect}}
+\index{connect@{connect}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily static connect (\begin{DoxyParamCaption}\item[{string}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [abstract]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$self$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_udp_socket_a9964fbed0dfdfa7066b90f9ecf3119cf}{Udp\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_ae10c9580dd0c7283de4783ff0e5a135b}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_ae10c9580dd0c7283de4783ff0e5a135b}} 
+\index{Socket@{Socket}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ae10c9580dd0c7283de4783ff0e5a135b}{Tcp\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_udp_socket_ae10c9580dd0c7283de4783ff0e5a135b}{Udp\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_a64571309bfb3238c65fd3c2898f92440}} 
+\index{Socket@{Socket}!read@{read}}
+\index{read@{read}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a64571309bfb3238c65fd3c2898f92440}{Resource\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_ac805eb3a4eb25b19c1ab093023da4d35}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_ac805eb3a4eb25b19c1ab093023da4d35}} 
+\index{Socket@{Socket}!receive@{receive}}
+\index{receive@{receive}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Message$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ac805eb3a4eb25b19c1ab093023da4d35}{Tcp\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_udp_socket_ac805eb3a4eb25b19c1ab093023da4d35}{Udp\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_a80ef0f210368e617d78e5685e229d587}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_a80ef0f210368e617d78e5685e229d587}} 
+\index{Socket@{Socket}!send@{send}}
+\index{send@{send}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message}{Message}}}]{\$message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Message & {\em \$message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$int$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a80ef0f210368e617d78e5685e229d587}{Tcp\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_udp_socket_a80ef0f210368e617d78e5685e229d587}{Udp\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_socket_a8c29af408105ba75bc2b973aa4bc1bf7}\label{class_amp_1_1_dns_1_1_internal_1_1_socket_a8c29af408105ba75bc2b973aa4bc1bf7}} 
+\index{Socket@{Socket}!write@{write}}
+\index{write@{write}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a8c29af408105ba75bc2b973aa4bc1bf7}{Resource\+Socket}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/dns/lib/\+Internal/Socket.\+php\end{DoxyCompactItemize}

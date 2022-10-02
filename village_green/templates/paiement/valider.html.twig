@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PaiementController!{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Commande validé</li>
+                </ol>
+            </nav>
+            <div class="row p-4">
+                <h2>Commande valider</h2>
+            </div>
+            <div class="row pt-2 pb-2">
+                <div class="col-12">
+                    <div class="alert alert-success" role="alert">
+                        Votre commande est valider
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,45 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_collections_1_1_selectable}{}\doxysection{Selectable Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_collections_1_1_selectable}\index{Selectable@{Selectable}}
+Inheritance diagram for Selectable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.518987cm]{interface_doctrine_1_1_common_1_1_collections_1_1_selectable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_selectable_acb78394bf2d5e907c3286db303595970}{matching}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} \$criteria)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for collections that allow efficient filtering with an expression API.
+
+Goal of this interface is a backend independent method to fetch elements from a collections. \mbox{\hyperlink{}{Expression}} is crafted in a way that you can implement queries from both in-\/memory and database-\/backed collections.
+
+For database backed collections this allows very efficient access by utilizing the query APIs, for example SQL in the ORM. Applications using this API can implement efficient database access without having to ask the Entity\+Manager or Repositories.
+
+@psalm-\/template TKey as array-\/key @psalm-\/template T 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_collections_1_1_selectable_acb78394bf2d5e907c3286db303595970}\label{interface_doctrine_1_1_common_1_1_collections_1_1_selectable_acb78394bf2d5e907c3286db303595970}} 
+\index{Selectable@{Selectable}!matching@{matching}}
+\index{matching@{matching}!Selectable@{Selectable}}
+\doxysubsubsection{\texorpdfstring{matching()}{matching()}}
+{\footnotesize\ttfamily matching (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}}]{\$criteria }\end{DoxyParamCaption})}
+
+Selects all elements from a selectable that match the expression and returns a new collection containing these elements.
+
+\begin{DoxyReturn}{Returns}
+Collection$<$mixed$>$ @psalm-\/return Collection$<$\+TKey,\+T$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_array_collection_acb78394bf2d5e907c3286db303595970}{Array\+Collection}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_acb78394bf2d5e907c3286db303595970}{Entity\+Repository}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection_acb78394bf2d5e907c3286db303595970}{Lazy\+Criteria\+Collection}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection_acb78394bf2d5e907c3286db303595970}{Persistent\+Collection}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/collections/lib/\+Doctrine/\+Common/\+Collections/Selectable.\+php\end{DoxyCompactItemize}

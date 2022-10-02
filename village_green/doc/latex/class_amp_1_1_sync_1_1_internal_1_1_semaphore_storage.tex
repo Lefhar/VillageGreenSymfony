@@ -1,0 +1,53 @@
+\hypertarget{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage}{}\doxysection{Semaphore\+Storage Class Reference}
+\label{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage}\index{SemaphoreStorage@{SemaphoreStorage}}
+Inheritance diagram for Semaphore\+Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_a67f1e79e6d6d19df184fbaf679f8fefa}{\+\_\+\+\_\+construct}} (int \$locks)
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_afb36e5d94e5d65b937c6eec4830313e7}{acquire}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_aa7830fddd9a40c8d7c9509b7d0cd1218}\label{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_aa7830fddd9a40c8d7c9509b7d0cd1218}} 
+const {\bfseries LATENCY\+\_\+\+TIMEOUT} = 10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_a67f1e79e6d6d19df184fbaf679f8fefa}\label{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_a67f1e79e6d6d19df184fbaf679f8fefa}} 
+\index{SemaphoreStorage@{SemaphoreStorage}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SemaphoreStorage@{SemaphoreStorage}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$locks }\end{DoxyParamCaption})}
+
+Creates a new semaphore with a given number of locks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$locks} & The maximum number of locks that can be acquired from the semaphore. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_afb36e5d94e5d65b937c6eec4830313e7}\label{class_amp_1_1_sync_1_1_internal_1_1_semaphore_storage_afb36e5d94e5d65b937c6eec4830313e7}} 
+\index{SemaphoreStorage@{SemaphoreStorage}!acquire@{acquire}}
+\index{acquire@{acquire}!SemaphoreStorage@{SemaphoreStorage}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Uses a double locking mechanism to acquire a lock without blocking. A synchronous mutex is used to make sure that the semaphore is queried one at a time to preserve the integrity of the semaphore itself. Then a lock count is used to check if a lock is available without blocking.
+
+If a lock is not available, we add the request to a queue and set a timer to check again in the future.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/\+Internal/Semaphore\+Storage.\+php\end{DoxyCompactItemize}

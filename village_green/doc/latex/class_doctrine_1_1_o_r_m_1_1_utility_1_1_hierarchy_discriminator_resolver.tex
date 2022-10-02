@@ -1,0 +1,26 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_hierarchy_discriminator_resolver}{}\doxysection{Hierarchy\+Discriminator\+Resolver Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_hierarchy_discriminator_resolver}\index{HierarchyDiscriminatorResolver@{HierarchyDiscriminatorResolver}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_hierarchy_discriminator_resolver_a42d95b9204db292646d6bca86aa4d459}{resolve\+Discriminators\+For\+Class}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$root\+Class\+Metadata, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$entity\+Manager)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_hierarchy_discriminator_resolver_a42d95b9204db292646d6bca86aa4d459}\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_hierarchy_discriminator_resolver_a42d95b9204db292646d6bca86aa4d459}} 
+\index{HierarchyDiscriminatorResolver@{HierarchyDiscriminatorResolver}!resolveDiscriminatorsForClass@{resolveDiscriminatorsForClass}}
+\index{resolveDiscriminatorsForClass@{resolveDiscriminatorsForClass}!HierarchyDiscriminatorResolver@{HierarchyDiscriminatorResolver}}
+\doxysubsubsection{\texorpdfstring{resolveDiscriminatorsForClass()}{resolveDiscriminatorsForClass()}}
+{\footnotesize\ttfamily static resolve\+Discriminators\+For\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$root\+Class\+Metadata,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$entity\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method is needed to make INSTANCEOF work correctly with inheritance\+: if the class at hand has inheritance, it extracts all the discriminators from the child classes and returns them
+
+\begin{DoxyReturn}{Returns}
+null\mbox{[}\mbox{]} @psalm-\/return array\texorpdfstring{$<$}{<}array-\/key, null\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Utility/Hierarchy\+Discriminator\+Resolver.\+php\end{DoxyCompactItemize}

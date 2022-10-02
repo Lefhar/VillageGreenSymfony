@@ -1,0 +1,38 @@
+The Translation component provides tools to internationalize your application.\hypertarget{md_vendor_symfony_translation__r_e_a_d_m_e_autotoc_md1877}{}\doxysection{Getting Started}\label{md_vendor_symfony_translation__r_e_a_d_m_e_autotoc_md1877}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ composer require symfony/translation}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_translation_1_1_translator}{Symfony\(\backslash\)Component\(\backslash\)Translation\(\backslash\)Translator}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_translation_1_1_loader_1_1_array_loader}{Symfony\(\backslash\)Component\(\backslash\)Translation\(\backslash\)Loader\(\backslash\)ArrayLoader}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$translator = \textcolor{keyword}{new} Translator(\textcolor{stringliteral}{'fr\_FR'});}
+\DoxyCodeLine{\$translator-\/>addLoader(\textcolor{stringliteral}{'array'}, \textcolor{keyword}{new} ArrayLoader());}
+\DoxyCodeLine{\$translator-\/>addResource(\textcolor{stringliteral}{'array'}, [}
+\DoxyCodeLine{    \textcolor{stringliteral}{'Hello World!'} => \textcolor{stringliteral}{'Bonjour !'},}
+\DoxyCodeLine{], \textcolor{stringliteral}{'fr\_FR'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \$translator-\/>trans(\textcolor{stringliteral}{'Hello World!'}); \textcolor{comment}{// outputs « Bonjour ! »}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfony_translation__r_e_a_d_m_e_autotoc_md1878}{}\doxysection{Sponsor}\label{md_vendor_symfony_translation__r_e_a_d_m_e_autotoc_md1878}
+The Translation component for Symfony 5.\+4/6.0 is \href{https://symfony.com/backers}{\texttt{ backed}} by\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://crowdin.com}{\texttt{ Crowdin}}, a cloud-\/based localization management software helping teams to go global and stay agile.
+\item \href{https://lokalise.com}{\texttt{ Lokalise}}, a continuous localization and translation management platform that integrates into your development workflow so you can ship localized products, faster.
+\end{DoxyItemize}
+
+Help Symfony by \href{https://symfony.com/sponsor}{\texttt{ sponsoring}} its development!\hypertarget{md_vendor_symfony_translation__r_e_a_d_m_e_autotoc_md1879}{}\doxysection{Resources}\label{md_vendor_symfony_translation__r_e_a_d_m_e_autotoc_md1879}
+
+\begin{DoxyItemize}
+\item \href{https://symfony.com/doc/current/translation.html}{\texttt{ Documentation}}
+\item \href{https://symfony.com/doc/current/contributing/index.html}{\texttt{ Contributing}}
+\item \href{https://github.com/symfony/symfony/issues}{\texttt{ Report issues}} and \href{https://github.com/symfony/symfony/pulls}{\texttt{ send Pull Requests}} in the \href{https://github.com/symfony/symfony}{\texttt{ main Symfony repository}} 
+\end{DoxyItemize}

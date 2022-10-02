@@ -1,0 +1,71 @@
+\hypertarget{class_monolog_1_1_handler_1_1_log_entries_handler}{}\doxysection{Log\+Entries\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_log_entries_handler}\index{LogEntriesHandler@{LogEntriesHandler}}
+Inheritance diagram for Log\+Entries\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_log_entries_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_log_entries_handler_a79e8ebe46286f240d1f8d7fbb7406af3}{\+\_\+\+\_\+construct}} (string \$token, bool \$use\+SSL=true, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, string \$host=\textquotesingle{}data.\+logentries.\+com\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_log_entries_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_log_entries_handler_abaa9c35cc1e2905e54999cbe0ebcdd45}\label{class_monolog_1_1_handler_1_1_log_entries_handler_abaa9c35cc1e2905e54999cbe0ebcdd45}} 
+{\bfseries \$log\+Token}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Robert Kaufmann III \href{mailto:rok3@rok3.me}{\texttt{ rok3@rok3.\+me}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_log_entries_handler_a79e8ebe46286f240d1f8d7fbb7406af3}\label{class_monolog_1_1_handler_1_1_log_entries_handler_a79e8ebe46286f240d1f8d7fbb7406af3}} 
+\index{LogEntriesHandler@{LogEntriesHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogEntriesHandler@{LogEntriesHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{bool}]{\$use\+SSL = {\ttfamily true},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{string}]{\$host = {\ttfamily \textquotesingle{}data.logentries.com\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & Log token supplied by Log\+Entries \\
+\hline
+bool & {\em \$use\+SSL} & Whether or not SSL encryption should be used. \\
+\hline
+string & {\em \$host} & Custom hostname to send the data to if needed\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & If SSL encryption is set to true and Open\+SSL is missing \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_log_entries_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_log_entries_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{LogEntriesHandler@{LogEntriesHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!LogEntriesHandler@{LogEntriesHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Log\+Entries\+Handler.\+php\end{DoxyCompactItemize}

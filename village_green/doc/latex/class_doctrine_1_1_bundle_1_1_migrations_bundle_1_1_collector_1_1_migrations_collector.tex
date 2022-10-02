@@ -1,0 +1,65 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector}{}\doxysection{Migrations\+Collector Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector}\index{MigrationsCollector@{MigrationsCollector}}
+Inheritance diagram for Migrations\+Collector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_ac7c2ca22c245ea8c3160f16293d54735}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_ac7c2ca22c245ea8c3160f16293d54735}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_dependency_factory}{Dependency\+Factory}} \$dependency\+Factory, \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_flattener}{Migrations\+Flattener}} \$migrations\+Flattener)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a209c4b2052bd9e015d24a64b2eaa163b}{collect}} (\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_request}{Request}} \$request, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_response}{Response}} \$response, \textbackslash{}Throwable \$exception=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a81a67162a6288d78fc4c55283325f0b4}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a81a67162a6288d78fc4c55283325f0b4}} 
+{\bfseries get\+Data} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a209c4b2052bd9e015d24a64b2eaa163b}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a209c4b2052bd9e015d24a64b2eaa163b}} 
+\index{MigrationsCollector@{MigrationsCollector}!collect@{collect}}
+\index{collect@{collect}!MigrationsCollector@{MigrationsCollector}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily collect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_response}{Response}}}]{\$response,  }\item[{\textbackslash{}Throwable}]{\$exception = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Collects data for the given Request and Response. 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_kernel_1_1_data_collector_1_1_data_collector_interface_a209c4b2052bd9e015d24a64b2eaa163b}{Data\+Collector\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a3d0963e68bb313b163a73f2803c64600}} 
+\index{MigrationsCollector@{MigrationsCollector}!getName@{getName}}
+\index{getName@{getName}!MigrationsCollector@{MigrationsCollector}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_kernel_1_1_data_collector_1_1_data_collector_interface_a3d0963e68bb313b163a73f2803c64600}{Data\+Collector\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a4a20559544fdf4dcb457e258dc976cf8}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_collector_1_1_migrations_collector_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{MigrationsCollector@{MigrationsCollector}!reset@{reset}}
+\index{reset@{reset}!MigrationsCollector@{MigrationsCollector}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_contracts_1_1_service_1_1_reset_interface}{Reset\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/migrations-\/bundle/\+Collector/Migrations\+Collector.\+php\end{DoxyCompactItemize}

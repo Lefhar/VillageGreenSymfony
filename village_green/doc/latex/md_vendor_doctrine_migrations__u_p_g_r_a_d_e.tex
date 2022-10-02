@@ -1,0 +1,240 @@
+
+\begin{DoxyItemize}
+\item The \char`\"{}version\char`\"{} is the FQCN of the migration class (existing entries in the migrations table will be automatically updated).
+\item {\ttfamily Migrations\+Event\+Args} and {\ttfamily Migrations\+Version\+Event\+Args} expose different API, please refer to the \href{\#code-bc-breaks}{\texttt{ Code BC breaks}} section.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md203}{}\doxysection{Console}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md203}
+
+\begin{DoxyItemize}
+\item Console output changed. The commands use a different output style. If you were relying on specific output, please update your scripts. Console output is not covered by the BC promise, so please try not to rely on specific a output. Different levels of verbosity are available now ({\ttfamily -\/v}, {\ttfamily -\/vv} and {\ttfamily -\/vvv} ).
+\item The {\ttfamily -\/-\/show-\/versions} option from {\ttfamily migrations\+:status} command has been removed, use {\ttfamily migrations\+:list} instead.
+\item The {\ttfamily -\/-\/write-\/sql} option for {\ttfamily migrations\+:migrate} and {\ttfamily migrations\+:execute} does not imply dry-\/run anymore, ~\newline
+ use the {\ttfamily -\/-\/dry-\/run} parameter instead. ~\newline
+
+\item The {\ttfamily -\/-\/db} option has been renamed to {\ttfamily -\/-\/conn}. ~\newline
+
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md204}{}\doxysection{Migrations table}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md204}
+
+\begin{DoxyItemize}
+\item The migrations table now has a new column named {\ttfamily execution\+\_\+time}.
+\item Running the {\ttfamily migrations\+:migrate} or {\ttfamily migrations\+:execute} command will automatically upgrade the migration table structure; a dedicated {\ttfamily migrations\+:sync-\/metadata-\/storage} command is available to sync manually the migrations table.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md205}{}\doxysection{Migration template}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md205}
+
+\begin{DoxyItemize}
+\item The {\ttfamily \texorpdfstring{$<$}{<}version\texorpdfstring{$>$}{>}} placeholder has been replaced by the {\ttfamily \texorpdfstring{$<$}{<}class\+Name\texorpdfstring{$>$}{>}} placeholder.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md206}{}\doxysection{Configuration files}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md206}
+{\itshape migrations.\+php Before} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} [}
+\DoxyCodeLine{    \textcolor{stringliteral}{'name'} => \textcolor{stringliteral}{'My Project Migrations'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'migrations\_namespace'} => \textcolor{stringliteral}{'MyProject\(\backslash\)Migrations'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'table\_name'} => \textcolor{stringliteral}{'doctrine\_migration\_versions'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'column\_name'} => \textcolor{stringliteral}{'version'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'column\_length'} => 14,}
+\DoxyCodeLine{    \textcolor{stringliteral}{'executed\_at\_column\_name'} => \textcolor{stringliteral}{'executed\_at'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'migrations\_directory'} => \textcolor{stringliteral}{'/data/doctrine/migrations-\/docs-\/example/lib/MyProject/Migrations'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'all\_or\_nothing'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'check\_database\_platform'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{];}
+
+\end{DoxyCode}
+ {\itshape migrations.\+php After}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} [}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{stringliteral}{'table\_storage'} => [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'table\_name'} => \textcolor{stringliteral}{'doctrine\_migration\_versions'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'version\_column\_name'} => \textcolor{stringliteral}{'version'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'version\_column\_length'} => 191,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'executed\_at\_column\_name'} => \textcolor{stringliteral}{'executed\_at'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'execution\_time\_column\_name'} => \textcolor{stringliteral}{'execution\_time'},}
+\DoxyCodeLine{    ],}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{stringliteral}{'migrations\_paths'} => [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'MyProject\(\backslash\)Migrations'} => \textcolor{stringliteral}{'/data/doctrine/migrations/lib/MyProject/Migrations'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'MyProject\(\backslash\)Component\(\backslash\)Migrations'} => \textcolor{stringliteral}{'./Component/MyProject/Migrations'},}
+\DoxyCodeLine{    ],}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{stringliteral}{'all\_or\_nothing'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'check\_database\_platform'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{];}
+
+\end{DoxyCode}
+
+
+Files in XML, YAML or JSON also changed in a similar way. Please refer to the official documentation for more details.
+
+Note\+: the {\ttfamily name} property has been removed.
+
+Note\+: the option in {\ttfamily table\+\_\+storage} needs to be updated only if you have changed the metadata table settings by using v2 options such as {\ttfamily table\+\_\+name}, {\ttfamily column\+\_\+name}, {\ttfamily column\+\_\+length} or {\ttfamily executed\+\_\+at\+\_\+column\+\_\+name}. If you did not change those settings, it is recommended to not provide the options and let doctrine figure out the best settings.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md207}{}\doxysection{Code BC breaks}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md207}
+Most of the code is protected by the {\ttfamily @internal} declaration and in a very rare cases you might have dealt with the internals of this library.
+
+The most important BC breaks are in the {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration} class and in the helper system that now has been replaced by the {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory} functionalities.
+
+Here is a list of the most important changes\+:
+
+
+\begin{DoxyItemize}
+\item Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration}
+\begin{DoxyItemize}
+\item CHANGED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration} became final
+\item REMOVED\+: Constant {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\+::\+VERSION\+\_\+\+FORMAT} was removed, there is not more limitation on the version format
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#\+\_\+\+\_\+construct()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Name()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Name()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Connection()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory\#get\+Connection()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Table\+Name()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Metadata\+Storage\+Configuration} with an instance of {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Table\+Name()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration\#get\+Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Column\+Name()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Metadata\+Storage\+Configuration} with an instance of {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Column\+Name()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration\#get\+Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Quoted\+Migrations\+Column\+Name()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Column\+Length()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Metadata\+Storage\+Configuration} with an instance of {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Column\+Length()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration\#get\+Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Executed\+At\+Column\+Name()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Metadata\+Storage\+Configuration} with an instance of {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Executed\+At\+Column\+Name()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\+Configuration\#get\+Metadata\+Storage\+Configuration}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Quoted\+Migrations\+Executed\+At\+Column\+Name()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Directory()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#add\+Migrations\+Directory()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Directory()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migration\+Directories()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Namespace()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#add\+Migrations\+Directory()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Namespace()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migration\+Directories()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Migrations\+Finder()} was removed, use the dependency factory instead ~\newline
+
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+Finder()} was removed, use the dependency factory instead
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#has\+Version\+Migrated()} was removed, use the dependency factory instead
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Version\+Data()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#resolve\+Version\+Alias()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Alias\+Resolver\#resolve\+Version\+Alias()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#is\+Migration\+Table\+Created()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#create\+Migration\+Table()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Metadata\textbackslash{}Storage\textbackslash{}Metadata\+Storage\#ensure\+Initialized()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Date\+Time()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#generate\+Version\+Number()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Generator\textbackslash{}Class\+Name\+Generator\#generate\+Class\+Name()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#connect()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#dispatch\+Migration\+Event()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#dispatch\+Version\+Event()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#dispatch\+Event()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Number\+Of\+Executed\+Migrations()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory\#get\+Metadata\+Storage()-\/\texorpdfstring{$>$}{>}get\+Executed\+Migrations()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Number\+Of\+Available\+Migrations()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory\#get\+Migration\+Repository()-\/\texorpdfstring{$>$}{>}get\+Migrations()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Latest\+Version()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Alias\+Resolver\#resolve\+Version\+Alias()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrated\+Versions()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory\#get\+Metadata\+Storage()-\/\texorpdfstring{$>$}{>}get\+Executed\+Migrations()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Available\+Versions()} was removed use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory\#get\+Migration\+Repository()-\/\texorpdfstring{$>$}{>}get\+Migrations()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Current\+Version()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Alias\+Resolver\#resolve\+Version\+Alias()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#register\+Migrations\+From\+Directory()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#add\+Migrations\+Directory()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#register\+Migration()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#add\+Migration\+Class()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#register\+Migrations()} was removed use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#add\+Migration\+Class()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory\#get\+Migration\+Repository()-\/\texorpdfstring{$>$}{>}get\+Migrations()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Version()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Migrations\+To\+Execute()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Migration\+Plan\+Calculator\#get\+Plan\+Until\+Version()} to create a migration plan
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Prev\+Version()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Alias\+Resolver\#resolve\+Version\+Alias()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Next\+Version()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Alias\+Resolver\#resolve\+Version\+Alias()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Relative\+Version()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Delta\+Version()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#set\+Output\+Writer()} was removed, set the {\ttfamily Psr\textbackslash{}Log\textbackslash{}Logger\+Interface} service in {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Output\+Writer()} was removed, get the {\ttfamily Psr\textbackslash{}Log\textbackslash{}Logger\+Interface} service from {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Query\+Writer()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#get\+Dependency\+Factory()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Configuration\#validate()} was removed
+\item Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Connection\textbackslash{}Loader\textbackslash{}Exception}
+\begin{DoxyItemize}
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Connection\textbackslash{}Loader\textbackslash{}Exception\textbackslash{}Loader\+Exception} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Connection\textbackslash{}Loader\textbackslash{}Exception\textbackslash{}Invalid\+Configuration} has been deleted
+\end{DoxyItemize}
+\item Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception}
+\begin{DoxyItemize}
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Parameter\+Incompatible\+With\+Finder} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Invalid\+Configuration\+Key} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Migrations\+Namespace\+Required} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Xml\+Not\+Valid} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Yaml\+Not\+Available} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}File\+Already\+Loaded} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Json\+Not\+Valid} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}Yaml\+Not\+Valid} has been deleted
+\item CHANGED\+: The number of required arguments for {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Configuration\textbackslash{}Exception\textbackslash{}File\+Not\+Found\+::new()} increased from 0 to 1
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args}
+\begin{DoxyItemize}
+\item CHANGED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args} became final
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#get\+Configuration()} was removed
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#get\+Direction()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#get\+Plan()}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#is\+Dry\+Run()} was removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#get\+Migrator\+Configuration()}
+\item CHANGED\+: {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#\+\_\+\+\_\+construct()} arguments have been updated
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Version\+Event\+Args} ~\newline
+
+\begin{DoxyItemize}
+\item CHANGED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Version\+Event\+Args} became final
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Version\+Event\+Args\#get\+Version()} was removed use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Event\textbackslash{}Migrations\+Event\+Args\#get\+Plan()}
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Finder}
+\begin{DoxyItemize}
+\item REMOVED\+: These ancestors of {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Finder\textbackslash{}Recursive\+Regex\+Finder} have been removed\+: \mbox{[}\char`\"{}\+Doctrine\textbackslash{}\textbackslash{}\+Migrations\textbackslash{}\textbackslash{}\+Finder\textbackslash{}\textbackslash{}\+Migration\+Deep\+Finder\char`\"{}\mbox{]}
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Finder\textbackslash{}Migration\+Deep\+Finder} has been deleted
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command}
+\begin{DoxyItemize}
+\item CHANGED\+: All non abstract classes in {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}$\ast$} became final
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}Abstract\+Command} has been renamed into {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}Doctrine\+Command} and has been marked as internal
+\item CHANGED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}$\ast$\+Command\#\+\_\+\+\_\+construct()} changed signature into {\ttfamily (?Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory \$di, ?string \$name)}
+\item CHANGED\+: Method {\ttfamily initialize()} of Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}Abstract\+Command} visibility reduced from {\ttfamily public} to {\ttfamily protected}
+\item CHANGED\+: Method {\ttfamily execute()} of Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}$\ast$\+Command} visibility reduced from {\ttfamily public} to {\ttfamily protected}
+\item REMOVED\+: Method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Command\textbackslash{}Diff\+Command\#create\+Migration\+Diff\+Generator()} was removed
+\item Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Exception}
+\begin{DoxyItemize}
+\item CHANGED\+: The number of required arguments for {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Exception\textbackslash{}Schema\+Dump\+Requires\+No\+Migrations\+::new()} increased from 0 to 1
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Exception\textbackslash{}Connection\+Not\+Specified} has been deleted
+\end{DoxyItemize}
+\item Namespace {\ttfamily Migrations\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Console\textbackslash{}Helper}
+\begin{DoxyItemize}
+\item REMOVED\+: All classes and namespaces are marked as internal or have been removed, use {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Dependency\+Factory} instead
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Abstract\+Migration} ~\newline
+
+\begin{DoxyItemize}
+\item CHANGED\+: The method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Abstract\+Migration\#\+\_\+\+\_\+construct()} changed signature into {\ttfamily (Doctrine\textbackslash{}DBAL\textbackslash{}Connection \$conn, PSR\textbackslash{}Log\textbackslash{}Logger\+Interface \$logger)}
+\item CHANGED\+: The method {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Abstract\+Migration\#down()} is not abstract anymore, the default implementation will abort the migration process
+\item REMOVED\+: Property {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Abstract\+Migration\#\$version} was removed
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Provider}
+\begin{DoxyItemize}
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Provider\textbackslash{}Schema\+Provider\+Interface} has been deleted
+\item REMOVED\+: These ancestors of {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Provider\textbackslash{}Stub\+Schema\+Provider} have been removed\+: \mbox{[}\char`\"{}\+Doctrine\textbackslash{}\textbackslash{}\+Migrations\textbackslash{}\textbackslash{}\+Provider\textbackslash{}\textbackslash{}\+Schema\+Provider\+Interface\char`\"{}\mbox{]}
+\end{DoxyItemize}
+
+Namespace {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Exception} ~\newline
+
+\begin{DoxyItemize}
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Exception\textbackslash{}Migration\+Not\+Convertible\+To\+Sql} has been deleted
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Exception\textbackslash{}Migrations\+Directory\+Required} has been deleted
+\end{DoxyItemize}
+
+REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Factory} became the interface {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Version\textbackslash{}Migration\+Factory}
+\begin{DoxyItemize}
+\item REMOVED\+: Class {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Output\+Writer} has been deleted, use {\ttfamily Psr\textbackslash{}Log\textbackslash{}Loggerinterface}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md208}{}\doxysection{Upgrade to 2.\+0}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md208}
+\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md209}{}\doxysubsection{BC Break\+: Moved $<$tt$>$\+Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Migrations$<$/tt$>$ to $<$tt$>$\+Doctrine\textbackslash{}\+Migrations$<$/tt$>$}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md209}
+Your migration classes that previously used to extend {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Migrations\textbackslash{}Abstract\+Migration} now need to extend {\ttfamily Doctrine\textbackslash{}Migrations\textbackslash{}Abstract\+Migration} instead. The {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Migrations\textbackslash{}Abstract\+Migration} class will be deprecated in the {\ttfamily 1.\+8.\+0} release to prepare for the BC break.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md210}{}\doxysubsection{BC Break\+: Removed $<$tt$>$\+Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Migrations\textbackslash{}\+Migrations\+Version$<$/tt$>$}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md210}
+The {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Migrations\textbackslash{}Migrations\+Version} class is no longer available\+: please refrain from checking the Migrations version at runtime.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md211}{}\doxysubsection{BC Break\+: Moved $<$tt$>$\+Doctrine\textbackslash{}\+Migrations\textbackslash{}\+Migration$<$/tt$>$ to $<$tt$>$\+Doctrine\textbackslash{}\+Migrations\textbackslash{}\+Migrator$<$/tt$>$}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md211}
+To make the name more clear and to differentiate from the {\ttfamily Abstract\+Migration} class, {\ttfamily Migration} was renamed to {\ttfamily Migrator}.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md212}{}\doxysubsection{BC Break\+: Moved exception classes from $<$tt$>$\+Doctrine\textbackslash{}\+Migrations\textbackslash{}\%name\%\+Exception$<$/tt$>$ to $<$tt$>$\+Doctrine\textbackslash{}\+Migrations\textbackslash{}\+Exception\textbackslash{}\%name\%$<$/tt$>$}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md212}
+doctrine/migrations\#636 Follows concept introduced in ORM (doctrine/orm\#6743 + doctrine/orm\#7210) and naming follows pattern accepted in Doctrine CS.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md213}{}\doxysection{Upgrade from 1.\+0-\/alpha1 to 1.\+0.\+0-\/alpha3}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md213}
+\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md214}{}\doxysubsection{Abstract\+Migration}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md214}
+\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md215}{}\doxysubsubsection{Before\+:}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md215}
+The method {\ttfamily get\+Name()} was defined and it\textquotesingle{}s implementation would change the order in which the migration would be processed. It would cause discrepancies between the file order in a file browser and the order of execution of the migrations.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md216}{}\doxysubsubsection{After\+:}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md216}
+The {\ttfamily get\+Name()} method as been removed $\vert$ set final and new {\ttfamily get\+Description()} method has been added. The goal of this method is to be able to provide context for the migration. This context is shown for the last migrated migration when the status command is called.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md217}{}\doxysubsection{–write-\/sql option from the migrate command}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md217}
+\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md218}{}\doxysubsubsection{Before\+:}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md218}
+The {\ttfamily -\/-\/write-\/sql} option would only output sql contained in the migration and would not update the table containing the migrated migrations.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md219}{}\doxysubsubsection{After\+:}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md219}
+That option now also output the sql queries necessary to update the table containing the state of the migrations. If you want to go back to the previous behavior just make a request on the bug tracker as for now the need for it is not very clear.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md220}{}\doxysubsection{Migrations\+Version\+::\+VERSION}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md220}
+\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md221}{}\doxysubsubsection{Before\+:}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md221}
+{\ttfamily Migrations\+Version\+::\+VERSION} used to be a property. The returned value was fanciful.\hypertarget{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md222}{}\doxysubsubsection{After\+:}\label{md_vendor_doctrine_migrations__u_p_g_r_a_d_e_autotoc_md222}
+It is now a a function so that a different value can be automatically send back if it\textquotesingle{}s a modified version that\textquotesingle{}s used. The returned value is now the git tag. The tag is in lowercase as the other doctrine projects. 

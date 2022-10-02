@@ -1,0 +1,74 @@
+\hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator}{}\doxysection{Type\+Generator Class Reference}
+\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator}\index{TypeGenerator@{TypeGenerator}}
+Inheritance diagram for Type\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_laminas_1_1_code_1_1_generator_1_1_type_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a913873cf89f388d70a28de0b77d68884}{generate}} ()
+\item 
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a80573db975a2efecefd74e41f51dbfc1}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a80573db975a2efecefd74e41f51dbfc1}} 
+{\bfseries equals} (\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator}{Type\+Generator}} \$other\+Type)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a92c066f27ef426b34c853ff01de8f9ac}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a92c066f27ef426b34c853ff01de8f9ac}} 
+static {\bfseries from\+Reflection\+Type} (?Reflection\+Type \$type, ?Reflection\+Class \$current\+Class)
+\item 
+static \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a74a381eb95b3564f48e8d324df2dd8d9}{from\+Type\+String}} (string \$type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@psalm-\/immutable 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{TypeGenerator@{TypeGenerator}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!TypeGenerator@{TypeGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string the cleaned type string. Please note that this value is not suitable for code generation, since the returned value does not include any root namespace prefixes, when applicable, and therefore the values cannot be used as FQCN in generated code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a74a381eb95b3564f48e8d324df2dd8d9}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a74a381eb95b3564f48e8d324df2dd8d9}} 
+\index{TypeGenerator@{TypeGenerator}!fromTypeString@{fromTypeString}}
+\index{fromTypeString@{fromTypeString}!TypeGenerator@{TypeGenerator}}
+\doxysubsubsection{\texorpdfstring{fromTypeString()}{fromTypeString()}}
+{\footnotesize\ttfamily static from\+Type\+String (\begin{DoxyParamCaption}\item[{string}]{\$type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & @psalm-\/pure \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a913873cf89f388d70a28de0b77d68884}\label{class_laminas_1_1_code_1_1_generator_1_1_type_generator_a913873cf89f388d70a28de0b77d68884}} 
+\index{TypeGenerator@{TypeGenerator}!generate@{generate}}
+\index{generate@{generate}!TypeGenerator@{TypeGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Generates the type string, including FQCN \char`\"{}\textbackslash{}\textbackslash{}\char`\"{} prefix, so that it can directly be used within any code snippet, regardless of imports.
+
+@psalm-\/return non-\/empty-\/string 
+
+Implements \mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_generator_interface_a913873cf89f388d70a28de0b77d68884}{Generator\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/laminas/laminas-\/code/src/\+Generator/Type\+Generator.\+php\end{DoxyCompactItemize}

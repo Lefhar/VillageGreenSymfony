@@ -1,0 +1,179 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body}{}\doxysection{Form\+Body Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body}\index{FormBody@{FormBody}}
+Inheritance diagram for Form\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_ab28d37dc29015d36a7038739a38c05ad}{\+\_\+\+\_\+construct}} (string \$boundary=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a629d01ad0ff5f0665854dfe4465c4df2}{add\+Field}} (string \$name, string \$value, string \$content\+Type=\textquotesingle{}text/plain\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a53b7d356300c2db3264421c733f7d5c5}{add\+Fields}} (array \$data, string \$content\+Type=\textquotesingle{}text/plain\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a1e533ff73699ee288e8f7e1d621374b0}{add\+File}} (string \$name, string \$file\+Path, string \$content\+Type=\textquotesingle{}application/octet-\/stream\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a800bc58b14e33c369083c2fd6b365cdf}{add\+Files}} (array \$data, string \$content\+Type=\textquotesingle{}application/octet-\/stream\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a9e090deb556f87688bd9ea882da9d5b8}{add\+File\+From\+String}} (string \$name, string \$file\+Content, string \$file\+Name, string \$content\+Type=\textquotesingle{}application/octet-\/stream\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_aff667c8e7e2da76ea9ba77bc12f20027}{get\+Fields}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a79fd9be53b1ab8783733113e557a1c7d}{create\+Body\+Stream}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a157e0005d82edaa21cbea07fdc5c62da}{get\+Headers}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_ab28d37dc29015d36a7038739a38c05ad}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_ab28d37dc29015d36a7038739a38c05ad}} 
+\index{FormBody@{FormBody}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$boundary = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$boundary} & An optional multipart boundary string \\
+\hline
+\end{DoxyParams}
+@noinspection Php\+Unhandled\+Exception\+Inspection
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a629d01ad0ff5f0665854dfe4465c4df2}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a629d01ad0ff5f0665854dfe4465c4df2}} 
+\index{FormBody@{FormBody}!addField@{addField}}
+\index{addField@{addField}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{addField()}{addField()}}
+{\footnotesize\ttfamily add\+Field (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$value,  }\item[{string}]{\$content\+Type = {\ttfamily \textquotesingle{}text/plain\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add a data field to the form entity body.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string & {\em \$value} & \\
+\hline
+string & {\em \$content\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a53b7d356300c2db3264421c733f7d5c5}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a53b7d356300c2db3264421c733f7d5c5}} 
+\index{FormBody@{FormBody}!addFields@{addFields}}
+\index{addFields@{addFields}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{addFields()}{addFields()}}
+{\footnotesize\ttfamily add\+Fields (\begin{DoxyParamCaption}\item[{array}]{\$data,  }\item[{string}]{\$content\+Type = {\ttfamily \textquotesingle{}text/plain\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add each element of a associative array as a data field to the form entity body.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+string & {\em \$content\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a1e533ff73699ee288e8f7e1d621374b0}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a1e533ff73699ee288e8f7e1d621374b0}} 
+\index{FormBody@{FormBody}!addFile@{addFile}}
+\index{addFile@{addFile}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{addFile()}{addFile()}}
+{\footnotesize\ttfamily add\+File (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$file\+Path,  }\item[{string}]{\$content\+Type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add a file field to the form entity body.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string & {\em \$file\+Path} & \\
+\hline
+string & {\em \$content\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a9e090deb556f87688bd9ea882da9d5b8}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a9e090deb556f87688bd9ea882da9d5b8}} 
+\index{FormBody@{FormBody}!addFileFromString@{addFileFromString}}
+\index{addFileFromString@{addFileFromString}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{addFileFromString()}{addFileFromString()}}
+{\footnotesize\ttfamily add\+File\+From\+String (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$file\+Content,  }\item[{string}]{\$file\+Name,  }\item[{string}]{\$content\+Type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add a file field to the form from a string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string & {\em \$file\+Content} & \\
+\hline
+string & {\em \$file\+Name} & \\
+\hline
+string & {\em \$content\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a800bc58b14e33c369083c2fd6b365cdf}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a800bc58b14e33c369083c2fd6b365cdf}} 
+\index{FormBody@{FormBody}!addFiles@{addFiles}}
+\index{addFiles@{addFiles}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{addFiles()}{addFiles()}}
+{\footnotesize\ttfamily add\+Files (\begin{DoxyParamCaption}\item[{array}]{\$data,  }\item[{string}]{\$content\+Type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Add each element of a associative array as a file field to the form entity body.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+string & {\em \$content\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a79fd9be53b1ab8783733113e557a1c7d}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a79fd9be53b1ab8783733113e557a1c7d}} 
+\index{FormBody@{FormBody}!createBodyStream@{createBodyStream}}
+\index{createBodyStream@{createBodyStream}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{createBodyStream()}{createBodyStream()}}
+{\footnotesize\ttfamily create\+Body\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create the HTTP message body to be sent.
+
+Further calls MUST return a new stream to make it possible to resend bodies on redirects.
+
+\begin{DoxyReturn}{Returns}
+Input\+Stream 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a79fd9be53b1ab8783733113e557a1c7d}{Request\+Body}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_aff667c8e7e2da76ea9ba77bc12f20027}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_aff667c8e7e2da76ea9ba77bc12f20027}} 
+\index{FormBody@{FormBody}!getFields@{getFields}}
+\index{getFields@{getFields}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{getFields()}{getFields()}}
+{\footnotesize\ttfamily get\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an array of fields, each being an array of \mbox{[}name, value, content-\/type, file-\/name$\vert$null\mbox{]}. Both fields and files are returned in the array. Files use a \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_file_body}{File\+Body}} object as the value. The file-\/name is always null for fields.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a157e0005d82edaa21cbea07fdc5c62da}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a157e0005d82edaa21cbea07fdc5c62da}} 
+\index{FormBody@{FormBody}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!FormBody@{FormBody}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve a key-\/value array of headers to add to the outbound request.
+
+The resolved promise value must be a key-\/value array mapping header fields to values.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a157e0005d82edaa21cbea07fdc5c62da}{Request\+Body}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Body/Form\+Body.\+php\end{DoxyCompactItemize}

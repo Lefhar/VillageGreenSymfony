@@ -1,0 +1,270 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister}{}\doxysection{Joined\+Subclass\+Persister Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister}\index{JoinedSubclassPersister@{JoinedSubclassPersister}}
+Inheritance diagram for Joined\+Subclass\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a6b81ca4dc1d0e50191ed8c654ae53aa5}{get\+Owning\+Table}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_add6709b93c551f3441499dbfe90925ef}{execute\+Inserts}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a73a92552282d02a30c3e1b6ec7835ec7}{update}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a4e8fafc58c59edd43fb68f9912f85f0c}{delete}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a157f6d9cec9bcccf00393b49ab63489e}{get\+Select\+SQL}} (\$criteria, \$assoc=null, \$lock\+Mode=null, \$limit=null, \$offset=null, ?array \$order\+By=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a084414cb961283eb8570f16f60d401fc}{get\+Count\+SQL}} (\$criteria=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a1121f57ab48416b629dd88fa345f0514}{get\+Discriminator\+Column\+Table\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_aab5c37e06c96f715ae48434ad7c06332}{get\+Lock\+Tables\+Sql}} (\$lock\+Mode)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a27c760021df403d2b9fe9f5779a0ba30}{get\+Select\+Columns\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a2807fc97083de42584f365df7ddb683c}{get\+Insert\+Column\+List}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a58ca45d24bbc7ab2ea51c7b68405d341}{assign\+Default\+Version\+And\+Upsertable\+Values}} (\$entity, array \$id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The joined subclass persister maps a single entity instance to several tables in the database as it is defined by the {\ttfamily Class Table Inheritance} strategy.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://martinfowler.com/eaaCatalog/classTableInheritance.html}{\texttt{ https\+://martinfowler.\+com/eaa\+Catalog/class\+Table\+Inheritance.\+html}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a58ca45d24bbc7ab2ea51c7b68405d341}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a58ca45d24bbc7ab2ea51c7b68405d341}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!assignDefaultVersionAndUpsertableValues@{assignDefaultVersionAndUpsertableValues}}
+\index{assignDefaultVersionAndUpsertableValues@{assignDefaultVersionAndUpsertableValues}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{assignDefaultVersionAndUpsertableValues()}{assignDefaultVersionAndUpsertableValues()}}
+{\footnotesize\ttfamily assign\+Default\+Version\+And\+Upsertable\+Values (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{array}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Retrieves the default version value which was created by the preceding INSERT statement and assigns it back in to the entities version field if the given entity is versioned. Also retrieves values of columns marked as \textquotesingle{}non insertable\textquotesingle{} and / or \textquotesingle{}not updatable\textquotesingle{} and assigns them back to the entities corresponding fields.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a58ca45d24bbc7ab2ea51c7b68405d341}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a4e8fafc58c59edd43fb68f9912f85f0c}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a4e8fafc58c59edd43fb68f9912f85f0c}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!delete@{delete}}
+\index{delete@{delete}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+\{\{Deletes a managed entity.
+
+The entity to delete must be managed and have a persistent identifier. The deletion happens instantaneously.
+
+Subclasses may override this method to customize the semantics of entity deletion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the entity got deleted in the database, FALSE otherwise.
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a4e8fafc58c59edd43fb68f9912f85f0c}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_add6709b93c551f3441499dbfe90925ef}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_add6709b93c551f3441499dbfe90925ef}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!executeInserts@{executeInserts}}
+\index{executeInserts@{executeInserts}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{executeInserts()}{executeInserts()}}
+{\footnotesize\ttfamily execute\+Inserts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\{Executes all queued entity insertions and returns any generated post-\/insert identifiers that were created as a result of the insertions.
+
+If no inserts are queued, invoking this method is a NOOP.
+
+@psalm-\/return list\texorpdfstring{$<$}{<}array\{ generated\+Id\+: int, entity\+: object \}\texorpdfstring{$>$}{>} An array of any generated post-\/insert IDs. This will be an empty array if the entity class does not use the IDENTITY generation strategy.\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_add6709b93c551f3441499dbfe90925ef}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a084414cb961283eb8570f16f60d401fc}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a084414cb961283eb8570f16f60d401fc}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getCountSQL@{getCountSQL}}
+\index{getCountSQL@{getCountSQL}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getCountSQL()}{getCountSQL()}}
+{\footnotesize\ttfamily get\+Count\+SQL (\begin{DoxyParamCaption}\item[{}]{\$criteria = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Get the COUNT SQL to count entities (optionally based on a criteria)
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | Criteria & {\em \$criteria} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a084414cb961283eb8570f16f60d401fc}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a1121f57ab48416b629dd88fa345f0514}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a1121f57ab48416b629dd88fa345f0514}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getDiscriminatorColumnTableName@{getDiscriminatorColumnTableName}}
+\index{getDiscriminatorColumnTableName@{getDiscriminatorColumnTableName}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getDiscriminatorColumnTableName()}{getDiscriminatorColumnTableName()}}
+{\footnotesize\ttfamily get\+Discriminator\+Column\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the name of the table that contains the discriminator column.
+
+\begin{DoxyReturn}{Returns}
+string The table name.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a1121f57ab48416b629dd88fa345f0514}{Abstract\+Entity\+Inheritance\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a2807fc97083de42584f365df7ddb683c}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a2807fc97083de42584f365df7ddb683c}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getInsertColumnList@{getInsertColumnList}}
+\index{getInsertColumnList@{getInsertColumnList}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getInsertColumnList()}{getInsertColumnList()}}
+{\footnotesize\ttfamily get\+Insert\+Column\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the list of columns to put in the INSERT SQL statement.
+
+Subclasses should override this method to alter or change the list of columns placed in the INSERT statements used by the persister.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The list of columns. @psalm-\/return list$<$string$>$
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a2807fc97083de42584f365df7ddb683c}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_aab5c37e06c96f715ae48434ad7c06332}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_aab5c37e06c96f715ae48434ad7c06332}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getLockTablesSql@{getLockTablesSql}}
+\index{getLockTablesSql@{getLockTablesSql}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getLockTablesSql()}{getLockTablesSql()}}
+{\footnotesize\ttfamily get\+Lock\+Tables\+Sql (\begin{DoxyParamCaption}\item[{}]{\$lock\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the FROM and optionally JOIN conditions to lock the entity managed by this persister.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | null & {\em \$lock\+Mode} & One of the Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Lock\+Mode\+::$\ast$ constants. @psalm-\/param Lock\+Mode\+:\+:$\ast$$\vert$null \$lock\+Mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_aab5c37e06c96f715ae48434ad7c06332}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a6b81ca4dc1d0e50191ed8c654ae53aa5}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a6b81ca4dc1d0e50191ed8c654ae53aa5}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getOwningTable@{getOwningTable}}
+\index{getOwningTable@{getOwningTable}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getOwningTable()}{getOwningTable()}}
+{\footnotesize\ttfamily get\+Owning\+Table (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Gets the name of the table that owns the column the given field is mapped to.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+@override 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a6b81ca4dc1d0e50191ed8c654ae53aa5}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a27c760021df403d2b9fe9f5779a0ba30}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a27c760021df403d2b9fe9f5779a0ba30}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getSelectColumnsSQL@{getSelectColumnsSQL}}
+\index{getSelectColumnsSQL@{getSelectColumnsSQL}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getSelectColumnsSQL()}{getSelectColumnsSQL()}}
+{\footnotesize\ttfamily get\+Select\+Columns\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ensure this method is never called. This persister overrides get\+Select\+Entities\+SQL directly.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a27c760021df403d2b9fe9f5779a0ba30}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a157f6d9cec9bcccf00393b49ab63489e}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a157f6d9cec9bcccf00393b49ab63489e}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!getSelectSQL@{getSelectSQL}}
+\index{getSelectSQL@{getSelectSQL}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{getSelectSQL()}{getSelectSQL()}}
+{\footnotesize\ttfamily get\+Select\+SQL (\begin{DoxyParamCaption}\item[{}]{\$criteria,  }\item[{}]{\$assoc = {\ttfamily null},  }\item[{}]{\$lock\+Mode = {\ttfamily null},  }\item[{}]{\$limit = {\ttfamily null},  }\item[{}]{\$offset = {\ttfamily null},  }\item[{?array}]{\$order\+By = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\{Gets the SELECT SQL to select one or more entities by a set of field criteria.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | Criteria & {\em \$criteria} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$assoc} & \\
+\hline
+int | null & {\em \$lock\+Mode} & \\
+\hline
+int | null & {\em \$limit} & \\
+\hline
+int | null & {\em \$offset} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$order\+By} & @psalm-\/param Lock\+Mode\+:\+:$\ast$$\vert$null \$lock\+Mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a157f6d9cec9bcccf00393b49ab63489e}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a73a92552282d02a30c3e1b6ec7835ec7}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_joined_subclass_persister_a73a92552282d02a30c3e1b6ec7835ec7}} 
+\index{JoinedSubclassPersister@{JoinedSubclassPersister}!update@{update}}
+\index{update@{update}!JoinedSubclassPersister@{JoinedSubclassPersister}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+\{\{Updates a managed entity. The entity is updated according to its current changeset in the running \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}. If there is no changeset, nothing is updated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to update.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a73a92552282d02a30c3e1b6ec7835ec7}{Basic\+Entity\+Persister}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Persisters/\+Entity/Joined\+Subclass\+Persister.\+php\end{DoxyCompactItemize}

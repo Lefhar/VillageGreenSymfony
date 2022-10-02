@@ -1,0 +1,200 @@
+\hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory}{}\doxysection{Abstract\+Proxy\+Factory Class Reference}
+\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory}\index{AbstractProxyFactory@{AbstractProxyFactory}}
+Inheritance diagram for Abstract\+Proxy\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a5347751c93741e69b6a2c4a6892f4b93}{\+\_\+\+\_\+construct}} (Proxy\+Generator \$proxy\+Generator, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}{Class\+Metadata\+Factory}} \$metadata\+Factory, \$auto\+Generate)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_aeb768575bb7c694ea71feb7f0199af24}{get\+Proxy}} (\$class\+Name, array \$identifier)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_af4654f80ee971cd461e82a9fb640f3ef}{generate\+Proxy\+Classes}} (array \$classes, \$proxy\+Dir=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a866885c96817855192405fd4e5a798f0}{reset\+Uninitialized\+Proxy}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{Proxy}} \$proxy)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a95b8b76822f43ba5edbedc77855ba04a}{AUTOGENERATE\+\_\+\+NEVER}} = 0
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a44a364d132d69f0104ddf1a6f4a0e2b1}{AUTOGENERATE\+\_\+\+ALWAYS}} = 1
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a990df0b6db39261e3e2c2b4daca495be}{AUTOGENERATE\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+EXISTS}} = 2
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_aa658af28992267ebf4b56099711f6586}{AUTOGENERATE\+\_\+\+EVAL}} = 3
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a6ae5ebf53213e5e27086228c069b9cd0}{AUTOGENERATE\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+EXISTS\+\_\+\+OR\+\_\+\+CHANGED}} = 4
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}{skip\+Class}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}{create\+Proxy\+Definition}} (\$class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract factory for proxy objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a5347751c93741e69b6a2c4a6892f4b93}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a5347751c93741e69b6a2c4a6892f4b93}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Proxy\+Generator}]{\$proxy\+Generator,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}{Class\+Metadata\+Factory}}}]{\$metadata\+Factory,  }\item[{}]{\$auto\+Generate }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool | int & {\em \$auto\+Generate} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & When auto generate mode is not valid. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!createProxyDefinition@{createProxyDefinition}}
+\index{createProxyDefinition@{createProxyDefinition}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{createProxyDefinition()}{createProxyDefinition()}}
+{\footnotesize\ttfamily create\+Proxy\+Definition (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_proxy_definition}{Proxy\+Definition}} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a1130cee4df71e41058cf7dd73f4ae77f}{Proxy\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_af4654f80ee971cd461e82a9fb640f3ef}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_af4654f80ee971cd461e82a9fb640f3ef}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!generateProxyClasses@{generateProxyClasses}}
+\index{generateProxyClasses@{generateProxyClasses}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{generateProxyClasses()}{generateProxyClasses()}}
+{\footnotesize\ttfamily generate\+Proxy\+Classes (\begin{DoxyParamCaption}\item[{array}]{\$classes,  }\item[{}]{\$proxy\+Dir = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Generates proxy classes for all given classes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata\mbox{[}$\,$\mbox{]} & {\em \$classes} & The classes (Class\+Metadata instances) for which to generate proxies. \\
+\hline
+string & {\em \$proxy\+Dir} & The target directory of the proxy classes. If not specified, the directory configured on the Configuration of the Entity\+Manager used by this factory is used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of generated proxies. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_aeb768575bb7c694ea71feb7f0199af24}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_aeb768575bb7c694ea71feb7f0199af24}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!getProxy@{getProxy}}
+\index{getProxy@{getProxy}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{getProxy()}{getProxy()}}
+{\footnotesize\ttfamily get\+Proxy (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{array}]{\$identifier }\end{DoxyParamCaption})}
+
+Gets a reference proxy instance for the entity of the given type and identified by the given identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{Proxy}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Out\+Of\+Bounds\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a866885c96817855192405fd4e5a798f0}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a866885c96817855192405fd4e5a798f0}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!resetUninitializedProxy@{resetUninitializedProxy}}
+\index{resetUninitializedProxy@{resetUninitializedProxy}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{resetUninitializedProxy()}{resetUninitializedProxy()}}
+{\footnotesize\ttfamily reset\+Uninitialized\+Proxy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{Proxy}}}]{\$proxy }\end{DoxyParamCaption})}
+
+Reset initialization/cloning logic for an un-\/initialized proxy
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{Proxy}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!skipClass@{skipClass}}
+\index{skipClass@{skipClass}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{skipClass()}{skipClass()}}
+{\footnotesize\ttfamily skip\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Determine if this class should be skipped during proxy generation.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_proxy_factory_a2edfc9a18fd67079e2c730962a2bc88f}{Proxy\+Factory}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a44a364d132d69f0104ddf1a6f4a0e2b1}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a44a364d132d69f0104ddf1a6f4a0e2b1}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!AUTOGENERATE\_ALWAYS@{AUTOGENERATE\_ALWAYS}}
+\index{AUTOGENERATE\_ALWAYS@{AUTOGENERATE\_ALWAYS}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{AUTOGENERATE\_ALWAYS}{AUTOGENERATE\_ALWAYS}}
+{\footnotesize\ttfamily const AUTOGENERATE\+\_\+\+ALWAYS = 1}
+
+Always generates a new proxy in every request.
+
+This is only sane during development. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_aa658af28992267ebf4b56099711f6586}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_aa658af28992267ebf4b56099711f6586}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!AUTOGENERATE\_EVAL@{AUTOGENERATE\_EVAL}}
+\index{AUTOGENERATE\_EVAL@{AUTOGENERATE\_EVAL}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{AUTOGENERATE\_EVAL}{AUTOGENERATE\_EVAL}}
+{\footnotesize\ttfamily const AUTOGENERATE\+\_\+\+EVAL = 3}
+
+Generate the proxy classes using eval().
+
+This strategy is only sane for development, and even then it gives me the creeps a little. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a990df0b6db39261e3e2c2b4daca495be}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a990df0b6db39261e3e2c2b4daca495be}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!AUTOGENERATE\_FILE\_NOT\_EXISTS@{AUTOGENERATE\_FILE\_NOT\_EXISTS}}
+\index{AUTOGENERATE\_FILE\_NOT\_EXISTS@{AUTOGENERATE\_FILE\_NOT\_EXISTS}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{AUTOGENERATE\_FILE\_NOT\_EXISTS}{AUTOGENERATE\_FILE\_NOT\_EXISTS}}
+{\footnotesize\ttfamily const AUTOGENERATE\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+EXISTS = 2}
+
+Autogenerate the proxy class when the proxy file does not exist.
+
+This strategy causes a file\+\_\+exists() call whenever any proxy is used the first time in a request. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a6ae5ebf53213e5e27086228c069b9cd0}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a6ae5ebf53213e5e27086228c069b9cd0}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!AUTOGENERATE\_FILE\_NOT\_EXISTS\_OR\_CHANGED@{AUTOGENERATE\_FILE\_NOT\_EXISTS\_OR\_CHANGED}}
+\index{AUTOGENERATE\_FILE\_NOT\_EXISTS\_OR\_CHANGED@{AUTOGENERATE\_FILE\_NOT\_EXISTS\_OR\_CHANGED}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{AUTOGENERATE\_FILE\_NOT\_EXISTS\_OR\_CHANGED}{AUTOGENERATE\_FILE\_NOT\_EXISTS\_OR\_CHANGED}}
+{\footnotesize\ttfamily const AUTOGENERATE\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+EXISTS\+\_\+\+OR\+\_\+\+CHANGED = 4}
+
+Autogenerate the proxy class when the proxy file does not exist or when the proxied file changed.
+
+This strategy causes a file\+\_\+exists() call whenever any proxy is used the first time in a request. When the proxied file is changed, the proxy will be updated. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a95b8b76822f43ba5edbedc77855ba04a}\label{class_doctrine_1_1_common_1_1_proxy_1_1_abstract_proxy_factory_a95b8b76822f43ba5edbedc77855ba04a}} 
+\index{AbstractProxyFactory@{AbstractProxyFactory}!AUTOGENERATE\_NEVER@{AUTOGENERATE\_NEVER}}
+\index{AUTOGENERATE\_NEVER@{AUTOGENERATE\_NEVER}!AbstractProxyFactory@{AbstractProxyFactory}}
+\doxysubsubsection{\texorpdfstring{AUTOGENERATE\_NEVER}{AUTOGENERATE\_NEVER}}
+{\footnotesize\ttfamily const AUTOGENERATE\+\_\+\+NEVER = 0}
+
+Never autogenerate a proxy and rely that it was generated by some process before deployment. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/common/lib/\+Doctrine/\+Common/\+Proxy/Abstract\+Proxy\+Factory.\+php\end{DoxyCompactItemize}

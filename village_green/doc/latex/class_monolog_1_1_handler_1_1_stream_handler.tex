@@ -1,0 +1,190 @@
+\hypertarget{class_monolog_1_1_handler_1_1_stream_handler}{}\doxysection{Stream\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_stream_handler}\index{StreamHandler@{StreamHandler}}
+Inheritance diagram for Stream\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_stream_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_ae996ad71e3e7982a70443c5b7d1f4175}{\+\_\+\+\_\+construct}} (\$stream, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, ?int \$file\+Permission=null, bool \$use\+Locking=false)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_a3e5834ff3daeecd091712270886a16fb}{get\+Stream}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_af45bd2ec98e163f4d95637cfa9ed39fc}{get\+Stream\+Chunk\+Size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_a81b02000c3d348489b32fa091316c103}{stream\+Write}} (\$stream, array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_a6f6988200fca051d34cdafa1f09aca87}{MAX\+\_\+\+CHUNK\+\_\+\+SIZE}} = 2147483647
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_a0ff55380fb3b64bee19cfb8cc966d3ff}{DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE}} = 10 $\ast$ 1024 $\ast$ 1024
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_ab812ea9f06eeadf6d309e368195d32ac}\label{class_monolog_1_1_handler_1_1_stream_handler_ab812ea9f06eeadf6d309e368195d32ac}} 
+{\bfseries \$stream\+Chunk\+Size}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_aa658946a5d6cb700e35df1fc7854e7b3}\label{class_monolog_1_1_handler_1_1_stream_handler_aa658946a5d6cb700e35df1fc7854e7b3}} 
+{\bfseries \$stream}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_acf215f34a917d014776ce684a9ee8909}\label{class_monolog_1_1_handler_1_1_stream_handler_acf215f34a917d014776ce684a9ee8909}} 
+{\bfseries \$url} = null
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_afefd2f7430b3dbc9ce0ba8f37ea2a224}\label{class_monolog_1_1_handler_1_1_stream_handler_afefd2f7430b3dbc9ce0ba8f37ea2a224}} 
+{\bfseries \$file\+Permission}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_abedca205ed4f8dbc0e2a00307cc1df73}\label{class_monolog_1_1_handler_1_1_stream_handler_abedca205ed4f8dbc0e2a00307cc1df73}} 
+{\bfseries \$use\+Locking}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores to any stream resource
+
+Can be used to store into php\+://stderr, remote and local files, etc.
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_ae996ad71e3e7982a70443c5b7d1f4175}\label{class_monolog_1_1_handler_1_1_stream_handler_ae996ad71e3e7982a70443c5b7d1f4175}} 
+\index{StreamHandler@{StreamHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{?int}]{\$file\+Permission = {\ttfamily null},  }\item[{bool}]{\$use\+Locking = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource | string & {\em \$stream} & If a missing path can\textquotesingle{}t be created, an Unexpected\+Value\+Exception will be thrown on first write \\
+\hline
+int | null & {\em \$file\+Permission} & Optional file permissions (default (0644) are only for owner read/write) \\
+\hline
+bool & {\em \$use\+Locking} & Try to lock log file before doing any writes\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception If stream is not a resource or string 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_stream_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{StreamHandler@{StreamHandler}!close@{close}}
+\index{close@{close}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Rotating\+File\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_a3e5834ff3daeecd091712270886a16fb}\label{class_monolog_1_1_handler_1_1_stream_handler_a3e5834ff3daeecd091712270886a16fb}} 
+\index{StreamHandler@{StreamHandler}!getStream@{getStream}}
+\index{getStream@{getStream}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{getStream()}{getStream()}}
+{\footnotesize\ttfamily get\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the currently active stream if it is open
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_af45bd2ec98e163f4d95637cfa9ed39fc}\label{class_monolog_1_1_handler_1_1_stream_handler_af45bd2ec98e163f4d95637cfa9ed39fc}} 
+\index{StreamHandler@{StreamHandler}!getStreamChunkSize@{getStreamChunkSize}}
+\index{getStreamChunkSize@{getStreamChunkSize}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{getStreamChunkSize()}{getStreamChunkSize()}}
+{\footnotesize\ttfamily get\+Stream\+Chunk\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_accd14bda49a1044b4d8dd93f020f11ee}\label{class_monolog_1_1_handler_1_1_stream_handler_accd14bda49a1044b4d8dd93f020f11ee}} 
+\index{StreamHandler@{StreamHandler}!getUrl@{getUrl}}
+\index{getUrl@{getUrl}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{getUrl()}{getUrl()}}
+{\footnotesize\ttfamily get\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the stream URL if it was configured with a URL and not an active resource
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_a81b02000c3d348489b32fa091316c103}\label{class_monolog_1_1_handler_1_1_stream_handler_a81b02000c3d348489b32fa091316c103}} 
+\index{StreamHandler@{StreamHandler}!streamWrite@{streamWrite}}
+\index{streamWrite@{streamWrite}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{streamWrite()}{streamWrite()}}
+{\footnotesize\ttfamily stream\+Write (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Write to stream 
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$stream} & \\
+\hline
+array & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Formatted\+Record \$record \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_stream_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{StreamHandler@{StreamHandler}!write@{write}}
+\index{write@{write}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_afa17604fd899fffdc1ee326afe177cb5}{Rotating\+File\+Handler}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_a0ff55380fb3b64bee19cfb8cc966d3ff}\label{class_monolog_1_1_handler_1_1_stream_handler_a0ff55380fb3b64bee19cfb8cc966d3ff}} 
+\index{StreamHandler@{StreamHandler}!DEFAULT\_CHUNK\_SIZE@{DEFAULT\_CHUNK\_SIZE}}
+\index{DEFAULT\_CHUNK\_SIZE@{DEFAULT\_CHUNK\_SIZE}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_CHUNK\_SIZE}{DEFAULT\_CHUNK\_SIZE}}
+{\footnotesize\ttfamily const DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE = 10 $\ast$ 1024 $\ast$ 1024\hspace{0.3cm}{\ttfamily [protected]}}
+
+@const int 10MB \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_stream_handler_a6f6988200fca051d34cdafa1f09aca87}\label{class_monolog_1_1_handler_1_1_stream_handler_a6f6988200fca051d34cdafa1f09aca87}} 
+\index{StreamHandler@{StreamHandler}!MAX\_CHUNK\_SIZE@{MAX\_CHUNK\_SIZE}}
+\index{MAX\_CHUNK\_SIZE@{MAX\_CHUNK\_SIZE}!StreamHandler@{StreamHandler}}
+\doxysubsubsection{\texorpdfstring{MAX\_CHUNK\_SIZE}{MAX\_CHUNK\_SIZE}}
+{\footnotesize\ttfamily const MAX\+\_\+\+CHUNK\+\_\+\+SIZE = 2147483647\hspace{0.3cm}{\ttfamily [protected]}}
+
+@const int 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Stream\+Handler.\+php\end{DoxyCompactItemize}

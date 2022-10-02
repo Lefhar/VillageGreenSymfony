@@ -1,0 +1,162 @@
+\hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler}{}\doxysection{New\+Relic\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_new_relic_handler}\index{NewRelicHandler@{NewRelicHandler}}
+Inheritance diagram for New\+Relic\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_new_relic_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_adda5d354e9220d1fdbc57f20423bedf7}{\+\_\+\+\_\+construct}} ( \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true, ?string \$app\+Name=null, bool \$explode\+Arrays=false, ?string \$transaction\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_a2af2e5ddfe34ac014f2b170db7e57cf7}{is\+New\+Relic\+Enabled}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_a366c601caba45460bb68d5b950836788}{get\+App\+Name}} (array \$context)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_a20b255b70ef9638708d73d78c407a1ec}{get\+Transaction\+Name}} (array \$context)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_adc2a9ab31399a584eda9790c4811a98c}{set\+New\+Relic\+App\+Name}} (string \$app\+Name)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_a91cc9172344829fe35ffcac05db0f566}{set\+New\+Relic\+Transaction\+Name}} (string \$transaction\+Name)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_ad6d8d767c4fd09457d43eaf9cf3abf60}{set\+New\+Relic\+Parameter}} (string \$key, \$value)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a79f75dc0be198bb6d54362f0076eaf20}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a79f75dc0be198bb6d54362f0076eaf20}} 
+{\bfseries \$app\+Name}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a8b9fb35a0785a3fea27eb0c2b83a59d3}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a8b9fb35a0785a3fea27eb0c2b83a59d3}} 
+{\bfseries \$transaction\+Name}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a0826aff82b037a2c3919027f00273110}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a0826aff82b037a2c3919027f00273110}} 
+{\bfseries \$explode\+Arrays}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to record a log on a New\+Relic application. Enabling New Relic High Security mode may prevent capture of useful information.
+
+This handler requires a Normalizer\+Formatter to function and expects an array in \$record\mbox{[}\textquotesingle{}formatted\textquotesingle{}\mbox{]}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://docs.newrelic.com/docs/agents/php-agent}{\texttt{ https\+://docs.\+newrelic.\+com/docs/agents/php-\/agent}} 
+
+\href{https://docs.newrelic.com/docs/accounts-partnerships/accounts/security/high-security}{\texttt{ https\+://docs.\+newrelic.\+com/docs/accounts-\/partnerships/accounts/security/high-\/security}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_adda5d354e9220d1fdbc57f20423bedf7}\label{class_monolog_1_1_handler_1_1_new_relic_handler_adda5d354e9220d1fdbc57f20423bedf7}} 
+\index{NewRelicHandler@{NewRelicHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{?string}]{\$app\+Name = {\ttfamily null},  }\item[{bool}]{\$explode\+Arrays = {\ttfamily false},  }\item[{?string}]{\$transaction\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$app\+Name} & \\
+\hline
+bool & {\em \$explode\+Arrays} & \\
+\hline
+string | null & {\em \$transaction\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a366c601caba45460bb68d5b950836788}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a366c601caba45460bb68d5b950836788}} 
+\index{NewRelicHandler@{NewRelicHandler}!getAppName@{getAppName}}
+\index{getAppName@{getAppName}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{getAppName()}{getAppName()}}
+{\footnotesize\ttfamily get\+App\+Name (\begin{DoxyParamCaption}\item[{array}]{\$context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the appname where this log should be sent. Each log can override the default appname, set in this handler\textquotesingle{}s constructor, by providing the appname in it\textquotesingle{}s context.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{NewRelicHandler@{NewRelicHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a20b255b70ef9638708d73d78c407a1ec}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a20b255b70ef9638708d73d78c407a1ec}} 
+\index{NewRelicHandler@{NewRelicHandler}!getTransactionName@{getTransactionName}}
+\index{getTransactionName@{getTransactionName}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{getTransactionName()}{getTransactionName()}}
+{\footnotesize\ttfamily get\+Transaction\+Name (\begin{DoxyParamCaption}\item[{array}]{\$context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the name of the current transaction. Each log can override the default transaction name, set in this handler\textquotesingle{}s constructor, by providing the transaction\+\_\+name in it\textquotesingle{}s context
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a2af2e5ddfe34ac014f2b170db7e57cf7}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a2af2e5ddfe34ac014f2b170db7e57cf7}} 
+\index{NewRelicHandler@{NewRelicHandler}!isNewRelicEnabled@{isNewRelicEnabled}}
+\index{isNewRelicEnabled@{isNewRelicEnabled}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{isNewRelicEnabled()}{isNewRelicEnabled()}}
+{\footnotesize\ttfamily is\+New\+Relic\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Checks whether the New\+Relic extension is enabled in the system.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_adc2a9ab31399a584eda9790c4811a98c}\label{class_monolog_1_1_handler_1_1_new_relic_handler_adc2a9ab31399a584eda9790c4811a98c}} 
+\index{NewRelicHandler@{NewRelicHandler}!setNewRelicAppName@{setNewRelicAppName}}
+\index{setNewRelicAppName@{setNewRelicAppName}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{setNewRelicAppName()}{setNewRelicAppName()}}
+{\footnotesize\ttfamily set\+New\+Relic\+App\+Name (\begin{DoxyParamCaption}\item[{string}]{\$app\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets the New\+Relic application that should receive this log. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_ad6d8d767c4fd09457d43eaf9cf3abf60}\label{class_monolog_1_1_handler_1_1_new_relic_handler_ad6d8d767c4fd09457d43eaf9cf3abf60}} 
+\index{NewRelicHandler@{NewRelicHandler}!setNewRelicParameter@{setNewRelicParameter}}
+\index{setNewRelicParameter@{setNewRelicParameter}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{setNewRelicParameter()}{setNewRelicParameter()}}
+{\footnotesize\ttfamily set\+New\+Relic\+Parameter (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_a91cc9172344829fe35ffcac05db0f566}\label{class_monolog_1_1_handler_1_1_new_relic_handler_a91cc9172344829fe35ffcac05db0f566}} 
+\index{NewRelicHandler@{NewRelicHandler}!setNewRelicTransactionName@{setNewRelicTransactionName}}
+\index{setNewRelicTransactionName@{setNewRelicTransactionName}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{setNewRelicTransactionName()}{setNewRelicTransactionName()}}
+{\footnotesize\ttfamily set\+New\+Relic\+Transaction\+Name (\begin{DoxyParamCaption}\item[{string}]{\$transaction\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Overwrites the name of the current transaction \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_new_relic_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_new_relic_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{NewRelicHandler@{NewRelicHandler}!write@{write}}
+\index{write@{write}!NewRelicHandler@{NewRelicHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/New\+Relic\+Handler.\+php\end{DoxyCompactItemize}

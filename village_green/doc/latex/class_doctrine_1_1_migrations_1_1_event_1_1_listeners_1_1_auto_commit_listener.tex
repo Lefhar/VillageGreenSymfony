@@ -1,0 +1,42 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener}{}\doxysection{Auto\+Commit\+Listener Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener}\index{AutoCommitListener@{AutoCommitListener}}
+Inheritance diagram for Auto\+Commit\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener_a41a4b4df2043ececb9f0f554b1adb573}\label{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener_a41a4b4df2043ececb9f0f554b1adb573}} 
+{\bfseries on\+Migrations\+Migrated} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_event_1_1_migrations_event_args}{Migrations\+Event\+Args}} \$args)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener_a77d372ed259d7e188f408e350d4f1d66}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Listens for {\ttfamily on\+Migrations\+Migrated} and, if the connection has autocommit makes sure to do the final commit to ensure changes stick around. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener_a77d372ed259d7e188f408e350d4f1d66}\label{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener_a77d372ed259d7e188f408e350d4f1d66}} 
+\index{AutoCommitListener@{AutoCommitListener}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!AutoCommitListener@{AutoCommitListener}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns an array of events this subscriber wants to listen to.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Event\+Subscriber}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Event/\+Listeners/Auto\+Commit\+Listener.\+php\end{DoxyCompactItemize}

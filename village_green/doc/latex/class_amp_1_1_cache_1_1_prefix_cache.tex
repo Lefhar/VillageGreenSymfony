@@ -1,0 +1,113 @@
+\hypertarget{class_amp_1_1_cache_1_1_prefix_cache}{}\doxysection{Prefix\+Cache Class Reference}
+\label{class_amp_1_1_cache_1_1_prefix_cache}\index{PrefixCache@{PrefixCache}}
+Inheritance diagram for Prefix\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_cache_1_1_prefix_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_prefix_cache_a9c295b9588341811adf7217435a514bb}\label{class_amp_1_1_cache_1_1_prefix_cache_a9c295b9588341811adf7217435a514bb}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} \$cache, string \$key\+Prefix)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_a1ddbe909ca6fc959ee63266d97d4b078}{get\+Key\+Prefix}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_ac009cde80e71e456bac8af41d5d021c6}{get}} (string \$key)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}{set}} (string \$key, string \$value, int \$ttl=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_ac03d0331371567f0a97a6782746abd55}{delete}} (string \$key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_prefix_cache_ac03d0331371567f0a97a6782746abd55}\label{class_amp_1_1_cache_1_1_prefix_cache_ac03d0331371567f0a97a6782746abd55}} 
+\index{PrefixCache@{PrefixCache}!delete@{delete}}
+\index{delete@{delete}!PrefixCache@{PrefixCache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Deletes a value associated with the given key if it exists.
+
+Implementations SHOULD return boolean {\ttfamily true} or {\ttfamily false} to indicate whether the specified key existed at the time the delete operation was requested. If such information is not available, the implementation MUST resolve the promise with {\ttfamily null}.
+
+Implementations MUST transparently succeed operations for non-\/existent keys.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}bool$\vert$null\texorpdfstring{$>$}{>} Resolves to {\ttfamily true} / {\ttfamily false} to indicate whether the key existed or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure. May also resolve with {\ttfamily null} if that information is not available.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ac03d0331371567f0a97a6782746abd55}{Cache}}.
+
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_prefix_cache_ac009cde80e71e456bac8af41d5d021c6}\label{class_amp_1_1_cache_1_1_prefix_cache_ac009cde80e71e456bac8af41d5d021c6}} 
+\index{PrefixCache@{PrefixCache}!get@{get}}
+\index{get@{get}!PrefixCache@{PrefixCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Gets a value associated with the given key.
+
+If the specified key doesn\textquotesingle{}t exist implementations MUST succeed the resulting promise with {\ttfamily null}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>} Resolves to the cached value nor {\ttfamily null} if it doesn\textquotesingle{}t exist or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ac009cde80e71e456bac8af41d5d021c6}{Cache}}.
+
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_prefix_cache_a1ddbe909ca6fc959ee63266d97d4b078}\label{class_amp_1_1_cache_1_1_prefix_cache_a1ddbe909ca6fc959ee63266d97d4b078}} 
+\index{PrefixCache@{PrefixCache}!getKeyPrefix@{getKeyPrefix}}
+\index{getKeyPrefix@{getKeyPrefix}!PrefixCache@{PrefixCache}}
+\doxysubsubsection{\texorpdfstring{getKeyPrefix()}{getKeyPrefix()}}
+{\footnotesize\ttfamily get\+Key\+Prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the specified key prefix.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_prefix_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}\label{class_amp_1_1_cache_1_1_prefix_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}} 
+\index{PrefixCache@{PrefixCache}!set@{set}}
+\index{set@{set}!PrefixCache@{PrefixCache}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{string}]{\$value,  }\item[{int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Sets a value associated with the given key. Overrides existing values (if they exist).
+
+The eventual resolution value of the resulting promise is unimportant. The success or failure of the promise indicates the operation\textquotesingle{}s success.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+{\em \$value} & string Value to cache. \\
+\hline
+{\em \$ttl} & int Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout. Values less than 0 MUST throw an \textbackslash{}\+Error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$void$>$ Resolves either successfully or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}{Cache}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/cache/lib/Prefix\+Cache.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_native_query}{}\doxysection{Native\+Query Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_native_query}\index{NativeQuery@{NativeQuery}}
+Inheritance diagram for Native\+Query\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_native_query}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query_a21e387f778abae898a33b0355e56c095}{set\+SQL}} (\$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query_a67e8cb12dd05cee2a73454f8fa79efdc}{get\+SQL}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query_ade2ed37511dd34c302ea255881abfc7f}{\+\_\+do\+Execute}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a native SQL query. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_native_query_ade2ed37511dd34c302ea255881abfc7f}\label{class_doctrine_1_1_o_r_m_1_1_native_query_ade2ed37511dd34c302ea255881abfc7f}} 
+\index{NativeQuery@{NativeQuery}!\_doExecute@{\_doExecute}}
+\index{\_doExecute@{\_doExecute}!NativeQuery@{NativeQuery}}
+\doxysubsubsection{\texorpdfstring{\_doExecute()}{\_doExecute()}}
+{\footnotesize\ttfamily \+\_\+do\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Executes the query and returns a the resulting Statement object.
+
+\begin{DoxyReturn}{Returns}
+Result$\vert$int The executed database statement that holds the results, or an integer indicating how many rows were affected.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ade2ed37511dd34c302ea255881abfc7f}{Abstract\+Query}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_native_query_a67e8cb12dd05cee2a73454f8fa79efdc}\label{class_doctrine_1_1_o_r_m_1_1_native_query_a67e8cb12dd05cee2a73454f8fa79efdc}} 
+\index{NativeQuery@{NativeQuery}!getSQL@{getSQL}}
+\index{getSQL@{getSQL}!NativeQuery@{NativeQuery}}
+\doxysubsubsection{\texorpdfstring{getSQL()}{getSQL()}}
+{\footnotesize\ttfamily get\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the SQL query.
+
+\begin{DoxyReturn}{Returns}
+mixed The built SQL query or an array of all SQL queries.
+\end{DoxyReturn}
+@override 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a67e8cb12dd05cee2a73454f8fa79efdc}{Abstract\+Query}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_native_query_a21e387f778abae898a33b0355e56c095}\label{class_doctrine_1_1_o_r_m_1_1_native_query_a21e387f778abae898a33b0355e56c095}} 
+\index{NativeQuery@{NativeQuery}!setSQL@{setSQL}}
+\index{setSQL@{setSQL}!NativeQuery@{NativeQuery}}
+\doxysubsubsection{\texorpdfstring{setSQL()}{setSQL()}}
+{\footnotesize\ttfamily set\+SQL (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Sets the SQL of the query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Native\+Query.\+php\end{DoxyCompactItemize}

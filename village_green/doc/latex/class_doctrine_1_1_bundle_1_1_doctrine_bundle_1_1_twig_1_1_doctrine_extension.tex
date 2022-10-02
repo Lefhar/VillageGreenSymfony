@@ -1,0 +1,109 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension}{}\doxysection{Doctrine\+Extension Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension}\index{DoctrineExtension@{DoctrineExtension}}
+Inheritance diagram for Doctrine\+Extension\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a428d91319fc73d3038784cf5436936b6}{get\+Filters}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a2de2b3beeb07265fb9878b1e7aab8dfd}{replace\+Query\+Parameters}} (\$query, \$parameters)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a822a80bc7d6a52e9ffebec5f702efad3}{format\+Query}} (\$sql, \$highlight\+Only=false)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a9e7f763aad67fe2f2423b56cdfc9dea2}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a9e7f763aad67fe2f2423b56cdfc9dea2}} 
+{\bfseries prettify\+Sql} (string \$sql)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a3ec4cca13ea1e372c8f86a09c67be77e}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a3ec4cca13ea1e372c8f86a09c67be77e}} 
+{\bfseries format\+Sql} (string \$sql, bool \$highlight)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a2ee6252253ae3728885a6f8fabc34d6d}{escape\+Function}} (\$parameter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class contains the needed functions in order to do the query highlighting 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a2ee6252253ae3728885a6f8fabc34d6d}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a2ee6252253ae3728885a6f8fabc34d6d}} 
+\index{DoctrineExtension@{DoctrineExtension}!escapeFunction@{escapeFunction}}
+\index{escapeFunction@{escapeFunction}!DoctrineExtension@{DoctrineExtension}}
+\doxysubsubsection{\texorpdfstring{escapeFunction()}{escapeFunction()}}
+{\footnotesize\ttfamily static escape\+Function (\begin{DoxyParamCaption}\item[{}]{\$parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Escape parameters of a SQL query DON\textquotesingle{}T USE THIS FUNCTION OUTSIDE ITS INTENDED SCOPE \mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a822a80bc7d6a52e9ffebec5f702efad3}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a822a80bc7d6a52e9ffebec5f702efad3}} 
+\index{DoctrineExtension@{DoctrineExtension}!formatQuery@{formatQuery}}
+\index{formatQuery@{formatQuery}!DoctrineExtension@{DoctrineExtension}}
+\doxysubsubsection{\texorpdfstring{formatQuery()}{formatQuery()}}
+{\footnotesize\ttfamily format\+Query (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$highlight\+Only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Formats and/or highlights the given SQL statement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+bool & {\em \$highlight\+Only} & If true the query is not formatted, just highlighted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a428d91319fc73d3038784cf5436936b6}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a428d91319fc73d3038784cf5436936b6}} 
+\index{DoctrineExtension@{DoctrineExtension}!getFilters@{getFilters}}
+\index{getFilters@{getFilters}!DoctrineExtension@{DoctrineExtension}}
+\doxysubsubsection{\texorpdfstring{getFilters()}{getFilters()}}
+{\footnotesize\ttfamily get\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Define our functions
+
+\begin{DoxyReturn}{Returns}
+Twig\+Filter\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_twig_1_1_extension_1_1_abstract_extension_a428d91319fc73d3038784cf5436936b6}{Abstract\+Extension}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a3d0963e68bb313b163a73f2803c64600}} 
+\index{DoctrineExtension@{DoctrineExtension}!getName@{getName}}
+\index{getName@{getName}!DoctrineExtension@{DoctrineExtension}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the name of the extension
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a2de2b3beeb07265fb9878b1e7aab8dfd}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_twig_1_1_doctrine_extension_a2de2b3beeb07265fb9878b1e7aab8dfd}} 
+\index{DoctrineExtension@{DoctrineExtension}!replaceQueryParameters@{replaceQueryParameters}}
+\index{replaceQueryParameters@{replaceQueryParameters}!DoctrineExtension@{DoctrineExtension}}
+\doxysubsubsection{\texorpdfstring{replaceQueryParameters()}{replaceQueryParameters()}}
+{\footnotesize\ttfamily replace\+Query\+Parameters (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$parameters }\end{DoxyParamCaption})}
+
+Return a query with the parameters replaced
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} | Data & {\em \$parameters} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Twig/Doctrine\+Extension.\+php\end{DoxyCompactItemize}

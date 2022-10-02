@@ -1,0 +1,85 @@
+\hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket}{}\doxysection{Tcp\+Socket Class Reference}
+\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket}\index{TcpSocket@{TcpSocket}}
+Inheritance diagram for Tcp\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ae10c9580dd0c7283de4783ff0e5a135b}{is\+Alive}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a9cd451ed8a74965f42b141d1e40c859a}\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a9cd451ed8a74965f42b141d1e40c859a}} 
+static {\bfseries connect} (string \$uri, int \$timeout=5000)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a32805f27f22590fbdcf7da7942e0fb4a}\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a32805f27f22590fbdcf7da7942e0fb4a}} 
+static {\bfseries parser} (callable \$callback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a1d65a83efeca28a6f03f9af4f8029bdd}\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a1d65a83efeca28a6f03f9af4f8029bdd}} 
+{\bfseries \+\_\+\+\_\+construct} (\$socket)
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a80ef0f210368e617d78e5685e229d587}{send}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message}{Message}} \$message)
+\item 
+\mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ac805eb3a4eb25b19c1ab093023da4d35}{receive}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ae10c9580dd0c7283de4783ff0e5a135b}\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ae10c9580dd0c7283de4783ff0e5a135b}} 
+\index{TcpSocket@{TcpSocket}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!TcpSocket@{TcpSocket}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_ae10c9580dd0c7283de4783ff0e5a135b}{Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ac805eb3a4eb25b19c1ab093023da4d35}\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_ac805eb3a4eb25b19c1ab093023da4d35}} 
+\index{TcpSocket@{TcpSocket}!receive@{receive}}
+\index{receive@{receive}!TcpSocket@{TcpSocket}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Message$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_ac805eb3a4eb25b19c1ab093023da4d35}{Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a80ef0f210368e617d78e5685e229d587}\label{class_amp_1_1_dns_1_1_internal_1_1_tcp_socket_a80ef0f210368e617d78e5685e229d587}} 
+\index{TcpSocket@{TcpSocket}!send@{send}}
+\index{send@{send}!TcpSocket@{TcpSocket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message}{Message}}}]{\$message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Message & {\em \$message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$int$>$ 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket_a80ef0f210368e617d78e5685e229d587}{Socket}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/dns/lib/\+Internal/Tcp\+Socket.\+php\end{DoxyCompactItemize}

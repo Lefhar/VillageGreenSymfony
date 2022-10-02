@@ -1,0 +1,297 @@
+\hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface}{}\doxysection{Trait\+Usage\+Interface Interface Reference}
+\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface}\index{TraitUsageInterface@{TraitUsageInterface}}
+Inheritance diagram for Trait\+Usage\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a5a1ec9531bc7186e345d9fb56fc5b0ad}{add\+Use}} (\$use, \$use\+Alias=null)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a5daf21916222e7a5a8b4c25f35314f95}{get\+Uses}} ()
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a232cb22c4f3dc89dc727567021036770}{add\+Trait}} (\$trait)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae5c3334d6d7ae03ceb8e7d71b285fda1}{add\+Traits}} (array \$traits)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_af09716ed6d7c1be4fd4f8ff75a4714f7}{has\+Trait}} (\$trait\+Name)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a8985442e8133cd567bf7ce548f96561f}{get\+Traits}} ()
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_adf26605709eda72a91f388dc1bf9492e}{remove\+Trait}} (\$trait\+Name)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae05a427cfe6cfea291dc0b5ea227c411}{add\+Trait\+Alias}} (\$method, \$alias, \$visibility=null)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a91707133ad21fd603c17d0be59cca1ec}{get\+Trait\+Aliases}} ()
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ac127e01dea889f727f682450582c1fe9}{add\+Trait\+Override}} (\$method, \$traits\+To\+Replace)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a8b8909f6c40c21d00a41579d8495ac6b}{remove\+Trait\+Override}} (\$method, \$overrides\+To\+Remove=null)
+\item 
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ac929613720f4102d2f6bd28bc97964b3}{get\+Trait\+Overrides}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a232cb22c4f3dc89dc727567021036770}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a232cb22c4f3dc89dc727567021036770}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!addTrait@{addTrait}}
+\index{addTrait@{addTrait}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{addTrait()}{addTrait()}}
+{\footnotesize\ttfamily add\+Trait (\begin{DoxyParamCaption}\item[{}]{\$trait }\end{DoxyParamCaption})}
+
+Add trait takes an array of trait options or string as arguments.
+
+Array Format\+: key\+: trait\+Name value\+: String
+
+key\+: aliases value\+: array of arrays key\+: method value\+: \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae05a427cfe6cfea291dc0b5ea227c411}{add\+Trait\+Alias}} key\+: alias value\+: 
+
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae05a427cfe6cfea291dc0b5ea227c411}{add\+Trait\+Alias}} key\+: visibility value\+: 
+
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae05a427cfe6cfea291dc0b5ea227c411}{add\+Trait\+Alias}}
+\end{DoxySeeAlso}
+key\+: insteadof value\+: array of arrays key\+: method value\+: \begin{DoxySeeAlso}{See also}
+self\+::add\+Trait\+Override key\+: trait\+To\+Replace value\+: 
+
+self\+::add\+Trait\+Override
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string | array & {\em \$trait} & @psalm-\/param string$\vert$array\{trait\+Name\+: string, aliases?\+: array, insteadof?\+: array\} \$trait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a232cb22c4f3dc89dc727567021036770}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_a232cb22c4f3dc89dc727567021036770}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae05a427cfe6cfea291dc0b5ea227c411}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae05a427cfe6cfea291dc0b5ea227c411}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!addTraitAlias@{addTraitAlias}}
+\index{addTraitAlias@{addTraitAlias}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{addTraitAlias()}{addTraitAlias()}}
+{\footnotesize\ttfamily add\+Trait\+Alias (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$alias,  }\item[{}]{\$visibility = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Add a trait alias. This will be used to generate the AS portion of the use statement.
+
+\$method\+: This method provides 2 ways for defining the trait method. Option 1\+: String Option 2\+: Array key\+: trait\+Name value\+: name of trait key\+: method value\+: trait method
+
+\$alias\+: Alias is a string representing the new method name.
+
+\$visibilty\+: Reflection\+Method\+::\+IS\+\_\+\+PUBLIC $\vert$ Reflection\+Method\+::\+IS\+\_\+\+PRIVATE $\vert$ Reflection\+Method\+::\+IS\+\_\+\+PROTECTED
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$method} & String or Array \\
+\hline
+string & {\em \$alias} & \\
+\hline
+null | int & {\em \$visibility} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_ae05a427cfe6cfea291dc0b5ea227c411}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_ae05a427cfe6cfea291dc0b5ea227c411}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ac127e01dea889f727f682450582c1fe9}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ac127e01dea889f727f682450582c1fe9}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!addTraitOverride@{addTraitOverride}}
+\index{addTraitOverride@{addTraitOverride}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{addTraitOverride()}{addTraitOverride()}}
+{\footnotesize\ttfamily add\+Trait\+Override (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$traits\+To\+Replace }\end{DoxyParamCaption})}
+
+Add a trait method override. This will be used to generate the INSTEADOF portion of the use statement.
+
+\$method\+: This method provides 2 ways for defining the trait method. Option 1\+: String Format\+: $<$trait name$>$\+::$<$method name$>$ Option 2\+: Array key\+: trait\+Name value\+: trait name key\+: method value\+: method name
+
+\$trait\+To\+Replace\+: The name of the trait that you wish to supersede.
+
+This method provides 2 ways for defining the trait method. Option 1\+: String of trait to replace Option 2\+: Array of strings of traits to replace
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$method} & \\
+\hline
+mixed & {\em \$traits\+To\+Replace} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_ac127e01dea889f727f682450582c1fe9}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_ac127e01dea889f727f682450582c1fe9}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae5c3334d6d7ae03ceb8e7d71b285fda1}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ae5c3334d6d7ae03ceb8e7d71b285fda1}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!addTraits@{addTraits}}
+\index{addTraits@{addTraits}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{addTraits()}{addTraits()}}
+{\footnotesize\ttfamily add\+Traits (\begin{DoxyParamCaption}\item[{array}]{\$traits }\end{DoxyParamCaption})}
+
+Add multiple traits. Trait can be an array of trait names or array of trait configurations
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$traits} & Array of string names or configurations (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a232cb22c4f3dc89dc727567021036770}{add\+Trait}}) @psalm-\/param list\texorpdfstring{$<$}{<}string$\vert$array\{trait\+Name\+: string, aliases?\+: array, insteadof?\+: array\}\texorpdfstring{$>$}{>} \$traits 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_ae5c3334d6d7ae03ceb8e7d71b285fda1}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_ae5c3334d6d7ae03ceb8e7d71b285fda1}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a5a1ec9531bc7186e345d9fb56fc5b0ad}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a5a1ec9531bc7186e345d9fb56fc5b0ad}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!addUse@{addUse}}
+\index{addUse@{addUse}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{addUse()}{addUse()}}
+{\footnotesize\ttfamily add\+Use (\begin{DoxyParamCaption}\item[{}]{\$use,  }\item[{}]{\$use\+Alias = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Add a class to \char`\"{}use\char`\"{} classes
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$use} & \\
+\hline
+string | null & {\em \$use\+Alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a5a1ec9531bc7186e345d9fb56fc5b0ad}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_a5a1ec9531bc7186e345d9fb56fc5b0ad}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a91707133ad21fd603c17d0be59cca1ec}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a91707133ad21fd603c17d0be59cca1ec}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!getTraitAliases@{getTraitAliases}}
+\index{getTraitAliases@{getTraitAliases}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{getTraitAliases()}{getTraitAliases()}}
+{\footnotesize\ttfamily get\+Trait\+Aliases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a91707133ad21fd603c17d0be59cca1ec}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_a91707133ad21fd603c17d0be59cca1ec}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ac929613720f4102d2f6bd28bc97964b3}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_ac929613720f4102d2f6bd28bc97964b3}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!getTraitOverrides@{getTraitOverrides}}
+\index{getTraitOverrides@{getTraitOverrides}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{getTraitOverrides()}{getTraitOverrides()}}
+{\footnotesize\ttfamily get\+Trait\+Overrides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return trait overrides
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_ac929613720f4102d2f6bd28bc97964b3}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_ac929613720f4102d2f6bd28bc97964b3}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a8985442e8133cd567bf7ce548f96561f}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a8985442e8133cd567bf7ce548f96561f}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!getTraits@{getTraits}}
+\index{getTraits@{getTraits}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{getTraits()}{getTraits()}}
+{\footnotesize\ttfamily get\+Traits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a list of trait names
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a8985442e8133cd567bf7ce548f96561f}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_a8985442e8133cd567bf7ce548f96561f}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a5daf21916222e7a5a8b4c25f35314f95}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a5daf21916222e7a5a8b4c25f35314f95}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!getUses@{getUses}}
+\index{getUses@{getUses}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{getUses()}{getUses()}}
+{\footnotesize\ttfamily get\+Uses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the \char`\"{}use\char`\"{} classes
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a5daf21916222e7a5a8b4c25f35314f95}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_a5daf21916222e7a5a8b4c25f35314f95}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_af09716ed6d7c1be4fd4f8ff75a4714f7}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_af09716ed6d7c1be4fd4f8ff75a4714f7}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!hasTrait@{hasTrait}}
+\index{hasTrait@{hasTrait}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{hasTrait()}{hasTrait()}}
+{\footnotesize\ttfamily has\+Trait (\begin{DoxyParamCaption}\item[{}]{\$trait\+Name }\end{DoxyParamCaption})}
+
+Check to see if the class has a trait defined
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$trait\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_af09716ed6d7c1be4fd4f8ff75a4714f7}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_af09716ed6d7c1be4fd4f8ff75a4714f7}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_adf26605709eda72a91f388dc1bf9492e}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_adf26605709eda72a91f388dc1bf9492e}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!removeTrait@{removeTrait}}
+\index{removeTrait@{removeTrait}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{removeTrait()}{removeTrait()}}
+{\footnotesize\ttfamily remove\+Trait (\begin{DoxyParamCaption}\item[{}]{\$trait\+Name }\end{DoxyParamCaption})}
+
+Remove a trait by its name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$trait\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_adf26605709eda72a91f388dc1bf9492e}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_adf26605709eda72a91f388dc1bf9492e}{Trait\+Usage\+Generator}}.
+
+\mbox{\Hypertarget{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a8b8909f6c40c21d00a41579d8495ac6b}\label{interface_laminas_1_1_code_1_1_generator_1_1_trait_usage_interface_a8b8909f6c40c21d00a41579d8495ac6b}} 
+\index{TraitUsageInterface@{TraitUsageInterface}!removeTraitOverride@{removeTraitOverride}}
+\index{removeTraitOverride@{removeTraitOverride}!TraitUsageInterface@{TraitUsageInterface}}
+\doxysubsubsection{\texorpdfstring{removeTraitOverride()}{removeTraitOverride()}}
+{\footnotesize\ttfamily remove\+Trait\+Override (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$overrides\+To\+Remove = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Remove an override for a given trait\+::method
+
+\$method\+: This method provides 2 ways for defining the trait method. Option 1\+: String Format\+: $<$trait name$>$\+::$<$method name$>$ Option 2\+: Array key\+: trait\+Name value\+: trait name key\+: method value\+: method name
+
+\$overrides\+To\+Remove\+: The name of the trait that you wish to remove.
+
+This method provides 2 ways for defining the trait method. Option 1\+: String of trait to replace Option 2\+: Array of strings of traits to replace
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$method} & \\
+\hline
+mixed & {\em \$overrides\+To\+Remove} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_class_generator_a8b8909f6c40c21d00a41579d8495ac6b}{Class\+Generator}}, and \mbox{\hyperlink{class_laminas_1_1_code_1_1_generator_1_1_trait_usage_generator_a8b8909f6c40c21d00a41579d8495ac6b}{Trait\+Usage\+Generator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/laminas/laminas-\/code/src/\+Generator/Trait\+Usage\+Interface.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression}{}\doxysection{Join\+Association\+Path\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression}\index{JoinAssociationPathExpression@{JoinAssociationPathExpression}}
+Inheritance diagram for Join\+Association\+Path\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a5f1684353e7fcb930d8231e3499a4f22}{\+\_\+\+\_\+construct}} (\$identification\+Variable, \$association\+Field)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_afea93c662fcf92e607e49828396a513d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_afea93c662fcf92e607e49828396a513d}} 
+{\bfseries \$identification\+Variable}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a896a53abde85957ab2b8e5c5eb216893}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a896a53abde85957ab2b8e5c5eb216893}} 
+{\bfseries \$association\+Field}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression}{Join\+Association\+Path\+Expression}} \+::= Identification\+Variable \char`\"{}.\char`\"{} (Single\+Valued\+Association\+Field $\vert$ Collection\+Valued\+Association\+Field)
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a5f1684353e7fcb930d8231e3499a4f22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a5f1684353e7fcb930d8231e3499a4f22}} 
+\index{JoinAssociationPathExpression@{JoinAssociationPathExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!JoinAssociationPathExpression@{JoinAssociationPathExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$identification\+Variable,  }\item[{}]{\$association\+Field }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$identification\+Variable} & \\
+\hline
+string & {\em \$association\+Field} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{JoinAssociationPathExpression@{JoinAssociationPathExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!JoinAssociationPathExpression@{JoinAssociationPathExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Join\+Association\+Path\+Expression.\+php\end{DoxyCompactItemize}

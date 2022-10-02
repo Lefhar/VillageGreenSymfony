@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression}{}\doxysection{General\+Case\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression}\index{GeneralCaseExpression@{GeneralCaseExpression}}
+Inheritance diagram for General\+Case\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_acb247d406ee3655fde5b39f8bd54c352}{\+\_\+\+\_\+construct}} (array \$when\+Clauses, \$else\+Scalar\+Expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a026fdb6b5907c5f714f33ac09933e0c6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a026fdb6b5907c5f714f33ac09933e0c6}} 
+{\bfseries \$when\+Clauses} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a5342012803056bb373a3224fbbd134d3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a5342012803056bb373a3224fbbd134d3}} 
+{\bfseries \$else\+Scalar\+Expression} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression}{General\+Case\+Expression}} \+::= \char`\"{}\+CASE\char`\"{} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_when_clause}{When\+Clause}} \{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_when_clause}{When\+Clause}}\}$\ast$ \char`\"{}\+ELSE\char`\"{} Scalar\+Expression \char`\"{}\+END\char`\"{}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_acb247d406ee3655fde5b39f8bd54c352}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_acb247d406ee3655fde5b39f8bd54c352}} 
+\index{GeneralCaseExpression@{GeneralCaseExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!GeneralCaseExpression@{GeneralCaseExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$when\+Clauses,  }\item[{}]{\$else\+Scalar\+Expression }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$when\+Clauses} & \\
+\hline
+mixed & {\em \$else\+Scalar\+Expression} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{GeneralCaseExpression@{GeneralCaseExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!GeneralCaseExpression@{GeneralCaseExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/General\+Case\+Expression.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region}{}\doxysection{Multi\+Get\+Region Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region}\index{MultiGetRegion@{MultiGetRegion}}
+Inheritance diagram for Multi\+Get\+Region\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.636364cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region_a3e3d57668e7a1747bf087108c2590b8b}{get\+Multiple}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} \$collection)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a region that supports multi-\/get reading.
+
+With one method call we can get multiple items. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region_a3e3d57668e7a1747bf087108c2590b8b}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region_a3e3d57668e7a1747bf087108c2590b8b}} 
+\index{MultiGetRegion@{MultiGetRegion}!getMultiple@{getMultiple}}
+\index{getMultiple@{getMultiple}!MultiGetRegion@{MultiGetRegion}}
+\doxysubsubsection{\texorpdfstring{getMultiple()}{getMultiple()}}
+{\footnotesize\ttfamily get\+Multiple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}}}]{\$collection }\end{DoxyParamCaption})}
+
+Get all items from the cache identified by \$keys. It returns NULL if some elements can not be found.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} & {\em \$collection} & The collection of the items to be retrieved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_entry}{Cache\+Entry}}\mbox{[}\mbox{]}$\vert$null The cached entries or NULL if one or more entries can not be found 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3e3d57668e7a1747bf087108c2590b8b}{File\+Lock\+Region}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/Multi\+Get\+Region.\+php\end{DoxyCompactItemize}

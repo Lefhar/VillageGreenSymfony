@@ -1,0 +1,45 @@
+
+\begin{DoxyItemize}
+\item Add bypass-\/proxy-\/for option added in 0.\+12.\+3 (see \href{https://github.com/KnpLabs/snappy/pull/302}{\texttt{ \#302}})
+\item Fix symfony/process 4.\+2 deprecation notice (see \href{https://github.com/KnpLabs/snappy/pull/331}{\texttt{ \#331}})
+\item Drop suppor for unmaintained PHP versions (5.\+6 and 7.\+0, see \href{https://github.com/KnpLabs/snappy/pull/337}{\texttt{ \#337}}
+\item Drop support for unmaintained symfony/process versions (see \href{https://github.com/KnpLabs/snappy/pull/337}{\texttt{ \#337}})
+\item Pass on error code in check\+Process\+Status (see \href{https://github.com/KnpLabs/snappy/pull/328}{\texttt{ \#328}})
+\end{DoxyItemize}
+
+Thanks to @joshpme, @drigani, @fbourigault, @\+NiR-\/ and @leimd for their work.\hypertarget{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md399}{}\doxysection{1.\+0.\+4}\label{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md399}
+
+\begin{DoxyItemize}
+\item Support cache-\/dir for Image generation (see \href{https://github.com/KnpLabs/snappy/pull/297}{\texttt{ \#297}}).
+\end{DoxyItemize}
+
+Thank you @dimitrilahaye for their work.\hypertarget{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md400}{}\doxysection{1.\+0.\+3}\label{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md400}
+
+\begin{DoxyItemize}
+\item Add support to Symfony 4 (\href{https://github.com/KnpLabs/snappy/pull/290}{\texttt{ \#290}})
+\item Use PHPUnit\textbackslash{}\+Framework\textbackslash{}\+Test\+Case instead of PHPUnit\+\_\+\+Framework\+\_\+\+Test\+Case (\href{https://github.com/KnpLabs/snappy/pull/287}{\texttt{ \#287}})
+\end{DoxyItemize}
+
+Credits go to @michaelperrin and @carusogabriel.\hypertarget{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md401}{}\doxysection{1.\+0.\+2}\label{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md401}
+{\itshape A BC break was introduced in v1.\+0.\+0\+: using objects castable to string with a cyclic dependency to the generator as option value would break {\ttfamily set\+Option()} / {\ttfamily set\+Options()} methods.}
+
+
+\begin{DoxyItemize}
+\item Use logger context rather than {\ttfamily var\+\_\+export} to log option values (see \href{https://github.com/KnpLabs/snappy/pull/283}{\texttt{ \#283}})
+\end{DoxyItemize}
+
+Credits go to\+: @barryvdh.\hypertarget{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md402}{}\doxysection{1.\+0.\+1}\label{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md402}
+
+\begin{DoxyItemize}
+\item Fix {\ttfamily Call to a member function debug() on null} logger (see \href{https://github.com/KnpLabs/snappy/pull/270}{\texttt{ \#270}})
+\end{DoxyItemize}\hypertarget{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md403}{}\doxysection{1.\+0.\+0}\label{md_vendor_knplabs_knp_snappy__c_h_a_n_g_e_l_o_g_autotoc_md403}
+
+\begin{DoxyItemize}
+\item Don\textquotesingle{}t check if it\textquotesingle{}s a file when the path is bigger than {\ttfamily PHP\+\_\+\+MAXPATHLEN} (see \href{https://github.com/KnpLabs/snappy/pull/224}{\texttt{ \#224}})
+\item Pass {\ttfamily image-\/dpi} and {\ttfamily image-\/quality} options as integer (see \href{https://github.com/KnpLabs/snappy/pull/251}{\texttt{ \#251}})
+\item Improve documentation readability (see \href{https://github.com/KnpLabs/snappy/pull/255}{\texttt{ \#255}})
+\item Add logging capabilities to generators (see \href{https://github.com/KnpLabs/snappy/pull/264}{\texttt{ \#264}})
+\item Add some more frequent questions/issues to the FAQ (see \href{https://github.com/KnpLabs/snappy/pull/263}{\texttt{ \#263}}, \href{https://github.com/KnpLabs/snappy/pull/265}{\texttt{ \#265}}, \href{https://github.com/KnpLabs/snappy/pull/266}{\texttt{ \#266}})
+\end{DoxyItemize}
+
+Credits go to\+: @wouterbulten, @martinssipenko, @\+Herz3h, @akovalyov, @\+NiR-\/. 

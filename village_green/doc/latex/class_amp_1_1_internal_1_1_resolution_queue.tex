@@ -1,0 +1,72 @@
+\hypertarget{class_amp_1_1_internal_1_1_resolution_queue}{}\doxysection{Resolution\+Queue Class Reference}
+\label{class_amp_1_1_internal_1_1_resolution_queue}\index{ResolutionQueue@{ResolutionQueue}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_resolution_queue_a9fd4af4c4401e11115f151a6e9b2080f}{\+\_\+\+\_\+construct}} (callable \$callback=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_resolution_queue_a1e15b47e1776bdb627022d35b24005da}{push}} (callable \$callback)
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_resolution_queue_a03068fd3c91d520b9fff3ee83694aebe}{\+\_\+\+\_\+invoke}} (\$exception, \$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores a set of functions to be invoked when a promise is resolved. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_resolution_queue_a9fd4af4c4401e11115f151a6e9b2080f}\label{class_amp_1_1_internal_1_1_resolution_queue_a9fd4af4c4401e11115f151a6e9b2080f}} 
+\index{ResolutionQueue@{ResolutionQueue}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ResolutionQueue@{ResolutionQueue}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{callable}]{\$callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable | null & {\em \$callback} & Initial callback to add to queue.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param null$\vert$callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$callback 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_resolution_queue_a03068fd3c91d520b9fff3ee83694aebe}\label{class_amp_1_1_internal_1_1_resolution_queue_a03068fd3c91d520b9fff3ee83694aebe}} 
+\index{ResolutionQueue@{ResolutionQueue}!\_\_invoke@{\_\_invoke}}
+\index{\_\_invoke@{\_\_invoke}!ResolutionQueue@{ResolutionQueue}}
+\doxysubsubsection{\texorpdfstring{\_\_invoke()}{\_\_invoke()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+invoke (\begin{DoxyParamCaption}\item[{}]{\$exception,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Calls each callback in the queue, passing the provided values to the function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable | null & {\em \$exception} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_resolution_queue_a1e15b47e1776bdb627022d35b24005da}\label{class_amp_1_1_internal_1_1_resolution_queue_a1e15b47e1776bdb627022d35b24005da}} 
+\index{ResolutionQueue@{ResolutionQueue}!push@{push}}
+\index{push@{push}!ResolutionQueue@{ResolutionQueue}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily push (\begin{DoxyParamCaption}\item[{callable}]{\$callback }\end{DoxyParamCaption})}
+
+Unrolls instances of self to avoid blowing up the call stack on resolution.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$callback} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$callback
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Internal/Resolution\+Queue.\+php\end{DoxyCompactItemize}

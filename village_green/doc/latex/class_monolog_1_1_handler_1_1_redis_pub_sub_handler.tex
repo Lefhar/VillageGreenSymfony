@@ -1,0 +1,75 @@
+\hypertarget{class_monolog_1_1_handler_1_1_redis_pub_sub_handler}{}\doxysection{Redis\+Pub\+Sub\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_redis_pub_sub_handler}\index{RedisPubSubHandler@{RedisPubSubHandler}}
+Inheritance diagram for Redis\+Pub\+Sub\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_redis_pub_sub_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_ae99f7f114a697adc02c38d71d727dab0}{\+\_\+\+\_\+construct}} (\$redis, string \$key, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Sends the message to a Redis Pub/\+Sub channel using PUBLISH
+
+usage example\+:
+
+\$log = new \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}}(\textquotesingle{}application\textquotesingle{}); \$redis = new \mbox{\hyperlink{class_monolog_1_1_handler_1_1_redis_pub_sub_handler}{Redis\+Pub\+Sub\+Handler}}(new Predis\textbackslash{}\+Client(\char`\"{}tcp\+://localhost\+:6379\char`\"{}), \char`\"{}logs\char`\"{}, \mbox{\hyperlink{class_monolog_1_1_logger_ad0c7ccd2f8b92a760391d21d0ec7b339}{Logger\+::\+WARNING}}); \$log-\/\texorpdfstring{$>$}{>}push\+Handler(\$redis);
+
+\begin{DoxyAuthor}{Author}
+Gaëtan Faugère \href{mailto:gaetan@fauge.re}{\texttt{ gaetan@fauge.\+re}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_ae99f7f114a697adc02c38d71d727dab0}\label{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_ae99f7f114a697adc02c38d71d727dab0}} 
+\index{RedisPubSubHandler@{RedisPubSubHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RedisPubSubHandler@{RedisPubSubHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$redis,  }\item[{string}]{\$key,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Predis\textbackslash{}\+Client | \textbackslash{}\+Redis & {\em \$redis} & The redis instance \\
+\hline
+string & {\em \$key} & The channel key to publish records to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{RedisPubSubHandler@{RedisPubSubHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!RedisPubSubHandler@{RedisPubSubHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{RedisPubSubHandler@{RedisPubSubHandler}!write@{write}}
+\index{write@{write}!RedisPubSubHandler@{RedisPubSubHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Redis\+Pub\+Sub\+Handler.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,125 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_message}{}\doxysection{Message Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_message}\index{Message@{Message}}
+Inheritance diagram for Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_message}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a0c106514293f57eceeedafe9aef6d6ad}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} \$source)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a40dffd1b8c8d65b3c86af44f4d1f228d}{on\+Resolve}} (callable \$on\+Resolved)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a900071ae2a2d77ac76212b3e784b9148}{get\+Input\+Stream}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates a buffered message from an \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}. The message can be consumed in chunks using the \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a64571309bfb3238c65fd3c2898f92440}{read()}} API or it may be buffered and accessed in its entirety by waiting for the promise to resolve.
+
+Other implementations may extend this class to add custom properties such as a {\ttfamily is\+Binary()} flag for Web\+Socket messages.
+
+Buffering Example\+:
+
+\$stream = new \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message}{Message}}(\$input\+Stream); \$content = yield \$stream;
+
+Streaming Example\+:
+
+\$stream = new \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message}{Message}}(\$input\+Stream);
+
+while ((\$chunk = yield \$stream-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a64571309bfb3238c65fd3c2898f92440}{read()}}) !== null) \{ // Immediately use \$chunk, reducing memory consumption since the entire message is never buffered. \}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000019}{Deprecated}}]Use Amp\textbackslash{}\+Byte\+Stream\textbackslash{}\+Payload instead. \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_message_a0c106514293f57eceeedafe9aef6d6ad}\label{class_amp_1_1_byte_stream_1_1_message_a0c106514293f57eceeedafe9aef6d6ad}} 
+\index{Message@{Message}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}}]{\$source }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} & {\em \$source} & An iterator that only emits strings. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_message_a900071ae2a2d77ac76212b3e784b9148}\label{class_amp_1_1_byte_stream_1_1_message_a900071ae2a2d77ac76212b3e784b9148}} 
+\index{Message@{Message}!getInputStream@{getInputStream}}
+\index{getInputStream@{getInputStream}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getInputStream()}{getInputStream()}}
+{\footnotesize\ttfamily get\+Input\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Exposes the source input stream.
+
+This might be required to resolve a promise with an \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}, because promises in Amp can\textquotesingle{}t be resolved with other promises.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_message_a40dffd1b8c8d65b3c86af44f4d1f228d}\label{class_amp_1_1_byte_stream_1_1_message_a40dffd1b8c8d65b3c86af44f4d1f228d}} 
+\index{Message@{Message}!onResolve@{onResolve}}
+\index{onResolve@{onResolve}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{onResolve()}{onResolve()}}
+{\footnotesize\ttfamily bool True if on\+Resolve (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Resolved }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Registers a callback to be invoked when the promise is resolved.
+
+If this method is called multiple times, additional handlers will be registered instead of replacing any already existing handlers.
+
+If the promise is already resolved, the callback MUST be executed immediately.
+
+Exceptions MUST NOT be thrown from this method. Any exceptions thrown from invoked callbacks MUST be forwarded to the event-\/loop error handler.
+
+Note\+: You shouldn\textquotesingle{}t implement this interface yourself. Instead, provide a method that returns a promise for the operation you\textquotesingle{}re implementing. Objects other than pure placeholders implementing it are a very bad idea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Resolved} & The first argument shall be {\ttfamily null} on success, while the second shall be {\ttfamily null} on failure.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$on\+Resolved
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{Promise}}.
+
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_message_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_byte_stream_1_1_message_a64571309bfb3238c65fd3c2898f92440}} 
+\index{Message@{Message}!read@{read}}
+\index{read@{read}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_pending_read_error}{Pending\+Read\+Error}}} & Thrown if another read operation is still pending.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/Message.\+php\end{DoxyCompactItemize}

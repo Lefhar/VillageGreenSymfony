@@ -1,0 +1,109 @@
+\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md16}{}\doxysubsection{4.\+6.\+2}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Fixed {\ttfamily set\+Body\+Size\+Limit(0)} with HTTP/2 protocol (\#297)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md17}{}\doxysubsection{4.\+6.\+1}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md17}
+
+\begin{DoxyItemize}
+\item Fixed {\ttfamily te} request header fields being sent via HTTP/2 instead of being stripped (unless the value is {\ttfamily trailers})
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md18}{}\doxysection{4.\+6.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md18}
+
+\begin{DoxyItemize}
+\item Add support for {\ttfamily amphp/file} v2 (\#295)
+\item Fix some parameter names not aligning with parent classes / interfaces.
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md19}{}\doxysubsection{4.\+5.\+5}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md19}
+
+\begin{DoxyItemize}
+\item Fixed ALPN setting if unsupported (\#283)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md20}{}\doxysubsection{4.\+5.\+4}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md20}
+
+\begin{DoxyItemize}
+\item Avoid increasing HTTP/2 window size if too many bytes are buffered locally, avoiding exploding buffers if the consumer is slow.
+\item Fix inactivity timeout on HTTP/2 with slow consumers. Slowly reading the response shouldn\textquotesingle{}t result in inactivity timeouts if the server is responsive.
+\item Check for HTTP/1 connection closing while idle (\#279)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md21}{}\doxysubsection{4.\+5.\+3}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md21}
+
+\begin{DoxyItemize}
+\item Account for server window changes when discarding data frames If streams are cancelled, this might result in hanging connections, because the client thinks the server window is still large enough and doesn\textquotesingle{}t increase it.
+\item Fixed potential state synchronization errors with async event listeners
+\item Write stream window increments asynchronously, avoiding increments for already closed streams
+\item Improved exception messages
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md22}{}\doxysubsection{4.\+5.\+2}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md22}
+
+\begin{DoxyItemize}
+\item Fixed {\ttfamily Connection\+Limiting\+Pool} closing non-\/idle connections (\#278)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md23}{}\doxysubsection{4.\+5.\+1}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md23}
+
+\begin{DoxyItemize}
+\item Retry idempotent requests on {\ttfamily Http2\+Connection\+Exception}
+\item Fix graceful HTTP/2 connection shutdown
+\item Improve behavior if HTTP/2 connections become unresponsive
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md24}{}\doxysubsection{4.\+5.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md24}
+
+\begin{DoxyItemize}
+\item Added support for resolving protocol relative URLs (\#275)
+\item Added {\ttfamily Form\+Body\+::add\+File\+From\+String()}
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md25}{}\doxysubsection{4.\+4.\+1}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md25}
+
+\begin{DoxyItemize}
+\item Reject pushes with invalid stream ID
+\item Fix potential double stream release, which might result in int → float overflows and thus type errors
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md26}{}\doxysubsection{4.\+4.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md26}
+This version fixes a security weakness that might leak sensitive request headers from the initial request to the redirected host on cross-\/domain redirects, which were not removed correctly. {\ttfamily Message\+::set\+Headers} does {\itshape not} replace the entire set of headers, but only operates on the headers matching the given array keys, see fa79253.
+
+
+\begin{DoxyItemize}
+\item Support direct HTTP/2 connections without TLS (\#271)
+\item Security\+: Remove headers on cross-\/domain redirects
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md27}{}\doxysubsection{4.\+3.\+1}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md27}
+
+\begin{DoxyItemize}
+\item Relax {\ttfamily \char`\"{}conflict\char`\"{}} rule with {\ttfamily amphp/file} to allow {\ttfamily dev-\/master} installations with Composer v1.\+x (\#267, composer/composer\#8856)
+\item Error if request URI provides a relative path instead of sending an invalid request (\#269)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md28}{}\doxysubsection{4.\+3.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md28}
+
+\begin{DoxyItemize}
+\item {\bfseries{Added inactivity timeout}} (\#263) This provides a separate timeout while waiting for the response or streaming the body. If no data is received for the response within the given number of milliseconds, the request fails similarly to the transfer timeout.
+\item {\bfseries{Close idle connections if there are too many}} Requesting URLs from many hosts without reusing connections will otherwise result in resource exhaustion due to too many open files.
+\item Improved types for static analysis
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md29}{}\doxysubsection{4.\+2.\+2}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md29}
+
+\begin{DoxyItemize}
+\item Fixed transfer timeout enforcement for HTTP/2 (\#262)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md30}{}\doxysubsection{4.\+2.\+1}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md30}
+
+\begin{DoxyItemize}
+\item Fixed HTTP/2 on 32 bit platforms
+\item Fixed potentially stalled requests in Connection\+Limiting\+Pool (\#256)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md31}{}\doxysubsection{4.\+2.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md31}
+
+\begin{DoxyItemize}
+\item Add improved Connection\+Limiting\+Pool The new Connection\+Limiting\+Pool limits connections instead of streams. In addition, it has improved connection handling, racing between new connections and existing connections becoming available once the limit has been reached. The older Limited\+Connection\+Pool has been renamed to Stream\+Limiting\+Pool with a class alias for backward compatibility.
+\item Don\textquotesingle{}t set ALPN if only HTTP/1.\+1 is enabled, which allows connections to certain misbehaving servers (\#255)
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md32}{}\doxysubsection{4.\+1.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md32}
+
+\begin{DoxyItemize}
+\item Fix possible double resolution of promises (\#244)
+\item Fix assertion error on invalid HTTP/2 frame (\#236)
+\item Fix HTTP/2 connection reuse if too many concurrent streams for one connection are in use (\#246)
+\item Allow skipping default {\ttfamily accept}, {\ttfamily accept-\/encoding} and {\ttfamily user-\/agent} headers (\#238)
+\item Keep original header case for HTTP/1 requests (\#250)
+\item Allow access to informational responses (1XX) (\#239)
+\item Await {\ttfamily start\+Receive\+Response} event listeners on HTTP/2 before resolving the response promise (\#254)
+\item Delay {\ttfamily start\+Receive\+Response} event until the final response is started to be received, instead of calling it for the first byte or multiple times for HTTP/2 (\#254)
+\item Use common HTTP/2 parser from {\ttfamily amphp/http}
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md33}{}\doxysection{4.\+0.\+0}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md33}
+Initial release of {\ttfamily amphp/http-\/client}, the successor of {\ttfamily amphp/artax}. This is a major rewrite to support interceptors and HTTP/2.
+
+{\bfseries{Major Changes}}
+
+
+\begin{DoxyItemize}
+\item Support for HTTP/2 (including push)
+\item Support for interceptors to customize behavior
+\item Switch to a mutable {\ttfamily Request} / {\ttfamily Response} API, because streams are never immutable
+\item Compatibility with {\ttfamily amphp/socket@$^\wedge$1}
+\item Compatibility with {\ttfamily amphp/file@$^\wedge$1}
+\item Compatibility with {\ttfamily league/uri@$^\wedge$6}
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md34}{}\doxysection{3.\+x -\/ 1.\+x}\label{md_vendor_amphp_http_client__c_h_a_n_g_e_l_o_g_autotoc_md34}
+Please refer to {\ttfamily CHANGELOD.\+md} in \href{https://github.com/amphp/artax}{\texttt{ {\ttfamily amphp/artax}}}. 

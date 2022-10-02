@@ -1,0 +1,82 @@
+\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1326}{}\doxysection{6.\+2}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1326}
+
+\begin{DoxyItemize}
+\item Add support for Symfony 6
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1327}{}\doxysection{6.\+1}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1327}
+
+\begin{DoxyItemize}
+\item Add support for PHP 8 attributes
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1328}{}\doxysection{6.\+0}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1328}
+
+\begin{DoxyItemize}
+\item Remove PSR-\/7 support
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1329}{}\doxysection{5.\+6}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1329}
+
+\begin{DoxyItemize}
+\item Bump min dependency versions
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1330}{}\doxysection{5.\+2}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1330}
+
+\begin{DoxyItemize}
+\item Deprecated routing annotations as this is included in symfony/framework-\/bundle. Disable the feature with
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sensio\_framework\_extra:}
+\DoxyCodeLine{    router:}
+\DoxyCodeLine{        annotations: false}
+
+\end{DoxyCode}
+
+
+Also replace the annotations {\ttfamily Sensio\textbackslash{}Bundle\textbackslash{}Framework\+Extra\+Bundle\textbackslash{}Configuration\textbackslash{}Route} and {\ttfamily Sensio\textbackslash{}Bundle\textbackslash{}Framework\+Extra\+Bundle\textbackslash{}Configuration\textbackslash{}Method} with {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Routing\textbackslash{}Annotation\textbackslash{}Route}
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1331}{}\doxysection{5.\+1}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1331}
+
+\begin{DoxyItemize}
+\item Added autoconfigure for {\ttfamily Param\+Converter\+Interface} (\#516).
+\item Renamed service ids back to traditional service ids instead of class names (\#530).
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1332}{}\doxysection{5.\+0}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1332}
+
+\begin{DoxyItemize}
+\item Changed the {\ttfamily @Security} annotation to use arguments from argument resolvers as expression variables.
+\item The {\ttfamily @Is\+Granted} annotation now also supports using arguments from the argument resolvers as the subject.
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1333}{}\doxysection{4.\+0}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1333}
+
+\begin{DoxyItemize}
+\item added @\+Is\+Granted() annotation
+\item allowed to disable some converters
+\item allowed to customize the @security message and status code
+\item \mbox{[}BC BREAK\mbox{]} changed template name generation from camel\+Case to under\+\_\+score for both files and directories
+\item removed support for bundle inheritance
+\item a Runtime\+Exception is now thrown when a reserved variable is used in a security expression
+\item added cache-\/control max-\/stale support
+\item renamed set\+ETag to set\+Etag for consistency with Symfony core (use Etag in @\+Cache now instead of ETag)
+\item added must-\/revalidate support for @\+Cache annotation
+\item Response cache headers set in controllers now take precedence over the ones defined with the @\+Cache annotation
+\item removed HHVM support
+\item moved most services as private
+\item renamed services to use their FQCN
+\item allowed using multiple @\+Security annotations (class and method)
+\item removed support for the Templating component (only plain Twig is supported)
+\item removed unneeded phpdocs, converted protected to private properties
+\item bumped Symfony minimum version to 3.\+0
+\item bumped PHP minimum version to 5.\+5.\+9
+\item removed class parameters in container definitions
+\item \mbox{[}BC break\mbox{]} Date\+Time\+Param\+Converter strictly validates the input date when using with \textquotesingle{}format\textquotesingle{} option
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1334}{}\doxysection{3.\+0}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1334}
+
+\begin{DoxyItemize}
+\item fixed the Doctrine param converter that sent 500 when an entity was not found under some circumstances
+\item Param\+Converter\+Interface now uses Param\+Converter as a type hint instead of Configuration\+Interface
+\item added support for @\+Security
+\item added support for HTTP validation cache in @\+Cache (ETag and Last\+Modified)
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1335}{}\doxysection{2.\+2}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1335}
+
+\begin{DoxyItemize}
+\item added the possibility to configure the repository method to use for the Doctrine converter via the repository\+\_\+method option.
+\item \mbox{[}BC break\mbox{]} When defining multiple @\+Cache, @\+Method or @\+Template annotations on a controller class or method, the latter now overrules the former
+\end{DoxyItemize}\hypertarget{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1336}{}\doxysection{2.\+1}\label{md_vendor_sensio_framework_extra_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1336}
+
+\begin{DoxyItemize}
+\item added the possibility to configure the id name for the Doctrine converter via the id option
+\item \mbox{[}BC break\mbox{]} The Param\+Converter\+Interface\+::apply() method now must return a Boolean value indicating if a conversion was done. 
+\end{DoxyItemize}

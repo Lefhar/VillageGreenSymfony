@@ -1,0 +1,117 @@
+\hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number}{}\doxysection{LNumber Class Reference}
+\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number}\index{LNumber@{LNumber}}
+Inheritance diagram for LNumber\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_php_parser_1_1_node_1_1_scalar_1_1_l_number}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_ac28d2e3a39217861c4c1eab68eb11a21}{\+\_\+\+\_\+construct}} (int \$value, array \$attributes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a7e06a91cc526dc52826d18313e64798a}{get\+Sub\+Node\+Names}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_af65cd23d0a42e0441b8b121b82185708}{from\+String}} (string \$str, array \$attributes=\mbox{[}$\,$\mbox{]}, bool \$allow\+Invalid\+Octal=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a9e4e542bd44260e291f9408931c3dde4}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a9e4e542bd44260e291f9408931c3dde4}} 
+const {\bfseries KIND\+\_\+\+BIN} = 2
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_ad4d7137f55478d7491f06a4803490701}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_ad4d7137f55478d7491f06a4803490701}} 
+const {\bfseries KIND\+\_\+\+OCT} = 8
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_acaeab7755263cd9970ca769ca5d2d3bb}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_acaeab7755263cd9970ca769ca5d2d3bb}} 
+const {\bfseries KIND\+\_\+\+DEC} = 10
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a23afebceffec0a108764d5b976818f56}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a23afebceffec0a108764d5b976818f56}} 
+const {\bfseries KIND\+\_\+\+HEX} = 16
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a0f298096f322952a72a50f98a74c7b60}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a0f298096f322952a72a50f98a74c7b60}} 
+{\bfseries \$value}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_ac28d2e3a39217861c4c1eab68eb11a21}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_ac28d2e3a39217861c4c1eab68eb11a21}} 
+\index{LNumber@{LNumber}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LNumber@{LNumber}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$value,  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs an integer number scalar node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$value} & Value of the number \\
+\hline
+array & {\em \$attributes} & Additional attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_af65cd23d0a42e0441b8b121b82185708}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_af65cd23d0a42e0441b8b121b82185708}} 
+\index{LNumber@{LNumber}!fromString@{fromString}}
+\index{fromString@{fromString}!LNumber@{LNumber}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}}
+{\footnotesize\ttfamily static from\+String (\begin{DoxyParamCaption}\item[{string}]{\$str,  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}},  }\item[{bool}]{\$allow\+Invalid\+Octal = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Constructs an \mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number}{LNumber}} node from a string number literal.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & String number literal (decimal, octal, hex or binary) \\
+\hline
+array & {\em \$attributes} & Additional attributes \\
+\hline
+bool & {\em \$allow\+Invalid\+Octal} & Whether to allow invalid octal numbers (PHP 5)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number}{LNumber}} The constructed \mbox{\hyperlink{class_php_parser_1_1_node_1_1_scalar_1_1_l_number}{LNumber}}, including kind attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a7e06a91cc526dc52826d18313e64798a}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a7e06a91cc526dc52826d18313e64798a}} 
+\index{LNumber@{LNumber}!getSubNodeNames@{getSubNodeNames}}
+\index{getSubNodeNames@{getSubNodeNames}!LNumber@{LNumber}}
+\doxysubsubsection{\texorpdfstring{getSubNodeNames()}{getSubNodeNames()}}
+{\footnotesize\ttfamily get\+Sub\+Node\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of the sub nodes.
+
+\begin{DoxyReturn}{Returns}
+array Names of sub nodes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a7e06a91cc526dc52826d18313e64798a}{Node}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a830b5c75df72b32396701bc563fbe3c7}\label{class_php_parser_1_1_node_1_1_scalar_1_1_l_number_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{LNumber@{LNumber}!getType@{getType}}
+\index{getType@{getType}!LNumber@{LNumber}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the type of the node.
+
+\begin{DoxyReturn}{Returns}
+string Type of the node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a830b5c75df72b32396701bc563fbe3c7}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Scalar/LNumber.\+php\end{DoxyCompactItemize}

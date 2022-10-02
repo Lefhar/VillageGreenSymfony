@@ -1,0 +1,178 @@
+\hypertarget{class_php_parser_1_1_lexer}{}\doxysection{Lexer Class Reference}
+\label{class_php_parser_1_1_lexer}\index{Lexer@{Lexer}}
+Inheritance diagram for Lexer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_php_parser_1_1_lexer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_a3f8a60e8e1644d4f26da4ca9330794dd}{\+\_\+\+\_\+construct}} (array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_aa7f1b933ad5b72b8a6aa3939c08ff67e}{start\+Lexing}} (string \$code, \mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} \$error\+Handler=null)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_a1761f26dc6c72475616f4688c00029fc}{get\+Next\+Token}} (\&\$value=null, \&\$start\+Attributes=null, \&\$end\+Attributes=null)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_acf2f05f60b57bd67020d2259a2cf9982}{get\+Tokens}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_ac83469b13bec28fe92b00b833344ce57}{handle\+Halt\+Compiler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a1244d1222ea9d02f60bc7c6a7b48578b}\label{class_php_parser_1_1_lexer_a1244d1222ea9d02f60bc7c6a7b48578b}} 
+{\bfseries postprocess\+Tokens} (\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} \$error\+Handler)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_aac88a2f15ec4d7418846f116b62db8b1}{create\+Token\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a7949acdaecc70b9f035c12a7069db132}\label{class_php_parser_1_1_lexer_a7949acdaecc70b9f035c12a7069db132}} 
+{\bfseries \$code}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a72ead29e4317fbc4335fd3ba764e8b59}\label{class_php_parser_1_1_lexer_a72ead29e4317fbc4335fd3ba764e8b59}} 
+{\bfseries \$tokens}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a5de51f0c80b3bb3b39a57b23f6b9ea9f}\label{class_php_parser_1_1_lexer_a5de51f0c80b3bb3b39a57b23f6b9ea9f}} 
+{\bfseries \$pos}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a52f469b0182d9abac2d0f20548680c9c}\label{class_php_parser_1_1_lexer_a52f469b0182d9abac2d0f20548680c9c}} 
+{\bfseries \$line}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a6cfadcd69d77fb8bded90b5de852710f}\label{class_php_parser_1_1_lexer_a6cfadcd69d77fb8bded90b5de852710f}} 
+{\bfseries \$file\+Pos}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a73aba9c7972142ccd4045576e7715ec7}\label{class_php_parser_1_1_lexer_a73aba9c7972142ccd4045576e7715ec7}} 
+{\bfseries \$prev\+Close\+Tag\+Has\+Newline}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_ac268457fe29add64a1b2ea609c8b7393}\label{class_php_parser_1_1_lexer_ac268457fe29add64a1b2ea609c8b7393}} 
+{\bfseries \$token\+Map}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_ad43f53661b5171fe263fe5d22c9b3b90}\label{class_php_parser_1_1_lexer_ad43f53661b5171fe263fe5d22c9b3b90}} 
+{\bfseries \$drop\+Tokens}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a57e50d99d2e8a2fa22c81afb7e7c4cc8}\label{class_php_parser_1_1_lexer_a57e50d99d2e8a2fa22c81afb7e7c4cc8}} 
+{\bfseries \$identifier\+Tokens}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a3f8a60e8e1644d4f26da4ca9330794dd}\label{class_php_parser_1_1_lexer_a3f8a60e8e1644d4f26da4ca9330794dd}} 
+\index{Lexer@{Lexer}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{class_php_parser_1_1_lexer}{Lexer}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$options} & Options array. Currently only the \textquotesingle{}used\+Attributes\textquotesingle{} option is supported, which is an array of attributes to add to the AST nodes. Possible attributes are\+: \textquotesingle{}comments\textquotesingle{}, \textquotesingle{}start\+Line\textquotesingle{}, \textquotesingle{}end\+Line\textquotesingle{}, \textquotesingle{}start\+Token\+Pos\textquotesingle{}, \textquotesingle{}end\+Token\+Pos\textquotesingle{}, \textquotesingle{}start\+File\+Pos\textquotesingle{}, \textquotesingle{}end\+File\+Pos\textquotesingle{}. The option defaults to the first three. For more info see \mbox{\hyperlink{class_php_parser_1_1_lexer_a1761f26dc6c72475616f4688c00029fc}{get\+Next\+Token()}} docs. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_lexer_1_1_emulative_a3f8a60e8e1644d4f26da4ca9330794dd}{Emulative}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_aac88a2f15ec4d7418846f116b62db8b1}\label{class_php_parser_1_1_lexer_aac88a2f15ec4d7418846f116b62db8b1}} 
+\index{Lexer@{Lexer}!createTokenMap@{createTokenMap}}
+\index{createTokenMap@{createTokenMap}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{createTokenMap()}{createTokenMap()}}
+{\footnotesize\ttfamily create\+Token\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates the token map.
+
+The token map maps the PHP internal token identifiers to the identifiers used by the \mbox{\hyperlink{interface_php_parser_1_1_parser}{Parser}}. Additionally it maps T\+\_\+\+OPEN\+\_\+\+TAG\+\_\+\+WITH\+\_\+\+ECHO to T\+\_\+\+ECHO and T\+\_\+\+CLOSE\+\_\+\+TAG to \textquotesingle{};\textquotesingle{}.
+
+\begin{DoxyReturn}{Returns}
+array The token map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_a1761f26dc6c72475616f4688c00029fc}\label{class_php_parser_1_1_lexer_a1761f26dc6c72475616f4688c00029fc}} 
+\index{Lexer@{Lexer}!getNextToken@{getNextToken}}
+\index{getNextToken@{getNextToken}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{getNextToken()}{getNextToken()}}
+{\footnotesize\ttfamily get\+Next\+Token (\begin{DoxyParamCaption}\item[{\&}]{\$value = {\ttfamily null},  }\item[{\&}]{\$start\+Attributes = {\ttfamily null},  }\item[{\&}]{\$end\+Attributes = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Fetches the next token.
+
+The available attributes are determined by the \textquotesingle{}used\+Attributes\textquotesingle{} option, which can be specified in the constructor. The following attributes are supported\+:
+
+
+\begin{DoxyItemize}
+\item \textquotesingle{}comments\textquotesingle{} =\texorpdfstring{$>$}{>} Array of Php\+Parser\textbackslash{}\+Comment or Php\+Parser\textbackslash{}\+Comment\textbackslash{}\+Doc instances, representing all comments that occurred between the previous non-\/discarded token and the current one.
+\item \textquotesingle{}start\+Line\textquotesingle{} =\texorpdfstring{$>$}{>} Line in which the node starts.
+\item \textquotesingle{}end\+Line\textquotesingle{} =\texorpdfstring{$>$}{>} Line in which the node ends.
+\item \textquotesingle{}start\+Token\+Pos\textquotesingle{} =\texorpdfstring{$>$}{>} Offset into the token array of the first token in the node.
+\item \textquotesingle{}end\+Token\+Pos\textquotesingle{} =\texorpdfstring{$>$}{>} Offset into the token array of the last token in the node.
+\item \textquotesingle{}start\+File\+Pos\textquotesingle{} =\texorpdfstring{$>$}{>} Offset into the code string of the first character that is part of the node.
+\item \textquotesingle{}end\+File\+Pos\textquotesingle{} =\texorpdfstring{$>$}{>} Offset into the code string of the last character that is part of the node.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & Variable to store token content in \\
+\hline
+mixed & {\em \$start\+Attributes} & Variable to store start attributes in \\
+\hline
+mixed & {\em \$end\+Attributes} & Variable to store end attributes in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Token id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_acf2f05f60b57bd67020d2259a2cf9982}\label{class_php_parser_1_1_lexer_acf2f05f60b57bd67020d2259a2cf9982}} 
+\index{Lexer@{Lexer}!getTokens@{getTokens}}
+\index{getTokens@{getTokens}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{getTokens()}{getTokens()}}
+{\footnotesize\ttfamily get\+Tokens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the token array for current code.
+
+The token array is in the same format as provided by the token\+\_\+get\+\_\+all() function and does not discard tokens (i.\+e. whitespace and comments are included). The token position attributes are against this token array.
+
+\begin{DoxyReturn}{Returns}
+array Array of tokens in token\+\_\+get\+\_\+all() format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_ac83469b13bec28fe92b00b833344ce57}\label{class_php_parser_1_1_lexer_ac83469b13bec28fe92b00b833344ce57}} 
+\index{Lexer@{Lexer}!handleHaltCompiler@{handleHaltCompiler}}
+\index{handleHaltCompiler@{handleHaltCompiler}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{handleHaltCompiler()}{handleHaltCompiler()}}
+{\footnotesize\ttfamily handle\+Halt\+Compiler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handles \+\_\+\+\_\+halt\+\_\+compiler() by returning the text after it.
+
+\begin{DoxyReturn}{Returns}
+string Remaining text 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_aa7f1b933ad5b72b8a6aa3939c08ff67e}\label{class_php_parser_1_1_lexer_aa7f1b933ad5b72b8a6aa3939c08ff67e}} 
+\index{Lexer@{Lexer}!startLexing@{startLexing}}
+\index{startLexing@{startLexing}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{startLexing()}{startLexing()}}
+{\footnotesize\ttfamily start\+Lexing (\begin{DoxyParamCaption}\item[{string}]{\$code,  }\item[{\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}}}]{\$error\+Handler = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes the lexer for lexing the provided source code.
+
+This function does not throw if lexing errors occur. Instead, errors may be retrieved using the get\+Errors() method.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$code} & The source code to lex \\
+\hline
+\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} | null & {\em \$error\+Handler} & \mbox{\hyperlink{class_php_parser_1_1_error}{Error}} handler to use for lexing errors. Defaults to \mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}}\textbackslash{}\+Throwing \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_lexer_1_1_emulative_aa7f1b933ad5b72b8a6aa3939c08ff67e}{Emulative}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/Lexer.\+php\end{DoxyCompactItemize}

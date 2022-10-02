@@ -1,0 +1,97 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector}{}\doxysection{Drop\+Schema\+Sql\+Collector Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector}\index{DropSchemaSqlCollector@{DropSchemaSqlCollector}}
+Inheritance diagram for Drop\+Schema\+Sql\+Collector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_a79c2f841bdff1917c426a8f62d522f21}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_a79c2f841bdff1917c426a8f62d522f21}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ac5742f5275487d8398673f968dd309f5}{accept\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ae58b895c39722cee749b419c428c81a4}{accept\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$local\+Table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$fk\+Constraint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ad5446680d542ed76e79b84b7d3641d8f}{accept\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_a27ed3d8df4163ee17fc3e50f0f15f9c9}{clear\+Queries}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ab484bcf0b37380f3d0bf6169da3087d4}{get\+Queries}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gathers SQL statements that allow to completely drop the current schema. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ae58b895c39722cee749b419c428c81a4}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ae58b895c39722cee749b419c428c81a4}} 
+\index{DropSchemaSqlCollector@{DropSchemaSqlCollector}!acceptForeignKey@{acceptForeignKey}}
+\index{acceptForeignKey@{acceptForeignKey}!DropSchemaSqlCollector@{DropSchemaSqlCollector}}
+\doxysubsubsection{\texorpdfstring{acceptForeignKey()}{acceptForeignKey()}}
+{\footnotesize\ttfamily accept\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$local\+Table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$fk\+Constraint }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_ae58b895c39722cee749b419c428c81a4}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ad5446680d542ed76e79b84b7d3641d8f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ad5446680d542ed76e79b84b7d3641d8f}} 
+\index{DropSchemaSqlCollector@{DropSchemaSqlCollector}!acceptSequence@{acceptSequence}}
+\index{acceptSequence@{acceptSequence}!DropSchemaSqlCollector@{DropSchemaSqlCollector}}
+\doxysubsubsection{\texorpdfstring{acceptSequence()}{acceptSequence()}}
+{\footnotesize\ttfamily accept\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_ad5446680d542ed76e79b84b7d3641d8f}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ac5742f5275487d8398673f968dd309f5}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ac5742f5275487d8398673f968dd309f5}} 
+\index{DropSchemaSqlCollector@{DropSchemaSqlCollector}!acceptTable@{acceptTable}}
+\index{acceptTable@{acceptTable}!DropSchemaSqlCollector@{DropSchemaSqlCollector}}
+\doxysubsubsection{\texorpdfstring{acceptTable()}{acceptTable()}}
+{\footnotesize\ttfamily accept\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_ac5742f5275487d8398673f968dd309f5}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_a27ed3d8df4163ee17fc3e50f0f15f9c9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_a27ed3d8df4163ee17fc3e50f0f15f9c9}} 
+\index{DropSchemaSqlCollector@{DropSchemaSqlCollector}!clearQueries@{clearQueries}}
+\index{clearQueries@{clearQueries}!DropSchemaSqlCollector@{DropSchemaSqlCollector}}
+\doxysubsubsection{\texorpdfstring{clearQueries()}{clearQueries()}}
+{\footnotesize\ttfamily clear\+Queries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ab484bcf0b37380f3d0bf6169da3087d4}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_drop_schema_sql_collector_ab484bcf0b37380f3d0bf6169da3087d4}} 
+\index{DropSchemaSqlCollector@{DropSchemaSqlCollector}!getQueries@{getQueries}}
+\index{getQueries@{getQueries}!DropSchemaSqlCollector@{DropSchemaSqlCollector}}
+\doxysubsubsection{\texorpdfstring{getQueries()}{getQueries()}}
+{\footnotesize\ttfamily get\+Queries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/\+Visitor/Drop\+Schema\+Sql\+Collector.\+php\end{DoxyCompactItemize}

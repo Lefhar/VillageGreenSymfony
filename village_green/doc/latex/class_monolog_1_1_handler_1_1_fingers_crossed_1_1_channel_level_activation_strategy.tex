@@ -1,0 +1,61 @@
+\hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy}{}\doxysection{Channel\+Level\+Activation\+Strategy Class Reference}
+\label{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy}\index{ChannelLevelActivationStrategy@{ChannelLevelActivationStrategy}}
+Inheritance diagram for Channel\+Level\+Activation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy_aa08f4a7d15954591b38d6c6f8fbbeae4}{\+\_\+\+\_\+construct}} (\$default\+Action\+Level, array \$channel\+To\+Action\+Level=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}{is\+Handler\+Activated}} (array \$record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Channel and Error level based monolog activation strategy. Allows to trigger activation based on level per channel. e.\+g. trigger activation on level \textquotesingle{}ERROR\textquotesingle{} by default, except for records of the \textquotesingle{}sql\textquotesingle{} channel; those should trigger activation on level \textquotesingle{}WARN\textquotesingle{}.
+
+Example\+:
+
+{\ttfamily  \$activation\+Strategy = new \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy}{Channel\+Level\+Activation\+Strategy}}( \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}, array( \textquotesingle{}request\textquotesingle{} =\texorpdfstring{$>$}{>} \mbox{\hyperlink{class_monolog_1_1_logger_a037a7f6e892e6adb07c2aa099fbaf69d}{Logger\+::\+ALERT}}, \textquotesingle{}sensitive\textquotesingle{} =\texorpdfstring{$>$}{>} \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, ) ); \$handler = new \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler}{Fingers\+Crossed\+Handler}}(new \mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler}{Stream\+Handler}}(\textquotesingle{}php\+://stderr\textquotesingle{}), \$activation\+Strategy); }
+
+\begin{DoxyAuthor}{Author}
+Mike Meessen \href{mailto:netmikey@gmail.com}{\texttt{ netmikey@gmail.\+com}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy_aa08f4a7d15954591b38d6c6f8fbbeae4}\label{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy_aa08f4a7d15954591b38d6c6f8fbbeae4}} 
+\index{ChannelLevelActivationStrategy@{ChannelLevelActivationStrategy}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ChannelLevelActivationStrategy@{ChannelLevelActivationStrategy}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$default\+Action\+Level,  }\item[{array}]{\$channel\+To\+Action\+Level = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$default\+Action\+Level} & The default action level to be used if the record\textquotesingle{}s category doesn\textquotesingle{}t match any \\
+\hline
+ & {\em array$<$string,int$>$} & \$channel\+To\+Action\+Level An array that maps channel names to action levels.\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param array$<$string, Level$>$ \$channel\+To\+Action\+Level @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$default\+Action\+Level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}\label{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_channel_level_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}} 
+\index{ChannelLevelActivationStrategy@{ChannelLevelActivationStrategy}!isHandlerActivated@{isHandlerActivated}}
+\index{isHandlerActivated@{isHandlerActivated}!ChannelLevelActivationStrategy@{ChannelLevelActivationStrategy}}
+\doxysubsubsection{\texorpdfstring{isHandlerActivated()}{isHandlerActivated()}}
+{\footnotesize\ttfamily is\+Handler\+Activated (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+@phpstan-\/param Record \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_fingers_crossed_1_1_activation_strategy_interface_a0e278ca4f1f1f74ef438d80fba7a0c7d}{Activation\+Strategy\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/\+Fingers\+Crossed/Channel\+Level\+Activation\+Strategy.\+php\end{DoxyCompactItemize}

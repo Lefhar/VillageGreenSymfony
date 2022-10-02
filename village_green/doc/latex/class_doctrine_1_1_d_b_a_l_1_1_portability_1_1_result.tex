@@ -1,0 +1,154 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result}{}\doxysection{Result Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result}\index{Result@{Result}}
+Inheritance diagram for Result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a5a27dd2caab86ab2b36e5775921ad8d8}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a5a27dd2caab86ab2b36e5775921ad8d8}} 
+{\bfseries \+\_\+\+\_\+construct} (Result\+Interface \$result, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter}{Converter}} \$converter)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a47c5efffd190648c764c7eb9ab92260e}{fetch\+Numeric}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a6777b6b0687cd578cd4e7ca9a7469b9c}{fetch\+Associative}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a3cffcf6fc76e32aa2524c8526c880227}{fetch\+One}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_aeabdfb7753a3e66fa18f263acfa050c2}{fetch\+All\+Numeric}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a12f1336782a2b600864d31f5c50c30aa}{fetch\+All\+Associative}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_aa4acf15da214da2075aeab7afc40e946}{fetch\+First\+Column}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a12f1336782a2b600864d31f5c50c30aa}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a12f1336782a2b600864d31f5c50c30aa}} 
+\index{Result@{Result}!fetchAllAssociative@{fetchAllAssociative}}
+\index{fetchAllAssociative@{fetchAllAssociative}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{fetchAllAssociative()}{fetchAllAssociative()}}
+{\footnotesize\ttfamily fetch\+All\+Associative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns an array containing all of the result rows represented as associative arrays.
+
+\begin{DoxyReturn}{Returns}
+list$<$array$<$string,mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_result_middleware_a12f1336782a2b600864d31f5c50c30aa}{Abstract\+Result\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_aeabdfb7753a3e66fa18f263acfa050c2}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_aeabdfb7753a3e66fa18f263acfa050c2}} 
+\index{Result@{Result}!fetchAllNumeric@{fetchAllNumeric}}
+\index{fetchAllNumeric@{fetchAllNumeric}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{fetchAllNumeric()}{fetchAllNumeric()}}
+{\footnotesize\ttfamily fetch\+All\+Numeric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns an array containing all of the result rows represented as numeric arrays.
+
+\begin{DoxyReturn}{Returns}
+list$<$list$<$mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_result_middleware_aeabdfb7753a3e66fa18f263acfa050c2}{Abstract\+Result\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a6777b6b0687cd578cd4e7ca9a7469b9c}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a6777b6b0687cd578cd4e7ca9a7469b9c}} 
+\index{Result@{Result}!fetchAssociative@{fetchAssociative}}
+\index{fetchAssociative@{fetchAssociative}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{fetchAssociative()}{fetchAssociative()}}
+{\footnotesize\ttfamily fetch\+Associative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the next row of the result as an associative array or FALSE if there are no more rows.
+
+\begin{DoxyReturn}{Returns}
+array$<$string,mixed$>$$\vert$false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_result_middleware_a6777b6b0687cd578cd4e7ca9a7469b9c}{Abstract\+Result\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_aa4acf15da214da2075aeab7afc40e946}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_aa4acf15da214da2075aeab7afc40e946}} 
+\index{Result@{Result}!fetchFirstColumn@{fetchFirstColumn}}
+\index{fetchFirstColumn@{fetchFirstColumn}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{fetchFirstColumn()}{fetchFirstColumn()}}
+{\footnotesize\ttfamily fetch\+First\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns an array containing the values of the first column of the result.
+
+\begin{DoxyReturn}{Returns}
+list$<$mixed$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_result_middleware_aa4acf15da214da2075aeab7afc40e946}{Abstract\+Result\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a47c5efffd190648c764c7eb9ab92260e}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a47c5efffd190648c764c7eb9ab92260e}} 
+\index{Result@{Result}!fetchNumeric@{fetchNumeric}}
+\index{fetchNumeric@{fetchNumeric}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{fetchNumeric()}{fetchNumeric()}}
+{\footnotesize\ttfamily fetch\+Numeric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the next row of the result as a numeric array or FALSE if there are no more rows.
+
+\begin{DoxyReturn}{Returns}
+list$<$mixed$>$$\vert$false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_result_middleware_a47c5efffd190648c764c7eb9ab92260e}{Abstract\+Result\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a3cffcf6fc76e32aa2524c8526c880227}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_result_a3cffcf6fc76e32aa2524c8526c880227}} 
+\index{Result@{Result}!fetchOne@{fetchOne}}
+\index{fetchOne@{fetchOne}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{fetchOne()}{fetchOne()}}
+{\footnotesize\ttfamily fetch\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the first value of the next row of the result or FALSE if there are no more rows.
+
+\begin{DoxyReturn}{Returns}
+mixed$\vert$false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_result_middleware_a3cffcf6fc76e32aa2524c8526c880227}{Abstract\+Result\+Middleware}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Portability/Result.\+php\end{DoxyCompactItemize}

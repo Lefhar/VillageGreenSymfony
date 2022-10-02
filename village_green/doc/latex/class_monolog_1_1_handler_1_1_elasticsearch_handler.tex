@@ -1,0 +1,182 @@
+\hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler}{}\doxysection{Elasticsearch\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_elasticsearch_handler}\index{ElasticsearchHandler@{ElasticsearchHandler}}
+Inheritance diagram for Elasticsearch\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_elasticsearch_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a74db697212aa9a377b79f0aaee997487}{\+\_\+\+\_\+construct}} (Client \$client, array \$options=\mbox{[}$\,$\mbox{]}, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a944865926b0302ad2d802bea1eec3a57}{handle\+Batch}} (array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_acbda37ec925245490e936b72bd26319e}{bulk\+Send}} (array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a0071a1ca911f371e5e34cd14a8160172}{create\+Exception\+From\+Responses}} (array \$responses)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_a52401085ef91e8b14cb1d521bf597fa9}{create\+Exception\+From\+Error}} (array \$error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_ad1405dc1ba2e288764378e79bff7a87d}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_ad1405dc1ba2e288764378e79bff7a87d}} 
+{\bfseries \$client}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a011800c63ece4cbbfa77136a20607023}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a011800c63ece4cbbfa77136a20607023}} 
+{\bfseries \$options} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Elasticsearch handler
+
+\mbox{\hyperlink{}{Simple usage example\+:  \$client = \+::create() -\/\texorpdfstring{$>$}{>}set\+Hosts(\$hosts) -\/\texorpdfstring{$>$}{>}build();  \$options = array( \textquotesingle{}index\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}elastic\+\_\+index\+\_\+name\textquotesingle{}, \textquotesingle{}type\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}elastic\+\_\+doc\+\_\+type\textquotesingle{}, ); \$handler = new Elasticsearch\+Handler(\$client, \$options); \$log = new Logger(\textquotesingle{}application\textquotesingle{}); \$log-\/\texorpdfstring{$>$}{>}push\+Handler(\$handler);  Avtandil Kikabidze \href{mailto:akalongman@gmail.com}{\texttt{ akalongman@gmail.\+com}} }}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a74db697212aa9a377b79f0aaee997487}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a74db697212aa9a377b79f0aaee997487}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Client}]{\$client,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Client & {\em \$client} & Elasticsearch Client object \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} configuration \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_acbda37ec925245490e936b72bd26319e}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_acbda37ec925245490e936b72bd26319e}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!bulkSend@{bulkSend}}
+\index{bulkSend@{bulkSend}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{bulkSend()}{bulkSend()}}
+{\footnotesize\ttfamily bulk\+Send (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Use Elasticsearch bulk API to send list of documents
+
+
+\begin{DoxyParams}[1]{Parameters}
+array\mbox{[}$\,$\mbox{]} & {\em \$records} & \mbox{\hyperlink{namespace_records}{Records}} + \+\_\+index/\+\_\+type keys \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a52401085ef91e8b14cb1d521bf597fa9}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a52401085ef91e8b14cb1d521bf597fa9}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!createExceptionFromError@{createExceptionFromError}}
+\index{createExceptionFromError@{createExceptionFromError}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{createExceptionFromError()}{createExceptionFromError()}}
+{\footnotesize\ttfamily create\+Exception\+From\+Error (\begin{DoxyParamCaption}\item[{array}]{\$error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates elasticsearch exception from error array
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$error} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a0071a1ca911f371e5e34cd14a8160172}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a0071a1ca911f371e5e34cd14a8160172}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!createExceptionFromResponses@{createExceptionFromResponses}}
+\index{createExceptionFromResponses@{createExceptionFromResponses}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{createExceptionFromResponses()}{createExceptionFromResponses()}}
+{\footnotesize\ttfamily create\+Exception\+From\+Responses (\begin{DoxyParamCaption}\item[{array}]{\$responses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates elasticsearch exception from responses array
+
+Only the first error is converted into an exception.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$responses} & returned by \$this-\/\texorpdfstring{$>$}{>}client-\/\texorpdfstring{$>$}{>}bulk() \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a1a49b8dded6e91a52e2fd07195d334da}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter options
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a944865926b0302ad2d802bea1eec3a57}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a944865926b0302ad2d802bea1eec3a57}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!handleBatch@{handleBatch}}
+\index{handleBatch@{handleBatch}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{handleBatch()}{handleBatch()}}
+{\footnotesize\ttfamily handle\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Handles a set of records at once.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & The records to handle (an array of record arrays)\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_a944865926b0302ad2d802bea1eec3a57}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elasticsearch_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_elasticsearch_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{ElasticsearchHandler@{ElasticsearchHandler}!write@{write}}
+\index{write@{write}!ElasticsearchHandler@{ElasticsearchHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Elasticsearch\+Handler.\+php\end{DoxyCompactItemize}

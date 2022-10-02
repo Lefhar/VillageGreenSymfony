@@ -1,0 +1,78 @@
+\hypertarget{class_php_parser_1_1_lexer_1_1_emulative}{}\doxysection{Emulative Class Reference}
+\label{class_php_parser_1_1_lexer_1_1_emulative}\index{Emulative@{Emulative}}
+Inheritance diagram for Emulative\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_php_parser_1_1_lexer_1_1_emulative}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_1_1_emulative_a3f8a60e8e1644d4f26da4ca9330794dd}{\+\_\+\+\_\+construct}} (array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_lexer_1_1_emulative_aa7f1b933ad5b72b8a6aa3939c08ff67e}{start\+Lexing}} (string \$code, \mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} \$error\+Handler=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_1_1_emulative_a1291e63cdabb384524c18db646ed8c58}\label{class_php_parser_1_1_lexer_1_1_emulative_a1291e63cdabb384524c18db646ed8c58}} 
+const {\bfseries PHP\+\_\+7\+\_\+3} = \textquotesingle{}7.\+3dev\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_1_1_emulative_aca27390db13ed6631b3d65a5de019a07}\label{class_php_parser_1_1_lexer_1_1_emulative_aca27390db13ed6631b3d65a5de019a07}} 
+const {\bfseries PHP\+\_\+7\+\_\+4} = \textquotesingle{}7.\+4dev\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_1_1_emulative_a6da12196ce74a834644c0c1cbcebbd51}\label{class_php_parser_1_1_lexer_1_1_emulative_a6da12196ce74a834644c0c1cbcebbd51}} 
+const {\bfseries PHP\+\_\+8\+\_\+0} = \textquotesingle{}8.\+0dev\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_1_1_emulative_a7039c7217146940e5b39dbdc15290ed1}\label{class_php_parser_1_1_lexer_1_1_emulative_a7039c7217146940e5b39dbdc15290ed1}} 
+const {\bfseries PHP\+\_\+8\+\_\+1} = \textquotesingle{}8.\+1dev\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_1_1_emulative_a3f8a60e8e1644d4f26da4ca9330794dd}\label{class_php_parser_1_1_lexer_1_1_emulative_a3f8a60e8e1644d4f26da4ca9330794dd}} 
+\index{Emulative@{Emulative}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Emulative@{Emulative}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \mbox{\hyperlink{class_php_parser_1_1_lexer}{Lexer}} options. In addition to the usual options, accepts a \textquotesingle{}php\+Version\textquotesingle{} string that specifies the version to emulate. Defaults to newest supported. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_php_parser_1_1_lexer_a3f8a60e8e1644d4f26da4ca9330794dd}{Lexer}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_lexer_1_1_emulative_aa7f1b933ad5b72b8a6aa3939c08ff67e}\label{class_php_parser_1_1_lexer_1_1_emulative_aa7f1b933ad5b72b8a6aa3939c08ff67e}} 
+\index{Emulative@{Emulative}!startLexing@{startLexing}}
+\index{startLexing@{startLexing}!Emulative@{Emulative}}
+\doxysubsubsection{\texorpdfstring{startLexing()}{startLexing()}}
+{\footnotesize\ttfamily start\+Lexing (\begin{DoxyParamCaption}\item[{string}]{\$code,  }\item[{\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}}}]{\$error\+Handler = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes the lexer for lexing the provided source code.
+
+This function does not throw if lexing errors occur. Instead, errors may be retrieved using the get\+Errors() method.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$code} & The source code to lex \\
+\hline
+\mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}} | null & {\em \$error\+Handler} & \mbox{\hyperlink{class_php_parser_1_1_error}{Error}} handler to use for lexing errors. Defaults to \mbox{\hyperlink{interface_php_parser_1_1_error_handler}{Error\+Handler}}\textbackslash{}\+Throwing \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_php_parser_1_1_lexer_aa7f1b933ad5b72b8a6aa3939c08ff67e}{Lexer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Lexer/Emulative.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,1458 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection}{}\doxysection{Connection Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_connection}\index{Connection@{Connection}}
+Inheritance diagram for Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.876047cm]{class_doctrine_1_1_d_b_a_l_1_1_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a6e3c5b805d1bc87fab80314d58793ce5}{\+\_\+\+\_\+construct}} (array \$params, \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}} \$driver, ?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Configuration}} \$config=null, ?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Event\+Manager}} \$event\+Manager=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ae32cd7c32721b02d676bb63b4b1366db}{get\+Params}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a728138a9219e8751278542c3a8c5e3a9}{get\+Database}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac88d3a4c3a1bf357eda28403a4704995}{get\+Driver}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ad6a7980e832ca964872fe29113ab1642}{get\+Configuration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a9be27bf6385362344ed5e6c026d9cd40}{get\+Event\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a602d4b79ea2e33e68be7054e042aab99}{get\+Database\+Platform}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ab989f4bc1226c11084f1e09bb2645ccd}{create\+Expression\+Builder}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ab09661fe78400540f64378a7fe8d6e07}{get\+Expression\+Builder}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a78572828d11dcdf2a498497d9001d557}{connect}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac450e1c7aa682b1df444e7a2698e5cd7}{is\+Auto\+Commit}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ad7a5f798950203472712727c6dd8db06}{set\+Auto\+Commit}} (\$auto\+Commit)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a77df637235765cf8e57d53d82c1141ed}{fetch\+Associative}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ab8b3ed1bf614064d5b21b906b52879ff}{fetch\+Numeric}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a223d913b0766f60b93b4fd990dec3366}{fetch\+One}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af160f7fbbf281d018ae3162521b8267d}{is\+Connected}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a370ba46e41143cf66506ab08d0978d81}{is\+Transaction\+Active}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a74dcf7beea31a5ab3a695c85bd38d6e4}{delete}} (\$table, array \$criteria, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a7f13e379a28783757331dd42fe16b1d2}{set\+Transaction\+Isolation}} (\$level)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ad1ce4e030d6fe3d81eb1c3ecb650e2e5}{get\+Transaction\+Isolation}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ae959f6e86db099a4d5612b1f5373bc31}{update}} (\$table, array \$data, array \$criteria, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f8fe3b29d7c9c46164feebe2b6be61a}{insert}} (\$table, array \$data, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a31a6cc184c9484efcde725b083ea29f3}{quote\+Identifier}} (\$str)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{quote}} (\$value, \$type=\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa6eed21bb1350261fdaf0bb0c4a245e7}{fetch\+All\+Numeric}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a9579af876171301721890648316e0ec6}{fetch\+All\+Associative}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a2659d9411bdb17b39c9b3bbf7faacce2}{fetch\+All\+Key\+Value}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aee3f401995b8700fec555b113ed32f37}{fetch\+All\+Associative\+Indexed}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a820934ba5ce283b27303aebdac37b6c5}{fetch\+First\+Column}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_acc47a26b6b74f337aaa97793b0e02b84}{iterate\+Numeric}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a00bc2e8927ea379861c2c097606bab23}{iterate\+Associative}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_abf11554cc53f976392cebc8882141479}{iterate\+Key\+Value}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a2b6aad11a9ba825a6a3f99ac83e5a681}{iterate\+Associative\+Indexed}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ad4ef8184676577f356ac2ea7fb99068a}{iterate\+Column}} (string \$\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}}, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{prepare}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_afe207062ae319e18da8e1f8e54004886}{execute\+Query}} (string \$sql, array \$params=\mbox{[}$\,$\mbox{]}, \$types=\mbox{[}$\,$\mbox{]}, ?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}} \$qcp=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a17a77534be57f1e68f1381ee2a4d4150}{execute\+Cache\+Query}} (\$sql, \$params, \$types, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}} \$qcp)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a116b619379bad860f5730ba8e658e4a0}{execute\+Statement}} (\$sql, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a74aed9b813f90aaf883c20d7bd052408}{get\+Transaction\+Nesting\+Level}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{last\+Insert\+Id}} (\$name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a6d606264370162f177ee3f98b5cc7c9e}{transactional}} (Closure \$func)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a48321c5e01f959234909b928e3a17861}{set\+Nest\+Transactions\+With\+Savepoints}} (\$nest\+Transactions\+With\+Savepoints)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac241c1cbe8334ffa1c853d8f1b1510c2}{get\+Nest\+Transactions\+With\+Savepoints}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af3380f3b13931d581fa973a382946b32}{begin\+Transaction}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{commit}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{roll\+Back}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a57a252644e309a73b4dbee4a564779ce}{create\+Savepoint}} (\$savepoint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a640cada9593ba5f9d2be8e2f800da774}{release\+Savepoint}} (\$savepoint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_adcfb14588f49281d8b62bbbe7533d1ff}{rollback\+Savepoint}} (\$savepoint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a5367bfec727721b56e807f64eeec39b1}{get\+Wrapped\+Connection}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{get\+Native\+Connection}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a53e4673f2b100475afe60d55bba9b84a}{create\+Schema\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa45e1f8f071a7858a97180b78f62a632}{get\+Schema\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a57930b0587270871b90503aa374607c3}{set\+Rollback\+Only}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa133026dec949093027081dd4748889a}{is\+Rollback\+Only}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a68d3cbefbc261e83957d959e4a0a198c}{convert\+To\+Database\+Value}} (\$value, \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac5844a5d29720f42aa8100e4685a8e64}{convert\+To\+PHPValue}} (\$value, \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ad0251d2b59b54d92521c94cf7cf3a567}{create\+Query\+Builder}} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aef8cda3083e233c9dcd0a2ebded1a4ee}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aef8cda3083e233c9dcd0a2ebded1a4ee}} 
+{\bfseries convert\+Exception\+During\+Query} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Driver\textbackslash{}\+Exception}} \$e, string \$sql, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_afdd22d1035a4c2378fd91c724837a77e}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_afdd22d1035a4c2378fd91c724837a77e}} 
+{\bfseries convert\+Exception} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Driver\textbackslash{}\+Exception}} \$e)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aeb9c887056d170eacd7bcfc05584da8f}{execute\+Update}} (string \$sql, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{exec}} (string \$sql)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ae44a1c5ef4cd741588334abf9d4d1ca5}{PARAM\+\_\+\+INT\+\_\+\+ARRAY}} = \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a01eecdf29bca732e683a4a15b5b9bbcf}{Parameter\+Type\+::\+INTEGER}} + self\+::\+ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a6f5f2e0f91bc47904e1078f9ad9a4531}{PARAM\+\_\+\+STR\+\_\+\+ARRAY}} = \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}} + self\+::\+ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a537003ee16f8f18139c97f214312c768}{PARAM\+\_\+\+ASCII\+\_\+\+STR\+\_\+\+ARRAY}} = \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_ab22c63ae4d8f1466833f058b6177bb36}{Parameter\+Type\+::\+ASCII}} + self\+::\+ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a904f9dc50dd6b96b6fa531d8275e75cc}{ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET}} = 100
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_acd659e5077fe9d0a0fb0ab53b18fc186}{\+\_\+get\+Nested\+Transaction\+Save\+Point\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ad3b07e45d2fa59b3c0ae7464ef32a470}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ad3b07e45d2fa59b3c0ae7464ef32a470}} 
+{\bfseries \$\+\_\+conn}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a4d4ad4af1600438042f93a4492f8dbbe}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a4d4ad4af1600438042f93a4492f8dbbe}} 
+{\bfseries \$\+\_\+config}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a35291fea493be5165d87b41b91fbda25}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a35291fea493be5165d87b41b91fbda25}} 
+{\bfseries \$\+\_\+event\+Manager}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a97bc96457a457b7b1c18cfe0dcfbdde7}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a97bc96457a457b7b1c18cfe0dcfbdde7}} 
+{\bfseries \$\+\_\+expr}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a3ad4ce197ded994b3bb9d19f1f4b836a}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a3ad4ce197ded994b3bb9d19f1f4b836a}} 
+{\bfseries \$\+\_\+schema\+Manager}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a538d24348271772aa61f8239cc6431dd}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a538d24348271772aa61f8239cc6431dd}} 
+{\bfseries \$\+\_\+driver}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A database abstraction-\/level connection that implements features like events, transaction isolation levels, configuration, emulated transaction nesting, lazy connecting and more.
+
+@psalm-\/import-\/type Params from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_manager}{Driver\+Manager}} @psalm-\/consistent-\/constructor \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}, and \mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}}.\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a6e3c5b805d1bc87fab80314d58793ce5}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a6e3c5b805d1bc87fab80314d58793ce5}} 
+\index{Connection@{Connection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$params,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}}}]{\$driver,  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Configuration}}}]{\$config = {\ttfamily null},  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Event\+Manager}}}]{\$event\+Manager = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes a new instance of the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} class. 
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a6e3c5b805d1bc87fab80314d58793ce5}{Primary\+Read\+Replica\+Connection}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_acd659e5077fe9d0a0fb0ab53b18fc186}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_acd659e5077fe9d0a0fb0ab53b18fc186}} 
+\index{Connection@{Connection}!\_getNestedTransactionSavePointName@{\_getNestedTransactionSavePointName}}
+\index{\_getNestedTransactionSavePointName@{\_getNestedTransactionSavePointName}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{\_getNestedTransactionSavePointName()}{\_getNestedTransactionSavePointName()}}
+{\footnotesize\ttfamily \+\_\+get\+Nested\+Transaction\+Save\+Point\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the savepoint name to use for nested transactions.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_af3380f3b13931d581fa973a382946b32}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_af3380f3b13931d581fa973a382946b32}} 
+\index{Connection@{Connection}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af3380f3b13931d581fa973a382946b32}{Primary\+Read\+Replica\+Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_af3380f3b13931d581fa973a382946b32}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{Connection@{Connection}!close@{close}}
+\index{close@{close}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the connection.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Primary\+Read\+Replica\+Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}} 
+\index{Connection@{Connection}!commit@{commit}}
+\index{commit@{commit}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af5674c27d4a92f6228565010eacbb9cb}{Primary\+Read\+Replica\+Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_af5674c27d4a92f6228565010eacbb9cb}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a78572828d11dcdf2a498497d9001d557}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a78572828d11dcdf2a498497d9001d557}} 
+\index{Connection@{Connection}!connect@{connect}}
+\index{connect@{connect}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Establishes the connection with the database. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a68d3cbefbc261e83957d959e4a0a198c}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a68d3cbefbc261e83957d959e4a0a198c}} 
+\index{Connection@{Connection}!convertToDatabaseValue@{convertToDatabaseValue}}
+\index{convertToDatabaseValue@{convertToDatabaseValue}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{convertToDatabaseValue()}{convertToDatabaseValue()}}
+{\footnotesize\ttfamily convert\+To\+Database\+Value (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Converts a given value to its database representation according to the conversion rules of a specific DBAL mapping type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+string & {\em \$type} & The name of the DBAL mapping type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The converted value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ac5844a5d29720f42aa8100e4685a8e64}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ac5844a5d29720f42aa8100e4685a8e64}} 
+\index{Connection@{Connection}!convertToPHPValue@{convertToPHPValue}}
+\index{convertToPHPValue@{convertToPHPValue}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValue()}{convertToPHPValue()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Converts a given value to its PHP representation according to the conversion rules of a specific DBAL mapping type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+string & {\em \$type} & The name of the DBAL mapping type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The converted type.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ab989f4bc1226c11084f1e09bb2645ccd}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ab989f4bc1226c11084f1e09bb2645ccd}} 
+\index{Connection@{Connection}!createExpressionBuilder@{createExpressionBuilder}}
+\index{createExpressionBuilder@{createExpressionBuilder}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{createExpressionBuilder()}{createExpressionBuilder()}}
+{\footnotesize\ttfamily create\+Expression\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an expression builder for the connection. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ad0251d2b59b54d92521c94cf7cf3a567}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ad0251d2b59b54d92521c94cf7cf3a567}} 
+\index{Connection@{Connection}!createQueryBuilder@{createQueryBuilder}}
+\index{createQueryBuilder@{createQueryBuilder}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{createQueryBuilder()}{createQueryBuilder()}}
+{\footnotesize\ttfamily create\+Query\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a new instance of a SQL query builder.
+
+\begin{DoxyReturn}{Returns}
+Query\+Builder 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a57a252644e309a73b4dbee4a564779ce}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a57a252644e309a73b4dbee4a564779ce}} 
+\index{Connection@{Connection}!createSavepoint@{createSavepoint}}
+\index{createSavepoint@{createSavepoint}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{createSavepoint()}{createSavepoint()}}
+{\footnotesize\ttfamily create\+Savepoint (\begin{DoxyParamCaption}\item[{}]{\$savepoint }\end{DoxyParamCaption})}
+
+Creates a new savepoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$savepoint} & The name of the savepoint to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a57a252644e309a73b4dbee4a564779ce}{Primary\+Read\+Replica\+Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a53e4673f2b100475afe60d55bba9b84a}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a53e4673f2b100475afe60d55bba9b84a}} 
+\index{Connection@{Connection}!createSchemaManager@{createSchemaManager}}
+\index{createSchemaManager@{createSchemaManager}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{createSchemaManager()}{createSchemaManager()}}
+{\footnotesize\ttfamily create\+Schema\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a Schema\+Manager that can be used to inspect or change the database schema through the connection.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a74dcf7beea31a5ab3a695c85bd38d6e4}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a74dcf7beea31a5ab3a695c85bd38d6e4}} 
+\index{Connection@{Connection}!delete@{delete}}
+\index{delete@{delete}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{array}]{\$criteria,  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Executes an SQL DELETE statement on a table.
+
+Table expression and columns are not escaped and are not safe for user-\/input.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$criteria Deletion criteria \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of affected rows.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}} 
+\index{Connection@{Connection}!exec@{exec}}
+\index{exec@{exec}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily exec (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+BC layer for a wide-\/spread use-\/case of old DBAL APIs
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000054}{Deprecated}}]This API is deprecated and will be removed after 2022 \end{DoxyRefDesc}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a17a77534be57f1e68f1381ee2a4d4150}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a17a77534be57f1e68f1381ee2a4d4150}} 
+\index{Connection@{Connection}!executeCacheQuery@{executeCacheQuery}}
+\index{executeCacheQuery@{executeCacheQuery}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{executeCacheQuery()}{executeCacheQuery()}}
+{\footnotesize\ttfamily execute\+Cache\+Query (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$params,  }\item[{}]{\$types,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}}}]{\$qcp }\end{DoxyParamCaption})}
+
+Executes a caching query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Cache\+Exception} & \\
+\hline
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_afe207062ae319e18da8e1f8e54004886}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_afe207062ae319e18da8e1f8e54004886}} 
+\index{Connection@{Connection}!executeQuery@{executeQuery}}
+\index{executeQuery@{executeQuery}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{executeQuery()}{executeQuery()}}
+{\footnotesize\ttfamily execute\+Query (\begin{DoxyParamCaption}\item[{string}]{\$sql,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$types = {\ttfamily \mbox{[}\mbox{]}},  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}}}]{\$qcp = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Executes an, optionally parametrized, SQL query.
+
+If the query is parametrized, a prepared statement is used. If an SQLLogger is configured, the execution is logged.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a116b619379bad860f5730ba8e658e4a0}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a116b619379bad860f5730ba8e658e4a0}} 
+\index{Connection@{Connection}!executeStatement@{executeStatement}}
+\index{executeStatement@{executeStatement}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{executeStatement()}{executeStatement()}}
+{\footnotesize\ttfamily execute\+Statement (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Executes an SQL statement with the given parameters and returns the number of affected rows.
+
+Could be used for\+:
+\begin{DoxyItemize}
+\item DML statements\+: INSERT, UPDATE, DELETE, etc.
+\item DDL statements\+: CREATE, DROP, ALTER, etc.
+\item DCL statements\+: GRANT, REVOKE, etc.
+\item Session control statements\+: ALTER SESSION, SET, DECLARE, etc.
+\item Other statements that don\textquotesingle{}t yield a row set.
+\end{DoxyItemize}
+
+This method supports PDO binding types as well as DBAL mapping types.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & SQL statement \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement}{Statement}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of affected rows.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a116b619379bad860f5730ba8e658e4a0}{Primary\+Read\+Replica\+Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aeb9c887056d170eacd7bcfc05584da8f}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aeb9c887056d170eacd7bcfc05584da8f}} 
+\index{Connection@{Connection}!executeUpdate@{executeUpdate}}
+\index{executeUpdate@{executeUpdate}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{executeUpdate()}{executeUpdate()}}
+{\footnotesize\ttfamily execute\+Update (\begin{DoxyParamCaption}\item[{string}]{\$sql,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+BC layer for a wide-\/spread use-\/case of old DBAL APIs
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000052}{Deprecated}}]This API is deprecated and will be removed after 2022\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$mixed$>$} & \$params The query parameters \\
+\hline
+{\em array$<$int$\vert$string$\vert$null$>$} & \$types The parameter types \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a9579af876171301721890648316e0ec6}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a9579af876171301721890648316e0ec6}} 
+\index{Connection@{Connection}!fetchAllAssociative@{fetchAllAssociative}}
+\index{fetchAllAssociative@{fetchAllAssociative}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchAllAssociative()}{fetchAllAssociative()}}
+{\footnotesize\ttfamily fetch\+All\+Associative (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an array of associative arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$array$<$string,mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aee3f401995b8700fec555b113ed32f37}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aee3f401995b8700fec555b113ed32f37}} 
+\index{Connection@{Connection}!fetchAllAssociativeIndexed@{fetchAllAssociativeIndexed}}
+\index{fetchAllAssociativeIndexed@{fetchAllAssociativeIndexed}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchAllAssociativeIndexed()}{fetchAllAssociativeIndexed()}}
+{\footnotesize\ttfamily fetch\+All\+Associative\+Indexed (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an associative array with the keys mapped to the first column and the values being an associative array representing the rest of the columns and their values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$mixed,array$<$string,mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a2659d9411bdb17b39c9b3bbf7faacce2}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a2659d9411bdb17b39c9b3bbf7faacce2}} 
+\index{Connection@{Connection}!fetchAllKeyValue@{fetchAllKeyValue}}
+\index{fetchAllKeyValue@{fetchAllKeyValue}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchAllKeyValue()}{fetchAllKeyValue()}}
+{\footnotesize\ttfamily fetch\+All\+Key\+Value (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an associative array with the keys mapped to the first column and the values mapped to the second column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$mixed,mixed$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aa6eed21bb1350261fdaf0bb0c4a245e7}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aa6eed21bb1350261fdaf0bb0c4a245e7}} 
+\index{Connection@{Connection}!fetchAllNumeric@{fetchAllNumeric}}
+\index{fetchAllNumeric@{fetchAllNumeric}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchAllNumeric()}{fetchAllNumeric()}}
+{\footnotesize\ttfamily fetch\+All\+Numeric (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an array of numeric arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$list$<$mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a77df637235765cf8e57d53d82c1141ed}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a77df637235765cf8e57d53d82c1141ed}} 
+\index{Connection@{Connection}!fetchAssociative@{fetchAssociative}}
+\index{fetchAssociative@{fetchAssociative}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchAssociative()}{fetchAssociative()}}
+{\footnotesize\ttfamily fetch\+Associative (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the first row of the result as an associative array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$string, mixed$>$$\vert$false False is returned if no rows are found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a820934ba5ce283b27303aebdac37b6c5}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a820934ba5ce283b27303aebdac37b6c5}} 
+\index{Connection@{Connection}!fetchFirstColumn@{fetchFirstColumn}}
+\index{fetchFirstColumn@{fetchFirstColumn}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchFirstColumn()}{fetchFirstColumn()}}
+{\footnotesize\ttfamily fetch\+First\+Column (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an array of the first column values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$mixed$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ab8b3ed1bf614064d5b21b906b52879ff}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ab8b3ed1bf614064d5b21b906b52879ff}} 
+\index{Connection@{Connection}!fetchNumeric@{fetchNumeric}}
+\index{fetchNumeric@{fetchNumeric}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchNumeric()}{fetchNumeric()}}
+{\footnotesize\ttfamily fetch\+Numeric (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the first row of the result as a numerically indexed array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$mixed$>$$\vert$false False is returned if no rows are found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a223d913b0766f60b93b4fd990dec3366}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a223d913b0766f60b93b4fd990dec3366}} 
+\index{Connection@{Connection}!fetchOne@{fetchOne}}
+\index{fetchOne@{fetchOne}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{fetchOne()}{fetchOne()}}
+{\footnotesize\ttfamily fetch\+One (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the value of a single column of the first row of the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed$\vert$false False is returned if no rows are found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ad6a7980e832ca964872fe29113ab1642}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ad6a7980e832ca964872fe29113ab1642}} 
+\index{Connection@{Connection}!getConfiguration@{getConfiguration}}
+\index{getConfiguration@{getConfiguration}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getConfiguration()}{getConfiguration()}}
+{\footnotesize\ttfamily get\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Configuration}} used by the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Configuration}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a728138a9219e8751278542c3a8c5e3a9}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a728138a9219e8751278542c3a8c5e3a9}} 
+\index{Connection@{Connection}!getDatabase@{getDatabase}}
+\index{getDatabase@{getDatabase}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getDatabase()}{getDatabase()}}
+{\footnotesize\ttfamily get\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the name of the currently selected database.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null The name of the database or NULL if a database is not selected. The platforms which don\textquotesingle{}t support the concept of a database (e.\+g. embedded databases) must always return a string as an indicator of an implicitly selected database.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a602d4b79ea2e33e68be7054e042aab99}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a602d4b79ea2e33e68be7054e042aab99}} 
+\index{Connection@{Connection}!getDatabasePlatform@{getDatabasePlatform}}
+\index{getDatabasePlatform@{getDatabasePlatform}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getDatabasePlatform()}{getDatabasePlatform()}}
+{\footnotesize\ttfamily get\+Database\+Platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Database\+Platform for the connection.
+
+\begin{DoxyReturn}{Returns}
+Abstract\+Platform
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ac88d3a4c3a1bf357eda28403a4704995}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ac88d3a4c3a1bf357eda28403a4704995}} 
+\index{Connection@{Connection}!getDriver@{getDriver}}
+\index{getDriver@{getDriver}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getDriver()}{getDriver()}}
+{\footnotesize\ttfamily get\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the DBAL driver instance.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a9be27bf6385362344ed5e6c026d9cd40}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a9be27bf6385362344ed5e6c026d9cd40}} 
+\index{Connection@{Connection}!getEventManager@{getEventManager}}
+\index{getEventManager@{getEventManager}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getEventManager()}{getEventManager()}}
+{\footnotesize\ttfamily get\+Event\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Event\+Manager used by the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}.
+
+\begin{DoxyReturn}{Returns}
+Event\+Manager 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ab09661fe78400540f64378a7fe8d6e07}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ab09661fe78400540f64378a7fe8d6e07}} 
+\index{Connection@{Connection}!getExpressionBuilder@{getExpressionBuilder}}
+\index{getExpressionBuilder@{getExpressionBuilder}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getExpressionBuilder()}{getExpressionBuilder()}}
+{\footnotesize\ttfamily get\+Expression\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Expression\+Builder for the connection.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000049}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ab989f4bc1226c11084f1e09bb2645ccd}{create\+Expression\+Builder()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Expression\+Builder 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}} 
+\index{Connection@{Connection}!getNativeConnection@{getNativeConnection}}
+\index{getNativeConnection@{getNativeConnection}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getNativeConnection()}{getNativeConnection()}}
+{\footnotesize\ttfamily get\+Native\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$object 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_s_q_l_srv_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ac241c1cbe8334ffa1c853d8f1b1510c2}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ac241c1cbe8334ffa1c853d8f1b1510c2}} 
+\index{Connection@{Connection}!getNestTransactionsWithSavepoints@{getNestTransactionsWithSavepoints}}
+\index{getNestTransactionsWithSavepoints@{getNestTransactionsWithSavepoints}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getNestTransactionsWithSavepoints()}{getNestTransactionsWithSavepoints()}}
+{\footnotesize\ttfamily get\+Nest\+Transactions\+With\+Savepoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets if nested transactions should use savepoints.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ae32cd7c32721b02d676bb63b4b1366db}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ae32cd7c32721b02d676bb63b4b1366db}} 
+\index{Connection@{Connection}!getParams@{getParams}}
+\index{getParams@{getParams}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the parameters used during instantiation. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aa45e1f8f071a7858a97180b78f62a632}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aa45e1f8f071a7858a97180b78f62a632}} 
+\index{Connection@{Connection}!getSchemaManager@{getSchemaManager}}
+\index{getSchemaManager@{getSchemaManager}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getSchemaManager()}{getSchemaManager()}}
+{\footnotesize\ttfamily get\+Schema\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Schema\+Manager that can be used to inspect or change the database schema through the connection.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000051}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a53e4673f2b100475afe60d55bba9b84a}{create\+Schema\+Manager()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Abstract\+Schema\+Manager
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ad1ce4e030d6fe3d81eb1c3ecb650e2e5}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ad1ce4e030d6fe3d81eb1c3ecb650e2e5}} 
+\index{Connection@{Connection}!getTransactionIsolation@{getTransactionIsolation}}
+\index{getTransactionIsolation@{getTransactionIsolation}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getTransactionIsolation()}{getTransactionIsolation()}}
+{\footnotesize\ttfamily get\+Transaction\+Isolation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the currently active transaction isolation level.
+
+\begin{DoxyReturn}{Returns}
+int The current transaction isolation level.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a74aed9b813f90aaf883c20d7bd052408}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a74aed9b813f90aaf883c20d7bd052408}} 
+\index{Connection@{Connection}!getTransactionNestingLevel@{getTransactionNestingLevel}}
+\index{getTransactionNestingLevel@{getTransactionNestingLevel}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getTransactionNestingLevel()}{getTransactionNestingLevel()}}
+{\footnotesize\ttfamily get\+Transaction\+Nesting\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current transaction nesting level.
+
+\begin{DoxyReturn}{Returns}
+int The nesting level. A value of 0 means there\textquotesingle{}s no active transaction. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a5367bfec727721b56e807f64eeec39b1}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a5367bfec727721b56e807f64eeec39b1}} 
+\index{Connection@{Connection}!getWrappedConnection@{getWrappedConnection}}
+\index{getWrappedConnection@{getWrappedConnection}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getWrappedConnection()}{getWrappedConnection()}}
+{\footnotesize\ttfamily get\+Wrapped\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the wrapped driver connection.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000050}{Deprecated}}]Use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{get\+Native\+Connection()}} to access the native connection.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+Driver\+Connection
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_a5367bfec727721b56e807f64eeec39b1}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_s_q_l_srv_1_1_connection_a5367bfec727721b56e807f64eeec39b1}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f8fe3b29d7c9c46164feebe2b6be61a}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f8fe3b29d7c9c46164feebe2b6be61a}} 
+\index{Connection@{Connection}!insert@{insert}}
+\index{insert@{insert}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily insert (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{array}]{\$data,  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Inserts a table row with specified data.
+
+Table expression and columns are not escaped and are not safe for user-\/input.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$data Column-\/value pairs \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of affected rows.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ac450e1c7aa682b1df444e7a2698e5cd7}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ac450e1c7aa682b1df444e7a2698e5cd7}} 
+\index{Connection@{Connection}!isAutoCommit@{isAutoCommit}}
+\index{isAutoCommit@{isAutoCommit}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{isAutoCommit()}{isAutoCommit()}}
+{\footnotesize\ttfamily is\+Auto\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current auto-\/commit mode for this connection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ad7a5f798950203472712727c6dd8db06}{set\+Auto\+Commit}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+bool True if auto-\/commit mode is currently enabled for this connection, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_af160f7fbbf281d018ae3162521b8267d}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_af160f7fbbf281d018ae3162521b8267d}} 
+\index{Connection@{Connection}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Whether an actual connection to the database is established.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aa133026dec949093027081dd4748889a}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aa133026dec949093027081dd4748889a}} 
+\index{Connection@{Connection}!isRollbackOnly@{isRollbackOnly}}
+\index{isRollbackOnly@{isRollbackOnly}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{isRollbackOnly()}{isRollbackOnly()}}
+{\footnotesize\ttfamily is\+Rollback\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the current transaction is marked for rollback only.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_exception}{Connection\+Exception}}} & If no transaction is active. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a370ba46e41143cf66506ab08d0978d81}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a370ba46e41143cf66506ab08d0978d81}} 
+\index{Connection@{Connection}!isTransactionActive@{isTransactionActive}}
+\index{isTransactionActive@{isTransactionActive}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{isTransactionActive()}{isTransactionActive()}}
+{\footnotesize\ttfamily is\+Transaction\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether a transaction is currently active.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if a transaction is currently active, FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a00bc2e8927ea379861c2c097606bab23}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a00bc2e8927ea379861c2c097606bab23}} 
+\index{Connection@{Connection}!iterateAssociative@{iterateAssociative}}
+\index{iterateAssociative@{iterateAssociative}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{iterateAssociative()}{iterateAssociative()}}
+{\footnotesize\ttfamily iterate\+Associative (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an iterator over rows represented as associative arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Traversable$<$int,array$<$string,mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a2b6aad11a9ba825a6a3f99ac83e5a681}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a2b6aad11a9ba825a6a3f99ac83e5a681}} 
+\index{Connection@{Connection}!iterateAssociativeIndexed@{iterateAssociativeIndexed}}
+\index{iterateAssociativeIndexed@{iterateAssociativeIndexed}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{iterateAssociativeIndexed()}{iterateAssociativeIndexed()}}
+{\footnotesize\ttfamily iterate\+Associative\+Indexed (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an iterator with the keys mapped to the first column and the values being an associative array representing the rest of the columns and their values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$>$$\vert$array$<$string,int$\vert$string$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Traversable$<$mixed,array$<$string,mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ad4ef8184676577f356ac2ea7fb99068a}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ad4ef8184676577f356ac2ea7fb99068a}} 
+\index{Connection@{Connection}!iterateColumn@{iterateColumn}}
+\index{iterateColumn@{iterateColumn}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{iterateColumn()}{iterateColumn()}}
+{\footnotesize\ttfamily iterate\+Column (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an iterator over the first column values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Traversable$<$int,mixed$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_abf11554cc53f976392cebc8882141479}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_abf11554cc53f976392cebc8882141479}} 
+\index{Connection@{Connection}!iterateKeyValue@{iterateKeyValue}}
+\index{iterateKeyValue@{iterateKeyValue}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{iterateKeyValue()}{iterateKeyValue()}}
+{\footnotesize\ttfamily iterate\+Key\+Value (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an iterator with the keys mapped to the first column and the values mapped to the second column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Traversable$<$mixed,mixed$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_acc47a26b6b74f337aaa97793b0e02b84}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_acc47a26b6b74f337aaa97793b0e02b84}} 
+\index{Connection@{Connection}!iterateNumeric@{iterateNumeric}}
+\index{iterateNumeric@{iterateNumeric}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{iterateNumeric()}{iterateNumeric()}}
+{\footnotesize\ttfamily iterate\+Numeric (\begin{DoxyParamCaption}\item[{string}]{\$query,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Prepares and executes an SQL query and returns the result as an iterator over rows represented as numeric arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & SQL query \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Traversable$<$int,list$<$mixed$>$$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}} 
+\index{Connection@{Connection}!lastInsertId@{lastInsertId}}
+\index{lastInsertId@{lastInsertId}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{lastInsertId()}{lastInsertId()}}
+{\footnotesize\ttfamily last\+Insert\+Id (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver.
+
+Note\+: This method may not return a meaningful or consistent result across different drivers, because the underlying database may not even support the notion of AUTO\+\_\+\+INCREMENT/\+IDENTITY columns or sequences.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$name} & Name of the sequence object from which the ID should be returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$int$\vert$false A string representation of the last inserted ID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_a9f9cb8ca720d7bbcb03869def521336e}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_s_q_l_srv_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a0f741e7b39d5685c909a704708ed1033}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a0f741e7b39d5685c909a704708ed1033}} 
+\index{Connection@{Connection}!prepare@{prepare}}
+\index{prepare@{prepare}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily prepare (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+Prepares an SQL statement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & The SQL statement to prepare.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0f741e7b39d5685c909a704708ed1033}{Primary\+Read\+Replica\+Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_a0f741e7b39d5685c909a704708ed1033}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_s_q_l_srv_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}} 
+\index{Connection@{Connection}!query@{query}}
+\index{query@{query}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily query (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+BC layer for a wide-\/spread use-\/case of old DBAL APIs
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000053}{Deprecated}}]This API is deprecated and will be removed after 2022 \end{DoxyRefDesc}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_aa2abfe403c1c4c09147743788d76d1ae}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}} 
+\index{Connection@{Connection}!quote@{quote}}
+\index{quote@{quote}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{quote()}{quote()}}
+{\footnotesize\ttfamily quote (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$type = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}} }\end{DoxyParamCaption})}
+
+The usage of this method is discouraged. Use prepared statements or \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a720faaf167cbc9cbfccb43b8879aea7f}{Abstract\+Platform\+::quote\+String\+Literal()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+int | string | Type | null & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_ab156fe0296cd40afecf0c10f5f1256cc}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a31a6cc184c9484efcde725b083ea29f3}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a31a6cc184c9484efcde725b083ea29f3}} 
+\index{Connection@{Connection}!quoteIdentifier@{quoteIdentifier}}
+\index{quoteIdentifier@{quoteIdentifier}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{quoteIdentifier()}{quoteIdentifier()}}
+{\footnotesize\ttfamily quote\+Identifier (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+Quotes a string so it can be safely used as a table or column name, even if it is a reserved name.
+
+Delimiting style depends on the underlying database platform that is being used.
+
+NOTE\+: Just because you CAN use quoted identifiers does not mean you SHOULD use them. In general, they end up causing way more problems than they solve.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & The name to be quoted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The quoted name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a640cada9593ba5f9d2be8e2f800da774}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a640cada9593ba5f9d2be8e2f800da774}} 
+\index{Connection@{Connection}!releaseSavepoint@{releaseSavepoint}}
+\index{releaseSavepoint@{releaseSavepoint}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{releaseSavepoint()}{releaseSavepoint()}}
+{\footnotesize\ttfamily release\+Savepoint (\begin{DoxyParamCaption}\item[{}]{\$savepoint }\end{DoxyParamCaption})}
+
+Releases the given savepoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$savepoint} & The name of the savepoint to release.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a640cada9593ba5f9d2be8e2f800da774}{Primary\+Read\+Replica\+Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}} 
+\index{Connection@{Connection}!rollBack@{rollBack}}
+\index{rollBack@{rollBack}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{rollBack()}{rollBack()}}
+{\footnotesize\ttfamily roll\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cancels any database changes done during the current transaction.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Primary\+Read\+Replica\+Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_aebaea4cae21e0e75ec1489c1648caeb3}{Abstract\+Connection\+Middleware}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_mysqli_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_p_d_o_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_s_q_l_srv_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_adcfb14588f49281d8b62bbbe7533d1ff}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_adcfb14588f49281d8b62bbbe7533d1ff}} 
+\index{Connection@{Connection}!rollbackSavepoint@{rollbackSavepoint}}
+\index{rollbackSavepoint@{rollbackSavepoint}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{rollbackSavepoint()}{rollbackSavepoint()}}
+{\footnotesize\ttfamily rollback\+Savepoint (\begin{DoxyParamCaption}\item[{}]{\$savepoint }\end{DoxyParamCaption})}
+
+Rolls back to the given savepoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$savepoint} & The name of the savepoint to rollback to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_adcfb14588f49281d8b62bbbe7533d1ff}{Primary\+Read\+Replica\+Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ad7a5f798950203472712727c6dd8db06}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ad7a5f798950203472712727c6dd8db06}} 
+\index{Connection@{Connection}!setAutoCommit@{setAutoCommit}}
+\index{setAutoCommit@{setAutoCommit}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{setAutoCommit()}{setAutoCommit()}}
+{\footnotesize\ttfamily set\+Auto\+Commit (\begin{DoxyParamCaption}\item[{}]{\$auto\+Commit }\end{DoxyParamCaption})}
+
+Sets auto-\/commit mode for this connection.
+
+If a connection is in auto-\/commit mode, then all its SQL statements will be executed and committed as individual transactions. Otherwise, its SQL statements are grouped into transactions that are terminated by a call to either the method commit or the method rollback. By default, new connections are in auto-\/commit mode.
+
+NOTE\+: If this method is called during a transaction and the auto-\/commit mode is changed, the transaction is committed. If this method is called and the auto-\/commit mode is not changed, the call is a no-\/op.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac450e1c7aa682b1df444e7a2698e5cd7}{is\+Auto\+Commit}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$auto\+Commit} & True to enable auto-\/commit mode; false to disable it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a48321c5e01f959234909b928e3a17861}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a48321c5e01f959234909b928e3a17861}} 
+\index{Connection@{Connection}!setNestTransactionsWithSavepoints@{setNestTransactionsWithSavepoints}}
+\index{setNestTransactionsWithSavepoints@{setNestTransactionsWithSavepoints}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{setNestTransactionsWithSavepoints()}{setNestTransactionsWithSavepoints()}}
+{\footnotesize\ttfamily set\+Nest\+Transactions\+With\+Savepoints (\begin{DoxyParamCaption}\item[{}]{\$nest\+Transactions\+With\+Savepoints }\end{DoxyParamCaption})}
+
+Sets if nested transactions should use savepoints.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$nest\+Transactions\+With\+Savepoints} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a57930b0587270871b90503aa374607c3}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a57930b0587270871b90503aa374607c3}} 
+\index{Connection@{Connection}!setRollbackOnly@{setRollbackOnly}}
+\index{setRollbackOnly@{setRollbackOnly}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{setRollbackOnly()}{setRollbackOnly()}}
+{\footnotesize\ttfamily set\+Rollback\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Marks the current transaction so that the only possible outcome for the transaction to be rolled back.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_exception}{Connection\+Exception}}} & If no transaction is active. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a7f13e379a28783757331dd42fe16b1d2}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a7f13e379a28783757331dd42fe16b1d2}} 
+\index{Connection@{Connection}!setTransactionIsolation@{setTransactionIsolation}}
+\index{setTransactionIsolation@{setTransactionIsolation}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{setTransactionIsolation()}{setTransactionIsolation()}}
+{\footnotesize\ttfamily set\+Transaction\+Isolation (\begin{DoxyParamCaption}\item[{}]{\$level }\end{DoxyParamCaption})}
+
+Sets the transaction isolation level.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$level} & The level to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a6d606264370162f177ee3f98b5cc7c9e}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a6d606264370162f177ee3f98b5cc7c9e}} 
+\index{Connection@{Connection}!transactional@{transactional}}
+\index{transactional@{transactional}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{transactional()}{transactional()}}
+{\footnotesize\ttfamily transactional (\begin{DoxyParamCaption}\item[{Closure}]{\$func }\end{DoxyParamCaption})}
+
+Executes a function in a transaction.
+
+The function gets passed this \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} instance as an (optional) parameter.
+
+If an exception occurs during execution of the function or transaction commit, the transaction is rolled back and the exception re-\/thrown.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Closure & {\em \$func} & The function to execute transactionally.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The value returned by \$func
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Throwable} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ae959f6e86db099a4d5612b1f5373bc31}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ae959f6e86db099a4d5612b1f5373bc31}} 
+\index{Connection@{Connection}!update@{update}}
+\index{update@{update}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{array}]{\$data,  }\item[{array}]{\$criteria,  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Executes an SQL UPDATE statement on a table.
+
+Table expression and columns are not escaped and are not safe for user-\/input.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & Table name \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$data Column-\/value pairs \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$criteria Update criteria \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of affected rows.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a904f9dc50dd6b96b6fa531d8275e75cc}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a904f9dc50dd6b96b6fa531d8275e75cc}} 
+\index{Connection@{Connection}!ARRAY\_PARAM\_OFFSET@{ARRAY\_PARAM\_OFFSET}}
+\index{ARRAY\_PARAM\_OFFSET@{ARRAY\_PARAM\_OFFSET}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_PARAM\_OFFSET}{ARRAY\_PARAM\_OFFSET}}
+{\footnotesize\ttfamily const ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET = 100}
+
+Offset by which PARAM\+\_\+$\ast$ constants are detected as arrays of the param type. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a537003ee16f8f18139c97f214312c768}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a537003ee16f8f18139c97f214312c768}} 
+\index{Connection@{Connection}!PARAM\_ASCII\_STR\_ARRAY@{PARAM\_ASCII\_STR\_ARRAY}}
+\index{PARAM\_ASCII\_STR\_ARRAY@{PARAM\_ASCII\_STR\_ARRAY}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{PARAM\_ASCII\_STR\_ARRAY}{PARAM\_ASCII\_STR\_ARRAY}}
+{\footnotesize\ttfamily const PARAM\+\_\+\+ASCII\+\_\+\+STR\+\_\+\+ARRAY = \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_ab22c63ae4d8f1466833f058b6177bb36}{Parameter\+Type\+::\+ASCII}} + self\+::\+ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET}
+
+Represents an array of ascii strings to be expanded by Doctrine SQL parsing. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_ae44a1c5ef4cd741588334abf9d4d1ca5}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_ae44a1c5ef4cd741588334abf9d4d1ca5}} 
+\index{Connection@{Connection}!PARAM\_INT\_ARRAY@{PARAM\_INT\_ARRAY}}
+\index{PARAM\_INT\_ARRAY@{PARAM\_INT\_ARRAY}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{PARAM\_INT\_ARRAY}{PARAM\_INT\_ARRAY}}
+{\footnotesize\ttfamily const PARAM\+\_\+\+INT\+\_\+\+ARRAY = \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a01eecdf29bca732e683a4a15b5b9bbcf}{Parameter\+Type\+::\+INTEGER}} + self\+::\+ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET}
+
+Represents an array of ints to be expanded by Doctrine SQL parsing. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connection_a6f5f2e0f91bc47904e1078f9ad9a4531}\label{class_doctrine_1_1_d_b_a_l_1_1_connection_a6f5f2e0f91bc47904e1078f9ad9a4531}} 
+\index{Connection@{Connection}!PARAM\_STR\_ARRAY@{PARAM\_STR\_ARRAY}}
+\index{PARAM\_STR\_ARRAY@{PARAM\_STR\_ARRAY}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{PARAM\_STR\_ARRAY}{PARAM\_STR\_ARRAY}}
+{\footnotesize\ttfamily const PARAM\+\_\+\+STR\+\_\+\+ARRAY = \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}} + self\+::\+ARRAY\+\_\+\+PARAM\+\_\+\+OFFSET}
+
+Represents an array of strings to be expanded by Doctrine SQL parsing. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/Connection.\+php\end{DoxyCompactItemize}

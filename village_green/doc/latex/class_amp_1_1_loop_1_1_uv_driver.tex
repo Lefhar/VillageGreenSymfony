@@ -1,0 +1,221 @@
+\hypertarget{class_amp_1_1_loop_1_1_uv_driver}{}\doxysection{Uv\+Driver Class Reference}
+\label{class_amp_1_1_loop_1_1_uv_driver}\index{UvDriver@{UvDriver}}
+Inheritance diagram for Uv\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_loop_1_1_uv_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_ac421a27f9b721a9845fde9288ff879b6}{cancel}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_a80593ccdc0339775ddd5d82c37ca4f6b}{now}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{get\+Handle}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_adc36dedf4b7b9d79eed5296b94001311}\label{class_amp_1_1_loop_1_1_uv_driver_adc36dedf4b7b9d79eed5296b94001311}} 
+static {\bfseries is\+Supported} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_a19b11129dd58c3181cabf99650d1e107}{dispatch}} (bool \$blocking)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_a93e1cf21b8a596cee99004644f90d8a0}{activate}} (array \$watchers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_uv_driver_a1327821d0ed999d648c0c0d8ad552e58}{deactivate}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} \$watcher)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_a095c5d389db211932136b53f25f39685}\label{class_amp_1_1_loop_1_1_uv_driver_a095c5d389db211932136b53f25f39685}} 
+\index{UvDriver@{UvDriver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$event} & \\
+\hline
+{\em \$status} & \\
+\hline
+{\em \$events} & \\
+\hline
+{\em \$resource} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \$event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \$event} & \\
+\hline
+{\em \$signo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_a93e1cf21b8a596cee99004644f90d8a0}\label{class_amp_1_1_loop_1_1_uv_driver_a93e1cf21b8a596cee99004644f90d8a0}} 
+\index{UvDriver@{UvDriver}!activate@{activate}}
+\index{activate@{activate}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily activate (\begin{DoxyParamCaption}\item[{array}]{\$watchers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Activates (enables) all the given watchers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}\mbox{[}$\,$\mbox{]} & {\em \$watchers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Undefined\+Function
+
+@psalm-\/suppress Undefined\+Function
+
+@psalm-\/suppress Undefined\+Function
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a93e1cf21b8a596cee99004644f90d8a0}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_ac421a27f9b721a9845fde9288ff879b6}\label{class_amp_1_1_loop_1_1_uv_driver_ac421a27f9b721a9845fde9288ff879b6}} 
+\index{UvDriver@{UvDriver}!cancel@{cancel}}
+\index{cancel@{cancel}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily cancel (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+\{Cancel a watcher.
+
+This will detach the event loop from all resources that are associated to the watcher. After this operation the watcher is permanently invalid. Calling this function MUST NOT fail, even if passed an invalid watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_ac421a27f9b721a9845fde9288ff879b6}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_a1327821d0ed999d648c0c0d8ad552e58}\label{class_amp_1_1_loop_1_1_uv_driver_a1327821d0ed999d648c0c0d8ad552e58}} 
+\index{UvDriver@{UvDriver}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily deactivate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}}]{\$watcher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Deactivates (disables) the given watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a1327821d0ed999d648c0c0d8ad552e58}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_a19b11129dd58c3181cabf99650d1e107}\label{class_amp_1_1_loop_1_1_uv_driver_a19b11129dd58c3181cabf99650d1e107}} 
+\index{UvDriver@{UvDriver}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{bool}]{\$blocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Dispatches any pending read/write, timer, and signal events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$blocking} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Too\+Many\+Arguments
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a19b11129dd58c3181cabf99650d1e107}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_a4b28feacbac39dacb8204a26d1a0ba7b}\label{class_amp_1_1_loop_1_1_uv_driver_a4b28feacbac39dacb8204a26d1a0ba7b}} 
+\index{UvDriver@{UvDriver}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Get the underlying loop handle.
+
+Example\+: the {\ttfamily uv\+\_\+loop} resource for {\ttfamily libuv} or the {\ttfamily Ev\+Loop} object for {\ttfamily libev} or {\ttfamily null} for a native driver.
+
+Note\+: This function is {\itshape not} exposed in the {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop}{Loop}}} class. Users shall access it directly on the respective loop instance.
+
+\begin{DoxyReturn}{Returns}
+null$\vert$object$\vert$resource The loop handle the event loop operates on. {\ttfamily null} if there is none.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_uv_driver_a80593ccdc0339775ddd5d82c37ca4f6b}\label{class_amp_1_1_loop_1_1_uv_driver_a80593ccdc0339775ddd5d82c37ca4f6b}} 
+\index{UvDriver@{UvDriver}!now@{now}}
+\index{now@{now}!UvDriver@{UvDriver}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the current loop time in millisecond increments. Note this value does not necessarily correlate to wall-\/clock time, rather the value returned is meant to be used in relative comparisons to prior values returned by this method (intervals, expiration calculations, etc.) and is only updated once per loop tick.
+
+Extending classes should override this function to return a value cached once per loop tick.
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+\} @psalm-\/suppress Too\+Many\+Arguments
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a80593ccdc0339775ddd5d82c37ca4f6b}{Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Loop/Uv\+Driver.\+php\end{DoxyCompactItemize}

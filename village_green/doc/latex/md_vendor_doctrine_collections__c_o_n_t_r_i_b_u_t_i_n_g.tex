@@ -1,0 +1,31 @@
+Thank you for contributing to Doctrine!
+
+Before we can merge your Pull-\/\+Request here are some guidelines that you need to follow. These guidelines exist not to annoy you, but to keep the code base clean, unified and future proof.\hypertarget{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md128}{}\doxysection{We only accept PRs  to \char`\"{}master\char`\"{}}\label{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md128}
+Our branching strategy is \char`\"{}everything to master first\char`\"{}, even bugfixes and we then merge them into the stable branches. You should only open pull requests against the master branch. Otherwise we cannot accept the PR.
+
+There is one exception to the rule, when we merged a bug into some stable branches we do occasionally accept pull requests that merge the same bug fix into earlier branches.\hypertarget{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md129}{}\doxysection{Coding Standard}\label{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md129}
+We use the \href{https://github.com/doctrine/coding-standard}{\texttt{ Doctrine Coding Standard}}.\hypertarget{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md130}{}\doxysection{Unit-\/\+Tests}\label{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md130}
+Please try to add a test for your pull-\/request.
+
+
+\begin{DoxyItemize}
+\item If you want to contribute new functionality add unit-\/ or functional tests depending on the scope of the feature.
+\end{DoxyItemize}
+
+You can run the unit-\/tests by calling {\ttfamily vendor/bin/phpunit} from the root of the project. It will run all the project tests.
+
+In order to do that, you will need a fresh copy of doctrine/collections, and you will have to run a composer installation in the project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone git@github.com:doctrine/collections.git}
+\DoxyCodeLine{cd collections}
+\DoxyCodeLine{curl -\/sS https://getcomposer.org/installer | php -\/-\/}
+\DoxyCodeLine{./composer.phar install}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md131}{}\doxysection{Github Actions}\label{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md131}
+We automatically run your pull request through Github Actions against supported PHP versions. If you break the tests, we cannot merge your code, so please make sure that your code is working before opening up a Pull-\/\+Request.\hypertarget{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md132}{}\doxysection{Getting merged}\label{md_vendor_doctrine_collections__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md132}
+Please allow us time to review your pull requests. We will give our best to review everything as fast as possible, but cannot always live up to our own expectations.
+
+Thank you very much again for your contribution! 

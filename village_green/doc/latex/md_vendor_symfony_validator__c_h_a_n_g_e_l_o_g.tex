@@ -1,0 +1,305 @@
+\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1913}{}\doxysection{5.\+4}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1913}
+
+\begin{DoxyItemize}
+\item Add a {\ttfamily Cidr} constraint to validate CIDR notations
+\item Add a {\ttfamily Css\+Color} constraint to validate CSS colors
+\item Add support for {\ttfamily Constraint\+Violation\+List\+::create\+From\+Message()}
+\item Add error\textquotesingle{}s uid to {\ttfamily Count} and {\ttfamily Length} constraints with \char`\"{}exactly\char`\"{} option enabled
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1914}{}\doxysection{5.\+3}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1914}
+
+\begin{DoxyItemize}
+\item Add the {\ttfamily normalizer} option to the {\ttfamily Unique} constraint
+\item Add {\ttfamily Validation\+::create\+Is\+Valid\+Callable()} that returns true/false instead of throwing exceptions
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1915}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1915}
+
+\begin{DoxyItemize}
+\item added a {\ttfamily Cascade} constraint to ease validating nested typed object properties
+\item deprecated the {\ttfamily allow\+Empty\+String} option of the {\ttfamily Length} constraint
+
+Before\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use Symfony\(\backslash\)Component\(\backslash\)Validator\(\backslash\)Constraints as Assert;}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+
+
+After\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use Symfony\(\backslash\)Component\(\backslash\)Validator\(\backslash\)Constraints as Assert;}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+
+\item added the {\ttfamily Isin} constraint and validator
+\item added the {\ttfamily ULID} constraint and validator
+\item added support for UUIDv6 in {\ttfamily Uuid} constraint
+\item enabled the validator to load constraints from PHP attributes
+\item deprecated the {\ttfamily Number\+Constraint\+Trait} trait
+\item deprecated setting or creating a Doctrine annotation reader via {\ttfamily Validator\+Builder\+::enable\+Annotation\+Mapping()}, pass {\ttfamily true} as first parameter and additionally call {\ttfamily set\+Doctrine\+Annotation\+Reader()} or {\ttfamily add\+Default\+Doctrine\+Annotation\+Reader()} to set up the annotation reader
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1916}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1916}
+
+\begin{DoxyItemize}
+\item added the {\ttfamily Hostname} constraint and validator
+\item added the {\ttfamily alpha3} option to the {\ttfamily Country} and {\ttfamily Language} constraints
+\item allow to define a reusable set of constraints by extending the {\ttfamily Compound} constraint
+\item added {\ttfamily Sequentially} constraint, to sequentially validate a set of constraints (any violation raised will prevent further validation of the nested constraints)
+\item added the {\ttfamily divisible\+By} option to the {\ttfamily Count} constraint
+\item added the {\ttfamily Expression\+Language\+Syntax} constraint
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1917}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1917}
+
+\begin{DoxyItemize}
+\item an {\ttfamily Expression\+Language} instance or null must be passed as the first argument of {\ttfamily Expression\+Validator\+::\+\_\+\+\_\+construct()}
+\item removed the {\ttfamily check\+DNS} and {\ttfamily dns\+Message} options of the {\ttfamily Url} constraint
+\item removed the {\ttfamily check\+MX}, {\ttfamily check\+Host} and {\ttfamily strict} options of the {\ttfamily Email} constraint
+\item removed support for validating instances of {\ttfamily \textbackslash{}Date\+Time\+Interface} in {\ttfamily Date\+Time\+Validator}, {\ttfamily Date\+Validator} and {\ttfamily Time\+Validator}
+\item removed support for using the {\ttfamily Bic}, {\ttfamily Country}, {\ttfamily Currency}, {\ttfamily Language} and {\ttfamily \mbox{\hyperlink{class_locale}{Locale}}} constraints without {\ttfamily symfony/intl}
+\item removed support for using the {\ttfamily Email} constraint without {\ttfamily egulias/email-\/validator}
+\item removed support for using the {\ttfamily Expression} constraint without {\ttfamily symfony/expression-\/language}
+\item changed default value of {\ttfamily canonicalize} option of {\ttfamily \mbox{\hyperlink{class_locale}{Locale}}} constraint to {\ttfamily true}
+\item removed {\ttfamily Validator\+Builder\+Interface}
+\item passing a null message when instantiating a {\ttfamily Constraint\+Violation} is not allowed
+\item changed the default value of {\ttfamily Length\+::\$allow\+Empty\+String} to {\ttfamily false} and made it optional
+\item removed {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Validator\textbackslash{}Mapping\textbackslash{}Cache\textbackslash{}Cache\+Interface} in favor of PSR-\/6.
+\item removed {\ttfamily Validator\+Builder\+::set\+Metadata\+Cache}, use {\ttfamily Validator\+Builder\+::set\+Mapping\+Cache} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1918}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1918}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} using null as {\ttfamily \$class\+Validator\+Regexp} value in {\ttfamily Property\+Info\+Loader\+::\+\_\+\+\_\+construct} will not enable auto-\/mapping for all classes anymore, use `'\{.$\ast$\}\textquotesingle{}{\ttfamily instead.}
+\item {\ttfamily added}Enable\+Auto\+Mapping{\ttfamily and}Disable\+Auto\+Mapping{\ttfamily constraints to enable or disable auto mapping for class or a property}
+\item {\ttfamily using anything else than a}string{\ttfamily as the code of a}Constraint\+Violation{\ttfamily is deprecated, a}string{\ttfamily type-\/hint will be added to the constructor of the}Constraint\+Violation{\ttfamily class and to the}Constraint\+Violation\+Builder\+::set\+Code()\`{} method in 5.\+0
+\item deprecated passing an {\ttfamily Expression\+Language} instance as the second argument of {\ttfamily Expression\+Validator\+::\+\_\+\+\_\+construct()}. Pass it as the first argument instead.
+\item added the {\ttfamily compared\+\_\+value\+\_\+path} parameter in violations when using any comparison constraint with the {\ttfamily property\+Path} option.
+\item added support for checking an array of types in {\ttfamily Type\+Validator}
+\item added a new {\ttfamily allow\+Empty\+String} option to the {\ttfamily Length} constraint to allow rejecting empty strings when {\ttfamily min} is set, by setting it to {\ttfamily false}.
+\item Added new {\ttfamily min\+Property\+Path} and {\ttfamily max\+Property\+Path} options to {\ttfamily Range} constraint in order to get the value to compare from an array or object
+\item added the {\ttfamily min\+\_\+limit\+\_\+path} and {\ttfamily max\+\_\+limit\+\_\+path} parameters in violations when using {\ttfamily Range} constraint with respectively the {\ttfamily min\+Property\+Path} and {\ttfamily max\+Property\+Path} options
+\item added a new {\ttfamily not\+In\+Range\+Message} option to the {\ttfamily Range} constraint that will be used in the violation builder when both {\ttfamily min} and {\ttfamily max} are not null
+\item added ability to use stringable objects as violation messages
+\item Overriding the methods {\ttfamily Constraint\+Validator\+Test\+Case\+::set\+Up()} and {\ttfamily Constraint\+Validator\+Test\+Case\+::tear\+Down()} without the {\ttfamily void} return-\/type is deprecated.
+\item deprecated {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Validator\textbackslash{}Mapping\textbackslash{}Cache\textbackslash{}Cache\+Interface} in favor of PSR-\/6.
+\item deprecated {\ttfamily Validator\+Builder\+::set\+Metadata\+Cache}, use {\ttfamily Validator\+Builder\+::set\+Mapping\+Cache} instead.
+\item Marked the {\ttfamily Validator\+Data\+Collector} class as {\ttfamily @final}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1919}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1919}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Timezone} constraint
+\item added {\ttfamily Not\+Compromised\+Password} constraint
+\item added options {\ttfamily iban} and {\ttfamily iban\+Property\+Path} to Bic constraint
+\item added UATP cards support to {\ttfamily Card\+Scheme\+Validator}
+\item added option {\ttfamily allow\+Null} to Not\+Blank constraint
+\item added {\ttfamily Json} constraint
+\item added {\ttfamily Unique} constraint
+\item added a new {\ttfamily normalizer} option to the string constraints and to the {\ttfamily Not\+Blank} constraint
+\item added {\ttfamily Positive} constraint
+\item added {\ttfamily Positive\+Or\+Zero} constraint
+\item added {\ttfamily Negative} constraint
+\item added {\ttfamily Negative\+Or\+Zero} constraint
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1920}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1920}
+
+\begin{DoxyItemize}
+\item added a new {\ttfamily Unexpected\+Value\+Exception} that can be thrown by constraint validators, these exceptions are caught by the validator and are converted into constraint violations
+\item added {\ttfamily Divisible\+By} constraint
+\item decoupled from {\ttfamily symfony/translation} by using {\ttfamily Symfony\textbackslash{}Contracts\textbackslash{}Translation\textbackslash{}Translator\+Interface}
+\item deprecated {\ttfamily Validator\+Builder\+Interface}
+\item made {\ttfamily Validator\+Builder\+::set\+Translator()} final
+\item marked {\ttfamily format} the default option in {\ttfamily Date\+Time} constraint
+\item deprecated validating instances of {\ttfamily \textbackslash{}Date\+Time\+Interface} in {\ttfamily Date\+Time\+Validator}, {\ttfamily Date\+Validator} and {\ttfamily Time\+Validator}.
+\item deprecated using the {\ttfamily Bic}, {\ttfamily Country}, {\ttfamily Currency}, {\ttfamily Language} and {\ttfamily \mbox{\hyperlink{class_locale}{Locale}}} constraints without {\ttfamily symfony/intl}
+\item deprecated using the {\ttfamily Email} constraint without {\ttfamily egulias/email-\/validator}
+\item deprecated using the {\ttfamily Expression} constraint without {\ttfamily symfony/expression-\/language}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1921}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1921}
+
+\begin{DoxyItemize}
+\item Deprecated the {\ttfamily check\+DNS} and {\ttfamily dns\+Message} options of the {\ttfamily Url} constraint.
+\item added a {\ttfamily values} option to the {\ttfamily Expression} constraint
+\item Deprecated use of {\ttfamily \mbox{\hyperlink{class_locale}{Locale}}} constraint without setting {\ttfamily true} at \char`\"{}canonicalize\char`\"{} option, which will be the default value in 5.\+0
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1922}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1922}
+
+\begin{DoxyItemize}
+\item Setting the {\ttfamily strict} option of the {\ttfamily Choice} constraint to anything but {\ttfamily true} is not supported anymore.
+\item removed the {\ttfamily Date\+Time\+Validator\+::\+PATTERN} constant
+\item removed the {\ttfamily Abstract\+Constraint\+Validator\+Test} class
+\item removed support for setting the {\ttfamily check\+DNS} option of the {\ttfamily Url} constraint to {\ttfamily true}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1923}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1923}
+
+\begin{DoxyItemize}
+\item added support for validation groups to the {\ttfamily Valid} constraint
+\item not setting the {\ttfamily strict} option of the {\ttfamily Choice} constraint to {\ttfamily true} is deprecated and will throw an exception in Symfony 4.\+0
+\item setting the {\ttfamily check\+DNS} option of the {\ttfamily Url} constraint to {\ttfamily true} is deprecated in favor of the {\ttfamily Url\+::\+CHECK\+\_\+\+DNS\+\_\+\+TYPE\+\_\+$\ast$} constants values and will throw an exception in Symfony 4.\+0
+\item added min/max amount of pixels check to {\ttfamily Image} constraint via {\ttfamily min\+Pixels} and {\ttfamily max\+Pixels}
+\item added a new \char`\"{}property\+Path\char`\"{} option to comparison constraints in order to get the value to compare from an array or object
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1924}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1924}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Add\+Validator\+Initializers\+Pass}
+\item added {\ttfamily Add\+Constraint\+Validators\+Pass}
+\item added {\ttfamily Container\+Constraint\+Validator\+Factory}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1925}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1925}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Tests\textbackslash{}Constraints\textbackslash{}Abstract\+Constraint\+Validator\+Test} in favor of {\ttfamily Test\textbackslash{}Constraint\+Validator\+Test\+Case}
+\item added support for PHP constants in YAML configuration files
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1926}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1926}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Date\+Time\+Validator\+::\+PATTERN} constant
+\item added a {\ttfamily format} option to the {\ttfamily Date\+Time} constraint
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1927}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1927}
+
+\begin{DoxyItemize}
+\item added the BIC (SWIFT-\/\+Code) validator
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1928}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1928}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Default\+Translator} in favor of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Identity\+Translator}
+\item deprecated PHP7-\/incompatible constraints (Null, True, False) and related validators (Null\+Validator, True\+Validator, False\+Validator) in favor of their {\ttfamily Is}-\/prefixed equivalent
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1929}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1929}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily File\+Validator} disallow empty files
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily User\+Password\+Validator} source message change
+\item \mbox{[}BC BREAK\mbox{]} added internal {\ttfamily Execution\+Context\+Interface\+::set\+Constraint()}
+\item added {\ttfamily Constraint\+Violation\+::get\+Constraint()}
+\item \mbox{[}BC BREAK\mbox{]} The {\ttfamily Expression\+Validator} will now evaluate the Expression even when the property value is null or an empty string
+\item deprecated {\ttfamily Class\+Metadata\+::has\+Member\+Metadatas()}
+\item deprecated {\ttfamily Class\+Metadata\+::get\+Member\+Metadatas()}
+\item deprecated {\ttfamily Class\+Metadata\+::add\+Member\+Metadata()}
+\item \mbox{[}BC BREAK\mbox{]} added {\ttfamily Mapping\textbackslash{}Metadata\+Interface\+::get\+Constraints()}
+\item added generic \char`\"{}payload\char`\"{} option to all constraints for attaching domain-\/specific data
+\item \mbox{[}BC BREAK\mbox{]} added {\ttfamily Constraint\+Violation\+Builder\+Interface\+::set\+Cause()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1930}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1930}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Apc\+Cache} in favor of {\ttfamily Doctrine\+Cache}
+\item added {\ttfamily Doctrine\+Cache} to adapt any Doctrine cache
+\item {\ttfamily Group\+Sequence} now implements {\ttfamily Array\+Access}, {\ttfamily Countable} and {\ttfamily Traversable}
+\item \mbox{[}BC BREAK\mbox{]} changed {\ttfamily Class\+Metadata\+::get\+Group\+Sequence()} to return a {\ttfamily Group\+Sequence} instance instead of an array
+\item {\ttfamily Callback} can now be put onto properties (useful when you pass a closure to the constraint)
+\item deprecated {\ttfamily Class\+Based\+Interface}
+\item deprecated {\ttfamily Metadata\+Interface}
+\item deprecated {\ttfamily Property\+Metadata\+Interface}
+\item deprecated {\ttfamily Property\+Metadata\+Container\+Interface}
+\item deprecated {\ttfamily Mapping\textbackslash{}Element\+Metadata}
+\item added {\ttfamily Mapping\textbackslash{}Metadata\+Interface}
+\item added {\ttfamily Mapping\textbackslash{}Class\+Metadata\+Interface}
+\item added {\ttfamily Mapping\textbackslash{}Property\+Metadata\+Interface}
+\item added {\ttfamily Mapping\textbackslash{}Generic\+Metadata}
+\item added {\ttfamily Mapping\textbackslash{}Cascading\+Strategy}
+\item added {\ttfamily Mapping\textbackslash{}Traversal\+Strategy}
+\item deprecated {\ttfamily Mapping\textbackslash{}Class\+Metadata\+::accept()}
+\item deprecated {\ttfamily Mapping\textbackslash{}Member\+Metadata\+::accept()}
+\item removed array type hint of {\ttfamily Mapping\textbackslash{}Class\+Metadata\+::set\+Group\+Sequence()}
+\item deprecated {\ttfamily Metadata\+Factory\+Interface}
+\item deprecated {\ttfamily Mapping\textbackslash{}Blackhole\+Metadata\+Factory}
+\item deprecated {\ttfamily Mapping\textbackslash{}Class\+Metadata\+Factory}
+\item added {\ttfamily Mapping\textbackslash{}Factory\textbackslash{}Metadata\+Factory\+Interface}
+\item added {\ttfamily Mapping\textbackslash{}Factory\textbackslash{}Black\+Hole\+Metadata\+Factory}
+\item added {\ttfamily Mapping\textbackslash{}Factory\textbackslash{}Lazy\+Loading\+Metadata\+Factory}
+\item deprecated {\ttfamily Execution\+Context\+Interface}
+\item deprecated {\ttfamily Execution\+Context}
+\item deprecated {\ttfamily Global\+Execution\+Context\+Interface}
+\item added {\ttfamily Context\textbackslash{}Execution\+Context\+Interface}
+\item added {\ttfamily Context\textbackslash{}Execution\+Context}
+\item added {\ttfamily Context\textbackslash{}Execution\+Context\+Factory\+Interface}
+\item added {\ttfamily Context\textbackslash{}Execution\+Context\+Factory}
+\item deprecated {\ttfamily Validator\+Interface}
+\item deprecated {\ttfamily Validator}
+\item deprecated {\ttfamily Validation\+Visitor\+Interface}
+\item deprecated {\ttfamily Validation\+Visitor}
+\item added {\ttfamily Validator\textbackslash{}Validator\+Interface}
+\item added {\ttfamily Validator\textbackslash{}Recursive\+Validator}
+\item added {\ttfamily Validator\textbackslash{}Contextual\+Validator\+Interface}
+\item added {\ttfamily Validator\textbackslash{}Recursive\+Contextual\+Validator}
+\item added {\ttfamily Violation\textbackslash{}Constraint\+Violation\+Builder\+Interface}
+\item added {\ttfamily Violation\textbackslash{}Constraint\+Violation\+Builder}
+\item added {\ttfamily Constraint\+Violation\+::get\+Parameters()}
+\item added {\ttfamily Constraint\+Violation\+::get\+Plural()}
+\item added {\ttfamily Constraints\textbackslash{}Traverse}
+\item deprecated {\ttfamily \$deep} property in {\ttfamily Constraints\textbackslash{}Valid}
+\item added {\ttfamily Validator\+Builder\+Interface\+::set\+Api\+Version()}
+\item added {\ttfamily Validation\+::\+API\+\_\+\+VERSION\+\_\+2\+\_\+4}
+\item added {\ttfamily Validation\+::\+API\+\_\+\+VERSION\+\_\+2\+\_\+5}
+\item added {\ttfamily Exception\textbackslash{}Out\+Of\+Bounds\+Exception}
+\item added {\ttfamily Exception\textbackslash{}Unsupported\+Metadata\+Exception}
+\item made {\ttfamily Exception\textbackslash{}Validator\+Exception} extend {\ttfamily Exception\textbackslash{}Runtime\+Exception}
+\item added {\ttfamily Util\textbackslash{}Property\+Path}
+\item made the Property\+Access component an optional dependency
+\item deprecated {\ttfamily Validator\+Builder\+::set\+Property\+Accessor()}
+\item deprecated {\ttfamily validate} and {\ttfamily validate\+Value} on {\ttfamily Validator\textbackslash{}Context\textbackslash{}Execution\+Context} use {\ttfamily get\+Validator()} together with {\ttfamily in\+Context()} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1931}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1931}
+
+\begin{DoxyItemize}
+\item added a constraint the uses the expression language
+\item added {\ttfamily min\+Ratio}, {\ttfamily max\+Ratio}, {\ttfamily allow\+Square}, {\ttfamily allow\+Landscape}, and {\ttfamily allow\+Portrait} to Image validator
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1932}{}\doxysection{2.\+3.\+29}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1932}
+
+\begin{DoxyItemize}
+\item fixed compatibility with PHP7 and up by introducing new constraints (Is\+Null, Is\+True, Is\+False) and related validators (Is\+Null\+Validator, Is\+True\+Validator, Is\+False\+Validator)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1933}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1933}
+
+\begin{DoxyItemize}
+\item added the ISBN, ISSN, and IBAN validators
+\item copied the constraints {\ttfamily Optional} and {\ttfamily Required} to the {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Validator\textbackslash{}Constraints\textbackslash{}} namespace and deprecated the original classes.
+\item added comparison validators (Equal\+To, Not\+Equal\+To, Less\+Than, Less\+Than\+Or\+Equal\+To, Greater\+Than, Greater\+Than\+Or\+Equal\+To, Identical\+To, Not\+Identical\+To)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1934}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1934}
+
+\begin{DoxyItemize}
+\item added a Card\+Scheme validator
+\item added a Luhn validator
+\item moved @api-\/tags from {\ttfamily Validator} to {\ttfamily Validator\+Interface}
+\item moved @api-\/tags from {\ttfamily Constraint\+Violation} to the new {\ttfamily Constraint\+Violation\+Interface}
+\item moved @api-\/tags from {\ttfamily Constraint\+Violation\+List} to the new {\ttfamily Constraint\+Violation\+List\+Interface}
+\item moved @api-\/tags from {\ttfamily Execution\+Context} to the new {\ttfamily Execution\+Context\+Interface}
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily Constraint\+Validator\+Interface\+::initialize} is now type hinted against {\ttfamily Execution\+Context\+Interface} instead of {\ttfamily Execution\+Context}
+\item \mbox{[}BC BREAK\mbox{]} changed the visibility of the properties in {\ttfamily Validator} from protected to private
+\item deprecated {\ttfamily Class\+Metadata\+Factory\+Interface} in favor of the new {\ttfamily Metadata\+Factory\+Interface}
+\item deprecated {\ttfamily Class\+Metadata\+Factory\+::get\+Class\+Metadata} in favor of {\ttfamily get\+Metadata\+For}
+\item created {\ttfamily Metadata\+Interface}, {\ttfamily Property\+Metadata\+Interface}, {\ttfamily Class\+Based\+Interface} and {\ttfamily Property\+Metadata\+Container\+Interface}
+\item deprecated {\ttfamily Graph\+Walker} in favor of the new {\ttfamily Validation\+Visitor\+Interface}
+\item deprecated {\ttfamily Execution\+Context\+::add\+Violation\+At\+Path}
+\item deprecated {\ttfamily Execution\+Context\+::add\+Violation\+At\+Sub\+Path} in favor of {\ttfamily Execution\+Context\+Interface\+::add\+Violation\+At}
+\item deprecated {\ttfamily Execution\+Context\+::get\+Current\+Class} in favor of {\ttfamily Execution\+Context\+Interface\+::get\+Class\+Name}
+\item deprecated {\ttfamily Execution\+Context\+::get\+Current\+Property} in favor of {\ttfamily Execution\+Context\+Interface\+::get\+Property\+Name}
+\item deprecated {\ttfamily Execution\+Context\+::get\+Current\+Value} in favor of {\ttfamily Execution\+Context\+Interface\+::get\+Value}
+\item deprecated {\ttfamily Execution\+Context\+::get\+Graph\+Walker} in favor of {\ttfamily Execution\+Context\+Interface\+::validate} and {\ttfamily Execution\+Context\+Interface\+::validate\+Value}
+\item improved {\ttfamily Validator\+Interface\+::validate\+Value} to accept arrays of constraints
+\item changed {\ttfamily Validator\+Interface\+::get\+Metadata\+Factory} to return a {\ttfamily Metadata\+Factory\+Interface} instead of a {\ttfamily Class\+Metadata\+Factory\+Interface}
+\item removed {\ttfamily Class\+Metadata\+Factory\+Interface} type hint from {\ttfamily Validator\+Builder\+Interface\+::set\+Metadata\+Factory}. As of Symfony 2.\+3, this method will be typed against {\ttfamily Metadata\+Factory\+Interface} instead.
+\item \mbox{[}BC BREAK\mbox{]} the switches {\ttfamily traverse} and {\ttfamily deep} in the {\ttfamily Valid} constraint and in {\ttfamily Graph\+Walker\+::walk\+Reference} are ignored for arrays now. Arrays are always traversed recursively.
+\item added dependency to Translation component
+\item violation messages are now translated with a Translator\+Interface implementation
+\item \mbox{[}BC BREAK\mbox{]} inserted argument {\ttfamily \$message} in the constructor of {\ttfamily Constraint\+Violation}
+\item \mbox{[}BC BREAK\mbox{]} inserted arguments {\ttfamily \$translator} and {\ttfamily \$translation\+Domain} in the constructor of {\ttfamily Execution\+Context}
+\item \mbox{[}BC BREAK\mbox{]} inserted arguments {\ttfamily \$translator} and {\ttfamily \$translation\+Domain} in the constructor of {\ttfamily Graph\+Walker}
+\item \mbox{[}BC BREAK\mbox{]} inserted arguments {\ttfamily \$translator} and {\ttfamily \$translation\+Domain} in the constructor of {\ttfamily Validation\+Visitor}
+\item \mbox{[}BC BREAK\mbox{]} inserted arguments {\ttfamily \$translator} and {\ttfamily \$translation\+Domain} in the constructor of {\ttfamily Validator}
+\item \mbox{[}BC BREAK\mbox{]} added {\ttfamily set\+Translator()} and {\ttfamily set\+Translation\+Domain()} to {\ttfamily Validator\+Builder\+Interface}
+\item improved the Validator to support pluralized messages by default
+\item \mbox{[}BC BREAK\mbox{]} changed the source of all pluralized messages in the translation files to the pluralized version
+\item added Exception\+Interface, Bad\+Method\+Call\+Exception and Invalid\+Argument\+Exception
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1935}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_validator__c_h_a_n_g_e_l_o_g_autotoc_md1935}
+
+\begin{DoxyItemize}
+\item added support for {\ttfamily ctype\+\_\+$\ast$} assertions in {\ttfamily Type\+Validator}
+\item improved the Image\+Validator with min width, max width, min height, and max height constraints
+\item added support for MIME with wildcard in File\+Validator
+\item changed Collection validator to add \char`\"{}missing\char`\"{} and \char`\"{}extra\char`\"{} errors to individual fields
+\item changed default value for {\ttfamily extra\+Fields\+Message} and {\ttfamily missing\+Fields\+Message} in Collection constraint
+\item made Execution\+Context immutable
+\item deprecated Constraint methods {\ttfamily set\+Message}, {\ttfamily get\+Message\+Template} and {\ttfamily get\+Message\+Parameters}
+\item added support for dynamic group sequences with the Group\+Sequence\+Provider pattern
+\item \mbox{[}BC BREAK\mbox{]} Constraint\+Validator\+Interface method {\ttfamily is\+Valid} has been renamed to {\ttfamily validate}, its return value was dropped. Constraint\+Validator still contains {\ttfamily is\+Valid} for BC
+\item \mbox{[}BC BREAK\mbox{]} collections in fields annotated with {\ttfamily Valid} are not traversed recursively anymore by default. {\ttfamily Valid} contains a new property {\ttfamily deep} which enables the BC behavior.
+\item added Count constraint
+\item added Length constraint
+\item added Range constraint
+\item deprecated the Min and Max constraints
+\item deprecated the Min\+Length and Max\+Length constraints
+\item added Validation and Validator\+Builder\+Interface
+\item deprecated Validator\+Context, Validator\+Context\+Interface and Validator\+Factory 
+\end{DoxyItemize}

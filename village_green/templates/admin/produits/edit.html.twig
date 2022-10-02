@@ -1,0 +1,21 @@
+{% extends 'base.admin.html.twig' %}
+
+{% block title %}Edit Products{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <div class="row">
+
+                <div class="col-12">
+                    <h1>Modification produit {{ product.name }}</h1>
+                    <img src="/assets/src/{{ product.photo }}" class="img-fluid" width="150px">
+                    {{ include('admin/produits/_form.html.twig', {'button_label': 'Valider'}) }}
+
+
+                    {{ include('admin/produits/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

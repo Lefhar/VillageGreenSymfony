@@ -1,0 +1,107 @@
+\hypertarget{class_monolog_1_1_handler_1_1_abstract_syslog_handler}{}\doxysection{Abstract\+Syslog\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_abstract_syslog_handler}\index{AbstractSyslogHandler@{AbstractSyslogHandler}}
+Inheritance diagram for Abstract\+Syslog\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_abstract_syslog_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_syslog_handler_ad33fa27d32ab935f4cab7fb9946bd424}{\+\_\+\+\_\+construct}} (\$facility=LOG\+\_\+\+USER, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a16b54d7548a44d84626951c3d1794d08}\label{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a16b54d7548a44d84626951c3d1794d08}} 
+{\bfseries \$facility}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a6d19e801b09403c3ffa99c0aa173976e}{\$log\+Levels}}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_syslog_handler_adf9064dbb0eda27314def53d2c06bdd9}{\$facilities}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common syslog functionality
+
+@phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_syslog_handler_ad33fa27d32ab935f4cab7fb9946bd424}\label{class_monolog_1_1_handler_1_1_abstract_syslog_handler_ad33fa27d32ab935f4cab7fb9946bd424}} 
+\index{AbstractSyslogHandler@{AbstractSyslogHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AbstractSyslogHandler@{AbstractSyslogHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$facility = {\ttfamily LOG\+\_\+USER},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$facility} & Either one of the names of the keys in \$this-\/\texorpdfstring{$>$}{>}facilities, or a LOG\+\_\+$\ast$ facility constant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{AbstractSyslogHandler@{AbstractSyslogHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!AbstractSyslogHandler@{AbstractSyslogHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_syslog_handler_adf9064dbb0eda27314def53d2c06bdd9}\label{class_monolog_1_1_handler_1_1_abstract_syslog_handler_adf9064dbb0eda27314def53d2c06bdd9}} 
+\index{AbstractSyslogHandler@{AbstractSyslogHandler}!\$facilities@{\$facilities}}
+\index{\$facilities@{\$facilities}!AbstractSyslogHandler@{AbstractSyslogHandler}}
+\doxysubsubsection{\texorpdfstring{\$facilities}{$facilities}}
+{\footnotesize\ttfamily \$facilities\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'auth'}     => LOG\_AUTH,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'authpriv'} => LOG\_AUTHPRIV,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'cron'}     => LOG\_CRON,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'daemon'}   => LOG\_DAEMON,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'kern'}     => LOG\_KERN,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'lpr'}      => LOG\_LPR,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'mail'}     => LOG\_MAIL,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'news'}     => LOG\_NEWS,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'syslog'}   => LOG\_SYSLOG,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'user'}     => LOG\_USER,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'uucp'}     => LOG\_UUCP,}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a6d19e801b09403c3ffa99c0aa173976e}\label{class_monolog_1_1_handler_1_1_abstract_syslog_handler_a6d19e801b09403c3ffa99c0aa173976e}} 
+\index{AbstractSyslogHandler@{AbstractSyslogHandler}!\$logLevels@{\$logLevels}}
+\index{\$logLevels@{\$logLevels}!AbstractSyslogHandler@{AbstractSyslogHandler}}
+\doxysubsubsection{\texorpdfstring{\$logLevels}{$logLevels}}
+{\footnotesize\ttfamily \$log\+Levels\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger::DEBUG}}     => LOG\_DEBUG,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_af2d1bd27ecbe33ecaadb558404e9c669}{Logger::INFO}}      => LOG\_INFO,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a0b32ca69140ca26e6614dddf004ae3d9}{Logger::NOTICE}}    => LOG\_NOTICE,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_ad0c7ccd2f8b92a760391d21d0ec7b339}{Logger::WARNING}}   => LOG\_WARNING,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger::ERROR}}     => LOG\_ERR,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger::CRITICAL}}  => LOG\_CRIT,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a037a7f6e892e6adb07c2aa099fbaf69d}{Logger::ALERT}}     => LOG\_ALERT,}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger::EMERGENCY}} => LOG\_EMERG,}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Abstract\+Syslog\+Handler.\+php\end{DoxyCompactItemize}

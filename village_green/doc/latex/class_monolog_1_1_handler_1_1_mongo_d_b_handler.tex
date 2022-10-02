@@ -1,0 +1,76 @@
+\hypertarget{class_monolog_1_1_handler_1_1_mongo_d_b_handler}{}\doxysection{Mongo\+DBHandler Class Reference}
+\label{class_monolog_1_1_handler_1_1_mongo_d_b_handler}\index{MongoDBHandler@{MongoDBHandler}}
+Inheritance diagram for Mongo\+DBHandler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_mongo_d_b_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mongo_d_b_handler_ac12d2b4fbf38a5c9b3c69487c3d3967b}{\+\_\+\+\_\+construct}} (\$mongodb, string \$database, string \$collection, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mongo_d_b_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mongo_d_b_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Logs to a Mongo\+DB database.
+
+Usage example\+:
+
+\$log = new \textbackslash{}\+Monolog\textbackslash{}\+Logger(\textquotesingle{}application\textquotesingle{}); \$client = new \textbackslash{}\+Mongo\+DB\textbackslash{}\+Client(\textquotesingle{}mongodb\+://localhost\+:27017\textquotesingle{}); \$mongodb = new \textbackslash{}\+Monolog\textbackslash{}\+Handler\textbackslash{}\+Mongo\+DBHandler(\$client, \textquotesingle{}logs\textquotesingle{}, \textquotesingle{}prod\textquotesingle{}); \$log-\/\texorpdfstring{$>$}{>}push\+Handler(\$mongodb);
+
+The above examples uses the Mongo\+DB PHP library\textquotesingle{}s client class; however, the Mongo\+DB\textbackslash{}\+Driver\textbackslash{}\+Manager class from ext-\/mongodb is also supported. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mongo_d_b_handler_ac12d2b4fbf38a5c9b3c69487c3d3967b}\label{class_monolog_1_1_handler_1_1_mongo_d_b_handler_ac12d2b4fbf38a5c9b3c69487c3d3967b}} 
+\index{MongoDBHandler@{MongoDBHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MongoDBHandler@{MongoDBHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$mongodb,  }\item[{string}]{\$database,  }\item[{string}]{\$collection,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Client | Manager & {\em \$mongodb} & Mongo\+DB library or driver client \\
+\hline
+string & {\em \$database} & Database name \\
+\hline
+string & {\em \$collection} & Collection name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mongo_d_b_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_mongo_d_b_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{MongoDBHandler@{MongoDBHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!MongoDBHandler@{MongoDBHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mongo_d_b_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_mongo_d_b_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{MongoDBHandler@{MongoDBHandler}!write@{write}}
+\index{write@{write}!MongoDBHandler@{MongoDBHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Mongo\+DBHandler.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler}{}\doxysection{Syslog\+Udp\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_syslog_udp_handler}\index{SyslogUdpHandler@{SyslogUdpHandler}}
+Inheritance diagram for Syslog\+Udp\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_syslog_udp_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_handler_ae827db9c63ae0953296485186b5efbe5}{\+\_\+\+\_\+construct}} (string \$host, int \$port=514, \$facility=LOG\+\_\+\+USER, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, string \$ident=\textquotesingle{}php\textquotesingle{}, int \$rfc=self\+::\+RFC5424)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_handler_a05d73af4826e46af15863fb9aecc70f0}{set\+Socket}} (\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_1_1_udp_socket}{Udp\+Socket}} \$socket)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_a870c43c323006cb7d774fd92e1855b61}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_a870c43c323006cb7d774fd92e1855b61}} 
+const {\bfseries RFC3164} = 0
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_ad04b4d1674ccfb9e6086d6094a501f1f}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_ad04b4d1674ccfb9e6086d6094a501f1f}} 
+const {\bfseries RFC5424} = 1
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_aef4c44bd6f53c511ac85e3eeae48505e}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_aef4c44bd6f53c511ac85e3eeae48505e}} 
+const {\bfseries RFC5424e} = 2
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_handler_a7a14cfcc59932dea6606cbeb9ef5aef4}{make\+Common\+Syslog\+Header}} (int \$severity, Date\+Time\+Interface \$datetime)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_a33a9dcf5eaeebf833f2390060f8caf5e}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_a33a9dcf5eaeebf833f2390060f8caf5e}} 
+{\bfseries \$socket}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_a318d2aba48e6dcefe727b360aca98c75}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_a318d2aba48e6dcefe727b360aca98c75}} 
+{\bfseries \$ident}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_a422b3d79f64488c29bc093391a0a0a68}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_a422b3d79f64488c29bc093391a0a0a68}} 
+{\bfseries \$rfc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} for logging to a remote syslogd server.
+
+\begin{DoxyAuthor}{Author}
+Jesper Skovgaard Nielsen \href{mailto:nulpunkt@gmail.com}{\texttt{ nulpunkt@gmail.\+com}} 
+
+Dominik Kukacka \href{mailto:dominik.kukacka@gmail.com}{\texttt{ dominik.\+kukacka@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_ae827db9c63ae0953296485186b5efbe5}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_ae827db9c63ae0953296485186b5efbe5}} 
+\index{SyslogUdpHandler@{SyslogUdpHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SyslogUdpHandler@{SyslogUdpHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$host,  }\item[{int}]{\$port = {\ttfamily 514},  }\item[{}]{\$facility = {\ttfamily LOG\+\_\+USER},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{string}]{\$ident = {\ttfamily \textquotesingle{}php\textquotesingle{}},  }\item[{int}]{\$rfc = {\ttfamily self\+:\+:RFC5424} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$host} & Either IP/hostname or a path to a unix socket (port must be 0 then) \\
+\hline
+int & {\em \$port} & Port number, or 0 if \$host is a unix socket \\
+\hline
+string | int & {\em \$facility} & Either one of the names of the keys in \$this-\/\texorpdfstring{$>$}{>}facilities, or a LOG\+\_\+$\ast$ facility constant \\
+\hline
+bool & {\em \$bubble} & Whether the messages that are handled can bubble up the stack or not \\
+\hline
+string & {\em \$ident} & Program name or tag for each log message. \\
+\hline
+int & {\em \$rfc} & RFC to format the message for. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+@phpstan-\/param self\+::\+RFC$\ast$ \$rfc 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{SyslogUdpHandler@{SyslogUdpHandler}!close@{close}}
+\index{close@{close}!SyslogUdpHandler@{SyslogUdpHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_a7a14cfcc59932dea6606cbeb9ef5aef4}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_a7a14cfcc59932dea6606cbeb9ef5aef4}} 
+\index{SyslogUdpHandler@{SyslogUdpHandler}!makeCommonSyslogHeader@{makeCommonSyslogHeader}}
+\index{makeCommonSyslogHeader@{makeCommonSyslogHeader}!SyslogUdpHandler@{SyslogUdpHandler}}
+\doxysubsubsection{\texorpdfstring{makeCommonSyslogHeader()}{makeCommonSyslogHeader()}}
+{\footnotesize\ttfamily make\+Common\+Syslog\+Header (\begin{DoxyParamCaption}\item[{int}]{\$severity,  }\item[{Date\+Time\+Interface}]{\$datetime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Make common syslog header (see rfc5424 or rfc3164) \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_a05d73af4826e46af15863fb9aecc70f0}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_a05d73af4826e46af15863fb9aecc70f0}} 
+\index{SyslogUdpHandler@{SyslogUdpHandler}!setSocket@{setSocket}}
+\index{setSocket@{setSocket}!SyslogUdpHandler@{SyslogUdpHandler}}
+\doxysubsubsection{\texorpdfstring{setSocket()}{setSocket()}}
+{\footnotesize\ttfamily set\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_1_1_udp_socket}{Udp\+Socket}}}]{\$socket }\end{DoxyParamCaption})}
+
+Inject your own socket, mainly used for testing \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_udp_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_syslog_udp_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{SyslogUdpHandler@{SyslogUdpHandler}!write@{write}}
+\index{write@{write}!SyslogUdpHandler@{SyslogUdpHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Syslog\+Udp\+Handler.\+php\end{DoxyCompactItemize}

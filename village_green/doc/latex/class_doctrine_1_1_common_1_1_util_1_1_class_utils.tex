@@ -1,0 +1,126 @@
+\hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils}{}\doxysection{Class\+Utils Class Reference}
+\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils}\index{ClassUtils@{ClassUtils}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a3cafaae808a7525444149e1d87c2f29c}{get\+Real\+Class}} (\$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a0b584f9e8ef1b5b60e038da2c82c5641}{get\+Class}} (\$object)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a0ffb8603e558c76c21ac4f2e9a4bd0f1}{get\+Parent\+Class}} (\$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a533c95e425a4f0d5dab6d09ab4beaad7}{new\+Reflection\+Class}} (\$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a901bd725e7c9026688db6b292cd73da1}{new\+Reflection\+Object}} (\$object)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_util_1_1_class_utils_aa5701b6af6cec8a731d811d95eaee263}{generate\+Proxy\+Class\+Name}} (\$class\+Name, \$proxy\+Namespace)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class and reflection related functionality for objects that might or not be proxy objects at the moment. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils_aa5701b6af6cec8a731d811d95eaee263}\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils_aa5701b6af6cec8a731d811d95eaee263}} 
+\index{ClassUtils@{ClassUtils}!generateProxyClassName@{generateProxyClassName}}
+\index{generateProxyClassName@{generateProxyClassName}!ClassUtils@{ClassUtils}}
+\doxysubsubsection{\texorpdfstring{generateProxyClassName()}{generateProxyClassName()}}
+{\footnotesize\ttfamily static generate\+Proxy\+Class\+Name (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$proxy\+Namespace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Given a class name and a proxy namespace returns the proxy name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+string & {\em \$proxy\+Namespace} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a0b584f9e8ef1b5b60e038da2c82c5641}\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a0b584f9e8ef1b5b60e038da2c82c5641}} 
+\index{ClassUtils@{ClassUtils}!getClass@{getClass}}
+\index{getClass@{getClass}!ClassUtils@{ClassUtils}}
+\doxysubsubsection{\texorpdfstring{getClass()}{getClass()}}
+{\footnotesize\ttfamily static get\+Class (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the real class name of an object (even if its a proxy).
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & @psalm-\/param Proxy$<$\+T$>$$\vert$T \$object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string$<$\+T$>$
+\end{DoxyReturn}
+@template T of object \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a0ffb8603e558c76c21ac4f2e9a4bd0f1}\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a0ffb8603e558c76c21ac4f2e9a4bd0f1}} 
+\index{ClassUtils@{ClassUtils}!getParentClass@{getParentClass}}
+\index{getParentClass@{getParentClass}!ClassUtils@{ClassUtils}}
+\doxysubsubsection{\texorpdfstring{getParentClass()}{getParentClass()}}
+{\footnotesize\ttfamily static get\+Parent\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the real parent class name of a class or object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a3cafaae808a7525444149e1d87c2f29c}\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a3cafaae808a7525444149e1d87c2f29c}} 
+\index{ClassUtils@{ClassUtils}!getRealClass@{getRealClass}}
+\index{getRealClass@{getRealClass}!ClassUtils@{ClassUtils}}
+\doxysubsubsection{\texorpdfstring{getRealClass()}{getRealClass()}}
+{\footnotesize\ttfamily static get\+Real\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the real class name of a class name that could be a proxy.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string\texorpdfstring{$<$}{<}Proxy$<$\+T$>$\texorpdfstring{$>$}{>}$\vert$class-\/string$<$\+T$>$ \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string$<$\+T$>$
+\end{DoxyReturn}
+@template T of object @psalm-\/var class-\/string$<$\+T$>$\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a533c95e425a4f0d5dab6d09ab4beaad7}\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a533c95e425a4f0d5dab6d09ab4beaad7}} 
+\index{ClassUtils@{ClassUtils}!newReflectionClass@{newReflectionClass}}
+\index{newReflectionClass@{newReflectionClass}!ClassUtils@{ClassUtils}}
+\doxysubsubsection{\texorpdfstring{newReflectionClass()}{newReflectionClass()}}
+{\footnotesize\ttfamily static new\+Reflection\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new reflection class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reflection\+Class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a901bd725e7c9026688db6b292cd73da1}\label{class_doctrine_1_1_common_1_1_util_1_1_class_utils_a901bd725e7c9026688db6b292cd73da1}} 
+\index{ClassUtils@{ClassUtils}!newReflectionObject@{newReflectionObject}}
+\index{newReflectionObject@{newReflectionObject}!ClassUtils@{ClassUtils}}
+\doxysubsubsection{\texorpdfstring{newReflectionObject()}{newReflectionObject()}}
+{\footnotesize\ttfamily static new\+Reflection\+Object (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new reflection object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reflection\+Class 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/common/lib/\+Doctrine/\+Common/\+Util/Class\+Utils.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type}{}\doxysection{Object\+Type Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type}\index{ObjectType@{ObjectType}}
+Inheritance diagram for Object\+Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a24d8db42c7d978d2989826ad48135c02}{get\+SQLDeclaration}} (array \$column, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a7329c43c0c089d47abc2818fccca545e}{convert\+To\+Database\+Value}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a02576e237bf410008f15a806928d2374}{convert\+To\+PHPValue}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_ac177a0717b2fba31b776d51ad66e211d}{requires\+SQLComment\+Hint}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} that maps a PHP object to a clob SQL type. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a7329c43c0c089d47abc2818fccca545e}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a7329c43c0c089d47abc2818fccca545e}} 
+\index{ObjectType@{ObjectType}!convertToDatabaseValue@{convertToDatabaseValue}}
+\index{convertToDatabaseValue@{convertToDatabaseValue}!ObjectType@{ObjectType}}
+\doxysubsubsection{\texorpdfstring{convertToDatabaseValue()}{convertToDatabaseValue()}}
+{\footnotesize\ttfamily convert\+To\+Database\+Value (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Converts a value from its PHP representation to its database representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The database representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a7329c43c0c089d47abc2818fccca545e}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a02576e237bf410008f15a806928d2374}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a02576e237bf410008f15a806928d2374}} 
+\index{ObjectType@{ObjectType}!convertToPHPValue@{convertToPHPValue}}
+\index{convertToPHPValue@{convertToPHPValue}!ObjectType@{ObjectType}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValue()}{convertToPHPValue()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Converts a value from its database representation to its PHP representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The PHP representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02576e237bf410008f15a806928d2374}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a3d0963e68bb313b163a73f2803c64600}} 
+\index{ObjectType@{ObjectType}!getName@{getName}}
+\index{getName@{getName}!ObjectType@{ObjectType}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the name of this type.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Needed? \end{DoxyRefDesc}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a24d8db42c7d978d2989826ad48135c02}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a24d8db42c7d978d2989826ad48135c02}} 
+\index{ObjectType@{ObjectType}!getSQLDeclaration@{getSQLDeclaration}}
+\index{getSQLDeclaration@{getSQLDeclaration}!ObjectType@{ObjectType}}
+\doxysubsubsection{\texorpdfstring{getSQLDeclaration()}{getSQLDeclaration()}}
+{\footnotesize\ttfamily get\+SQLDeclaration (\begin{DoxyParamCaption}\item[{array}]{\$column,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Gets the SQL declaration snippet for a column of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & The column definition \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a24d8db42c7d978d2989826ad48135c02}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_ac177a0717b2fba31b776d51ad66e211d}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_ac177a0717b2fba31b776d51ad66e211d}} 
+\index{ObjectType@{ObjectType}!requiresSQLCommentHint@{requiresSQLCommentHint}}
+\index{requiresSQLCommentHint@{requiresSQLCommentHint}!ObjectType@{ObjectType}}
+\doxysubsubsection{\texorpdfstring{requiresSQLCommentHint()}{requiresSQLCommentHint()}}
+{\footnotesize\ttfamily requires\+SQLComment\+Hint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{If this Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} maps to an already mapped database type, reverse schema engineering can\textquotesingle{}t tell them apart. You need to mark one of those types as commented, which will have Doctrine use an SQL comment to typehint the actual Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}}.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac177a0717b2fba31b776d51ad66e211d}{Type}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Object\+Type.\+php\end{DoxyCompactItemize}

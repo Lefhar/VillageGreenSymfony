@@ -1,0 +1,137 @@
+\hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native}{}\doxysection{HPack\+Native Class Reference}
+\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native}\index{HPackNative@{HPackNative}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a9ee160e11abbd9ca515b7d940b719e54}{\+\_\+\+\_\+construct}} (int \$max\+Size=self\+::\+DEFAULT\+\_\+\+MAX\+\_\+\+SIZE)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a15277430dc8baf2a2ec4a622469215aa}{set\+Table\+Size\+Limit}} (int \$max\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a7b94cdec867cdeef26e2613347db5ede}{resize\+Table}} (int \$size=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a69c8f1cebabaff36efdd239c39ac9206}{decode}} (string \$input, int \$max\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a8a51bfc259e818041f296270f3ba4f3e}{encode}} (array \$headers, int \$compression\+Threshold=self\+::\+DEFAULT\+\_\+\+COMPRESSION\+\_\+\+THRESHOLD)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a7c4486eddb3905004107cf67f42e4d16}{huffman\+Decode}} (string \$input)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a6c45ca6e767ddb1b35e526bb4cbe6705}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a6c45ca6e767ddb1b35e526bb4cbe6705}} 
+static {\bfseries huffman\+Encode} (string \$input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a3df0a2a03c49b5e0b08ea69ed41ef90a}{LAST\+\_\+\+INDEX}} = 61
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_adf62e2b172196282218b1ece3d200fa1}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_adf62e2b172196282218b1ece3d200fa1}} 
+const {\bfseries TABLE}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a9ee160e11abbd9ca515b7d940b719e54}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a9ee160e11abbd9ca515b7d940b719e54}} 
+\index{HPackNative@{HPackNative}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$max\+Size = {\ttfamily self\+:\+:DEFAULT\+\_\+MAX\+\_\+SIZE} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$max\+Size} & Upper limit on table size. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a69c8f1cebabaff36efdd239c39ac9206}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a69c8f1cebabaff36efdd239c39ac9206}} 
+\index{HPackNative@{HPackNative}!decode@{decode}}
+\index{decode@{decode}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily decode (\begin{DoxyParamCaption}\item[{string}]{\$input,  }\item[{int}]{\$max\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & Encoded headers. \\
+\hline
+int & {\em \$max\+Size} & Maximum length of the decoded header string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}\mbox{[}\mbox{]}$\vert$null Returns null if decoding fails or if \$max\+Size is exceeded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a8a51bfc259e818041f296270f3ba4f3e}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a8a51bfc259e818041f296270f3ba4f3e}} 
+\index{HPackNative@{HPackNative}!encode@{encode}}
+\index{encode@{encode}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily encode (\begin{DoxyParamCaption}\item[{array}]{\$headers,  }\item[{int}]{\$compression\+Threshold = {\ttfamily self\+:\+:DEFAULT\+\_\+COMPRESSION\+\_\+THRESHOLD} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$headers} & \\
+\hline
+int & {\em \$compression\+Threshold} & Compress strings whose length is at least the number of bytes given.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a7c4486eddb3905004107cf67f42e4d16}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a7c4486eddb3905004107cf67f42e4d16}} 
+\index{HPackNative@{HPackNative}!huffmanDecode@{huffmanDecode}}
+\index{huffmanDecode@{huffmanDecode}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{huffmanDecode()}{huffmanDecode()}}
+{\footnotesize\ttfamily static huffman\+Decode (\begin{DoxyParamCaption}\item[{string}]{\$input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null Returns null if decoding fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a7b94cdec867cdeef26e2613347db5ede}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a7b94cdec867cdeef26e2613347db5ede}} 
+\index{HPackNative@{HPackNative}!resizeTable@{resizeTable}}
+\index{resizeTable@{resizeTable}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{resizeTable()}{resizeTable()}}
+{\footnotesize\ttfamily resize\+Table (\begin{DoxyParamCaption}\item[{int}]{\$size = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Resizes the table to the given size, removing old entries as per section 4.\+4 if necessary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | null & {\em \$size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a15277430dc8baf2a2ec4a622469215aa}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a15277430dc8baf2a2ec4a622469215aa}} 
+\index{HPackNative@{HPackNative}!setTableSizeLimit@{setTableSizeLimit}}
+\index{setTableSizeLimit@{setTableSizeLimit}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{setTableSizeLimit()}{setTableSizeLimit()}}
+{\footnotesize\ttfamily set\+Table\+Size\+Limit (\begin{DoxyParamCaption}\item[{int}]{\$max\+Size }\end{DoxyParamCaption})}
+
+Sets the upper limit on table size. Dynamic table updates requesting a size above this size will result in a decoding error (i.\+e., returning null from \mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a69c8f1cebabaff36efdd239c39ac9206}{decode()}}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$max\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a3df0a2a03c49b5e0b08ea69ed41ef90a}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_native_a3df0a2a03c49b5e0b08ea69ed41ef90a}} 
+\index{HPackNative@{HPackNative}!LAST\_INDEX@{LAST\_INDEX}}
+\index{LAST\_INDEX@{LAST\_INDEX}!HPackNative@{HPackNative}}
+\doxysubsubsection{\texorpdfstring{LAST\_INDEX}{LAST\_INDEX}}
+{\footnotesize\ttfamily const LAST\+\_\+\+INDEX = 61}
+
+\begin{DoxySeeAlso}{See also}
+RFC 7541 Appendix A 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/hpack/src/\+Internal/HPack\+Native.\+php\end{DoxyCompactItemize}

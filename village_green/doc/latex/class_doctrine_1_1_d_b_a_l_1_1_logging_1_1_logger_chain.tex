@@ -1,0 +1,88 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain}{}\doxysection{Logger\+Chain Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain}\index{LoggerChain@{LoggerChain}}
+Inheritance diagram for Logger\+Chain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a454c64430032498adb144efca703e509}{\+\_\+\+\_\+construct}} (iterable \$loggers=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_ac99e60655b39f908612c6b206e2bb30d}{start\+Query}} (\$sql, ?array \$params=null, ?array \$types=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a3a03e709c639bb9ea5a2b12e4d9bff52}{stop\+Query}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Chains multiple \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger}{SQLLogger}}.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000062}{Deprecated}}]\end{DoxyRefDesc}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}}.\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a454c64430032498adb144efca703e509}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a454c64430032498adb144efca703e509}} 
+\index{LoggerChain@{LoggerChain}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LoggerChain@{LoggerChain}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{iterable}]{\$loggers = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em iterable$<$\+SQLLogger$>$} & \$loggers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_ac99e60655b39f908612c6b206e2bb30d}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_ac99e60655b39f908612c6b206e2bb30d}} 
+\index{LoggerChain@{LoggerChain}!startQuery@{startQuery}}
+\index{startQuery@{startQuery}!LoggerChain@{LoggerChain}}
+\doxysubsubsection{\texorpdfstring{startQuery()}{startQuery()}}
+{\footnotesize\ttfamily start\+Query (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{?array}]{\$params = {\ttfamily null},  }\item[{?array}]{\$types = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Logs a SQL statement somewhere.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & SQL statement \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$$\vert$null} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement}{Statement}} parameters \\
+\hline
+ & {\em array$<$int,Type$\vert$int$\vert$string$\vert$null$>$$\vert$array$<$string,Type$\vert$int$\vert$string$\vert$null$>$$\vert$null} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_ac99e60655b39f908612c6b206e2bb30d}{SQLLogger}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a3a03e709c639bb9ea5a2b12e4d9bff52}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a3a03e709c639bb9ea5a2b12e4d9bff52}} 
+\index{LoggerChain@{LoggerChain}!stopQuery@{stopQuery}}
+\index{stopQuery@{stopQuery}!LoggerChain@{LoggerChain}}
+\doxysubsubsection{\texorpdfstring{stopQuery()}{stopQuery()}}
+{\footnotesize\ttfamily stop\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Marks the last started query as stopped. This can be used for timing of queries.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_a3a03e709c639bb9ea5a2b12e4d9bff52}{SQLLogger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Logging/Logger\+Chain.\+php\end{DoxyCompactItemize}

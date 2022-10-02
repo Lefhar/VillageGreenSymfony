@@ -1,0 +1,251 @@
+\hypertarget{class_amp_1_1_process_1_1_process}{}\doxysection{Process Class Reference}
+\label{class_amp_1_1_process_1_1_process}\index{Process@{Process}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a319692dba47c7294278b9a8c571a72c8}{\+\_\+\+\_\+construct}} (\$command, string \$cwd=null, array \$env=\mbox{[}$\,$\mbox{]}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_ad0cb87b388bc74d63dc884accdca8713}\label{class_amp_1_1_process_1_1_process_ad0cb87b388bc74d63dc884accdca8713}} 
+{\bfseries \+\_\+\+\_\+clone} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_af8fa59992209e36dccb3eefb0f75531f}{start}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_aa99149be8621fb1b53890ac267e504ef}{join}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a980d8518a01dac55c30b0fb2fb894eba}{kill}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a04df425c7b519753d72051c4cb736f94}{signal}} (int \$signo)
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a77c9ce8189c6f6efc037d75e4faf73ba}{get\+Pid}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a154e8997a5c7e497d5d54dcf340a80b1}{get\+Command}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_af65c40475a1230cbfde32b832fc47a80}{get\+Working\+Directory}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_af7e05155f430839d67e1c4e4d9431560}{get\+Env}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_ad7e54aa55e82e9be1428d9fa8eb559a5}{is\+Running}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_ade85314bc074191bf57b0a76acff7a07}{get\+Stdin}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a334bd40d32780842e60ea6327b2dd629}{get\+Stdout}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_a9544f960c7c5e0a5d3c9c94718862876}{get\+Stderr}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_aca922c6f7bcc068784112a8e402a59f7}\label{class_amp_1_1_process_1_1_process_aca922c6f7bcc068784112a8e402a59f7}} 
+{\bfseries \+\_\+\+\_\+debug\+Info} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a319692dba47c7294278b9a8c571a72c8}\label{class_amp_1_1_process_1_1_process_a319692dba47c7294278b9a8c571a72c8}} 
+\index{Process@{Process}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$command,  }\item[{string}]{\$cwd = {\ttfamily null},  }\item[{array}]{\$env = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$command} & Command to run. \\
+\hline
+string | null & {\em \$cwd} & Working directory or use an empty string to use the working directory of the parent. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$env} & Environment variables or use an empty array to inherit from the parent. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & Options for {\ttfamily proc\+\_\+open()}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the arguments are invalid. \mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a421831a265621325e1fdd19aace0c758}\label{class_amp_1_1_process_1_1_process_a421831a265621325e1fdd19aace0c758}} 
+\index{Process@{Process}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops the process if it is still running. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a154e8997a5c7e497d5d54dcf340a80b1}\label{class_amp_1_1_process_1_1_process_a154e8997a5c7e497d5d54dcf340a80b1}} 
+\index{Process@{Process}!getCommand@{getCommand}}
+\index{getCommand@{getCommand}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getCommand()}{getCommand()}}
+{\footnotesize\ttfamily get\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the command to execute.
+
+\begin{DoxyReturn}{Returns}
+string The command to execute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_af7e05155f430839d67e1c4e4d9431560}\label{class_amp_1_1_process_1_1_process_af7e05155f430839d67e1c4e4d9431560}} 
+\index{Process@{Process}!getEnv@{getEnv}}
+\index{getEnv@{getEnv}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getEnv()}{getEnv()}}
+{\footnotesize\ttfamily get\+Env (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the environment variables array.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} Array of environment variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a1a49b8dded6e91a52e2fd07195d334da}\label{class_amp_1_1_process_1_1_process_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{Process@{Process}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the options to pass to proc\+\_\+open().
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} Array of options. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a77c9ce8189c6f6efc037d75e4faf73ba}\label{class_amp_1_1_process_1_1_process_a77c9ce8189c6f6efc037d75e4faf73ba}} 
+\index{Process@{Process}!getPid@{getPid}}
+\index{getPid@{getPid}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getPid()}{getPid()}}
+{\footnotesize\ttfamily get\+Pid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the PID of the child process.
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_status_error}{Status\+Error}}} & If the process has not started or has not completed starting. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a9544f960c7c5e0a5d3c9c94718862876}\label{class_amp_1_1_process_1_1_process_a9544f960c7c5e0a5d3c9c94718862876}} 
+\index{Process@{Process}!getStderr@{getStderr}}
+\index{getStderr@{getStderr}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getStderr()}{getStderr()}}
+{\footnotesize\ttfamily get\+Stderr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the process error stream (STDERR).
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_input_stream}{Process\+Input\+Stream}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_ade85314bc074191bf57b0a76acff7a07}\label{class_amp_1_1_process_1_1_process_ade85314bc074191bf57b0a76acff7a07}} 
+\index{Process@{Process}!getStdin@{getStdin}}
+\index{getStdin@{getStdin}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getStdin()}{getStdin()}}
+{\footnotesize\ttfamily get\+Stdin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the process input stream (STDIN).
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_output_stream}{Process\+Output\+Stream}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a334bd40d32780842e60ea6327b2dd629}\label{class_amp_1_1_process_1_1_process_a334bd40d32780842e60ea6327b2dd629}} 
+\index{Process@{Process}!getStdout@{getStdout}}
+\index{getStdout@{getStdout}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getStdout()}{getStdout()}}
+{\footnotesize\ttfamily get\+Stdout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the process output stream (STDOUT).
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_input_stream}{Process\+Input\+Stream}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_af65c40475a1230cbfde32b832fc47a80}\label{class_amp_1_1_process_1_1_process_af65c40475a1230cbfde32b832fc47a80}} 
+\index{Process@{Process}!getWorkingDirectory@{getWorkingDirectory}}
+\index{getWorkingDirectory@{getWorkingDirectory}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getWorkingDirectory()}{getWorkingDirectory()}}
+{\footnotesize\ttfamily get\+Working\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the current working directory.
+
+\begin{DoxyReturn}{Returns}
+string The current working directory an empty string if inherited from the current PHP process. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_ad7e54aa55e82e9be1428d9fa8eb559a5}\label{class_amp_1_1_process_1_1_process_ad7e54aa55e82e9be1428d9fa8eb559a5}} 
+\index{Process@{Process}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determines if the process is still running.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_aa99149be8621fb1b53890ac267e504ef}\label{class_amp_1_1_process_1_1_process_aa99149be8621fb1b53890ac267e504ef}} 
+\index{Process@{Process}!join@{join}}
+\index{join@{join}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for the process to end.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} $<$int$>$ Succeeds with process exit code or fails with a \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}} if the process is killed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_status_error}{Status\+Error}}} & If the process has already been started. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a980d8518a01dac55c30b0fb2fb894eba}\label{class_amp_1_1_process_1_1_process_a980d8518a01dac55c30b0fb2fb894eba}} 
+\index{Process@{Process}!kill@{kill}}
+\index{kill@{kill}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Forcibly end the process.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_status_error}{Status\+Error}}} & If the process is not running. \\
+\hline
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If terminating the process fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_a04df425c7b519753d72051c4cb736f94}\label{class_amp_1_1_process_1_1_process_a04df425c7b519753d72051c4cb736f94}} 
+\index{Process@{Process}!signal@{signal}}
+\index{signal@{signal}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily signal (\begin{DoxyParamCaption}\item[{int}]{\$signo }\end{DoxyParamCaption})}
+
+Send a signal signal to the process.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$signo} & Signal number to send to process.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_status_error}{Status\+Error}}} & If the process is not running. \\
+\hline
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If sending the signal fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_af8fa59992209e36dccb3eefb0f75531f}\label{class_amp_1_1_process_1_1_process_af8fa59992209e36dccb3eefb0f75531f}} 
+\index{Process@{Process}!start@{start}}
+\index{start@{start}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start the process.
+
+\begin{DoxyReturn}{Returns}
+Promise$<$int$>$ Resolves with the PID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_status_error}{Status\+Error}}} & If the process has already been started. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/process/lib/Process.\+php\end{DoxyCompactItemize}

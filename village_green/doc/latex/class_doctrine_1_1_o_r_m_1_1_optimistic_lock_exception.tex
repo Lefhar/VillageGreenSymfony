@@ -1,0 +1,108 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{}\doxysection{Optimistic\+Lock\+Exception Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}\index{OptimisticLockException@{OptimisticLockException}}
+Inheritance diagram for Optimistic\+Lock\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_abe2ba1f0f55836527e21873b43fcba2a}{\+\_\+\+\_\+construct}} (\$msg, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a0848c661e55b6027e3794d16cad5d501}{get\+Entity}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_aea9cca2f260bf6cb6318a7c2e279007d}{lock\+Failed}} (\$entity)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a2cfc0ee0304420386136294c61608546}{lock\+Failed\+Version\+Mismatch}} (\$entity, \$expected\+Lock\+Version, \$actual\+Lock\+Version)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a49826a69b58961f8763d830ca1265e2a}{not\+Versioned}} (\$entity\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}} is thrown when a version check on an object that uses optimistic locking through a version field fails. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_abe2ba1f0f55836527e21873b43fcba2a}\label{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_abe2ba1f0f55836527e21873b43fcba2a}} 
+\index{OptimisticLockException@{OptimisticLockException}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!OptimisticLockException@{OptimisticLockException}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$msg,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$msg} & \\
+\hline
+object | null & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a0848c661e55b6027e3794d16cad5d501}\label{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a0848c661e55b6027e3794d16cad5d501}} 
+\index{OptimisticLockException@{OptimisticLockException}!getEntity@{getEntity}}
+\index{getEntity@{getEntity}!OptimisticLockException@{OptimisticLockException}}
+\doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
+{\footnotesize\ttfamily get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the entity that caused the exception.
+
+\begin{DoxyReturn}{Returns}
+object$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_aea9cca2f260bf6cb6318a7c2e279007d}\label{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_aea9cca2f260bf6cb6318a7c2e279007d}} 
+\index{OptimisticLockException@{OptimisticLockException}!lockFailed@{lockFailed}}
+\index{lockFailed@{lockFailed}!OptimisticLockException@{OptimisticLockException}}
+\doxysubsubsection{\texorpdfstring{lockFailed()}{lockFailed()}}
+{\footnotesize\ttfamily static lock\+Failed (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a2cfc0ee0304420386136294c61608546}\label{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a2cfc0ee0304420386136294c61608546}} 
+\index{OptimisticLockException@{OptimisticLockException}!lockFailedVersionMismatch@{lockFailedVersionMismatch}}
+\index{lockFailedVersionMismatch@{lockFailedVersionMismatch}!OptimisticLockException@{OptimisticLockException}}
+\doxysubsubsection{\texorpdfstring{lockFailedVersionMismatch()}{lockFailedVersionMismatch()}}
+{\footnotesize\ttfamily static lock\+Failed\+Version\+Mismatch (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{}]{\$expected\+Lock\+Version,  }\item[{}]{\$actual\+Lock\+Version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+int | Date\+Time\+Interface & {\em \$expected\+Lock\+Version} & \\
+\hline
+int | Date\+Time\+Interface & {\em \$actual\+Lock\+Version} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a49826a69b58961f8763d830ca1265e2a}\label{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception_a49826a69b58961f8763d830ca1265e2a}} 
+\index{OptimisticLockException@{OptimisticLockException}!notVersioned@{notVersioned}}
+\index{notVersioned@{notVersioned}!OptimisticLockException@{OptimisticLockException}}
+\doxysubsubsection{\texorpdfstring{notVersioned()}{notVersioned()}}
+{\footnotesize\ttfamily static not\+Versioned (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Optimistic\+Lock\+Exception.\+php\end{DoxyCompactItemize}

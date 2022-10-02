@@ -1,0 +1,90 @@
+\hypertarget{class_php_parser_1_1_node_dumper}{}\doxysection{Node\+Dumper Class Reference}
+\label{class_php_parser_1_1_node_dumper}\index{NodeDumper@{NodeDumper}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_dumper_a3f8a60e8e1644d4f26da4ca9330794dd}{\+\_\+\+\_\+construct}} (array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_dumper_a957dd3592370f0558436c1d9d6eb6927}{dump}} (\$node, string \$code=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_a48cfcf7ba736598252ec48d574d380cd}\label{class_php_parser_1_1_node_dumper_a48cfcf7ba736598252ec48d574d380cd}} 
+{\bfseries dump\+Recursive} (\$node)
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_a1c6779354d097ab9c4be6994cc6b9d61}\label{class_php_parser_1_1_node_dumper_a1c6779354d097ab9c4be6994cc6b9d61}} 
+{\bfseries dump\+Flags} (\$flags)
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_aeee41c81f8483c91088ceecdc2a529f1}\label{class_php_parser_1_1_node_dumper_aeee41c81f8483c91088ceecdc2a529f1}} 
+{\bfseries dump\+Include\+Type} (\$type)
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_a58dff481df70995f21b6007b9857664d}\label{class_php_parser_1_1_node_dumper_a58dff481df70995f21b6007b9857664d}} 
+{\bfseries dump\+Use\+Type} (\$type)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_dumper_a1ae5b0d596321f8a7c755981eac6ce2a}{dump\+Position}} (\mbox{\hyperlink{interface_php_parser_1_1_node}{Node}} \$node)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_a3f8a60e8e1644d4f26da4ca9330794dd}\label{class_php_parser_1_1_node_dumper_a3f8a60e8e1644d4f26da4ca9330794dd}} 
+\index{NodeDumper@{NodeDumper}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!NodeDumper@{NodeDumper}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{class_php_parser_1_1_node_dumper}{Node\+Dumper}}.
+
+Supported options\+:
+\begin{DoxyItemize}
+\item bool dump\+Comments\+: Whether comments should be dumped.
+\item bool dump\+Positions\+: Whether line/offset information should be dumped. To dump offset information, the code needs to be passed to \mbox{\hyperlink{class_php_parser_1_1_node_dumper_a957dd3592370f0558436c1d9d6eb6927}{dump()}}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$options} & Options (see description) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_a957dd3592370f0558436c1d9d6eb6927}\label{class_php_parser_1_1_node_dumper_a957dd3592370f0558436c1d9d6eb6927}} 
+\index{NodeDumper@{NodeDumper}!dump@{dump}}
+\index{dump@{dump}!NodeDumper@{NodeDumper}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily dump (\begin{DoxyParamCaption}\item[{}]{\$node,  }\item[{string}]{\$code = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Dumps a node or array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | \mbox{\hyperlink{interface_php_parser_1_1_node}{Node}} & {\em \$node} & \mbox{\hyperlink{interface_php_parser_1_1_node}{Node}} or array to dump \\
+\hline
+string | null & {\em \$code} & Code corresponding to dumped AST. This only needs to be passed if the dump\+Positions option is enabled and the dumping of node offsets is desired.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Dumped value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_dumper_a1ae5b0d596321f8a7c755981eac6ce2a}\label{class_php_parser_1_1_node_dumper_a1ae5b0d596321f8a7c755981eac6ce2a}} 
+\index{NodeDumper@{NodeDumper}!dumpPosition@{dumpPosition}}
+\index{dumpPosition@{dumpPosition}!NodeDumper@{NodeDumper}}
+\doxysubsubsection{\texorpdfstring{dumpPosition()}{dumpPosition()}}
+{\footnotesize\ttfamily dump\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_php_parser_1_1_node}{Node}}}]{\$node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dump node position, if possible.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_php_parser_1_1_node}{Node}} & {\em \$node} & \mbox{\hyperlink{interface_php_parser_1_1_node}{Node}} for which to dump position\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null Dump of position, or null if position information not available 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/Node\+Dumper.\+php\end{DoxyCompactItemize}

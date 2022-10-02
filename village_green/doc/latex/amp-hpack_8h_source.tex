@@ -1,0 +1,35 @@
+\hypertarget{amp-hpack_8h_source}{}\doxysection{amp-\/hpack.h}
+\label{amp-hpack_8h_source}\index{vendor/amphp/hpack/src/Internal/amp-\/hpack.h@{vendor/amphp/hpack/src/Internal/amp-\/hpack.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FFI\_SCOPE "{}amphp-\/hpack-\/nghttp2"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define FFI\_LIB "{}libnghttp2.so"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }nghttp2\_hd\_deflater nghttp2\_hd\_deflater;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }nghttp2\_hd\_inflater nghttp2\_hd\_inflater;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{10   uint8\_t *name;}
+\DoxyCodeLine{11   uint8\_t *value;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13   \textcolor{keywordtype}{size\_t} namelen;}
+\DoxyCodeLine{14   \textcolor{keywordtype}{size\_t} valuelen;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16   uint8\_t flags;}
+\DoxyCodeLine{17 \} \mbox{\hyperlink{structnghttp2__nv}{nghttp2\_nv}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keywordtype}{int} nghttp2\_hd\_deflate\_new(nghttp2\_hd\_deflater **deflater\_ptr, \textcolor{keywordtype}{size\_t} deflate\_hd\_table\_bufsize\_max);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 ssize\_t nghttp2\_hd\_deflate\_hd(nghttp2\_hd\_deflater *deflater, uint8\_t *buf, \textcolor{keywordtype}{size\_t} buflen, \textcolor{keyword}{const} \mbox{\hyperlink{structnghttp2__nv}{nghttp2\_nv}} *nva, \textcolor{keywordtype}{size\_t} nvlen);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keywordtype}{size\_t} nghttp2\_hd\_deflate\_bound(nghttp2\_hd\_deflater *deflater, \textcolor{keyword}{const} \mbox{\hyperlink{structnghttp2__nv}{nghttp2\_nv}} *nva, \textcolor{keywordtype}{size\_t} nvlen);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keywordtype}{int} nghttp2\_hd\_inflate\_new(nghttp2\_hd\_inflater **inflater\_ptr);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 ssize\_t nghttp2\_hd\_inflate\_hd2(nghttp2\_hd\_inflater *inflater, \mbox{\hyperlink{structnghttp2__nv}{nghttp2\_nv}} *nv\_out, \textcolor{keywordtype}{int} *inflate\_flags, \textcolor{keyword}{const} uint8\_t *in, \textcolor{keywordtype}{size\_t} inlen, \textcolor{keywordtype}{int} in\_final);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keywordtype}{int} nghttp2\_hd\_inflate\_end\_headers(nghttp2\_hd\_inflater *inflater);}
+
+\end{DoxyCode}

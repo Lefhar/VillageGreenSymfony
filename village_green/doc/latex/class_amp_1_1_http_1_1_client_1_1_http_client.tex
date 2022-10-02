@@ -1,0 +1,45 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client}{}\doxysection{Http\+Client Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_http_client}\index{HttpClient@{HttpClient}}
+Inheritance diagram for Http\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_http_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_abc139b4dc497141688c0781db7a10fb3}\label{class_amp_1_1_http_1_1_client_1_1_http_client_abc139b4dc497141688c0781db7a10fb3}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_delegate_http_client}{Delegate\+Http\+Client}} \$http\+Client)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_a4127c30ab27eb7e92e7d0be84d79e2dd}{request}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, ?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Convenient HTTP client for use in applications and libraries, providing a default for the cancellation token and automatically cloning the passed request, so future application requests can re-\/use the same object again. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_a4127c30ab27eb7e92e7d0be84d79e2dd}\label{class_amp_1_1_http_1_1_client_1_1_http_client_a4127c30ab27eb7e92e7d0be84d79e2dd}} 
+\index{HttpClient@{HttpClient}!request@{request}}
+\index{request@{request}!HttpClient@{HttpClient}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} a specific resource from an HTTP server.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Response$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/Http\+Client.\+php\end{DoxyCompactItemize}

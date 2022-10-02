@@ -1,0 +1,216 @@
+\hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection}{}\doxysection{Record\+Collection Class Reference}
+\label{class_lib_d_n_s_1_1_records_1_1_record_collection}\index{RecordCollection@{RecordCollection}}
+Inheritance diagram for Record\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lib_d_n_s_1_1_records_1_1_record_collection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_ac395571e7767c80119b30cf2e5087c59}{\+\_\+\+\_\+construct}} (\$type)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a60914cb47cd4311aa844bbf75f364d28}{add}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}} \$record)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a4a1194d348774d6105d74c8fb4396592}{remove}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}} \$record)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a5173c784dd7784c52656e1b4106e9cc2}{contains}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}} \$record, bool \$same\+Instance=false)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_ab83120627bf905d62455095350bd7007}{get\+Records\+By\+Name}} (string \$name)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a98b09d72ba4397f7cbc8db88fda04e12}{get\+Record\+By\+Index}} (int \$index)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a6013d09901be524a4df605e628695c64}{clear\+Records\+By\+Name}} (string \$name)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a64e8191090bf560e825966b082e868f0}{get\+Names}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_a7a9f937c2958e6f4dd7b030f86fb70b7}{get\+Iterator}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_ac395571e7767c80119b30cf2e5087c59}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_ac395571e7767c80119b30cf2e5087c59}} 
+\index{RecordCollection@{RecordCollection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$type} & Can be indicated using the \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_types}{Record\+Types}} enum \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception When the specified record type is invalid 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a60914cb47cd4311aa844bbf75f364d28}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a60914cb47cd4311aa844bbf75f364d28}} 
+\index{RecordCollection@{RecordCollection}!add@{add}}
+\index{add@{add}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}}}]{\$record }\end{DoxyParamCaption})}
+
+Add a record to the collection
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record & {\em \$record} & The record to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception When the wrong record type is supplied \mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_aa821bec12eaa7e0f649397c9675ff505}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{RecordCollection@{RecordCollection}!clear@{clear}}
+\index{clear@{clear}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove all records from the collection \mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a6013d09901be524a4df605e628695c64}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a6013d09901be524a4df605e628695c64}} 
+\index{RecordCollection@{RecordCollection}!clearRecordsByName@{clearRecordsByName}}
+\index{clearRecordsByName@{clearRecordsByName}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{clearRecordsByName()}{clearRecordsByName()}}
+{\footnotesize\ttfamily clear\+Records\+By\+Name (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Remove all records in the collection that refer to the specified name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name to match records against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of records removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a5173c784dd7784c52656e1b4106e9cc2}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a5173c784dd7784c52656e1b4106e9cc2}} 
+\index{RecordCollection@{RecordCollection}!contains@{contains}}
+\index{contains@{contains}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}}}]{\$record,  }\item[{bool}]{\$same\+Instance = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Test whether the collection contains a specific record
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record & {\em \$record} & The record to search for \\
+\hline
+bool & {\em \$same\+Instance} & Whether to perform strict comparisons in search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{RecordCollection@{RecordCollection}!count@{count}}
+\index{count@{count}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the number of records in the collection (Countable interface)
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a7a9f937c2958e6f4dd7b030f86fb70b7}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a7a9f937c2958e6f4dd7b030f86fb70b7}} 
+\index{RecordCollection@{RecordCollection}!getIterator@{getIterator}}
+\index{getIterator@{getIterator}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{getIterator()}{getIterator()}}
+{\footnotesize\ttfamily get\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve an iterator (Iterator\+Aggregate interface)
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a64e8191090bf560e825966b082e868f0}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a64e8191090bf560e825966b082e868f0}} 
+\index{RecordCollection@{RecordCollection}!getNames@{getNames}}
+\index{getNames@{getNames}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{getNames()}{getNames()}}
+{\footnotesize\ttfamily get\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a list of all names referenced by records in the collection
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a98b09d72ba4397f7cbc8db88fda04e12}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a98b09d72ba4397f7cbc8db88fda04e12}} 
+\index{RecordCollection@{RecordCollection}!getRecordByIndex@{getRecordByIndex}}
+\index{getRecordByIndex@{getRecordByIndex}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{getRecordByIndex()}{getRecordByIndex()}}
+{\footnotesize\ttfamily get\+Record\+By\+Index (\begin{DoxyParamCaption}\item[{int}]{\$index }\end{DoxyParamCaption})}
+
+Get a record from the collection by index
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$index} & \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}} index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Out\+Of\+Bounds\+Exception When the supplied index does not refer to a valid record \mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_ab83120627bf905d62455095350bd7007}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_ab83120627bf905d62455095350bd7007}} 
+\index{RecordCollection@{RecordCollection}!getRecordsByName@{getRecordsByName}}
+\index{getRecordsByName@{getRecordsByName}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{getRecordsByName()}{getRecordsByName()}}
+{\footnotesize\ttfamily get\+Records\+By\+Name (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Get all records in the collection that refer to the specified name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name to match records against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a830b5c75df72b32396701bc563fbe3c7}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{RecordCollection@{RecordCollection}!getType@{getType}}
+\index{getType@{getType}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get whether the collection holds question or resource records
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_record_collection_a4a1194d348774d6105d74c8fb4396592}\label{class_lib_d_n_s_1_1_records_1_1_record_collection_a4a1194d348774d6105d74c8fb4396592}} 
+\index{RecordCollection@{RecordCollection}!remove@{remove}}
+\index{remove@{remove}!RecordCollection@{RecordCollection}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record}{Record}}}]{\$record }\end{DoxyParamCaption})}
+
+Remove a record from the collection
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record & {\em \$record} & The record to remove \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Records/Record\+Collection.\+php\end{DoxyCompactItemize}

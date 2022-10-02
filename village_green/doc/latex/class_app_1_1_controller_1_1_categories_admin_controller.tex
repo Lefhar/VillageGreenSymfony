@@ -1,0 +1,62 @@
+\hypertarget{class_app_1_1_controller_1_1_categories_admin_controller}{}\doxysection{Categories\+Admin\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_categories_admin_controller}\index{CategoriesAdminController@{CategoriesAdminController}}
+Inheritance diagram for Categories\+Admin\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_categories_admin_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_categories_admin_controller_a5b1058f4f89936f52bd25ac754162b0f}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$categories\+Repository)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_categories_admin_controller_a84845d75eae95bf4eecc0f49f04c765a}{new}} (Request \$request, Entity\+Manager\+Interface \$entity\+Manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_categories_admin_controller_a5c331dcfb793379cc9ae4f8df7dbd980}{edit}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}} \$category, Entity\+Manager\+Interface \$entity\+Manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_categories_admin_controller_a2265f78e0fc0df69c2f40a0422b31ac7}{show}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}} \$category)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_categories_admin_controller_a345a2d50299f60b92586f694fe273103}{delete}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}} \$category, Entity\+Manager\+Interface \$entity\+Manager)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Route(\char`\"{}/admin/categories\char`\"{}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_categories_admin_controller_a345a2d50299f60b92586f694fe273103}\label{class_app_1_1_controller_1_1_categories_admin_controller_a345a2d50299f60b92586f694fe273103}} 
+\index{CategoriesAdminController@{CategoriesAdminController}!delete@{delete}}
+\index{delete@{delete}!CategoriesAdminController@{CategoriesAdminController}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}}}]{\$category,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\{id\}\char`\"{}, name=\char`\"{}categories\+\_\+admin\+\_\+delete\char`\"{}, methods=\{\char`\"{}\+POST\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_categories_admin_controller_a5c331dcfb793379cc9ae4f8df7dbd980}\label{class_app_1_1_controller_1_1_categories_admin_controller_a5c331dcfb793379cc9ae4f8df7dbd980}} 
+\index{CategoriesAdminController@{CategoriesAdminController}!edit@{edit}}
+\index{edit@{edit}!CategoriesAdminController@{CategoriesAdminController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}}}]{\$category,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\{id\}/edit\char`\"{}, name=\char`\"{}categories\+\_\+admin\+\_\+edit\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}, \char`\"{}\+POST\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_categories_admin_controller_a5b1058f4f89936f52bd25ac754162b0f}\label{class_app_1_1_controller_1_1_categories_admin_controller_a5b1058f4f89936f52bd25ac754162b0f}} 
+\index{CategoriesAdminController@{CategoriesAdminController}!index@{index}}
+\index{index@{index}!CategoriesAdminController@{CategoriesAdminController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$categories\+Repository }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\char`\"{}, name=\char`\"{}categories\+\_\+admin\+\_\+index\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_categories_admin_controller_a84845d75eae95bf4eecc0f49f04c765a}\label{class_app_1_1_controller_1_1_categories_admin_controller_a84845d75eae95bf4eecc0f49f04c765a}} 
+\index{CategoriesAdminController@{CategoriesAdminController}!new@{new}}
+\index{new@{new}!CategoriesAdminController@{CategoriesAdminController}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/new\char`\"{}, name=\char`\"{}categories\+\_\+admin\+\_\+new\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}, \char`\"{}\+POST\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_categories_admin_controller_a2265f78e0fc0df69c2f40a0422b31ac7}\label{class_app_1_1_controller_1_1_categories_admin_controller_a2265f78e0fc0df69c2f40a0422b31ac7}} 
+\index{CategoriesAdminController@{CategoriesAdminController}!show@{show}}
+\index{show@{show}!CategoriesAdminController@{CategoriesAdminController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_categories}{Categories}}}]{\$category }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\{id\}\char`\"{}, name=\char`\"{}categories\+\_\+admin\+\_\+show\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}\}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Categories\+Admin\+Controller.\+php\end{DoxyCompactItemize}

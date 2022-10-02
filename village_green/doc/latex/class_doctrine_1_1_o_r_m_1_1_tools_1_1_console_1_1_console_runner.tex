@@ -1,0 +1,69 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner}{}\doxysection{Console\+Runner Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner}\index{ConsoleRunner@{ConsoleRunner}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a5c7c59852c2e2be53ea689ed0da23ae7}{create\+Helper\+Set}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$entity\+Manager)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_abdf57cac899af7176ac88e19d5097c78}{run}} (\$helper\+Set\+Or\+Provider, array \$commands=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a942c853ea92f39702291c300ca51b65e}{create\+Application}} (\$helper\+Set\+Or\+Provider, array \$commands=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a9df5ec810a07a18641dbca3eb4439762}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a9df5ec810a07a18641dbca3eb4439762}} 
+static {\bfseries add\+Commands} (\mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_application}{Application}} \$cli, ?\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_entity_manager_provider}{Entity\+Manager\+Provider}} \$entity\+Manager\+Provider=null)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_ae795a56a11a89ac809a73ef19ed99f1c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_ae795a56a11a89ac809a73ef19ed99f1c}} 
+static {\bfseries print\+Cli\+Config\+Template} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles running the Console \mbox{\hyperlink{namespace_tools}{Tools}} inside Symfony Console context. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a942c853ea92f39702291c300ca51b65e}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a942c853ea92f39702291c300ca51b65e}} 
+\index{ConsoleRunner@{ConsoleRunner}!createApplication@{createApplication}}
+\index{createApplication@{createApplication}!ConsoleRunner@{ConsoleRunner}}
+\doxysubsubsection{\texorpdfstring{createApplication()}{createApplication()}}
+{\footnotesize\ttfamily static create\+Application (\begin{DoxyParamCaption}\item[{}]{\$helper\+Set\+Or\+Provider,  }\item[{array}]{\$commands = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a console application with the given helperset and optional commands.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Helper\+Set | \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_entity_manager_provider}{Entity\+Manager\+Provider}} & {\em \$helper\+Set\+Or\+Provider} & \\
+\hline
+Symfony\+Command\mbox{[}$\,$\mbox{]} & {\em \$commands} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Out\+Of\+Bounds\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a5c7c59852c2e2be53ea689ed0da23ae7}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_a5c7c59852c2e2be53ea689ed0da23ae7}} 
+\index{ConsoleRunner@{ConsoleRunner}!createHelperSet@{createHelperSet}}
+\index{createHelperSet@{createHelperSet}!ConsoleRunner@{ConsoleRunner}}
+\doxysubsubsection{\texorpdfstring{createHelperSet()}{createHelperSet()}}
+{\footnotesize\ttfamily static create\+Helper\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$entity\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a Symfony Console Helper\+Set \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_abdf57cac899af7176ac88e19d5097c78}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_console_runner_abdf57cac899af7176ac88e19d5097c78}} 
+\index{ConsoleRunner@{ConsoleRunner}!run@{run}}
+\index{run@{run}!ConsoleRunner@{ConsoleRunner}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily static run (\begin{DoxyParamCaption}\item[{}]{\$helper\+Set\+Or\+Provider,  }\item[{array}]{\$commands = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Runs console with the given helper set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Helper\+Set | \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_entity_manager_provider}{Entity\+Manager\+Provider}} & {\em \$helper\+Set\+Or\+Provider} & \\
+\hline
+Symfony\+Command\mbox{[}$\,$\mbox{]} & {\em \$commands} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Console/Console\+Runner.\+php\end{DoxyCompactItemize}

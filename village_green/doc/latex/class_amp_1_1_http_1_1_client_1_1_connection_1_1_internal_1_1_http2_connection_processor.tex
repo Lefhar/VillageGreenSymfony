@@ -1,0 +1,224 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor}{}\doxysection{Http2\+Connection\+Processor Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor}\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+Inheritance diagram for Http2\+Connection\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab74aecbcf1a4002d18d09e7d5739feaf}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab74aecbcf1a4002d18d09e7d5739feaf}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}} \$socket)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a70ca15c7ce7d473f8fb568fc02fb8b0f}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a70ca15c7ce7d473f8fb568fc02fb8b0f}} 
+{\bfseries is\+Initialized} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a91098fa7d1917ce4833f284bbef12627}{initialize}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_abaa17858cbf1caa4ece15129e5241a54}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_abaa17858cbf1caa4ece15129e5241a54}} 
+{\bfseries on\+Close} (callable \$on\+Close)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+{\bfseries close} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a8013a2339908827c2920bc1ce0ad1d25}{handle\+Pong}} (string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a9f6d9e51da9183f20b8037fcf7c61513}{handle\+Ping}} (string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}{handle\+Shutdown}} (int \$last\+Id, int \$error)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa10ae260e4a883db7cc89bb3a5d304e2}{handle\+Stream\+Window\+Increment}} (int \$stream\+Id, int \$window\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a9b276e4c42ccefab9776cf2a3fad6800}{handle\+Connection\+Window\+Increment}} (int \$window\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a8c00e4590fabb1afaf80f23c721a1181}{handle\+Headers}} (int \$stream\+Id, array \$pseudo, array \$headers, bool \$stream\+Ended)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a4b1e256eeff9638b1f87f9b88199fcfa}{handle\+Push\+Promise}} (int \$stream\+Id, int \$push\+Id, array \$pseudo, array \$headers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab901512d8cbef7adcaed211817fe83b4}{handle\+Priority}} (int \$stream\+Id, int \$parent\+Id, int \$weight)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ae9afb97a5a40b2a02cc5e514244cbf78}{handle\+Stream\+Reset}} (int \$stream\+Id, int \$error\+Code)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa82ddd5a8cde1359bb1f70a128221f3e}{handle\+Stream\+Exception}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_stream_exception}{Http2\+Stream\+Exception}} \$exception)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a61c51a7416e309ee685e745e1f6de490}{handle\+Connection\+Exception}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_connection_exception}{Http2\+Connection\+Exception}} \$exception)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa32f8df71da16e489da0ffcca7cb1a0d}{handle\+Data}} (int \$stream\+Id, string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a3c06993d45a80b88a94cfd480b6350f0}{handle\+Settings}} (array \$settings)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa24d224f5d33b6fb00d55393ab271b2c}{handle\+Stream\+End}} (int \$stream\+Id)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a321d3bb0a0b000b58630f5a7d799c219}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a321d3bb0a0b000b58630f5a7d799c219}} 
+{\bfseries reserve\+Stream} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a7e87334c891551e110215ff093e2d07b}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a7e87334c891551e110215ff093e2d07b}} 
+{\bfseries unreserve\+Stream} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab72ee7a045229b53209862e235411b1a}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab72ee7a045229b53209862e235411b1a}} 
+{\bfseries get\+Remaining\+Streams} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a80d6b5b35631ea18a4316608bbbc8aea}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a80d6b5b35631ea18a4316608bbbc8aea}} 
+{\bfseries is\+Closed} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a61c51a7416e309ee685e745e1f6de490}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a61c51a7416e309ee685e745e1f6de490}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleConnectionException@{handleConnectionException}}
+\index{handleConnectionException@{handleConnectionException}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleConnectionException()}{handleConnectionException()}}
+{\footnotesize\ttfamily handle\+Connection\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_connection_exception}{Http2\+Connection\+Exception}}}]{\$exception }\end{DoxyParamCaption})}
+
+@psalm-\/suppress Deprecated\+Class @psalm-\/suppress Invalid\+Scalar\+Argument @noinspection Php\+Deprecation\+Inspection
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a9b276e4c42ccefab9776cf2a3fad6800}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a9b276e4c42ccefab9776cf2a3fad6800}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleConnectionWindowIncrement@{handleConnectionWindowIncrement}}
+\index{handleConnectionWindowIncrement@{handleConnectionWindowIncrement}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleConnectionWindowIncrement()}{handleConnectionWindowIncrement()}}
+{\footnotesize\ttfamily handle\+Connection\+Window\+Increment (\begin{DoxyParamCaption}\item[{int}]{\$window\+Size }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa32f8df71da16e489da0ffcca7cb1a0d}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa32f8df71da16e489da0ffcca7cb1a0d}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleData@{handleData}}
+\index{handleData@{handleData}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleData()}{handleData()}}
+{\footnotesize\ttfamily handle\+Data (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id,  }\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a8c00e4590fabb1afaf80f23c721a1181}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a8c00e4590fabb1afaf80f23c721a1181}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleHeaders@{handleHeaders}}
+\index{handleHeaders@{handleHeaders}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleHeaders()}{handleHeaders()}}
+{\footnotesize\ttfamily handle\+Headers (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id,  }\item[{array}]{\$pseudo,  }\item[{array}]{\$headers,  }\item[{bool}]{\$stream\+Ended }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a9f6d9e51da9183f20b8037fcf7c61513}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a9f6d9e51da9183f20b8037fcf7c61513}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handlePing@{handlePing}}
+\index{handlePing@{handlePing}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handlePing()}{handlePing()}}
+{\footnotesize\ttfamily handle\+Ping (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a8013a2339908827c2920bc1ce0ad1d25}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a8013a2339908827c2920bc1ce0ad1d25}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handlePong@{handlePong}}
+\index{handlePong@{handlePong}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handlePong()}{handlePong()}}
+{\footnotesize\ttfamily handle\+Pong (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab901512d8cbef7adcaed211817fe83b4}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ab901512d8cbef7adcaed211817fe83b4}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handlePriority@{handlePriority}}
+\index{handlePriority@{handlePriority}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handlePriority()}{handlePriority()}}
+{\footnotesize\ttfamily handle\+Priority (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id,  }\item[{int}]{\$parent\+Id,  }\item[{int}]{\$weight }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a4b1e256eeff9638b1f87f9b88199fcfa}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a4b1e256eeff9638b1f87f9b88199fcfa}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handlePushPromise@{handlePushPromise}}
+\index{handlePushPromise@{handlePushPromise}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handlePushPromise()}{handlePushPromise()}}
+{\footnotesize\ttfamily handle\+Push\+Promise (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id,  }\item[{int}]{\$push\+Id,  }\item[{array}]{\$pseudo,  }\item[{array}]{\$headers }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a3c06993d45a80b88a94cfd480b6350f0}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a3c06993d45a80b88a94cfd480b6350f0}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleSettings@{handleSettings}}
+\index{handleSettings@{handleSettings}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleSettings()}{handleSettings()}}
+{\footnotesize\ttfamily handle\+Settings (\begin{DoxyParamCaption}\item[{array}]{\$settings }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_afa40f7293e4b4d5a34a7ca2523daa2b6}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleShutdown@{handleShutdown}}
+\index{handleShutdown@{handleShutdown}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleShutdown()}{handleShutdown()}}
+{\footnotesize\ttfamily handle\+Shutdown (\begin{DoxyParamCaption}\item[{int}]{\$last\+Id,  }\item[{int}]{\$error }\end{DoxyParamCaption})}
+
+@psalm-\/suppress Deprecated\+Class @noinspection Php\+Deprecation\+Inspection
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa24d224f5d33b6fb00d55393ab271b2c}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa24d224f5d33b6fb00d55393ab271b2c}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleStreamEnd@{handleStreamEnd}}
+\index{handleStreamEnd@{handleStreamEnd}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleStreamEnd()}{handleStreamEnd()}}
+{\footnotesize\ttfamily handle\+Stream\+End (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa82ddd5a8cde1359bb1f70a128221f3e}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa82ddd5a8cde1359bb1f70a128221f3e}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleStreamException@{handleStreamException}}
+\index{handleStreamException@{handleStreamException}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleStreamException()}{handleStreamException()}}
+{\footnotesize\ttfamily handle\+Stream\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_http2_1_1_http2_stream_exception}{Http2\+Stream\+Exception}}}]{\$exception }\end{DoxyParamCaption})}
+
+@psalm-\/suppress Deprecated\+Class @psalm-\/suppress Invalid\+Scalar\+Argument @noinspection Php\+Deprecation\+Inspection
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ae9afb97a5a40b2a02cc5e514244cbf78}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_ae9afb97a5a40b2a02cc5e514244cbf78}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleStreamReset@{handleStreamReset}}
+\index{handleStreamReset@{handleStreamReset}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleStreamReset()}{handleStreamReset()}}
+{\footnotesize\ttfamily handle\+Stream\+Reset (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id,  }\item[{int}]{\$error\+Code }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa10ae260e4a883db7cc89bb3a5d304e2}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_aa10ae260e4a883db7cc89bb3a5d304e2}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!handleStreamWindowIncrement@{handleStreamWindowIncrement}}
+\index{handleStreamWindowIncrement@{handleStreamWindowIncrement}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{handleStreamWindowIncrement()}{handleStreamWindowIncrement()}}
+{\footnotesize\ttfamily handle\+Stream\+Window\+Increment (\begin{DoxyParamCaption}\item[{int}]{\$stream\+Id,  }\item[{int}]{\$window\+Size }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_http2_1_1_http2_processor}{Http2\+Processor}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a91098fa7d1917ce4833f284bbef12627}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http2_connection_processor_a91098fa7d1917ce4833f284bbef12627}} 
+\index{Http2ConnectionProcessor@{Http2ConnectionProcessor}!initialize@{initialize}}
+\index{initialize@{initialize}!Http2ConnectionProcessor@{Http2ConnectionProcessor}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a promise that is resolved once the connection has been initialized. A stream cannot be obtained from the connection until the promise returned by this method resolves.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/\+Internal/Http2\+Connection\+Processor.\+php\end{DoxyCompactItemize}

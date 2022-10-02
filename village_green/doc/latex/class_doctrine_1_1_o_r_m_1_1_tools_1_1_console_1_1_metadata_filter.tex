@@ -1,0 +1,96 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter}{}\doxysection{Metadata\+Filter Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter}\index{MetadataFilter@{MetadataFilter}}
+Inheritance diagram for Metadata\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_ad30aa7c391959775f50c38d8bd9ee52b}{\+\_\+\+\_\+construct}} (Array\+Iterator \$metadata, \$\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_a93a22e1258f6802e0329330cf3b3562c}{filter}})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_acb64affba32059c09533892d9ded224a}{accept}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_aa3a37e095737a41f4646bc3505a93abc}{get\+Inner\+Iterator}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_a93a22e1258f6802e0329330cf3b3562c}{filter}} (array \$metadatas, \$filter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used by CLI \mbox{\hyperlink{namespace_tools}{Tools}} to restrict entity-\/based commands to given patterns.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+com}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_ad30aa7c391959775f50c38d8bd9ee52b}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_ad30aa7c391959775f50c38d8bd9ee52b}} 
+\index{MetadataFilter@{MetadataFilter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MetadataFilter@{MetadataFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Array\+Iterator}]{\$metadata,  }\item[{}]{\$filter }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | string & {\em \$filter} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_acb64affba32059c09533892d9ded224a}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_acb64affba32059c09533892d9ded224a}} 
+\index{MetadataFilter@{MetadataFilter}!accept@{accept}}
+\index{accept@{accept}!MetadataFilter@{MetadataFilter}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{MetadataFilter@{MetadataFilter}!count@{count}}
+\index{count@{count}!MetadataFilter@{MetadataFilter}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_a93a22e1258f6802e0329330cf3b3562c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_a93a22e1258f6802e0329330cf3b3562c}} 
+\index{MetadataFilter@{MetadataFilter}!filter@{filter}}
+\index{filter@{filter}!MetadataFilter@{MetadataFilter}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily static filter (\begin{DoxyParamCaption}\item[{array}]{\$metadatas,  }\item[{}]{\$filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Filter Metadatas by one or more filter options.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata\mbox{[}$\,$\mbox{]} & {\em \$metadatas} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} | string & {\em \$filter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Metadata\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_aa3a37e095737a41f4646bc3505a93abc}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_metadata_filter_aa3a37e095737a41f4646bc3505a93abc}} 
+\index{MetadataFilter@{MetadataFilter}!getInnerIterator@{getInnerIterator}}
+\index{getInnerIterator@{getInnerIterator}!MetadataFilter@{MetadataFilter}}
+\doxysubsubsection{\texorpdfstring{getInnerIterator()}{getInnerIterator()}}
+{\footnotesize\ttfamily get\+Inner\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Array\+Iterator$<$int, Class\+Metadata$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Console/Metadata\+Filter.\+php\end{DoxyCompactItemize}

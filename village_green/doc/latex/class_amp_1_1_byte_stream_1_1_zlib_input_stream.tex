@@ -1,0 +1,104 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_zlib_input_stream}{}\doxysection{Zlib\+Input\+Stream Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_zlib_input_stream}\index{ZlibInputStream@{ZlibInputStream}}
+Inheritance diagram for Zlib\+Input\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_zlib_input_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_zlib_input_stream_acfe99839c50e2f02723bae4dc6f13b5d}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} \$source, int \$encoding, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a515b2653f040b0c8a4ed093878232943}{get\+Encoding}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows decompression of input streams using Zlib. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_zlib_input_stream_acfe99839c50e2f02723bae4dc6f13b5d}\label{class_amp_1_1_byte_stream_1_1_zlib_input_stream_acfe99839c50e2f02723bae4dc6f13b5d}} 
+\index{ZlibInputStream@{ZlibInputStream}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ZlibInputStream@{ZlibInputStream}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}}]{\$source,  }\item[{int}]{\$encoding,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} & {\em \$source} & Input stream to read compressed data from. \\
+\hline
+int & {\em \$encoding} & Compression algorithm used, see {\ttfamily inflate\+\_\+init()}. \\
+\hline
+array & {\em \$options} & Algorithm options, see {\ttfamily inflate\+\_\+init()}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_stream_exception}{Stream\+Exception}}} & \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error
+
+\begin{DoxySeeAlso}{See also}
+\href{http://php.net/manual/en/function.inflate-init.php}{\texttt{ http\+://php.\+net/manual/en/function.\+inflate-\/init.\+php}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a515b2653f040b0c8a4ed093878232943}\label{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a515b2653f040b0c8a4ed093878232943}} 
+\index{ZlibInputStream@{ZlibInputStream}!getEncoding@{getEncoding}}
+\index{getEncoding@{getEncoding}!ZlibInputStream@{ZlibInputStream}}
+\doxysubsubsection{\texorpdfstring{getEncoding()}{getEncoding()}}
+{\footnotesize\ttfamily get\+Encoding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the used compression encoding.
+
+\begin{DoxyReturn}{Returns}
+int Encoding specified on construction time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a1a49b8dded6e91a52e2fd07195d334da}\label{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{ZlibInputStream@{ZlibInputStream}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!ZlibInputStream@{ZlibInputStream}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the used compression options.
+
+\begin{DoxyReturn}{Returns}
+array Options array passed on construction time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_byte_stream_1_1_zlib_input_stream_a64571309bfb3238c65fd3c2898f92440}} 
+\index{ZlibInputStream@{ZlibInputStream}!read@{read}}
+\index{read@{read}!ZlibInputStream@{ZlibInputStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_pending_read_error}{Pending\+Read\+Error}}} & Thrown if another read operation is still pending.\\
+\hline
+\end{DoxyExceptions}
+ @psalm-\/suppress Paradoxical\+Condition
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/Zlib\+Input\+Stream.\+php\end{DoxyCompactItemize}

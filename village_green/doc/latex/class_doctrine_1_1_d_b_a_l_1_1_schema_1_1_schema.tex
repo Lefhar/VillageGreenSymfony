@@ -1,0 +1,495 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{}\doxysection{Schema Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}\index{Schema@{Schema}}
+Inheritance diagram for Schema\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a297abd31d15c0003c772200714956f93}{\+\_\+\+\_\+construct}} (array \$tables=\mbox{[}$\,$\mbox{]}, array \$sequences=\mbox{[}$\,$\mbox{]}, ?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_config}{Schema\+Config}} \$schema\+Config=null, array \$namespaces=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a4c1418f3eb1b950252177114662d250e}{has\+Explicit\+Foreign\+Key\+Indexes}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ae4c74dabb3e9ba4103ffd4e8febcac21}{get\+Namespaces}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a61b9097ace78236a1a7f9cfd9e9ab01c}{get\+Tables}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aa9bb67c676a6a2f874d4c353904fac32}{get\+Table}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a0088e24c4f7bdd37e98dd5f78cda3e9d}{has\+Namespace}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aca9bac350ad668703ba2890e0881d4fc}{has\+Table}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a31fd028456fa69d0f2abe63ffd4054a9}{get\+Table\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a2b22e6a443414fd6643436a5f0e0a266}{has\+Sequence}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5ecaf5b54c80285b647c91d9d8fdd6a0}{get\+Sequence}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5dce0ec48f0b0eb9c5420a00fbbf997c}{get\+Sequences}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a12170a42c98a2f1ef39c92fbaa6bd681}{create\+Namespace}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a1fb0787af4bf5891a0ac1ee919bcda1f}{create\+Table}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aef5e7ec8f30c11f3955086e1b14b6260}{rename\+Table}} (\$old\+Name, \$new\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a3471d37afdd3d76f5379dfe7364db0b6}{drop\+Table}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5d368fdd559a5db62c55deebb632f61a}{create\+Sequence}} (\$name, \$allocation\+Size=1, \$initial\+Value=1)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a16f841d3f40d6d4f8cd4aa71bd444e5a}{drop\+Sequence}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_adb949b18903e8ba400791ead6cfb3bcc}{to\+Sql}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_af7e2a874b954f69f58001b3f000fc9cd}{to\+Drop\+Sql}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a82018fa093d39c407f10b94a454ab539}{get\+Migrate\+To\+Sql}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$to\+Schema, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a451e67a1bf0e20e75be54cc22626c9bb}{get\+Migrate\+From\+Sql}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$from\+Schema, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a6484621604080c3f7471ea1a5cf3a213}{visit}} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor}{Visitor}} \$visitor)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ad0cb87b388bc74d63dc884accdca8713}{\+\_\+\+\_\+clone}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a40016cbbb6726f2d69aed5fb199f37e7}{\+\_\+add\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ae332c6ee5037a81b61ac4eff89bbdd25}{\+\_\+add\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a10b90c2be0236e51695e3ff16061582c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a10b90c2be0236e51695e3ff16061582c}} 
+{\bfseries \$\+\_\+tables} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a32c5302a15cc3e3dfaac03a421f863bb}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a32c5302a15cc3e3dfaac03a421f863bb}} 
+{\bfseries \$\+\_\+sequences} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a3ee1e7a5d8482923191365f914d3bc19}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a3ee1e7a5d8482923191365f914d3bc19}} 
+{\bfseries \$\+\_\+schema\+Config}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object representation of a database schema.
+
+Different vendors have very inconsistent naming with regard to the concept of a \char`\"{}schema\char`\"{}. Doctrine understands a schema as the entity that conceptually wraps a set of database objects such as tables, sequences, indexes and foreign keys that belong to each other into a namespace. A Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} has nothing to do with the \char`\"{}\+SCHEMA\char`\"{} defined as in Postgre\+SQL, it is more related to the concept of \char`\"{}\+DATABASE\char`\"{} that exists in My\+SQL and Postgre\+SQL.
+
+Every asset in the doctrine schema has a name. A name consists of either a namespace.\+local name pair or just a local unqualified name.
+
+The abstraction layer that covers a Postgre\+SQL schema is the namespace of an database object (asset). A schema can have a name, which will be used as default namespace for the unqualified database objects that are created in the schema.
+
+In the case of My\+SQL where cross-\/database queries are allowed this leads to databases being \char`\"{}misinterpreted\char`\"{} as namespaces. This is intentional, however the CREATE/\+DROP SQL visitors will just filter this queries and do not execute them. Only the queries for the currently connected database are executed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a297abd31d15c0003c772200714956f93}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a297abd31d15c0003c772200714956f93}} 
+\index{Schema@{Schema}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$tables = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$sequences = {\ttfamily \mbox{[}\mbox{]}},  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_config}{Schema\+Config}}}]{\$schema\+Config = {\ttfamily null},  }\item[{array}]{\$namespaces = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}\mbox{[}$\,$\mbox{]} & {\em \$tables} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}\mbox{[}$\,$\mbox{]} & {\em \$sequences} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ad0cb87b388bc74d63dc884accdca8713}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ad0cb87b388bc74d63dc884accdca8713}} 
+\index{Schema@{Schema}!\_\_clone@{\_\_clone}}
+\index{\_\_clone@{\_\_clone}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{\_\_clone()}{\_\_clone()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cloning a \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} triggers a deep clone of all related assets.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ae332c6ee5037a81b61ac4eff89bbdd25}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ae332c6ee5037a81b61ac4eff89bbdd25}} 
+\index{Schema@{Schema}!\_addSequence@{\_addSequence}}
+\index{\_addSequence@{\_addSequence}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{\_addSequence()}{\_addSequence()}}
+{\footnotesize\ttfamily \+\_\+add\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a40016cbbb6726f2d69aed5fb199f37e7}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a40016cbbb6726f2d69aed5fb199f37e7}} 
+\index{Schema@{Schema}!\_addTable@{\_addTable}}
+\index{\_addTable@{\_addTable}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{\_addTable()}{\_addTable()}}
+{\footnotesize\ttfamily \+\_\+add\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a12170a42c98a2f1ef39c92fbaa6bd681}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a12170a42c98a2f1ef39c92fbaa6bd681}} 
+\index{Schema@{Schema}!createNamespace@{createNamespace}}
+\index{createNamespace@{createNamespace}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{createNamespace()}{createNamespace()}}
+{\footnotesize\ttfamily create\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Creates a new namespace.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the namespace to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} This schema instance.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5d368fdd559a5db62c55deebb632f61a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5d368fdd559a5db62c55deebb632f61a}} 
+\index{Schema@{Schema}!createSequence@{createSequence}}
+\index{createSequence@{createSequence}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{createSequence()}{createSequence()}}
+{\footnotesize\ttfamily create\+Sequence (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$allocation\+Size = {\ttfamily 1},  }\item[{}]{\$initial\+Value = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Creates a new sequence.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+int & {\em \$allocation\+Size} & \\
+\hline
+int & {\em \$initial\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a1fb0787af4bf5891a0ac1ee919bcda1f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a1fb0787af4bf5891a0ac1ee919bcda1f}} 
+\index{Schema@{Schema}!createTable@{createTable}}
+\index{createTable@{createTable}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{createTable()}{createTable()}}
+{\footnotesize\ttfamily create\+Table (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Creates a new table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a16f841d3f40d6d4f8cd4aa71bd444e5a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a16f841d3f40d6d4f8cd4aa71bd444e5a}} 
+\index{Schema@{Schema}!dropSequence@{dropSequence}}
+\index{dropSequence@{dropSequence}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{dropSequence()}{dropSequence()}}
+{\footnotesize\ttfamily drop\+Sequence (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a3471d37afdd3d76f5379dfe7364db0b6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a3471d37afdd3d76f5379dfe7364db0b6}} 
+\index{Schema@{Schema}!dropTable@{dropTable}}
+\index{dropTable@{dropTable}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{dropTable()}{dropTable()}}
+{\footnotesize\ttfamily drop\+Table (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Drops a table from the schema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a451e67a1bf0e20e75be54cc22626c9bb}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a451e67a1bf0e20e75be54cc22626c9bb}} 
+\index{Schema@{Schema}!getMigrateFromSql@{getMigrateFromSql}}
+\index{getMigrateFromSql@{getMigrateFromSql}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getMigrateFromSql()}{getMigrateFromSql()}}
+{\footnotesize\ttfamily get\+Migrate\+From\+Sql (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$from\+Schema,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000179}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a82018fa093d39c407f10b94a454ab539}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a82018fa093d39c407f10b94a454ab539}} 
+\index{Schema@{Schema}!getMigrateToSql@{getMigrateToSql}}
+\index{getMigrateToSql@{getMigrateToSql}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getMigrateToSql()}{getMigrateToSql()}}
+{\footnotesize\ttfamily get\+Migrate\+To\+Sql (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$to\+Schema,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000178}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ae4c74dabb3e9ba4103ffd4e8febcac21}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_ae4c74dabb3e9ba4103ffd4e8febcac21}} 
+\index{Schema@{Schema}!getNamespaces@{getNamespaces}}
+\index{getNamespaces@{getNamespaces}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getNamespaces()}{getNamespaces()}}
+{\footnotesize\ttfamily get\+Namespaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the namespaces of this schema.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} A list of namespace names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5ecaf5b54c80285b647c91d9d8fdd6a0}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5ecaf5b54c80285b647c91d9d8fdd6a0}} 
+\index{Schema@{Schema}!getSequence@{getSequence}}
+\index{getSequence@{getSequence}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getSequence()}{getSequence()}}
+{\footnotesize\ttfamily get\+Sequence (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5dce0ec48f0b0eb9c5420a00fbbf997c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a5dce0ec48f0b0eb9c5420a00fbbf997c}} 
+\index{Schema@{Schema}!getSequences@{getSequences}}
+\index{getSequences@{getSequences}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getSequences()}{getSequences()}}
+{\footnotesize\ttfamily get\+Sequences (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aa9bb67c676a6a2f874d4c353904fac32}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aa9bb67c676a6a2f874d4c353904fac32}} 
+\index{Schema@{Schema}!getTable@{getTable}}
+\index{getTable@{getTable}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}}
+{\footnotesize\ttfamily get\+Table (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a31fd028456fa69d0f2abe63ffd4054a9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a31fd028456fa69d0f2abe63ffd4054a9}} 
+\index{Schema@{Schema}!getTableNames@{getTableNames}}
+\index{getTableNames@{getTableNames}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getTableNames()}{getTableNames()}}
+{\footnotesize\ttfamily get\+Table\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all table names, prefixed with a schema name, even the default one if present.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000177}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a61b9097ace78236a1a7f9cfd9e9ab01c}{get\+Tables()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a3d0963e68bb313b163a73f2803c64600}{Table\+::get\+Name()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a61b9097ace78236a1a7f9cfd9e9ab01c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a61b9097ace78236a1a7f9cfd9e9ab01c}} 
+\index{Schema@{Schema}!getTables@{getTables}}
+\index{getTables@{getTables}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{getTables()}{getTables()}}
+{\footnotesize\ttfamily get\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all tables of this schema.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a4c1418f3eb1b950252177114662d250e}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a4c1418f3eb1b950252177114662d250e}} 
+\index{Schema@{Schema}!hasExplicitForeignKeyIndexes@{hasExplicitForeignKeyIndexes}}
+\index{hasExplicitForeignKeyIndexes@{hasExplicitForeignKeyIndexes}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{hasExplicitForeignKeyIndexes()}{hasExplicitForeignKeyIndexes()}}
+{\footnotesize\ttfamily has\+Explicit\+Foreign\+Key\+Indexes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000176}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a0088e24c4f7bdd37e98dd5f78cda3e9d}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a0088e24c4f7bdd37e98dd5f78cda3e9d}} 
+\index{Schema@{Schema}!hasNamespace@{hasNamespace}}
+\index{hasNamespace@{hasNamespace}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{hasNamespace()}{hasNamespace()}}
+{\footnotesize\ttfamily has\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Does this schema have a namespace with the given name?
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a2b22e6a443414fd6643436a5f0e0a266}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a2b22e6a443414fd6643436a5f0e0a266}} 
+\index{Schema@{Schema}!hasSequence@{hasSequence}}
+\index{hasSequence@{hasSequence}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{hasSequence()}{hasSequence()}}
+{\footnotesize\ttfamily has\+Sequence (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aca9bac350ad668703ba2890e0881d4fc}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aca9bac350ad668703ba2890e0881d4fc}} 
+\index{Schema@{Schema}!hasTable@{hasTable}}
+\index{hasTable@{hasTable}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{hasTable()}{hasTable()}}
+{\footnotesize\ttfamily has\+Table (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Does this schema have a table with the given name?
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aef5e7ec8f30c11f3955086e1b14b6260}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_aef5e7ec8f30c11f3955086e1b14b6260}} 
+\index{Schema@{Schema}!renameTable@{renameTable}}
+\index{renameTable@{renameTable}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{renameTable()}{renameTable()}}
+{\footnotesize\ttfamily rename\+Table (\begin{DoxyParamCaption}\item[{}]{\$old\+Name,  }\item[{}]{\$new\+Name }\end{DoxyParamCaption})}
+
+Renames a table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$old\+Name} & \\
+\hline
+string & {\em \$new\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_af7e2a874b954f69f58001b3f000fc9cd}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_af7e2a874b954f69f58001b3f000fc9cd}} 
+\index{Schema@{Schema}!toDropSql@{toDropSql}}
+\index{toDropSql@{toDropSql}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{toDropSql()}{toDropSql()}}
+{\footnotesize\ttfamily to\+Drop\+Sql (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Return an array of necessary SQL queries to drop the schema on the given platform.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_adb949b18903e8ba400791ead6cfb3bcc}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_adb949b18903e8ba400791ead6cfb3bcc}} 
+\index{Schema@{Schema}!toSql@{toSql}}
+\index{toSql@{toSql}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{toSql()}{toSql()}}
+{\footnotesize\ttfamily to\+Sql (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Returns an array of necessary SQL queries to create the schema on the given platform.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a6484621604080c3f7471ea1a5cf3a213}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_a6484621604080c3f7471ea1a5cf3a213}} 
+\index{Schema@{Schema}!visit@{visit}}
+\index{visit@{visit}!Schema@{Schema}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor}{Visitor}}}]{\$visitor }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/Schema.\+php\end{DoxyCompactItemize}

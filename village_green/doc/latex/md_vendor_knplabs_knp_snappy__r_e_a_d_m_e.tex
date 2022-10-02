@@ -1,0 +1,168 @@
+ \href{https://ci.appveyor.com/project/NiR-/snappy}{\texttt{ }} \href{https://scrutinizer-ci.com/g/KnpLabs/Gaufrette/?branch=master}{\texttt{ }}
+
+Snappy is a PHP library allowing thumbnail, snapshot or PDF generation from a url or a html page. It uses the excellent webkit-\/based \href{http://wkhtmltopdf.org/}{\texttt{ wkhtmltopdf and wkhtmltoimage}} available on OSX, linux, windows.
+
+You will have to download wkhtmltopdf {\ttfamily 0.\+12.\+x} in order to use Snappy.
+
+Please, check \mbox{\hyperlink{md_vendor_knplabs_knp_snappy_doc_faq}{FAQ}} before opening a new issue. Snappy is a tiny wrapper around wkhtmltox, so lots of issues are already answered, resolved or wkhtmltox ones.
+
+Following integrations are available\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/KnpLabs/KnpSnappyBundle}{\texttt{ {\ttfamily knplabs/knp-\/snappy-\/bundle}}}, for Symfony
+\item \href{https://github.com/barryvdh/laravel-snappy}{\texttt{ {\ttfamily barryvdh/laravel-\/snappy}}}, for Laravel
+\item \href{https://github.com/mvlabs/MvlabsSnappy}{\texttt{ {\ttfamily mvlabs/mvlabs-\/snappy}}}, for Zend Framework
+\end{DoxyItemize}\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md421}{}\doxysection{Installation using $<$a href=\char`\"{}http\+://getcomposer.\+org/\char`\"{} $>$\+Composer$<$/a$>$}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md421}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ composer require knplabs/knp-\/snappy}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md422}{}\doxysection{Usage}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md422}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md423}{}\doxysubsection{Initialization}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md423}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{require \_\_DIR\_\_ . \textcolor{stringliteral}{'/vendor/autoload.php'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf}{Knp\(\backslash\)Snappy\(\backslash\)Pdf}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// or you can do it in two steps}}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf();}
+\DoxyCodeLine{\$snappy-\/>setBinary(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md424}{}\doxysubsection{Display the pdf in the browser}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md424}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{header(\textcolor{stringliteral}{'Content-\/Type: application/pdf'});}
+\DoxyCodeLine{echo \$snappy-\/>getOutput(\textcolor{stringliteral}{'http://www.github.com'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md425}{}\doxysubsection{Download the pdf from the browser}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md425}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{header(\textcolor{stringliteral}{'Content-\/Type: application/pdf'});}
+\DoxyCodeLine{header(\textcolor{stringliteral}{'Content-\/Disposition: attachment; filename="{}file.pdf"{}'});}
+\DoxyCodeLine{echo \$snappy-\/>getOutput(\textcolor{stringliteral}{'http://www.github.com'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md426}{}\doxysubsection{Merge multiple urls into one pdf}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md426}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{header(\textcolor{stringliteral}{'Content-\/Type: application/pdf'});}
+\DoxyCodeLine{header(\textcolor{stringliteral}{'Content-\/Disposition: attachment; filename="{}file.pdf"{}'});}
+\DoxyCodeLine{echo \$snappy-\/>getOutput(array(\textcolor{stringliteral}{'http://www.github.com'},\textcolor{stringliteral}{'http://www.knplabs.com'},\textcolor{stringliteral}{'http://www.php.net'}));}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md427}{}\doxysubsection{Generate local pdf file}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md427}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{\$snappy-\/>generateFromHtml(\textcolor{stringliteral}{'<h1>Bill</h1><p>You owe me money, dude.</p>'}, \textcolor{stringliteral}{'/tmp/bill-\/123.pdf'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md428}{}\doxysubsection{Pass options to snappy}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md428}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Type wkhtmltopdf -\/H to see the list of options}}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'disable-\/javascript'}, \textcolor{keyword}{true});}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'no-\/background'}, \textcolor{keyword}{true});}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'allow'}, array(\textcolor{stringliteral}{'/path1'}, \textcolor{stringliteral}{'/path2'}));}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'cookie'}, array(\textcolor{stringliteral}{'key'} => \textcolor{stringliteral}{'value'}, \textcolor{stringliteral}{'key2'} => \textcolor{stringliteral}{'value2'}));}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'post'}, array(\textcolor{stringliteral}{'key'} => \textcolor{stringliteral}{'value'}));}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'cover'}, \textcolor{stringliteral}{'pathToCover.html'});}
+\DoxyCodeLine{\textcolor{comment}{// .. or pass a cover as html}}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'cover'}, \textcolor{stringliteral}{'<h1>Bill cover</h1>'});}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'toc'}, \textcolor{keyword}{true});}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'cache-\/dir'}, \textcolor{stringliteral}{'/path/to/cache/dir'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md429}{}\doxysubsection{Reset options}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md429}
+Options can be reset to their initial values with {\ttfamily reset\+Options()} method. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/usr/local/bin/wkhtmltopdf'});}
+\DoxyCodeLine{\textcolor{comment}{// Set some options}}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'copies'} => 4);}
+\DoxyCodeLine{\textcolor{comment}{// ..}}
+\DoxyCodeLine{\textcolor{comment}{// Reset options}}
+\DoxyCodeLine{\$snappy-\/>resetOptions();}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md430}{}\doxysection{wkhtmltopdf binary as composer dependencies}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md430}
+If you want to download wkhtmltopdf and wkhtmltoimage with composer you add to {\ttfamily composer.\+json}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ composer require h4cc/wkhtmltopdf-\/i386 0.12.x}
+\DoxyCodeLine{\$ composer require h4cc/wkhtmltoimage-\/i386 0.12.x}
+
+\end{DoxyCode}
+
+
+or this if you are in 64 bit based system\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ composer require h4cc/wkhtmltopdf-\/amd64 0.12.x}
+\DoxyCodeLine{\$ composer require h4cc/wkhtmltoimage-\/amd64 0.12.x}
+
+\end{DoxyCode}
+
+
+And then you can use it
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf}{Knp\(\backslash\)Snappy\(\backslash\)Pdf}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$myProjectDirectory = \textcolor{stringliteral}{'/path/to/my/project'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\$myProjectDirectory . \textcolor{stringliteral}{'/vendor/h4cc/wkhtmltopdf-\/i386/bin/wkhtmltopdf-\/i386'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// or}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\$myProjectDirectory . \textcolor{stringliteral}{'/vendor/h4cc/wkhtmltopdf-\/amd64/bin/wkhtmltopdf-\/amd64'});}
+
+\end{DoxyCode}
+
+
+{\itshape N.\+B.} These static binaries are extracted from \href{https://github.com/h4cc/wkhtmltopdf-amd64/issues/13\#issuecomment-150948179}{\texttt{ Debian7 packages}}, so it might not be compatible with non-\/debian based linux distros \hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md431}{}\doxysection{Some use cases}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md431}
+If you want to generate table of contents and you want to use custom XSL stylesheet, do the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\$snappy = \textcolor{keyword}{new} Pdf(\textcolor{stringliteral}{'/path/to/binary'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'toc'}, \textcolor{keyword}{true});}
+\DoxyCodeLine{\$snappy-\/>setOption(\textcolor{stringliteral}{'xsl-\/style-\/sheet'}, \textcolor{stringliteral}{'http://path/to/stylesheet.xsl'}) \textcolor{comment}{//or local file;}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$snappy-\/>generateFromHtml(\textcolor{stringliteral}{'<p>Some content</p>'}, \textcolor{stringliteral}{'test.pdf'});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md432}{}\doxysection{Bugs \& Support}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md432}
+If you found a bug please fill a detailed issue with all the following points. If you need some help, please at least provide a complete reproducer so we could help you based on facts rather than assumptions.
+
+
+\begin{DoxyItemize}
+\item OS and its version
+\item Wkhtmltopdf, its version and how you installed it
+\item A complete reproducer with relevant php and html/css/js code
+\end{DoxyItemize}
+
+If your reproducer is big, please try to shrink it. It will help everyone to narrow the bug.\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md433}{}\doxysection{Maintainers}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md433}
+KNPLabs is looking for maintainers (\href{https://knplabs.com/en/blog/news-for-our-foss-projects-maintenance}{\texttt{ see why}}).
+
+If you are interested, feel free to open a PR to ask to be added as a maintainer.
+
+We’ll be glad to hear from you \+:)\hypertarget{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md434}{}\doxysection{Credits}\label{md_vendor_knplabs_knp_snappy__r_e_a_d_m_e_autotoc_md434}
+Snappy has been originally developed by the \href{http://knplabs.com}{\texttt{ Knp\+Labs}} team. 

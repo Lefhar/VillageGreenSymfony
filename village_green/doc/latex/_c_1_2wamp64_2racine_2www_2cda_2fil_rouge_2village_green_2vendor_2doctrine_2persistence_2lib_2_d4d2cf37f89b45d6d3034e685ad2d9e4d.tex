@@ -1,0 +1,163 @@
+\hypertarget{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{}\doxysection{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}
+Persistent\+Object base class that implements getter/setter methods for all mapped fields and associations by overriding \+\_\+\+\_\+call.
+
+This class is a forward compatible implementation of the Persistent\+Object trait.
+
+Limitations\+:
+
+
+\begin{DoxyEnumerate}
+\item All persistent objects have to be associated with a single Object\+Manager, multiple Object\+Managers are not supported. You can set the Object\+Manager with {\ttfamily Persistent\+Object\#set\+Object\+Manager()}.
+\item Setters and getters only work if a Class\+Metadata instance was injected into the Persistent\+Object. This is either done on {\ttfamily post\+Load} of an object or by accessing the global object manager.
+\item There are no hooks for setters/getters. Just implement the method yourself instead of relying on \+\_\+\+\_\+call().
+\item Slower than handcoded implementations\+: An average of 7 method calls per access to a field and 11 for an association.
+\item Only the inverse side associations get autoset on the owning side as well. Setting objects on the owning side will not set the inverse side associations.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000304}{Deprecated}}]Deprecated {\ttfamily Persistent\+Object} class in 1.\+2. Please implement this functionality directly in your application if you want Active\+Record style functionality.\end{DoxyRefDesc}
+
+
+Persistent\+Object\+::set\+Object\+Manager(\$em);
+
+class Foo extends Persistent\+Object \{ private \$id; \}
+
+\$foo = new Foo(); \$foo-\/\texorpdfstring{$>$}{>}get\+Id(); // method exists through \+\_\+\+\_\+call
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }Doctrine\(\backslash\)Common\(\backslash\)Persistence;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use BadMethodCallException;}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_array_collection}{Doctrine\(\backslash\)Common\(\backslash\)Collections\(\backslash\)ArrayCollection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_collection}{Doctrine\(\backslash\)Common\(\backslash\)Collections\(\backslash\)Collection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Doctrine\(\backslash\)Persistence\(\backslash\)Mapping\(\backslash\)ClassMetadata}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Doctrine\(\backslash\)Persistence\(\backslash\)ObjectManager}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_aware}{Doctrine\(\backslash\)Persistence\(\backslash\)ObjectManagerAware}};}
+\DoxyCodeLine{use InvalidArgumentException;}
+\DoxyCodeLine{use RuntimeException;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \textcolor{keyword}{function} lcfirst;}
+\DoxyCodeLine{use \textcolor{keyword}{function} substr;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{abstract} \textcolor{keyword}{class }PersistentObject \textcolor{keyword}{implements} ObjectManagerAware}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{static} \$objectManager = \textcolor{keyword}{null};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \$cm = \textcolor{keyword}{null};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_afe2b5caf4241123023f1434a9cddd30a}{setObjectManager}}(?ObjectManager \$objectManager = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        self::\$objectManager = \$objectManager;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9cad8f502c7cf740b9860782a02401f9}{getObjectManager}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} self::\$objectManager;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a658c92f90d5bfde790746ac7b139869d}{injectObjectManager}}(ObjectManager \$objectManager, ClassMetadata \$classMetadata)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$objectManager !== self::\$objectManager) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} RuntimeException(\textcolor{stringliteral}{'Trying to use PersistentObject with different ObjectManager instances. '} .}
+\DoxyCodeLine{                \textcolor{stringliteral}{'Was PersistentObject::setObjectManager() called?'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>cm = \$classMetadata;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} \textcolor{keyword}{set}(\$field, \$args)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>cm-\/>hasField(\$field) \&\& ! \$this-\/>cm-\/>isIdentifier(\$field)) \{}
+\DoxyCodeLine{            \$this-\/>\$field = \$args[0];}
+\DoxyCodeLine{        \} elseif (\$this-\/>cm-\/>hasAssociation(\$field) \&\& \$this-\/>cm-\/>isSingleValuedAssociation(\$field)) \{}
+\DoxyCodeLine{            \$targetClass = \$this-\/>cm-\/>getAssociationTargetClass(\$field);}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$targetClass !== \textcolor{keyword}{null} \&\& ! (\$args[0] instanceof \$targetClass) \&\& \$args[0] !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(\textcolor{stringliteral}{"{}Expected persistent object of type '"{}} . \$targetClass . \textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$this-\/>\$field = \$args[0];}
+\DoxyCodeLine{            \$this-\/>completeOwningSide(\$field, \$targetClass, \$args[0]);}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} BadMethodCallException(\textcolor{stringliteral}{"{}no field with name '"{}} . \$field . \textcolor{stringliteral}{"{}' exists on '"{}} . \$this-\/>cm-\/>getName() . \textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} \textcolor{keyword}{get}(\$field)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>cm-\/>hasField(\$field) || \$this-\/>cm-\/>hasAssociation(\$field)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\$field;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{throw} \textcolor{keyword}{new} BadMethodCallException(\textcolor{stringliteral}{"{}no field with name '"{}} . \$field . \textcolor{stringliteral}{"{}' exists on '"{}} . \$this-\/>cm-\/>getName() . \textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} completeOwningSide(\$field, \$targetClass, \$targetObject)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// add this object on the owning side as well, for obvious infinite recursion}}
+\DoxyCodeLine{        \textcolor{comment}{// reasons this is only done when called on the inverse side.}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! \$this-\/>cm-\/>isAssociationInverseSide(\$field)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$mappedByField  = \$this-\/>cm-\/>getAssociationMappedByTargetField(\$field);}
+\DoxyCodeLine{        \$targetMetadata = self::\$objectManager-\/>getClassMetadata(\$targetClass);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$setter = (\$targetMetadata-\/>isCollectionValuedAssociation(\$mappedByField) ? \textcolor{stringliteral}{'add'} : \textcolor{stringliteral}{'set'}) . \$mappedByField;}
+\DoxyCodeLine{        \$targetObject-\/>\$setter(\$this);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} add(\$field, \$args)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! \$this-\/>cm-\/>hasAssociation(\$field) || ! \$this-\/>cm-\/>isCollectionValuedAssociation(\$field)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} BadMethodCallException(\textcolor{stringliteral}{'There is no method add'} . \$field . \textcolor{stringliteral}{'() on '} . \$this-\/>cm-\/>getName());}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$targetClass = \$this-\/>cm-\/>getAssociationTargetClass(\$field);}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$targetClass !== \textcolor{keyword}{null} \&\& ! (\$args[0] instanceof \$targetClass)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(\textcolor{stringliteral}{"{}Expected persistent object of type '"{}} . \$targetClass . \textcolor{stringliteral}{"{}'"{}});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! (\$this-\/>\$field instanceof Collection)) \{}
+\DoxyCodeLine{            \$this-\/>\$field = \textcolor{keyword}{new} ArrayCollection(\$this-\/>\$field ?: []);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\$field-\/>add(\$args[0]);}
+\DoxyCodeLine{        \$this-\/>completeOwningSide(\$field, \$targetClass, \$args[0]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} initializeDoctrine()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>cm !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! self::\$objectManager) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} RuntimeException(\textcolor{stringliteral}{'No runtime object manager set. Call PersistentObject\#setObjectManager().'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>cm = self::\$objectManager-\/>getClassMetadata(static::class);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9f1179240d068c94a040021326032bed}{\_\_call}}(\$method, \$args)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>initializeDoctrine();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$command = substr(\$method, 0, 3);}
+\DoxyCodeLine{        \$field   = lcfirst(substr(\$method, 3));}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$command === \textcolor{stringliteral}{'set'}) \{}
+\DoxyCodeLine{            \$this-\/>\textcolor{keyword}{set}(\$field, \$args);}
+\DoxyCodeLine{        \} elseif (\$command === \textcolor{stringliteral}{'get'}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\textcolor{keyword}{get}(\$field);}
+\DoxyCodeLine{        \} elseif (\$command === \textcolor{stringliteral}{'add'}) \{}
+\DoxyCodeLine{            \$this-\/>add(\$field, \$args);}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} BadMethodCallException(\textcolor{stringliteral}{'There is no method '} . \$method . \textcolor{stringliteral}{' on '} . \$this-\/>cm-\/>getName());}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,93 @@
+
+\begin{DoxyItemize}
+\item Indicate compatibility with Symfony 6
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1673}{}\doxysection{3.\+7.\+0 (2021-\/03-\/31)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1673}
+
+\begin{DoxyItemize}
+\item Use {\ttfamily Activation\+Strategy} instead of {\ttfamily action\+Level} when available
+\item Register resettable processors ({\ttfamily Resettable\+Interface}) for autoconfiguration (tag\+: {\ttfamily kernel.\+reset})
+\item Drop support for Symfony 3.\+4
+\item Drop support for PHP \texorpdfstring{$<$}{<} 7.\+1
+\item Fix call to undefined method push\+Processor on handler that does not implement Processable\+Handler\+Interface
+\item Use \char`\"{}use\+\_\+locking\char`\"{} option with rotating file handler
+\item Add ability to specify custom Sentry hub service
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1674}{}\doxysection{3.\+6.\+0 (2020-\/10-\/06)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1674}
+
+\begin{DoxyItemize}
+\item Added support for Symfony Mailer
+\item Added support for setting log levels from parameters or environment variables
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1675}{}\doxysection{3.\+5.\+0 (2019-\/11-\/13)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1675}
+
+\begin{DoxyItemize}
+\item Added support for Monolog 2.\+0
+\item Added {\ttfamily sentry} type to use sentry 2.\+0 client
+\item Added {\ttfamily insightops} handler
+\item Added possibility for auto-\/wire monolog channel according to the type-\/hinted aliases, introduced in the Symfony 4.\+2
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1676}{}\doxysection{3.\+4.\+0 (2019-\/06-\/20)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1676}
+
+\begin{DoxyItemize}
+\item Deprecate \char`\"{}excluded\+\_\+404s\char`\"{} option
+\item Flush loggers on {\ttfamily kernel.\+reset}
+\item Register processors ({\ttfamily Processor\+Interface}) for autoconfiguration (tag\+: {\ttfamily monolog.\+processor})
+\item Expose configuration for the {\ttfamily Console\+Handler}
+\item Fixed psr-\/3 processing being applied to all handlers, only leaf ones are now processing
+\item Fixed regression when {\ttfamily app} channel is defined explicitly
+\item Fixed handlers marked as nested not being ignored properly from the stack
+\item Added support for Redis configuration
+\item Drop support for Symfony \texorpdfstring{$<$}{<}3
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1677}{}\doxysection{3.\+3.\+1 (2018-\/11-\/04)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1677}
+
+\begin{DoxyItemize}
+\item Fixed compatiblity with Symfony 4.\+2
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1678}{}\doxysection{3.\+3.\+0 (2018-\/06-\/04)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1678}
+
+\begin{DoxyItemize}
+\item Fixed the autowiring of the channel logger in autoconfigured services
+\item Added timeouts to the pushover, hipchat, slack handlers
+\item Dropped support for PHP 5.\+3, 5.\+4, and HHVM
+\item Added configuration for Http\+Code\+Activation\+Strategy
+\item Deprecated \char`\"{}excluded\+\_\+404s\char`\"{} option for Symfony \texorpdfstring{$>$}{>}= 3.\+4
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1679}{}\doxysection{3.\+2.\+0 (2018-\/03-\/05)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1679}
+
+\begin{DoxyItemize}
+\item Removed randomness from the container build
+\item Fixed support for the {\ttfamily monolog.\+logger} tag specifying a channel in combination with Symfony 3.\+4+ autowiring
+\item Fixed visibility of channels configured explicitly in the bundle config (they are now public in Symfony 4 too)
+\item Fixed invalid service definitions
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1680}{}\doxysection{3.\+1.\+2 (2017-\/11-\/06)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1680}
+
+\begin{DoxyItemize}
+\item fix invalid usage of count()
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1681}{}\doxysection{3.\+1.\+1 (2017-\/09-\/26)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1681}
+
+\begin{DoxyItemize}
+\item added support for Symfony 4
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1682}{}\doxysection{3.\+1.\+0 (2017-\/03-\/26)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1682}
+
+\begin{DoxyItemize}
+\item Added support for server\+\_\+log handler
+\item Allow configuring VERBOSITY\+\_\+\+QUIET in console handlers
+\item Fixed autowiring
+\item Fixed slackbot handler not escaping channel names properly
+\item Fixed slackbot handler requiring {\ttfamily slack\+\_\+team} instead of {\ttfamily team} to be configured
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1683}{}\doxysection{3.\+0.\+3 (2017-\/01-\/10)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1683}
+
+\begin{DoxyItemize}
+\item Fixed deprecation notices when using Symfony 3.\+3+ and PHP7+
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1684}{}\doxysection{3.\+0.\+2 (2017-\/01-\/03)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1684}
+
+\begin{DoxyItemize}
+\item Revert disabling Debug\+Handler in CLI environments
+\item Update configuration for slack handlers for Monolog 1.\+22 new options
+\item Revert the removal of the Debug\+Handler\+Pass (needed for Symfony \texorpdfstring{$<$}{<}3.\+2)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1685}{}\doxysection{3.\+0.\+1 (2016-\/11-\/15)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1685}
+
+\begin{DoxyItemize}
+\item Removed obsolete code (Debug\+Handler\+Pass)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1686}{}\doxysection{3.\+0.\+0 (2016-\/11-\/06)}\label{md_vendor_symfony_monolog_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1686}
+
+\begin{DoxyItemize}
+\item Removed class parameters for the container configuration
+\item Bumped minimum version of supported Symfony version to 2.\+7
+\item Removed {\ttfamily Not\+Found\+Activation\+Strategy} (the bundle now uses the class from Monolog\+Bridge) 
+\end{DoxyItemize}

@@ -1,0 +1,38 @@
+\hypertarget{class_app_1_1_controller_1_1_registration_controller}{}\doxysection{Registration\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_registration_controller}\index{RegistrationController@{RegistrationController}}
+Inheritance diagram for Registration\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_registration_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_registration_controller_aa5084d1d551d7c7635f5a381f7c2202e}\label{class_app_1_1_controller_1_1_registration_controller_aa5084d1d551d7c7635f5a381f7c2202e}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_app_1_1_security_1_1_email_verifier}{Email\+Verifier}} \$email\+Verifier)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_registration_controller_af59bc61613c5b06badddde64750c11a6}{register}} (Request \$request, User\+Password\+Hasher\+Interface \$user\+Password\+Hasher, User\+Authenticator\+Interface \$user\+Authenticator, \mbox{\hyperlink{class_app_1_1_security_1_1_app_custom_authentificator_authenticator}{App\+Custom\+Authentificator\+Authenticator}} \$authenticator, Entity\+Manager\+Interface \$entity\+Manager, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_registration_controller_a6fa3b7b1bf686d1edd286df83448fc85}{verify\+User\+Email}} (Request \$request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_registration_controller_af59bc61613c5b06badddde64750c11a6}\label{class_app_1_1_controller_1_1_registration_controller_af59bc61613c5b06badddde64750c11a6}} 
+\index{RegistrationController@{RegistrationController}!register@{register}}
+\index{register@{register}!RegistrationController@{RegistrationController}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{User\+Password\+Hasher\+Interface}]{\$user\+Password\+Hasher,  }\item[{User\+Authenticator\+Interface}]{\$user\+Authenticator,  }\item[{\mbox{\hyperlink{class_app_1_1_security_1_1_app_custom_authentificator_authenticator}{App\+Custom\+Authentificator\+Authenticator}}}]{\$authenticator,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/register\char`\"{}, name=\char`\"{}app\+\_\+register\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_registration_controller_a6fa3b7b1bf686d1edd286df83448fc85}\label{class_app_1_1_controller_1_1_registration_controller_a6fa3b7b1bf686d1edd286df83448fc85}} 
+\index{RegistrationController@{RegistrationController}!verifyUserEmail@{verifyUserEmail}}
+\index{verifyUserEmail@{verifyUserEmail}!RegistrationController@{RegistrationController}}
+\doxysubsubsection{\texorpdfstring{verifyUserEmail()}{verifyUserEmail()}}
+{\footnotesize\ttfamily verify\+User\+Email (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/verify/email\char`\"{}, name=\char`\"{}app\+\_\+verify\+\_\+email\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Registration\+Controller.\+php\end{DoxyCompactItemize}

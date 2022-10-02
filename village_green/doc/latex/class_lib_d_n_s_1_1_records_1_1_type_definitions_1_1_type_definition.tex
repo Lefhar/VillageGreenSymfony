@@ -1,0 +1,144 @@
+\hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition}{}\doxysection{Type\+Definition Class Reference}
+\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition}\index{TypeDefinition@{TypeDefinition}}
+Inheritance diagram for Type\+Definition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a228a85c13eabfc5be144608a263f7974}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_field_definition_factory}{Field\+Definition\+Factory}} \$field\+Def\+Factory, array \$definition)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ae18149bad62ae9032e70666a8665932a}{get\+Field\+Definition}} (int \$index)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ad37a4ab88a6e8e217efcfce4fd52e96b}{get\+Field\+Index\+By\+Name}} (\$name)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a1bdcead9253687672e75ac08b39e6e8f}{get\+To\+String\+Function}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a602854a8ba0beae2289dd9195e518acd}{set\+To\+String\+Function}} (callable \$function)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a7a9f937c2958e6f4dd7b030f86fb70b7}{get\+Iterator}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a228a85c13eabfc5be144608a263f7974}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a228a85c13eabfc5be144608a263f7974}} 
+\index{TypeDefinition@{TypeDefinition}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_field_definition_factory}{Field\+Definition\+Factory}}}]{\$field\+Def\+Factory,  }\item[{array}]{\$definition }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_field_definition_factory}{Field\+Definition\+Factory}} & {\em \$field\+Def\+Factory} & \\
+\hline
+array & {\em \$definition} & Structural definition of the fields \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception When the type definition is invalid 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{TypeDefinition@{TypeDefinition}!count@{count}}
+\index{count@{count}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the number of fields (Countable interface)
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ae18149bad62ae9032e70666a8665932a}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ae18149bad62ae9032e70666a8665932a}} 
+\index{TypeDefinition@{TypeDefinition}!getFieldDefinition@{getFieldDefinition}}
+\index{getFieldDefinition@{getFieldDefinition}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{getFieldDefinition()}{getFieldDefinition()}}
+{\footnotesize\ttfamily get\+Field\+Definition (\begin{DoxyParamCaption}\item[{int}]{\$index }\end{DoxyParamCaption})}
+
+Get the field definition indicated by the supplied index
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Type\+Definitions\textbackslash{}\+Field\+Definition 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Out\+Of\+Bounds\+Exception When the supplied index does not refer to a valid field \mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ad37a4ab88a6e8e217efcfce4fd52e96b}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_ad37a4ab88a6e8e217efcfce4fd52e96b}} 
+\index{TypeDefinition@{TypeDefinition}!getFieldIndexByName@{getFieldIndexByName}}
+\index{getFieldIndexByName@{getFieldIndexByName}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{getFieldIndexByName()}{getFieldIndexByName()}}
+{\footnotesize\ttfamily get\+Field\+Index\+By\+Name (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Get the field index indicated by the supplied name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Out\+Of\+Bounds\+Exception When the supplied name does not refer to a valid field \mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a7a9f937c2958e6f4dd7b030f86fb70b7}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a7a9f937c2958e6f4dd7b030f86fb70b7}} 
+\index{TypeDefinition@{TypeDefinition}!getIterator@{getIterator}}
+\index{getIterator@{getIterator}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{getIterator()}{getIterator()}}
+{\footnotesize\ttfamily get\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve an iterator (Iterator\+Aggregate interface)
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a1bdcead9253687672e75ac08b39e6e8f}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a1bdcead9253687672e75ac08b39e6e8f}} 
+\index{TypeDefinition@{TypeDefinition}!getToStringFunction@{getToStringFunction}}
+\index{getToStringFunction@{getToStringFunction}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{getToStringFunction()}{getToStringFunction()}}
+{\footnotesize\ttfamily get\+To\+String\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the \+\_\+\+\_\+to\+String() implementation
+
+\begin{DoxyReturn}{Returns}
+callable$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a602854a8ba0beae2289dd9195e518acd}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_a602854a8ba0beae2289dd9195e518acd}} 
+\index{TypeDefinition@{TypeDefinition}!setToStringFunction@{setToStringFunction}}
+\index{setToStringFunction@{setToStringFunction}!TypeDefinition@{TypeDefinition}}
+\doxysubsubsection{\texorpdfstring{setToStringFunction()}{setToStringFunction()}}
+{\footnotesize\ttfamily set\+To\+String\+Function (\begin{DoxyParamCaption}\item[{callable}]{\$function }\end{DoxyParamCaption})}
+
+Set the \+\_\+\+\_\+to\+String() implementation
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Records/\+Type\+Definitions/Type\+Definition.\+php\end{DoxyCompactItemize}

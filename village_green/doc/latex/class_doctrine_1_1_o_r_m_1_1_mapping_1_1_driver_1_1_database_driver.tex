@@ -1,0 +1,157 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver}{}\doxysection{Database\+Driver Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver}\index{DatabaseDriver@{DatabaseDriver}}
+Inheritance diagram for Database\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a6b5a443d15adb862ee0c632a7ebf6e54}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a6b5a443d15adb862ee0c632a7ebf6e54}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}{Abstract\+Schema\+Manager}} \$schema\+Manager)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a37949ed2c12b42fb654edc1bac8569ba}{set\+Namespace}} (\$namespace)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a03d93fdac535730e6895bf73dcfab09d}{is\+Transient}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a1079716efc88aab78c6f1d0d44d6354e}{get\+All\+Class\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_aa82ab5256a6d8a2f77610cc989768ab3}{set\+Class\+Name\+For\+Table}} (\$table\+Name, \$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_aa0390ea47e5afd4d257252adfa41fcb2}{set\+Field\+Name\+For\+Column}} (\$table\+Name, \$column\+Name, \$field\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_af5ea9c3011bee88041b2bf5c87a594a4}{set\+Tables}} (\$entity\+Tables, \$many\+To\+Many\+Tables)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_ac78f51746c604acfea2d31b05981c66b}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_ac78f51746c604acfea2d31b05981c66b}} 
+{\bfseries set\+Inflector} (\mbox{\hyperlink{class_doctrine_1_1_inflector_1_1_inflector}{Inflector}} \$inflector)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_ad327635eed919cc071fe20c12e00fafb}{load\+Metadata\+For\+Class}} (\$class\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver}{Database\+Driver}} reverse engineers the mapping metadata from a database.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a1079716efc88aab78c6f1d0d44d6354e}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a1079716efc88aab78c6f1d0d44d6354e}} 
+\index{DatabaseDriver@{DatabaseDriver}!getAllClassNames@{getAllClassNames}}
+\index{getAllClassNames@{getAllClassNames}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{getAllClassNames()}{getAllClassNames()}}
+{\footnotesize\ttfamily get\+All\+Class\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of all mapped classes known to this driver.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The names of all mapped classes known to this driver. @psalm-\/return list\texorpdfstring{$<$}{<}class-\/string\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a1079716efc88aab78c6f1d0d44d6354e}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a03d93fdac535730e6895bf73dcfab09d}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a03d93fdac535730e6895bf73dcfab09d}} 
+\index{DatabaseDriver@{DatabaseDriver}!isTransient@{isTransient}}
+\index{isTransient@{isTransient}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{isTransient()}{isTransient()}}
+{\footnotesize\ttfamily is\+Transient (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Returns whether the class with the specified name should have its metadata loaded. This is only the case if it is either mapped as an Entity or a Mapped\+Superclass.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a03d93fdac535730e6895bf73dcfab09d}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_ad327635eed919cc071fe20c12e00fafb}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_ad327635eed919cc071fe20c12e00fafb}} 
+\index{DatabaseDriver@{DatabaseDriver}!loadMetadataForClass@{loadMetadataForClass}}
+\index{loadMetadataForClass@{loadMetadataForClass}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{loadMetadataForClass()}{loadMetadataForClass()}}
+{\footnotesize\ttfamily load\+Metadata\+For\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_aa82ab5256a6d8a2f77610cc989768ab3}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_aa82ab5256a6d8a2f77610cc989768ab3}} 
+\index{DatabaseDriver@{DatabaseDriver}!setClassNameForTable@{setClassNameForTable}}
+\index{setClassNameForTable@{setClassNameForTable}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{setClassNameForTable()}{setClassNameForTable()}}
+{\footnotesize\ttfamily set\+Class\+Name\+For\+Table (\begin{DoxyParamCaption}\item[{}]{\$table\+Name,  }\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Sets class name for a table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+Name} & \\
+\hline
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_aa0390ea47e5afd4d257252adfa41fcb2}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_aa0390ea47e5afd4d257252adfa41fcb2}} 
+\index{DatabaseDriver@{DatabaseDriver}!setFieldNameForColumn@{setFieldNameForColumn}}
+\index{setFieldNameForColumn@{setFieldNameForColumn}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{setFieldNameForColumn()}{setFieldNameForColumn()}}
+{\footnotesize\ttfamily set\+Field\+Name\+For\+Column (\begin{DoxyParamCaption}\item[{}]{\$table\+Name,  }\item[{}]{\$column\+Name,  }\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Sets field name for a column on a specific table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+Name} & \\
+\hline
+string & {\em \$column\+Name} & \\
+\hline
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a37949ed2c12b42fb654edc1bac8569ba}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_a37949ed2c12b42fb654edc1bac8569ba}} 
+\index{DatabaseDriver@{DatabaseDriver}!setNamespace@{setNamespace}}
+\index{setNamespace@{setNamespace}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{setNamespace()}{setNamespace()}}
+{\footnotesize\ttfamily set\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$namespace }\end{DoxyParamCaption})}
+
+Set the namespace for the generated entities.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$namespace} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_af5ea9c3011bee88041b2bf5c87a594a4}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_database_driver_af5ea9c3011bee88041b2bf5c87a594a4}} 
+\index{DatabaseDriver@{DatabaseDriver}!setTables@{setTables}}
+\index{setTables@{setTables}!DatabaseDriver@{DatabaseDriver}}
+\doxysubsubsection{\texorpdfstring{setTables()}{setTables()}}
+{\footnotesize\ttfamily set\+Tables (\begin{DoxyParamCaption}\item[{}]{\$entity\+Tables,  }\item[{}]{\$many\+To\+Many\+Tables }\end{DoxyParamCaption})}
+
+Sets tables manually instead of relying on the reverse engineering capabilities of Schema\+Manager.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_table}{Table}}\mbox{[}$\,$\mbox{]} & {\em \$entity\+Tables} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_table}{Table}}\mbox{[}$\,$\mbox{]} & {\em \$many\+To\+Many\+Tables} & @psalm-\/param list$<$\+Table$>$ \$entity\+Tables @psalm-\/param list$<$\+Table$>$ \$many\+To\+Many\+Tables\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/\+Driver/Database\+Driver.\+php\end{DoxyCompactItemize}

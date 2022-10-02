@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause}{}\doxysection{Select\+Clause Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause}\index{SelectClause@{SelectClause}}
+Inheritance diagram for Select\+Clause\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_ac0129b4776111f1271294e0db4d856d7}{\+\_\+\+\_\+construct}} (array \$select\+Expressions, \$is\+Distinct)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_a9e4314eeba648160cde14d94363c6f33}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_a9e4314eeba648160cde14d94363c6f33}} 
+{\bfseries \$is\+Distinct}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_ab43a6d76fb10939f2d903faffbfbbd8b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_ab43a6d76fb10939f2d903faffbfbbd8b}} 
+{\bfseries \$select\+Expressions} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause}{Select\+Clause}} = \char`\"{}\+SELECT\char`\"{} \mbox{[}\char`\"{}\+DISTINCT\char`\"{}\mbox{]} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_expression}{Select\+Expression}} \{\char`\"{},\char`\"{} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_expression}{Select\+Expression}}\}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_ac0129b4776111f1271294e0db4d856d7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_ac0129b4776111f1271294e0db4d856d7}} 
+\index{SelectClause@{SelectClause}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SelectClause@{SelectClause}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$select\+Expressions,  }\item[{}]{\$is\+Distinct }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$select\+Expressions} & \\
+\hline
+bool & {\em \$is\+Distinct} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{SelectClause@{SelectClause}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!SelectClause@{SelectClause}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Select\+Clause.\+php\end{DoxyCompactItemize}

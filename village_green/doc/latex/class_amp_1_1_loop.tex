@@ -1,0 +1,478 @@
+\hypertarget{class_amp_1_1_loop}{}\doxysection{Loop Class Reference}
+\label{class_amp_1_1_loop}\index{Loop@{Loop}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a70f26f7ad46c72523707f504c4f119a1}{set}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_driver}{Driver}} \$driver)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a69fe3737f4b3328c4c45f9b071c2f85c}{run}} (callable \$callback=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a00c3c0c2fc53579e9d1ac28a52623450}{stop}} ()
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_ab249e36c82c1aa8c187cc5a33db7256a}{defer}} (callable \$callback, \$data=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a236ecaf933a3498392497e999b3e677c}{delay}} (int \$delay, callable \$callback, \$data=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_aa66574698574715b5772256f5998deea}{repeat}} (int \$interval, callable \$callback, \$data=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a1d8f25d655922a63f5799e7529943868}{on\+Readable}} (\$stream, callable \$callback, \$data=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a75bb5c5cb82cc413dc6f069d81fad31c}{on\+Writable}} (\$stream, callable \$callback, \$data=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_aae9ce2ce04393715a6d80803cad1187e}{on\+Signal}} (int \$signo, callable \$callback, \$data=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a17aec725526d2b0874f5ed2927b5f8ce}{enable}} (string \$watcher\+Id)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_ae14f859352356574fc168da4f791a4c1}{disable}} (string \$watcher\+Id)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_aafb9917ec3d532e2ef42546f72aca27f}{cancel}} (string \$watcher\+Id)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}{reference}} (string \$watcher\+Id)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}{unreference}} (string \$watcher\+Id)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_af1e393aa6d7074ae6ddc34df2ed39c03}{now}} ()
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a290aacd82bc937c4af5c4ec076d4baf2}{set\+State}} (string \$key, \$value)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a2a6b2fafbf5fad10c4127a28fd045ac3}{get\+State}} (string \$key)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_afd3b30117a11a1427d4c985ad038db85}{set\+Error\+Handler}} (callable \$callback=null)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_aeb696f53ab37f19ae1621f238002a5ae}{get\+Info}} ()
+\item 
+static \mbox{\hyperlink{class_amp_1_1_loop_a5ba61361bf0695a285bbaefefc427191}{get}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Accessor to allow global access to the event loop.
+
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Amp\textbackslash{}\+Loop\textbackslash{}\+Driver 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_aafb9917ec3d532e2ef42546f72aca27f}\label{class_amp_1_1_loop_aafb9917ec3d532e2ef42546f72aca27f}} 
+\index{Loop@{Loop}!cancel@{cancel}}
+\index{cancel@{cancel}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily static cancel (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Cancel a watcher.
+
+This will detatch the event loop from all resources that are associated to the watcher. After this operation the watcher is permanently invalid. Calling this function MUST NOT fail, even if passed an invalid watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_ab249e36c82c1aa8c187cc5a33db7256a}\label{class_amp_1_1_loop_ab249e36c82c1aa8c187cc5a33db7256a}} 
+\index{Loop@{Loop}!defer@{defer}}
+\index{defer@{defer}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{defer()}{defer()}}
+{\footnotesize\ttfamily static defer (\begin{DoxyParamCaption}\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Defer the execution of a callback.
+
+The deferred callable MUST be executed before any other type of watcher in a tick. Order of enabling MUST be preserved when executing the callbacks.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em callable(string} & \$watcher\+Id, mixed \$data) \$callback The callback to defer. The {\ttfamily \$watcher\+Id} will be invalidated before the callback call. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a236ecaf933a3498392497e999b3e677c}\label{class_amp_1_1_loop_a236ecaf933a3498392497e999b3e677c}} 
+\index{Loop@{Loop}!delay@{delay}}
+\index{delay@{delay}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily static delay (\begin{DoxyParamCaption}\item[{int}]{\$delay,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Delay the execution of a callback.
+
+The delay is a minimum and approximate, accuracy is not guaranteed. Order of calls MUST be determined by which timers expire first, but timers with the same expiration time MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$delay} & The amount of time, in milliseconds, to delay the execution for. \\
+\hline
+ & {\em callable(string} & \$watcher\+Id, mixed \$data) \$callback The callback to delay. The {\ttfamily \$watcher\+Id} will be invalidated before the callback call. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_ae14f859352356574fc168da4f791a4c1}\label{class_amp_1_1_loop_ae14f859352356574fc168da4f791a4c1}} 
+\index{Loop@{Loop}!disable@{disable}}
+\index{disable@{disable}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily static disable (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Disable a watcher immediately.
+
+A watcher MUST be disabled immediately, e.\+g. if a defer watcher disables a later defer watcher, the second defer watcher isn\textquotesingle{}t executed in this tick.
+
+Disabling a watcher MUST NOT invalidate the watcher. Calling this function MUST NOT fail, even if passed an invalid watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a17aec725526d2b0874f5ed2927b5f8ce}\label{class_amp_1_1_loop_a17aec725526d2b0874f5ed2927b5f8ce}} 
+\index{Loop@{Loop}!enable@{enable}}
+\index{enable@{enable}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily static enable (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Enable a watcher to be active starting in the next tick.
+
+Watchers MUST immediately be marked as enabled, but only be activated (i.\+e. callbacks can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_invalid_watcher_error}{Invalid\+Watcher\+Error}}} & If the watcher identifier is invalid. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_loop_a5ba61361bf0695a285bbaefefc427191}\label{class_amp_1_1_loop_a5ba61361bf0695a285bbaefefc427191}} 
+\index{Loop@{Loop}!get@{get}}
+\index{get@{get}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily static get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Retrieve the event loop driver that is in scope.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_driver}{Driver}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_aeb696f53ab37f19ae1621f238002a5ae}\label{class_amp_1_1_loop_aeb696f53ab37f19ae1621f238002a5ae}} 
+\index{Loop@{Loop}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily static get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Retrieve an associative array of information about the event loop driver.
+
+The returned array MUST contain the following data describing the driver\textquotesingle{}s currently registered watchers\+: \begin{DoxyVerb}[
+    "defer"            => ["enabled" => int, "disabled" => int],
+    "delay"            => ["enabled" => int, "disabled" => int],
+    "repeat"           => ["enabled" => int, "disabled" => int],
+    "on_readable"      => ["enabled" => int, "disabled" => int],
+    "on_writable"      => ["enabled" => int, "disabled" => int],
+    "on_signal"        => ["enabled" => int, "disabled" => int],
+    "enabled_watchers" => ["referenced" => int, "unreferenced" => int],
+    "running"          => bool
+];
+\end{DoxyVerb}
+ Implementations MAY optionally add more information in the array but at minimum the above {\ttfamily key =\texorpdfstring{$>$}{>} value} format MUST always be provided.
+
+\begin{DoxyReturn}{Returns}
+array Statistics about the loop in the described format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a2a6b2fafbf5fad10c4127a28fd045ac3}\label{class_amp_1_1_loop_a2a6b2fafbf5fad10c4127a28fd045ac3}} 
+\index{Loop@{Loop}!getState@{getState}}
+\index{getState@{getState}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily static get\+State (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets information stored bound to the loop.
+
+Stored information is package private. Packages MUST NOT retrieve the stored state of other packages. Packages MUST use their namespace as prefix for keys. They may do so by using {\ttfamily Some\+Class\+::class} as key.
+
+If packages want to expose loop bound state to consumers other than the package, they SHOULD provide a dedicated interface for that purpose instead of sharing the storage key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The namespaced storage key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The previously stored value or {\ttfamily null} if it doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_af1e393aa6d7074ae6ddc34df2ed39c03}\label{class_amp_1_1_loop_af1e393aa6d7074ae6ddc34df2ed39c03}} 
+\index{Loop@{Loop}!now@{now}}
+\index{now@{now}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily static now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the current loop time in millisecond increments. Note this value does not necessarily correlate to wall-\/clock time, rather the value returned is meant to be used in relative comparisons to prior values returned by this method (intervals, expiration calculations, etc.) and is only updated once per loop tick.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a1d8f25d655922a63f5799e7529943868}\label{class_amp_1_1_loop_a1d8f25d655922a63f5799e7529943868}} 
+\index{Loop@{Loop}!onReadable@{onReadable}}
+\index{onReadable@{onReadable}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{onReadable()}{onReadable()}}
+{\footnotesize\ttfamily static on\+Readable (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Execute a callback when a stream resource becomes readable or is closed for reading.
+
+Warning\+: Closing resources locally, e.\+g. with {\ttfamily fclose}, might not invoke the callback. Be sure to {\ttfamily cancel} the watcher when closing the resource locally. Drivers MAY choose to notify the user if there are watchers on invalid resources, but are not required to, due to the high performance impact. Watchers on closed resources are therefore undefined behavior.
+
+Multiple watchers on the same stream MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$stream} & The stream to monitor. \\
+\hline
+ & {\em callable(string} & \$watcher\+Id, resource \$stream, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_aae9ce2ce04393715a6d80803cad1187e}\label{class_amp_1_1_loop_aae9ce2ce04393715a6d80803cad1187e}} 
+\index{Loop@{Loop}!onSignal@{onSignal}}
+\index{onSignal@{onSignal}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{onSignal()}{onSignal()}}
+{\footnotesize\ttfamily static on\+Signal (\begin{DoxyParamCaption}\item[{int}]{\$signo,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Execute a callback when a signal is received.
+
+Warning\+: Installing the same signal on different instances of this interface is deemed undefined behavior. Implementations MAY try to detect this, if possible, but are not required to. This is due to technical limitations of the signals being registered globally per process.
+
+Multiple watchers on the same signal MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$signo} & The signal number to monitor. \\
+\hline
+ & {\em callable(string} & \$watcher\+Id, int \$signo, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the \$data parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_unsupported_feature_exception}{Unsupported\+Feature\+Exception}}} & If signal handling is not supported. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_loop_a75bb5c5cb82cc413dc6f069d81fad31c}\label{class_amp_1_1_loop_a75bb5c5cb82cc413dc6f069d81fad31c}} 
+\index{Loop@{Loop}!onWritable@{onWritable}}
+\index{onWritable@{onWritable}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{onWritable()}{onWritable()}}
+{\footnotesize\ttfamily static on\+Writable (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Execute a callback when a stream resource becomes writable or is closed for writing.
+
+Warning\+: Closing resources locally, e.\+g. with {\ttfamily fclose}, might not invoke the callback. Be sure to {\ttfamily cancel} the watcher when closing the resource locally. Drivers MAY choose to notify the user if there are watchers on invalid resources, but are not required to, due to the high performance impact. Watchers on closed resources are therefore undefined behavior.
+
+Multiple watchers on the same stream MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$stream} & The stream to monitor. \\
+\hline
+ & {\em callable(string} & \$watcher\+Id, resource \$stream, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}\label{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}} 
+\index{Loop@{Loop}!reference@{reference}}
+\index{reference@{reference}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily static reference (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reference a watcher.
+
+This will keep the event loop alive whilst the watcher is still being monitored. Watchers have this state by default.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_invalid_watcher_error}{Invalid\+Watcher\+Error}}} & If the watcher identifier is invalid. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_loop_aa66574698574715b5772256f5998deea}\label{class_amp_1_1_loop_aa66574698574715b5772256f5998deea}} 
+\index{Loop@{Loop}!repeat@{repeat}}
+\index{repeat@{repeat}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{repeat()}{repeat()}}
+{\footnotesize\ttfamily static repeat (\begin{DoxyParamCaption}\item[{int}]{\$interval,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Repeatedly execute a callback.
+
+The interval between executions is a minimum and approximate, accuracy is not guaranteed. Order of calls MUST be determined by which timers expire first, but timers with the same expiration time MAY be executed in any order. The first execution is scheduled after the first interval period.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$interval} & The time interval, in milliseconds, to wait between executions. \\
+\hline
+ & {\em callable(string} & \$watcher\+Id, mixed \$data) \$callback The callback to repeat. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a69fe3737f4b3328c4c45f9b071c2f85c}\label{class_amp_1_1_loop_a69fe3737f4b3328c4c45f9b071c2f85c}} 
+\index{Loop@{Loop}!run@{run}}
+\index{run@{run}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily static run (\begin{DoxyParamCaption}\item[{callable}]{\$callback = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Run the event loop and optionally execute a callback within the scope of it.
+
+The loop MUST continue to run until it is either stopped explicitly, no referenced watchers exist anymore, or an exception is thrown that cannot be handled. Exceptions that cannot be handled are exceptions thrown from an error handler or exceptions that would be passed to an error handler but none exists to handle them.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable | null & {\em \$callback} & The callback to execute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a70f26f7ad46c72523707f504c4f119a1}\label{class_amp_1_1_loop_a70f26f7ad46c72523707f504c4f119a1}} 
+\index{Loop@{Loop}!set@{set}}
+\index{set@{set}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily static set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_driver}{Driver}}}]{\$driver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the driver to be used for {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop_a69fe3737f4b3328c4c45f9b071c2f85c}{Loop\+::run()}}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_driver}{Driver}} & {\em \$driver} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyReturn}{Returns}
+void
+
+void
+
+void
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_afd3b30117a11a1427d4c985ad038db85}\label{class_amp_1_1_loop_afd3b30117a11a1427d4c985ad038db85}} 
+\index{Loop@{Loop}!setErrorHandler@{setErrorHandler}}
+\index{setErrorHandler@{setErrorHandler}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{setErrorHandler()}{setErrorHandler()}}
+{\footnotesize\ttfamily static set\+Error\+Handler (\begin{DoxyParamCaption}\item[{callable}]{\$callback = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set a callback to be executed when an error occurs.
+
+The callback receives the error as the first and only parameter. The return value of the callback gets ignored. If it can\textquotesingle{}t handle the error, it MUST throw the error. Errors thrown by the callback or during its invocation MUST be thrown into the {\ttfamily run} loop and stop the driver.
+
+Subsequent calls to this method will overwrite the previous handler.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable & {\em callable(,\$error,)$\vert$null} & \$callback The callback to execute. {\ttfamily null} will clear the current handler.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+callable(\textbackslash{}\+Throwable \$error)$\vert$null The previous handler, {\ttfamily null} if there was none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a290aacd82bc937c4af5c4ec076d4baf2}\label{class_amp_1_1_loop_a290aacd82bc937c4af5c4ec076d4baf2}} 
+\index{Loop@{Loop}!setState@{setState}}
+\index{setState@{setState}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily static set\+State (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Stores information in the loop bound registry.
+
+Stored information is package private. Packages MUST NOT retrieve the stored state of other packages. Packages MUST use their namespace as prefix for keys. They may do so by using {\ttfamily Some\+Class\+::class} as key.
+
+If packages want to expose loop bound state to consumers other than the package, they SHOULD provide a dedicated interface for that purpose instead of sharing the storage key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The namespaced storage key. \\
+\hline
+mixed & {\em \$value} & The value to be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a00c3c0c2fc53579e9d1ac28a52623450}\label{class_amp_1_1_loop_a00c3c0c2fc53579e9d1ac28a52623450}} 
+\index{Loop@{Loop}!stop@{stop}}
+\index{stop@{stop}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily static stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Stop the event loop.
+
+When an event loop is stopped, it continues with its current tick and exits the loop afterwards. Multiple calls to stop MUST be ignored and MUST NOT raise an exception.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}\label{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}} 
+\index{Loop@{Loop}!unreference@{unreference}}
+\index{unreference@{unreference}!Loop@{Loop}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily static unreference (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Unreference a watcher.
+
+The event loop should exit the run method when only unreferenced watchers are still being monitored. Watchers are all referenced by default.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Loop.\+php\end{DoxyCompactItemize}

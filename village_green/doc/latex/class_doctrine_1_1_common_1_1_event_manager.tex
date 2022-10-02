@@ -1,0 +1,181 @@
+\hypertarget{class_doctrine_1_1_common_1_1_event_manager}{}\doxysection{Event\+Manager Class Reference}
+\label{class_doctrine_1_1_common_1_1_event_manager}\index{EventManager@{EventManager}}
+Inheritance diagram for Event\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_event_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_acf481b18cabfdd7e43ec5ab0cce872f8}{dispatch\+Event}} (\$event\+Name, ?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} \$event\+Args=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_a0603f6993f6c695731021d84dc46a69e}{get\+Listeners}} (\$event=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_a18c219f082e70e45f4daaf986e0bacc0}{has\+Listeners}} (\$event)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_ae3876c6406322df832faa1d15e663dd5}{add\+Event\+Listener}} (\$events, \$listener)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_a5b6561178c612c4131602e35277ee664}{remove\+Event\+Listener}} (\$events, \$listener)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_a4e8af0e9f29c1133b7e4816d3e09d4f6}{add\+Event\+Subscriber}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}} \$subscriber)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_a9a408c66a57563faf371d5e8293fab16}{remove\+Event\+Subscriber}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}} \$subscriber)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Event\+Manager}} is the central point of Doctrine\textquotesingle{}s event listener system. Listeners are registered on the manager and events are dispatched through the manager. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_ae3876c6406322df832faa1d15e663dd5}\label{class_doctrine_1_1_common_1_1_event_manager_ae3876c6406322df832faa1d15e663dd5}} 
+\index{EventManager@{EventManager}!addEventListener@{addEventListener}}
+\index{addEventListener@{addEventListener}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{addEventListener()}{addEventListener()}}
+{\footnotesize\ttfamily add\+Event\+Listener (\begin{DoxyParamCaption}\item[{}]{\$events,  }\item[{}]{\$listener }\end{DoxyParamCaption})}
+
+Adds an event listener that listens on the specified events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$events} & The event(s) to listen on. \\
+\hline
+object & {\em \$listener} & The listener object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_container_aware_event_manager_ae3876c6406322df832faa1d15e663dd5}{Container\+Aware\+Event\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_a4e8af0e9f29c1133b7e4816d3e09d4f6}\label{class_doctrine_1_1_common_1_1_event_manager_a4e8af0e9f29c1133b7e4816d3e09d4f6}} 
+\index{EventManager@{EventManager}!addEventSubscriber@{addEventSubscriber}}
+\index{addEventSubscriber@{addEventSubscriber}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{addEventSubscriber()}{addEventSubscriber()}}
+{\footnotesize\ttfamily add\+Event\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}}}]{\$subscriber }\end{DoxyParamCaption})}
+
+Adds an \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}}. The subscriber is asked for all the events it is interested in and added as a listener for these events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}} & {\em \$subscriber} & The subscriber.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_container_aware_event_manager_a4e8af0e9f29c1133b7e4816d3e09d4f6}{Container\+Aware\+Event\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_acf481b18cabfdd7e43ec5ab0cce872f8}\label{class_doctrine_1_1_common_1_1_event_manager_acf481b18cabfdd7e43ec5ab0cce872f8}} 
+\index{EventManager@{EventManager}!dispatchEvent@{dispatchEvent}}
+\index{dispatchEvent@{dispatchEvent}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{dispatchEvent()}{dispatchEvent()}}
+{\footnotesize\ttfamily dispatch\+Event (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}}}]{\$event\+Args = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Dispatches an event to all registered listeners.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event to dispatch. The name of the event is the name of the method that is invoked on listeners. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} | null & {\em \$event\+Args} & The event arguments to pass to the event handlers/listeners. If not supplied, the single empty \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} instance is used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_a0603f6993f6c695731021d84dc46a69e}\label{class_doctrine_1_1_common_1_1_event_manager_a0603f6993f6c695731021d84dc46a69e}} 
+\index{EventManager@{EventManager}!getListeners@{getListeners}}
+\index{getListeners@{getListeners}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{getListeners()}{getListeners()}}
+{\footnotesize\ttfamily get\+Listeners (\begin{DoxyParamCaption}\item[{}]{\$event = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets the listeners of a specific event or all listeners.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$event} & The name of the event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object\mbox{[}\mbox{]}$\vert$object\mbox{[}\mbox{]}\mbox{[}\mbox{]} The event listeners for the specified event, or all event listeners. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_container_aware_event_manager_a0603f6993f6c695731021d84dc46a69e}{Container\+Aware\+Event\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_a18c219f082e70e45f4daaf986e0bacc0}\label{class_doctrine_1_1_common_1_1_event_manager_a18c219f082e70e45f4daaf986e0bacc0}} 
+\index{EventManager@{EventManager}!hasListeners@{hasListeners}}
+\index{hasListeners@{hasListeners}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{hasListeners()}{hasListeners()}}
+{\footnotesize\ttfamily has\+Listeners (\begin{DoxyParamCaption}\item[{}]{\$event }\end{DoxyParamCaption})}
+
+Checks whether an event has any registered listeners.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the specified event has any listeners, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_container_aware_event_manager_a18c219f082e70e45f4daaf986e0bacc0}{Container\+Aware\+Event\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_a5b6561178c612c4131602e35277ee664}\label{class_doctrine_1_1_common_1_1_event_manager_a5b6561178c612c4131602e35277ee664}} 
+\index{EventManager@{EventManager}!removeEventListener@{removeEventListener}}
+\index{removeEventListener@{removeEventListener}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{removeEventListener()}{removeEventListener()}}
+{\footnotesize\ttfamily remove\+Event\+Listener (\begin{DoxyParamCaption}\item[{}]{\$events,  }\item[{}]{\$listener }\end{DoxyParamCaption})}
+
+Removes an event listener from the specified events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$events} & \\
+\hline
+object & {\em \$listener} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_container_aware_event_manager_a5b6561178c612c4131602e35277ee664}{Container\+Aware\+Event\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_manager_a9a408c66a57563faf371d5e8293fab16}\label{class_doctrine_1_1_common_1_1_event_manager_a9a408c66a57563faf371d5e8293fab16}} 
+\index{EventManager@{EventManager}!removeEventSubscriber@{removeEventSubscriber}}
+\index{removeEventSubscriber@{removeEventSubscriber}!EventManager@{EventManager}}
+\doxysubsubsection{\texorpdfstring{removeEventSubscriber()}{removeEventSubscriber()}}
+{\footnotesize\ttfamily remove\+Event\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}}}]{\$subscriber }\end{DoxyParamCaption})}
+
+Removes an \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}}. The subscriber is asked for all the events it is interested in and removed as a listener for these events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}} & {\em \$subscriber} & The subscriber.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_container_aware_event_manager_a9a408c66a57563faf371d5e8293fab16}{Container\+Aware\+Event\+Manager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/event-\/manager/lib/\+Doctrine/\+Common/Event\+Manager.\+php\end{DoxyCompactItemize}

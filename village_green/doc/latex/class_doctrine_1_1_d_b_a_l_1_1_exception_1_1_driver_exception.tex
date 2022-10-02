@@ -1,0 +1,50 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception}{}\doxysection{Driver\+Exception Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception}\index{DriverException@{DriverException}}
+Inheritance diagram for Driver\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.878788cm]{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_a2880d709738abd63abcef8605f85946a}\label{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_a2880d709738abd63abcef8605f85946a}} 
+{\bfseries \+\_\+\+\_\+construct} (The\+Driver\+Exception \$driver\+Exception, ?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} \$query)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_adb057c5e41523fdbf2258df2fe0970bc}{get\+SQLState}} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_a55f162785567258fe5138af282e588c2}\label{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_a55f162785567258fe5138af282e588c2}} 
+{\bfseries get\+Query} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for all errors detected in the driver.
+
+@psalm-\/immutable 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_adb057c5e41523fdbf2258df2fe0970bc}\label{class_doctrine_1_1_d_b_a_l_1_1_exception_1_1_driver_exception_adb057c5e41523fdbf2258df2fe0970bc}} 
+\index{DriverException@{DriverException}!getSQLState@{getSQLState}}
+\index{getSQLState@{getSQLState}!DriverException@{DriverException}}
+\doxysubsubsection{\texorpdfstring{getSQLState()}{getSQLState()}}
+{\footnotesize\ttfamily get\+SQLState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the SQLSTATE the driver was in at the time the error occurred.
+
+Returns null if the driver does not provide a SQLSTATE for the error occurred.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception_adb057c5e41523fdbf2258df2fe0970bc}{Exception}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Exception/Driver\+Exception.\+php\end{DoxyCompactItemize}

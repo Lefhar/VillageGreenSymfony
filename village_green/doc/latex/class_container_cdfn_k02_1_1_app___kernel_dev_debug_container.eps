@@ -1,0 +1,1729 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ClassName
+%%Creator: Doxygen
+%%CreationDate: Time
+%%For: 
+%Magnification: 1.00
+%%Orientation: Portrait
+%%BoundingBox: 0 0 500 5218.579102
+%%Pages: 0
+%%BeginSetup
+%%EndSetup
+%%EndComments
+
+% ----- variables -----
+
+/boxwidth 0 def
+/boxheight 40 def
+/fontheight 24 def
+/marginwidth 10 def
+/distx 20 def
+/disty 40 def
+/boundaspect 0.095812 def  % aspect ratio of the BoundingBox (width/height)
+/boundx 500 def
+/boundy boundx boundaspect div def
+/xspacing 0 def
+/yspacing 0 def
+/rows 382 def
+/cols 3 def
+/scalefactor 0 def
+/boxfont /Times-Roman findfont fontheight scalefont def
+
+% ----- procedures -----
+
+/dotted { [1 4] 0 setdash } def
+/dashed { [5] 0 setdash } def
+/solid  { [] 0 setdash } def
+
+/max % result = MAX(arg1,arg2)
+{
+  /a exch def
+  /b exch def
+  a b gt {a} {b} ifelse
+} def
+
+/xoffset % result = MAX(0,(scalefactor-(boxwidth*cols+distx*(cols-1)))/2)
+{
+  0 scalefactor boxwidth cols mul distx cols 1 sub mul add sub 2 div max
+} def
+
+/cw % boxwidth = MAX(boxwidth, stringwidth(arg1))
+{
+  /str exch def
+  /boxwidth boxwidth str stringwidth pop max def
+} def
+
+/box % draws a box with text 'arg1' at grid pos (arg2,arg3)
+{ gsave
+  2 setlinewidth
+  newpath
+  exch xspacing mul xoffset add
+  exch yspacing mul
+  moveto
+  boxwidth 0 rlineto 
+  0 boxheight rlineto 
+  boxwidth neg 0 rlineto 
+  0 boxheight neg rlineto 
+  closepath
+  dup stringwidth pop neg boxwidth add 2 div
+  boxheight fontheight 2 div sub 2 div
+  rmoveto show stroke
+  grestore
+} def  
+
+/mark
+{ newpath
+  exch xspacing mul xoffset add boxwidth add
+  exch yspacing mul
+  moveto
+  0 boxheight 4 div rlineto
+  boxheight neg 4 div boxheight neg 4 div rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/arrow
+{ newpath
+  moveto
+  3 -8 rlineto
+  -6 0 rlineto
+  3 8 rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/out % draws an output connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight add
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto 
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/in % draws an input connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul disty 2 div sub
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/hedge
+{
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight 2 div sub
+  /y exch def
+  /x exch def
+  newpath
+  x y moveto
+  boxwidth 2 div distx add 0 rlineto
+  stroke
+  1 eq
+  { newpath x boxwidth 2 div distx add add y moveto
+    -8 3 rlineto
+    0 -6 rlineto
+    8 3 rlineto
+    closepath
+    eofill
+    stroke
+  } if
+} def
+
+/vedge
+{
+  /ye exch def
+  /ys exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add dup
+  ys yspacing mul boxheight 2 div sub
+  moveto
+  ye yspacing mul boxheight 2 div sub
+  lineto
+  stroke
+} def
+
+/conn % connections the blocks from col 'arg1' to 'arg2' of row 'arg3'
+{
+  /ys exch def
+  /xe exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add
+  ys yspacing mul disty 2 div sub
+  moveto
+  xspacing xe xs sub mul 0
+  rlineto
+  stroke
+} def
+
+% ----- main ------
+
+boxfont setfont
+1 boundaspect scale
+(App_KernelDevDebugContainer) cw
+(Container) cw
+(ContainerInterface) cw
+(ResetInterface) cw
+(getAdminControllerService) cw
+(getAdminProductsControllerService) cw
+(getAnnotations_CacheWarmerService) cw
+(getApiControllerService) cw
+(getAppCustomAuthentificatorAuthenticatorService) cw
+(getCachePoolClearer_CacheWarmerService) cw
+(getCacheWarmerService) cw
+(getCache_AppClearerService) cw
+(getCache_GlobalClearerService) cw
+(getCache_SystemClearerService) cw
+(getCategories2Service) cw
+(getCategories3Service) cw
+(getCategoriesAdminControllerService) cw
+(getCategoriesControllerService) cw
+(getCategoriesRepositoryService) cw
+(getCategoriesService) cw
+(getCategoriesTypeService) cw
+(getConfigBuilder_WarmerService) cw
+(getConsole_CommandLoaderService) cw
+(getConsole_Command_AboutService) cw
+(getConsole_Command_AssetsInstallService) cw
+(getConsole_Command_CacheClearService) cw
+(getConsole_Command_CachePoolClearService) cw
+(getConsole_Command_CachePoolDeleteService) cw
+(getConsole_Command_CachePoolListService) cw
+(getConsole_Command_CachePoolPruneService) cw
+(getConsole_Command_CacheWarmupService) cw
+(getConsole_Command_ConfigDebugService) cw
+(getConsole_Command_ConfigDumpReferenceService) cw
+(getConsole_Command_ContainerDebugService) cw
+(getConsole_Command_ContainerLintService) cw
+(getConsole_Command_DebugAutowiringService) cw
+(getConsole_Command_DotenvDebugService) cw
+(getConsole_Command_EventDispatcherDebugService) cw
+(getConsole_Command_FormDebugService) cw
+(getConsole_Command_RouterDebugService) cw
+(getConsole_Command_RouterMatchService) cw
+(getConsole_Command_SecretsDecryptToLocalService) cw
+(getConsole_Command_SecretsEncryptFromLocalService) cw
+(getConsole_Command_SecretsGenerateKeyService) cw
+(getConsole_Command_SecretsListService) cw
+(getConsole_Command_SecretsRemoveService) cw
+(getConsole_Command_SecretsSetService) cw
+(getConsole_Command_TranslationDebugService) cw
+(getConsole_Command_TranslationExtractService) cw
+(getConsole_Command_TranslationPullService) cw
+(getConsole_Command_TranslationPushService) cw
+(getConsole_Command_ValidatorDebugService) cw
+(getConsole_Command_XliffLintService) cw
+(getConsole_Command_YamlLintService) cw
+(getConsole_ErrorListenerService) cw
+(getContainer_EnvVarProcessorService) cw
+(getContainer_EnvVarProcessorsLocatorService) cw
+(getContainer_GetenvService) cw
+(getCustomersRepositoryService) cw
+(getDataCollector_Request_SessionCollectorService) cw
+(getDebug_ArgumentResolver_DefaultService) cw
+(getDebug_ArgumentResolver_NotTaggedControllerService) cw
+(getDebug_ArgumentResolver_RequestAttributeService) cw
+(getDebug_ArgumentResolver_RequestService) cw
+(getDebug_ArgumentResolver_ServiceService) cw
+(getDebug_ArgumentResolver_SessionService) cw
+(getDebug_ArgumentResolver_VariadicService) cw
+(getDebug_DumpListenerService) cw
+(getDebug_FileLinkFormatter_UrlFormatService) cw
+(getDebug_Security_Firewall_Authenticator_MainService) cw
+(getDebug_Security_UserValueResolverService) cw
+(getDebug_Security_Voter_Security_Access_AuthenticatedVoterService) cw
+(getDebug_Security_Voter_Security_Access_ExpressionVoterService) cw
+(getDebug_Security_Voter_Security_Access_RoleHierarchyVoterService) cw
+(getDebug_Security_Voter_VoteListenerService) cw
+(getDepartmentsRepositoryService) cw
+(getDoctrineMigrations_CurrentCommandService) cw
+(getDoctrineMigrations_DiffCommandService) cw
+(getDoctrineMigrations_DumpSchemaCommandService) cw
+(getDoctrineMigrations_ExecuteCommandService) cw
+(getDoctrineMigrations_GenerateCommandService) cw
+(getDoctrineMigrations_LatestCommandService) cw
+(getDoctrineMigrations_MigrateCommandService) cw
+(getDoctrineMigrations_RollupCommandService) cw
+(getDoctrineMigrations_StatusCommandService) cw
+(getDoctrineMigrations_SyncMetadataCommandService) cw
+(getDoctrineMigrations_UpToDateCommandService) cw
+(getDoctrineMigrations_VersionCommandService) cw
+(getDoctrineMigrations_VersionsCommandService) cw
+(getDoctrine_CacheClearMetadataCommandService) cw
+(getDoctrine_CacheClearQueryCacheCommandService) cw
+(getDoctrine_CacheClearResultCommandService) cw
+(getDoctrine_CacheCollectionRegionCommandService) cw
+(getDoctrine_ClearEntityRegionCommandService) cw
+(getDoctrine_ClearQueryRegionCommandService) cw
+(getDoctrine_DatabaseCreateCommandService) cw
+(getDoctrine_DatabaseDropCommandService) cw
+(getDoctrine_EnsureProductionSettingsCommandService) cw
+(getDoctrine_MappingConvertCommandService) cw
+(getDoctrine_MappingImportCommandService) cw
+(getDoctrine_MappingInfoCommandService) cw
+(getDoctrine_Migrations_ContainerAwareMigrationsFactoryService) cw
+(getDoctrine_Orm_DefaultEntityManager_PropertyInfoExtractorService) cw
+(getDoctrine_Orm_DefaultListeners_AttachEntityListenersService) cw
+(getDoctrine_Orm_Listeners_DoctrineDbalCacheAdapterSchemaSubscriberService) cw
+(getDoctrine_Orm_Listeners_DoctrineTokenProviderSchemaSubscriberService) cw
+(getDoctrine_Orm_Listeners_PdoCacheAdapterDoctrineSchemaSubscriberService) cw
+(getDoctrine_Orm_ProxyCacheWarmerService) cw
+(getDoctrine_Orm_Validator_UniqueService) cw
+(getDoctrine_QueryDqlCommandService) cw
+(getDoctrine_QuerySqlCommandService) cw
+(getDoctrine_SchemaCreateCommandService) cw
+(getDoctrine_SchemaDropCommandService) cw
+(getDoctrine_SchemaUpdateCommandService) cw
+(getDoctrine_SchemaValidateCommandService) cw
+(getDoctrine_UlidGeneratorService) cw
+(getDoctrine_UuidGeneratorService) cw
+(getEmployeesRepositoryService) cw
+(getEmployeesService) cw
+(getErrorControllerService) cw
+(getErrorHandler_ErrorRenderer_HtmlService) cw
+(getFactureControllerService) cw
+(getForm_ChoiceListFactory_CachedService) cw
+(getForm_RegistryService) cw
+(getForm_ServerParamsService) cw
+(getForm_TypeExtension_CsrfService) cw
+(getForm_TypeExtension_Form_DataCollectorService) cw
+(getForm_TypeExtension_Form_HttpFoundationService) cw
+(getForm_TypeExtension_Form_TransformationFailureHandlingService) cw
+(getForm_TypeExtension_Form_ValidatorService) cw
+(getForm_TypeExtension_Upload_ValidatorService) cw
+(getForm_TypeGuesser_DoctrineService) cw
+(getForm_TypeGuesser_ValidatorService) cw
+(getForm_Type_ChoiceService) cw
+(getForm_Type_ColorService) cw
+(getForm_Type_EntityService) cw
+(getForm_Type_FormService) cw
+(getFragment_Renderer_InlineService) cw
+(getHomeControllerService) cw
+(getKnpSnappy_ImageService) cw
+(getKnpSnappy_PdfService) cw
+(getLiveRepositoryService) cw
+(getLoaderInterfaceService) cw
+(getMailer_MailerService) cw
+(getMailer_TransportFactory_NativeService) cw
+(getMailer_TransportFactory_NullService) cw
+(getMailer_TransportFactory_SendmailService) cw
+(getMailer_TransportFactory_SmtpService) cw
+(getMaker_AutoCommand_MakeAuthService) cw
+(getMaker_AutoCommand_MakeCommandService) cw
+(getMaker_AutoCommand_MakeControllerService) cw
+(getMaker_AutoCommand_MakeCrudService) cw
+(getMaker_AutoCommand_MakeDockerDatabaseService) cw
+(getMaker_AutoCommand_MakeEntityService) cw
+(getMaker_AutoCommand_MakeFixturesService) cw
+(getMaker_AutoCommand_MakeFormService) cw
+(getMaker_AutoCommand_MakeMessageService) cw
+(getMaker_AutoCommand_MakeMessengerMiddlewareService) cw
+(getMaker_AutoCommand_MakeMigrationService) cw
+(getMaker_AutoCommand_MakeRegistrationFormService) cw
+(getMaker_AutoCommand_MakeResetPasswordService) cw
+(getMaker_AutoCommand_MakeSerializerEncoderService) cw
+(getMaker_AutoCommand_MakeSerializerNormalizerService) cw
+(getMaker_AutoCommand_MakeSubscriberService) cw
+(getMaker_AutoCommand_MakeTestService) cw
+(getMaker_AutoCommand_MakeTwigExtensionService) cw
+(getMaker_AutoCommand_MakeUserService) cw
+(getMaker_AutoCommand_MakeValidatorService) cw
+(getMaker_AutoCommand_MakeVoterService) cw
+(getMaker_DoctrineHelperService) cw
+(getMaker_EntityClassGeneratorService) cw
+(getMaker_FileManagerService) cw
+(getMaker_GeneratorService) cw
+(getMaker_PhpCompatUtilService) cw
+(getMaker_Renderer_FormTypeRendererService) cw
+(getManagerRegistryAwareConnectionProviderService) cw
+(getMimeTypesService) cw
+(getMonolog_Command_ServerLogService) cw
+(getMonolog_Logger_MailerService) cw
+(getMonolog_Logger_SnappyService) cw
+(getOrders2Service) cw
+(getOrdersDetailsRepositoryService) cw
+(getOrdersRepositoryService) cw
+(getOrdersService) cw
+(getPaiementControllerService) cw
+(getPaniersControllerService) cw
+(getPostsRepositoryService) cw
+(getProducts2Service) cw
+(getProducts3Service) cw
+(getProducts4Service) cw
+(getProducts5Service) cw
+(getProductsRepositoryService) cw
+(getProductsService) cw
+(getProductsTypeService) cw
+(getProduitsControllerService) cw
+(getProfilerControllerService) cw
+(getPropertyAccessorService) cw
+(getPropertyInfo_SerializerExtractorService) cw
+(getRedirectControllerService) cw
+(getRegistrationControllerService) cw
+(getRegistrationFormTypeService) cw
+(getResponseService) cw
+(getRouter_CacheWarmerService) cw
+(getRouting_LoaderService) cw
+(getRunSqlCommandService) cw
+(getSearchControllerService) cw
+(getSecrets_VaultService) cw
+(getSecurity_AccessListenerService) cw
+(getSecurity_AccessMapService) cw
+(getSecurity_AuthenticationUtilsService) cw
+(getSecurity_Authenticator_Manager_MainService) cw
+(getSecurity_Authenticator_RememberMeHandler_MainService) cw
+(getSecurity_Authenticator_RememberMe_MainService) cw
+(getSecurity_ChannelListenerService) cw
+(getSecurity_Command_DebugFirewallService) cw
+(getSecurity_Command_UserPasswordEncoderService) cw
+(getSecurity_Command_UserPasswordHashService) cw
+(getSecurity_Csrf_TokenStorageService) cw
+(getSecurity_EncoderFactory_GenericService) cw
+(getSecurity_Firewall_Map_Context_DevService) cw
+(getSecurity_Firewall_Map_Context_MainService) cw
+(getSecurity_HttpUtilsService) cw
+(getSecurity_Listener_CheckAuthenticatorCredentialsService) cw
+(getSecurity_Listener_CheckRememberMeConditions_MainService) cw
+(getSecurity_Listener_CsrfProtectionService) cw
+(getSecurity_Listener_Main_UserProviderService) cw
+(getSecurity_Listener_PasswordMigratingService) cw
+(getSecurity_Listener_RememberMe_MainService) cw
+(getSecurity_Listener_Session_MainService) cw
+(getSecurity_Listener_UserChecker_MainService) cw
+(getSecurity_Listener_UserProviderService) cw
+(getSecurity_Logout_Listener_CsrfTokenClearingService) cw
+(getSecurity_Logout_Listener_Default_MainService) cw
+(getSecurity_PasswordHasherFactoryService) cw
+(getSecurity_UserAuthenticatorService) cw
+(getSecurity_UserPasswordHasherService) cw
+(getSecurity_User_Provider_Concrete_AppUserProviderService) cw
+(getSecurity_Validator_UserPasswordService) cw
+(getSerializer_Mapping_CacheWarmerService) cw
+(getSerializer_Mapping_ClassMetadataFactoryService) cw
+(getServicesResetterService) cw
+(getSession_FactoryService) cw
+(getTemplateControllerService) cw
+(getTranslation_ExtractorService) cw
+(getTranslation_Loader_CsvService) cw
+(getTranslation_Loader_DatService) cw
+(getTranslation_Loader_IniService) cw
+(getTranslation_Loader_JsonService) cw
+(getTranslation_Loader_MoService) cw
+(getTranslation_Loader_PhpService) cw
+(getTranslation_Loader_PoService) cw
+(getTranslation_Loader_QtService) cw
+(getTranslation_Loader_ResService) cw
+(getTranslation_Loader_XliffService) cw
+(getTranslation_Loader_YmlService) cw
+(getTranslation_ProviderCollectionService) cw
+(getTranslation_ReaderService) cw
+(getTranslation_WarmerService) cw
+(getTranslation_WriterService) cw
+(getTwig_Command_DebugService) cw
+(getTwig_Command_LintService) cw
+(getTwig_Form_RendererService) cw
+(getTwig_Mailer_MessageListenerService) cw
+(getTwig_Runtime_HttpkernelService) cw
+(getTwig_Runtime_SecurityCsrfService) cw
+(getTwig_Runtime_SerializerService) cw
+(getTwig_TemplateCacheWarmerService) cw
+(getUsersControllerService) cw
+(getUsersRepositoryService) cw
+(getValidator_EmailService) cw
+(getValidator_ExpressionService) cw
+(getValidator_Mapping_CacheWarmerService) cw
+(getValidator_NotCompromisedPasswordService) cw
+(getVarDumper_Command_ServerDumpService) cw
+(getVarDumper_ContextualizedCliDumper_InnerService) cw
+(getWebProfiler_Controller_ExceptionPanelService) cw
+(getWebProfiler_Controller_ProfilerService) cw
+(getWebProfiler_Controller_RouterService) cw
+(get_Console_Command_About_LazyService) cw
+(get_Console_Command_AssetsInstall_LazyService) cw
+(get_Console_Command_CacheClear_LazyService) cw
+(get_Console_Command_CachePoolClear_LazyService) cw
+(get_Console_Command_CachePoolDelete_LazyService) cw
+(get_Console_Command_CachePoolList_LazyService) cw
+(get_Console_Command_CachePoolPrune_LazyService) cw
+(get_Console_Command_CacheWarmup_LazyService) cw
+(get_Console_Command_ConfigDebug_LazyService) cw
+(get_Console_Command_ConfigDumpReference_LazyService) cw
+(get_Console_Command_ContainerDebug_LazyService) cw
+(get_Console_Command_ContainerLint_LazyService) cw
+(get_Console_Command_DebugAutowiring_LazyService) cw
+(get_Console_Command_DotenvDebug_LazyService) cw
+(get_Console_Command_EventDispatcherDebug_LazyService) cw
+(get_Console_Command_FormDebug_LazyService) cw
+(get_Console_Command_RouterDebug_LazyService) cw
+(get_Console_Command_RouterMatch_LazyService) cw
+(get_Console_Command_SecretsDecryptToLocal_LazyService) cw
+(get_Console_Command_SecretsEncryptFromLocal_LazyService) cw
+(get_Console_Command_SecretsGenerateKey_LazyService) cw
+(get_Console_Command_SecretsList_LazyService) cw
+(get_Console_Command_SecretsRemove_LazyService) cw
+(get_Console_Command_SecretsSet_LazyService) cw
+(get_Console_Command_TranslationDebug_LazyService) cw
+(get_Console_Command_TranslationExtract_LazyService) cw
+(get_Console_Command_TranslationPull_LazyService) cw
+(get_Console_Command_TranslationPush_LazyService) cw
+(get_Console_Command_ValidatorDebug_LazyService) cw
+(get_Console_Command_XliffLint_LazyService) cw
+(get_Console_Command_YamlLint_LazyService) cw
+(get_Container_Private_CacheClearerService) cw
+(get_Container_Private_FilesystemService) cw
+(get_Container_Private_Form_FactoryService) cw
+(get_Container_Private_Form_Type_FileService) cw
+(get_Container_Private_Security_Csrf_TokenManagerService) cw
+(get_Container_Private_Security_PasswordEncoderService) cw
+(get_Container_Private_SerializerService) cw
+(get_Container_Private_SessionService) cw
+(get_Maker_AutoCommand_MakeAuth_LazyService) cw
+(get_Maker_AutoCommand_MakeCommand_LazyService) cw
+(get_Maker_AutoCommand_MakeController_LazyService) cw
+(get_Maker_AutoCommand_MakeCrud_LazyService) cw
+(get_Maker_AutoCommand_MakeDockerDatabase_LazyService) cw
+(get_Maker_AutoCommand_MakeEntity_LazyService) cw
+(get_Maker_AutoCommand_MakeFixtures_LazyService) cw
+(get_Maker_AutoCommand_MakeForm_LazyService) cw
+(get_Maker_AutoCommand_MakeMessage_LazyService) cw
+(get_Maker_AutoCommand_MakeMessengerMiddleware_LazyService) cw
+(get_Maker_AutoCommand_MakeMigration_LazyService) cw
+(get_Maker_AutoCommand_MakeRegistrationForm_LazyService) cw
+(get_Maker_AutoCommand_MakeResetPassword_LazyService) cw
+(get_Maker_AutoCommand_MakeSerializerEncoder_LazyService) cw
+(get_Maker_AutoCommand_MakeSerializerNormalizer_LazyService) cw
+(get_Maker_AutoCommand_MakeSubscriber_LazyService) cw
+(get_Maker_AutoCommand_MakeTest_LazyService) cw
+(get_Maker_AutoCommand_MakeTwigExtension_LazyService) cw
+(get_Maker_AutoCommand_MakeUser_LazyService) cw
+(get_Maker_AutoCommand_MakeValidator_LazyService) cw
+(get_Maker_AutoCommand_MakeVoter_LazyService) cw
+(get_Monolog_Command_ServerLog_LazyService) cw
+(get_Security_Command_DebugFirewall_LazyService) cw
+(get_Security_Command_UserPasswordEncoder_LazyService) cw
+(get_Security_Command_UserPasswordHash_LazyService) cw
+(get_ServiceLocator_3jVhGUTService) cw
+(get_ServiceLocator_5MaV3eEService) cw
+(get_ServiceLocator_8LSXZoeService) cw
+(get_ServiceLocator_E7MvU05Service) cw
+(get_ServiceLocator_EWdbrfService) cw
+(get_ServiceLocator_EXSkSgQService) cw
+(get_ServiceLocator_FyTYKh9Service) cw
+(get_ServiceLocator_GEpnwpBService) cw
+(get_ServiceLocator_GHKpXy_Service) cw
+(get_ServiceLocator_GNc8e5BService) cw
+(get_ServiceLocator_G_VaLSIService) cw
+(get_ServiceLocator_He7m6lVService) cw
+(get_ServiceLocator_JlyTfzMService) cw
+(get_ServiceLocator_KfbR3DYService) cw
+(get_ServiceLocator_KfwZsneService) cw
+(get_ServiceLocator_L2QwsaZService) cw
+(get_ServiceLocator_LAMx9d4Service) cw
+(get_ServiceLocator_LYR97ChService) cw
+(get_ServiceLocator_LhPOhFbService) cw
+(get_ServiceLocator_MDxfRyFService) cw
+(get_ServiceLocator_MpXGzk0Service) cw
+(get_ServiceLocator_NDPeXnService) cw
+(get_ServiceLocator_NQqAGumService) cw
+(get_ServiceLocator_OGaZ7HEService) cw
+(get_ServiceLocator_PwNGlGfService) cw
+(get_ServiceLocator_QJnwyfrService) cw
+(get_ServiceLocator_QknhPckService) cw
+(get_ServiceLocator_QqiKMWTService) cw
+(get_ServiceLocator_Rve5fxBService) cw
+(get_ServiceLocator_S6h7Y7XService) cw
+(get_ServiceLocator_Se5ACVService) cw
+(get_ServiceLocator_X0mVKZmService) cw
+(get_ServiceLocator_Xfdiu8kService) cw
+(get_ServiceLocator_XvNidsEService) cw
+(get_ServiceLocator_YL0QqsService) cw
+(get_ServiceLocator_YMXx86kService) cw
+(get_ServiceLocator_YhGw_X9Service) cw
+(get_Session_DeprecatedService) cw
+(get_Twig_Command_Debug_LazyService) cw
+(get_Twig_Command_Lint_LazyService) cw
+(get_VarDumper_Command_ServerDump_LazyService) cw
+/boxwidth boxwidth marginwidth 2 mul add def
+/xspacing boxwidth distx add def
+/yspacing boxheight disty add def
+/scalefactor 
+  boxwidth cols mul distx cols 1 sub mul add
+  boxheight rows mul disty rows 1 sub mul add boundaspect mul 
+  max def
+boundx scalefactor div boundy scalefactor div scale
+
+% ----- classes -----
+
+ (App_KernelDevDebugContainer) 0.500000 379.000000 box
+ (Container) 0.500000 380.000000 box
+ (ContainerInterface) 0.000000 381.000000 box
+ (ResetInterface) 1.000000 381.000000 box
+ (getAdminControllerService) 1.500000 378.000000 box
+ (getAdminProductsControllerService) 1.500000 377.000000 box
+ (getAnnotations_CacheWarmerService) 1.500000 376.000000 box
+ (getApiControllerService) 1.500000 375.000000 box
+ (getAppCustomAuthentificatorAuthenticatorService) 1.500000 374.000000 box
+ (getCachePoolClearer_CacheWarmerService) 1.500000 373.000000 box
+ (getCacheWarmerService) 1.500000 372.000000 box
+ (getCache_AppClearerService) 1.500000 371.000000 box
+ (getCache_GlobalClearerService) 1.500000 370.000000 box
+ (getCache_SystemClearerService) 1.500000 369.000000 box
+ (getCategories2Service) 1.500000 368.000000 box
+ (getCategories3Service) 1.500000 367.000000 box
+ (getCategoriesAdminControllerService) 1.500000 366.000000 box
+ (getCategoriesControllerService) 1.500000 365.000000 box
+ (getCategoriesRepositoryService) 1.500000 364.000000 box
+ (getCategoriesService) 1.500000 363.000000 box
+ (getCategoriesTypeService) 1.500000 362.000000 box
+ (getConfigBuilder_WarmerService) 1.500000 361.000000 box
+ (getConsole_CommandLoaderService) 1.500000 360.000000 box
+ (getConsole_Command_AboutService) 1.500000 359.000000 box
+ (getConsole_Command_AssetsInstallService) 1.500000 358.000000 box
+ (getConsole_Command_CacheClearService) 1.500000 357.000000 box
+ (getConsole_Command_CachePoolClearService) 1.500000 356.000000 box
+ (getConsole_Command_CachePoolDeleteService) 1.500000 355.000000 box
+ (getConsole_Command_CachePoolListService) 1.500000 354.000000 box
+ (getConsole_Command_CachePoolPruneService) 1.500000 353.000000 box
+ (getConsole_Command_CacheWarmupService) 1.500000 352.000000 box
+ (getConsole_Command_ConfigDebugService) 1.500000 351.000000 box
+ (getConsole_Command_ConfigDumpReferenceService) 1.500000 350.000000 box
+ (getConsole_Command_ContainerDebugService) 1.500000 349.000000 box
+ (getConsole_Command_ContainerLintService) 1.500000 348.000000 box
+ (getConsole_Command_DebugAutowiringService) 1.500000 347.000000 box
+ (getConsole_Command_DotenvDebugService) 1.500000 346.000000 box
+ (getConsole_Command_EventDispatcherDebugService) 1.500000 345.000000 box
+ (getConsole_Command_FormDebugService) 1.500000 344.000000 box
+ (getConsole_Command_RouterDebugService) 1.500000 343.000000 box
+ (getConsole_Command_RouterMatchService) 1.500000 342.000000 box
+ (getConsole_Command_SecretsDecryptToLocalService) 1.500000 341.000000 box
+ (getConsole_Command_SecretsEncryptFromLocalService) 1.500000 340.000000 box
+ (getConsole_Command_SecretsGenerateKeyService) 1.500000 339.000000 box
+ (getConsole_Command_SecretsListService) 1.500000 338.000000 box
+ (getConsole_Command_SecretsRemoveService) 1.500000 337.000000 box
+ (getConsole_Command_SecretsSetService) 1.500000 336.000000 box
+ (getConsole_Command_TranslationDebugService) 1.500000 335.000000 box
+ (getConsole_Command_TranslationExtractService) 1.500000 334.000000 box
+ (getConsole_Command_TranslationPullService) 1.500000 333.000000 box
+ (getConsole_Command_TranslationPushService) 1.500000 332.000000 box
+ (getConsole_Command_ValidatorDebugService) 1.500000 331.000000 box
+ (getConsole_Command_XliffLintService) 1.500000 330.000000 box
+ (getConsole_Command_YamlLintService) 1.500000 329.000000 box
+ (getConsole_ErrorListenerService) 1.500000 328.000000 box
+ (getContainer_EnvVarProcessorService) 1.500000 327.000000 box
+ (getContainer_EnvVarProcessorsLocatorService) 1.500000 326.000000 box
+ (getContainer_GetenvService) 1.500000 325.000000 box
+ (getCustomersRepositoryService) 1.500000 324.000000 box
+ (getDataCollector_Request_SessionCollectorService) 1.500000 323.000000 box
+ (getDebug_ArgumentResolver_DefaultService) 1.500000 322.000000 box
+ (getDebug_ArgumentResolver_NotTaggedControllerService) 1.500000 321.000000 box
+ (getDebug_ArgumentResolver_RequestAttributeService) 1.500000 320.000000 box
+ (getDebug_ArgumentResolver_RequestService) 1.500000 319.000000 box
+ (getDebug_ArgumentResolver_ServiceService) 1.500000 318.000000 box
+ (getDebug_ArgumentResolver_SessionService) 1.500000 317.000000 box
+ (getDebug_ArgumentResolver_VariadicService) 1.500000 316.000000 box
+ (getDebug_DumpListenerService) 1.500000 315.000000 box
+ (getDebug_FileLinkFormatter_UrlFormatService) 1.500000 314.000000 box
+ (getDebug_Security_Firewall_Authenticator_MainService) 1.500000 313.000000 box
+ (getDebug_Security_UserValueResolverService) 1.500000 312.000000 box
+ (getDebug_Security_Voter_Security_Access_AuthenticatedVoterService) 1.500000 311.000000 box
+ (getDebug_Security_Voter_Security_Access_ExpressionVoterService) 1.500000 310.000000 box
+ (getDebug_Security_Voter_Security_Access_RoleHierarchyVoterService) 1.500000 309.000000 box
+ (getDebug_Security_Voter_VoteListenerService) 1.500000 308.000000 box
+ (getDepartmentsRepositoryService) 1.500000 307.000000 box
+ (getDoctrineMigrations_CurrentCommandService) 1.500000 306.000000 box
+ (getDoctrineMigrations_DiffCommandService) 1.500000 305.000000 box
+ (getDoctrineMigrations_DumpSchemaCommandService) 1.500000 304.000000 box
+ (getDoctrineMigrations_ExecuteCommandService) 1.500000 303.000000 box
+ (getDoctrineMigrations_GenerateCommandService) 1.500000 302.000000 box
+ (getDoctrineMigrations_LatestCommandService) 1.500000 301.000000 box
+ (getDoctrineMigrations_MigrateCommandService) 1.500000 300.000000 box
+ (getDoctrineMigrations_RollupCommandService) 1.500000 299.000000 box
+ (getDoctrineMigrations_StatusCommandService) 1.500000 298.000000 box
+ (getDoctrineMigrations_SyncMetadataCommandService) 1.500000 297.000000 box
+ (getDoctrineMigrations_UpToDateCommandService) 1.500000 296.000000 box
+ (getDoctrineMigrations_VersionCommandService) 1.500000 295.000000 box
+ (getDoctrineMigrations_VersionsCommandService) 1.500000 294.000000 box
+ (getDoctrine_CacheClearMetadataCommandService) 1.500000 293.000000 box
+ (getDoctrine_CacheClearQueryCacheCommandService) 1.500000 292.000000 box
+ (getDoctrine_CacheClearResultCommandService) 1.500000 291.000000 box
+ (getDoctrine_CacheCollectionRegionCommandService) 1.500000 290.000000 box
+ (getDoctrine_ClearEntityRegionCommandService) 1.500000 289.000000 box
+ (getDoctrine_ClearQueryRegionCommandService) 1.500000 288.000000 box
+ (getDoctrine_DatabaseCreateCommandService) 1.500000 287.000000 box
+ (getDoctrine_DatabaseDropCommandService) 1.500000 286.000000 box
+ (getDoctrine_EnsureProductionSettingsCommandService) 1.500000 285.000000 box
+ (getDoctrine_MappingConvertCommandService) 1.500000 284.000000 box
+ (getDoctrine_MappingImportCommandService) 1.500000 283.000000 box
+ (getDoctrine_MappingInfoCommandService) 1.500000 282.000000 box
+ (getDoctrine_Migrations_ContainerAwareMigrationsFactoryService) 1.500000 281.000000 box
+ (getDoctrine_Orm_DefaultEntityManager_PropertyInfoExtractorService) 1.500000 280.000000 box
+ (getDoctrine_Orm_DefaultListeners_AttachEntityListenersService) 1.500000 279.000000 box
+ (getDoctrine_Orm_Listeners_DoctrineDbalCacheAdapterSchemaSubscriberService) 1.500000 278.000000 box
+ (getDoctrine_Orm_Listeners_DoctrineTokenProviderSchemaSubscriberService) 1.500000 277.000000 box
+ (getDoctrine_Orm_Listeners_PdoCacheAdapterDoctrineSchemaSubscriberService) 1.500000 276.000000 box
+ (getDoctrine_Orm_ProxyCacheWarmerService) 1.500000 275.000000 box
+ (getDoctrine_Orm_Validator_UniqueService) 1.500000 274.000000 box
+ (getDoctrine_QueryDqlCommandService) 1.500000 273.000000 box
+ (getDoctrine_QuerySqlCommandService) 1.500000 272.000000 box
+ (getDoctrine_SchemaCreateCommandService) 1.500000 271.000000 box
+ (getDoctrine_SchemaDropCommandService) 1.500000 270.000000 box
+ (getDoctrine_SchemaUpdateCommandService) 1.500000 269.000000 box
+ (getDoctrine_SchemaValidateCommandService) 1.500000 268.000000 box
+ (getDoctrine_UlidGeneratorService) 1.500000 267.000000 box
+ (getDoctrine_UuidGeneratorService) 1.500000 266.000000 box
+ (getEmployeesRepositoryService) 1.500000 265.000000 box
+ (getEmployeesService) 1.500000 264.000000 box
+ (getErrorControllerService) 1.500000 263.000000 box
+ (getErrorHandler_ErrorRenderer_HtmlService) 1.500000 262.000000 box
+ (getFactureControllerService) 1.500000 261.000000 box
+ (getForm_ChoiceListFactory_CachedService) 1.500000 260.000000 box
+ (getForm_RegistryService) 1.500000 259.000000 box
+ (getForm_ServerParamsService) 1.500000 258.000000 box
+ (getForm_TypeExtension_CsrfService) 1.500000 257.000000 box
+ (getForm_TypeExtension_Form_DataCollectorService) 1.500000 256.000000 box
+ (getForm_TypeExtension_Form_HttpFoundationService) 1.500000 255.000000 box
+ (getForm_TypeExtension_Form_TransformationFailureHandlingService) 1.500000 254.000000 box
+ (getForm_TypeExtension_Form_ValidatorService) 1.500000 253.000000 box
+ (getForm_TypeExtension_Upload_ValidatorService) 1.500000 252.000000 box
+ (getForm_TypeGuesser_DoctrineService) 1.500000 251.000000 box
+ (getForm_TypeGuesser_ValidatorService) 1.500000 250.000000 box
+ (getForm_Type_ChoiceService) 1.500000 249.000000 box
+ (getForm_Type_ColorService) 1.500000 248.000000 box
+ (getForm_Type_EntityService) 1.500000 247.000000 box
+ (getForm_Type_FormService) 1.500000 246.000000 box
+ (getFragment_Renderer_InlineService) 1.500000 245.000000 box
+ (getHomeControllerService) 1.500000 244.000000 box
+ (getKnpSnappy_ImageService) 1.500000 243.000000 box
+ (getKnpSnappy_PdfService) 1.500000 242.000000 box
+ (getLiveRepositoryService) 1.500000 241.000000 box
+ (getLoaderInterfaceService) 1.500000 240.000000 box
+ (getMailer_MailerService) 1.500000 239.000000 box
+ (getMailer_TransportFactory_NativeService) 1.500000 238.000000 box
+ (getMailer_TransportFactory_NullService) 1.500000 237.000000 box
+ (getMailer_TransportFactory_SendmailService) 1.500000 236.000000 box
+ (getMailer_TransportFactory_SmtpService) 1.500000 235.000000 box
+ (getMaker_AutoCommand_MakeAuthService) 1.500000 234.000000 box
+ (getMaker_AutoCommand_MakeCommandService) 1.500000 233.000000 box
+ (getMaker_AutoCommand_MakeControllerService) 1.500000 232.000000 box
+ (getMaker_AutoCommand_MakeCrudService) 1.500000 231.000000 box
+ (getMaker_AutoCommand_MakeDockerDatabaseService) 1.500000 230.000000 box
+ (getMaker_AutoCommand_MakeEntityService) 1.500000 229.000000 box
+ (getMaker_AutoCommand_MakeFixturesService) 1.500000 228.000000 box
+ (getMaker_AutoCommand_MakeFormService) 1.500000 227.000000 box
+ (getMaker_AutoCommand_MakeMessageService) 1.500000 226.000000 box
+ (getMaker_AutoCommand_MakeMessengerMiddlewareService) 1.500000 225.000000 box
+ (getMaker_AutoCommand_MakeMigrationService) 1.500000 224.000000 box
+ (getMaker_AutoCommand_MakeRegistrationFormService) 1.500000 223.000000 box
+ (getMaker_AutoCommand_MakeResetPasswordService) 1.500000 222.000000 box
+ (getMaker_AutoCommand_MakeSerializerEncoderService) 1.500000 221.000000 box
+ (getMaker_AutoCommand_MakeSerializerNormalizerService) 1.500000 220.000000 box
+ (getMaker_AutoCommand_MakeSubscriberService) 1.500000 219.000000 box
+ (getMaker_AutoCommand_MakeTestService) 1.500000 218.000000 box
+ (getMaker_AutoCommand_MakeTwigExtensionService) 1.500000 217.000000 box
+ (getMaker_AutoCommand_MakeUserService) 1.500000 216.000000 box
+ (getMaker_AutoCommand_MakeValidatorService) 1.500000 215.000000 box
+ (getMaker_AutoCommand_MakeVoterService) 1.500000 214.000000 box
+ (getMaker_DoctrineHelperService) 1.500000 213.000000 box
+ (getMaker_EntityClassGeneratorService) 1.500000 212.000000 box
+ (getMaker_FileManagerService) 1.500000 211.000000 box
+ (getMaker_GeneratorService) 1.500000 210.000000 box
+ (getMaker_PhpCompatUtilService) 1.500000 209.000000 box
+ (getMaker_Renderer_FormTypeRendererService) 1.500000 208.000000 box
+ (getManagerRegistryAwareConnectionProviderService) 1.500000 207.000000 box
+ (getMimeTypesService) 1.500000 206.000000 box
+ (getMonolog_Command_ServerLogService) 1.500000 205.000000 box
+ (getMonolog_Logger_MailerService) 1.500000 204.000000 box
+ (getMonolog_Logger_SnappyService) 1.500000 203.000000 box
+ (getOrders2Service) 1.500000 202.000000 box
+ (getOrdersDetailsRepositoryService) 1.500000 201.000000 box
+ (getOrdersRepositoryService) 1.500000 200.000000 box
+ (getOrdersService) 1.500000 199.000000 box
+ (getPaiementControllerService) 1.500000 198.000000 box
+ (getPaniersControllerService) 1.500000 197.000000 box
+ (getPostsRepositoryService) 1.500000 196.000000 box
+ (getProducts2Service) 1.500000 195.000000 box
+ (getProducts3Service) 1.500000 194.000000 box
+ (getProducts4Service) 1.500000 193.000000 box
+ (getProducts5Service) 1.500000 192.000000 box
+ (getProductsRepositoryService) 1.500000 191.000000 box
+ (getProductsService) 1.500000 190.000000 box
+ (getProductsTypeService) 1.500000 189.000000 box
+ (getProduitsControllerService) 1.500000 188.000000 box
+ (getProfilerControllerService) 1.500000 187.000000 box
+ (getPropertyAccessorService) 1.500000 186.000000 box
+ (getPropertyInfo_SerializerExtractorService) 1.500000 185.000000 box
+ (getRedirectControllerService) 1.500000 184.000000 box
+ (getRegistrationControllerService) 1.500000 183.000000 box
+ (getRegistrationFormTypeService) 1.500000 182.000000 box
+ (getResponseService) 1.500000 181.000000 box
+ (getRouter_CacheWarmerService) 1.500000 180.000000 box
+ (getRouting_LoaderService) 1.500000 179.000000 box
+ (getRunSqlCommandService) 1.500000 178.000000 box
+ (getSearchControllerService) 1.500000 177.000000 box
+ (getSecrets_VaultService) 1.500000 176.000000 box
+ (getSecurity_AccessListenerService) 1.500000 175.000000 box
+ (getSecurity_AccessMapService) 1.500000 174.000000 box
+ (getSecurity_AuthenticationUtilsService) 1.500000 173.000000 box
+ (getSecurity_Authenticator_Manager_MainService) 1.500000 172.000000 box
+ (getSecurity_Authenticator_RememberMeHandler_MainService) 1.500000 171.000000 box
+ (getSecurity_Authenticator_RememberMe_MainService) 1.500000 170.000000 box
+ (getSecurity_ChannelListenerService) 1.500000 169.000000 box
+ (getSecurity_Command_DebugFirewallService) 1.500000 168.000000 box
+ (getSecurity_Command_UserPasswordEncoderService) 1.500000 167.000000 box
+ (getSecurity_Command_UserPasswordHashService) 1.500000 166.000000 box
+ (getSecurity_Csrf_TokenStorageService) 1.500000 165.000000 box
+ (getSecurity_EncoderFactory_GenericService) 1.500000 164.000000 box
+ (getSecurity_Firewall_Map_Context_DevService) 1.500000 163.000000 box
+ (getSecurity_Firewall_Map_Context_MainService) 1.500000 162.000000 box
+ (getSecurity_HttpUtilsService) 1.500000 161.000000 box
+ (getSecurity_Listener_CheckAuthenticatorCredentialsService) 1.500000 160.000000 box
+ (getSecurity_Listener_CheckRememberMeConditions_MainService) 1.500000 159.000000 box
+ (getSecurity_Listener_CsrfProtectionService) 1.500000 158.000000 box
+ (getSecurity_Listener_Main_UserProviderService) 1.500000 157.000000 box
+ (getSecurity_Listener_PasswordMigratingService) 1.500000 156.000000 box
+ (getSecurity_Listener_RememberMe_MainService) 1.500000 155.000000 box
+ (getSecurity_Listener_Session_MainService) 1.500000 154.000000 box
+ (getSecurity_Listener_UserChecker_MainService) 1.500000 153.000000 box
+ (getSecurity_Listener_UserProviderService) 1.500000 152.000000 box
+ (getSecurity_Logout_Listener_CsrfTokenClearingService) 1.500000 151.000000 box
+ (getSecurity_Logout_Listener_Default_MainService) 1.500000 150.000000 box
+ (getSecurity_PasswordHasherFactoryService) 1.500000 149.000000 box
+ (getSecurity_UserAuthenticatorService) 1.500000 148.000000 box
+ (getSecurity_UserPasswordHasherService) 1.500000 147.000000 box
+ (getSecurity_User_Provider_Concrete_AppUserProviderService) 1.500000 146.000000 box
+ (getSecurity_Validator_UserPasswordService) 1.500000 145.000000 box
+ (getSerializer_Mapping_CacheWarmerService) 1.500000 144.000000 box
+ (getSerializer_Mapping_ClassMetadataFactoryService) 1.500000 143.000000 box
+ (getServicesResetterService) 1.500000 142.000000 box
+ (getSession_FactoryService) 1.500000 141.000000 box
+ (getTemplateControllerService) 1.500000 140.000000 box
+ (getTranslation_ExtractorService) 1.500000 139.000000 box
+ (getTranslation_Loader_CsvService) 1.500000 138.000000 box
+ (getTranslation_Loader_DatService) 1.500000 137.000000 box
+ (getTranslation_Loader_IniService) 1.500000 136.000000 box
+ (getTranslation_Loader_JsonService) 1.500000 135.000000 box
+ (getTranslation_Loader_MoService) 1.500000 134.000000 box
+ (getTranslation_Loader_PhpService) 1.500000 133.000000 box
+ (getTranslation_Loader_PoService) 1.500000 132.000000 box
+ (getTranslation_Loader_QtService) 1.500000 131.000000 box
+ (getTranslation_Loader_ResService) 1.500000 130.000000 box
+ (getTranslation_Loader_XliffService) 1.500000 129.000000 box
+ (getTranslation_Loader_YmlService) 1.500000 128.000000 box
+ (getTranslation_ProviderCollectionService) 1.500000 127.000000 box
+ (getTranslation_ReaderService) 1.500000 126.000000 box
+ (getTranslation_WarmerService) 1.500000 125.000000 box
+ (getTranslation_WriterService) 1.500000 124.000000 box
+ (getTwig_Command_DebugService) 1.500000 123.000000 box
+ (getTwig_Command_LintService) 1.500000 122.000000 box
+ (getTwig_Form_RendererService) 1.500000 121.000000 box
+ (getTwig_Mailer_MessageListenerService) 1.500000 120.000000 box
+ (getTwig_Runtime_HttpkernelService) 1.500000 119.000000 box
+ (getTwig_Runtime_SecurityCsrfService) 1.500000 118.000000 box
+ (getTwig_Runtime_SerializerService) 1.500000 117.000000 box
+ (getTwig_TemplateCacheWarmerService) 1.500000 116.000000 box
+ (getUsersControllerService) 1.500000 115.000000 box
+ (getUsersRepositoryService) 1.500000 114.000000 box
+ (getValidator_EmailService) 1.500000 113.000000 box
+ (getValidator_ExpressionService) 1.500000 112.000000 box
+ (getValidator_Mapping_CacheWarmerService) 1.500000 111.000000 box
+ (getValidator_NotCompromisedPasswordService) 1.500000 110.000000 box
+ (getVarDumper_Command_ServerDumpService) 1.500000 109.000000 box
+ (getVarDumper_ContextualizedCliDumper_InnerService) 1.500000 108.000000 box
+ (getWebProfiler_Controller_ExceptionPanelService) 1.500000 107.000000 box
+ (getWebProfiler_Controller_ProfilerService) 1.500000 106.000000 box
+ (getWebProfiler_Controller_RouterService) 1.500000 105.000000 box
+ (get_Console_Command_About_LazyService) 1.500000 104.000000 box
+ (get_Console_Command_AssetsInstall_LazyService) 1.500000 103.000000 box
+ (get_Console_Command_CacheClear_LazyService) 1.500000 102.000000 box
+ (get_Console_Command_CachePoolClear_LazyService) 1.500000 101.000000 box
+ (get_Console_Command_CachePoolDelete_LazyService) 1.500000 100.000000 box
+ (get_Console_Command_CachePoolList_LazyService) 1.500000 99.000000 box
+ (get_Console_Command_CachePoolPrune_LazyService) 1.500000 98.000000 box
+ (get_Console_Command_CacheWarmup_LazyService) 1.500000 97.000000 box
+ (get_Console_Command_ConfigDebug_LazyService) 1.500000 96.000000 box
+ (get_Console_Command_ConfigDumpReference_LazyService) 1.500000 95.000000 box
+ (get_Console_Command_ContainerDebug_LazyService) 1.500000 94.000000 box
+ (get_Console_Command_ContainerLint_LazyService) 1.500000 93.000000 box
+ (get_Console_Command_DebugAutowiring_LazyService) 1.500000 92.000000 box
+ (get_Console_Command_DotenvDebug_LazyService) 1.500000 91.000000 box
+ (get_Console_Command_EventDispatcherDebug_LazyService) 1.500000 90.000000 box
+ (get_Console_Command_FormDebug_LazyService) 1.500000 89.000000 box
+ (get_Console_Command_RouterDebug_LazyService) 1.500000 88.000000 box
+ (get_Console_Command_RouterMatch_LazyService) 1.500000 87.000000 box
+ (get_Console_Command_SecretsDecryptToLocal_LazyService) 1.500000 86.000000 box
+ (get_Console_Command_SecretsEncryptFromLocal_LazyService) 1.500000 85.000000 box
+ (get_Console_Command_SecretsGenerateKey_LazyService) 1.500000 84.000000 box
+ (get_Console_Command_SecretsList_LazyService) 1.500000 83.000000 box
+ (get_Console_Command_SecretsRemove_LazyService) 1.500000 82.000000 box
+ (get_Console_Command_SecretsSet_LazyService) 1.500000 81.000000 box
+ (get_Console_Command_TranslationDebug_LazyService) 1.500000 80.000000 box
+ (get_Console_Command_TranslationExtract_LazyService) 1.500000 79.000000 box
+ (get_Console_Command_TranslationPull_LazyService) 1.500000 78.000000 box
+ (get_Console_Command_TranslationPush_LazyService) 1.500000 77.000000 box
+ (get_Console_Command_ValidatorDebug_LazyService) 1.500000 76.000000 box
+ (get_Console_Command_XliffLint_LazyService) 1.500000 75.000000 box
+ (get_Console_Command_YamlLint_LazyService) 1.500000 74.000000 box
+ (get_Container_Private_CacheClearerService) 1.500000 73.000000 box
+ (get_Container_Private_FilesystemService) 1.500000 72.000000 box
+ (get_Container_Private_Form_FactoryService) 1.500000 71.000000 box
+ (get_Container_Private_Form_Type_FileService) 1.500000 70.000000 box
+ (get_Container_Private_Security_Csrf_TokenManagerService) 1.500000 69.000000 box
+ (get_Container_Private_Security_PasswordEncoderService) 1.500000 68.000000 box
+ (get_Container_Private_SerializerService) 1.500000 67.000000 box
+ (get_Container_Private_SessionService) 1.500000 66.000000 box
+ (get_Maker_AutoCommand_MakeAuth_LazyService) 1.500000 65.000000 box
+ (get_Maker_AutoCommand_MakeCommand_LazyService) 1.500000 64.000000 box
+ (get_Maker_AutoCommand_MakeController_LazyService) 1.500000 63.000000 box
+ (get_Maker_AutoCommand_MakeCrud_LazyService) 1.500000 62.000000 box
+ (get_Maker_AutoCommand_MakeDockerDatabase_LazyService) 1.500000 61.000000 box
+ (get_Maker_AutoCommand_MakeEntity_LazyService) 1.500000 60.000000 box
+ (get_Maker_AutoCommand_MakeFixtures_LazyService) 1.500000 59.000000 box
+ (get_Maker_AutoCommand_MakeForm_LazyService) 1.500000 58.000000 box
+ (get_Maker_AutoCommand_MakeMessage_LazyService) 1.500000 57.000000 box
+ (get_Maker_AutoCommand_MakeMessengerMiddleware_LazyService) 1.500000 56.000000 box
+ (get_Maker_AutoCommand_MakeMigration_LazyService) 1.500000 55.000000 box
+ (get_Maker_AutoCommand_MakeRegistrationForm_LazyService) 1.500000 54.000000 box
+ (get_Maker_AutoCommand_MakeResetPassword_LazyService) 1.500000 53.000000 box
+ (get_Maker_AutoCommand_MakeSerializerEncoder_LazyService) 1.500000 52.000000 box
+ (get_Maker_AutoCommand_MakeSerializerNormalizer_LazyService) 1.500000 51.000000 box
+ (get_Maker_AutoCommand_MakeSubscriber_LazyService) 1.500000 50.000000 box
+ (get_Maker_AutoCommand_MakeTest_LazyService) 1.500000 49.000000 box
+ (get_Maker_AutoCommand_MakeTwigExtension_LazyService) 1.500000 48.000000 box
+ (get_Maker_AutoCommand_MakeUser_LazyService) 1.500000 47.000000 box
+ (get_Maker_AutoCommand_MakeValidator_LazyService) 1.500000 46.000000 box
+ (get_Maker_AutoCommand_MakeVoter_LazyService) 1.500000 45.000000 box
+ (get_Monolog_Command_ServerLog_LazyService) 1.500000 44.000000 box
+ (get_Security_Command_DebugFirewall_LazyService) 1.500000 43.000000 box
+ (get_Security_Command_UserPasswordEncoder_LazyService) 1.500000 42.000000 box
+ (get_Security_Command_UserPasswordHash_LazyService) 1.500000 41.000000 box
+ (get_ServiceLocator_3jVhGUTService) 1.500000 40.000000 box
+ (get_ServiceLocator_5MaV3eEService) 1.500000 39.000000 box
+ (get_ServiceLocator_8LSXZoeService) 1.500000 38.000000 box
+ (get_ServiceLocator_E7MvU05Service) 1.500000 37.000000 box
+ (get_ServiceLocator_EWdbrfService) 1.500000 36.000000 box
+ (get_ServiceLocator_EXSkSgQService) 1.500000 35.000000 box
+ (get_ServiceLocator_FyTYKh9Service) 1.500000 34.000000 box
+ (get_ServiceLocator_GEpnwpBService) 1.500000 33.000000 box
+ (get_ServiceLocator_GHKpXy_Service) 1.500000 32.000000 box
+ (get_ServiceLocator_GNc8e5BService) 1.500000 31.000000 box
+ (get_ServiceLocator_G_VaLSIService) 1.500000 30.000000 box
+ (get_ServiceLocator_He7m6lVService) 1.500000 29.000000 box
+ (get_ServiceLocator_JlyTfzMService) 1.500000 28.000000 box
+ (get_ServiceLocator_KfbR3DYService) 1.500000 27.000000 box
+ (get_ServiceLocator_KfwZsneService) 1.500000 26.000000 box
+ (get_ServiceLocator_L2QwsaZService) 1.500000 25.000000 box
+ (get_ServiceLocator_LAMx9d4Service) 1.500000 24.000000 box
+ (get_ServiceLocator_LYR97ChService) 1.500000 23.000000 box
+ (get_ServiceLocator_LhPOhFbService) 1.500000 22.000000 box
+ (get_ServiceLocator_MDxfRyFService) 1.500000 21.000000 box
+ (get_ServiceLocator_MpXGzk0Service) 1.500000 20.000000 box
+ (get_ServiceLocator_NDPeXnService) 1.500000 19.000000 box
+ (get_ServiceLocator_NQqAGumService) 1.500000 18.000000 box
+ (get_ServiceLocator_OGaZ7HEService) 1.500000 17.000000 box
+ (get_ServiceLocator_PwNGlGfService) 1.500000 16.000000 box
+ (get_ServiceLocator_QJnwyfrService) 1.500000 15.000000 box
+ (get_ServiceLocator_QknhPckService) 1.500000 14.000000 box
+ (get_ServiceLocator_QqiKMWTService) 1.500000 13.000000 box
+ (get_ServiceLocator_Rve5fxBService) 1.500000 12.000000 box
+ (get_ServiceLocator_S6h7Y7XService) 1.500000 11.000000 box
+ (get_ServiceLocator_Se5ACVService) 1.500000 10.000000 box
+ (get_ServiceLocator_X0mVKZmService) 1.500000 9.000000 box
+ (get_ServiceLocator_Xfdiu8kService) 1.500000 8.000000 box
+ (get_ServiceLocator_XvNidsEService) 1.500000 7.000000 box
+ (get_ServiceLocator_YL0QqsService) 1.500000 6.000000 box
+ (get_ServiceLocator_YMXx86kService) 1.500000 5.000000 box
+ (get_ServiceLocator_YhGw_X9Service) 1.500000 4.000000 box
+ (get_Session_DeprecatedService) 1.500000 3.000000 box
+ (get_Twig_Command_Debug_LazyService) 1.500000 2.000000 box
+ (get_Twig_Command_Lint_LazyService) 1.500000 1.000000 box
+ (get_VarDumper_Command_ServerDump_LazyService) 1.500000 0.000000 box
+
+% ----- relations -----
+
+solid
+0 0.500000 379.000000 out
+solid
+1 0.500000 380.000000 in
+solid
+0 0.500000 380.000000 out
+solid
+0.000000 1.000000 381.000000 conn
+solid
+1 0.000000 381.000000 in
+solid
+1 1.000000 381.000000 in
+solid
+1 0.500000 378.250000 out
+solid
+0 0.500000 378.500000 hedge
+solid
+0 0.500000 377.500000 hedge
+solid
+0 0.500000 376.500000 hedge
+solid
+0 0.500000 375.500000 hedge
+solid
+0 0.500000 374.500000 hedge
+solid
+0 0.500000 373.500000 hedge
+solid
+0 0.500000 372.500000 hedge
+solid
+0 0.500000 371.500000 hedge
+solid
+0 0.500000 370.500000 hedge
+solid
+0 0.500000 369.500000 hedge
+solid
+0 0.500000 368.500000 hedge
+solid
+0 0.500000 367.500000 hedge
+solid
+0 0.500000 366.500000 hedge
+solid
+0 0.500000 365.500000 hedge
+solid
+0 0.500000 364.500000 hedge
+solid
+0 0.500000 363.500000 hedge
+solid
+0 0.500000 362.500000 hedge
+solid
+0 0.500000 361.500000 hedge
+solid
+0 0.500000 360.500000 hedge
+solid
+0 0.500000 359.500000 hedge
+solid
+0 0.500000 358.500000 hedge
+solid
+0 0.500000 357.500000 hedge
+solid
+0 0.500000 356.500000 hedge
+solid
+0 0.500000 355.500000 hedge
+solid
+0 0.500000 354.500000 hedge
+solid
+0 0.500000 353.500000 hedge
+solid
+0 0.500000 352.500000 hedge
+solid
+0 0.500000 351.500000 hedge
+solid
+0 0.500000 350.500000 hedge
+solid
+0 0.500000 349.500000 hedge
+solid
+0 0.500000 348.500000 hedge
+solid
+0 0.500000 347.500000 hedge
+solid
+0 0.500000 346.500000 hedge
+solid
+0 0.500000 345.500000 hedge
+solid
+0 0.500000 344.500000 hedge
+solid
+0 0.500000 343.500000 hedge
+solid
+0 0.500000 342.500000 hedge
+solid
+0 0.500000 341.500000 hedge
+solid
+0 0.500000 340.500000 hedge
+solid
+0 0.500000 339.500000 hedge
+solid
+0 0.500000 338.500000 hedge
+solid
+0 0.500000 337.500000 hedge
+solid
+0 0.500000 336.500000 hedge
+solid
+0 0.500000 335.500000 hedge
+solid
+0 0.500000 334.500000 hedge
+solid
+0 0.500000 333.500000 hedge
+solid
+0 0.500000 332.500000 hedge
+solid
+0 0.500000 331.500000 hedge
+solid
+0 0.500000 330.500000 hedge
+solid
+0 0.500000 329.500000 hedge
+solid
+0 0.500000 328.500000 hedge
+solid
+0 0.500000 327.500000 hedge
+solid
+0 0.500000 326.500000 hedge
+solid
+0 0.500000 325.500000 hedge
+solid
+0 0.500000 324.500000 hedge
+solid
+0 0.500000 323.500000 hedge
+solid
+0 0.500000 322.500000 hedge
+solid
+0 0.500000 321.500000 hedge
+solid
+0 0.500000 320.500000 hedge
+solid
+0 0.500000 319.500000 hedge
+solid
+0 0.500000 318.500000 hedge
+solid
+0 0.500000 317.500000 hedge
+solid
+0 0.500000 316.500000 hedge
+solid
+0 0.500000 315.500000 hedge
+solid
+0 0.500000 314.500000 hedge
+solid
+0 0.500000 313.500000 hedge
+solid
+0 0.500000 312.500000 hedge
+solid
+0 0.500000 311.500000 hedge
+solid
+0 0.500000 310.500000 hedge
+solid
+0 0.500000 309.500000 hedge
+solid
+0 0.500000 308.500000 hedge
+solid
+0 0.500000 307.500000 hedge
+solid
+0 0.500000 306.500000 hedge
+solid
+0 0.500000 305.500000 hedge
+solid
+0 0.500000 304.500000 hedge
+solid
+0 0.500000 303.500000 hedge
+solid
+0 0.500000 302.500000 hedge
+solid
+0 0.500000 301.500000 hedge
+solid
+0 0.500000 300.500000 hedge
+solid
+0 0.500000 299.500000 hedge
+solid
+0 0.500000 298.500000 hedge
+solid
+0 0.500000 297.500000 hedge
+solid
+0 0.500000 296.500000 hedge
+solid
+0 0.500000 295.500000 hedge
+solid
+0 0.500000 294.500000 hedge
+solid
+0 0.500000 293.500000 hedge
+solid
+0 0.500000 292.500000 hedge
+solid
+0 0.500000 291.500000 hedge
+solid
+0 0.500000 290.500000 hedge
+solid
+0 0.500000 289.500000 hedge
+solid
+0 0.500000 288.500000 hedge
+solid
+0 0.500000 287.500000 hedge
+solid
+0 0.500000 286.500000 hedge
+solid
+0 0.500000 285.500000 hedge
+solid
+0 0.500000 284.500000 hedge
+solid
+0 0.500000 283.500000 hedge
+solid
+0 0.500000 282.500000 hedge
+solid
+0 0.500000 281.500000 hedge
+solid
+0 0.500000 280.500000 hedge
+solid
+0 0.500000 279.500000 hedge
+solid
+0 0.500000 278.500000 hedge
+solid
+0 0.500000 277.500000 hedge
+solid
+0 0.500000 276.500000 hedge
+solid
+0 0.500000 275.500000 hedge
+solid
+0 0.500000 274.500000 hedge
+solid
+0 0.500000 273.500000 hedge
+solid
+0 0.500000 272.500000 hedge
+solid
+0 0.500000 271.500000 hedge
+solid
+0 0.500000 270.500000 hedge
+solid
+0 0.500000 269.500000 hedge
+solid
+0 0.500000 268.500000 hedge
+solid
+0 0.500000 267.500000 hedge
+solid
+0 0.500000 266.500000 hedge
+solid
+0 0.500000 265.500000 hedge
+solid
+0 0.500000 264.500000 hedge
+solid
+0 0.500000 263.500000 hedge
+solid
+0 0.500000 262.500000 hedge
+solid
+0 0.500000 261.500000 hedge
+solid
+0 0.500000 260.500000 hedge
+solid
+0 0.500000 259.500000 hedge
+solid
+0 0.500000 258.500000 hedge
+solid
+0 0.500000 257.500000 hedge
+solid
+0 0.500000 256.500000 hedge
+solid
+0 0.500000 255.500000 hedge
+solid
+0 0.500000 254.500000 hedge
+solid
+0 0.500000 253.500000 hedge
+solid
+0 0.500000 252.500000 hedge
+solid
+0 0.500000 251.500000 hedge
+solid
+0 0.500000 250.500000 hedge
+solid
+0 0.500000 249.500000 hedge
+solid
+0 0.500000 248.500000 hedge
+solid
+0 0.500000 247.500000 hedge
+solid
+0 0.500000 246.500000 hedge
+solid
+0 0.500000 245.500000 hedge
+solid
+0 0.500000 244.500000 hedge
+solid
+0 0.500000 243.500000 hedge
+solid
+0 0.500000 242.500000 hedge
+solid
+0 0.500000 241.500000 hedge
+solid
+0 0.500000 240.500000 hedge
+solid
+0 0.500000 239.500000 hedge
+solid
+0 0.500000 238.500000 hedge
+solid
+0 0.500000 237.500000 hedge
+solid
+0 0.500000 236.500000 hedge
+solid
+0 0.500000 235.500000 hedge
+solid
+0 0.500000 234.500000 hedge
+solid
+0 0.500000 233.500000 hedge
+solid
+0 0.500000 232.500000 hedge
+solid
+0 0.500000 231.500000 hedge
+solid
+0 0.500000 230.500000 hedge
+solid
+0 0.500000 229.500000 hedge
+solid
+0 0.500000 228.500000 hedge
+solid
+0 0.500000 227.500000 hedge
+solid
+0 0.500000 226.500000 hedge
+solid
+0 0.500000 225.500000 hedge
+solid
+0 0.500000 224.500000 hedge
+solid
+0 0.500000 223.500000 hedge
+solid
+0 0.500000 222.500000 hedge
+solid
+0 0.500000 221.500000 hedge
+solid
+0 0.500000 220.500000 hedge
+solid
+0 0.500000 219.500000 hedge
+solid
+0 0.500000 218.500000 hedge
+solid
+0 0.500000 217.500000 hedge
+solid
+0 0.500000 216.500000 hedge
+solid
+0 0.500000 215.500000 hedge
+solid
+0 0.500000 214.500000 hedge
+solid
+0 0.500000 213.500000 hedge
+solid
+0 0.500000 212.500000 hedge
+solid
+0 0.500000 211.500000 hedge
+solid
+0 0.500000 210.500000 hedge
+solid
+0 0.500000 209.500000 hedge
+solid
+0 0.500000 208.500000 hedge
+solid
+0 0.500000 207.500000 hedge
+solid
+0 0.500000 206.500000 hedge
+solid
+0 0.500000 205.500000 hedge
+solid
+0 0.500000 204.500000 hedge
+solid
+0 0.500000 203.500000 hedge
+solid
+0 0.500000 202.500000 hedge
+solid
+0 0.500000 201.500000 hedge
+solid
+0 0.500000 200.500000 hedge
+solid
+0 0.500000 199.500000 hedge
+solid
+0 0.500000 198.500000 hedge
+solid
+0 0.500000 197.500000 hedge
+solid
+0 0.500000 196.500000 hedge
+solid
+0 0.500000 195.500000 hedge
+solid
+0 0.500000 194.500000 hedge
+solid
+0 0.500000 193.500000 hedge
+solid
+0 0.500000 192.500000 hedge
+solid
+0 0.500000 191.500000 hedge
+solid
+0 0.500000 190.500000 hedge
+solid
+0 0.500000 189.500000 hedge
+solid
+0 0.500000 188.500000 hedge
+solid
+0 0.500000 187.500000 hedge
+solid
+0 0.500000 186.500000 hedge
+solid
+0 0.500000 185.500000 hedge
+solid
+0 0.500000 184.500000 hedge
+solid
+0 0.500000 183.500000 hedge
+solid
+0 0.500000 182.500000 hedge
+solid
+0 0.500000 181.500000 hedge
+solid
+0 0.500000 180.500000 hedge
+solid
+0 0.500000 179.500000 hedge
+solid
+0 0.500000 178.500000 hedge
+solid
+0 0.500000 177.500000 hedge
+solid
+0 0.500000 176.500000 hedge
+solid
+0 0.500000 175.500000 hedge
+solid
+0 0.500000 174.500000 hedge
+solid
+0 0.500000 173.500000 hedge
+solid
+0 0.500000 172.500000 hedge
+solid
+0 0.500000 171.500000 hedge
+solid
+0 0.500000 170.500000 hedge
+solid
+0 0.500000 169.500000 hedge
+solid
+0 0.500000 168.500000 hedge
+solid
+0 0.500000 167.500000 hedge
+solid
+0 0.500000 166.500000 hedge
+solid
+0 0.500000 165.500000 hedge
+solid
+0 0.500000 164.500000 hedge
+solid
+0 0.500000 163.500000 hedge
+solid
+0 0.500000 162.500000 hedge
+solid
+0 0.500000 161.500000 hedge
+solid
+0 0.500000 160.500000 hedge
+solid
+0 0.500000 159.500000 hedge
+solid
+0 0.500000 158.500000 hedge
+solid
+0 0.500000 157.500000 hedge
+solid
+0 0.500000 156.500000 hedge
+solid
+0 0.500000 155.500000 hedge
+solid
+0 0.500000 154.500000 hedge
+solid
+0 0.500000 153.500000 hedge
+solid
+0 0.500000 152.500000 hedge
+solid
+0 0.500000 151.500000 hedge
+solid
+0 0.500000 150.500000 hedge
+solid
+0 0.500000 149.500000 hedge
+solid
+0 0.500000 148.500000 hedge
+solid
+0 0.500000 147.500000 hedge
+solid
+0 0.500000 146.500000 hedge
+solid
+0 0.500000 145.500000 hedge
+solid
+0 0.500000 144.500000 hedge
+solid
+0 0.500000 143.500000 hedge
+solid
+0 0.500000 142.500000 hedge
+solid
+0 0.500000 141.500000 hedge
+solid
+0 0.500000 140.500000 hedge
+solid
+0 0.500000 139.500000 hedge
+solid
+0 0.500000 138.500000 hedge
+solid
+0 0.500000 137.500000 hedge
+solid
+0 0.500000 136.500000 hedge
+solid
+0 0.500000 135.500000 hedge
+solid
+0 0.500000 134.500000 hedge
+solid
+0 0.500000 133.500000 hedge
+solid
+0 0.500000 132.500000 hedge
+solid
+0 0.500000 131.500000 hedge
+solid
+0 0.500000 130.500000 hedge
+solid
+0 0.500000 129.500000 hedge
+solid
+0 0.500000 128.500000 hedge
+solid
+0 0.500000 127.500000 hedge
+solid
+0 0.500000 126.500000 hedge
+solid
+0 0.500000 125.500000 hedge
+solid
+0 0.500000 124.500000 hedge
+solid
+0 0.500000 123.500000 hedge
+solid
+0 0.500000 122.500000 hedge
+solid
+0 0.500000 121.500000 hedge
+solid
+0 0.500000 120.500000 hedge
+solid
+0 0.500000 119.500000 hedge
+solid
+0 0.500000 118.500000 hedge
+solid
+0 0.500000 117.500000 hedge
+solid
+0 0.500000 116.500000 hedge
+solid
+0 0.500000 115.500000 hedge
+solid
+0 0.500000 114.500000 hedge
+solid
+0 0.500000 113.500000 hedge
+solid
+0 0.500000 112.500000 hedge
+solid
+0 0.500000 111.500000 hedge
+solid
+0 0.500000 110.500000 hedge
+solid
+0 0.500000 109.500000 hedge
+solid
+0 0.500000 108.500000 hedge
+solid
+0 0.500000 107.500000 hedge
+solid
+0 0.500000 106.500000 hedge
+solid
+0 0.500000 105.500000 hedge
+solid
+0 0.500000 104.500000 hedge
+solid
+0 0.500000 103.500000 hedge
+solid
+0 0.500000 102.500000 hedge
+solid
+0 0.500000 101.500000 hedge
+solid
+0 0.500000 100.500000 hedge
+solid
+0 0.500000 99.500000 hedge
+solid
+0 0.500000 98.500000 hedge
+solid
+0 0.500000 97.500000 hedge
+solid
+0 0.500000 96.500000 hedge
+solid
+0 0.500000 95.500000 hedge
+solid
+0 0.500000 94.500000 hedge
+solid
+0 0.500000 93.500000 hedge
+solid
+0 0.500000 92.500000 hedge
+solid
+0 0.500000 91.500000 hedge
+solid
+0 0.500000 90.500000 hedge
+solid
+0 0.500000 89.500000 hedge
+solid
+0 0.500000 88.500000 hedge
+solid
+0 0.500000 87.500000 hedge
+solid
+0 0.500000 86.500000 hedge
+solid
+0 0.500000 85.500000 hedge
+solid
+0 0.500000 84.500000 hedge
+solid
+0 0.500000 83.500000 hedge
+solid
+0 0.500000 82.500000 hedge
+solid
+0 0.500000 81.500000 hedge
+solid
+0 0.500000 80.500000 hedge
+solid
+0 0.500000 79.500000 hedge
+solid
+0 0.500000 78.500000 hedge
+solid
+0 0.500000 77.500000 hedge
+solid
+0 0.500000 76.500000 hedge
+solid
+0 0.500000 75.500000 hedge
+solid
+0 0.500000 74.500000 hedge
+solid
+0 0.500000 73.500000 hedge
+solid
+0 0.500000 72.500000 hedge
+solid
+0 0.500000 71.500000 hedge
+solid
+0 0.500000 70.500000 hedge
+solid
+0 0.500000 69.500000 hedge
+solid
+0 0.500000 68.500000 hedge
+solid
+0 0.500000 67.500000 hedge
+solid
+0 0.500000 66.500000 hedge
+solid
+0 0.500000 65.500000 hedge
+solid
+0 0.500000 64.500000 hedge
+solid
+0 0.500000 63.500000 hedge
+solid
+0 0.500000 62.500000 hedge
+solid
+0 0.500000 61.500000 hedge
+solid
+0 0.500000 60.500000 hedge
+solid
+0 0.500000 59.500000 hedge
+solid
+0 0.500000 58.500000 hedge
+solid
+0 0.500000 57.500000 hedge
+solid
+0 0.500000 56.500000 hedge
+solid
+0 0.500000 55.500000 hedge
+solid
+0 0.500000 54.500000 hedge
+solid
+0 0.500000 53.500000 hedge
+solid
+0 0.500000 52.500000 hedge
+solid
+0 0.500000 51.500000 hedge
+solid
+0 0.500000 50.500000 hedge
+solid
+0 0.500000 49.500000 hedge
+solid
+0 0.500000 48.500000 hedge
+solid
+0 0.500000 47.500000 hedge
+solid
+0 0.500000 46.500000 hedge
+solid
+0 0.500000 45.500000 hedge
+solid
+0 0.500000 44.500000 hedge
+solid
+0 0.500000 43.500000 hedge
+solid
+0 0.500000 42.500000 hedge
+solid
+0 0.500000 41.500000 hedge
+solid
+0 0.500000 40.500000 hedge
+solid
+0 0.500000 39.500000 hedge
+solid
+0 0.500000 38.500000 hedge
+solid
+0 0.500000 37.500000 hedge
+solid
+0 0.500000 36.500000 hedge
+solid
+0 0.500000 35.500000 hedge
+solid
+0 0.500000 34.500000 hedge
+solid
+0 0.500000 33.500000 hedge
+solid
+0 0.500000 32.500000 hedge
+solid
+0 0.500000 31.500000 hedge
+solid
+0 0.500000 30.500000 hedge
+solid
+0 0.500000 29.500000 hedge
+solid
+0 0.500000 28.500000 hedge
+solid
+0 0.500000 27.500000 hedge
+solid
+0 0.500000 26.500000 hedge
+solid
+0 0.500000 25.500000 hedge
+solid
+0 0.500000 24.500000 hedge
+solid
+0 0.500000 23.500000 hedge
+solid
+0 0.500000 22.500000 hedge
+solid
+0 0.500000 21.500000 hedge
+solid
+0 0.500000 20.500000 hedge
+solid
+0 0.500000 19.500000 hedge
+solid
+0 0.500000 18.500000 hedge
+solid
+0 0.500000 17.500000 hedge
+solid
+0 0.500000 16.500000 hedge
+solid
+0 0.500000 15.500000 hedge
+solid
+0 0.500000 14.500000 hedge
+solid
+0 0.500000 13.500000 hedge
+solid
+0 0.500000 12.500000 hedge
+solid
+0 0.500000 11.500000 hedge
+solid
+0 0.500000 10.500000 hedge
+solid
+0 0.500000 9.500000 hedge
+solid
+0 0.500000 8.500000 hedge
+solid
+0 0.500000 7.500000 hedge
+solid
+0 0.500000 6.500000 hedge
+solid
+0 0.500000 5.500000 hedge
+solid
+0 0.500000 4.500000 hedge
+solid
+0 0.500000 3.500000 hedge
+solid
+0 0.500000 2.500000 hedge
+solid
+0 0.500000 1.500000 hedge
+solid
+0 0.500000 0.500000 hedge
+solid
+0.500000 379.000000 0.500000 vedge

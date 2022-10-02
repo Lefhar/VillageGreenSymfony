@@ -1,0 +1,23 @@
+All notable changes to this project will be documented in this file, in reverse chronological order by release.\hypertarget{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md978}{}\doxysection{1.\+0.\+1 -\/ 2016-\/08-\/06}\label{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md978}
+\hypertarget{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md979}{}\doxysubsection{Added}\label{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md979}
+
+\begin{DoxyItemize}
+\item Nothing.
+\end{DoxyItemize}\hypertarget{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md980}{}\doxysubsection{Deprecated}\label{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md980}
+
+\begin{DoxyItemize}
+\item Nothing.
+\end{DoxyItemize}\hypertarget{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md981}{}\doxysubsection{Removed}\label{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md981}
+
+\begin{DoxyItemize}
+\item Nothing.
+\end{DoxyItemize}\hypertarget{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md982}{}\doxysubsection{Fixed}\label{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md982}
+
+\begin{DoxyItemize}
+\item Updated all {\ttfamily @return self} annotation references in interfaces to use {\ttfamily @return static}, which more closelly follows the semantics of the specification.
+\item Updated the {\ttfamily Message\+Interface\+::get\+Headers()} return annotation to use the value {\ttfamily string\mbox{[}\mbox{]}\mbox{[}\mbox{]}}, indicating the format is a nested array of strings.
+\item Updated the {\ttfamily @link} annotation for {\ttfamily Request\+Interface\+::with\+Request\+Target()} to point to the correct section of RFC 7230.
+\item Updated the {\ttfamily Server\+Request\+Interface\+::with\+Uploaded\+Files()} parameter annotation to add the parameter name ({\ttfamily \$uploaded\+Files}).
+\item Updated a {\ttfamily @throws} annotation for the {\ttfamily Uploaded\+File\+Interface\+::move\+To()} method to correctly reference the method parameter (it was referencing an incorrect parameter name previously).
+\end{DoxyItemize}\hypertarget{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md983}{}\doxysection{1.\+0.\+0 -\/ 2016-\/05-\/18}\label{md_vendor_psr_http_message__c_h_a_n_g_e_l_o_g_autotoc_md983}
+Initial stable release; reflects accepted PSR-\/7 specification. 

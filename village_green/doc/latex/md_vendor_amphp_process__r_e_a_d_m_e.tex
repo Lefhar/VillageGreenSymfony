@@ -1,0 +1,20 @@
+\href{https://coveralls.io/github/amphp/process?branch=master}{\texttt{ }} \href{https://github.com/amphp/process/releases}{\texttt{ }} \href{https://github.com/amphp/process/blob/master/LICENSE}{\texttt{ }} 
+
+This package provides an asynchronous process dispatcher that works on all major platforms (including Windows).
+
+As Windows pipes are file handles and do not allow non-\/blocking access, this package makes use of a \href{https://github.com/amphp/windows-process-wrapper}{\texttt{ process wrapper}}, that provides access to these pipes via sockets. On Unix-\/like systems it uses the standard pipes, as these can be accessed without blocking there. Concurrency is managed by the \href{https://github.com/amphp/amp}{\texttt{ Amp}} event loop.\hypertarget{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md58}{}\doxysection{Installation}\label{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md58}
+This package can be installed as a \href{https://getcomposer.org/}{\texttt{ Composer}} dependency.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require amphp/process}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md59}{}\doxysection{Requirements}\label{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md59}
+
+\begin{DoxyItemize}
+\item PHP 7.\+0+
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md60}{}\doxysection{Versioning}\label{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md60}
+{\ttfamily amphp/process} follows the \href{http://semver.org/}{\texttt{ semver}} semantic versioning specification like all other {\ttfamily amphp} packages.\hypertarget{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md61}{}\doxysection{Security}\label{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md61}
+If you discover any security related issues, please email \href{mailto:me@kelunik.com}{\texttt{ {\ttfamily me@kelunik.\+com}}} instead of using the issue tracker.\hypertarget{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md62}{}\doxysection{License}\label{md_vendor_amphp_process__r_e_a_d_m_e_autotoc_md62}
+The MIT License (MIT). Please see \href{./LICENSE}{\texttt{ {\ttfamily LICENSE}}} for more information. 

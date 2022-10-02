@@ -1,0 +1,82 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_payload}{}\doxysection{Payload Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_payload}\index{Payload@{Payload}}
+Inheritance diagram for Payload\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_payload}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_a18e01426ed73870ee9962fd05ea1bdbc}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} \$stream)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_aa94befad91aff4a6048cfb5219c904dd}{buffer}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates a buffered message from an \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}. The message can be consumed in chunks using the \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_a64571309bfb3238c65fd3c2898f92440}{read()}} API or it may be buffered and accessed in its entirety by calling \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_aa94befad91aff4a6048cfb5219c904dd}{buffer()}}. Once buffering is requested through \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_aa94befad91aff4a6048cfb5219c904dd}{buffer()}}, the stream cannot be read in chunks. On destruct any remaining data is read from the \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} given to this class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_payload_a18e01426ed73870ee9962fd05ea1bdbc}\label{class_amp_1_1_byte_stream_1_1_payload_a18e01426ed73870ee9962fd05ea1bdbc}} 
+\index{Payload@{Payload}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}}]{\$stream }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Amp\textbackslash{}\+Byte\+Stream\textbackslash{}\+Input\+Stream & {\em \$stream} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_payload_aa94befad91aff4a6048cfb5219c904dd}\label{class_amp_1_1_byte_stream_1_1_payload_aa94befad91aff4a6048cfb5219c904dd}} 
+\index{Payload@{Payload}!buffer@{buffer}}
+\index{buffer@{buffer}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}}
+{\footnotesize\ttfamily buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Buffers the entire message and resolves the returned promise then.
+
+\begin{DoxyReturn}{Returns}
+Promise$<$string$>$ Resolves with the entire message contents. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_payload_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_byte_stream_1_1_payload_a64571309bfb3238c65fd3c2898f92440}} 
+\index{Payload@{Payload}!read@{read}}
+\index{read@{read}!Payload@{Payload}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_pending_read_error}{Pending\+Read\+Error}}} & Thrown if another read operation is still pending.\\
+\hline
+\end{DoxyExceptions}
+
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If a buffered message was requested by calling \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_payload_aa94befad91aff4a6048cfb5219c904dd}{buffer()}}. 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/Payload.\+php\end{DoxyCompactItemize}

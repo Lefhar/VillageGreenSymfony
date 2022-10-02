@@ -1,0 +1,53 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener}{}\doxysection{Attach\+Entity\+Listeners\+Listener Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener}\index{AttachEntityListenersListener@{AttachEntityListenersListener}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener_a086f7a99035739d53d77b3a72052b836}{add\+Entity\+Listener}} (\$entity\+Class, \$listener\+Class, \$event\+Name, \$listener\+Callback=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener_a149e3c7277297bf5618d462b814ba0a2}{load\+Class\+Metadata}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_load_class_metadata_event_args}{Load\+Class\+Metadata\+Event\+Args}} \$event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mechanism to programmatically attach entity listeners. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener_a086f7a99035739d53d77b3a72052b836}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener_a086f7a99035739d53d77b3a72052b836}} 
+\index{AttachEntityListenersListener@{AttachEntityListenersListener}!addEntityListener@{addEntityListener}}
+\index{addEntityListener@{addEntityListener}!AttachEntityListenersListener@{AttachEntityListenersListener}}
+\doxysubsubsection{\texorpdfstring{addEntityListener()}{addEntityListener()}}
+{\footnotesize\ttfamily add\+Entity\+Listener (\begin{DoxyParamCaption}\item[{}]{\$entity\+Class,  }\item[{}]{\$listener\+Class,  }\item[{}]{\$event\+Name,  }\item[{}]{\$listener\+Callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Adds a entity listener for a specific entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Class} & The entity to attach the listener. \\
+\hline
+string & {\em \$listener\+Class} & The listener class. \\
+\hline
+string & {\em \$event\+Name} & The entity lifecycle event. \\
+\hline
+string | null & {\em \$listener\+Callback} & The listener callback method or NULL to use \$event\+Name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener_a149e3c7277297bf5618d462b814ba0a2}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_attach_entity_listeners_listener_a149e3c7277297bf5618d462b814ba0a2}} 
+\index{AttachEntityListenersListener@{AttachEntityListenersListener}!loadClassMetadata@{loadClassMetadata}}
+\index{loadClassMetadata@{loadClassMetadata}!AttachEntityListenersListener@{AttachEntityListenersListener}}
+\doxysubsubsection{\texorpdfstring{loadClassMetadata()}{loadClassMetadata()}}
+{\footnotesize\ttfamily load\+Class\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_load_class_metadata_event_args}{Load\+Class\+Metadata\+Event\+Args}}}]{\$event }\end{DoxyParamCaption})}
+
+Processes event and attach the entity listener.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Attach\+Entity\+Listeners\+Listener.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter}{}\doxysection{Elastica\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_elastica_formatter}\index{ElasticaFormatter@{ElasticaFormatter}}
+Inheritance diagram for Elastica\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_formatter_1_1_elastica_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elastica_formatter_a4b4384516c583165016a58d12dcd9ba4}{\+\_\+\+\_\+construct}} (string \$index, ?string \$type)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elastica_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_a09e05874cec9afe26d34d8d5835fa870}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_a09e05874cec9afe26d34d8d5835fa870}} 
+{\bfseries get\+Index} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elastica_formatter_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elastica_formatter_ac606c26283150c50fd4b8a6d6f7acd3b}{get\+Document}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_a23e53dfd2b001b81c9946fa05ec90e6f}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_a23e53dfd2b001b81c9946fa05ec90e6f}} 
+{\bfseries \$index}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_a9a4a6fba2208984cabb3afacadf33919}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_a9a4a6fba2208984cabb3afacadf33919}} 
+{\bfseries \$type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Format a log message into an Elastica Document
+
+\begin{DoxyAuthor}{Author}
+Jelle Vink \href{mailto:jelle.vink@gmail.com}{\texttt{ jelle.\+vink@gmail.\+com}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_a4b4384516c583165016a58d12dcd9ba4}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_a4b4384516c583165016a58d12dcd9ba4}} 
+\index{ElasticaFormatter@{ElasticaFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ElasticaFormatter@{ElasticaFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$index,  }\item[{?string}]{\$type }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$index} & Elastic Search index name \\
+\hline
+ & {\em ?string} & \$type Elastic Search document type, deprecated as of Elastica 7 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{ElasticaFormatter@{ElasticaFormatter}!format@{format}}
+\index{format@{format}!ElasticaFormatter@{ElasticaFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Normalizer\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_ac606c26283150c50fd4b8a6d6f7acd3b}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_ac606c26283150c50fd4b8a6d6f7acd3b}} 
+\index{ElasticaFormatter@{ElasticaFormatter}!getDocument@{getDocument}}
+\index{getDocument@{getDocument}!ElasticaFormatter@{ElasticaFormatter}}
+\doxysubsubsection{\texorpdfstring{getDocument()}{getDocument()}}
+{\footnotesize\ttfamily get\+Document (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a log message into an Elastica Document
+
+@phpstan-\/param Record \$record @phpstan-\/ignore-\/next-\/line\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_elastica_formatter_a830b5c75df72b32396701bc563fbe3c7}\label{class_monolog_1_1_formatter_1_1_elastica_formatter_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{ElasticaFormatter@{ElasticaFormatter}!getType@{getType}}
+\index{getType@{getType}!ElasticaFormatter@{ElasticaFormatter}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000347}{Deprecated}}]since Elastica 7 type has no effect \end{DoxyRefDesc}
+@phpstan-\/ignore-\/next-\/line
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Elastica\+Formatter.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister}{}\doxysection{Cached\+Collection\+Persister Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister}\index{CachedCollectionPersister@{CachedCollectionPersister}}
+Inheritance diagram for Cached\+Collection\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_ad747cf36765a5f424d149a9895d47ce1}{get\+Source\+Entity\+Metadata}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_aa14f8951d783e470aa14dcff0de8d291}{get\+Target\+Entity\+Metadata}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_aa347dcdc8ad04f031bd50d7218034c98}{load\+Collection\+Cache}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$collection, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_a2c9c2bd50fe5fc40a4146cf36f8a3376}{store\+Collection\+Cache}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key, \$elements)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for second level cache collection persisters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_ad747cf36765a5f424d149a9895d47ce1}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_ad747cf36765a5f424d149a9895d47ce1}} 
+\index{CachedCollectionPersister@{CachedCollectionPersister}!getSourceEntityMetadata@{getSourceEntityMetadata}}
+\index{getSourceEntityMetadata@{getSourceEntityMetadata}!CachedCollectionPersister@{CachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{getSourceEntityMetadata()}{getSourceEntityMetadata()}}
+{\footnotesize\ttfamily get\+Source\+Entity\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Class\+Metadata 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_abstract_collection_persister_ad747cf36765a5f424d149a9895d47ce1}{Abstract\+Collection\+Persister}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_aa14f8951d783e470aa14dcff0de8d291}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_aa14f8951d783e470aa14dcff0de8d291}} 
+\index{CachedCollectionPersister@{CachedCollectionPersister}!getTargetEntityMetadata@{getTargetEntityMetadata}}
+\index{getTargetEntityMetadata@{getTargetEntityMetadata}!CachedCollectionPersister@{CachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{getTargetEntityMetadata()}{getTargetEntityMetadata()}}
+{\footnotesize\ttfamily get\+Target\+Entity\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Class\+Metadata 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_abstract_collection_persister_aa14f8951d783e470aa14dcff0de8d291}{Abstract\+Collection\+Persister}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_aa347dcdc8ad04f031bd50d7218034c98}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_aa347dcdc8ad04f031bd50d7218034c98}} 
+\index{CachedCollectionPersister@{CachedCollectionPersister}!loadCollectionCache@{loadCollectionCache}}
+\index{loadCollectionCache@{loadCollectionCache}!CachedCollectionPersister@{CachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{loadCollectionCache()}{loadCollectionCache()}}
+{\footnotesize\ttfamily load\+Collection\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$collection,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Loads a collection from cache
+
+\begin{DoxyReturn}{Returns}
+Persistent\+Collection$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_abstract_collection_persister_aa347dcdc8ad04f031bd50d7218034c98}{Abstract\+Collection\+Persister}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_a2c9c2bd50fe5fc40a4146cf36f8a3376}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_cached_collection_persister_a2c9c2bd50fe5fc40a4146cf36f8a3376}} 
+\index{CachedCollectionPersister@{CachedCollectionPersister}!storeCollectionCache@{storeCollectionCache}}
+\index{storeCollectionCache@{storeCollectionCache}!CachedCollectionPersister@{CachedCollectionPersister}}
+\doxysubsubsection{\texorpdfstring{storeCollectionCache()}{storeCollectionCache()}}
+{\footnotesize\ttfamily store\+Collection\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key,  }\item[{}]{\$elements }\end{DoxyParamCaption})}
+
+Stores a collection into cache
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | mixed\mbox{[}$\,$\mbox{]} | Collection & {\em \$elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_abstract_collection_persister_a2c9c2bd50fe5fc40a4146cf36f8a3376}{Abstract\+Collection\+Persister}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/\+Persister/\+Collection/Cached\+Collection\+Persister.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter}{}\doxysection{Cli\+Highlighter Class Reference}
+\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter}\index{CliHighlighter@{CliHighlighter}}
+Inheritance diagram for Cli\+Highlighter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a5dce68e5521e7c5284077975171f4f51}{\+\_\+\+\_\+construct}} (array \$escape\+Sequences=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a9c030ccc55e0c310490823e28bbecfa0}{highlight\+Token}} (int \$type, string \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}{highlight\+Error}} (string \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}{highlight\+Error\+Message}} (string \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}{output}} (string \$string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a1e9c457c21b121ab8ebd514bf8bbf4af}\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a1e9c457c21b121ab8ebd514bf8bbf4af}} 
+const {\bfseries HIGHLIGHT\+\_\+\+FUNCTIONS} = \textquotesingle{}functions\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a5dce68e5521e7c5284077975171f4f51}\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a5dce68e5521e7c5284077975171f4f51}} 
+\index{CliHighlighter@{CliHighlighter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CliHighlighter@{CliHighlighter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$escape\+Sequences = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,string$>$} & \$escape\+Sequences \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}} 
+\index{CliHighlighter@{CliHighlighter}!highlightError@{highlightError}}
+\index{highlightError@{highlightError}!CliHighlighter@{CliHighlighter}}
+\doxysubsubsection{\texorpdfstring{highlightError()}{highlightError()}}
+{\footnotesize\ttfamily highlight\+Error (\begin{DoxyParamCaption}\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Highlights a token which causes an issue 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}{Highlighter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}} 
+\index{CliHighlighter@{CliHighlighter}!highlightErrorMessage@{highlightErrorMessage}}
+\index{highlightErrorMessage@{highlightErrorMessage}!CliHighlighter@{CliHighlighter}}
+\doxysubsubsection{\texorpdfstring{highlightErrorMessage()}{highlightErrorMessage()}}
+{\footnotesize\ttfamily highlight\+Error\+Message (\begin{DoxyParamCaption}\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Highlights an error message 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}{Highlighter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a9c030ccc55e0c310490823e28bbecfa0}\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_a9c030ccc55e0c310490823e28bbecfa0}} 
+\index{CliHighlighter@{CliHighlighter}!highlightToken@{highlightToken}}
+\index{highlightToken@{highlightToken}!CliHighlighter@{CliHighlighter}}
+\doxysubsubsection{\texorpdfstring{highlightToken()}{highlightToken()}}
+{\footnotesize\ttfamily highlight\+Token (\begin{DoxyParamCaption}\item[{int}]{\$type,  }\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Highlights a token depending on its type. 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_a9c030ccc55e0c310490823e28bbecfa0}{Highlighter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}\label{class_doctrine_1_1_sql_formatter_1_1_cli_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}} 
+\index{CliHighlighter@{CliHighlighter}!output@{output}}
+\index{output@{output}!CliHighlighter@{CliHighlighter}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily output (\begin{DoxyParamCaption}\item[{string}]{\$string }\end{DoxyParamCaption})}
+
+Helper function for building string output
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The string to be quoted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The quoted string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}{Highlighter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/sql-\/formatter/src/Cli\+Highlighter.\+php\end{DoxyCompactItemize}

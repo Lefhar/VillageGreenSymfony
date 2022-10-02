@@ -1,0 +1,94 @@
+\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1354}{}\doxysection{5.\+4}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1354}
+
+\begin{DoxyItemize}
+\item Deprecate {\ttfamily Doctrine\+Provider} and {\ttfamily Doctrine\+Adapter} because these classes have been added to the {\ttfamily doctrine/cache} package
+\item Add {\ttfamily Doctrine\+Dbal\+Adapter} identical to {\ttfamily Pdo\+Adapter} for {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Connection} or DBAL URL
+\item Deprecate usage of {\ttfamily Pdo\+Adapter} with {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Connection} or DBAL URL
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1355}{}\doxysection{5.\+3}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1355}
+
+\begin{DoxyItemize}
+\item added support for connecting to Redis Sentinel clusters when using the Redis PHP extension
+\item add support for a custom serializer to the {\ttfamily Apcu\+Adapter} class
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1356}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1356}
+
+\begin{DoxyItemize}
+\item added integration with Messenger to allow computing cached values in a worker
+\item allow ISO 8601 time intervals to specify default lifetime
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1357}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1357}
+
+\begin{DoxyItemize}
+\item added max-\/items + LRU + max-\/lifetime capabilities to {\ttfamily Array\+Cache}
+\item added {\ttfamily Couchbase\+Bucket\+Adapter}
+\item added context {\ttfamily cache-\/adapter} to log messages
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1358}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1358}
+
+\begin{DoxyItemize}
+\item removed all PSR-\/16 implementations in the {\ttfamily Simple} namespace
+\item removed {\ttfamily Simple\+Cache\+Adapter}
+\item removed {\ttfamily Abstract\+Adapter\+::unserialize()}
+\item removed {\ttfamily Cache\+Item\+::get\+Previous\+Tags()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1359}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1359}
+
+\begin{DoxyItemize}
+\item added support for connecting to Redis Sentinel clusters
+\item added argument {\ttfamily \$prefix} to {\ttfamily Adapter\+Interface\+::clear()}
+\item improved {\ttfamily Redis\+Tag\+Aware\+Adapter} to support Redis server \texorpdfstring{$>$}{>}= 2.\+8 and up to 4B items per tag
+\item added {\ttfamily Tag\+Aware\+Marshaller} for optimized data storage when using {\ttfamily Abstract\+Tag\+Aware\+Adapter}
+\item added {\ttfamily Deflate\+Marshaller} to compress serialized values
+\item removed support for phpredis 4 {\ttfamily compression}
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily Redis\+Tag\+Aware\+Adapter} is not compatible with {\ttfamily Redis\+Cluster} from {\ttfamily Predis} anymore, use {\ttfamily phpredis} instead
+\item Marked the {\ttfamily Cache\+Data\+Collector} class as {\ttfamily @final}.
+\item added {\ttfamily Sodium\+Marshaller} to encrypt/decrypt values using libsodium
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1360}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1360}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily psr/simple-\/cache} dependency, run {\ttfamily composer require psr/simple-\/cache} if you need it
+\item deprecated all PSR-\/16 adapters, use {\ttfamily Psr16\+Cache} or {\ttfamily Symfony\textbackslash{}Contracts\textbackslash{}Cache\textbackslash{}Cache\+Interface} implementations instead
+\item deprecated {\ttfamily Simple\+Cache\+Adapter}, use {\ttfamily Psr16\+Adapter} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1361}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1361}
+
+\begin{DoxyItemize}
+\item added support for connecting to Redis clusters via DSN
+\item added support for configuring multiple Memcached servers via DSN
+\item added {\ttfamily Marshaller\+Interface} and {\ttfamily Default\+Marshaller} to allow changing the serializer and provide one that automatically uses igbinary when available
+\item implemented {\ttfamily Cache\+Interface}, which provides stampede protection via probabilistic early expiration and should become the preferred way to use a cache
+\item added sub-\/second expiry accuracy for backends that support it
+\item added support for phpredis 4 {\ttfamily compression} and {\ttfamily tcp\+\_\+keepalive} options
+\item added automatic table creation when using Doctrine DBAL with PDO-\/based backends
+\item throw {\ttfamily Logic\+Exception} when {\ttfamily Cache\+Item\+::tag()} is called on an item coming from a non tag-\/aware pool
+\item deprecated {\ttfamily Cache\+Item\+::get\+Previous\+Tags()}, use {\ttfamily Cache\+Item\+::get\+Metadata()} instead
+\item deprecated the {\ttfamily Abstract\+Adapter\+::unserialize()} and {\ttfamily Abstract\+Cache\+::unserialize()} methods
+\item added {\ttfamily Cache\+Collector\+Pass} (originally in {\ttfamily Framework\+Bundle})
+\item added {\ttfamily Cache\+Pool\+Clearer\+Pass} (originally in {\ttfamily Framework\+Bundle})
+\item added {\ttfamily Cache\+Pool\+Pass} (originally in {\ttfamily Framework\+Bundle})
+\item added {\ttfamily Cache\+Pool\+Pruner\+Pass} (originally in {\ttfamily Framework\+Bundle})
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1362}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1362}
+
+\begin{DoxyItemize}
+\item added using options from Memcached DSN
+\item added Pruneable\+Interface so PSR-\/6 or PSR-\/16 cache implementations can declare support for manual stale cache pruning
+\item added prune logic to Filesystem\+Trait, Php\+Files\+Trait, Pdo\+Trait, Tag\+Aware\+Adapter and Chain\+Trait
+\item now Filesystem\+Adapter, Php\+Files\+Adapter, Filesystem\+Cache, Php\+Files\+Cache, Pdo\+Adapter, Pdo\+Cache, Chain\+Adapter, and Chain\+Cache implement Pruneable\+Interface and support manual stale cache pruning
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1363}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1363}
+
+\begin{DoxyItemize}
+\item added Cache\+Item\+::get\+Previous\+Tags() to get bound tags coming from the pool storage if any
+\item added PSR-\/16 \char`\"{}\+Simple Cache\char`\"{} implementations for all existing PSR-\/6 adapters
+\item added Psr6\+Cache and Simple\+Cache\+Adapter for bidirectional interoperability between PSR-\/6 and PSR-\/16
+\item added Memcached\+Adapter (PSR-\/6) and Memcached\+Cache (PSR-\/16)
+\item added Traceable\+Adapter (PSR-\/6) and Traceable\+Cache (PSR-\/16)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1364}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1364}
+
+\begin{DoxyItemize}
+\item added Tag\+Aware\+Adapter for tags-\/based invalidation
+\item added Pdo\+Adapter with PDO and Doctrine DBAL support
+\item added Php\+Array\+Adapter and Php\+Files\+Adapter for OPcache-\/backed shared memory storage (PHP 7+ only)
+\item added Null\+Adapter
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1365}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_cache__c_h_a_n_g_e_l_o_g_autotoc_md1365}
+
+\begin{DoxyItemize}
+\item added the component with strict PSR-\/6 implementations
+\item added Apcu\+Adapter, Array\+Adapter, Filesystem\+Adapter and Redis\+Adapter
+\item added Abstract\+Adapter, Chain\+Adapter and Proxy\+Adapter
+\item added Doctrine\+Adapter and Doctrine\+Provider for bidirectional interoperability with Doctrine Cache 
+\end{DoxyItemize}

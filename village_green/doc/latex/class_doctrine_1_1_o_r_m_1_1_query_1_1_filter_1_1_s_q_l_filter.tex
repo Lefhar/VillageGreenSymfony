@@ -1,0 +1,190 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter}{}\doxysection{SQLFilter Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter}\index{SQLFilter@{SQLFilter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a25f4258aeb5ce2a61a2504cb7c058485}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a20b7b02d63df3e3d0a56364101dc9aef}{set\+Parameter\+List}} (string \$name, array \$values, string \$type=Types\+::\+STRING)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_adb6136fb4c8dda0cc17ffb556ad8eb2d}{set\+Parameter}} (\$name, \$value, \$type=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_aedcd08f3c1f5b0af1b15cf8c4c50b5e1}{get\+Parameter}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_aa7453775f87d5ee894b1cfa25ab3c52c}{get\+Parameter\+List}} (string \$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_ae976573a74ad5056b9fb0d70a6b021e9}{has\+Parameter}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a905b4b1d82b6b66dcbe39371464ba79d}{add\+Filter\+Constraint}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$target\+Entity, \$target\+Table\+Alias)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_ab7a0a080d0e721c656eef11cd641638b}{get\+Connection}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class that user defined filters should extend.
+
+Handles the setting and escaping of parameters.
+
+@abstract 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a25f4258aeb5ce2a61a2504cb7c058485}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a25f4258aeb5ce2a61a2504cb7c058485}} 
+\index{SQLFilter@{SQLFilter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} & {\em \$em} & The entity manager. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{SQLFilter@{SQLFilter}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Returns as string representation of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter}{SQLFilter}} parameters (the state).
+
+\begin{DoxyReturn}{Returns}
+string String representation of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter}{SQLFilter}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a905b4b1d82b6b66dcbe39371464ba79d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a905b4b1d82b6b66dcbe39371464ba79d}} 
+\index{SQLFilter@{SQLFilter}!addFilterConstraint@{addFilterConstraint}}
+\index{addFilterConstraint@{addFilterConstraint}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{addFilterConstraint()}{addFilterConstraint()}}
+{\footnotesize\ttfamily add\+Filter\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$target\+Entity,  }\item[{}]{\$target\+Table\+Alias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Gets the SQL query part to add to a query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$target\+Table\+Alias} & @psalm-\/param Class\+Metadata$<$object$>$ \$target\+Entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The constraint SQL if there is available, empty string otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_ab7a0a080d0e721c656eef11cd641638b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_ab7a0a080d0e721c656eef11cd641638b}} 
+\index{SQLFilter@{SQLFilter}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{getConnection()}{getConnection()}}
+{\footnotesize\ttfamily get\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+Returns the database connection used by the entity manager \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_aedcd08f3c1f5b0af1b15cf8c4c50b5e1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_aedcd08f3c1f5b0af1b15cf8c4c50b5e1}} 
+\index{SQLFilter@{SQLFilter}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily get\+Parameter (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Gets a parameter to use in a query.
+
+The function is responsible for the right output escaping to use the value in a query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL escaped parameter to use in a query.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_aa7453775f87d5ee894b1cfa25ab3c52c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_aa7453775f87d5ee894b1cfa25ab3c52c}} 
+\index{SQLFilter@{SQLFilter}!getParameterList@{getParameterList}}
+\index{getParameterList@{getParameterList}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{getParameterList()}{getParameterList()}}
+{\footnotesize\ttfamily get\+Parameter\+List (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Gets a parameter to use in a query assuming it\textquotesingle{}s a list of entries.
+
+The function is responsible for the right output escaping to use the value in a query, separating each entry by comma to inline it into an IN() query part.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL escaped parameter to use in a query.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_ae976573a74ad5056b9fb0d70a6b021e9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_ae976573a74ad5056b9fb0d70a6b021e9}} 
+\index{SQLFilter@{SQLFilter}!hasParameter@{hasParameter}}
+\index{hasParameter@{hasParameter}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{hasParameter()}{hasParameter()}}
+{\footnotesize\ttfamily has\+Parameter (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Checks if a parameter was set for the filter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_adb6136fb4c8dda0cc17ffb556ad8eb2d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_adb6136fb4c8dda0cc17ffb556ad8eb2d}} 
+\index{SQLFilter@{SQLFilter}!setParameter@{setParameter}}
+\index{setParameter@{setParameter}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{setParameter()}{setParameter()}}
+{\footnotesize\ttfamily set\+Parameter (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$value,  }\item[{}]{\$type = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Sets a parameter that can be used by the filter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the parameter. \\
+\hline
+mixed & {\em \$value} & Value of the parameter. \\
+\hline
+string | null & {\em \$type} & The parameter type. If specified, the given value will be run through the type conversion of this type. This is usually not needed for strings and numeric types.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a20b7b02d63df3e3d0a56364101dc9aef}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_1_1_s_q_l_filter_a20b7b02d63df3e3d0a56364101dc9aef}} 
+\index{SQLFilter@{SQLFilter}!setParameterList@{setParameterList}}
+\index{setParameterList@{setParameterList}!SQLFilter@{SQLFilter}}
+\doxysubsubsection{\texorpdfstring{setParameterList()}{setParameterList()}}
+{\footnotesize\ttfamily set\+Parameter\+List (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{array}]{\$values,  }\item[{string}]{\$type = {\ttfamily Types\+:\+:STRING} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Sets a parameter list that can be used by the filter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the parameter. \\
+\hline
+ & {\em array$<$mixed$>$} & \$values List of parameter values. \\
+\hline
+string & {\em \$type} & The parameter type. If specified, the given value will be run through the type conversion of this type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+Filter/SQLFilter.\+php\end{DoxyCompactItemize}

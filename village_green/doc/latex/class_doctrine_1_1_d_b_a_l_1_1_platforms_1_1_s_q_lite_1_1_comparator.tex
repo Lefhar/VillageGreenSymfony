@@ -1,0 +1,52 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator}{}\doxysection{Comparator Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator}\index{Comparator@{Comparator}}
+Inheritance diagram for Comparator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator_a9878b275354a0f0c44fbaefff5f3ad19}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator_a9878b275354a0f0c44fbaefff5f3ad19}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_sqlite_platform}{Sqlite\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator_afffcabe183c684633d0e58e98e640842}{diff\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$from\+Table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$to\+Table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Compares schemas in the context of SQLite platform.
+
+BINARY is the default column collation and should be ignored if specified explicitly. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator_afffcabe183c684633d0e58e98e640842}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_s_q_lite_1_1_comparator_afffcabe183c684633d0e58e98e640842}} 
+\index{Comparator@{Comparator}!diffTable@{diffTable}}
+\index{diffTable@{diffTable}!Comparator@{Comparator}}
+\doxysubsubsection{\texorpdfstring{diffTable()}{diffTable()}}
+{\footnotesize\ttfamily diff\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$from\+Table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$to\+Table }\end{DoxyParamCaption})}
+
+Returns the difference between the tables \$from\+Table and \$to\+Table.
+
+If there are no differences this method returns the boolean false.
+
+\begin{DoxyReturn}{Returns}
+Table\+Diff$\vert$false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_comparator_afffcabe183c684633d0e58e98e640842}{Comparator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Platforms/\+SQLite/Comparator.\+php\end{DoxyCompactItemize}

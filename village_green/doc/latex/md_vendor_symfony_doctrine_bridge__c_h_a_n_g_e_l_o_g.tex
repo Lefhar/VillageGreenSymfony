@@ -1,0 +1,113 @@
+\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1437}{}\doxysection{5.\+4}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1437}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Doctrine\+Open\+Transaction\+Logger\+Middleware} to log when a transaction has been left open
+\item Deprecate {\ttfamily Pdo\+Cache\+Adapter\+Doctrine\+Schema\+Subscriber} and add {\ttfamily Doctrine\+Dbal\+Cache\+Adapter\+Schema\+Subscriber} instead
+\item {\ttfamily Unique\+Entity} constraint retrieves a maximum of two entities if the default repository method is used.
+\item Add support for the newer bundle structure to {\ttfamily Abstract\+Doctrine\+Extension\+::load\+Mapping\+Information()}
+\item Add argument {\ttfamily \$bundle\+Dir} to {\ttfamily Abstract\+Doctrine\+Extension\+::get\+Mapping\+Driver\+Bundle\+Config\+Defaults()}
+\item Add argument {\ttfamily \$bundle\+Dir} to {\ttfamily Abstract\+Doctrine\+Extension\+::get\+Mapping\+Resource\+Config\+Directory()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1438}{}\doxysection{5.\+3}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1438}
+
+\begin{DoxyItemize}
+\item Deprecate {\ttfamily User\+Loader\+Interface\+::load\+User\+By\+Username()} in favor of {\ttfamily User\+Loader\+Interface\+::load\+User\+By\+Identifier()}
+\item {\ttfamily Deprecate}Doctrine\+Test\+Helper{\ttfamily and}Test\+Repository\+Factory{\ttfamily }
+\item {\ttfamily \mbox{[}BC BREAK\mbox{]} Remove}Uuid\+V$\ast$\+Generator{\ttfamily classes}
+\item {\ttfamily Add}Uuid\+Generator{\ttfamily }
+\item {\ttfamily Add support for the new security-\/core}Token\+Verifier\+Interface{\ttfamily in}Doctrine\+Token\+Provider\`{}, fixing parallel requests handling in remember-\/me
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1439}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1439}
+
+\begin{DoxyItemize}
+\item added support for symfony/uid as {\ttfamily Ulid\+Type} and {\ttfamily Uuid\+Type} as Doctrine types
+\item added {\ttfamily Ulid\+Generator}, {\ttfamily Uuid\+V1\+Generator}, {\ttfamily Uuid\+V4\+Generator} and {\ttfamily Uuid\+V6\+Generator}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1440}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1440}
+
+\begin{DoxyItemize}
+\item the {\ttfamily get\+Metadata\+Driver\+Class()} method is abstract and must be implemented by class extending {\ttfamily Abstract\+Doctrine\+Extension}
+\item passing an {\ttfamily Id\+Reader} to the {\ttfamily Doctrine\+Choice\+Loader} when the query cannot be optimized with single id field, throws an exception; pass {\ttfamily null} instead
+\item not explicitly passing an instance of {\ttfamily Id\+Reader} to {\ttfamily Doctrine\+Choice\+Loader} when it can optimize single id field, will not apply any optimization
+\item {\ttfamily Doctrine\+Extractor} now requires an {\ttfamily Entity\+Manager\+Interface} on instantiation
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1441}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1441}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} using null as {\ttfamily \$class\+Validator\+Regexp} value in {\ttfamily Doctrine\+Loader\+::\+\_\+\+\_\+construct} will not enable auto-\/mapping for all classes anymore, use `'\{.$\ast$\}\textquotesingle{}{\ttfamily instead.}
+\item {\ttfamily added}Doctrine\+Clear\+Entity\+Manager\+Worker\+Subscriber{\ttfamily }
+\item {\ttfamily deprecated}Registry\+Interface{\ttfamily , use}Doctrine\textbackslash{}\+Persistence\textbackslash{}\+Manager\+Registry\`{}
+\item added support for invokable event listeners
+\item added {\ttfamily get\+Metadata\+Driver\+Class} method to deprecate class parameters in service configuration files
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1442}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1442}
+
+\begin{DoxyItemize}
+\item changed guessing of DECIMAL to set the {\ttfamily input} option of {\ttfamily Number\+Type} to string
+\item deprecated not passing an {\ttfamily Id\+Reader} to the {\ttfamily Doctrine\+Choice\+Loader} when query can be optimized with a single id field
+\item deprecated passing an {\ttfamily Id\+Reader} to the {\ttfamily Doctrine\+Choice\+Loader} when entities have a composite id
+\item added two Messenger middleware\+: {\ttfamily Doctrine\+Ping\+Connection\+Middleware} and {\ttfamily Doctrine\+Close\+Connection\+Middleware}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1443}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1443}
+
+\begin{DoxyItemize}
+\item deprecated injecting {\ttfamily Class\+Metadata\+Factory} in {\ttfamily Doctrine\+Extractor}, an instance of {\ttfamily Entity\+Manager\+Interface} should be injected instead
+\item added support for {\ttfamily simple\+\_\+array} type
+\item the {\ttfamily Doctrine\+Transaction\+Middleware\+Factory} class has been removed
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1444}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1444}
+
+\begin{DoxyItemize}
+\item added support for datetime immutable types in form type guesser
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1445}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1445}
+
+\begin{DoxyItemize}
+\item the first constructor argument of the {\ttfamily Doctrine\+Choice\+Loader} class must be an {\ttfamily Object\+Manager} implementation
+\item removed the {\ttfamily Merge\+Doctrine\+Collection\+Listener\+::on\+Bind()} method
+\item trying to reset a non-\/lazy manager service using the {\ttfamily Manager\+Registry\+::reset\+Service()} method throws an exception
+\item removed the {\ttfamily Doctrine\+Parser\+Cache} class
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1446}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1446}
+
+\begin{DoxyItemize}
+\item added support for doctrine/dbal v2.\+6 types
+\item added cause of Unique\+Entity constraint violation
+\item deprecated {\ttfamily Dbal\+Session\+Handler} and {\ttfamily Dbal\+Session\+Handler\+Schema} in favor of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Foundation\textbackslash{}Session\textbackslash{}Storage\textbackslash{}Handler\textbackslash{}Pdo\+Session\+Handler}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1447}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1447}
+
+\begin{DoxyItemize}
+\item added \char`\"{}\{\{ value \}\}\char`\"{} message placeholder to Unique\+Entity\+Validator
+\item deprecated {\ttfamily Merge\+Doctrine\+Collection\+Listener\+::on\+Bind} in favor of {\ttfamily Merge\+Doctrine\+Collection\+Listener\+::on\+Submit}
+\item deprecated passing {\ttfamily Choice\+List\+Factory\+Interface} as first argument of {\ttfamily Doctrine\+Choice\+Loader}\textquotesingle{}s constructor
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1448}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1448}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Entity\+Choice\+List}
+\item removed {\ttfamily \$manager} (2nd) and {\ttfamily \$class} (3th) arguments of {\ttfamily ORMQuery\+Builder\+Loader}
+\item removed passing a query builder closure to {\ttfamily ORMQuery\+Builder\+Loader}
+\item removed {\ttfamily loader} and {\ttfamily property} options of the {\ttfamily Doctrine\+Type}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1449}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1449}
+
+\begin{DoxyItemize}
+\item deprecated using the entity provider with a Doctrine repository implementing User\+Provider\+Interface
+\item added User\+Loader\+Interface for loading users through Doctrine.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1450}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1450}
+
+\begin{DoxyItemize}
+\item added Doctrine\+Choice\+Loader
+\item deprecated Entity\+Choice\+List
+\item deprecated passing a query builder closure to ORMQuery\+Builder\+Loader
+\item deprecated \$manager and \$em arguments of ORMQuery\+Builder\+Loader
+\item added optional arguments \$property\+Accessor and \$choice\+List\+Factory to Doctrine\+Orm\+Extension constructor
+\item deprecated \char`\"{}loader\char`\"{} and \char`\"{}property\char`\"{} options of Doctrine\+Type
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1451}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1451}
+
+\begin{DoxyItemize}
+\item deprecated Doctrine\+Orm\+Test\+Case class
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1452}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1452}
+
+\begin{DoxyItemize}
+\item added an optional Property\+Accessor\+Interface parameter to Doctrine\+Type, Entity\+Type and Entity\+Choice\+List
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1453}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_doctrine_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1453}
+
+\begin{DoxyItemize}
+\item added a default implementation of the Manager\+Registry
+\item added a session storage for Doctrine DBAL
+\item Doctrine\+Orm\+Type\+Guesser now guesses \char`\"{}collection\char`\"{} for array Doctrine type
+\item Doctrine\+Type now caches its choice lists in order to improve performance
+\item Doctrine\+Type now uses Manager\+Registry\+::get\+Manager\+For\+Class() if the option \char`\"{}em\char`\"{} is not set
+\item Unique\+Entity validation constraint now accepts a \char`\"{}repository\+Method\char`\"{} option that will be used to check for uniqueness instead of the default \char`\"{}find\+By\char`\"{}
+\item \mbox{[}BC BREAK\mbox{]} the Dbal\+Logger\+::log() visibility has been changed from public to protected 
+\end{DoxyItemize}

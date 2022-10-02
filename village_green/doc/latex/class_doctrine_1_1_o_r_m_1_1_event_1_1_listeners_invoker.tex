@@ -1,0 +1,88 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker}{}\doxysection{Listeners\+Invoker Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker}\index{ListenersInvoker@{ListenersInvoker}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a25f4258aeb5ce2a61a2504cb7c058485}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a74d06720c66f6d1614ba99f766e44da8}{get\+Subscribed\+Systems}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \$event\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_acce5a266a78b6b72a77f7f4785f4c426}{invoke}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \$event\+Name, \$entity, \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} \$event, \$invoke)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_afa051bea69c3555fac5507bc5307e6a2}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_afa051bea69c3555fac5507bc5307e6a2}} 
+const {\bfseries INVOKE\+\_\+\+NONE} = 0
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a39c39c1957b87ec0249c303434196474}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a39c39c1957b87ec0249c303434196474}} 
+const {\bfseries INVOKE\+\_\+\+LISTENERS} = 1
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_ae0bd378098ab20c699ac187acbf04070}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_ae0bd378098ab20c699ac187acbf04070}} 
+const {\bfseries INVOKE\+\_\+\+CALLBACKS} = 2
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a353c04be53d49c361719e751dd274bcb}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a353c04be53d49c361719e751dd274bcb}} 
+const {\bfseries INVOKE\+\_\+\+MANAGER} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A method invoker based on entity lifecycle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a25f4258aeb5ce2a61a2504cb7c058485}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a25f4258aeb5ce2a61a2504cb7c058485}} 
+\index{ListenersInvoker@{ListenersInvoker}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ListenersInvoker@{ListenersInvoker}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker}{Listeners\+Invoker}} instance. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a74d06720c66f6d1614ba99f766e44da8}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_a74d06720c66f6d1614ba99f766e44da8}} 
+\index{ListenersInvoker@{ListenersInvoker}!getSubscribedSystems@{getSubscribedSystems}}
+\index{getSubscribedSystems@{getSubscribedSystems}!ListenersInvoker@{ListenersInvoker}}
+\doxysubsubsection{\texorpdfstring{getSubscribedSystems()}{getSubscribedSystems()}}
+{\footnotesize\ttfamily get\+Subscribed\+Systems (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{}]{\$event\+Name }\end{DoxyParamCaption})}
+
+Get the subscribed event systems
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$metadata} & The entity metadata. \\
+\hline
+string & {\em \$event\+Name} & The entity lifecycle event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Bitmask of subscribed event systems. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_acce5a266a78b6b72a77f7f4785f4c426}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_listeners_invoker_acce5a266a78b6b72a77f7f4785f4c426}} 
+\index{ListenersInvoker@{ListenersInvoker}!invoke@{invoke}}
+\index{invoke@{invoke}!ListenersInvoker@{ListenersInvoker}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}}
+{\footnotesize\ttfamily invoke (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{}]{\$event\+Name,  }\item[{}]{\$entity,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}}}]{\$event,  }\item[{}]{\$invoke }\end{DoxyParamCaption})}
+
+Dispatches the lifecycle event of the given entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$metadata} & The entity metadata. \\
+\hline
+string & {\em \$event\+Name} & The entity lifecycle event. \\
+\hline
+object & {\em \$entity} & The Entity on which the event occurred. \\
+\hline
+Event\+Args & {\em \$event} & The Event args. \\
+\hline
+int & {\em \$invoke} & Bitmask to invoke listeners.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Event/Listeners\+Invoker.\+php\end{DoxyCompactItemize}

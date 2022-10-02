@@ -1,0 +1,214 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger}{}\doxysection{Cache\+Logger Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger}\index{CacheLogger@{CacheLogger}}
+Inheritance diagram for Cache\+Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a4e4066837c1ac7c9a67876c9a154b568}{entity\+Cache\+Put}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a385a0f1e599b468baed6dfa6fea3425c}{entity\+Cache\+Hit}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a56e71a482d7d79c44fac8a789ef44fb9}{entity\+Cache\+Miss}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_abb7d1aab89924c84366f6239e17f4fcf}{collection\+Cache\+Put}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_ae596cba0008be14d230dc95059e2d349}{collection\+Cache\+Hit}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_aef06d3b405b6bd67f178b2a086eab448}{collection\+Cache\+Miss}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a8d1a03a5303aae31b854771c2fff751d}{query\+Cache\+Put}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_ab0cd80c08ecdb7167de9c95015d21108}{query\+Cache\+Hit}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a93abe89adde2eefe702380f77c4f960c}{query\+Cache\+Miss}} (\$region\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} \$key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for logging. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2orm_2lib_2_doctrine_f8967513678986d5e8c2157d31bb4dfd}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Abstract\+Query.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_ae596cba0008be14d230dc95059e2d349}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_ae596cba0008be14d230dc95059e2d349}} 
+\index{CacheLogger@{CacheLogger}!collectionCacheHit@{collectionCacheHit}}
+\index{collectionCacheHit@{collectionCacheHit}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{collectionCacheHit()}{collectionCacheHit()}}
+{\footnotesize\ttfamily collection\+Cache\+Hit (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log an entity get from second level cache resulted in a hit.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} & {\em \$key} & The cache key of the collection. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_ae596cba0008be14d230dc95059e2d349}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_ae596cba0008be14d230dc95059e2d349}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_aef06d3b405b6bd67f178b2a086eab448}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_aef06d3b405b6bd67f178b2a086eab448}} 
+\index{CacheLogger@{CacheLogger}!collectionCacheMiss@{collectionCacheMiss}}
+\index{collectionCacheMiss@{collectionCacheMiss}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{collectionCacheMiss()}{collectionCacheMiss()}}
+{\footnotesize\ttfamily collection\+Cache\+Miss (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log an entity get from second level cache resulted in a miss.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} & {\em \$key} & The cache key of the collection. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_aef06d3b405b6bd67f178b2a086eab448}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_aef06d3b405b6bd67f178b2a086eab448}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_abb7d1aab89924c84366f6239e17f4fcf}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_abb7d1aab89924c84366f6239e17f4fcf}} 
+\index{CacheLogger@{CacheLogger}!collectionCachePut@{collectionCachePut}}
+\index{collectionCachePut@{collectionCachePut}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{collectionCachePut()}{collectionCachePut()}}
+{\footnotesize\ttfamily collection\+Cache\+Put (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log an entity put into second level cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} & {\em \$key} & The cache key of the collection. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_abb7d1aab89924c84366f6239e17f4fcf}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_abb7d1aab89924c84366f6239e17f4fcf}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a385a0f1e599b468baed6dfa6fea3425c}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a385a0f1e599b468baed6dfa6fea3425c}} 
+\index{CacheLogger@{CacheLogger}!entityCacheHit@{entityCacheHit}}
+\index{entityCacheHit@{entityCacheHit}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{entityCacheHit()}{entityCacheHit()}}
+{\footnotesize\ttfamily entity\+Cache\+Hit (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log an entity get from second level cache resulted in a hit.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} & {\em \$key} & The cache key of the entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_a385a0f1e599b468baed6dfa6fea3425c}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_a385a0f1e599b468baed6dfa6fea3425c}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a56e71a482d7d79c44fac8a789ef44fb9}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a56e71a482d7d79c44fac8a789ef44fb9}} 
+\index{CacheLogger@{CacheLogger}!entityCacheMiss@{entityCacheMiss}}
+\index{entityCacheMiss@{entityCacheMiss}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{entityCacheMiss()}{entityCacheMiss()}}
+{\footnotesize\ttfamily entity\+Cache\+Miss (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log an entity get from second level cache resulted in a miss.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} & {\em \$key} & The cache key of the entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_a56e71a482d7d79c44fac8a789ef44fb9}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_a56e71a482d7d79c44fac8a789ef44fb9}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a4e4066837c1ac7c9a67876c9a154b568}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a4e4066837c1ac7c9a67876c9a154b568}} 
+\index{CacheLogger@{CacheLogger}!entityCachePut@{entityCachePut}}
+\index{entityCachePut@{entityCachePut}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{entityCachePut()}{entityCachePut()}}
+{\footnotesize\ttfamily entity\+Cache\+Put (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log an entity put into second level cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} & {\em \$key} & The cache key of the entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_a4e4066837c1ac7c9a67876c9a154b568}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_a4e4066837c1ac7c9a67876c9a154b568}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_ab0cd80c08ecdb7167de9c95015d21108}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_ab0cd80c08ecdb7167de9c95015d21108}} 
+\index{CacheLogger@{CacheLogger}!queryCacheHit@{queryCacheHit}}
+\index{queryCacheHit@{queryCacheHit}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{queryCacheHit()}{queryCacheHit()}}
+{\footnotesize\ttfamily query\+Cache\+Hit (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log a query get from the query cache resulted in a hit.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} & {\em \$key} & The cache key of the query. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_ab0cd80c08ecdb7167de9c95015d21108}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_ab0cd80c08ecdb7167de9c95015d21108}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a93abe89adde2eefe702380f77c4f960c}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a93abe89adde2eefe702380f77c4f960c}} 
+\index{CacheLogger@{CacheLogger}!queryCacheMiss@{queryCacheMiss}}
+\index{queryCacheMiss@{queryCacheMiss}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{queryCacheMiss()}{queryCacheMiss()}}
+{\footnotesize\ttfamily query\+Cache\+Miss (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log a query get from the query cache resulted in a miss.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} & {\em \$key} & The cache key of the query. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_a93abe89adde2eefe702380f77c4f960c}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_a93abe89adde2eefe702380f77c4f960c}{Statistics\+Cache\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a8d1a03a5303aae31b854771c2fff751d}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_a8d1a03a5303aae31b854771c2fff751d}} 
+\index{CacheLogger@{CacheLogger}!queryCachePut@{queryCachePut}}
+\index{queryCachePut@{queryCachePut}!CacheLogger@{CacheLogger}}
+\doxysubsubsection{\texorpdfstring{queryCachePut()}{queryCachePut()}}
+{\footnotesize\ttfamily query\+Cache\+Put (\begin{DoxyParamCaption}\item[{}]{\$region\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Log a query put into the query cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The name of the cache region. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} & {\em \$key} & The cache key of the query. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger_chain_a8d1a03a5303aae31b854771c2fff751d}{Cache\+Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_statistics_cache_logger_a8d1a03a5303aae31b854771c2fff751d}{Statistics\+Cache\+Logger}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/\+Logging/Cache\+Logger.\+php\end{DoxyCompactItemize}

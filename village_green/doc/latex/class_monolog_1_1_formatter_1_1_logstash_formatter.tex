@@ -1,0 +1,99 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter}{}\doxysection{Logstash\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_logstash_formatter}\index{LogstashFormatter@{LogstashFormatter}}
+Inheritance diagram for Logstash\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_formatter_1_1_logstash_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_logstash_formatter_a5396d52d3d2c2c294a3641d8f2e48807}{\+\_\+\+\_\+construct}} (string \$application\+Name, ?string \$system\+Name=null, string \$extra\+Key=\textquotesingle{}extra\textquotesingle{}, string \$context\+Key=\textquotesingle{}context\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_logstash_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter_a55f7aa203223d5a06531e4481223944b}\label{class_monolog_1_1_formatter_1_1_logstash_formatter_a55f7aa203223d5a06531e4481223944b}} 
+{\bfseries \$system\+Name}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter_abb40c90d15ab55e6e3ea631a1a0100f6}\label{class_monolog_1_1_formatter_1_1_logstash_formatter_abb40c90d15ab55e6e3ea631a1a0100f6}} 
+{\bfseries \$application\+Name}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter_a9230155a1dfc0c31e5e049788b46999c}\label{class_monolog_1_1_formatter_1_1_logstash_formatter_a9230155a1dfc0c31e5e049788b46999c}} 
+{\bfseries \$extra\+Key}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter_a0e771eef19f02c93a71bba51ef603269}\label{class_monolog_1_1_formatter_1_1_logstash_formatter_a0e771eef19f02c93a71bba51ef603269}} 
+{\bfseries \$context\+Key}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Serializes a log message to Logstash Event Format
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.elastic.co/products/logstash}{\texttt{ https\+://www.\+elastic.\+co/products/logstash}} 
+
+\href{https://github.com/elastic/logstash/blob/master/logstash-core/src/main/java/org/logstash/Event.java}{\texttt{ https\+://github.\+com/elastic/logstash/blob/master/logstash-\/core/src/main/java/org/logstash/\+Event.\+java}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Tim Mower \href{mailto:timothy.mower@gmail.com}{\texttt{ timothy.\+mower@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter_a5396d52d3d2c2c294a3641d8f2e48807}\label{class_monolog_1_1_formatter_1_1_logstash_formatter_a5396d52d3d2c2c294a3641d8f2e48807}} 
+\index{LogstashFormatter@{LogstashFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogstashFormatter@{LogstashFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$application\+Name,  }\item[{?string}]{\$system\+Name = {\ttfamily null},  }\item[{string}]{\$extra\+Key = {\ttfamily \textquotesingle{}extra\textquotesingle{}},  }\item[{string}]{\$context\+Key = {\ttfamily \textquotesingle{}context\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$application\+Name} & The application that sends the data, used as the \char`\"{}type\char`\"{} field of logstash \\
+\hline
+string | null & {\em \$system\+Name} & The system/machine name, used as the \char`\"{}source\char`\"{} field of logstash, defaults to the hostname of the machine \\
+\hline
+string & {\em \$extra\+Key} & The key for extra keys inside logstash \char`\"{}fields\char`\"{}, defaults to extra \\
+\hline
+string & {\em \$context\+Key} & The key for context keys inside logstash \char`\"{}fields\char`\"{}, defaults to context \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_logstash_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_logstash_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{LogstashFormatter@{LogstashFormatter}!format@{format}}
+\index{format@{format}!LogstashFormatter@{LogstashFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Normalizer\+Formatter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Logstash\+Formatter.\+php\end{DoxyCompactItemize}

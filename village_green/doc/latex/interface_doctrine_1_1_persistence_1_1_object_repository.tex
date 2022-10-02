@@ -1,0 +1,129 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_object_repository}{}\doxysection{Object\+Repository Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_object_repository}\index{ObjectRepository@{ObjectRepository}}
+Inheritance diagram for Object\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_doctrine_1_1_persistence_1_1_object_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_a79cc82436f3290ec078b1aa19589da20}{find}} (\$id)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_a73a1b0348919b6755e4f69dcc70eba64}{find\+All}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_a1f9675c79cf0a214a9de751a1d632669}{find\+By}} (array \$criteria, ?array \$order\+By=null, \$limit=null, \$offset=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_af78c957eb3a452021cbad4790074e625}{find\+One\+By}} (array \$criteria)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}{get\+Class\+Name}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract for a Doctrine persistence layer \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository}{Object\+Repository}} class to implement.
+
+@template T 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_repository_a79cc82436f3290ec078b1aa19589da20}\label{interface_doctrine_1_1_persistence_1_1_object_repository_a79cc82436f3290ec078b1aa19589da20}} 
+\index{ObjectRepository@{ObjectRepository}!find@{find}}
+\index{find@{find}!ObjectRepository@{ObjectRepository}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily find (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Finds an object by its primary key / identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$id} & The identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null The object. @psalm-\/return T$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_repository_a73a1b0348919b6755e4f69dcc70eba64}\label{interface_doctrine_1_1_persistence_1_1_object_repository_a73a1b0348919b6755e4f69dcc70eba64}} 
+\index{ObjectRepository@{ObjectRepository}!findAll@{findAll}}
+\index{findAll@{findAll}!ObjectRepository@{ObjectRepository}}
+\doxysubsubsection{\texorpdfstring{findAll()}{findAll()}}
+{\footnotesize\ttfamily find\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Finds all objects in the repository.
+
+\begin{DoxyReturn}{Returns}
+array$<$int, object$>$ The objects. @psalm-\/return T\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a73a1b0348919b6755e4f69dcc70eba64}{Entity\+Repository}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_repository_a1f9675c79cf0a214a9de751a1d632669}\label{interface_doctrine_1_1_persistence_1_1_object_repository_a1f9675c79cf0a214a9de751a1d632669}} 
+\index{ObjectRepository@{ObjectRepository}!findBy@{findBy}}
+\index{findBy@{findBy}!ObjectRepository@{ObjectRepository}}
+\doxysubsubsection{\texorpdfstring{findBy()}{findBy()}}
+{\footnotesize\ttfamily find\+By (\begin{DoxyParamCaption}\item[{array}]{\$criteria,  }\item[{?array}]{\$order\+By = {\ttfamily null},  }\item[{}]{\$limit = {\ttfamily null},  }\item[{}]{\$offset = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Finds objects by a set of criteria.
+
+Optionally sorting and limiting details can be passed. An implementation may throw an Unexpected\+Value\+Exception if certain values of the sorting or limiting details are not supported.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em array$<$string,mixed$>$} & \$criteria \\
+\hline
+string\mbox{[}$\,$\mbox{]} | null & {\em \$order\+By} & \\
+\hline
+int | null & {\em \$limit} & \\
+\hline
+int | null & {\em \$offset} & @psalm-\/param array\texorpdfstring{$<$}{<}string, \textquotesingle{}asc\textquotesingle{}$\vert$\textquotesingle{}desc\textquotesingle{}$\vert$\textquotesingle{}ASC\textquotesingle{}$\vert$\textquotesingle{}DESC\textquotesingle{}\texorpdfstring{$>$}{>} \$order\+By\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object\mbox{[}\mbox{]} The objects. @psalm-\/return T\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unexpected\+Value\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a1f9675c79cf0a214a9de751a1d632669}{Entity\+Repository}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_repository_af78c957eb3a452021cbad4790074e625}\label{interface_doctrine_1_1_persistence_1_1_object_repository_af78c957eb3a452021cbad4790074e625}} 
+\index{ObjectRepository@{ObjectRepository}!findOneBy@{findOneBy}}
+\index{findOneBy@{findOneBy}!ObjectRepository@{ObjectRepository}}
+\doxysubsubsection{\texorpdfstring{findOneBy()}{findOneBy()}}
+{\footnotesize\ttfamily find\+One\+By (\begin{DoxyParamCaption}\item[{array}]{\$criteria }\end{DoxyParamCaption})}
+
+Finds a single object by a set of criteria.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,mixed$>$} & \$criteria The criteria.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null The object. @psalm-\/return T$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}\label{interface_doctrine_1_1_persistence_1_1_object_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}} 
+\index{ObjectRepository@{ObjectRepository}!getClassName@{getClassName}}
+\index{getClassName@{getClassName}!ObjectRepository@{ObjectRepository}}
+\doxysubsubsection{\texorpdfstring{getClassName()}{getClassName()}}
+{\footnotesize\ttfamily get\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the class name of the object managed by the repository.
+
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}{Entity\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Object\+Repository.\+php\end{DoxyCompactItemize}

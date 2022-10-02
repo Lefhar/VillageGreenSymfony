@@ -1,0 +1,108 @@
+\hypertarget{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner}{}\doxysection{Runner Class Reference}
+\label{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner}\index{Runner@{Runner}}
+Inheritance diagram for Runner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ad8ea66eadabe78db6e542ef1603c760a}{start}} (string \$command, string \$cwd=null, array \$env=\mbox{[}$\,$\mbox{]}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_a5a643d8f69819dcab98ca3ca65517f4c}{signal}} (\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} \$handle, int \$signo)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ab82ef2cecb0d3264106a7090be44a952}\label{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ab82ef2cecb0d3264106a7090be44a952}} 
+static {\bfseries on\+Process\+End\+Extra\+Data\+Pipe\+Readable} (\$watcher, \$stream, \mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_handle}{Handle}} \$handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ae9eb8ceb8dfa63d1b77231184b817890}{FD\+\_\+\+SPEC}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_a5a643d8f69819dcab98ca3ca65517f4c}\label{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_a5a643d8f69819dcab98ca3ca65517f4c}} 
+\index{Runner@{Runner}!signal@{signal}}
+\index{signal@{signal}!Runner@{Runner}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}}]{\$handle,  }\item[{int}]{\$signo }\end{DoxyParamCaption})}
+
+Send a signal signal to the child process.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} & {\em \$handle} & The process descriptor. \\
+\hline
+int & {\em \$signo} & Signal number to send to process.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If sending the signal fails.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a5a643d8f69819dcab98ca3ca65517f4c}{Process\+Runner}}.
+
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ad8ea66eadabe78db6e542ef1603c760a}\label{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ad8ea66eadabe78db6e542ef1603c760a}} 
+\index{Runner@{Runner}!start@{start}}
+\index{start@{start}!Runner@{Runner}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}\item[{string}]{\$command,  }\item[{string}]{\$cwd = {\ttfamily null},  }\item[{array}]{\$env = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Start a process using the supplied parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$command} & The command to execute. \\
+\hline
+string | null & {\em \$cwd} & The working directory for the child process. \\
+\hline
+array & {\em \$env} & Environment variables to pass to the child process. \\
+\hline
+array & {\em \$options} & {\ttfamily proc\+\_\+open()} options.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If starting the process fails.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad8ea66eadabe78db6e542ef1603c760a}{Process\+Runner}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ae9eb8ceb8dfa63d1b77231184b817890}\label{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ae9eb8ceb8dfa63d1b77231184b817890}} 
+\index{Runner@{Runner}!FD\_SPEC@{FD\_SPEC}}
+\index{FD\_SPEC@{FD\_SPEC}!Runner@{Runner}}
+\doxysubsubsection{\texorpdfstring{FD\_SPEC}{FD\_SPEC}}
+{\footnotesize\ttfamily const FD\+\_\+\+SPEC}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}pipe"{}}, \textcolor{stringliteral}{"{}r"{}}], }
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}pipe"{}}, \textcolor{stringliteral}{"{}w"{}}], }
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}pipe"{}}, \textcolor{stringliteral}{"{}w"{}}], }
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}pipe"{}}, \textcolor{stringliteral}{"{}w"{}}], }
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/process/lib/\+Internal/\+Posix/Runner.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter}{}\doxysection{Yaml\+Exporter Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter}\index{YamlExporter@{YamlExporter}}
+Inheritance diagram for Yaml\+Exporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_a6a3537ef28a15f4c1c2b22dd70a0e3ea}{export\+Class\+Metadata}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} \$metadata)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_af979d08ae3983c72566aea4f27017dd0}{yaml\+Dump}} (\$array, \$inline=2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_a5c8824e9846349e9d3f49db20184f6db}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_a5c8824e9846349e9d3f49db20184f6db}} 
+{\bfseries \$\+\_\+extension} = \textquotesingle{}.dcm.\+yml\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class\+Metadata exporter for Doctrine YAML mapping files.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000298}{Deprecated}}]2.\+7 This class is being removed from the ORM and won\textquotesingle{}t have any replacement\end{DoxyRefDesc}
+
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_a6a3537ef28a15f4c1c2b22dd70a0e3ea}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_a6a3537ef28a15f4c1c2b22dd70a0e3ea}} 
+\index{YamlExporter@{YamlExporter}!exportClassMetadata@{exportClassMetadata}}
+\index{exportClassMetadata@{exportClassMetadata}!YamlExporter@{YamlExporter}}
+\doxysubsubsection{\texorpdfstring{exportClassMetadata()}{exportClassMetadata()}}
+{\footnotesize\ttfamily export\+Class\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}}}]{\$metadata }\end{DoxyParamCaption})}
+
+\{Converts a single Class\+Metadata instance to the exported format and returns it.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_abstract_exporter_a6a3537ef28a15f4c1c2b22dd70a0e3ea}{Abstract\+Exporter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_af979d08ae3983c72566aea4f27017dd0}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_driver_1_1_yaml_exporter_af979d08ae3983c72566aea4f27017dd0}} 
+\index{YamlExporter@{YamlExporter}!yamlDump@{yamlDump}}
+\index{yamlDump@{yamlDump}!YamlExporter@{YamlExporter}}
+\doxysubsubsection{\texorpdfstring{yamlDump()}{yamlDump()}}
+{\footnotesize\ttfamily yaml\+Dump (\begin{DoxyParamCaption}\item[{}]{\$array,  }\item[{}]{\$inline = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dumps a PHP array to a YAML string.
+
+The yaml\+Dump method, when supplied with an array, will do its best to convert the array into friendly YAML.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$array} & PHP array \\
+\hline
+int & {\em \$inline} & \mbox{[}optional\mbox{]} The level where you switch to inline YAML\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A YAML string representing the original PHP array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Export/\+Driver/Yaml\+Exporter.\+php\end{DoxyCompactItemize}

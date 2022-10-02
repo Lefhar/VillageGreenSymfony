@@ -1,0 +1,408 @@
+\hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface}{}\doxysection{Uri\+Interface Interface Reference}
+\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface}\index{UriInterface@{UriInterface}}
+Inheritance diagram for Uri\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ad402d8679325bc514874370f02b5c2ac}{json\+Serialize}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a812bc167005f6f5852c53693fb0156bb}{get\+Scheme}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a1f73860dd14340c5bad9094f0b5b97c2}{get\+Authority}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a7e7999c3a04f08ffcc5e237fd28a6bc7}{get\+User\+Info}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a39895a44b52bdced039e698588aaf18e}{get\+Host}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_afd4db46d3c12f47f0bee19cd2101be64}{get\+Port}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a30c5c67b2bf8e2e2ccc7e361faa20afe}{get\+Path}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a55f162785567258fe5138af282e588c2}{get\+Query}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a8e9be93affbfde43840cbaf4b6712ea9}{get\+Fragment}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a310a47648ee646039e5cc8a00796d06b}{with\+Scheme}} (?string \$scheme)
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ae83ad16f1829f71a3cb3dfbbaae2111b}{with\+User\+Info}} (?string \$user, ?string \$password=null)
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a5310c690cf32e4e4ecb8a7733f9dee3b}{with\+Host}} (?string \$host)
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ae57f099b526755aae718915e744eae3f}{with\+Port}} (?int \$port)
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ad3e0f328ff337497b066210ef83bd59f}{with\+Path}} (string \$path)
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ac1d39bad9a3eb1a82fd24a47c70f7789}{with\+Query}} (?string \$query)
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a588fe964ec8bdc15576f11805535e375}{with\+Fragment}} (?string \$fragment)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a7516ca30af0db3cdbf9a7739b48ce91d}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{UriInterface@{UriInterface}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the string representation as a URI reference.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc3986\#section-4.1}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/4.\+1}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a7516ca30af0db3cdbf9a7739b48ce91d}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a1f73860dd14340c5bad9094f0b5b97c2}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a1f73860dd14340c5bad9094f0b5b97c2}} 
+\index{UriInterface@{UriInterface}!getAuthority@{getAuthority}}
+\index{getAuthority@{getAuthority}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getAuthority()}{getAuthority()}}
+{\footnotesize\ttfamily get\+Authority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the authority component of the URI.
+
+If no scheme is present, this method MUST return a null value.
+
+If the port component is not set or is the standard port for the current scheme, it SHOULD NOT be included.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a1f73860dd14340c5bad9094f0b5b97c2}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a8e9be93affbfde43840cbaf4b6712ea9}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a8e9be93affbfde43840cbaf4b6712ea9}} 
+\index{UriInterface@{UriInterface}!getFragment@{getFragment}}
+\index{getFragment@{getFragment}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getFragment()}{getFragment()}}
+{\footnotesize\ttfamily get\+Fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the fragment component of the URI.
+
+If no host is present this method MUST return a null value.
+
+The leading \char`\"{}\#\char`\"{} character is not part of the fragment and MUST NOT be added.
+
+The value returned MUST be percent-\/encoded, but MUST NOT double-\/encode any characters. To determine what characters to encode, please refer to RFC 3986, Sections 2 and 3.\+5.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2}} 
+
+\href{https://tools.ietf.org/html/rfc3986\#section-3.5}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+5}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a8e9be93affbfde43840cbaf4b6712ea9}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a39895a44b52bdced039e698588aaf18e}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a39895a44b52bdced039e698588aaf18e}} 
+\index{UriInterface@{UriInterface}!getHost@{getHost}}
+\index{getHost@{getHost}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the host component of the URI.
+
+If no host is present this method MUST return a null value.
+
+The value returned MUST be normalized to lowercase, per RFC 3986 Section 3.\+2.\+2.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc3986\#section-3.2.2}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2.\+2}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a39895a44b52bdced039e698588aaf18e}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a30c5c67b2bf8e2e2ccc7e361faa20afe}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a30c5c67b2bf8e2e2ccc7e361faa20afe}} 
+\index{UriInterface@{UriInterface}!getPath@{getPath}}
+\index{getPath@{getPath}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the path component of the URI.
+
+The path can either be empty or absolute (starting with a slash) or rootless (not starting with a slash). Implementations MUST support all three syntaxes.
+
+Normally, the empty path \char`\"{}\char`\"{} and absolute path \char`\"{}/\char`\"{} are considered equal as defined in RFC 7230 Section 2.\+7.\+3. But this method MUST NOT automatically do this normalization because in contexts with a trimmed base path, e.\+g. the front controller, this difference becomes significant. It\textquotesingle{}s the task of the user to handle both \char`\"{}\char`\"{} and \char`\"{}/\char`\"{}.
+
+The value returned MUST be percent-\/encoded, but MUST NOT double-\/encode any characters. To determine what characters to encode, please refer to RFC 3986, Sections 2 and 3.\+3.
+
+As an example, if the value should include a slash (\char`\"{}/\char`\"{}) not intended as delimiter between path segments, that value MUST be passed in encoded form (e.\+g., \char`\"{}\%2\+F\char`\"{}) to the instance.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2}} 
+
+\href{https://tools.ietf.org/html/rfc3986\#section-3.3}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+3}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a30c5c67b2bf8e2e2ccc7e361faa20afe}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_afd4db46d3c12f47f0bee19cd2101be64}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_afd4db46d3c12f47f0bee19cd2101be64}} 
+\index{UriInterface@{UriInterface}!getPort@{getPort}}
+\index{getPort@{getPort}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the port component of the URI.
+
+If a port is present, and it is non-\/standard for the current scheme, this method MUST return it as an integer. If the port is the standard port used with the current scheme, this method SHOULD return null.
+
+If no port is present, and no scheme is present, this method MUST return a null value.
+
+If no port is present, but a scheme is present, this method MAY return the standard port for that scheme, but SHOULD return null. 
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_afd4db46d3c12f47f0bee19cd2101be64}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a55f162785567258fe5138af282e588c2}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a55f162785567258fe5138af282e588c2}} 
+\index{UriInterface@{UriInterface}!getQuery@{getQuery}}
+\index{getQuery@{getQuery}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getQuery()}{getQuery()}}
+{\footnotesize\ttfamily get\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the query string of the URI.
+
+If no host is present this method MUST return a null value.
+
+The leading \char`\"{}?\char`\"{} character is not part of the query and MUST NOT be added.
+
+The value returned MUST be percent-\/encoded, but MUST NOT double-\/encode any characters. To determine what characters to encode, please refer to RFC 3986, Sections 2 and 3.\+4.
+
+As an example, if a value in a key/value pair of the query string should include an ampersand (\char`\"{}\&\char`\"{}) not intended as a delimiter between values, that value MUST be passed in encoded form (e.\+g., \char`\"{}\%26\char`\"{}) to the instance.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2}} 
+
+\href{https://tools.ietf.org/html/rfc3986\#section-3.4}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+4}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a55f162785567258fe5138af282e588c2}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a812bc167005f6f5852c53693fb0156bb}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a812bc167005f6f5852c53693fb0156bb}} 
+\index{UriInterface@{UriInterface}!getScheme@{getScheme}}
+\index{getScheme@{getScheme}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getScheme()}{getScheme()}}
+{\footnotesize\ttfamily get\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the scheme component of the URI.
+
+If no scheme is present, this method MUST return a null value.
+
+The value returned MUST be normalized to lowercase, per RFC 3986 Section 3.\+1.
+
+The trailing \char`\"{}\+:\char`\"{} character is not part of the scheme and MUST NOT be added.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.1}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+1}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a812bc167005f6f5852c53693fb0156bb}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a7e7999c3a04f08ffcc5e237fd28a6bc7}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a7e7999c3a04f08ffcc5e237fd28a6bc7}} 
+\index{UriInterface@{UriInterface}!getUserInfo@{getUserInfo}}
+\index{getUserInfo@{getUserInfo}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{getUserInfo()}{getUserInfo()}}
+{\footnotesize\ttfamily get\+User\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the user information component of the URI.
+
+If no scheme is present, this method MUST return a null value.
+
+If a user is present in the URI, this will return that value; additionally, if the password is also present, it will be appended to the user value, with a colon (\char`\"{}\+:\char`\"{}) separating the values.
+
+The trailing \char`\"{}@\char`\"{} character is not part of the user information and MUST NOT be added. 
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_a7e7999c3a04f08ffcc5e237fd28a6bc7}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ad402d8679325bc514874370f02b5c2ac}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ad402d8679325bc514874370f02b5c2ac}} 
+\index{UriInterface@{UriInterface}!jsonSerialize@{jsonSerialize}}
+\index{jsonSerialize@{jsonSerialize}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{jsonSerialize()}{jsonSerialize()}}
+{\footnotesize\ttfamily json\+Serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the string representation as a URI reference.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc3986\#section-4.1}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/4.\+1}} 
+
+\+::\+\_\+\+\_\+to\+String 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_ad402d8679325bc514874370f02b5c2ac}{Uri}}.
+
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a588fe964ec8bdc15576f11805535e375}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a588fe964ec8bdc15576f11805535e375}} 
+\index{UriInterface@{UriInterface}!withFragment@{withFragment}}
+\index{withFragment@{withFragment}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withFragment()}{withFragment()}}
+{\footnotesize\ttfamily with\+Fragment (\begin{DoxyParamCaption}\item[{?string}]{\$fragment }\end{DoxyParamCaption})}
+
+Return an instance with the specified URI fragment.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified URI fragment.
+
+Users can provide both encoded and decoded fragment characters. Implementations ensure the correct encoding as outlined in \mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a8e9be93affbfde43840cbaf4b6712ea9}{get\+Fragment()}}.
+
+A null value provided for the fragment is equivalent to removing the fragment information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$fragment\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a5310c690cf32e4e4ecb8a7733f9dee3b}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a5310c690cf32e4e4ecb8a7733f9dee3b}} 
+\index{UriInterface@{UriInterface}!withHost@{withHost}}
+\index{withHost@{withHost}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withHost()}{withHost()}}
+{\footnotesize\ttfamily with\+Host (\begin{DoxyParamCaption}\item[{?string}]{\$host }\end{DoxyParamCaption})}
+
+Return an instance with the specified host.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified host.
+
+A null value provided for the host is equivalent to removing the host information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$host\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+{\em Idn\+Support\+Missing} & for component or transformations requiring IDN support when IDN support is not present or misconfigured. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ad3e0f328ff337497b066210ef83bd59f}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ad3e0f328ff337497b066210ef83bd59f}} 
+\index{UriInterface@{UriInterface}!withPath@{withPath}}
+\index{withPath@{withPath}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withPath()}{withPath()}}
+{\footnotesize\ttfamily with\+Path (\begin{DoxyParamCaption}\item[{string}]{\$path }\end{DoxyParamCaption})}
+
+Return an instance with the specified path.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified path.
+
+The path can either be empty or absolute (starting with a slash) or rootless (not starting with a slash). Implementations MUST support all three syntaxes.
+
+Users can provide both encoded and decoded path characters. Implementations ensure the correct encoding as outlined in \mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a30c5c67b2bf8e2e2ccc7e361faa20afe}{get\+Path()}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ae57f099b526755aae718915e744eae3f}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ae57f099b526755aae718915e744eae3f}} 
+\index{UriInterface@{UriInterface}!withPort@{withPort}}
+\index{withPort@{withPort}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withPort()}{withPort()}}
+{\footnotesize\ttfamily with\+Port (\begin{DoxyParamCaption}\item[{?int}]{\$port }\end{DoxyParamCaption})}
+
+Return an instance with the specified port.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified port.
+
+A null value provided for the port is equivalent to removing the port information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?int} & \$port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ac1d39bad9a3eb1a82fd24a47c70f7789}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ac1d39bad9a3eb1a82fd24a47c70f7789}} 
+\index{UriInterface@{UriInterface}!withQuery@{withQuery}}
+\index{withQuery@{withQuery}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withQuery()}{withQuery()}}
+{\footnotesize\ttfamily with\+Query (\begin{DoxyParamCaption}\item[{?string}]{\$query }\end{DoxyParamCaption})}
+
+Return an instance with the specified query string.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified query string.
+
+Users can provide both encoded and decoded query characters. Implementations ensure the correct encoding as outlined in \mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a55f162785567258fe5138af282e588c2}{get\+Query()}}.
+
+A null value provided for the query is equivalent to removing the query information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$query\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a310a47648ee646039e5cc8a00796d06b}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_a310a47648ee646039e5cc8a00796d06b}} 
+\index{UriInterface@{UriInterface}!withScheme@{withScheme}}
+\index{withScheme@{withScheme}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withScheme()}{withScheme()}}
+{\footnotesize\ttfamily with\+Scheme (\begin{DoxyParamCaption}\item[{?string}]{\$scheme }\end{DoxyParamCaption})}
+
+Return an instance with the specified scheme.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified scheme.
+
+A null value provided for the scheme is equivalent to removing the scheme information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$scheme\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ae83ad16f1829f71a3cb3dfbbaae2111b}\label{interface_league_1_1_uri_1_1_contracts_1_1_uri_interface_ae83ad16f1829f71a3cb3dfbbaae2111b}} 
+\index{UriInterface@{UriInterface}!withUserInfo@{withUserInfo}}
+\index{withUserInfo@{withUserInfo}!UriInterface@{UriInterface}}
+\doxysubsubsection{\texorpdfstring{withUserInfo()}{withUserInfo()}}
+{\footnotesize\ttfamily with\+User\+Info (\begin{DoxyParamCaption}\item[{?string}]{\$user,  }\item[{?string}]{\$password = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Return an instance with the specified user information.
+
+This method MUST retain the state of the current instance, and return an instance that contains the specified user information.
+
+Password is optional, but the user information MUST include the user; a null value for the user is equivalent to removing user information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ?string} & \$user \\
+\hline
+{\em ?string} & \$password\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Syntax\+Error} & for invalid component or transformations that would result in a object in invalid state. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/league/uri-\/interfaces/src/\+Contracts/Uri\+Interface.\+php\end{DoxyCompactItemize}

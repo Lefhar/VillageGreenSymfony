@@ -1,0 +1,177 @@
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2036}{}\doxysection{UNRELEASED}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2036}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2037}{}\doxysection{1.\+10.\+0}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2037}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2038}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2038}
+
+\begin{DoxyItemize}
+\item On invalid assertion, we throw a {\ttfamily Webmozart\textbackslash{}Assert\textbackslash{}Invalid\+Argument\+Exception}
+\item Added {\ttfamily Assert\+::positive\+Integer()}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2039}{}\doxysubsection{Changed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2039}
+
+\begin{DoxyItemize}
+\item Using a trait with real implementations of {\ttfamily all$\ast$()} and {\ttfamily null\+Or$\ast$()} methods to improve psalm compatibility.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2040}{}\doxysubsection{Removed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2040}
+
+\begin{DoxyItemize}
+\item Support for PHP \texorpdfstring{$<$}{<}7.\+2
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2041}{}\doxysection{1.\+9.\+1}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2041}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2042}{}\doxysection{Fixed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2042}
+
+\begin{DoxyItemize}
+\item provisional support for PHP 8.\+0
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2043}{}\doxysection{1.\+9.\+0}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2043}
+
+\begin{DoxyItemize}
+\item added better Psalm support for {\ttfamily all$\ast$} \& {\ttfamily null\+Or$\ast$} methods
+\item These methods are now understood by Psalm through a mixin. You may need a newer version of Psalm in order to use this
+\item added {\ttfamily @psalm-\/pure} annotation to {\ttfamily Assert\+::not\+False()}
+\item added more {\ttfamily @psalm-\/assert} annotations where appropriate
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2044}{}\doxysection{Changed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2044}
+
+\begin{DoxyItemize}
+\item the {\ttfamily all$\ast$} \& {\ttfamily null\+Or$\ast$} methods are now declared on an interface, instead of {\ttfamily @method} annotations. This interface is linked to the {\ttfamily Assert} class with a {\ttfamily @mixin} annotation. Most IDE\textquotesingle{}s have supported this for a long time, and you should not lose any autocompletion capabilities. PHPStan has supported this since version {\ttfamily 0.\+12.\+20}. This package is marked incompatible (with a composer conflict) with phpstan version prior to that. If you do not use PHPStan than this does not matter.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2045}{}\doxysection{1.\+8.\+0}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2045}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2046}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2046}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::not\+Starts\+With()}
+\item added {\ttfamily Assert\+::not\+Ends\+With()}
+\item added {\ttfamily Assert\+::in\+Array()}
+\item added {\ttfamily @psalm-\/pure} annotations to pure assertions
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2047}{}\doxysubsection{Fixed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2047}
+
+\begin{DoxyItemize}
+\item Exception messages of comparisons between {\ttfamily Date\+Time(\+Immutable)} objects now display their date \& time.
+\item Custom Exception messages for {\ttfamily Assert\+::count()} now use the values to render the exception message.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2048}{}\doxysection{1.\+7.\+0 (2020-\/02-\/14)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2048}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2049}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2049}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::not\+False()}
+\item added {\ttfamily Assert\+::is\+AOf()}
+\item added {\ttfamily Assert\+::is\+Any\+Of()}
+\item added {\ttfamily Assert\+::is\+Not\+A()}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2050}{}\doxysection{1.\+6.\+0 (2019-\/11-\/24)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2050}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2051}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2051}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::valid\+Array\+Key()}
+\item added {\ttfamily Assert\+::is\+Non\+Empty\+List()}
+\item added {\ttfamily Assert\+::is\+Non\+Empty\+Map()}
+\item added {\ttfamily @throws Invalid\+Argument\+Exception} annotations to all methods that throw.
+\item added {\ttfamily @psalm-\/assert} for the list type to the {\ttfamily is\+List} assertion.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2052}{}\doxysubsection{Fixed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2052}
+
+\begin{DoxyItemize}
+\item {\ttfamily Resource\+Bundle} \& {\ttfamily \mbox{\hyperlink{class_simple_x_m_l_element}{Simple\+XMLElement}}} now pass the {\ttfamily is\+Countable} assertions. They are countable, without implementing the {\ttfamily Countable} interface.
+\item The doc block of {\ttfamily range} now has the proper variables.
+\item An empty array will now pass {\ttfamily is\+List} and {\ttfamily is\+Map}. As it is a valid form of both. If a non-\/empty variant is needed, use {\ttfamily is\+Non\+Empty\+List} or {\ttfamily is\+Non\+Empty\+Map}.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2053}{}\doxysubsection{Changed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2053}
+
+\begin{DoxyItemize}
+\item Removed some {\ttfamily @psalm-\/assert} annotations, that were \textquotesingle{}side effect\textquotesingle{} assertions See\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/webmozart/assert/pull/144}{\texttt{ \#144}}
+\item \href{https://github.com/webmozart/assert/issues/145}{\texttt{ \#145}}
+\item \href{https://github.com/webmozart/assert/pull/146}{\texttt{ \#146}}
+\item \href{https://github.com/webmozart/assert/pull/150}{\texttt{ \#150}}
+\end{DoxyItemize}
+\item If you use Psalm, the minimum version needed is {\ttfamily 3.\+6.\+0}. Which is enforced through a composer conflict. If you don\textquotesingle{}t use Psalm, then this has no impact.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2054}{}\doxysection{1.\+5.\+0 (2019-\/08-\/24)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2054}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2055}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2055}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::unique\+Values()}
+\item added {\ttfamily Assert\+::unicode\+Letters()}
+\item added\+: {\ttfamily Assert\+::email()}
+\item added support for \href{https://github.com/vimeo/psalm}{\texttt{ Psalm}}, by adding {\ttfamily @psalm-\/assert} annotations where appropriate.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2056}{}\doxysubsection{Fixed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2056}
+
+\begin{DoxyItemize}
+\item {\ttfamily Assert\+::ends\+With()} would not give the correct result when dealing with a multibyte suffix.
+\item {\ttfamily Assert\+::length(), min\+Length, max\+Length, length\+Between} would not give the correct result when dealing with multibyte characters.
+\end{DoxyItemize}
+
+{\bfseries{NOTE}}\+: These 2 changes may break your assertions if you relied on the fact that multibyte characters didn\textquotesingle{}t behave correctly.\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2057}{}\doxysubsection{Changed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2057}
+
+\begin{DoxyItemize}
+\item The names of some variables have been updated to better reflect what they are.
+\item All function calls are now in their FQN form, slightly increasing performance.
+\item Tests are now properly ran against HHVM-\/3.\+30 and PHP nightly.
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2058}{}\doxysubsection{Deprecation}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2058}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Assert\+::is\+Traversable()} in favor of {\ttfamily Assert\+::is\+Iterable()}
+\begin{DoxyItemize}
+\item This was already done in 1.\+3.\+0, but it was only done through a silenced {\ttfamily trigger\+\_\+error}. It is now annotated as well.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2059}{}\doxysection{1.\+4.\+0 (2018-\/12-\/25)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2059}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2060}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2060}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::ip()}
+\item added {\ttfamily Assert\+::ipv4()}
+\item added {\ttfamily Assert\+::ipv6()}
+\item added {\ttfamily Assert\+::not\+Regex()}
+\item added {\ttfamily Assert\+::interface\+Exists()}
+\item added {\ttfamily Assert\+::is\+List()}
+\item added {\ttfamily Assert\+::is\+Map()}
+\item added polyfill for ctype
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2061}{}\doxysubsection{Fixed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2061}
+
+\begin{DoxyItemize}
+\item Special case when comparing objects implementing {\ttfamily \+\_\+\+\_\+to\+String()}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2062}{}\doxysection{1.\+3.\+0 (2018-\/01-\/29)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2062}
+\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2063}{}\doxysubsection{Added}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2063}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::min\+Count()}
+\item added {\ttfamily Assert\+::max\+Count()}
+\item added {\ttfamily Assert\+::count\+Between()}
+\item added {\ttfamily Assert\+::is\+Countable()}
+\item added {\ttfamily Assert\+::not\+Whitespace\+Only()}
+\item added {\ttfamily Assert\+::natural()}
+\item added {\ttfamily Assert\+::not\+Contains()}
+\item added {\ttfamily Assert\+::is\+Array\+Accessible()}
+\item added {\ttfamily Assert\+::is\+Instance\+Of\+Any()}
+\item added {\ttfamily Assert\+::is\+Iterable()}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2064}{}\doxysubsection{Fixed}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2064}
+
+\begin{DoxyItemize}
+\item {\ttfamily string\+Not\+Empty} will no longer report \char`\"{}0\char`\"{} is an empty string
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2065}{}\doxysubsection{Deprecation}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2065}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Assert\+::is\+Traversable()} in favor of {\ttfamily Assert\+::is\+Iterable()}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2066}{}\doxysection{1.\+2.\+0 (2016-\/11-\/23)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2066}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::throws()}
+\item added {\ttfamily Assert\+::count()}
+\item added extension point {\ttfamily Assert\+::report\+Invalid\+Argument()} for custom subclasses
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2067}{}\doxysection{1.\+1.\+0 (2016-\/08-\/09)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2067}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Assert\+::object()}
+\item added {\ttfamily Assert\+::property\+Exists()}
+\item added {\ttfamily Assert\+::property\+Not\+Exists()}
+\item added {\ttfamily Assert\+::method\+Exists()}
+\item added {\ttfamily Assert\+::method\+Not\+Exists()}
+\item added {\ttfamily Assert\+::uuid()}
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2068}{}\doxysection{1.\+0.\+2 (2015-\/08-\/24)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2068}
+
+\begin{DoxyItemize}
+\item integrated Style CI
+\item add tests for minimum package dependencies on Travis CI
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2069}{}\doxysection{1.\+0.\+1 (2015-\/05-\/12)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2069}
+
+\begin{DoxyItemize}
+\item added support for PHP 5.\+3.\+3
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2070}{}\doxysection{1.\+0.\+0 (2015-\/05-\/12)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2070}
+
+\begin{DoxyItemize}
+\item first stable release
+\end{DoxyItemize}\hypertarget{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2071}{}\doxysection{1.\+0.\+0-\/beta (2015-\/03-\/19)}\label{md_vendor_webmozart_assert__c_h_a_n_g_e_l_o_g_autotoc_md2071}
+
+\begin{DoxyItemize}
+\item first beta release 
+\end{DoxyItemize}

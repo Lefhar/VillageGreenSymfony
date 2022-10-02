@@ -1,0 +1,55 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor}{}\doxysection{Single\+Select\+Executor Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor}\index{SingleSelectExecutor@{SingleSelectExecutor}}
+Inheritance diagram for Single\+Select\+Executor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor_a1bdc191a1f9d7b02973da3b3e74098e3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor_a1bdc191a1f9d7b02973da3b3e74098e3}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} \$sql\+Walker)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor_a4979de7b8db954ee308920dbdae189c7}{execute}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$conn, array \$params, array \$types)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Executor that executes the SQL statement for simple DQL SELECT statements.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor_a4979de7b8db954ee308920dbdae189c7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_single_select_executor_a4979de7b8db954ee308920dbdae189c7}} 
+\index{SingleSelectExecutor@{SingleSelectExecutor}!execute@{execute}}
+\index{execute@{execute}!SingleSelectExecutor@{SingleSelectExecutor}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}}]{\$conn,  }\item[{array}]{\$params,  }\item[{array}]{\$types }\end{DoxyParamCaption})}
+
+Executes all sql statements.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Connection & {\em \$conn} & The database connection that is used to execute the queries. @psalm-\/param array$<$int, mixed$>$$\vert$array\texorpdfstring{$<$}{<}string, mixed\texorpdfstring{$>$}{>} \$params The parameters. @psalm-\/param array\texorpdfstring{$<$}{<}int, int$\vert$string$\vert$\+Type$\vert$null\texorpdfstring{$>$}{>}$\vert$ array\texorpdfstring{$<$}{<}string, int$\vert$string$\vert$\+Type$\vert$null\texorpdfstring{$>$}{>} \$types The parameter types.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result$\vert$int
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+Result 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_exec_1_1_abstract_sql_executor_a4979de7b8db954ee308920dbdae189c7}{Abstract\+Sql\+Executor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+Exec/Single\+Select\+Executor.\+php\end{DoxyCompactItemize}

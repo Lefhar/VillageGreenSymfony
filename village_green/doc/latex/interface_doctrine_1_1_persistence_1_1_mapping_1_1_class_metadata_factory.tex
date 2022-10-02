@@ -1,0 +1,131 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}{}\doxysection{Class\+Metadata\+Factory Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}\index{ClassMetadataFactory@{ClassMetadataFactory}}
+Inheritance diagram for Class\+Metadata\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.500000cm]{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a8f1b17e10f07327430959aba2df82bb0}{get\+All\+Metadata}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a194f9e43a550fe2aa4b02a2bf00e3b42}{get\+Metadata\+For}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_afc5033d0823c3153a1ac5ba3c73848a7}{has\+Metadata\+For}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a1cbc38bb429089d128d50df77c55319d}{set\+Metadata\+For}} (\$class\+Name, \$class)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a03d93fdac535730e6895bf73dcfab09d}{is\+Transient}} (\$class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract for a Doctrine persistence layer \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} class to implement.
+
+@template T of \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a8f1b17e10f07327430959aba2df82bb0}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a8f1b17e10f07327430959aba2df82bb0}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!getAllMetadata@{getAllMetadata}}
+\index{getAllMetadata@{getAllMetadata}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getAllMetadata()}{getAllMetadata()}}
+{\footnotesize\ttfamily get\+All\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Forces the factory to load the metadata of all classes known to the underlying mapping driver.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}\mbox{[}\mbox{]} The \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} instances of all mapped classes. @psalm-\/return T\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a8f1b17e10f07327430959aba2df82bb0}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a194f9e43a550fe2aa4b02a2bf00e3b42}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a194f9e43a550fe2aa4b02a2bf00e3b42}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!getMetadataFor@{getMetadataFor}}
+\index{getMetadataFor@{getMetadataFor}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getMetadataFor()}{getMetadataFor()}}
+{\footnotesize\ttfamily get\+Metadata\+For (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Gets the class metadata descriptor for a class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The name of the class.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} @psalm-\/return T 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a194f9e43a550fe2aa4b02a2bf00e3b42}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_afc5033d0823c3153a1ac5ba3c73848a7}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_afc5033d0823c3153a1ac5ba3c73848a7}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!hasMetadataFor@{hasMetadataFor}}
+\index{hasMetadataFor@{hasMetadataFor}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{hasMetadataFor()}{hasMetadataFor()}}
+{\footnotesize\ttfamily has\+Metadata\+For (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Checks whether the factory has the metadata for a class loaded already.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the metadata of the class in question is already loaded, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_afc5033d0823c3153a1ac5ba3c73848a7}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a03d93fdac535730e6895bf73dcfab09d}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a03d93fdac535730e6895bf73dcfab09d}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!isTransient@{isTransient}}
+\index{isTransient@{isTransient}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{isTransient()}{isTransient()}}
+{\footnotesize\ttfamily is\+Transient (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Returns whether the class with the specified name should have its metadata loaded. This is only the case if it is either mapped directly or as a Mapped\+Superclass.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a03d93fdac535730e6895bf73dcfab09d}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a1cbc38bb429089d128d50df77c55319d}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory_a1cbc38bb429089d128d50df77c55319d}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!setMetadataFor@{setMetadataFor}}
+\index{setMetadataFor@{setMetadataFor}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{setMetadataFor()}{setMetadataFor()}}
+{\footnotesize\ttfamily set\+Metadata\+For (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$class }\end{DoxyParamCaption})}
+
+Sets the metadata descriptor for a specific class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} & {\em \$class} & @psalm-\/param T \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a1cbc38bb429089d128d50df77c55319d}{Abstract\+Class\+Metadata\+Factory}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/Class\+Metadata\+Factory.\+php\end{DoxyCompactItemize}

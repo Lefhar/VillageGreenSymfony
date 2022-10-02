@@ -1,0 +1,110 @@
+\hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler}{}\doxysection{Zend\+Monitor\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_zend_monitor_handler}\index{ZendMonitorHandler@{ZendMonitorHandler}}
+Inheritance diagram for Zend\+Monitor\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_zend_monitor_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_zend_monitor_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}{\+\_\+\+\_\+construct}} (\$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_zend_monitor_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_zend_monitor_handler_a5ff79ac3c7d4e93afd007f0a6308c0b8}{get\+Level\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_zend_monitor_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_zend_monitor_handler_a13b29dfb1e4fbe43c50e3d270984645c}{write\+Zend\+Monitor\+Custom\+Event}} (string \$type, string \$message, array \$formatted, int \$severity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler_a53dc578a8a0c9b051841f25315043dec}\label{class_monolog_1_1_handler_1_1_zend_monitor_handler_a53dc578a8a0c9b051841f25315043dec}} 
+{\bfseries \$level\+Map} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} sending logs to Zend Monitor
+
+\begin{DoxyAuthor}{Author}
+Christian Bergau \href{mailto:cbergau86@gmail.com}{\texttt{ cbergau86@gmail.\+com}} 
+
+Jason Davis \href{mailto:happydude@jasondavis.net}{\texttt{ happydude@jasondavis.\+net}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}\label{class_monolog_1_1_handler_1_1_zend_monitor_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}} 
+\index{ZendMonitorHandler@{ZendMonitorHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ZendMonitorHandler@{ZendMonitorHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}{Abstract\+Handler}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_zend_monitor_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{ZendMonitorHandler@{ZendMonitorHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!ZendMonitorHandler@{ZendMonitorHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler_a5ff79ac3c7d4e93afd007f0a6308c0b8}\label{class_monolog_1_1_handler_1_1_zend_monitor_handler_a5ff79ac3c7d4e93afd007f0a6308c0b8}} 
+\index{ZendMonitorHandler@{ZendMonitorHandler}!getLevelMap@{getLevelMap}}
+\index{getLevelMap@{getLevelMap}!ZendMonitorHandler@{ZendMonitorHandler}}
+\doxysubsubsection{\texorpdfstring{getLevelMap()}{getLevelMap()}}
+{\footnotesize\ttfamily get\+Level\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$int, int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_zend_monitor_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{ZendMonitorHandler@{ZendMonitorHandler}!write@{write}}
+\index{write@{write}!ZendMonitorHandler@{ZendMonitorHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_zend_monitor_handler_a13b29dfb1e4fbe43c50e3d270984645c}\label{class_monolog_1_1_handler_1_1_zend_monitor_handler_a13b29dfb1e4fbe43c50e3d270984645c}} 
+\index{ZendMonitorHandler@{ZendMonitorHandler}!writeZendMonitorCustomEvent@{writeZendMonitorCustomEvent}}
+\index{writeZendMonitorCustomEvent@{writeZendMonitorCustomEvent}!ZendMonitorHandler@{ZendMonitorHandler}}
+\doxysubsubsection{\texorpdfstring{writeZendMonitorCustomEvent()}{writeZendMonitorCustomEvent()}}
+{\footnotesize\ttfamily write\+Zend\+Monitor\+Custom\+Event (\begin{DoxyParamCaption}\item[{string}]{\$type,  }\item[{string}]{\$message,  }\item[{array}]{\$formatted,  }\item[{int}]{\$severity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Write to Zend Monitor Events 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & Text displayed in \char`\"{}\+Class Name (custom)\char`\"{} field \\
+\hline
+string & {\em \$message} & Text displayed in \char`\"{}\+Error String\char`\"{} \\
+\hline
+array & {\em \$formatted} & Displayed in Custom Variables tab \\
+\hline
+int & {\em \$severity} & Set the event severity level (-\/1,0,1)\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Formatted\+Record \$formatted 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Zend\+Monitor\+Handler.\+php\end{DoxyCompactItemize}

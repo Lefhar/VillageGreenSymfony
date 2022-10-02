@@ -1,0 +1,50 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_multi_delete_cache}{}\doxysection{Multi\+Delete\+Cache Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_cache_1_1_multi_delete_cache}\index{MultiDeleteCache@{MultiDeleteCache}}
+Inheritance diagram for Multi\+Delete\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_doctrine_1_1_common_1_1_cache_1_1_multi_delete_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_multi_delete_cache_a5a6746c0bf52b83cd0dd9110841f099e}{delete\+Multiple}} (array \$keys)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for cache drivers that allows to put many items at once.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000036}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_multi_delete_cache_a5a6746c0bf52b83cd0dd9110841f099e}\label{interface_doctrine_1_1_common_1_1_cache_1_1_multi_delete_cache_a5a6746c0bf52b83cd0dd9110841f099e}} 
+\index{MultiDeleteCache@{MultiDeleteCache}!deleteMultiple@{deleteMultiple}}
+\index{deleteMultiple@{deleteMultiple}!MultiDeleteCache@{MultiDeleteCache}}
+\doxysubsubsection{\texorpdfstring{deleteMultiple()}{deleteMultiple()}}
+{\footnotesize\ttfamily delete\+Multiple (\begin{DoxyParamCaption}\item[{array}]{\$keys }\end{DoxyParamCaption})}
+
+Deletes several cache entries.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$keys} & Array of keys to delete from cache\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the operation was successful, FALSE if it wasn\textquotesingle{}t. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a5a6746c0bf52b83cd0dd9110841f099e}{Cache\+Provider}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/Multi\+Delete\+Cache.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,192 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass}{}\doxysection{Doctrine\+Orm\+Mappings\+Pass Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass}\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+Inheritance diagram for Doctrine\+Orm\+Mappings\+Pass\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_ae422d12cc10654d93f44e0e090e0828b}{\+\_\+\+\_\+construct}} (\$driver, array \$namespaces, array \$manager\+Parameters, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a41dff03e685494ae02f4e42336ffae33}{create\+Xml\+Mapping\+Driver}} (array \$namespaces, array \$manager\+Parameters=\mbox{[}$\,$\mbox{]}, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a4bd6120a8a182f866e5aaaef0c1b35be}{create\+Yaml\+Mapping\+Driver}} (array \$namespaces, array \$manager\+Parameters=\mbox{[}$\,$\mbox{]}, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_ab87bfc87fb6a4e8b8b4f3d855be4f44d}{create\+Php\+Mapping\+Driver}} (array \$namespaces, array \$manager\+Parameters=\mbox{[}$\,$\mbox{]}, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a313c315fd0255ef47229889b2a9cd4c7}{create\+Annotation\+Mapping\+Driver}} (array \$namespaces, array \$directories, array \$manager\+Parameters=\mbox{[}$\,$\mbox{]}, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a89f1e6d006581ab57a640792c9cac467}{create\+Attribute\+Mapping\+Driver}} (array \$namespaces, array \$directories, array \$manager\+Parameters=\mbox{[}$\,$\mbox{]}, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a938d6f0c19e133baf312e5240318adcc}{create\+Static\+Php\+Mapping\+Driver}} (array \$namespaces, array \$directories, array \$manager\+Parameters=\mbox{[}$\,$\mbox{]}, \$enabled\+Parameter=false, array \$alias\+Map=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for Symfony bundles to configure mappings for model classes not in the auto-\/mapped folder.
+
+NOTE\+: alias is only supported by Symfony 2.\+6+ and will be ignored with older versions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_ae422d12cc10654d93f44e0e090e0828b}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_ae422d12cc10654d93f44e0e090e0828b}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$driver,  }\item[{array}]{\$namespaces,  }\item[{array}]{\$manager\+Parameters,  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+You should not directly instantiate this class but use one of the factory methods.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Definition | Reference & {\em \$driver} & Driver DI definition or reference. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & List of namespaces handled by \$driver. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & Ordered list of container parameters that could hold the manager name. doctrine.\+default\+\_\+entity\+\_\+manager is appended automatically. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & If specified, the compiler pass only executes if this parameter is defined in the service container. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a313c315fd0255ef47229889b2a9cd4c7}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a313c315fd0255ef47229889b2a9cd4c7}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!createAnnotationMappingDriver@{createAnnotationMappingDriver}}
+\index{createAnnotationMappingDriver@{createAnnotationMappingDriver}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{createAnnotationMappingDriver()}{createAnnotationMappingDriver()}}
+{\footnotesize\ttfamily static create\+Annotation\+Mapping\+Driver (\begin{DoxyParamCaption}\item[{array}]{\$namespaces,  }\item[{array}]{\$directories,  }\item[{array}]{\$manager\+Parameters = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & List of namespaces that are handled with annotation mapping \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$directories} & List of directories to look for annotated classes \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & List of parameters that could which object manager name your bundle uses. This compiler pass will automatically append the parameter name for the default entity manager to this list. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & Service container parameter that must be present to enable the mapping. Set to false to not do any check, optional. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a89f1e6d006581ab57a640792c9cac467}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a89f1e6d006581ab57a640792c9cac467}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!createAttributeMappingDriver@{createAttributeMappingDriver}}
+\index{createAttributeMappingDriver@{createAttributeMappingDriver}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{createAttributeMappingDriver()}{createAttributeMappingDriver()}}
+{\footnotesize\ttfamily static create\+Attribute\+Mapping\+Driver (\begin{DoxyParamCaption}\item[{array}]{\$namespaces,  }\item[{array}]{\$directories,  }\item[{array}]{\$manager\+Parameters = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & List of namespaces that are handled with annotation mapping \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$directories} & List of directories to look for annotated classes \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & List of parameters that could which object manager name your bundle uses. This compiler pass will automatically append the parameter name for the default entity manager to this list. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & Service container parameter that must be present to enable the mapping. Set to false to not do any check, optional. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_ab87bfc87fb6a4e8b8b4f3d855be4f44d}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_ab87bfc87fb6a4e8b8b4f3d855be4f44d}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!createPhpMappingDriver@{createPhpMappingDriver}}
+\index{createPhpMappingDriver@{createPhpMappingDriver}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{createPhpMappingDriver()}{createPhpMappingDriver()}}
+{\footnotesize\ttfamily static create\+Php\+Mapping\+Driver (\begin{DoxyParamCaption}\item[{array}]{\$namespaces,  }\item[{array}]{\$manager\+Parameters = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & Hashmap of directory path to namespace \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & List of parameters that could which object manager name your bundle uses. This compiler pass will automatically append the parameter name for the default entity manager to this list. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & Service container parameter that must be present to enable the mapping. Set to false to not do any check, optional. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a938d6f0c19e133baf312e5240318adcc}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a938d6f0c19e133baf312e5240318adcc}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!createStaticPhpMappingDriver@{createStaticPhpMappingDriver}}
+\index{createStaticPhpMappingDriver@{createStaticPhpMappingDriver}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{createStaticPhpMappingDriver()}{createStaticPhpMappingDriver()}}
+{\footnotesize\ttfamily static create\+Static\+Php\+Mapping\+Driver (\begin{DoxyParamCaption}\item[{array}]{\$namespaces,  }\item[{array}]{\$directories,  }\item[{array}]{\$manager\+Parameters = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & List of namespaces that are handled with static php mapping \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$directories} & List of directories to look for static php mapping files \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & List of parameters that could which object manager name your bundle uses. This compiler pass will automatically append the parameter name for the default entity manager to this list. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & Service container parameter that must be present to enable the mapping. Set to false to not do any check, optional. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a41dff03e685494ae02f4e42336ffae33}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a41dff03e685494ae02f4e42336ffae33}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!createXmlMappingDriver@{createXmlMappingDriver}}
+\index{createXmlMappingDriver@{createXmlMappingDriver}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{createXmlMappingDriver()}{createXmlMappingDriver()}}
+{\footnotesize\ttfamily static create\+Xml\+Mapping\+Driver (\begin{DoxyParamCaption}\item[{array}]{\$namespaces,  }\item[{array}]{\$manager\+Parameters = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & Hashmap of directory path to namespace. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & List of parameters that could which object manager name your bundle uses. This compiler pass will automatically append the parameter name for the default entity manager to this list. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & Service container parameter that must be present to enable the mapping. Set to false to not do any check, optional. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a4bd6120a8a182f866e5aaaef0c1b35be}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_doctrine_orm_mappings_pass_a4bd6120a8a182f866e5aaaef0c1b35be}} 
+\index{DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}!createYamlMappingDriver@{createYamlMappingDriver}}
+\index{createYamlMappingDriver@{createYamlMappingDriver}!DoctrineOrmMappingsPass@{DoctrineOrmMappingsPass}}
+\doxysubsubsection{\texorpdfstring{createYamlMappingDriver()}{createYamlMappingDriver()}}
+{\footnotesize\ttfamily static create\+Yaml\+Mapping\+Driver (\begin{DoxyParamCaption}\item[{array}]{\$namespaces,  }\item[{array}]{\$manager\+Parameters = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$enabled\+Parameter = {\ttfamily false},  }\item[{array}]{\$alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & Hashmap of directory path to namespace \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$manager\+Parameters} & List of parameters that could which object manager name your bundle uses. This compiler pass will automatically append the parameter name for the default entity manager to this list. \\
+\hline
+string | false & {\em \$enabled\+Parameter} & Service container parameter that must be present to enable the mapping. Set to false to not do any check, optional. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$alias\+Map} & Map of alias to namespace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Compiler/Doctrine\+Orm\+Mappings\+Pass.\+php\end{DoxyCompactItemize}

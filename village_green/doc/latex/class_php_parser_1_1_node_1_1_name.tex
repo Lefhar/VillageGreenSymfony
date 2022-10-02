@@ -1,0 +1,302 @@
+\hypertarget{class_php_parser_1_1_node_1_1_name}{}\doxysection{Name Class Reference}
+\label{class_php_parser_1_1_node_1_1_name}\index{Name@{Name}}
+Inheritance diagram for Name\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_php_parser_1_1_node_1_1_name}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_ac5bf0824a72c7bd03e596a63e1da3f54}{\+\_\+\+\_\+construct}} (\$name, array \$attributes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a7e06a91cc526dc52826d18313e64798a}{get\+Sub\+Node\+Names}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_acac359f9ae56b80c7979f4a4feb736e5}{get\+First}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a9316ede6960667d832997c8e20223623}{get\+Last}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a3f9094c3adc28d3cf8691bc26866b400}{is\+Unqualified}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_aac3859ecb9fb182959cc9ed8964e4395}{is\+Qualified}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_aaf34d38bedc9959f0561e0040b8b1d5f}{is\+Fully\+Qualified}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a29a393f4952878c0252ac9ff2679a154}{is\+Relative}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a5558c5d549f41597377fa1ea8a1cefa3}{to\+String}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a8eea6dbf58be631745973157d8abe272}{to\+Code\+String}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_abc1c54334bed26ff1bd206b3741402cd}{to\+Lower\+String}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a01e41700732ee05be2a5385c5b39e7fb}{is\+Special\+Class\+Name}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_ab66b1ce5c9ee66d3c6ab4ea43bd90341}{slice}} (int \$offset, int \$length=null)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a22ea554118d789f15e027ff685016b47}{concat}} (\$name1, \$name2, array \$attributes=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_aa8dfa90e1feaffe49fc70696cc75c2f3}\label{class_php_parser_1_1_node_1_1_name_aa8dfa90e1feaffe49fc70696cc75c2f3}} 
+{\bfseries \$parts}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_ac5bf0824a72c7bd03e596a63e1da3f54}\label{class_php_parser_1_1_node_1_1_name_ac5bf0824a72c7bd03e596a63e1da3f54}} 
+\index{Name@{Name}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs a name node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} | self & {\em \$name} & \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} as string, part array or \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} instance (copy ctor) \\
+\hline
+array & {\em \$attributes} & Additional attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_php_parser_1_1_node_1_1_name_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{Name@{Name}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the name by imploding the namespace parts with the namespace separator.
+
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a22ea554118d789f15e027ff685016b47}\label{class_php_parser_1_1_node_1_1_name_a22ea554118d789f15e027ff685016b47}} 
+\index{Name@{Name}!concat@{concat}}
+\index{concat@{concat}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily static concat (\begin{DoxyParamCaption}\item[{}]{\$name1,  }\item[{}]{\$name2,  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Concatenate two names, yielding a new \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} instance.
+
+The type of the generated instance depends on which class this method is called on, for example \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}\textbackslash{}\+Fully\+Qualified\+::concat() will yield a \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}\textbackslash{}\+Fully\+Qualified instance.
+
+If one of the arguments is null, a new instance of the other name will be returned. If both arguments are null, null will be returned. As such, writing \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a22ea554118d789f15e027ff685016b47}{Name\+::concat}}(\$namespace, \$short\+Name) where \$namespace is a \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} node or null will work as expected.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} | self | null & {\em \$name1} & The first name \\
+\hline
+string | string\mbox{[}$\,$\mbox{]} | self | null & {\em \$name2} & The second name \\
+\hline
+array & {\em \$attributes} & Attributes to assign to concatenated name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static$\vert$null Concatenated name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_acac359f9ae56b80c7979f4a4feb736e5}\label{class_php_parser_1_1_node_1_1_name_acac359f9ae56b80c7979f4a4feb736e5}} 
+\index{Name@{Name}!getFirst@{getFirst}}
+\index{getFirst@{getFirst}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{getFirst()}{getFirst()}}
+{\footnotesize\ttfamily get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the first part of the name, i.\+e. everything before the first namespace separator.
+
+\begin{DoxyReturn}{Returns}
+string First part of the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a9316ede6960667d832997c8e20223623}\label{class_php_parser_1_1_node_1_1_name_a9316ede6960667d832997c8e20223623}} 
+\index{Name@{Name}!getLast@{getLast}}
+\index{getLast@{getLast}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{getLast()}{getLast()}}
+{\footnotesize\ttfamily get\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the last part of the name, i.\+e. everything after the last namespace separator.
+
+\begin{DoxyReturn}{Returns}
+string Last part of the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a7e06a91cc526dc52826d18313e64798a}\label{class_php_parser_1_1_node_1_1_name_a7e06a91cc526dc52826d18313e64798a}} 
+\index{Name@{Name}!getSubNodeNames@{getSubNodeNames}}
+\index{getSubNodeNames@{getSubNodeNames}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{getSubNodeNames()}{getSubNodeNames()}}
+{\footnotesize\ttfamily get\+Sub\+Node\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of the sub nodes.
+
+\begin{DoxyReturn}{Returns}
+array Names of sub nodes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a7e06a91cc526dc52826d18313e64798a}{Node}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a830b5c75df72b32396701bc563fbe3c7}\label{class_php_parser_1_1_node_1_1_name_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{Name@{Name}!getType@{getType}}
+\index{getType@{getType}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the type of the node.
+
+\begin{DoxyReturn}{Returns}
+string Type of the node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a830b5c75df72b32396701bc563fbe3c7}{Node}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_fully_qualified_a830b5c75df72b32396701bc563fbe3c7}{Fully\+Qualified}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_relative_a830b5c75df72b32396701bc563fbe3c7}{Relative}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_aaf34d38bedc9959f0561e0040b8b1d5f}\label{class_php_parser_1_1_node_1_1_name_aaf34d38bedc9959f0561e0040b8b1d5f}} 
+\index{Name@{Name}!isFullyQualified@{isFullyQualified}}
+\index{isFullyQualified@{isFullyQualified}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{isFullyQualified()}{isFullyQualified()}}
+{\footnotesize\ttfamily is\+Fully\+Qualified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the name is fully qualified. (E.\+g. \textbackslash{}\+Name)
+
+\begin{DoxyReturn}{Returns}
+bool Whether the name is fully qualified 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_fully_qualified_aaf34d38bedc9959f0561e0040b8b1d5f}{Fully\+Qualified}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_relative_aaf34d38bedc9959f0561e0040b8b1d5f}{Relative}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_aac3859ecb9fb182959cc9ed8964e4395}\label{class_php_parser_1_1_node_1_1_name_aac3859ecb9fb182959cc9ed8964e4395}} 
+\index{Name@{Name}!isQualified@{isQualified}}
+\index{isQualified@{isQualified}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{isQualified()}{isQualified()}}
+{\footnotesize\ttfamily is\+Qualified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the name is qualified. (E.\+g. \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}}\textbackslash{}\+Name)
+
+\begin{DoxyReturn}{Returns}
+bool Whether the name is qualified 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_fully_qualified_aac3859ecb9fb182959cc9ed8964e4395}{Fully\+Qualified}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_relative_aac3859ecb9fb182959cc9ed8964e4395}{Relative}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a29a393f4952878c0252ac9ff2679a154}\label{class_php_parser_1_1_node_1_1_name_a29a393f4952878c0252ac9ff2679a154}} 
+\index{Name@{Name}!isRelative@{isRelative}}
+\index{isRelative@{isRelative}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{isRelative()}{isRelative()}}
+{\footnotesize\ttfamily is\+Relative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the name is explicitly relative to the current namespace. (E.\+g. namespace\textbackslash{}\+Name)
+
+\begin{DoxyReturn}{Returns}
+bool Whether the name is relative 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_fully_qualified_a29a393f4952878c0252ac9ff2679a154}{Fully\+Qualified}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_relative_a29a393f4952878c0252ac9ff2679a154}{Relative}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a01e41700732ee05be2a5385c5b39e7fb}\label{class_php_parser_1_1_node_1_1_name_a01e41700732ee05be2a5385c5b39e7fb}} 
+\index{Name@{Name}!isSpecialClassName@{isSpecialClassName}}
+\index{isSpecialClassName@{isSpecialClassName}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{isSpecialClassName()}{isSpecialClassName()}}
+{\footnotesize\ttfamily is\+Special\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the identifier is a special class name (self, parent or static).
+
+\begin{DoxyReturn}{Returns}
+bool Whether identifier is a special class name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a3f9094c3adc28d3cf8691bc26866b400}\label{class_php_parser_1_1_node_1_1_name_a3f9094c3adc28d3cf8691bc26866b400}} 
+\index{Name@{Name}!isUnqualified@{isUnqualified}}
+\index{isUnqualified@{isUnqualified}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{isUnqualified()}{isUnqualified()}}
+{\footnotesize\ttfamily is\+Unqualified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the name is unqualified. (E.\+g. \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}})
+
+\begin{DoxyReturn}{Returns}
+bool Whether the name is unqualified 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_fully_qualified_a3f9094c3adc28d3cf8691bc26866b400}{Fully\+Qualified}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_relative_a3f9094c3adc28d3cf8691bc26866b400}{Relative}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_ab66b1ce5c9ee66d3c6ab4ea43bd90341}\label{class_php_parser_1_1_node_1_1_name_ab66b1ce5c9ee66d3c6ab4ea43bd90341}} 
+\index{Name@{Name}!slice@{slice}}
+\index{slice@{slice}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{slice()}{slice()}}
+{\footnotesize\ttfamily slice (\begin{DoxyParamCaption}\item[{int}]{\$offset,  }\item[{int}]{\$length = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets a slice of a name (similar to array\+\_\+slice).
+
+This method returns a new instance of the same type as the original and with the same attributes.
+
+If the slice is empty, null is returned. The null value will be correctly handled in concatenations using \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_a22ea554118d789f15e027ff685016b47}{concat()}}.
+
+Offset and length have the same meaning as in array\+\_\+slice().
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$offset} & Offset to start the slice at (may be negative) \\
+\hline
+int | null & {\em \$length} & Length of the slice (may be negative)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static$\vert$null Sliced name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a8eea6dbf58be631745973157d8abe272}\label{class_php_parser_1_1_node_1_1_name_a8eea6dbf58be631745973157d8abe272}} 
+\index{Name@{Name}!toCodeString@{toCodeString}}
+\index{toCodeString@{toCodeString}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{toCodeString()}{toCodeString()}}
+{\footnotesize\ttfamily to\+Code\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the name as it would occur in code (e.\+g., including leading backslash for fully qualified names.
+
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_fully_qualified_a8eea6dbf58be631745973157d8abe272}{Fully\+Qualified}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name_1_1_relative_a8eea6dbf58be631745973157d8abe272}{Relative}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_abc1c54334bed26ff1bd206b3741402cd}\label{class_php_parser_1_1_node_1_1_name_abc1c54334bed26ff1bd206b3741402cd}} 
+\index{Name@{Name}!toLowerString@{toLowerString}}
+\index{toLowerString@{toLowerString}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{toLowerString()}{toLowerString()}}
+{\footnotesize\ttfamily to\+Lower\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns lowercased string representation of the name, without taking the name type into account (e.\+g., no leading backslash for fully qualified names).
+
+\begin{DoxyReturn}{Returns}
+string Lowercased string representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_name_a5558c5d549f41597377fa1ea8a1cefa3}\label{class_php_parser_1_1_node_1_1_name_a5558c5d549f41597377fa1ea8a1cefa3}} 
+\index{Name@{Name}!toString@{toString}}
+\index{toString@{toString}!Name@{Name}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the name itself, without taking the name type into account (e.\+g., not including a leading backslash for fully qualified names).
+
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/Name.\+php\end{DoxyCompactItemize}

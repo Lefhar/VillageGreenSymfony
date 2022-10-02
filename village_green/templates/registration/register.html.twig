@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+
+    <section>
+        <div class="container bg-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Inscription</li>
+                </ol>
+            </nav>
+            <div class="row p-4">
+                <div class="col-sm-12" >
+                {% for flash_error in app.flashes('verify_email_error') %}
+                    <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                {% endfor %}
+                {% for flash_success in app.flashes('verify_email_success') %}
+                    <div class="alert alert-success" role="alert">{{ flash_success }}</div>
+                {% endfor %}
+                </div>
+                <div class="col-sm-12" >
+                <h1>Inscription</h1>
+                </div>
+            </div>
+            <div class="row pt-2 pb-2">
+                <div class="col-sm-12" >
+                    <h2>Déjà inscrit ? <a href="{{ path("app_login") }}">Connexion</a> </h2>
+                </div>
+            </div>
+            <div class="row pt-2 pb-2">
+                <div class="col-sm-12">
+                    {{ form_start(registrationForm) }}
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.plainPassword, {
+                        label: 'Mot de passe'
+                    }) }}
+                    {{ form_row(registrationForm.agreeTerms, {label:'Accepte la CGU'}) }}
+
+                    <button type="submit" class="btn btn-success btn-lg">Valider</button>
+                    <a  href="{{ path('accueil') }}" class="btn btn-dark btn-lg">Retour</a>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

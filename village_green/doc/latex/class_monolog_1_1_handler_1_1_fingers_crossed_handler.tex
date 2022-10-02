@@ -1,0 +1,223 @@
+\hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler}{}\doxysection{Fingers\+Crossed\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler}\index{FingersCrossedHandler@{FingersCrossedHandler}}
+Inheritance diagram for Fingers\+Crossed\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.270270cm]{class_monolog_1_1_handler_1_1_fingers_crossed_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a4e39a0c9c6dcced487fe90f6c1390f0e}{\+\_\+\+\_\+construct}} (\$handler, \$activation\+Strategy=null, int \$buffer\+Size=0, bool \$bubble=true, bool \$stop\+Buffering=true, \$passthru\+Level=null)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_af77f85c4b8f7ae6e8ecc3e0ad2ceb350}{activate}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a2b88a8966dc3917966810f7e1e93c5c5}{get\+Handler}} (array \$record=null)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aad3a8e83c90770a1f71a75bb51e782d8}{get\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a9285a7f684c72e9bb78fdef1bcbe3fd0}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a9285a7f684c72e9bb78fdef1bcbe3fd0}} 
+{\bfseries \$handler}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a16863f1f2356234a9133f644953127fc}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a16863f1f2356234a9133f644953127fc}} 
+{\bfseries \$activation\+Strategy}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_ad7ca1737d01a61f443060645c1f3ae7a}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_ad7ca1737d01a61f443060645c1f3ae7a}} 
+{\bfseries \$buffering} = true
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a17c521c4314b58090cecc52aae5e6a5f}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a17c521c4314b58090cecc52aae5e6a5f}} 
+{\bfseries \$buffer\+Size}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_af1862006a19e84e552f66189adc792ae}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_af1862006a19e84e552f66189adc792ae}} 
+{\bfseries \$buffer} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a5d278686eaf4debdc2c5087d02f1e9c4}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a5d278686eaf4debdc2c5087d02f1e9c4}} 
+{\bfseries \$stop\+Buffering}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aac44af4dd577eca24d1fdb69f1b76060}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aac44af4dd577eca24d1fdb69f1b76060}} 
+{\bfseries \$passthru\+Level}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a9145e898a529a9347d8af930c6c3c60c}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a9145e898a529a9347d8af930c6c3c60c}} 
+{\bfseries \$bubble}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Buffers all records until a certain level is reached
+
+The advantage of this approach is that you don\textquotesingle{}t get any clutter in your log files. Only requests which actually trigger an error (or whatever your action\+Level is) will be in the logs, but they will contain all records, not only those above the level threshold.
+
+You can then have a passthru\+Level as well which means that at the end of the request, even if it did not get activated, it will still send through log records of e.\+g. at least a warning level.
+
+You can find the various activation strategies in the Monolog\textbackslash{}\+Handler\textbackslash{}\+Fingers\+Crossed\textbackslash{} namespace.
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a4e39a0c9c6dcced487fe90f6c1390f0e}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a4e39a0c9c6dcced487fe90f6c1390f0e}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$handler,  }\item[{}]{\$activation\+Strategy = {\ttfamily null},  }\item[{int}]{\$buffer\+Size = {\ttfamily 0},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{bool}]{\$stop\+Buffering = {\ttfamily true},  }\item[{}]{\$passthru\+Level = {\ttfamily null} }\end{DoxyParamCaption})}
+
+@psalm-\/param Handler\+Interface$\vert$callable(?Record, \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}})\+: \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} \$handler
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable | \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} & {\em \$handler} & \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} or factory callable(\$record$\vert$null, \$fingers\+Crossed\+Handler). \\
+\hline
+int | string | Activation\+Strategy\+Interface & {\em \$activation\+Strategy} & Strategy which determines when this handler takes action, or a level name/value at which the handler is activated \\
+\hline
+int & {\em \$buffer\+Size} & How many entries should be buffered at most, beyond that the oldest items are removed from the buffer. \\
+\hline
+bool & {\em \$bubble} & Whether the messages that are handled can bubble up the stack or not \\
+\hline
+bool & {\em \$stop\+Buffering} & Whether the handler should stop buffering after being triggered (default true) \\
+\hline
+int | string & {\em \$passthru\+Level} & Minimum level to always flush to handler on close, even if strategy not triggered\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$passthru\+Level @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$$\vert$\+Activation\+Strategy\+Interface \$activation\+Strategy 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_af77f85c4b8f7ae6e8ecc3e0ad2ceb350}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_af77f85c4b8f7ae6e8ecc3e0ad2ceb350}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!activate@{activate}}
+\index{activate@{activate}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Manually activate this logger regardless of the activation strategy \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aa821bec12eaa7e0f649397c9675ff505}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!clear@{clear}}
+\index{clear@{clear}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears the buffer without flushing any messages down to the wrapped handler.
+
+It also resets the handler to its initial buffering state. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!close@{close}}
+\index{close@{close}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aad3a8e83c90770a1f71a75bb51e782d8}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_aad3a8e83c90770a1f71a75bb51e782d8}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!getFormatter@{getFormatter}}
+\index{getFormatter@{getFormatter}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{getFormatter()}{getFormatter()}}
+{\footnotesize\ttfamily get\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the formatter.
+
+\begin{DoxyReturn}{Returns}
+Formatter\+Interface
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_aad3a8e83c90770a1f71a75bb51e782d8}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a2b88a8966dc3917966810f7e1e93c5c5}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a2b88a8966dc3917966810f7e1e93c5c5}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!getHandler@{getHandler}}
+\index{getHandler@{getHandler}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{getHandler()}{getHandler()}}
+{\footnotesize\ttfamily get\+Handler (\begin{DoxyParamCaption}\item[{array}]{\$record = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Return the nested handler
+
+If the handler was provided as a factory callable, this will trigger the handler\textquotesingle{}s instantiation.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}}
+\end{DoxyReturn}
+@phpstan-\/param Record \$record \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_abbfbbcd3430dea8422ecd3c725737758}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_abbfbbcd3430dea8422ecd3c725737758}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!isHandling@{isHandling}}
+\index{isHandling@{isHandling}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{isHandling()}{isHandling()}}
+{\footnotesize\ttfamily is\+Handling (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Checks whether the given record will be handled by this handler.
+
+This is mostly done for performance reasons, to avoid calling processors for nothing.
+
+Handlers should still check the record levels within \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}}, returning false in \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling()}} is no guarantee that \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} will not be called, and \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling()}} might not be called for a given record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & Partial log record containing only a level key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+@phpstan-\/param array\{level\+: Level\} \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!reset@{reset}}
+\index{reset@{reset}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_fingers_crossed_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{FingersCrossedHandler@{FingersCrossedHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!FingersCrossedHandler@{FingersCrossedHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Fingers\+Crossed\+Handler.\+php\end{DoxyCompactItemize}

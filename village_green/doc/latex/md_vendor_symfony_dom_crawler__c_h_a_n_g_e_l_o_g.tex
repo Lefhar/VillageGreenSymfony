@@ -1,0 +1,75 @@
+\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1455}{}\doxysection{5.\+4}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1455}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Crawler\+::inner\+Text} method.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1456}{}\doxysection{5.\+3}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1456}
+
+\begin{DoxyItemize}
+\item The {\ttfamily parents()} method is deprecated. Use {\ttfamily ancestors()} instead.
+\item Marked the {\ttfamily contains\+Option()}, {\ttfamily available\+Option\+Values()}, and {\ttfamily disable\+Validation()} methods of the {\ttfamily Choice\+Form\+Field} class as internal
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1457}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1457}
+
+\begin{DoxyItemize}
+\item Added an internal cache layer on top of the Css\+Selector\+Converter
+\item Added {\ttfamily Uri\+Resolver} to resolve an URI according to a base URI
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1458}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1458}
+
+\begin{DoxyItemize}
+\item Added argument {\ttfamily \$selector} to {\ttfamily Crawler\+::children()}
+\item Added argument {\ttfamily \$default} to {\ttfamily Crawler\+::text()} and {\ttfamily html()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1459}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1459}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Form\+::get\+Name()} method.
+\item Added {\ttfamily Crawler\+::matches()} method.
+\item Added {\ttfamily Crawler\+::closest()} method.
+\item Added {\ttfamily Crawler\+::outer\+Html()} method.
+\item Added an argument to the {\ttfamily Crawler\+::text()} method to opt-\/in normalizing whitespaces.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1460}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1460}
+
+\begin{DoxyItemize}
+\item Added PHPUnit constraints\+: {\ttfamily Crawler\+Selector\+Attribute\+Value\+Same}, {\ttfamily Crawler\+Selector\+Exists}, {\ttfamily Crawler\+Selector\+Text\+Contains} and {\ttfamily Crawler\+Selector\+Text\+Same}
+\item Added return of element name ({\ttfamily \+\_\+name}) in {\ttfamily extract()} method.
+\item Added ability to return a default value in {\ttfamily text()} and {\ttfamily html()} instead of throwing an exception when node is empty.
+\item When available, the \href{https://github.com/Masterminds/html5-php}{\texttt{ html5-\/php library}} is used to parse HTML added to a Crawler for better support of HTML5 tags.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1461}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1461}
+
+\begin{DoxyItemize}
+\item The {\ttfamily \$current\+Uri} constructor argument of the {\ttfamily Abstract\+Uri\+Element}, {\ttfamily Link} and {\ttfamily Image} classes is now optional.
+\item The {\ttfamily Crawler\+::children()} method will have a new {\ttfamily \$selector} argument in version 5.\+0, not defining it is deprecated.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1462}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1462}
+
+\begin{DoxyItemize}
+\item All the URI parsing logic have been abstracted in the {\ttfamily Abstract\+Uri\+Element} class. The {\ttfamily Link} class is now a child of {\ttfamily Abstract\+Uri\+Element}.
+\item Added an {\ttfamily Image} class to crawl images and parse their {\ttfamily src} attribute, and {\ttfamily select\+Image}, {\ttfamily image}, {\ttfamily images} methods in the {\ttfamily Crawler} (the image version of the equivalent {\ttfamily link} methods).
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1463}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1463}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} The default value for checkbox and radio inputs without a value attribute have changed from \textquotesingle{}1\textquotesingle{} to \textquotesingle{}on\textquotesingle{} to match the HTML specification.
+\item \mbox{[}BC BREAK\mbox{]} The typehints on the {\ttfamily Link}, {\ttfamily Form} and {\ttfamily Form\+Field} classes have been changed from {\ttfamily \textbackslash{}DOMNode} to {\ttfamily DOMElement}. Using any other type of {\ttfamily DOMNode} was triggering fatal errors in previous versions. Code extending these classes will need to update the typehints when overwriting these methods.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1464}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1464}
+
+\begin{DoxyItemize}
+\item {\ttfamily Crawler\+::add\+Xml\+Content()} removes the default document namespace again if it\textquotesingle{}s an only namespace.
+\item added support for automatic discovery and explicit registration of document namespaces for {\ttfamily Crawler\+::filter\+XPath()} and {\ttfamily Crawler\+::filter()}
+\item improved content type guessing in {\ttfamily Crawler\+::add\+Content()}
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily Crawler\+::add\+Xml\+Content()} no longer removes the default document namespace
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1465}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1465}
+
+\begin{DoxyItemize}
+\item added Crawler\+::html()
+\item \mbox{[}BC BREAK\mbox{]} Crawler\+::each() and Crawler\+::reduce() now return Crawler instances instead of Dom\+Element instances
+\item added schema relative URL support to links
+\item added support for HTML5 \textquotesingle{}form\textquotesingle{} attribute
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1466}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1466}
+
+\begin{DoxyItemize}
+\item added a way to set raw path to the file in File\+Form\+Field -\/ necessary for simulating HTTP requests
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1467}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_dom_crawler__c_h_a_n_g_e_l_o_g_autotoc_md1467}
+
+\begin{DoxyItemize}
+\item added support for the HTTP PATCH method
+\item refactored the Form class internals to support multi-\/dimensional fields (the public API is backward compatible)
+\item added a way to get parsing errors for Crawler\+::add\+Html\+Content() and Crawler\+::add\+Xml\+Content() via libxml functions
+\item added support for submitting a form without a submit button 
+\end{DoxyItemize}

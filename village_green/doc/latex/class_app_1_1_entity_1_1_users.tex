@@ -1,0 +1,112 @@
+\hypertarget{class_app_1_1_entity_1_1_users}{}\doxysection{Users Class Reference}
+\label{class_app_1_1_entity_1_1_users}\index{Users@{Users}}
+Inheritance diagram for Users\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_entity_1_1_users}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a12251d0c022e9e21c137a105ff683f13}\label{class_app_1_1_entity_1_1_users_a12251d0c022e9e21c137a105ff683f13}} 
+{\bfseries get\+Id} ()
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a02a01849f28e2535e888ae4ec87b20f2}\label{class_app_1_1_entity_1_1_users_a02a01849f28e2535e888ae4ec87b20f2}} 
+{\bfseries get\+Email} ()
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a2d22391fa86fa0eaf3b9d2a3c29880bc}\label{class_app_1_1_entity_1_1_users_a2d22391fa86fa0eaf3b9d2a3c29880bc}} 
+{\bfseries set\+Email} (string \$email)
+\item 
+\mbox{\hyperlink{class_app_1_1_entity_1_1_users_a189038d671f9143e20141026f1aa7969}{get\+User\+Identifier}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_entity_1_1_users_a81b37a3c9d639574e394f80c1138c75e}{get\+Username}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_entity_1_1_users_aa676cae5ee8d7fb6862a8724adc2660d}{get\+Roles}} ()
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_aa3236c9c6688d04df16ea0ab3065530e}\label{class_app_1_1_entity_1_1_users_aa3236c9c6688d04df16ea0ab3065530e}} 
+{\bfseries set\+Roles} (array \$roles)
+\item 
+\mbox{\hyperlink{class_app_1_1_entity_1_1_users_a04e0957baeb7acde9c0c86556da2d43f}{get\+Password}} ()
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a81e0f429784973551fb5417d5b92b0db}\label{class_app_1_1_entity_1_1_users_a81e0f429784973551fb5417d5b92b0db}} 
+{\bfseries set\+Password} (string \$password)
+\item 
+\mbox{\hyperlink{class_app_1_1_entity_1_1_users_a1dfe56d2c965d451a135f3f3910a8b8d}{get\+Salt}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_entity_1_1_users_ac565b8c00fe93ce673f8237849f072a6}{erase\+Credentials}} ()
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a5b13f00f290585f943cc18334cdab267}\label{class_app_1_1_entity_1_1_users_a5b13f00f290585f943cc18334cdab267}} 
+{\bfseries is\+Verified} ()
+\item 
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a2babffee3c4a515f9b650d14a790ee61}\label{class_app_1_1_entity_1_1_users_a2babffee3c4a515f9b650d14a790ee61}} 
+{\bfseries set\+Is\+Verified} (bool \$is\+Verified)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+ORM\textbackslash{}\+Entity(repository\+Class=Users\+Repository\+::class) @\+Unique\+Entity(fields=\{\char`\"{}email\char`\"{}\}, message=\char`\"{}\+Il existe déjà un compte avec cet email\char`\"{}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_ac565b8c00fe93ce673f8237849f072a6}\label{class_app_1_1_entity_1_1_users_ac565b8c00fe93ce673f8237849f072a6}} 
+\index{Users@{Users}!eraseCredentials@{eraseCredentials}}
+\index{eraseCredentials@{eraseCredentials}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{eraseCredentials()}{eraseCredentials()}}
+{\footnotesize\ttfamily erase\+Credentials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+User\+Interface 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a04e0957baeb7acde9c0c86556da2d43f}\label{class_app_1_1_entity_1_1_users_a04e0957baeb7acde9c0c86556da2d43f}} 
+\index{Users@{Users}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+Password\+Authenticated\+User\+Interface 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_aa676cae5ee8d7fb6862a8724adc2660d}\label{class_app_1_1_entity_1_1_users_aa676cae5ee8d7fb6862a8724adc2660d}} 
+\index{Users@{Users}!getRoles@{getRoles}}
+\index{getRoles@{getRoles}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getRoles()}{getRoles()}}
+{\footnotesize\ttfamily get\+Roles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+User\+Interface 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a1dfe56d2c965d451a135f3f3910a8b8d}\label{class_app_1_1_entity_1_1_users_a1dfe56d2c965d451a135f3f3910a8b8d}} 
+\index{Users@{Users}!getSalt@{getSalt}}
+\index{getSalt@{getSalt}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getSalt()}{getSalt()}}
+{\footnotesize\ttfamily get\+Salt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returning a salt is only needed, if you are not using a modern hashing algorithm (e.\+g. bcrypt or sodium) in your security.\+yaml.
+
+\begin{DoxySeeAlso}{See also}
+User\+Interface 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a189038d671f9143e20141026f1aa7969}\label{class_app_1_1_entity_1_1_users_a189038d671f9143e20141026f1aa7969}} 
+\index{Users@{Users}!getUserIdentifier@{getUserIdentifier}}
+\index{getUserIdentifier@{getUserIdentifier}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getUserIdentifier()}{getUserIdentifier()}}
+{\footnotesize\ttfamily get\+User\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A visual identifier that represents this user.
+
+\begin{DoxySeeAlso}{See also}
+User\+Interface 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_app_1_1_entity_1_1_users_a81b37a3c9d639574e394f80c1138c75e}\label{class_app_1_1_entity_1_1_users_a81b37a3c9d639574e394f80c1138c75e}} 
+\index{Users@{Users}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!Users@{Users}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]since Symfony 5.\+3, use get\+User\+Identifier instead \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Entity/Users.\+php\end{DoxyCompactItemize}

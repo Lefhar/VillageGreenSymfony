@@ -1,0 +1,50 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_multi_get_cache}{}\doxysection{Multi\+Get\+Cache Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_cache_1_1_multi_get_cache}\index{MultiGetCache@{MultiGetCache}}
+Inheritance diagram for Multi\+Get\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_doctrine_1_1_common_1_1_cache_1_1_multi_get_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_multi_get_cache_a9e4c51549a84e48551e99b6af3655e96}{fetch\+Multiple}} (array \$keys)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for cache drivers that allows to get many items at once.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000037}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_multi_get_cache_a9e4c51549a84e48551e99b6af3655e96}\label{interface_doctrine_1_1_common_1_1_cache_1_1_multi_get_cache_a9e4c51549a84e48551e99b6af3655e96}} 
+\index{MultiGetCache@{MultiGetCache}!fetchMultiple@{fetchMultiple}}
+\index{fetchMultiple@{fetchMultiple}!MultiGetCache@{MultiGetCache}}
+\doxysubsubsection{\texorpdfstring{fetchMultiple()}{fetchMultiple()}}
+{\footnotesize\ttfamily fetch\+Multiple (\begin{DoxyParamCaption}\item[{array}]{\$keys }\end{DoxyParamCaption})}
+
+Returns an associative array of values for keys is found in cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$keys} & Array of keys to retrieve from cache\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} Array of retrieved values, indexed by the specified keys. Values that couldn\textquotesingle{}t be retrieved are not contained in this array. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a9e4c51549a84e48551e99b6af3655e96}{Cache\+Provider}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/Multi\+Get\+Cache.\+php\end{DoxyCompactItemize}

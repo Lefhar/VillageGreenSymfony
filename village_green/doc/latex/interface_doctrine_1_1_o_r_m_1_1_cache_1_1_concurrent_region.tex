@@ -1,0 +1,80 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region}{}\doxysection{Concurrent\+Region Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region}\index{ConcurrentRegion@{ConcurrentRegion}}
+Inheritance diagram for Concurrent\+Region\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_a8ec1b88e6830ed1ec98c21b18861ff63}{lock}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_ac3a0fee1712be05ed482a9b5bb40453f}{unlock}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}} \$\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_a8ec1b88e6830ed1ec98c21b18861ff63}{lock}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines contract for concurrently managed data region. It should be able to lock an specific cache entry in an atomic operation.
+
+When a entry is locked another process should not be able to read or write the entry. All evict operation should not consider locks, even though an entry is locked evict should be able to delete the entry and its lock. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_a8ec1b88e6830ed1ec98c21b18861ff63}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_a8ec1b88e6830ed1ec98c21b18861ff63}} 
+\index{ConcurrentRegion@{ConcurrentRegion}!lock@{lock}}
+\index{lock@{lock}!ConcurrentRegion@{ConcurrentRegion}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+Attempts to read lock the mapping for the given key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key of the item to lock.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lock$\vert$null A lock instance or NULL if the lock already exists.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock_exception}{Lock\+Exception}}} & Indicates a problem accessing the region. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}{File\+Lock\+Region}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_ac3a0fee1712be05ed482a9b5bb40453f}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_ac3a0fee1712be05ed482a9b5bb40453f}} 
+\index{ConcurrentRegion@{ConcurrentRegion}!unlock@{unlock}}
+\index{unlock@{unlock}!ConcurrentRegion@{ConcurrentRegion}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}}}]{\$lock }\end{DoxyParamCaption})}
+
+Attempts to read unlock the mapping for the given key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key of the item to unlock. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}} & {\em \$lock} & The lock previously obtained from \mbox{\hyperlink{}{read\+Lock}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock_exception}{Lock\+Exception}}} & Indicates a problem accessing the region. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ac3a0fee1712be05ed482a9b5bb40453f}{File\+Lock\+Region}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/Concurrent\+Region.\+php\end{DoxyCompactItemize}

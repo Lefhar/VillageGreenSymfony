@@ -1,0 +1,99 @@
+\hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry}{}\doxysection{Annotation\+Registry Class Reference}
+\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry}\index{AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a2325df26721fdbe820d577d2482725f8}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a2325df26721fdbe820d577d2482725f8}} 
+static {\bfseries reset} ()
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a7c645d05e620d7ab29ccc11fe9057b6b}{register\+File}} (string \$file)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_ab2e83c332ca7c8b623fa49bb8480ffae}{register\+Autoload\+Namespace}} (string \$namespace, \$dirs=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a66a1e01052c789f95517f8b838943fe9}{register\+Autoload\+Namespaces}} (array \$namespaces)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_ad1ab29f32f66a042dfc522c232d2d4d9}{register\+Loader}} (callable \$callable)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_afa6a0c1bb651ae4922f521c912116a4f}{register\+Unique\+Loader}} (callable \$callable)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_acdf3db084fd1e2bc4494cc8a7282c5e2}{load\+Annotation\+Class}} (string \$class)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_acdf3db084fd1e2bc4494cc8a7282c5e2}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_acdf3db084fd1e2bc4494cc8a7282c5e2}} 
+\index{AnnotationRegistry@{AnnotationRegistry}!loadAnnotationClass@{loadAnnotationClass}}
+\index{loadAnnotationClass@{loadAnnotationClass}!AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsubsection{\texorpdfstring{loadAnnotationClass()}{loadAnnotationClass()}}
+{\footnotesize\ttfamily static load\+Annotation\+Class (\begin{DoxyParamCaption}\item[{string}]{\$class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Autoloads an annotation class silently. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_ab2e83c332ca7c8b623fa49bb8480ffae}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_ab2e83c332ca7c8b623fa49bb8480ffae}} 
+\index{AnnotationRegistry@{AnnotationRegistry}!registerAutoloadNamespace@{registerAutoloadNamespace}}
+\index{registerAutoloadNamespace@{registerAutoloadNamespace}!AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsubsection{\texorpdfstring{registerAutoloadNamespace()}{registerAutoloadNamespace()}}
+{\footnotesize\ttfamily static register\+Autoload\+Namespace (\begin{DoxyParamCaption}\item[{string}]{\$namespace,  }\item[{}]{\$dirs = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds a namespace with one or many directories to look for files or null for the include path.
+
+Loading of this namespaces will be done with a PSR-\/0 namespace loading algorithm.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000027}{Deprecated}}]This method is deprecated and will be removed in doctrine/annotations 2.\+0. Annotations will be autoloaded in 2.\+0.\end{DoxyRefDesc}
+
+
+@phpstan-\/param string$\vert$list$<$string$>$$\vert$null \$dirs \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a66a1e01052c789f95517f8b838943fe9}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a66a1e01052c789f95517f8b838943fe9}} 
+\index{AnnotationRegistry@{AnnotationRegistry}!registerAutoloadNamespaces@{registerAutoloadNamespaces}}
+\index{registerAutoloadNamespaces@{registerAutoloadNamespaces}!AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsubsection{\texorpdfstring{registerAutoloadNamespaces()}{registerAutoloadNamespaces()}}
+{\footnotesize\ttfamily static register\+Autoload\+Namespaces (\begin{DoxyParamCaption}\item[{array}]{\$namespaces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers multiple namespaces.
+
+Loading of this namespaces will be done with a PSR-\/0 namespace loading algorithm.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000028}{Deprecated}}]This method is deprecated and will be removed in doctrine/annotations 2.\+0. Annotations will be autoloaded in 2.\+0.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} | string\mbox{[}$\,$\mbox{]} | null\mbox{[}$\,$\mbox{]} & {\em \$namespaces} & indexed by namespace name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a7c645d05e620d7ab29ccc11fe9057b6b}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_a7c645d05e620d7ab29ccc11fe9057b6b}} 
+\index{AnnotationRegistry@{AnnotationRegistry}!registerFile@{registerFile}}
+\index{registerFile@{registerFile}!AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsubsection{\texorpdfstring{registerFile()}{registerFile()}}
+{\footnotesize\ttfamily static register\+File (\begin{DoxyParamCaption}\item[{string}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers file.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000026}{Deprecated}}]This method is deprecated and will be removed in doctrine/annotations 2.\+0. Annotations will be autoloaded in 2.\+0. \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_ad1ab29f32f66a042dfc522c232d2d4d9}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_ad1ab29f32f66a042dfc522c232d2d4d9}} 
+\index{AnnotationRegistry@{AnnotationRegistry}!registerLoader@{registerLoader}}
+\index{registerLoader@{registerLoader}!AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsubsection{\texorpdfstring{registerLoader()}{registerLoader()}}
+{\footnotesize\ttfamily static register\+Loader (\begin{DoxyParamCaption}\item[{callable}]{\$callable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers an autoloading callable for annotations, much like spl\+\_\+autoload\+\_\+register().
+
+NOTE\+: These class loaders HAVE to be silent when a class was not found! IMPORTANT\+: Loaders have to return true if they loaded a class that could contain the searched annotation class.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000029}{Deprecated}}]This method is deprecated and will be removed in doctrine/annotations 2.\+0. Annotations will be autoloaded in 2.\+0. \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_afa6a0c1bb651ae4922f521c912116a4f}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_registry_afa6a0c1bb651ae4922f521c912116a4f}} 
+\index{AnnotationRegistry@{AnnotationRegistry}!registerUniqueLoader@{registerUniqueLoader}}
+\index{registerUniqueLoader@{registerUniqueLoader}!AnnotationRegistry@{AnnotationRegistry}}
+\doxysubsubsection{\texorpdfstring{registerUniqueLoader()}{registerUniqueLoader()}}
+{\footnotesize\ttfamily static register\+Unique\+Loader (\begin{DoxyParamCaption}\item[{callable}]{\$callable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers an autoloading callable for annotations, if it is not already registered
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000030}{Deprecated}}]This method is deprecated and will be removed in doctrine/annotations 2.\+0. Annotations will be autoloaded in 2.\+0. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/annotations/lib/\+Doctrine/\+Common/\+Annotations/Annotation\+Registry.\+php\end{DoxyCompactItemize}

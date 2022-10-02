@@ -1,0 +1,4 @@
+
+\begin{DoxyItemize}
+\item Deprecated using doctrine/cache for metadata caching. The {\ttfamily set\+Cache\+Driver} and {\ttfamily get\+Cache\+Driver} methods in {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Mapping\textbackslash{}Abstract\+Metadata} have been deprecated. Please use {\ttfamily get\+Cache} and {\ttfamily set\+Cache} with a PSR-\/6 implementation instead. Note that even after switching to PSR-\/6, {\ttfamily get\+Cache\+Driver} will return a cache instance that wraps the PSR-\/6 cache. Note that if you use a custom implementation of doctrine/cache, the library may not be able to provide a forward compatibility layer. The cache implementation MUST extend the {\ttfamily Doctrine\textbackslash{}Common\textbackslash{}Cache\textbackslash{}Cache\+Provider} class. 
+\end{DoxyItemize}

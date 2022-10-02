@@ -1,0 +1,48 @@
+This repository holds all interfaces/classes/traits related to \href{https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md}{\texttt{ PSR-\/3}}.
+
+Note that this is not a logger of its own. It is merely an interface that describes a logger. See the specification for more details.\hypertarget{md_vendor_psr_log__r_e_a_d_m_e_autotoc_md986}{}\doxysection{Installation}\label{md_vendor_psr_log__r_e_a_d_m_e_autotoc_md986}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require psr/log}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_psr_log__r_e_a_d_m_e_autotoc_md987}{}\doxysection{Usage}\label{md_vendor_psr_log__r_e_a_d_m_e_autotoc_md987}
+If you need a logger, you can use the interface like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_psr_1_1_log_1_1_logger_interface}{Psr\(\backslash\)Log\(\backslash\)LoggerInterface}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }Foo}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \$logger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \_\_construct(LoggerInterface \$logger = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>logger = \$logger;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} doSomething()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>logger) \{}
+\DoxyCodeLine{            \$this-\/>logger-\/>info(\textcolor{stringliteral}{'Doing work'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{           }
+\DoxyCodeLine{        \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{            \$this-\/>doSomethingElse();}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (Exception \$exception) \{}
+\DoxyCodeLine{            \$this-\/>logger-\/>error(\textcolor{stringliteral}{'Oh no!'}, array(\textcolor{stringliteral}{'exception'} => \$exception));}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// do something useful}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+You can then pick one of the implementations of the interface to get a logger.
+
+If you want to implement the interface, you can require this package and implement {\ttfamily Psr\textbackslash{}Log\textbackslash{}Logger\+Interface} in your code. Please read the \href{https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md}{\texttt{ specification text}} for details. 

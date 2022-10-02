@@ -1,0 +1,105 @@
+\hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie}{}\doxysection{Request\+Cookie Class Reference}
+\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie}\index{RequestCookie@{RequestCookie}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a1e2911f59e4b707bc4d868e434e5950a}{\+\_\+\+\_\+construct}} (string \$name, string \$value=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a99d83c10e16d3c81e0d9ba17a8114b86}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a99d83c10e16d3c81e0d9ba17a8114b86}} 
+{\bfseries with\+Name} (string \$name)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_ac0bc18784b182c89fcfd276625aef435}{get\+Value}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_aebf1bc2ed6e29217e1ce3126e686cbad}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_aebf1bc2ed6e29217e1ce3126e686cbad}} 
+{\bfseries with\+Value} (string \$value)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a2a871c0f03f9e9935db8dbbc7d78ea41}{from\+Header}} (string \$string)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A cookie as sent in a request\textquotesingle{}s \textquotesingle{}cookie\textquotesingle{} header, so without any attributes.
+
+This class does not deal with encoding of arbitrary names and values. If you want to use arbitrary values, please use an encoding mechanism like Base64 or URL encoding.
+
+\mbox{\hyperlink{}{https\+://tools.\+ietf.\+org/html/rfc6265\#section-\/5.\+4}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a1e2911f59e4b707bc4d868e434e5950a}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a1e2911f59e4b707bc4d868e434e5950a}} 
+\index{RequestCookie@{RequestCookie}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RequestCookie@{RequestCookie}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$value = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Cookie name in its decoded form. \\
+\hline
+string & {\em \$value} & Cookie value in its decoded form.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_invalid_cookie_exception}{Invalid\+Cookie\+Exception}}} & If name or value is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{RequestCookie@{RequestCookie}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!RequestCookie@{RequestCookie}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string Representation of the cookie as in a \textquotesingle{}cookie\textquotesingle{} header. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a2a871c0f03f9e9935db8dbbc7d78ea41}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a2a871c0f03f9e9935db8dbbc7d78ea41}} 
+\index{RequestCookie@{RequestCookie}!fromHeader@{fromHeader}}
+\index{fromHeader@{fromHeader}!RequestCookie@{RequestCookie}}
+\doxysubsubsection{\texorpdfstring{fromHeader()}{fromHeader()}}
+{\footnotesize\ttfamily static from\+Header (\begin{DoxyParamCaption}\item[{string}]{\$string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parses the cookies from a \textquotesingle{}cookie\textquotesingle{} header.
+
+Note\+: Parsing is aborted if there\textquotesingle{}s an invalid value and no cookies are returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & Valid \textquotesingle{}cookie\textquotesingle{} header line.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_cookie_1_1_request_cookie}{Request\+Cookie}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a3d0963e68bb313b163a73f2803c64600}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_a3d0963e68bb313b163a73f2803c64600}} 
+\index{RequestCookie@{RequestCookie}!getName@{getName}}
+\index{getName@{getName}!RequestCookie@{RequestCookie}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string Name of the cookie. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_ac0bc18784b182c89fcfd276625aef435}\label{class_amp_1_1_http_1_1_cookie_1_1_request_cookie_ac0bc18784b182c89fcfd276625aef435}} 
+\index{RequestCookie@{RequestCookie}!getValue@{getValue}}
+\index{getValue@{getValue}!RequestCookie@{RequestCookie}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string Value of the cookie. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http/src/\+Cookie/Request\+Cookie.\+php\end{DoxyCompactItemize}

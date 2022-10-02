@@ -1,0 +1,53 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects}{}\doxysection{Follow\+Redirects Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects}\index{FollowRedirects@{FollowRedirects}}
+Inheritance diagram for Follow\+Redirects\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects_ae5ae14cfa48c94a5d3a23675c908ecb4}{\+\_\+\+\_\+construct}} (int \$limit, bool \$auto\+Referrer=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects_ab0c8ff47ea58aa92cc490fd95d0f4958}{resolve}} (Psr\+Uri \$base\+Uri, Psr\+Uri \$location\+Uri)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects_ae5ae14cfa48c94a5d3a23675c908ecb4}\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects_ae5ae14cfa48c94a5d3a23675c908ecb4}} 
+\index{FollowRedirects@{FollowRedirects}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FollowRedirects@{FollowRedirects}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$limit,  }\item[{bool}]{\$auto\+Referrer = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@noinspection Php\+Undefined\+Class\+Inspection
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects_ab0c8ff47ea58aa92cc490fd95d0f4958}\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_follow_redirects_ab0c8ff47ea58aa92cc490fd95d0f4958}} 
+\index{FollowRedirects@{FollowRedirects}!resolve@{resolve}}
+\index{resolve@{resolve}!FollowRedirects@{FollowRedirects}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily static resolve (\begin{DoxyParamCaption}\item[{Psr\+Uri}]{\$base\+Uri,  }\item[{Psr\+Uri}]{\$location\+Uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Resolves the given path in \$location\+Uri using \$base\+Uri as a base URI. For example, a base URI of \href{http://example.com/example/path}{\texttt{ http\+://example.\+com/example/path}} and a location path of \textquotesingle{}to/resolve\textquotesingle{} will return a URI of \href{http://example.com/example/to/resolve}{\texttt{ http\+://example.\+com/example/to/resolve}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr\+Uri & {\em \$base\+Uri} & \\
+\hline
+Psr\+Uri & {\em \$location\+Uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Psr\+Uri 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Interceptor/Follow\+Redirects.\+php\end{DoxyCompactItemize}

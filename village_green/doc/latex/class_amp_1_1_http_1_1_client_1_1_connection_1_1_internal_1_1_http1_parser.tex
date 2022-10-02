@@ -1,0 +1,70 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser}{}\doxysection{Http1\+Parser Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser}\index{Http1Parser@{Http1Parser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a3e0ce28b7b373da5546182515dfb8ab4}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a3e0ce28b7b373da5546182515dfb8ab4}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, callable \$body\+Data\+Callback, callable \$trailers\+Callback)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_ae26c1e9de1a05d5b5dae90a079408ed0}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_ae26c1e9de1a05d5b5dae90a079408ed0}} 
+{\bfseries get\+Buffer} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_afbf787ced76807989fb3093e1772c5a1}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_afbf787ced76807989fb3093e1772c5a1}} 
+{\bfseries get\+State} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a99934bf3f735f702888dee3ead019188}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a99934bf3f735f702888dee3ead019188}} 
+{\bfseries buffer} (string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a67a27047fc8dcdcabfb9c0c9799fc2da}{parse}} (string \$data=null)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_afd4feae3d0f4cc930e625a8539a3d47b}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_afd4feae3d0f4cc930e625a8539a3d47b}} 
+{\bfseries is\+Complete} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a6e463884c2b39aeaa5c807cfb7b216d5}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a6e463884c2b39aeaa5c807cfb7b216d5}} 
+const {\bfseries AWAITING\+\_\+\+HEADERS} = 0
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a182460ac87f55edb570f7f901e855141}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a182460ac87f55edb570f7f901e855141}} 
+const {\bfseries BODY\+\_\+\+IDENTITY} = 1
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_ac69b23fc4aba6964827773fa61dc61a5}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_ac69b23fc4aba6964827773fa61dc61a5}} 
+const {\bfseries BODY\+\_\+\+IDENTITY\+\_\+\+EOF} = 2
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_af4413d563b91cc97c64d2c5b393681bc}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_af4413d563b91cc97c64d2c5b393681bc}} 
+const {\bfseries BODY\+\_\+\+CHUNKS} = 3
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_acc25e32067dace6ad3007b2ad633721d}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_acc25e32067dace6ad3007b2ad633721d}} 
+const {\bfseries TRAILERS\+\_\+\+START} = 4
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a59f507f4f813d5fe602aed2b0ad0eb66}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a59f507f4f813d5fe602aed2b0ad0eb66}} 
+const {\bfseries TRAILERS} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a67a27047fc8dcdcabfb9c0c9799fc2da}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_internal_1_1_http1_parser_a67a27047fc8dcdcabfb9c0c9799fc2da}} 
+\index{Http1Parser@{Http1Parser}!parse@{parse}}
+\index{parse@{parse}!Http1Parser@{Http1Parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}\item[{string}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response$\vert$null
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_parse_exception}{Parse\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/\+Internal/Http1\+Parser.\+php\end{DoxyCompactItemize}

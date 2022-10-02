@@ -1,0 +1,618 @@
+\hypertarget{class_amp_1_1_loop_1_1_tracing_driver}{}\doxysection{Tracing\+Driver Class Reference}
+\label{class_amp_1_1_loop_1_1_tracing_driver}\index{TracingDriver@{TracingDriver}}
+Inheritance diagram for Tracing\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_loop_1_1_tracing_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a6163e36bf95ba767dd685314d02f1241}\label{class_amp_1_1_loop_1_1_tracing_driver_a6163e36bf95ba767dd685314d02f1241}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_driver}{Driver}} \$driver)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_afb0fafe7e02a3ae1993c01c19fad2bae}{run}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a8b6fc76a620d7557d06e9a11a9ffb509}{stop}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_aa06d0bcf7cab6d36698b4c9b99340707}{defer}} (callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a6f3e44c0d6f705466905444898a27485}{delay}} (int \$delay, callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a902e50ffaa1ce892c0b77a6f73f82424}{repeat}} (int \$interval, callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a8d8262ab002a1d1d4109fa606315375d}{on\+Readable}} (\$stream, callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_ab345ec503d205b369849e1e6581aba5d}{on\+Writable}} (\$stream, callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a2af2d247dc088bf47fde4df24646f1b7}{on\+Signal}} (int \$signo, callable \$callback, \$data=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_aac98baa615f4be1c610b448c7233c4be}{enable}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_ac421a27f9b721a9845fde9288ff879b6}{cancel}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a1a8ab7edb65fc79c30a8ddcd04e2bf5a}{disable}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_ae434fde20ddefe7cf4d051dee4f50811}{reference}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_ad9488a4157f69ea9cd398087b29a8b20}{unreference}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_af4ab430c8db90e77b6048b08d91e4862}{set\+Error\+Handler}} (callable \$callback=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{get\+Handle}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a5bf63e4ac70cfd9d97e3f2eab936ec8b}\label{class_amp_1_1_loop_1_1_tracing_driver_a5bf63e4ac70cfd9d97e3f2eab936ec8b}} 
+{\bfseries dump} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a164026f74736817927e1cacd282a2e28}{get\+Info}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_aca922c6f7bcc068784112a8e402a59f7}{\+\_\+\+\_\+debug\+Info}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a80593ccdc0339775ddd5d82c37ca4f6b}{now}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a3c948ec96545f096c12a9a487aa28e09}{error}} (\textbackslash{}Throwable \$exception)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a93e1cf21b8a596cee99004644f90d8a0}{activate}} (array \$watchers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a19b11129dd58c3181cabf99650d1e107}{dispatch}} (bool \$blocking)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a1327821d0ed999d648c0c0d8ad552e58}{deactivate}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} \$watcher)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_aca922c6f7bcc068784112a8e402a59f7}\label{class_amp_1_1_loop_1_1_tracing_driver_aca922c6f7bcc068784112a8e402a59f7}} 
+\index{TracingDriver@{TracingDriver}!\_\_debugInfo@{\_\_debugInfo}}
+\index{\_\_debugInfo@{\_\_debugInfo}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_debugInfo()}{\_\_debugInfo()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+debug\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the same array of data as \mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_a164026f74736817927e1cacd282a2e28}{get\+Info()}}.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_aca922c6f7bcc068784112a8e402a59f7}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a93e1cf21b8a596cee99004644f90d8a0}\label{class_amp_1_1_loop_1_1_tracing_driver_a93e1cf21b8a596cee99004644f90d8a0}} 
+\index{TracingDriver@{TracingDriver}!activate@{activate}}
+\index{activate@{activate}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily activate (\begin{DoxyParamCaption}\item[{array}]{\$watchers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Activates (enables) all the given watchers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}\mbox{[}$\,$\mbox{]} & {\em \$watchers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a93e1cf21b8a596cee99004644f90d8a0}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_ac421a27f9b721a9845fde9288ff879b6}\label{class_amp_1_1_loop_1_1_tracing_driver_ac421a27f9b721a9845fde9288ff879b6}} 
+\index{TracingDriver@{TracingDriver}!cancel@{cancel}}
+\index{cancel@{cancel}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily cancel (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+Cancel a watcher.
+
+This will detach the event loop from all resources that are associated to the watcher. After this operation the watcher is permanently invalid. Calling this function MUST NOT fail, even if passed an invalid watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_ac421a27f9b721a9845fde9288ff879b6}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a1327821d0ed999d648c0c0d8ad552e58}\label{class_amp_1_1_loop_1_1_tracing_driver_a1327821d0ed999d648c0c0d8ad552e58}} 
+\index{TracingDriver@{TracingDriver}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily deactivate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}}]{\$watcher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Deactivates (disables) the given watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a1327821d0ed999d648c0c0d8ad552e58}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_aa06d0bcf7cab6d36698b4c9b99340707}\label{class_amp_1_1_loop_1_1_tracing_driver_aa06d0bcf7cab6d36698b4c9b99340707}} 
+\index{TracingDriver@{TracingDriver}!defer@{defer}}
+\index{defer@{defer}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{defer()}{defer()}}
+{\footnotesize\ttfamily defer (\begin{DoxyParamCaption}\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Defer the execution of a callback.
+
+The deferred callable MUST be executed before any other type of watcher in a tick. Order of enabling MUST be preserved when executing the callbacks.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em callable} & (string \$watcher\+Id, mixed \$data) \$callback The callback to defer. The {\ttfamily \$watcher\+Id} will be invalidated before the callback call. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+@psalm-\/var Watcher$<$null$>$ \$watcher
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_aa06d0bcf7cab6d36698b4c9b99340707}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a6f3e44c0d6f705466905444898a27485}\label{class_amp_1_1_loop_1_1_tracing_driver_a6f3e44c0d6f705466905444898a27485}} 
+\index{TracingDriver@{TracingDriver}!delay@{delay}}
+\index{delay@{delay}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily delay (\begin{DoxyParamCaption}\item[{int}]{\$delay,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Delay the execution of a callback.
+
+The delay is a minimum and approximate, accuracy is not guaranteed. Order of calls MUST be determined by which timers expire first, but timers with the same expiration time MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$delay} & The amount of time, in milliseconds, to delay the execution for. \\
+\hline
+ & {\em callable} & (string \$watcher\+Id, mixed \$data) \$callback The callback to delay. The {\ttfamily \$watcher\+Id} will be invalidated before the callback call. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+@psalm-\/var Watcher$<$int$>$ \$watcher
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a6f3e44c0d6f705466905444898a27485}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a1a8ab7edb65fc79c30a8ddcd04e2bf5a}\label{class_amp_1_1_loop_1_1_tracing_driver_a1a8ab7edb65fc79c30a8ddcd04e2bf5a}} 
+\index{TracingDriver@{TracingDriver}!disable@{disable}}
+\index{disable@{disable}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily disable (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+Disable a watcher immediately.
+
+A watcher MUST be disabled immediately, e.\+g. if a defer watcher disables a later defer watcher, the second defer watcher isn\textquotesingle{}t executed in this tick.
+
+Disabling a watcher MUST NOT invalidate the watcher. Calling this function MUST NOT fail, even if passed an invalid watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a1a8ab7edb65fc79c30a8ddcd04e2bf5a}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a19b11129dd58c3181cabf99650d1e107}\label{class_amp_1_1_loop_1_1_tracing_driver_a19b11129dd58c3181cabf99650d1e107}} 
+\index{TracingDriver@{TracingDriver}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{bool}]{\$blocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dispatches any pending read/write, timer, and signal events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$blocking} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a19b11129dd58c3181cabf99650d1e107}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_aac98baa615f4be1c610b448c7233c4be}\label{class_amp_1_1_loop_1_1_tracing_driver_aac98baa615f4be1c610b448c7233c4be}} 
+\index{TracingDriver@{TracingDriver}!enable@{enable}}
+\index{enable@{enable}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily enable (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+Enable a watcher to be active starting in the next tick.
+
+Watchers MUST immediately be marked as enabled, but only be activated (i.\+e. callbacks can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_invalid_watcher_error}{Invalid\+Watcher\+Error}}} & If the watcher identifier is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_aac98baa615f4be1c610b448c7233c4be}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a3c948ec96545f096c12a9a487aa28e09}\label{class_amp_1_1_loop_1_1_tracing_driver_a3c948ec96545f096c12a9a487aa28e09}} 
+\index{TracingDriver@{TracingDriver}!error@{error}}
+\index{error@{error}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily error (\begin{DoxyParamCaption}\item[{\textbackslash{}Throwable}]{\$exception }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Invokes the error handler with the given exception.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable & {\em \$exception} & The exception thrown from a watcher callback.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Throwable If no error handler has been set. 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a3c948ec96545f096c12a9a487aa28e09}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a4b28feacbac39dacb8204a26d1a0ba7b}\label{class_amp_1_1_loop_1_1_tracing_driver_a4b28feacbac39dacb8204a26d1a0ba7b}} 
+\index{TracingDriver@{TracingDriver}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the underlying loop handle.
+
+Example\+: the {\ttfamily uv\+\_\+loop} resource for {\ttfamily libuv} or the {\ttfamily Ev\+Loop} object for {\ttfamily libev} or {\ttfamily null} for a native driver.
+
+Note\+: This function is {\itshape not} exposed in the {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop}{Loop}}} class. Users shall access it directly on the respective loop instance.
+
+\begin{DoxyReturn}{Returns}
+null$\vert$object$\vert$resource The loop handle the event loop operates on. {\ttfamily null} if there is none.
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a164026f74736817927e1cacd282a2e28}\label{class_amp_1_1_loop_1_1_tracing_driver_a164026f74736817927e1cacd282a2e28}} 
+\index{TracingDriver@{TracingDriver}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve an associative array of information about the event loop driver.
+
+The returned array MUST contain the following data describing the driver\textquotesingle{}s currently registered watchers\+: \begin{DoxyVerb}[
+    "defer"            => ["enabled" => int, "disabled" => int],
+    "delay"            => ["enabled" => int, "disabled" => int],
+    "repeat"           => ["enabled" => int, "disabled" => int],
+    "on_readable"      => ["enabled" => int, "disabled" => int],
+    "on_writable"      => ["enabled" => int, "disabled" => int],
+    "on_signal"        => ["enabled" => int, "disabled" => int],
+    "enabled_watchers" => ["referenced" => int, "unreferenced" => int],
+    "running"          => bool
+];
+\end{DoxyVerb}
+ Implementations MAY optionally add more information in the array but at minimum the above {\ttfamily key =\texorpdfstring{$>$}{>} value} format MUST always be provided.
+
+\begin{DoxyReturn}{Returns}
+array Statistics about the loop in the described format. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a164026f74736817927e1cacd282a2e28}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a80593ccdc0339775ddd5d82c37ca4f6b}\label{class_amp_1_1_loop_1_1_tracing_driver_a80593ccdc0339775ddd5d82c37ca4f6b}} 
+\index{TracingDriver@{TracingDriver}!now@{now}}
+\index{now@{now}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current loop time in millisecond increments. Note this value does not necessarily correlate to wall-\/clock time, rather the value returned is meant to be used in relative comparisons to prior values returned by this method (intervals, expiration calculations, etc.) and is only updated once per loop tick.
+
+Extending classes should override this function to return a value cached once per loop tick.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a80593ccdc0339775ddd5d82c37ca4f6b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a8d8262ab002a1d1d4109fa606315375d}\label{class_amp_1_1_loop_1_1_tracing_driver_a8d8262ab002a1d1d4109fa606315375d}} 
+\index{TracingDriver@{TracingDriver}!onReadable@{onReadable}}
+\index{onReadable@{onReadable}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{onReadable()}{onReadable()}}
+{\footnotesize\ttfamily on\+Readable (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Execute a callback when a stream resource becomes readable or is closed for reading.
+
+Warning\+: Closing resources locally, e.\+g. with {\ttfamily fclose}, might not invoke the callback. Be sure to {\ttfamily cancel} the watcher when closing the resource locally. Drivers MAY choose to notify the user if there are watchers on invalid resources, but are not required to, due to the high performance impact. Watchers on closed resources are therefore undefined behavior.
+
+Multiple watchers on the same stream MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$stream} & The stream to monitor. \\
+\hline
+ & {\em callable} & (string \$watcher\+Id, resource \$stream, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+@psalm-\/var Watcher$<$resource$>$ \$watcher
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a8d8262ab002a1d1d4109fa606315375d}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a2af2d247dc088bf47fde4df24646f1b7}\label{class_amp_1_1_loop_1_1_tracing_driver_a2af2d247dc088bf47fde4df24646f1b7}} 
+\index{TracingDriver@{TracingDriver}!onSignal@{onSignal}}
+\index{onSignal@{onSignal}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{onSignal()}{onSignal()}}
+{\footnotesize\ttfamily on\+Signal (\begin{DoxyParamCaption}\item[{int}]{\$signo,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Execute a callback when a signal is received.
+
+Warning\+: Installing the same signal on different instances of this interface is deemed undefined behavior. Implementations MAY try to detect this, if possible, but are not required to. This is due to technical limitations of the signals being registered globally per process.
+
+Multiple watchers on the same signal MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$signo} & The signal number to monitor. \\
+\hline
+ & {\em callable} & (string \$watcher\+Id, int \$signo, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the \$data parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_unsupported_feature_exception}{Unsupported\+Feature\+Exception}}} & If signal handling is not supported. \\
+\hline
+\end{DoxyExceptions}
+@psalm-\/var Watcher$<$int$>$ \$watcher
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a2af2d247dc088bf47fde4df24646f1b7}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_ab345ec503d205b369849e1e6581aba5d}\label{class_amp_1_1_loop_1_1_tracing_driver_ab345ec503d205b369849e1e6581aba5d}} 
+\index{TracingDriver@{TracingDriver}!onWritable@{onWritable}}
+\index{onWritable@{onWritable}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{onWritable()}{onWritable()}}
+{\footnotesize\ttfamily on\+Writable (\begin{DoxyParamCaption}\item[{}]{\$stream,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Execute a callback when a stream resource becomes writable or is closed for writing.
+
+Warning\+: Closing resources locally, e.\+g. with {\ttfamily fclose}, might not invoke the callback. Be sure to {\ttfamily cancel} the watcher when closing the resource locally. Drivers MAY choose to notify the user if there are watchers on invalid resources, but are not required to, due to the high performance impact. Watchers on closed resources are therefore undefined behavior.
+
+Multiple watchers on the same stream MAY be executed in any order.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$stream} & The stream to monitor. \\
+\hline
+ & {\em callable} & (string \$watcher\+Id, resource \$stream, mixed \$data) \$callback The callback to execute. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+@psalm-\/var Watcher$<$resource$>$ \$watcher
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_ab345ec503d205b369849e1e6581aba5d}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_ae434fde20ddefe7cf4d051dee4f50811}\label{class_amp_1_1_loop_1_1_tracing_driver_ae434fde20ddefe7cf4d051dee4f50811}} 
+\index{TracingDriver@{TracingDriver}!reference@{reference}}
+\index{reference@{reference}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+Reference a watcher.
+
+This will keep the event loop alive whilst the watcher is still being monitored. Watchers have this state by default.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_loop_1_1_invalid_watcher_error}{Invalid\+Watcher\+Error}}} & If the watcher identifier is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_ae434fde20ddefe7cf4d051dee4f50811}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a902e50ffaa1ce892c0b77a6f73f82424}\label{class_amp_1_1_loop_1_1_tracing_driver_a902e50ffaa1ce892c0b77a6f73f82424}} 
+\index{TracingDriver@{TracingDriver}!repeat@{repeat}}
+\index{repeat@{repeat}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{repeat()}{repeat()}}
+{\footnotesize\ttfamily repeat (\begin{DoxyParamCaption}\item[{int}]{\$interval,  }\item[{callable}]{\$callback,  }\item[{}]{\$data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Repeatedly execute a callback.
+
+The interval between executions is a minimum and approximate, accuracy is not guaranteed. Order of calls MUST be determined by which timers expire first, but timers with the same expiration time MAY be executed in any order. The first execution is scheduled after the first interval period.
+
+The created watcher MUST immediately be marked as enabled, but only be activated (i.\+e. callback can be called) right before the next tick. Callbacks of watchers MUST NOT be called in the tick they were enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$interval} & The time interval, in milliseconds, to wait between executions. \\
+\hline
+ & {\em callable} & (string \$watcher\+Id, mixed \$data) \$callback The callback to repeat. \\
+\hline
+mixed & {\em \$data} & Arbitrary data given to the callback function as the {\ttfamily \$data} parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string An unique identifier that can be used to cancel, enable or disable the watcher. 
+\end{DoxyReturn}
+@psalm-\/var Watcher$<$int$>$ \$watcher
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a902e50ffaa1ce892c0b77a6f73f82424}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_afb0fafe7e02a3ae1993c01c19fad2bae}\label{class_amp_1_1_loop_1_1_tracing_driver_afb0fafe7e02a3ae1993c01c19fad2bae}} 
+\index{TracingDriver@{TracingDriver}!run@{run}}
+\index{run@{run}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Run the event loop.
+
+One iteration of the loop is called one \char`\"{}tick\char`\"{}. A tick covers the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Activate watchers created / enabled in the last tick / before {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop_1_1_tracing_driver_afb0fafe7e02a3ae1993c01c19fad2bae}{run()}}}.
+\item Execute all enabled defer watchers.
+\item Execute all due timer, pending signal and actionable stream callbacks, each only once per tick.
+\end{DoxyEnumerate}
+
+The loop MUST continue to run until it is either stopped explicitly, no referenced watchers exist anymore, or an exception is thrown that cannot be handled. Exceptions that cannot be handled are exceptions thrown from an error handler or exceptions that would be passed to an error handler but none exists to handle them.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_afb0fafe7e02a3ae1993c01c19fad2bae}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_af4ab430c8db90e77b6048b08d91e4862}\label{class_amp_1_1_loop_1_1_tracing_driver_af4ab430c8db90e77b6048b08d91e4862}} 
+\index{TracingDriver@{TracingDriver}!setErrorHandler@{setErrorHandler}}
+\index{setErrorHandler@{setErrorHandler}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{setErrorHandler()}{setErrorHandler()}}
+{\footnotesize\ttfamily set\+Error\+Handler (\begin{DoxyParamCaption}\item[{callable}]{\$callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Set a callback to be executed when an error occurs.
+
+The callback receives the error as the first and only parameter. The return value of the callback gets ignored. If it can\textquotesingle{}t handle the error, it MUST throw the error. Errors thrown by the callback or during its invocation MUST be thrown into the {\ttfamily run} loop and stop the driver.
+
+Subsequent calls to this method will overwrite the previous handler.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable & {\em callable(,\$error,)\+:void$\vert$null} & \$callback The callback to execute. {\ttfamily null} will clear the current handler.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+callable(\textbackslash{}\+Throwable \$error)\+:void$\vert$null The previous handler, {\ttfamily null} if there was none. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_af4ab430c8db90e77b6048b08d91e4862}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_a8b6fc76a620d7557d06e9a11a9ffb509}\label{class_amp_1_1_loop_1_1_tracing_driver_a8b6fc76a620d7557d06e9a11a9ffb509}} 
+\index{TracingDriver@{TracingDriver}!stop@{stop}}
+\index{stop@{stop}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop the event loop.
+
+When an event loop is stopped, it continues with its current tick and exits the loop afterwards. Multiple calls to stop MUST be ignored and MUST NOT raise an exception.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a8b6fc76a620d7557d06e9a11a9ffb509}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_tracing_driver_ad9488a4157f69ea9cd398087b29a8b20}\label{class_amp_1_1_loop_1_1_tracing_driver_ad9488a4157f69ea9cd398087b29a8b20}} 
+\index{TracingDriver@{TracingDriver}!unreference@{unreference}}
+\index{unreference@{unreference}!TracingDriver@{TracingDriver}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+Unreference a watcher.
+
+The event loop should exit the run method when only unreferenced watchers are still being monitored. Watchers are all referenced by default.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_ad9488a4157f69ea9cd398087b29a8b20}{Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Loop/Tracing\+Driver.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener}{}\doxysection{Resolve\+Target\+Entity\+Listener Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener}\index{ResolveTargetEntityListener@{ResolveTargetEntityListener}}
+Inheritance diagram for Resolve\+Target\+Entity\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_a77d372ed259d7e188f408e350d4f1d66}{get\+Subscribed\+Events}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_ae01c2930f84b0c87e316ae88f7dddac3}{add\+Resolve\+Target\+Entity}} (\$original\+Entity, \$new\+Entity, array \$mapping)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_a23bc5e9527ec614deddcd52a0aa2905f}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_a23bc5e9527ec614deddcd52a0aa2905f}} 
+{\bfseries on\+Class\+Metadata\+Not\+Found} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args}{On\+Class\+Metadata\+Not\+Found\+Event\+Args}} \$args)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_aec92544ea9ce24d0f907772bbba0249c}{load\+Class\+Metadata}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_load_class_metadata_event_args}{Load\+Class\+Metadata\+Event\+Args}} \$args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener}{Resolve\+Target\+Entity\+Listener}}
+
+Mechanism to overwrite interfaces or classes specified as association targets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_ae01c2930f84b0c87e316ae88f7dddac3}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_ae01c2930f84b0c87e316ae88f7dddac3}} 
+\index{ResolveTargetEntityListener@{ResolveTargetEntityListener}!addResolveTargetEntity@{addResolveTargetEntity}}
+\index{addResolveTargetEntity@{addResolveTargetEntity}!ResolveTargetEntityListener@{ResolveTargetEntityListener}}
+\doxysubsubsection{\texorpdfstring{addResolveTargetEntity()}{addResolveTargetEntity()}}
+{\footnotesize\ttfamily add\+Resolve\+Target\+Entity (\begin{DoxyParamCaption}\item[{}]{\$original\+Entity,  }\item[{}]{\$new\+Entity,  }\item[{array}]{\$mapping }\end{DoxyParamCaption})}
+
+Adds a target-\/entity class name to resolve to a new class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$original\+Entity} & \\
+\hline
+string & {\em \$new\+Entity} & @psalm-\/param array$<$string, mixed$>$ \$mapping\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_a77d372ed259d7e188f408e350d4f1d66}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_a77d372ed259d7e188f408e350d4f1d66}} 
+\index{ResolveTargetEntityListener@{ResolveTargetEntityListener}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!ResolveTargetEntityListener@{ResolveTargetEntityListener}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an array of events this subscriber wants to listen to.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Event\+Subscriber}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_aec92544ea9ce24d0f907772bbba0249c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_aec92544ea9ce24d0f907772bbba0249c}} 
+\index{ResolveTargetEntityListener@{ResolveTargetEntityListener}!loadClassMetadata@{loadClassMetadata}}
+\index{loadClassMetadata@{loadClassMetadata}!ResolveTargetEntityListener@{ResolveTargetEntityListener}}
+\doxysubsubsection{\texorpdfstring{loadClassMetadata()}{loadClassMetadata()}}
+{\footnotesize\ttfamily load\+Class\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_load_class_metadata_event_args}{Load\+Class\+Metadata\+Event\+Args}}}]{\$args }\end{DoxyParamCaption})}
+
+Processes event and resolves new target entity names. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Resolve\+Target\+Entity\+Listener.\+php\end{DoxyCompactItemize}

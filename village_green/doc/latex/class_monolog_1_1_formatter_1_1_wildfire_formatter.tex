@@ -1,0 +1,90 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_wildfire_formatter}{}\doxysection{Wildfire\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_wildfire_formatter}\index{WildfireFormatter@{WildfireFormatter}}
+Inheritance diagram for Wildfire\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_formatter_1_1_wildfire_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_wildfire_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{\+\_\+\+\_\+construct}} (?string \$date\+Format=null)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_wildfire_formatter_a11f3cde7544eac9e23b0517d513a362b}{format\+Batch}} (array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_wildfire_formatter_a2d4d3690b559d4e719a6c3cf7b0c3660}{normalize}} (\$data, int \$depth=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Serializes a log message according to Wildfire\textquotesingle{}s header requirements
+
+\begin{DoxyAuthor}{Author}
+Eric Clemmons (@ericclemmons) \href{mailto:eric@uxdriven.com}{\texttt{ eric@uxdriven.\+com}} 
+
+Christophe Coevoet \href{mailto:stof@notk.org}{\texttt{ stof@notk.\+org}} 
+
+Kirill ch\+Ebba Chebunin \href{mailto:iam@chebba.org}{\texttt{ iam@chebba.\+org}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_wildfire_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}\label{class_monolog_1_1_formatter_1_1_wildfire_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}} 
+\index{WildfireFormatter@{WildfireFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!WildfireFormatter@{WildfireFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{?string}]{\$date\+Format = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$date\+Format} & The format of the timestamp\+: one supported by Date\+Time\+::format \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{Normalizer\+Formatter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_wildfire_formatter_a11f3cde7544eac9e23b0517d513a362b}\label{class_monolog_1_1_formatter_1_1_wildfire_formatter_a11f3cde7544eac9e23b0517d513a362b}} 
+\index{WildfireFormatter@{WildfireFormatter}!formatBatch@{formatBatch}}
+\index{formatBatch@{formatBatch}!WildfireFormatter@{WildfireFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatch()}{formatBatch()}}
+{\footnotesize\ttfamily format\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Formats a set of log records.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & A set of records to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted set of records
+\end{DoxyReturn}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records
+
+@phpstan-\/return never 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a11f3cde7544eac9e23b0517d513a362b}{Normalizer\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_wildfire_formatter_a2d4d3690b559d4e719a6c3cf7b0c3660}\label{class_monolog_1_1_formatter_1_1_wildfire_formatter_a2d4d3690b559d4e719a6c3cf7b0c3660}} 
+\index{WildfireFormatter@{WildfireFormatter}!normalize@{normalize}}
+\index{normalize@{normalize}!WildfireFormatter@{WildfireFormatter}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily normalize (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{int}]{\$depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+null$\vert$scalar$\vert$array\texorpdfstring{$<$}{<}array$\vert$scalar$\vert$null\texorpdfstring{$>$}{>}$\vert$object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Wildfire\+Formatter.\+php\end{DoxyCompactItemize}

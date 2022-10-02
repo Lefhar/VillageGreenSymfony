@@ -1,0 +1,69 @@
+\hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection}{}\doxysection{Connection Interface Reference}
+\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection}\index{Connection@{Connection}}
+Inheritance diagram for Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a27c4ae186b3a288e5f122bff50e45d1a}{get\+Stream}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a56d8dab8c4762b9d2da5606fca4dafd1}{get\+Protocol\+Versions}} ()
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+{\bfseries close} ()
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_abaa17858cbf1caa4ece15129e5241a54}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_abaa17858cbf1caa4ece15129e5241a54}} 
+{\bfseries on\+Close} (callable \$on\+Close)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a7a15334d1688d75af2bf16436f26f15d}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a7a15334d1688d75af2bf16436f26f15d}} 
+{\bfseries get\+Local\+Address} ()
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_ac9df36d4099edaa6a9a9a1b344d1bded}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_ac9df36d4099edaa6a9a9a1b344d1bded}} 
+{\bfseries get\+Remote\+Address} ()
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a6dbdbfe84a7d269d29c6a767d80d9d58}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a6dbdbfe84a7d269d29c6a767d80d9d58}} 
+{\bfseries get\+Tls\+Info} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a56d8dab8c4762b9d2da5606fca4dafd1}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a56d8dab8c4762b9d2da5606fca4dafd1}} 
+\index{Connection@{Connection}!getProtocolVersions@{getProtocolVersions}}
+\index{getProtocolVersions@{getProtocolVersions}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getProtocolVersions()}{getProtocolVersions()}}
+{\footnotesize\ttfamily get\+Protocol\+Versions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} Array of supported protocol versions. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_http1_connection_a56d8dab8c4762b9d2da5606fca4dafd1}{Http1\+Connection}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_http2_connection_a56d8dab8c4762b9d2da5606fca4dafd1}{Http2\+Connection}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a27c4ae186b3a288e5f122bff50e45d1a}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_a27c4ae186b3a288e5f122bff50e45d1a}} 
+\index{Connection@{Connection}!getStream@{getStream}}
+\index{getStream@{getStream}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getStream()}{getStream()}}
+{\footnotesize\ttfamily get\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}Stream$\vert$null\texorpdfstring{$>$}{>} Returns a stream for the given request, or null if no stream is available or if the connection is not suited for the given request. The first request for a stream on a new connection MUST resolve the promise with a \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream}{Stream}} instance. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_http1_connection_a27c4ae186b3a288e5f122bff50e45d1a}{Http1\+Connection}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_http2_connection_a27c4ae186b3a288e5f122bff50e45d1a}{Http2\+Connection}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/Connection.\+php\end{DoxyCompactItemize}

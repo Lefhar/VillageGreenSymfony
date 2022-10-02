@@ -1,0 +1,87 @@
+\hypertarget{class_amp_1_1_loop_1_1_internal_1_1_timer_queue}{}\doxysection{Timer\+Queue Class Reference}
+\label{class_amp_1_1_loop_1_1_internal_1_1_timer_queue}\index{TimerQueue@{TimerQueue}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a42b01cd9d7856b869717c09879d48708}{insert}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} \$watcher)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a661b301ef63e90473024331aa08911c9}{remove}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} \$watcher)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a2c6df1cf20470e2330d10c8dca169bd5}{extract}} (int \$\mbox{\hyperlink{class_amp_1_1_loop_af1e393aa6d7074ae6ddc34df2ed39c03}{now}})
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_af0d2b98b49496eaef856a5b277fa775b}{peek}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Uses a binary tree stored in an array to implement a heap. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a2c6df1cf20470e2330d10c8dca169bd5}\label{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a2c6df1cf20470e2330d10c8dca169bd5}} 
+\index{TimerQueue@{TimerQueue}!extract@{extract}}
+\index{extract@{extract}!TimerQueue@{TimerQueue}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily extract (\begin{DoxyParamCaption}\item[{int}]{\$now }\end{DoxyParamCaption})}
+
+Deletes and returns the \mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} on top of the heap if it has expired, otherwise null is returned. Time complexity\+: O(log(n)).
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$now} & Current loop time.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Watcher$\vert$null Expired watcher at the top of the heap or null if the watcher has not expired.
+\end{DoxyReturn}
+@psalm-\/return Watcher$<$int$>$$\vert$null \mbox{\Hypertarget{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a42b01cd9d7856b869717c09879d48708}\label{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a42b01cd9d7856b869717c09879d48708}} 
+\index{TimerQueue@{TimerQueue}!insert@{insert}}
+\index{insert@{insert}!TimerQueue@{TimerQueue}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}}]{\$watcher }\end{DoxyParamCaption})}
+
+Inserts the watcher into the queue. Time complexity\+: O(log(n)).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param Watcher$<$int$>$ \$watcher
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_af0d2b98b49496eaef856a5b277fa775b}\label{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_af0d2b98b49496eaef856a5b277fa775b}} 
+\index{TimerQueue@{TimerQueue}!peek@{peek}}
+\index{peek@{peek}!TimerQueue@{TimerQueue}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the expiration time value at the top of the heap. Time complexity\+: O(1).
+
+\begin{DoxyReturn}{Returns}
+int$\vert$null Expiration time of the watcher at the top of the heap or null if the heap is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a661b301ef63e90473024331aa08911c9}\label{class_amp_1_1_loop_1_1_internal_1_1_timer_queue_a661b301ef63e90473024331aa08911c9}} 
+\index{TimerQueue@{TimerQueue}!remove@{remove}}
+\index{remove@{remove}!TimerQueue@{TimerQueue}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}}]{\$watcher }\end{DoxyParamCaption})}
+
+Removes the given watcher from the queue. Time complexity\+: O(log(n)).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param Watcher$<$int$>$ \$watcher
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Loop/\+Internal/Timer\+Queue.\+php\end{DoxyCompactItemize}

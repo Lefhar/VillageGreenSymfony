@@ -1,0 +1,278 @@
+\hypertarget{class_amp_1_1_loop_1_1_event_driver}{}\doxysection{Event\+Driver Class Reference}
+\label{class_amp_1_1_loop_1_1_event_driver}\index{EventDriver@{EventDriver}}
+Inheritance diagram for Event\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_loop_1_1_event_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_ac421a27f9b721a9845fde9288ff879b6}{cancel}} (string \$watcher\+Id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_afb0fafe7e02a3ae1993c01c19fad2bae}{run}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a8b6fc76a620d7557d06e9a11a9ffb509}{stop}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a6266ee8214f93f0309edf7036f5f98c7}{now}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{get\+Handle}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_adc36dedf4b7b9d79eed5296b94001311}\label{class_amp_1_1_loop_1_1_event_driver_adc36dedf4b7b9d79eed5296b94001311}} 
+static {\bfseries is\+Supported} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a19b11129dd58c3181cabf99650d1e107}{dispatch}} (bool \$blocking)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a93e1cf21b8a596cee99004644f90d8a0}{activate}} (array \$watchers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_event_driver_a1327821d0ed999d648c0c0d8ad552e58}{deactivate}} (\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} \$watcher)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a095c5d389db211932136b53f25f39685}\label{class_amp_1_1_loop_1_1_event_driver_a095c5d389db211932136b53f25f39685}} 
+\index{EventDriver@{EventDriver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$resource} & \\
+\hline
+ & {\em \$what} & \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$resource} & \\
+\hline
+ & {\em \$what} & \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$signum} & \\
+\hline
+ & {\em \$what} & \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a421831a265621325e1fdd19aace0c758}\label{class_amp_1_1_loop_1_1_event_driver_a421831a265621325e1fdd19aace0c758}} 
+\index{EventDriver@{EventDriver}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@code\+Coverage\+Ignore 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a93e1cf21b8a596cee99004644f90d8a0}\label{class_amp_1_1_loop_1_1_event_driver_a93e1cf21b8a596cee99004644f90d8a0}} 
+\index{EventDriver@{EventDriver}!activate@{activate}}
+\index{activate@{activate}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily activate (\begin{DoxyParamCaption}\item[{array}]{\$watchers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Activates (enables) all the given watchers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}\mbox{[}$\,$\mbox{]} & {\em \$watchers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Too\+Few\+Arguments \href{https://github.com/JetBrains/phpstorm-stubs/pull/763}{\texttt{ https\+://github.\+com/\+Jet\+Brains/phpstorm-\/stubs/pull/763}}
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a93e1cf21b8a596cee99004644f90d8a0}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_ac421a27f9b721a9845fde9288ff879b6}\label{class_amp_1_1_loop_1_1_event_driver_ac421a27f9b721a9845fde9288ff879b6}} 
+\index{EventDriver@{EventDriver}!cancel@{cancel}}
+\index{cancel@{cancel}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily cancel (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id }\end{DoxyParamCaption})}
+
+\{Cancel a watcher.
+
+This will detach the event loop from all resources that are associated to the watcher. After this operation the watcher is permanently invalid. Calling this function MUST NOT fail, even if passed an invalid watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_ac421a27f9b721a9845fde9288ff879b6}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a1327821d0ed999d648c0c0d8ad552e58}\label{class_amp_1_1_loop_1_1_event_driver_a1327821d0ed999d648c0c0d8ad552e58}} 
+\index{EventDriver@{EventDriver}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily deactivate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}}}]{\$watcher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Deactivates (disables) the given watcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_watcher}{Watcher}} & {\em \$watcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a1327821d0ed999d648c0c0d8ad552e58}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a19b11129dd58c3181cabf99650d1e107}\label{class_amp_1_1_loop_1_1_event_driver_a19b11129dd58c3181cabf99650d1e107}} 
+\index{EventDriver@{EventDriver}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{bool}]{\$blocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Dispatches any pending read/write, timer, and signal events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$blocking} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a19b11129dd58c3181cabf99650d1e107}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a4b28feacbac39dacb8204a26d1a0ba7b}\label{class_amp_1_1_loop_1_1_event_driver_a4b28feacbac39dacb8204a26d1a0ba7b}} 
+\index{EventDriver@{EventDriver}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Get the underlying loop handle.
+
+Example\+: the {\ttfamily uv\+\_\+loop} resource for {\ttfamily libuv} or the {\ttfamily Ev\+Loop} object for {\ttfamily libev} or {\ttfamily null} for a native driver.
+
+Note\+: This function is {\itshape not} exposed in the {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop}{Loop}}} class. Users shall access it directly on the respective loop instance.
+
+\begin{DoxyReturn}{Returns}
+null$\vert$object$\vert$resource The loop handle the event loop operates on. {\ttfamily null} if there is none.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a4b28feacbac39dacb8204a26d1a0ba7b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a6266ee8214f93f0309edf7036f5f98c7}\label{class_amp_1_1_loop_1_1_event_driver_a6266ee8214f93f0309edf7036f5f98c7}} 
+\index{EventDriver@{EventDriver}!now@{now}}
+\index{now@{now}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily int Internal timestamp for now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the current loop time in millisecond increments. Note this value does not necessarily correlate to wall-\/clock time, rather the value returned is meant to be used in relative comparisons to prior values returned by this method (intervals, expiration calculations, etc.) and is only updated once per loop tick.
+
+Extending classes should override this function to return a value cached once per loop tick.
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a80593ccdc0339775ddd5d82c37ca4f6b}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_afb0fafe7e02a3ae1993c01c19fad2bae}\label{class_amp_1_1_loop_1_1_event_driver_afb0fafe7e02a3ae1993c01c19fad2bae}} 
+\index{EventDriver@{EventDriver}!run@{run}}
+\index{run@{run}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Run the event loop.
+
+One iteration of the loop is called one \char`\"{}tick\char`\"{}. A tick covers the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Activate watchers created / enabled in the last tick / before {\ttfamily \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_afb0fafe7e02a3ae1993c01c19fad2bae}{run()}}}.
+\item Execute all enabled defer watchers.
+\item Execute all due timer, pending signal and actionable stream callbacks, each only once per tick.
+\end{DoxyEnumerate}
+
+The loop MUST continue to run until it is either stopped explicitly, no referenced watchers exist anymore, or an exception is thrown that cannot be handled. Exceptions that cannot be handled are exceptions thrown from an error handler or exceptions that would be passed to an error handler but none exists to handle them.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} @psalm-\/suppress Too\+Few\+Arguments \href{https://github.com/JetBrains/phpstorm-stubs/pull/763}{\texttt{ https\+://github.\+com/\+Jet\+Brains/phpstorm-\/stubs/pull/763}}
+
+@psalm-\/suppress Too\+Few\+Arguments \href{https://github.com/JetBrains/phpstorm-stubs/pull/763}{\texttt{ https\+://github.\+com/\+Jet\+Brains/phpstorm-\/stubs/pull/763}}
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_afb0fafe7e02a3ae1993c01c19fad2bae}{Driver}}.
+
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_event_driver_a8b6fc76a620d7557d06e9a11a9ffb509}\label{class_amp_1_1_loop_1_1_event_driver_a8b6fc76a620d7557d06e9a11a9ffb509}} 
+\index{EventDriver@{EventDriver}!stop@{stop}}
+\index{stop@{stop}!EventDriver@{EventDriver}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Stop the event loop.
+
+When an event loop is stopped, it continues with its current tick and exits the loop afterwards. Multiple calls to stop MUST be ignored and MUST NOT raise an exception.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_loop_1_1_driver_a8b6fc76a620d7557d06e9a11a9ffb509}{Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Loop/Event\+Driver.\+php\end{DoxyCompactItemize}

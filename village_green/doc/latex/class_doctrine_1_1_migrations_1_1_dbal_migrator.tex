@@ -1,0 +1,40 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_dbal_migrator}{}\doxysection{Dbal\+Migrator Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_dbal_migrator}\index{DbalMigrator@{DbalMigrator}}
+Inheritance diagram for Dbal\+Migrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_migrations_1_1_dbal_migrator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_dbal_migrator_a167757d987e4f4dd9ee2fd1dcda889aa}\label{class_doctrine_1_1_migrations_1_1_dbal_migrator_a167757d987e4f4dd9ee2fd1dcda889aa}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$connection, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_event_dispatcher}{Event\+Dispatcher}} \$dispatcher, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_executor}{Executor}} \$executor, \mbox{\hyperlink{interface_psr_1_1_log_1_1_logger_interface}{Logger\+Interface}} \$logger, \mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch}{Stopwatch}} \$stopwatch)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_dbal_migrator_a255942c1c0a9ed21dbef246507a1e9fd}{migrate}} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_metadata_1_1_migration_plan_list}{Migration\+Plan\+List}} \$migrations\+Plan, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_migrator_configuration}{Migrator\+Configuration}} \$migrator\+Configuration)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_dbal_migrator}{Dbal\+Migrator}} class is responsible for generating and executing the SQL for a migration. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_dbal_migrator_a255942c1c0a9ed21dbef246507a1e9fd}\label{class_doctrine_1_1_migrations_1_1_dbal_migrator_a255942c1c0a9ed21dbef246507a1e9fd}} 
+\index{DbalMigrator@{DbalMigrator}!migrate@{migrate}}
+\index{migrate@{migrate}!DbalMigrator@{DbalMigrator}}
+\doxysubsubsection{\texorpdfstring{migrate()}{migrate()}}
+{\footnotesize\ttfamily migrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_metadata_1_1_migration_plan_list}{Migration\+Plan\+List}}}]{\$migrations\+Plan,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_migrator_configuration}{Migrator\+Configuration}}}]{\$migrator\+Configuration }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, Query\mbox{[}$\,$\mbox{]}$>$ A list of SQL statements executed, grouped by migration version
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_migrator_a255942c1c0a9ed21dbef246507a1e9fd}{Migrator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/Dbal\+Migrator.\+php\end{DoxyCompactItemize}

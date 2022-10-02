@@ -1,0 +1,430 @@
+\hypertarget{class_league_1_1_uri_1_1_parser}{}\doxysection{Parser Class Reference}
+\label{class_league_1_1_uri_1_1_parser}\index{Parser@{Parser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_ab86960795fc8497a5c94987e2929f4a9}{is\+Scheme}} (string \$scheme)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_acf193acf4fbb52cb3cbabbb9ce05d5cc}{is\+Host}} (string \$host)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a55e0629062c752b3676c6f82df54e34a}{is\+Port}} (\$port)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a00dd60cbf5a6eaa1502abf5a11f1a457}{\+\_\+\+\_\+invoke}} (string \$uri)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a282c0fa09e3895aad7195d6c7071ca16}{parse}} (string \$uri)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a2b2607b26773ee8f56387c5cf8b8e3ae}{INVALID\+\_\+\+URI\+\_\+\+CHARS}} = \char`\"{}\textbackslash{}x00\textbackslash{}x01\textbackslash{}x02\textbackslash{}x03\textbackslash{}x04\textbackslash{}x05\textbackslash{}x06\textbackslash{}x07\textbackslash{}x08\textbackslash{}x09\textbackslash{}x0\+A\textbackslash{}x0\+B\textbackslash{}x0\+C\textbackslash{}x0\+D\textbackslash{}x0\+E\textbackslash{}x0\+F\textbackslash{}x10\textbackslash{}x11\textbackslash{}x12\textbackslash{}x13\textbackslash{}x14\textbackslash{}x15\textbackslash{}x16\textbackslash{}x17\textbackslash{}x18\textbackslash{}x19\textbackslash{}x1\+A\textbackslash{}x1\+B\textbackslash{}x1\+C\textbackslash{}x1\+D\textbackslash{}x1\+E\textbackslash{}x1\+F\textbackslash{}x7F\char`\"{}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a1754ccd508ad7e75d6cbf134aa1bdf23}{SCHEME\+\_\+\+VALID\+\_\+\+STARTING\+\_\+\+CHARS}} = \textquotesingle{}abcdefghijklmnopqrstuvwxyz\+ABCDEFGHIJKLMNOPQRSTUVWXYZ\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a81634b62d2e5ec5e1466e4d5d8314818}{SCHEME\+\_\+\+VALID\+\_\+\+CHARS}} = \textquotesingle{}abcdefghijklmnopqrstuvwxyz\+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+.-\/\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a2c98147ab945ce9022f57b1eb0e48785}{LABEL\+\_\+\+VALID\+\_\+\+STARTING\+\_\+\+CHARS}} = \textquotesingle{}0123456789abcdefghijklmnopqrstuvwxyz\+ABCDEFGHIJKLMNOPQRSTUVWXYZ\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a637d2ae62796a7867d356ab021a45a82}{LOCAL\+\_\+\+LINK\+\_\+\+PREFIX}} = \textquotesingle{}1111111010\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_ab80baa685f832fbe20e17a31b3386fc7}{URI\+\_\+\+COMPONENTS}}
+\item 
+const \mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a323150f9c03d823c5887731d4330d4b8}{SUB\+\_\+\+DELIMITERS}} = \textquotesingle{}!\$\&\textbackslash{}\textquotesingle{}()$\ast$+,;=\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a8448c81bf80141813216a91ce9b8532a}{is\+Registered\+Name}} (string \$host)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a6fd0eba5514ba78c510424385e4dee51}{parse\+Scheme\+Specific\+Part}} (string \$uri)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_ade7b0492dba42e2c0cd207371fd423ae}{parse\+Hostname}} (string \$hostname)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_af60c1cd3fb858fcd1ee394ca9bd35700}{filter\+Host}} (\$host)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_ac1054b8b406d0a90bb8179cf083ec7b6}{filter\+Port}} (\$port)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a1bfe067295c64da8c49f836a029bfaa1}{parse\+Path\+Query\+And\+Fragment}} (string \$uri)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a7a478e00188f6140421f64063db166cf}{fallback\+Parser}} (string \$uri)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a0cc92e051e1cb16e54d3089f796378e2}{to\+Ascii}} (string \$label)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a327e18e49cbd19955965d8e9325aabbf}{is\+Host\+Label}} (\$label)
+\item 
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a56954163dc5b9e1f0bb6e05306152c32}{is\+Ipv6\+Host}} (string \$ipv6)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a00dd60cbf5a6eaa1502abf5a11f1a457}\label{class_league_1_1_uri_1_1_parser_a00dd60cbf5a6eaa1502abf5a11f1a457}} 
+\index{Parser@{Parser}!\_\_invoke@{\_\_invoke}}
+\index{\_\_invoke@{\_\_invoke}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{\_\_invoke()}{\_\_invoke()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+invoke (\begin{DoxyParamCaption}\item[{string}]{\$uri }\end{DoxyParamCaption})}
+
+Parse a URI string into its components.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a282c0fa09e3895aad7195d6c7071ca16}{Parser\+::parse}}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & if the URI contains invalid characters \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a7a478e00188f6140421f64063db166cf}\label{class_league_1_1_uri_1_1_parser_a7a478e00188f6140421f64063db166cf}} 
+\index{Parser@{Parser}!fallbackParser@{fallbackParser}}
+\index{fallbackParser@{fallbackParser}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{fallbackParser()}{fallbackParser()}}
+{\footnotesize\ttfamily fallback\+Parser (\begin{DoxyParamCaption}\item[{string}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Extract components from an URI containing a colon.
+
+Depending on the colon \char`\"{}\+:\char`\"{} position and on the string composition before the presence of the colon, the URI will be considered to have an scheme or not.
+
+
+\begin{DoxyItemize}
+\item In case no valid scheme is found according to RFC3986 the URI will be parsed as an URI without a scheme and an authority 
+\item In case an authority part is detected the URI specific part is parsed as an URI without scheme 
+\end{DoxyItemize}
+
+ex\+: email\+:\href{mailto:johndoe@thephpleague.com}{\texttt{ johndoe@thephpleague.\+com}}?subject=Hellow\%20World!
+
+This method returns an associative array containing all the URI components.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.1}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+1}} 
+
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a1bfe067295c64da8c49f836a029bfaa1}{Parser\+::parse\+Path\+Query\+And\+Fragment}} 
+
+\mbox{\hyperlink{class_league_1_1_uri_1_1_parser_a6fd0eba5514ba78c510424385e4dee51}{Parser\+::parse\+Scheme\+Specific\+Part}}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & If the URI scheme component is empty \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_af60c1cd3fb858fcd1ee394ca9bd35700}\label{class_league_1_1_uri_1_1_parser_af60c1cd3fb858fcd1ee394ca9bd35700}} 
+\index{Parser@{Parser}!filterHost@{filterHost}}
+\index{filterHost@{filterHost}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{filterHost()}{filterHost()}}
+{\footnotesize\ttfamily filter\+Host (\begin{DoxyParamCaption}\item[{}]{\$host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+validate the host component.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$host} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & If the hostname is invalid\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_ac1054b8b406d0a90bb8179cf083ec7b6}\label{class_league_1_1_uri_1_1_parser_ac1054b8b406d0a90bb8179cf083ec7b6}} 
+\index{Parser@{Parser}!filterPort@{filterPort}}
+\index{filterPort@{filterPort}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{filterPort()}{filterPort()}}
+{\footnotesize\ttfamily filter\+Port (\begin{DoxyParamCaption}\item[{}]{\$port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate a port number.
+
+An exception is raised for ports outside the established TCP and UDP port ranges.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$port} & the port number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & If the port number is invalid.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+null$\vert$int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_acf193acf4fbb52cb3cbabbb9ce05d5cc}\label{class_league_1_1_uri_1_1_parser_acf193acf4fbb52cb3cbabbb9ce05d5cc}} 
+\index{Parser@{Parser}!isHost@{isHost}}
+\index{isHost@{isHost}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isHost()}{isHost()}}
+{\footnotesize\ttfamily is\+Host (\begin{DoxyParamCaption}\item[{string}]{\$host }\end{DoxyParamCaption})}
+
+Returns whether a hostname is valid.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.2.2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2.\+2}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a327e18e49cbd19955965d8e9325aabbf}\label{class_league_1_1_uri_1_1_parser_a327e18e49cbd19955965d8e9325aabbf}} 
+\index{Parser@{Parser}!isHostLabel@{isHostLabel}}
+\index{isHostLabel@{isHostLabel}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isHostLabel()}{isHostLabel()}}
+{\footnotesize\ttfamily is\+Host\+Label (\begin{DoxyParamCaption}\item[{}]{\$label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns whether the registered name label is valid.
+
+DEPRECATION WARNING! This method will be removed in the next major point release
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000345}{Deprecated}}]1.\+4.\+0 this method is no longer used to validated the host component @code\+Coverage\+Ignore\end{DoxyRefDesc}
+
+
+A valid registered name label MUST conform to the following ABNF
+
+reg-\/name = $\ast$( unreserved / pct-\/encoded / sub-\/delims )
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.2.2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2.\+2}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$label} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a56954163dc5b9e1f0bb6e05306152c32}\label{class_league_1_1_uri_1_1_parser_a56954163dc5b9e1f0bb6e05306152c32}} 
+\index{Parser@{Parser}!isIpv6Host@{isIpv6Host}}
+\index{isIpv6Host@{isIpv6Host}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isIpv6Host()}{isIpv6Host()}}
+{\footnotesize\ttfamily is\+Ipv6\+Host (\begin{DoxyParamCaption}\item[{string}]{\$ipv6 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate an IPv6 host.
+
+DEPRECATION WARNING! This method will be removed in the next major point release
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000346}{Deprecated}}]1.\+4.\+0 this method is no longer used to validated the host component @code\+Coverage\+Ignore\end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc6874\#section-2}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc6874\#section-\/2}} 
+
+\href{http://tools.ietf.org/html/rfc6874\#section-4}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc6874\#section-\/4}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a55e0629062c752b3676c6f82df54e34a}\label{class_league_1_1_uri_1_1_parser_a55e0629062c752b3676c6f82df54e34a}} 
+\index{Parser@{Parser}!isPort@{isPort}}
+\index{isPort@{isPort}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isPort()}{isPort()}}
+{\footnotesize\ttfamily is\+Port (\begin{DoxyParamCaption}\item[{}]{\$port }\end{DoxyParamCaption})}
+
+Returns whether a port is valid.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.2.2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2.\+2}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a8448c81bf80141813216a91ce9b8532a}\label{class_league_1_1_uri_1_1_parser_a8448c81bf80141813216a91ce9b8532a}} 
+\index{Parser@{Parser}!isRegisteredName@{isRegisteredName}}
+\index{isRegisteredName@{isRegisteredName}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isRegisteredName()}{isRegisteredName()}}
+{\footnotesize\ttfamily is\+Registered\+Name (\begin{DoxyParamCaption}\item[{string}]{\$host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns whether the host is an IPv4 or a registered named.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc3986\#section-3.2.2}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2.\+2}}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_missing_idn_support}{Missing\+Idn\+Support}}} & if the registered name contains non-\/\+ASCII characters and IDN support or ICU requirement are not available or met. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_ab86960795fc8497a5c94987e2929f4a9}\label{class_league_1_1_uri_1_1_parser_ab86960795fc8497a5c94987e2929f4a9}} 
+\index{Parser@{Parser}!isScheme@{isScheme}}
+\index{isScheme@{isScheme}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isScheme()}{isScheme()}}
+{\footnotesize\ttfamily is\+Scheme (\begin{DoxyParamCaption}\item[{string}]{\$scheme }\end{DoxyParamCaption})}
+
+Returns whether a scheme is valid.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.1}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+1}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a282c0fa09e3895aad7195d6c7071ca16}\label{class_league_1_1_uri_1_1_parser_a282c0fa09e3895aad7195d6c7071ca16}} 
+\index{Parser@{Parser}!parse@{parse}}
+\index{parse@{parse}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}\item[{string}]{\$uri }\end{DoxyParamCaption})}
+
+Parse an URI string into its components.
+
+This method parses a URI and returns an associative array containing any of the various components of the URI that are present.
+
+{\ttfamily  \$components = (new Parser())-\/\texorpdfstring{$>$}{>}parse(\textquotesingle{}\href{http://foo@test.example.com:42?query\#'}{\texttt{ http\+://foo@test.\+example.\+com\+:42?query\#\textquotesingle{}}}); var\+\_\+export(\$components); //will display array( \textquotesingle{}scheme\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}http\textquotesingle{}, // the URI scheme component \textquotesingle{}user\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}foo\textquotesingle{}, // the URI user component \textquotesingle{}pass\textquotesingle{} =\texorpdfstring{$>$}{>} null, // the URI pass component \textquotesingle{}host\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}test.\+example.\+com\textquotesingle{}, // the URI host component \textquotesingle{}port\textquotesingle{} =\texorpdfstring{$>$}{>} 42, // the URI port component \textquotesingle{}path\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, // the URI path component \textquotesingle{}query\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}query\textquotesingle{}, // the URI query component \textquotesingle{}fragment\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}\textquotesingle{}, // the URI fragment component ); }
+
+The returned array is similar to PHP\textquotesingle{}s parse\+\_\+url return value with the following differences\+:
+
+
+\begin{DoxyItemize}
+\item All components are always present in the returned array 
+\item Empty and undefined component are treated differently. And empty component is set to the empty string while an undefined component is set to the {\ttfamily null} value. 
+\item The path component is never undefined 
+\item The method parses the URI following the RFC3986 rules but you are still required to validate the returned components against its related scheme specific rules. 
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986}} 
+
+\href{https://tools.ietf.org/html/rfc3986\#section-2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/2}}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & if the URI contains invalid characters \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_ade7b0492dba42e2c0cd207371fd423ae}\label{class_league_1_1_uri_1_1_parser_ade7b0492dba42e2c0cd207371fd423ae}} 
+\index{Parser@{Parser}!parseHostname@{parseHostname}}
+\index{parseHostname@{parseHostname}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parseHostname()}{parseHostname()}}
+{\footnotesize\ttfamily parse\+Hostname (\begin{DoxyParamCaption}\item[{string}]{\$hostname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse and validate the URI hostname.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & If the hostname is invalid \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a1bfe067295c64da8c49f836a029bfaa1}\label{class_league_1_1_uri_1_1_parser_a1bfe067295c64da8c49f836a029bfaa1}} 
+\index{Parser@{Parser}!parsePathQueryAndFragment@{parsePathQueryAndFragment}}
+\index{parsePathQueryAndFragment@{parsePathQueryAndFragment}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parsePathQueryAndFragment()}{parsePathQueryAndFragment()}}
+{\footnotesize\ttfamily parse\+Path\+Query\+And\+Fragment (\begin{DoxyParamCaption}\item[{string}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Extract Components from an URI without scheme or authority part.
+
+The URI contains a path component and MUST adhere to path requirements of RFC3986. The path can be
+
+{\ttfamily  path = path-\/abempty ; begins with \char`\"{}/\char`\"{} or is empty / path-\/absolute ; begins with \char`\"{}/\char`\"{} but not \char`\"{}//\char`\"{} / path-\/noscheme ; begins with a non-\/colon segment / path-\/rootless ; begins with a segment / path-\/empty ; zero characters }
+
+ex\+: path?q\+::f ex\+: /path ex\+: /pa\+:th\+::f
+
+This method returns an associative array containing all URI components.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.3}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+3}}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & If the path component is invalid \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a6fd0eba5514ba78c510424385e4dee51}\label{class_league_1_1_uri_1_1_parser_a6fd0eba5514ba78c510424385e4dee51}} 
+\index{Parser@{Parser}!parseSchemeSpecificPart@{parseSchemeSpecificPart}}
+\index{parseSchemeSpecificPart@{parseSchemeSpecificPart}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parseSchemeSpecificPart()}{parseSchemeSpecificPart()}}
+{\footnotesize\ttfamily parse\+Scheme\+Specific\+Part (\begin{DoxyParamCaption}\item[{string}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Extract components from a URI without a scheme part.
+
+The URI MUST start with the authority component preceded by its delimiter the double slash (\textquotesingle{}//\textquotesingle{})
+
+Example\+: //user\+:pass@host\+:42/path?query\+::fragment
+
+The authority MUST adhere to the RFC3986 requirements.
+
+If the URI contains a path component, it MUST be empty or absolute according to RFC3986 path classification.
+
+This method returns an associative array containing all URI components.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://tools.ietf.org/html/rfc3986\#section-3.2}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+2}} 
+
+\href{https://tools.ietf.org/html/rfc3986\#section-3.3}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc3986\#section-\/3.\+3}}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_league_1_1_uri_1_1_exception}{Exception}}} & If any component of the URI is invalid \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a0cc92e051e1cb16e54d3089f796378e2}\label{class_league_1_1_uri_1_1_parser_a0cc92e051e1cb16e54d3089f796378e2}} 
+\index{Parser@{Parser}!toAscii@{toAscii}}
+\index{toAscii@{toAscii}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{toAscii()}{toAscii()}}
+{\footnotesize\ttfamily to\+Ascii (\begin{DoxyParamCaption}\item[{string}]{\$label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a registered name label to its IDNA ASCII form.
+
+DEPRECATION WARNING! This method will be removed in the next major point release
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000344}{Deprecated}}]1.\+4.\+0 this method is no longer used to validate RFC3987 compliant host component @code\+Coverage\+Ignore\end{DoxyRefDesc}
+
+
+Conversion is done only if the label contains none valid label characters if a \textquotesingle{}\textquotesingle{} sub delimiter is detected the label MUST be rawurldecode prior to making the conversion
+
+\begin{DoxyReturn}{Returns}
+string$\vert$false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a2b2607b26773ee8f56387c5cf8b8e3ae}\label{class_league_1_1_uri_1_1_parser_a2b2607b26773ee8f56387c5cf8b8e3ae}} 
+\index{Parser@{Parser}!INVALID\_URI\_CHARS@{INVALID\_URI\_CHARS}}
+\index{INVALID\_URI\_CHARS@{INVALID\_URI\_CHARS}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{INVALID\_URI\_CHARS}{INVALID\_URI\_CHARS}}
+{\footnotesize\ttfamily const INVALID\+\_\+\+URI\+\_\+\+CHARS = \char`\"{}\textbackslash{}x00\textbackslash{}x01\textbackslash{}x02\textbackslash{}x03\textbackslash{}x04\textbackslash{}x05\textbackslash{}x06\textbackslash{}x07\textbackslash{}x08\textbackslash{}x09\textbackslash{}x0\+A\textbackslash{}x0\+B\textbackslash{}x0\+C\textbackslash{}x0\+D\textbackslash{}x0\+E\textbackslash{}x0\+F\textbackslash{}x10\textbackslash{}x11\textbackslash{}x12\textbackslash{}x13\textbackslash{}x14\textbackslash{}x15\textbackslash{}x16\textbackslash{}x17\textbackslash{}x18\textbackslash{}x19\textbackslash{}x1\+A\textbackslash{}x1\+B\textbackslash{}x1\+C\textbackslash{}x1\+D\textbackslash{}x1\+E\textbackslash{}x1\+F\textbackslash{}x7F\char`\"{}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000338}{Deprecated}}]1.\+4.\+0 will be removed in the next major point release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a2c98147ab945ce9022f57b1eb0e48785}\label{class_league_1_1_uri_1_1_parser_a2c98147ab945ce9022f57b1eb0e48785}} 
+\index{Parser@{Parser}!LABEL\_VALID\_STARTING\_CHARS@{LABEL\_VALID\_STARTING\_CHARS}}
+\index{LABEL\_VALID\_STARTING\_CHARS@{LABEL\_VALID\_STARTING\_CHARS}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{LABEL\_VALID\_STARTING\_CHARS}{LABEL\_VALID\_STARTING\_CHARS}}
+{\footnotesize\ttfamily const LABEL\+\_\+\+VALID\+\_\+\+STARTING\+\_\+\+CHARS = \textquotesingle{}0123456789abcdefghijklmnopqrstuvwxyz\+ABCDEFGHIJKLMNOPQRSTUVWXYZ\textquotesingle{}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000341}{Deprecated}}]1.\+4.\+0 will be removed in the next major point release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a637d2ae62796a7867d356ab021a45a82}\label{class_league_1_1_uri_1_1_parser_a637d2ae62796a7867d356ab021a45a82}} 
+\index{Parser@{Parser}!LOCAL\_LINK\_PREFIX@{LOCAL\_LINK\_PREFIX}}
+\index{LOCAL\_LINK\_PREFIX@{LOCAL\_LINK\_PREFIX}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{LOCAL\_LINK\_PREFIX}{LOCAL\_LINK\_PREFIX}}
+{\footnotesize\ttfamily const LOCAL\+\_\+\+LINK\+\_\+\+PREFIX = \textquotesingle{}1111111010\textquotesingle{}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000342}{Deprecated}}]1.\+4.\+0 will be removed in the next major point release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a81634b62d2e5ec5e1466e4d5d8314818}\label{class_league_1_1_uri_1_1_parser_a81634b62d2e5ec5e1466e4d5d8314818}} 
+\index{Parser@{Parser}!SCHEME\_VALID\_CHARS@{SCHEME\_VALID\_CHARS}}
+\index{SCHEME\_VALID\_CHARS@{SCHEME\_VALID\_CHARS}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SCHEME\_VALID\_CHARS}{SCHEME\_VALID\_CHARS}}
+{\footnotesize\ttfamily const SCHEME\+\_\+\+VALID\+\_\+\+CHARS = \textquotesingle{}abcdefghijklmnopqrstuvwxyz\+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+.-\/\textquotesingle{}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000340}{Deprecated}}]1.\+4.\+0 will be removed in the next major point release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a1754ccd508ad7e75d6cbf134aa1bdf23}\label{class_league_1_1_uri_1_1_parser_a1754ccd508ad7e75d6cbf134aa1bdf23}} 
+\index{Parser@{Parser}!SCHEME\_VALID\_STARTING\_CHARS@{SCHEME\_VALID\_STARTING\_CHARS}}
+\index{SCHEME\_VALID\_STARTING\_CHARS@{SCHEME\_VALID\_STARTING\_CHARS}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SCHEME\_VALID\_STARTING\_CHARS}{SCHEME\_VALID\_STARTING\_CHARS}}
+{\footnotesize\ttfamily const SCHEME\+\_\+\+VALID\+\_\+\+STARTING\+\_\+\+CHARS = \textquotesingle{}abcdefghijklmnopqrstuvwxyz\+ABCDEFGHIJKLMNOPQRSTUVWXYZ\textquotesingle{}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000339}{Deprecated}}]1.\+4.\+0 will be removed in the next major point release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_a323150f9c03d823c5887731d4330d4b8}\label{class_league_1_1_uri_1_1_parser_a323150f9c03d823c5887731d4330d4b8}} 
+\index{Parser@{Parser}!SUB\_DELIMITERS@{SUB\_DELIMITERS}}
+\index{SUB\_DELIMITERS@{SUB\_DELIMITERS}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SUB\_DELIMITERS}{SUB\_DELIMITERS}}
+{\footnotesize\ttfamily const SUB\+\_\+\+DELIMITERS = \textquotesingle{}!\$\&\textbackslash{}\textquotesingle{}()$\ast$+,;=\textquotesingle{}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000343}{Deprecated}}]1.\+4.\+0 will be removed in the next major point release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_parser_ab80baa685f832fbe20e17a31b3386fc7}\label{class_league_1_1_uri_1_1_parser_ab80baa685f832fbe20e17a31b3386fc7}} 
+\index{Parser@{Parser}!URI\_COMPONENTS@{URI\_COMPONENTS}}
+\index{URI\_COMPONENTS@{URI\_COMPONENTS}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{URI\_COMPONENTS}{URI\_COMPONENTS}}
+{\footnotesize\ttfamily const URI\+\_\+\+COMPONENTS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'scheme'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'user'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'pass'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'host'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'port'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'path'} => \textcolor{stringliteral}{''}, \textcolor{stringliteral}{'query'} => \textcolor{keyword}{null}, \textcolor{stringliteral}{'fragment'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/league/uri-\/parser/src/Parser.\+php\end{DoxyCompactItemize}

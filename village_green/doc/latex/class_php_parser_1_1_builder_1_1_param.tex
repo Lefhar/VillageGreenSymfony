@@ -1,0 +1,175 @@
+\hypertarget{class_php_parser_1_1_builder_1_1_param}{}\doxysection{Param Class Reference}
+\label{class_php_parser_1_1_builder_1_1_param}\index{Param@{Param}}
+Inheritance diagram for Param\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_php_parser_1_1_builder_1_1_param}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_a196b3403dd3fe36fd9617ada22960ff1}{\+\_\+\+\_\+construct}} (string \$name)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_adb5631821b6300bd3dae6de59fe75231}{set\+Default}} (\$value)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_ade096bf521b5d05dcaff2ba1a42e9f71}{set\+Type}} (\$type)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_aad53c1267fcd2ba2e32681d23f94cbe7}{set\+Type\+Hint}} (\$type)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_ab0b271b7e6e8356f149917e25e469765}{make\+By\+Ref}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_af1a3484cab58a25f6633d1666c28155c}{make\+Variadic}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_ace927af3c97e66624a7b251c59f2ece2}{add\+Attribute}} (\$attribute)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_a3a0d17930cbcc57bef84064afcc1a837}{get\+Node}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{class_php_parser_1_1_builder_1_1_param_ab2fc40d43824ea3e1ce5d86dee0d763b}} 
+{\bfseries \$name}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a9df479534ecf05fd7575c6275d381687}\label{class_php_parser_1_1_builder_1_1_param_a9df479534ecf05fd7575c6275d381687}} 
+{\bfseries \$default} = null
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a9a4a6fba2208984cabb3afacadf33919}\label{class_php_parser_1_1_builder_1_1_param_a9a4a6fba2208984cabb3afacadf33919}} 
+{\bfseries \$type} = null
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a5649918e8bd2664fff6709e4e8d1e52f}\label{class_php_parser_1_1_builder_1_1_param_a5649918e8bd2664fff6709e4e8d1e52f}} 
+{\bfseries \$by\+Ref} = false
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a2987522ad8cd09d737db38638afbceec}\label{class_php_parser_1_1_builder_1_1_param_a2987522ad8cd09d737db38638afbceec}} 
+{\bfseries \$variadic} = false
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a49f822cb7e3d4ef90de32c7c25311dd2}\label{class_php_parser_1_1_builder_1_1_param_a49f822cb7e3d4ef90de32c7c25311dd2}} 
+{\bfseries \$attribute\+Groups} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a196b3403dd3fe36fd9617ada22960ff1}\label{class_php_parser_1_1_builder_1_1_param_a196b3403dd3fe36fd9617ada22960ff1}} 
+\index{Param@{Param}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Creates a parameter builder.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the parameter \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_ace927af3c97e66624a7b251c59f2ece2}\label{class_php_parser_1_1_builder_1_1_param_ace927af3c97e66624a7b251c59f2ece2}} 
+\index{Param@{Param}!addAttribute@{addAttribute}}
+\index{addAttribute@{addAttribute}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{addAttribute()}{addAttribute()}}
+{\footnotesize\ttfamily add\+Attribute (\begin{DoxyParamCaption}\item[{}]{\$attribute }\end{DoxyParamCaption})}
+
+Adds an attribute group.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Node\textbackslash{}\+Attribute | Node\textbackslash{}\+Attribute\+Group & {\em \$attribute} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_a3a0d17930cbcc57bef84064afcc1a837}\label{class_php_parser_1_1_builder_1_1_param_a3a0d17930cbcc57bef84064afcc1a837}} 
+\index{Param@{Param}!getNode@{getNode}}
+\index{getNode@{getNode}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily get\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the built parameter node.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_php_parser_1_1_node}{Node}}\textbackslash{}\+Param The built parameter node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_builder_a3a0d17930cbcc57bef84064afcc1a837}{Builder}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_ab0b271b7e6e8356f149917e25e469765}\label{class_php_parser_1_1_builder_1_1_param_ab0b271b7e6e8356f149917e25e469765}} 
+\index{Param@{Param}!makeByRef@{makeByRef}}
+\index{makeByRef@{makeByRef}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{makeByRef()}{makeByRef()}}
+{\footnotesize\ttfamily make\+By\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Make the parameter accept the value by reference.
+
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_af1a3484cab58a25f6633d1666c28155c}\label{class_php_parser_1_1_builder_1_1_param_af1a3484cab58a25f6633d1666c28155c}} 
+\index{Param@{Param}!makeVariadic@{makeVariadic}}
+\index{makeVariadic@{makeVariadic}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{makeVariadic()}{makeVariadic()}}
+{\footnotesize\ttfamily make\+Variadic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Make the parameter variadic
+
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_adb5631821b6300bd3dae6de59fe75231}\label{class_php_parser_1_1_builder_1_1_param_adb5631821b6300bd3dae6de59fe75231}} 
+\index{Param@{Param}!setDefault@{setDefault}}
+\index{setDefault@{setDefault}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{setDefault()}{setDefault()}}
+{\footnotesize\ttfamily set\+Default (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Sets default value for the parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & Default value to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_ade096bf521b5d05dcaff2ba1a42e9f71}\label{class_php_parser_1_1_builder_1_1_param_ade096bf521b5d05dcaff2ba1a42e9f71}} 
+\index{Param@{Param}!setType@{setType}}
+\index{setType@{setType}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily set\+Type (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Sets type for the parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Node\textbackslash{}\+Name | Node\textbackslash{}\+Identifier | Node\textbackslash{}\+Complex\+Type & {\em \$type} & Parameter type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_param_aad53c1267fcd2ba2e32681d23f94cbe7}\label{class_php_parser_1_1_builder_1_1_param_aad53c1267fcd2ba2e32681d23f94cbe7}} 
+\index{Param@{Param}!setTypeHint@{setTypeHint}}
+\index{setTypeHint@{setTypeHint}!Param@{Param}}
+\doxysubsubsection{\texorpdfstring{setTypeHint()}{setTypeHint()}}
+{\footnotesize\ttfamily set\+Type\+Hint (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Sets type for the parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Node\textbackslash{}\+Name | Node\textbackslash{}\+Identifier | Node\textbackslash{}\+Complex\+Type & {\em \$type} & Parameter type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface)
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000350}{Deprecated}}]Use \mbox{\hyperlink{class_php_parser_1_1_builder_1_1_param_ade096bf521b5d05dcaff2ba1a42e9f71}{set\+Type()}} instead \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Builder/Param.\+php\end{DoxyCompactItemize}

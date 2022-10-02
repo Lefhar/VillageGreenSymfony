@@ -1,0 +1,167 @@
+\hypertarget{class_monolog_1_1_handler_1_1_buffer_handler}{}\doxysection{Buffer\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_buffer_handler}\index{BufferHandler@{BufferHandler}}
+Inheritance diagram for Buffer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_buffer_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler_a5241e1190e598d7d4a3922032aa0f9ec}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} \$handler, int \$buffer\+Limit=0, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, bool \$flush\+On\+Overflow=false)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a7751f77b5263bcf940ece6e824a05b38}\label{class_monolog_1_1_handler_1_1_buffer_handler_a7751f77b5263bcf940ece6e824a05b38}} 
+{\bfseries flush} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler_aad3a8e83c90770a1f71a75bb51e782d8}{get\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a9285a7f684c72e9bb78fdef1bcbe3fd0}\label{class_monolog_1_1_handler_1_1_buffer_handler_a9285a7f684c72e9bb78fdef1bcbe3fd0}} 
+{\bfseries \$handler}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a17c521c4314b58090cecc52aae5e6a5f}\label{class_monolog_1_1_handler_1_1_buffer_handler_a17c521c4314b58090cecc52aae5e6a5f}} 
+{\bfseries \$buffer\+Size} = 0
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a3551ec3c817e8c79523e1eb397e0d62f}\label{class_monolog_1_1_handler_1_1_buffer_handler_a3551ec3c817e8c79523e1eb397e0d62f}} 
+{\bfseries \$buffer\+Limit}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a3a9067fe1fe898bbcb52f2d1066d1692}\label{class_monolog_1_1_handler_1_1_buffer_handler_a3a9067fe1fe898bbcb52f2d1066d1692}} 
+{\bfseries \$flush\+On\+Overflow}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_af1862006a19e84e552f66189adc792ae}\label{class_monolog_1_1_handler_1_1_buffer_handler_af1862006a19e84e552f66189adc792ae}} 
+{\bfseries \$buffer} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a533c66c9995bd9f022b5f5b325c12ad4}\label{class_monolog_1_1_handler_1_1_buffer_handler_a533c66c9995bd9f022b5f5b325c12ad4}} 
+{\bfseries \$initialized} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Buffers all records until closing the handler and then pass them as batch.
+
+This is useful for a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler}{Mail\+Handler}} to send only one mail per request instead of sending one per log message.
+
+\begin{DoxyAuthor}{Author}
+Christophe Coevoet \href{mailto:stof@notk.org}{\texttt{ stof@notk.\+org}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a5241e1190e598d7d4a3922032aa0f9ec}\label{class_monolog_1_1_handler_1_1_buffer_handler_a5241e1190e598d7d4a3922032aa0f9ec}} 
+\index{BufferHandler@{BufferHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}}}]{\$handler,  }\item[{int}]{\$buffer\+Limit = {\ttfamily 0},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{bool}]{\$flush\+On\+Overflow = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} & {\em \$handler} & \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}}. \\
+\hline
+int & {\em \$buffer\+Limit} & How many entries should be buffered at most, beyond that the oldest items are removed from the buffer. \\
+\hline
+bool & {\em \$flush\+On\+Overflow} & If true, the buffer is flushed when the max size has been reached, by default oldest entries are discarded \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a421831a265621325e1fdd19aace0c758}\label{class_monolog_1_1_handler_1_1_buffer_handler_a421831a265621325e1fdd19aace0c758}} 
+\index{BufferHandler@{BufferHandler}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_aa821bec12eaa7e0f649397c9675ff505}\label{class_monolog_1_1_handler_1_1_buffer_handler_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{BufferHandler@{BufferHandler}!clear@{clear}}
+\index{clear@{clear}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears the buffer without flushing any messages down to the wrapped handler. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_buffer_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{BufferHandler@{BufferHandler}!close@{close}}
+\index{close@{close}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_aad3a8e83c90770a1f71a75bb51e782d8}\label{class_monolog_1_1_handler_1_1_buffer_handler_aad3a8e83c90770a1f71a75bb51e782d8}} 
+\index{BufferHandler@{BufferHandler}!getFormatter@{getFormatter}}
+\index{getFormatter@{getFormatter}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{getFormatter()}{getFormatter()}}
+{\footnotesize\ttfamily get\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the formatter.
+
+\begin{DoxyReturn}{Returns}
+Formatter\+Interface
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_aad3a8e83c90770a1f71a75bb51e782d8}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_buffer_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{BufferHandler@{BufferHandler}!reset@{reset}}
+\index{reset@{reset}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_handler_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_buffer_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_buffer_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{BufferHandler@{BufferHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!BufferHandler@{BufferHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Buffer\+Handler.\+php\end{DoxyCompactItemize}

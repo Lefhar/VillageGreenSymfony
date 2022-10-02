@@ -1,0 +1,90 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver}{}\doxysection{PHPDriver Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver}\index{PHPDriver@{PHPDriver}}
+Inheritance diagram for PHPDriver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_aff90a2597a2a3eb2b970594d27cd5a25}{\+\_\+\+\_\+construct}} (\$locator)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_ad327635eed919cc071fe20c12e00fafb}{load\+Metadata\+For\+Class}} (\$class\+Name, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_a0fea6c7dc8a111015611eb75a92b8c63}{load\+Mapping\+File}} (\$file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_ae7fc3682b173ad9d4b1892bdc04d18d9}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_ae7fc3682b173ad9d4b1892bdc04d18d9}} 
+{\bfseries \$metadata}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver}{PHPDriver}} includes php files which just populate Class\+Metadata\+Info instances with plain PHP code. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_aff90a2597a2a3eb2b970594d27cd5a25}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_aff90a2597a2a3eb2b970594d27cd5a25}} 
+\index{PHPDriver@{PHPDriver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PHPDriver@{PHPDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$locator }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_p_h_p_driver_aff90a2597a2a3eb2b970594d27cd5a25}{PHPDriver}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_a0fea6c7dc8a111015611eb75a92b8c63}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_a0fea6c7dc8a111015611eb75a92b8c63}} 
+\index{PHPDriver@{PHPDriver}!loadMappingFile@{loadMappingFile}}
+\index{loadMappingFile@{loadMappingFile}!PHPDriver@{PHPDriver}}
+\doxysubsubsection{\texorpdfstring{loadMappingFile()}{loadMappingFile()}}
+{\footnotesize\ttfamily load\+Mapping\+File (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Loads a mapping file with the given name and returns a map from class/entity names to their corresponding file driver elements.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & The mapping file to load.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}\mbox{[}\mbox{]} @psalm-\/return array\texorpdfstring{$<$}{<}class-\/string, Class\+Metadata$<$object$>$\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0fea6c7dc8a111015611eb75a92b8c63}{File\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_ad327635eed919cc071fe20c12e00fafb}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_ad327635eed919cc071fe20c12e00fafb}} 
+\index{PHPDriver@{PHPDriver}!loadMetadataForClass@{loadMetadataForClass}}
+\index{loadMetadataForClass@{loadMetadataForClass}!PHPDriver@{PHPDriver}}
+\doxysubsubsection{\texorpdfstring{loadMetadataForClass()}{loadMetadataForClass()}}
+{\footnotesize\ttfamily load\+Metadata\+For\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})}
+
+Loads the metadata for the specified class into the provided container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name @psalm-\/param Class\+Metadata$<$\+T$>$ \$metadata\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@template T of object 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_ad327635eed919cc071fe20c12e00fafb}{Mapping\+Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/\+Driver/PHPDriver.\+php\end{DoxyCompactItemize}

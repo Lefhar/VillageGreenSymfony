@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Profil</li>
+                </ol>
+            </nav>
+            <div class="row p-4">
+                <div class="col-sm-12">
+                    {% for flash_error in app.flashes('verify_email_error') %}
+                        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                    {% endfor %}
+                    {% for flash_success in app.flashes('verify_email_success') %}
+                        <div class="alert alert-success" role="alert">{{ flash_success }}</div>
+                    {% endfor %}
+                </div>
+                <div class="col-sm-12">
+                    <h1>Profil</h1>
+                </div>
+            </div>
+            {% set genre = 'mr' %}
+            {% set type = 'par' %}
+            {% set nom = '' %}
+            {% set prenom = '' %}
+            {% set telephone = '' %}
+            {% set adresse = '' %}
+            {% set codepostal = '' %}
+            {% set ville = '' %}
+            {% set pays = '' %}
+            {% if profil %}
+                {% set genre = profil.gender %}
+                {% set type = profil.type %}
+                {% set nom = profil.lastname %}
+                {% set prenom = profil.firstname %}
+                {% set telephone = profil.telephone %}
+
+                {% if profil.lives %}
+                    {% for rowProfile in profil.lives %}
+                        {% if rowProfile.type==0 %}
+                            {% set adresse = rowProfile.address %}
+                            {% set codepostal = rowProfile.zipcode %}
+                            {% set ville = rowProfile.city %}
+                            {% set pays = rowProfile.country %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+            {% endif %}
+
+
+            <div class="row pt-2 pb-2">
+                <div class="col-sm-12">
+                    <form action="{{ path("profilUpdate") }}" method="POST">
+
+                        <div class="form-check  form-check-inline">
+                            <input class="form-check-input" type="radio" name="genre" id="monsieur" value="mr"
+                                    {% if  genre =='mr' %} checked{% endif %}>
+                            <label class="form-check-label" for="monsieur">
+                                Monsieur
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genre" id="madame"
+                                   value="mme" {% if genre =='mme' %} checked {% endif %}>
+                            <label class="form-check-label"
+                                   for="madame">
+                                Madame
+                            </label>
+                        </div>
+                        <div class="form-group ">
+                            <label for="type">Raison social</label>
+                            <select id="type" name="type" class="form-control">
+                                <option value="par" {% if type =='par' %} selected {% endif %}>
+                                    Particulier
+                                </option>
+                                <option value="pro" {% if type =='pro' %} selected {% endif %}>
+                                    Professionel
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" name="nom" value="{{ nom }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prenom</label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" value="{{ prenom }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" class="form-control" id="adresse" name="adresse" value="{{ adresse }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="cp">Code Postal</label>
+                            <input type="text" class="form-control" id="cp" name="cp" value="{{ codepostal }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Ville</label>
+                            <input type="text" class="form-control" id="ville" name="ville" value="{{ ville }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="pays">Pays</label>
+                            <input type="text" class="form-control" id="pays" name="pays" value="{{ pays }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="text" class="form-control" id="telephone" name="telephone"
+                                   value="{{ telephone }}">
+                        </div>
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-success">Valider</button>
+                            <a href="{{ path("accueil") }}" class="btn btn-dark">Retour</a>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

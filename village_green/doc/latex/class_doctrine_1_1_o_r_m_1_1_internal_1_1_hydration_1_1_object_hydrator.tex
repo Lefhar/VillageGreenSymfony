@@ -1,0 +1,125 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator}{}\doxysection{Object\+Hydrator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator}\index{ObjectHydrator@{ObjectHydrator}}
+Inheritance diagram for Object\+Hydrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_aa53f8faaea2cabe4788cae92d47d7533}{on\+Clear}} (\$event\+Args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_a9596f1635d3c078fa06ab0166bcbb11b}{prepare}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_aff07c1d29d6d6a540c726948254a1764}{cleanup}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_ade8838e338197c71f51c6e797a130697}{cleanup\+After\+Row\+Iteration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_abbecf3a7ef9717b70b68f3f04857c914}{hydrate\+All\+Data}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_a4e1581e689ced27c67c6a2d602a6c78c}{hydrate\+Row\+Data}} (array \$row, array \&\$result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator}{Object\+Hydrator}} constructs an object graph out of an SQL result set.
+
+Internal note\+: Highly performance-\/sensitive code. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_aff07c1d29d6d6a540c726948254a1764}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_aff07c1d29d6d6a540c726948254a1764}} 
+\index{ObjectHydrator@{ObjectHydrator}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!ObjectHydrator@{ObjectHydrator}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Executes one-\/time cleanup tasks at the end of a hydration that was initiated through \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_afa703f3667c381b099fe0bf9fe31c97f}{hydrate\+All}} or \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_ac3883b77934a09089e2a4c4451fd6797}{iterate()}}.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_aff07c1d29d6d6a540c726948254a1764}{Abstract\+Hydrator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_ade8838e338197c71f51c6e797a130697}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_ade8838e338197c71f51c6e797a130697}} 
+\index{ObjectHydrator@{ObjectHydrator}!cleanupAfterRowIteration@{cleanupAfterRowIteration}}
+\index{cleanupAfterRowIteration@{cleanupAfterRowIteration}!ObjectHydrator@{ObjectHydrator}}
+\doxysubsubsection{\texorpdfstring{cleanupAfterRowIteration()}{cleanupAfterRowIteration()}}
+{\footnotesize\ttfamily cleanup\+After\+Row\+Iteration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator}{Abstract\+Hydrator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_abbecf3a7ef9717b70b68f3f04857c914}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_abbecf3a7ef9717b70b68f3f04857c914}} 
+\index{ObjectHydrator@{ObjectHydrator}!hydrateAllData@{hydrateAllData}}
+\index{hydrateAllData@{hydrateAllData}!ObjectHydrator@{ObjectHydrator}}
+\doxysubsubsection{\texorpdfstring{hydrateAllData()}{hydrateAllData()}}
+{\footnotesize\ttfamily hydrate\+All\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Hydrates all rows from the current statement instance at once.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_abbecf3a7ef9717b70b68f3f04857c914}{Abstract\+Hydrator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_a4e1581e689ced27c67c6a2d602a6c78c}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_a4e1581e689ced27c67c6a2d602a6c78c}} 
+\index{ObjectHydrator@{ObjectHydrator}!hydrateRowData@{hydrateRowData}}
+\index{hydrateRowData@{hydrateRowData}!ObjectHydrator@{ObjectHydrator}}
+\doxysubsubsection{\texorpdfstring{hydrateRowData()}{hydrateRowData()}}
+{\footnotesize\ttfamily hydrate\+Row\+Data (\begin{DoxyParamCaption}\item[{array}]{\$row,  }\item[{array \&}]{\$result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Hydrates a single row in an SQL result set. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_a4e1581e689ced27c67c6a2d602a6c78c}{Abstract\+Hydrator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_aa53f8faaea2cabe4788cae92d47d7533}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_aa53f8faaea2cabe4788cae92d47d7533}} 
+\index{ObjectHydrator@{ObjectHydrator}!onClear@{onClear}}
+\index{onClear@{onClear}!ObjectHydrator@{ObjectHydrator}}
+\doxysubsubsection{\texorpdfstring{onClear()}{onClear()}}
+{\footnotesize\ttfamily on\+Clear (\begin{DoxyParamCaption}\item[{}]{\$event\+Args }\end{DoxyParamCaption})}
+
+When executed in a hydrate() loop we may have to clear internal state to decrease memory consumption.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$event\+Args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_aa53f8faaea2cabe4788cae92d47d7533}{Abstract\+Hydrator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_a9596f1635d3c078fa06ab0166bcbb11b}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_object_hydrator_a9596f1635d3c078fa06ab0166bcbb11b}} 
+\index{ObjectHydrator@{ObjectHydrator}!prepare@{prepare}}
+\index{prepare@{prepare}!ObjectHydrator@{ObjectHydrator}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Executes one-\/time preparation tasks, once each time hydration is started through \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_afa703f3667c381b099fe0bf9fe31c97f}{hydrate\+All}} or \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_ac3883b77934a09089e2a4c4451fd6797}{iterate()}}.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_abstract_hydrator_a9596f1635d3c078fa06ab0166bcbb11b}{Abstract\+Hydrator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Internal/\+Hydration/Object\+Hydrator.\+php\end{DoxyCompactItemize}

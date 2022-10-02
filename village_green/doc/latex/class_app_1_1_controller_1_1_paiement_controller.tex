@@ -1,0 +1,43 @@
+\hypertarget{class_app_1_1_controller_1_1_paiement_controller}{}\doxysection{Paiement\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_paiement_controller}\index{PaiementController@{PaiementController}}
+Inheritance diagram for Paiement\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_paiement_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paiement_controller_ae4ea8783770a9e24520c309b3aa97a93}{paiement}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paiement_controller_a11743f2d0dd67a7206ba69ca0a44685a}{Order\+Complete}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$client, \mbox{\hyperlink{class_app_1_1_repository_1_1_live_repository}{Live\+Repository}} \$habiter, Entity\+Manager\+Interface \$manager, \mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$produit, Mailer\+Interface \$mailer)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paiement_controller_a48f703a13fa5809ec82b1738cf1dadbe}{commande\+Terminer}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_paiement_controller_a48f703a13fa5809ec82b1738cf1dadbe}\label{class_app_1_1_controller_1_1_paiement_controller_a48f703a13fa5809ec82b1738cf1dadbe}} 
+\index{PaiementController@{PaiementController}!commandeTerminer@{commandeTerminer}}
+\index{commandeTerminer@{commandeTerminer}!PaiementController@{PaiementController}}
+\doxysubsubsection{\texorpdfstring{commandeTerminer()}{commandeTerminer()}}
+{\footnotesize\ttfamily commande\+Terminer (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/commandevalider\char`\"{}, name=\char`\"{}commande\+Terminer\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_paiement_controller_a11743f2d0dd67a7206ba69ca0a44685a}\label{class_app_1_1_controller_1_1_paiement_controller_a11743f2d0dd67a7206ba69ca0a44685a}} 
+\index{PaiementController@{PaiementController}!OrderComplete@{OrderComplete}}
+\index{OrderComplete@{OrderComplete}!PaiementController@{PaiementController}}
+\doxysubsubsection{\texorpdfstring{OrderComplete()}{OrderComplete()}}
+{\footnotesize\ttfamily Order\+Complete (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$client,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_live_repository}{Live\+Repository}}}]{\$habiter,  }\item[{Entity\+Manager\+Interface}]{\$manager,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$produit,  }\item[{Mailer\+Interface}]{\$mailer }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paiementvalider\char`\"{}, name=\char`\"{}\+Order\+Complete\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_paiement_controller_ae4ea8783770a9e24520c309b3aa97a93}\label{class_app_1_1_controller_1_1_paiement_controller_ae4ea8783770a9e24520c309b3aa97a93}} 
+\index{PaiementController@{PaiementController}!paiement@{paiement}}
+\index{paiement@{paiement}!PaiementController@{PaiementController}}
+\doxysubsubsection{\texorpdfstring{paiement()}{paiement()}}
+{\footnotesize\ttfamily paiement (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paiement\char`\"{}, name=\char`\"{}paiement\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Paiement\+Controller.\+php\end{DoxyCompactItemize}

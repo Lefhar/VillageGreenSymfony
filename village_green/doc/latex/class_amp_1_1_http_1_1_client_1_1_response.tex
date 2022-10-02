@@ -1,0 +1,278 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_response}{}\doxysection{Response Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_response}\index{Response@{Response}}
+Inheritance diagram for Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_response}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_abd4fdb53aeb5b347676094d48157b611}{\+\_\+\+\_\+construct}} (string \$protocol\+Version, int \$status, ?string \$reason, array \$headers, \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} \$body, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, ?\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} \$trailer\+Promise=null, ?\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} \$previous\+Response=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a915c3328b367338a7c0eddb1e3294e9a}{get\+Protocol\+Version}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_aa6037a60c0b9929f04d7bb4a2ad63dc8}{set\+Protocol\+Version}} (string \$protocol\+Version)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a9d21636071f529e2154051d3ea6e5921}{get\+Status}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_ac232d933a0f51264dd6ec0f6a287a910}\label{class_amp_1_1_http_1_1_client_1_1_response_ac232d933a0f51264dd6ec0f6a287a910}} 
+{\bfseries set\+Status} (int \$status, ?string \$reason=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_ac0d1221a542d8f0d74963600876c4b52}{get\+Reason}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_adf1a35ad20e475c59cc0967d5764aa22}{get\+Request}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a5f37f0cbf56308f0ef744ba02a61989e}\label{class_amp_1_1_http_1_1_client_1_1_response_a5f37f0cbf56308f0ef744ba02a61989e}} 
+{\bfseries set\+Request} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a968679cb04e966ff3a8389527f99f566}{get\+Original\+Request}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a12870674717e106dd91c01e3269fa3c5}{get\+Original\+Response}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a4e2e388aa8933eada32c42ede59d3b3c}{get\+Previous\+Response}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a2148a1b286da8f745e2bfb272f910a27}\label{class_amp_1_1_http_1_1_client_1_1_response_a2148a1b286da8f745e2bfb272f910a27}} 
+{\bfseries set\+Previous\+Response} (?\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} \$previous\+Response)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a1b393ab5237dc8fbcafa9e35bcdab54a}{set\+Header}} (string \$name, \$value)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_acbb69f9b3215914de824c10b97b3d787}{add\+Header}} (string \$name, \$value)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_ad62c7c9cad0e3ccfdbff9144c914090b}{set\+Headers}} (array \$headers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a2253d802ee1fbf8d9a8beaffa2301d67}{remove\+Header}} (string \$name)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_ad7bab1db052fb9fcc8bd0b4f3eac29ac}{get\+Body}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a043c9fa5f271098eb80d5949ba1d6a11}{set\+Body}} (\$body)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_ab78a919c5b6c08906b25a85a5d6557a6}{get\+Trailers}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a888b6736f6e55e2b5f5d23b92db1772a}{set\+Trailers}} (\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} \$promise)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An HTTP response. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_abd4fdb53aeb5b347676094d48157b611}\label{class_amp_1_1_http_1_1_client_1_1_response_abd4fdb53aeb5b347676094d48157b611}} 
+\index{Response@{Response}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$protocol\+Version,  }\item[{int}]{\$status,  }\item[{?string}]{\$reason,  }\item[{array}]{\$headers,  }\item[{\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}}}]{\$body,  }\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{?\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}}]{\$trailer\+Promise = {\ttfamily null},  }\item[{?\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}}}]{\$previous\+Response = {\ttfamily null} }\end{DoxyParamCaption})}
+
+@noinspection Php\+Unhandled\+Exception\+Inspection
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_acbb69f9b3215914de824c10b97b3d787}\label{class_amp_1_1_http_1_1_client_1_1_response_acbb69f9b3215914de824c10b97b3d787}} 
+\index{Response@{Response}!addHeader@{addHeader}}
+\index{addHeader@{addHeader}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{addHeader()}{addHeader()}}
+{\footnotesize\ttfamily add\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Assign a value for the specified header field by adding an additional header line.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Header name. \\
+\hline
+string | string\mbox{[}$\,$\mbox{]} & {\em \$value} & Header value. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_http_1_1_message_acbb69f9b3215914de824c10b97b3d787}{Message}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_ad7bab1db052fb9fcc8bd0b4f3eac29ac}\label{class_amp_1_1_http_1_1_client_1_1_response_ad7bab1db052fb9fcc8bd0b4f3eac29ac}} 
+\index{Response@{Response}!getBody@{getBody}}
+\index{getBody@{getBody}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getBody()}{getBody()}}
+{\footnotesize\ttfamily get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the response body.
+
+Note\+: If you stream a \mbox{\hyperlink{class_amp_1_1_http_1_1_message}{Message}}, you can\textquotesingle{}t consume the payload twice.
+
+\begin{DoxyReturn}{Returns}
+Payload 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a968679cb04e966ff3a8389527f99f566}\label{class_amp_1_1_http_1_1_client_1_1_response_a968679cb04e966ff3a8389527f99f566}} 
+\index{Response@{Response}!getOriginalRequest@{getOriginalRequest}}
+\index{getOriginalRequest@{getOriginalRequest}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getOriginalRequest()}{getOriginalRequest()}}
+{\footnotesize\ttfamily get\+Original\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the original \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} instance associated with this \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} instance.
+
+A given \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} may be the result of one or more redirects. This method is a shortcut to access information from the original \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} that led to this response.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a12870674717e106dd91c01e3269fa3c5}\label{class_amp_1_1_http_1_1_client_1_1_response_a12870674717e106dd91c01e3269fa3c5}} 
+\index{Response@{Response}!getOriginalResponse@{getOriginalResponse}}
+\index{getOriginalResponse@{getOriginalResponse}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getOriginalResponse()}{getOriginalResponse()}}
+{\footnotesize\ttfamily get\+Original\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the original \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} instance associated with this \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} instance.
+
+A given \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} may be the result of one or more redirects. This method is a shortcut to access information from the original \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} that led to this response.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a4e2e388aa8933eada32c42ede59d3b3c}\label{class_amp_1_1_http_1_1_client_1_1_response_a4e2e388aa8933eada32c42ede59d3b3c}} 
+\index{Response@{Response}!getPreviousResponse@{getPreviousResponse}}
+\index{getPreviousResponse@{getPreviousResponse}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getPreviousResponse()}{getPreviousResponse()}}
+{\footnotesize\ttfamily get\+Previous\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+If this \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} is the result of a redirect traverse up the redirect history.
+
+\begin{DoxyReturn}{Returns}
+Response$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a915c3328b367338a7c0eddb1e3294e9a}\label{class_amp_1_1_http_1_1_client_1_1_response_a915c3328b367338a7c0eddb1e3294e9a}} 
+\index{Response@{Response}!getProtocolVersion@{getProtocolVersion}}
+\index{getProtocolVersion@{getProtocolVersion}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getProtocolVersion()}{getProtocolVersion()}}
+{\footnotesize\ttfamily get\+Protocol\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the requests\textquotesingle{}s HTTP protocol version.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_ac0d1221a542d8f0d74963600876c4b52}\label{class_amp_1_1_http_1_1_client_1_1_response_ac0d1221a542d8f0d74963600876c4b52}} 
+\index{Response@{Response}!getReason@{getReason}}
+\index{getReason@{getReason}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getReason()}{getReason()}}
+{\footnotesize\ttfamily get\+Reason (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the response\textquotesingle{}s (possibly empty) reason phrase.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_adf1a35ad20e475c59cc0967d5764aa22}\label{class_amp_1_1_http_1_1_client_1_1_response_adf1a35ad20e475c59cc0967d5764aa22}} 
+\index{Response@{Response}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} instance that resulted in this \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response}{Response}} instance.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a9d21636071f529e2154051d3ea6e5921}\label{class_amp_1_1_http_1_1_client_1_1_response_a9d21636071f529e2154051d3ea6e5921}} 
+\index{Response@{Response}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the response\textquotesingle{}s three-\/digit HTTP status code.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_ab78a919c5b6c08906b25a85a5d6557a6}\label{class_amp_1_1_http_1_1_client_1_1_response_ab78a919c5b6c08906b25a85a5d6557a6}} 
+\index{Response@{Response}!getTrailers@{getTrailers}}
+\index{getTrailers@{getTrailers}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{getTrailers()}{getTrailers()}}
+{\footnotesize\ttfamily get\+Trailers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Trailers$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a2253d802ee1fbf8d9a8beaffa2301d67}\label{class_amp_1_1_http_1_1_client_1_1_response_a2253d802ee1fbf8d9a8beaffa2301d67}} 
+\index{Response@{Response}!removeHeader@{removeHeader}}
+\index{removeHeader@{removeHeader}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{removeHeader()}{removeHeader()}}
+{\footnotesize\ttfamily remove\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Remove the specified header field from the message.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Header name. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_http_1_1_message_a2253d802ee1fbf8d9a8beaffa2301d67}{Message}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a043c9fa5f271098eb80d5949ba1d6a11}\label{class_amp_1_1_http_1_1_client_1_1_response_a043c9fa5f271098eb80d5949ba1d6a11}} 
+\index{Response@{Response}!setBody@{setBody}}
+\index{setBody@{setBody}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{setBody()}{setBody()}}
+{\footnotesize\ttfamily set\+Body (\begin{DoxyParamCaption}\item[{}]{\$body }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Payload | Input\+Stream | string | int | float | bool & {\em \$body} & \\
+\hline
+\end{DoxyParams}
+@noinspection Php\+Undefined\+Class\+Inspection\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a1b393ab5237dc8fbcafa9e35bcdab54a}\label{class_amp_1_1_http_1_1_client_1_1_response_a1b393ab5237dc8fbcafa9e35bcdab54a}} 
+\index{Response@{Response}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{setHeader()}{setHeader()}}
+{\footnotesize\ttfamily set\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Assign a value for the specified header field by replacing any existing values for that field.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Header name. \\
+\hline
+string | string\mbox{[}$\,$\mbox{]} & {\em \$value} & Header value. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_http_1_1_message_a1b393ab5237dc8fbcafa9e35bcdab54a}{Message}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_ad62c7c9cad0e3ccfdbff9144c914090b}\label{class_amp_1_1_http_1_1_client_1_1_response_ad62c7c9cad0e3ccfdbff9144c914090b}} 
+\index{Response@{Response}!setHeaders@{setHeaders}}
+\index{setHeaders@{setHeaders}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{setHeaders()}{setHeaders()}}
+{\footnotesize\ttfamily set\+Headers (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})}
+
+Sets the headers from the given array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$headers} & \\
+\hline
+\end{DoxyParams}
+@noinspection Php\+Unhandled\+Exception\+Inspection
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_http_1_1_message_ad62c7c9cad0e3ccfdbff9144c914090b}{Message}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_aa6037a60c0b9929f04d7bb4a2ad63dc8}\label{class_amp_1_1_http_1_1_client_1_1_response_aa6037a60c0b9929f04d7bb4a2ad63dc8}} 
+\index{Response@{Response}!setProtocolVersion@{setProtocolVersion}}
+\index{setProtocolVersion@{setProtocolVersion}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{setProtocolVersion()}{setProtocolVersion()}}
+{\footnotesize\ttfamily set\+Protocol\+Version (\begin{DoxyParamCaption}\item[{string}]{\$protocol\+Version }\end{DoxyParamCaption})}
+
+@noinspection Php\+Undefined\+Class\+Inspection\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_response_a888b6736f6e55e2b5f5d23b92db1772a}\label{class_amp_1_1_http_1_1_client_1_1_response_a888b6736f6e55e2b5f5d23b92db1772a}} 
+\index{Response@{Response}!setTrailers@{setTrailers}}
+\index{setTrailers@{setTrailers}!Response@{Response}}
+\doxysubsubsection{\texorpdfstring{setTrailers()}{setTrailers()}}
+{\footnotesize\ttfamily set\+Trailers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}}]{\$promise }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Promise$<$\+Trailers$>$} & \$promise \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/Response.\+php\end{DoxyCompactItemize}

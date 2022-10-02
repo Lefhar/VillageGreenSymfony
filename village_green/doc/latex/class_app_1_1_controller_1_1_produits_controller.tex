@@ -1,0 +1,46 @@
+\hypertarget{class_app_1_1_controller_1_1_produits_controller}{}\doxysection{Produits\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_produits_controller}\index{ProduitsController@{ProduitsController}}
+Inheritance diagram for Produits\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_produits_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_produits_controller_a087136882a7bb842c11358dccc9a9229}{produits}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$repo, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_produits_controller_ada29680f8dae567385eac76a06952d5c}{Listes}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$repo, \$id, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_produits_controller_a8b0776bc3249bf4aca45a5e675cb4143}{detailslistes}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}} \$\mbox{\hyperlink{class_app_1_1_controller_1_1_produits_controller_a087136882a7bb842c11358dccc9a9229}{produits}}, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Route(\char`\"{}/produits\char`\"{}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_produits_controller_a8b0776bc3249bf4aca45a5e675cb4143}\label{class_app_1_1_controller_1_1_produits_controller_a8b0776bc3249bf4aca45a5e675cb4143}} 
+\index{ProduitsController@{ProduitsController}!detailslistes@{detailslistes}}
+\index{detailslistes@{detailslistes}!ProduitsController@{ProduitsController}}
+\doxysubsubsection{\texorpdfstring{detailslistes()}{detailslistes()}}
+{\footnotesize\ttfamily detailslistes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}}}]{\$produits,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/details/\{id\}\char`\"{}, name=\char`\"{}produit\+\_\+details\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_produits_controller_ada29680f8dae567385eac76a06952d5c}\label{class_app_1_1_controller_1_1_produits_controller_ada29680f8dae567385eac76a06952d5c}} 
+\index{ProduitsController@{ProduitsController}!Listes@{Listes}}
+\index{Listes@{Listes}!ProduitsController@{ProduitsController}}
+\doxysubsubsection{\texorpdfstring{Listes()}{Listes()}}
+{\footnotesize\ttfamily Listes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$repo,  }\item[{}]{\$id,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/listes/\{id\}\char`\"{}, name=\char`\"{}produits\+\_\+listes\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_produits_controller_a087136882a7bb842c11358dccc9a9229}\label{class_app_1_1_controller_1_1_produits_controller_a087136882a7bb842c11358dccc9a9229}} 
+\index{ProduitsController@{ProduitsController}!produits@{produits}}
+\index{produits@{produits}!ProduitsController@{ProduitsController}}
+\doxysubsubsection{\texorpdfstring{produits()}{produits()}}
+{\footnotesize\ttfamily produits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$repo,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\char`\"{}, name=\char`\"{}produits\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Produits\+Controller.\+php\end{DoxyCompactItemize}

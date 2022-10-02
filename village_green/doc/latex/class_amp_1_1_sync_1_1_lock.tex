@@ -1,0 +1,78 @@
+\hypertarget{class_amp_1_1_sync_1_1_lock}{}\doxysection{Lock Class Reference}
+\label{class_amp_1_1_sync_1_1_lock}\index{Lock@{Lock}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_lock_abc9a49b4052b4a379d40355356f23597}{\+\_\+\+\_\+construct}} (int \$id, callable \$releaser)
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_lock_aac857a82cedd9ee7f50343c590d244cf}{is\+Released}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_lock_a12251d0c022e9e21c137a105ff683f13}{get\+Id}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_lock_ad575b496528688fd44a59dd58c18060a}{release}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_lock_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A handle on an acquired lock from a synchronization object.
+
+This object is not thread-\/safe; after acquiring a lock from a mutex or semaphore, the lock should reside in the same thread or process until it is released. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_lock_abc9a49b4052b4a379d40355356f23597}\label{class_amp_1_1_sync_1_1_lock_abc9a49b4052b4a379d40355356f23597}} 
+\index{Lock@{Lock}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Lock@{Lock}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$id,  }\item[{callable}]{\$releaser }\end{DoxyParamCaption})}
+
+Creates a new lock permit object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & The lock identifier. \\
+\hline
+ & {\em callable(self)} & void \$releaser A function to be called upon release. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_lock_a421831a265621325e1fdd19aace0c758}\label{class_amp_1_1_sync_1_1_lock_a421831a265621325e1fdd19aace0c758}} 
+\index{Lock@{Lock}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!Lock@{Lock}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Releases the lock when there are no more references to it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_lock_a12251d0c022e9e21c137a105ff683f13}\label{class_amp_1_1_sync_1_1_lock_a12251d0c022e9e21c137a105ff683f13}} 
+\index{Lock@{Lock}!getId@{getId}}
+\index{getId@{getId}!Lock@{Lock}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int \mbox{\hyperlink{class_amp_1_1_sync_1_1_lock}{Lock}} identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_lock_aac857a82cedd9ee7f50343c590d244cf}\label{class_amp_1_1_sync_1_1_lock_aac857a82cedd9ee7f50343c590d244cf}} 
+\index{Lock@{Lock}!isReleased@{isReleased}}
+\index{isReleased@{isReleased}!Lock@{Lock}}
+\doxysubsubsection{\texorpdfstring{isReleased()}{isReleased()}}
+{\footnotesize\ttfamily is\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the lock has already been released.
+
+\begin{DoxyReturn}{Returns}
+bool True if the lock has already been released, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_lock_ad575b496528688fd44a59dd58c18060a}\label{class_amp_1_1_sync_1_1_lock_ad575b496528688fd44a59dd58c18060a}} 
+\index{Lock@{Lock}!release@{release}}
+\index{release@{release}!Lock@{Lock}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Releases the lock. No-\/op if the lock has already been released. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/Lock.\+php\end{DoxyCompactItemize}

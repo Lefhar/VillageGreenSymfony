@@ -1,0 +1,21 @@
+\hypertarget{class_amp_1_1_coroutine}{}\doxysection{Coroutine Class Reference}
+\label{class_amp_1_1_coroutine}\index{Coroutine@{Coroutine}}
+Inheritance diagram for Coroutine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_coroutine}
+\end{center}
+\end{figure}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Creates a promise from a generator function yielding promises.
+
+When a promise is yielded, execution of the generator is interrupted until the promise is resolved. A success value is sent into the generator, while a failure reason is thrown into the generator. Using a coroutine, asynchronous code can be written without callbacks and be structured like synchronous code.
+
+@template-\/covariant TReturn @template-\/implements Promise$<$\+TReturn$>$ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Coroutine.\+php\end{DoxyCompactItemize}

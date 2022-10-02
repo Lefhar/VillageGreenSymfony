@@ -1,0 +1,225 @@
+\hypertarget{class_amp_1_1_socket_1_1_resource_socket}{}\doxysection{Resource\+Socket Class Reference}
+\label{class_amp_1_1_socket_1_1_resource_socket}\index{ResourceSocket@{ResourceSocket}}
+Inheritance diagram for Resource\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_amp_1_1_socket_1_1_resource_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}{setup\+Tls}} (?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation\+Token=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_ae9598ecf264d1175243c9813d0b08e2e}{shutdown\+Tls}} (?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation\+Token=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a8c29af408105ba75bc2b973aa4bc1bf7}{write}} (string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a1252be7b52286a1220eeed57b30b5e28}{end}} (string \$data=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_aa46bdf577fe031bf1287312dfbebb9a6}{reference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a8098142e52cdc2bf80db924208412038}{unreference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a7a15334d1688d75af2bf16436f26f15d}{get\+Local\+Address}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a8c5a689e9be7d35d0d01d0194637a7d2}{get\+Resource}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_ac9df36d4099edaa6a9a9a1b344d1bded}{get\+Remote\+Address}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a7a12b94f2f7cb44923c3d61574aed171}{get\+Tls\+State}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}{get\+Tls\+Info}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a80d6b5b35631ea18a4316608bbbc8aea}{is\+Closed}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a905a179d8462e758e2e26b3db7b222c5}{set\+Chunk\+Size}} (int \$chunk\+Size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_ab3979fe10e11300c1a562c6b59ef69ae}{from\+Server\+Socket}} (\$resource, int \$chunk\+Size=self\+::\+DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_aead5e6fddd742bb72b67af768fb3591f}{from\+Client\+Socket}} ( \$resource, ?\mbox{\hyperlink{class_amp_1_1_socket_1_1_client_tls_context}{Client\+Tls\+Context}} \$tls\+Context=null, int \$chunk\+Size=self\+::\+DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a0ff55380fb3b64bee19cfb8cc966d3ff}\label{class_amp_1_1_socket_1_1_resource_socket_a0ff55380fb3b64bee19cfb8cc966d3ff}} 
+const {\bfseries DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE} = Resource\+Input\+Stream\+::\+DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_socket_1_1_resource_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{ResourceSocket@{ResourceSocket}!close@{close}}
+\index{close@{close}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket}{Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a1252be7b52286a1220eeed57b30b5e28}\label{class_amp_1_1_socket_1_1_resource_socket_a1252be7b52286a1220eeed57b30b5e28}} 
+\index{ResourceSocket@{ResourceSocket}!end@{end}}
+\index{end@{end}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily end (\begin{DoxyParamCaption}\item[{string}]{\$data = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+@inherit\+Doc \mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_aead5e6fddd742bb72b67af768fb3591f}\label{class_amp_1_1_socket_1_1_resource_socket_aead5e6fddd742bb72b67af768fb3591f}} 
+\index{ResourceSocket@{ResourceSocket}!fromClientSocket@{fromClientSocket}}
+\index{fromClientSocket@{fromClientSocket}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{fromClientSocket()}{fromClientSocket()}}
+{\footnotesize\ttfamily static from\+Client\+Socket (\begin{DoxyParamCaption}\item[{}]{\$resource,  }\item[{?\mbox{\hyperlink{class_amp_1_1_socket_1_1_client_tls_context}{Client\+Tls\+Context}}}]{\$tls\+Context = {\ttfamily null},  }\item[{int}]{\$chunk\+Size = {\ttfamily self\+:\+:DEFAULT\+\_\+CHUNK\+\_\+SIZE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$resource} & Stream resource. \\
+\hline
+int & {\em \$chunk\+Size} & Read and write chunk size. \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_client_tls_context}{Client\+Tls\+Context}} | null & {\em \$tls\+Context} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_ab3979fe10e11300c1a562c6b59ef69ae}\label{class_amp_1_1_socket_1_1_resource_socket_ab3979fe10e11300c1a562c6b59ef69ae}} 
+\index{ResourceSocket@{ResourceSocket}!fromServerSocket@{fromServerSocket}}
+\index{fromServerSocket@{fromServerSocket}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{fromServerSocket()}{fromServerSocket()}}
+{\footnotesize\ttfamily static from\+Server\+Socket (\begin{DoxyParamCaption}\item[{}]{\$resource,  }\item[{int}]{\$chunk\+Size = {\ttfamily self\+:\+:DEFAULT\+\_\+CHUNK\+\_\+SIZE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$resource} & Stream resource. \\
+\hline
+int & {\em \$chunk\+Size} & Read and write chunk size.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a7a15334d1688d75af2bf16436f26f15d}\label{class_amp_1_1_socket_1_1_resource_socket_a7a15334d1688d75af2bf16436f26f15d}} 
+\index{ResourceSocket@{ResourceSocket}!getLocalAddress@{getLocalAddress}}
+\index{getLocalAddress@{getLocalAddress}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{getLocalAddress()}{getLocalAddress()}}
+{\footnotesize\ttfamily get\+Local\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc \mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_ac9df36d4099edaa6a9a9a1b344d1bded}\label{class_amp_1_1_socket_1_1_resource_socket_ac9df36d4099edaa6a9a9a1b344d1bded}} 
+\index{ResourceSocket@{ResourceSocket}!getRemoteAddress@{getRemoteAddress}}
+\index{getRemoteAddress@{getRemoteAddress}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{getRemoteAddress()}{getRemoteAddress()}}
+{\footnotesize\ttfamily get\+Remote\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc \mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a8c5a689e9be7d35d0d01d0194637a7d2}\label{class_amp_1_1_socket_1_1_resource_socket_a8c5a689e9be7d35d0d01d0194637a7d2}} 
+\index{ResourceSocket@{ResourceSocket}!getResource@{getResource}}
+\index{getResource@{getResource}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}\label{class_amp_1_1_socket_1_1_resource_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}} 
+\index{ResourceSocket@{ResourceSocket}!getTlsInfo@{getTlsInfo}}
+\index{getTlsInfo@{getTlsInfo}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{getTlsInfo()}{getTlsInfo()}}
+{\footnotesize\ttfamily get\+Tls\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}{Encryptable\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a7a12b94f2f7cb44923c3d61574aed171}\label{class_amp_1_1_socket_1_1_resource_socket_a7a12b94f2f7cb44923c3d61574aed171}} 
+\index{ResourceSocket@{ResourceSocket}!getTlsState@{getTlsState}}
+\index{getTlsState@{getTlsState}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{getTlsState()}{getTlsState()}}
+{\footnotesize\ttfamily get\+Tls\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_a7a12b94f2f7cb44923c3d61574aed171}{Encryptable\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a80d6b5b35631ea18a4316608bbbc8aea}\label{class_amp_1_1_socket_1_1_resource_socket_a80d6b5b35631ea18a4316608bbbc8aea}} 
+\index{ResourceSocket@{ResourceSocket}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc \mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_socket_1_1_resource_socket_a64571309bfb3238c65fd3c2898f92440}} 
+\index{ResourceSocket@{ResourceSocket}!read@{read}}
+\index{read@{read}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket}{Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_aa46bdf577fe031bf1287312dfbebb9a6}\label{class_amp_1_1_socket_1_1_resource_socket_aa46bdf577fe031bf1287312dfbebb9a6}} 
+\index{ResourceSocket@{ResourceSocket}!reference@{reference}}
+\index{reference@{reference}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc \mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a905a179d8462e758e2e26b3db7b222c5}\label{class_amp_1_1_socket_1_1_resource_socket_a905a179d8462e758e2e26b3db7b222c5}} 
+\index{ResourceSocket@{ResourceSocket}!setChunkSize@{setChunkSize}}
+\index{setChunkSize@{setChunkSize}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{setChunkSize()}{setChunkSize()}}
+{\footnotesize\ttfamily set\+Chunk\+Size (\begin{DoxyParamCaption}\item[{int}]{\$chunk\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$chunk\+Size} & New chunk size for reading and writing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}\label{class_amp_1_1_socket_1_1_resource_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}} 
+\index{ResourceSocket@{ResourceSocket}!setupTls@{setupTls}}
+\index{setupTls@{setupTls}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{setupTls()}{setupTls()}}
+{\footnotesize\ttfamily setup\+Tls (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation\+Token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}{Encryptable\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_ae9598ecf264d1175243c9813d0b08e2e}\label{class_amp_1_1_socket_1_1_resource_socket_ae9598ecf264d1175243c9813d0b08e2e}} 
+\index{ResourceSocket@{ResourceSocket}!shutdownTls@{shutdownTls}}
+\index{shutdownTls@{shutdownTls}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{shutdownTls()}{shutdownTls()}}
+{\footnotesize\ttfamily shutdown\+Tls (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation\+Token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_ae9598ecf264d1175243c9813d0b08e2e}{Encryptable\+Socket}}.
+
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a8098142e52cdc2bf80db924208412038}\label{class_amp_1_1_socket_1_1_resource_socket_a8098142e52cdc2bf80db924208412038}} 
+\index{ResourceSocket@{ResourceSocket}!unreference@{unreference}}
+\index{unreference@{unreference}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@inherit\+Doc \mbox{\Hypertarget{class_amp_1_1_socket_1_1_resource_socket_a8c29af408105ba75bc2b973aa4bc1bf7}\label{class_amp_1_1_socket_1_1_resource_socket_a8c29af408105ba75bc2b973aa4bc1bf7}} 
+\index{ResourceSocket@{ResourceSocket}!write@{write}}
+\index{write@{write}!ResourceSocket@{ResourceSocket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_amp_1_1_dns_1_1_internal_1_1_socket}{Socket}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Resource\+Socket.\+php\end{DoxyCompactItemize}

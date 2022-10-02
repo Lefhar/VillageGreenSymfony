@@ -1,0 +1,180 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression}{}\doxysection{Composite\+Expression Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression}\index{CompositeExpression@{CompositeExpression}}
+Inheritance diagram for Composite\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a5728f40776c78d9196173e87314541e3}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a5728f40776c78d9196173e87314541e3}} 
+{\bfseries \+\_\+\+\_\+construct} (\$type, array \$parts=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_af1776d8aea6c362256270ed0a8d056e3}{add\+Multiple}} (array \$parts=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_adea66997f96868197505db435920c37b}{add}} (\$part)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a3949265655f3b858a477563a54694652}{with}} (\$part,... \$parts)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a407eba17ea98e6a8a4adf538ba7e3156}{and}} (\$part,... \$parts)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_aefc839d8bbde52bbd5856d0403eeb4e3}{or}} (\$part,... \$parts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_aa4bdf303f0ad0b07184ff88b25674b50}{TYPE\+\_\+\+AND}} = \textquotesingle{}AND\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a4bb76be821b9ede7ffb928644a3c01e3}{TYPE\+\_\+\+OR}} = \textquotesingle{}OR\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Composite expression is responsible to build a group of similar expression. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{CompositeExpression@{CompositeExpression}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the string representation of this composite expression.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_adea66997f96868197505db435920c37b}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_adea66997f96868197505db435920c37b}} 
+\index{CompositeExpression@{CompositeExpression}!add@{add}}
+\index{add@{add}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{}]{\$part }\end{DoxyParamCaption})}
+
+Adds an expression to composite expression.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000145}{Deprecated}}]This class will be made immutable. Use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a3949265655f3b858a477563a54694652}{with()}} instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$part} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression}{Composite\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_af1776d8aea6c362256270ed0a8d056e3}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_af1776d8aea6c362256270ed0a8d056e3}} 
+\index{CompositeExpression@{CompositeExpression}!addMultiple@{addMultiple}}
+\index{addMultiple@{addMultiple}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{addMultiple()}{addMultiple()}}
+{\footnotesize\ttfamily add\+Multiple (\begin{DoxyParamCaption}\item[{array}]{\$parts = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Adds multiple parts to composite expression.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000144}{Deprecated}}]This class will be made immutable. Use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a3949265655f3b858a477563a54694652}{with()}} instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+self\mbox{[}$\,$\mbox{]} | string\mbox{[}$\,$\mbox{]} & {\em \$parts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression}{Composite\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a407eba17ea98e6a8a4adf538ba7e3156}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a407eba17ea98e6a8a4adf538ba7e3156}} 
+\index{CompositeExpression@{CompositeExpression}!and@{and}}
+\index{and@{and}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{and()}{and()}}
+{\footnotesize\ttfamily static and (\begin{DoxyParamCaption}\item[{}]{\$part,  }\item[{}]{\$parts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+self | string & {\em \$part} & \\
+\hline
+ & {\em self$\vert$string} & ...\$parts \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{CompositeExpression@{CompositeExpression}!count@{count}}
+\index{count@{count}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the amount of expressions on composite expression.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a830b5c75df72b32396701bc563fbe3c7}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{CompositeExpression@{CompositeExpression}!getType@{getType}}
+\index{getType@{getType}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the type of this composite expression (AND/\+OR).
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_aefc839d8bbde52bbd5856d0403eeb4e3}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_aefc839d8bbde52bbd5856d0403eeb4e3}} 
+\index{CompositeExpression@{CompositeExpression}!or@{or}}
+\index{or@{or}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{or()}{or()}}
+{\footnotesize\ttfamily static or (\begin{DoxyParamCaption}\item[{}]{\$part,  }\item[{}]{\$parts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+self | string & {\em \$part} & \\
+\hline
+ & {\em self$\vert$string} & ...\$parts \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a3949265655f3b858a477563a54694652}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a3949265655f3b858a477563a54694652}} 
+\index{CompositeExpression@{CompositeExpression}!with@{with}}
+\index{with@{with}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{with()}{with()}}
+{\footnotesize\ttfamily with (\begin{DoxyParamCaption}\item[{}]{\$part,  }\item[{}]{\$parts }\end{DoxyParamCaption})}
+
+Returns a new \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression}{Composite\+Expression}} with the given parts added.
+
+
+\begin{DoxyParams}[1]{Parameters}
+self | string & {\em \$part} & \\
+\hline
+ & {\em self$\vert$string} & ...\$parts \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_aa4bdf303f0ad0b07184ff88b25674b50}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_aa4bdf303f0ad0b07184ff88b25674b50}} 
+\index{CompositeExpression@{CompositeExpression}!TYPE\_AND@{TYPE\_AND}}
+\index{TYPE\_AND@{TYPE\_AND}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{TYPE\_AND}{TYPE\_AND}}
+{\footnotesize\ttfamily const TYPE\+\_\+\+AND = \textquotesingle{}AND\textquotesingle{}}
+
+Constant that represents an AND composite expression. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a4bb76be821b9ede7ffb928644a3c01e3}\label{class_doctrine_1_1_d_b_a_l_1_1_query_1_1_expression_1_1_composite_expression_a4bb76be821b9ede7ffb928644a3c01e3}} 
+\index{CompositeExpression@{CompositeExpression}!TYPE\_OR@{TYPE\_OR}}
+\index{TYPE\_OR@{TYPE\_OR}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{TYPE\_OR}{TYPE\_OR}}
+{\footnotesize\ttfamily const TYPE\+\_\+\+OR = \textquotesingle{}OR\textquotesingle{}}
+
+Constant that represents an OR composite expression. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Query/\+Expression/Composite\+Expression.\+php\end{DoxyCompactItemize}

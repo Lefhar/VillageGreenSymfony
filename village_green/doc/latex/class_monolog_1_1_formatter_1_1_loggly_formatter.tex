@@ -1,0 +1,58 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_loggly_formatter}{}\doxysection{Loggly\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_loggly_formatter}\index{LogglyFormatter@{LogglyFormatter}}
+Inheritance diagram for Loggly\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_monolog_1_1_formatter_1_1_loggly_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_loggly_formatter_a7e887c7181477f04a3dec81ea069c623}{\+\_\+\+\_\+construct}} (int \$batch\+Mode=self\+::\+BATCH\+\_\+\+MODE\+\_\+\+NEWLINES, bool \$append\+Newline=false)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_loggly_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Encodes message information into JSON in a format compatible with Loggly.
+
+\begin{DoxyAuthor}{Author}
+Adam Pancutt \href{mailto:adam@pancutt.com}{\texttt{ adam@pancutt.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_loggly_formatter_a7e887c7181477f04a3dec81ea069c623}\label{class_monolog_1_1_formatter_1_1_loggly_formatter_a7e887c7181477f04a3dec81ea069c623}} 
+\index{LogglyFormatter@{LogglyFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogglyFormatter@{LogglyFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$batch\+Mode = {\ttfamily self\+:\+:BATCH\+\_\+MODE\+\_\+NEWLINES},  }\item[{bool}]{\$append\+Newline = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Overrides the default batch mode to new lines for compatibility with the Loggly bulk API. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_loggly_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_loggly_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{LogglyFormatter@{LogglyFormatter}!format@{format}}
+\index{format@{format}!LogglyFormatter@{LogglyFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Appends the \textquotesingle{}timestamp\textquotesingle{} parameter for indexing by Loggly.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.loggly.com/docs/automated-parsing/\#json}{\texttt{ https\+://www.\+loggly.\+com/docs/automated-\/parsing/\#json}} 
+
+\textbackslash{}\+Monolog\textbackslash{}\+Formatter\textbackslash{}\+Json\+Formatter\+::format() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Json\+Formatter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Loggly\+Formatter.\+php\end{DoxyCompactItemize}

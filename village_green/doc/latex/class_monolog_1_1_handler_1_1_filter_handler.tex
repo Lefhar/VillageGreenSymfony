@@ -1,0 +1,204 @@
+\hypertarget{class_monolog_1_1_handler_1_1_filter_handler}{}\doxysection{Filter\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_filter_handler}\index{FilterHandler@{FilterHandler}}
+Inheritance diagram for Filter\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.270270cm]{class_monolog_1_1_handler_1_1_filter_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a663f3578e97205e55aa415ece60e0431}{\+\_\+\+\_\+construct}} (\$handler, \$min\+Level\+Or\+List=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, \$max\+Level=\mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger\+::\+EMERGENCY}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a3c4d922695a5800dcf5a566f3fd393e2}{get\+Accepted\+Levels}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a7a9bb0b506edaf4ae6640ddccbf6c674}{set\+Accepted\+Levels}} (\$min\+Level\+Or\+List=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, \$max\+Level=\mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger\+::\+EMERGENCY}})
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a944865926b0302ad2d802bea1eec3a57}{handle\+Batch}} (array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a2b88a8966dc3917966810f7e1e93c5c5}{get\+Handler}} (array \$record=null)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_aad3a8e83c90770a1f71a75bb51e782d8}{get\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_filter_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a9285a7f684c72e9bb78fdef1bcbe3fd0}\label{class_monolog_1_1_handler_1_1_filter_handler_a9285a7f684c72e9bb78fdef1bcbe3fd0}} 
+{\bfseries \$handler}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a80230ac990edecf7d5d3de0eee23e5da}\label{class_monolog_1_1_handler_1_1_filter_handler_a80230ac990edecf7d5d3de0eee23e5da}} 
+{\bfseries \$accepted\+Levels}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a9145e898a529a9347d8af930c6c3c60c}\label{class_monolog_1_1_handler_1_1_filter_handler_a9145e898a529a9347d8af930c6c3c60c}} 
+{\bfseries \$bubble}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple handler wrapper that filters records based on a list of levels
+
+It can be configured with an exact list of levels to allow, or a min/max level.
+
+\begin{DoxyAuthor}{Author}
+Hennadiy Verkh 
+
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a663f3578e97205e55aa415ece60e0431}\label{class_monolog_1_1_handler_1_1_filter_handler_a663f3578e97205e55aa415ece60e0431}} 
+\index{FilterHandler@{FilterHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$handler,  }\item[{}]{\$min\+Level\+Or\+List = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{}]{\$max\+Level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger\+::\+EMERGENCY}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@psalm-\/param Handler\+Interface$\vert$callable(?Record, \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}})\+: \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} \$handler
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable | \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} & {\em \$handler} & \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} or factory callable(\$record$\vert$null, \$filter\+Handler). \\
+\hline
+int | array & {\em \$min\+Level\+Or\+List} & A list of levels to accept or a minimum level if max\+Level is provided \\
+\hline
+int | string & {\em \$max\+Level} & Maximum level to accept, only used if \$min\+Level\+Or\+List is not an array \\
+\hline
+bool & {\em \$bubble} & Whether the messages that are handled can bubble up the stack or not\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$$\vert$array\texorpdfstring{$<$}{<}Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$\texorpdfstring{$>$}{>} \$min\+Level\+Or\+List @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$max\+Level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a3c4d922695a5800dcf5a566f3fd393e2}\label{class_monolog_1_1_handler_1_1_filter_handler_a3c4d922695a5800dcf5a566f3fd393e2}} 
+\index{FilterHandler@{FilterHandler}!getAcceptedLevels@{getAcceptedLevels}}
+\index{getAcceptedLevels@{getAcceptedLevels}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{getAcceptedLevels()}{getAcceptedLevels()}}
+{\footnotesize\ttfamily get\+Accepted\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@phpstan-\/return array$<$int, Level$>$ \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_aad3a8e83c90770a1f71a75bb51e782d8}\label{class_monolog_1_1_handler_1_1_filter_handler_aad3a8e83c90770a1f71a75bb51e782d8}} 
+\index{FilterHandler@{FilterHandler}!getFormatter@{getFormatter}}
+\index{getFormatter@{getFormatter}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{getFormatter()}{getFormatter()}}
+{\footnotesize\ttfamily get\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the formatter.
+
+\begin{DoxyReturn}{Returns}
+Formatter\+Interface
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_aad3a8e83c90770a1f71a75bb51e782d8}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a2b88a8966dc3917966810f7e1e93c5c5}\label{class_monolog_1_1_handler_1_1_filter_handler_a2b88a8966dc3917966810f7e1e93c5c5}} 
+\index{FilterHandler@{FilterHandler}!getHandler@{getHandler}}
+\index{getHandler@{getHandler}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{getHandler()}{getHandler()}}
+{\footnotesize\ttfamily get\+Handler (\begin{DoxyParamCaption}\item[{array}]{\$record = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Return the nested handler
+
+If the handler was provided as a factory callable, this will trigger the handler\textquotesingle{}s instantiation.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}}
+\end{DoxyReturn}
+@phpstan-\/param Record \$record \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a944865926b0302ad2d802bea1eec3a57}\label{class_monolog_1_1_handler_1_1_filter_handler_a944865926b0302ad2d802bea1eec3a57}} 
+\index{FilterHandler@{FilterHandler}!handleBatch@{handleBatch}}
+\index{handleBatch@{handleBatch}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{handleBatch()}{handleBatch()}}
+{\footnotesize\ttfamily handle\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Handles a set of records at once.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & The records to handle (an array of record arrays)\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_a944865926b0302ad2d802bea1eec3a57}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_abbfbbcd3430dea8422ecd3c725737758}\label{class_monolog_1_1_handler_1_1_filter_handler_abbfbbcd3430dea8422ecd3c725737758}} 
+\index{FilterHandler@{FilterHandler}!isHandling@{isHandling}}
+\index{isHandling@{isHandling}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{isHandling()}{isHandling()}}
+{\footnotesize\ttfamily is\+Handling (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Checks whether the given record will be handled by this handler.
+
+This is mostly done for performance reasons, to avoid calling processors for nothing.
+
+Handlers should still check the record levels within \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}}, returning false in \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling()}} is no guarantee that \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} will not be called, and \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling()}} might not be called for a given record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & Partial log record containing only a level key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+@phpstan-\/param array\{level\+: Level\} \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_filter_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{FilterHandler@{FilterHandler}!reset@{reset}}
+\index{reset@{reset}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a7a9bb0b506edaf4ae6640ddccbf6c674}\label{class_monolog_1_1_handler_1_1_filter_handler_a7a9bb0b506edaf4ae6640ddccbf6c674}} 
+\index{FilterHandler@{FilterHandler}!setAcceptedLevels@{setAcceptedLevels}}
+\index{setAcceptedLevels@{setAcceptedLevels}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{setAcceptedLevels()}{setAcceptedLevels()}}
+{\footnotesize\ttfamily set\+Accepted\+Levels (\begin{DoxyParamCaption}\item[{}]{\$min\+Level\+Or\+List = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{}]{\$max\+Level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger\+::\+EMERGENCY}}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string | array & {\em \$min\+Level\+Or\+List} & A list of levels to accept or a minimum level or level name if max\+Level is provided \\
+\hline
+int | string & {\em \$max\+Level} & Maximum level or level name to accept, only used if \$min\+Level\+Or\+List is not an array\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$$\vert$array\texorpdfstring{$<$}{<}Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$\texorpdfstring{$>$}{>} \$min\+Level\+Or\+List @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$max\+Level \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_filter_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_filter_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{FilterHandler@{FilterHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!FilterHandler@{FilterHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Filter\+Handler.\+php\end{DoxyCompactItemize}

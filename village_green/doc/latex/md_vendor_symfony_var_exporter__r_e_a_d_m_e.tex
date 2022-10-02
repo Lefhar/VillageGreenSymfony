@@ -1,0 +1,24 @@
+The Var\+Exporter component allows exporting any serializable PHP data structure to plain PHP code. While doing so, it preserves all the semantics associated with the serialization mechanism of PHP ({\ttfamily \+\_\+\+\_\+wakeup}, {\ttfamily \+\_\+\+\_\+sleep}, {\ttfamily Serializable}, {\ttfamily \+\_\+\+\_\+serialize}, {\ttfamily \+\_\+\+\_\+unserialize}).
+
+It also provides an instantiator that allows creating and populating objects without calling their constructor nor any other methods.
+
+The reason to use this component {\itshape vs} {\ttfamily serialize()} or \href{https://github.com/igbinary/igbinary}{\texttt{ igbinary}} is performance\+: thanks to OPcache, the resulting code is significantly faster and more memory efficient than using {\ttfamily unserialize()} or {\ttfamily igbinary\+\_\+unserialize()}.
+
+Unlike {\ttfamily var\+\_\+export()}, this works on any serializable PHP value.
+
+It also provides a few improvements over {\ttfamily var\+\_\+export()}/{\ttfamily serialize()}\+:
+
+
+\begin{DoxyItemize}
+\item the output is PSR-\/2 compatible;
+\item the output can be re-\/indented without messing up with {\ttfamily \textbackslash{}r} or {\ttfamily \textbackslash{}n} in the data
+\item missing classes throw a {\ttfamily Class\+Not\+Found\+Exception} instead of being unserialized to {\ttfamily PHP\+\_\+\+Incomplete\+\_\+\+Class} objects;
+\item references involving {\ttfamily Spl\+Object\+Storage}, {\ttfamily Array\+Object} or {\ttfamily Array\+Iterator} instances are preserved;
+\item {\ttfamily Reflection$\ast$}, {\ttfamily Iterator\+Iterator} and {\ttfamily Recursive\+Iterator\+Iterator} classes throw an exception when being serialized (their unserialized version is broken anyway, see \href{https://bugs.php.net/76737}{\texttt{ https\+://bugs.\+php.\+net/76737}}).
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_var_exporter__r_e_a_d_m_e_autotoc_md1950}{}\doxysection{Resources}\label{md_vendor_symfony_var_exporter__r_e_a_d_m_e_autotoc_md1950}
+
+\begin{DoxyItemize}
+\item \href{https://symfony.com/doc/current/components/var_exporter.html}{\texttt{ Documentation}}
+\item \href{https://symfony.com/doc/current/contributing/index.html}{\texttt{ Contributing}}
+\item \href{https://github.com/symfony/symfony/issues}{\texttt{ Report issues}} and \href{https://github.com/symfony/symfony/pulls}{\texttt{ send Pull Requests}} in the \href{https://github.com/symfony/symfony}{\texttt{ main Symfony repository}} 
+\end{DoxyItemize}

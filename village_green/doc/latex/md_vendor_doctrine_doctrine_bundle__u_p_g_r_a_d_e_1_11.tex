@@ -1,0 +1,22 @@
+\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md156}{}\doxysection{PHP and Symfony version support}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md156}
+
+\begin{DoxyItemize}
+\item Support for PHP 5.\+5, 5.\+6 and 7.\+0 was dropped
+\item Support for unsupported Symfony versions was dropped. The bundle now supports Symfony 3.\+4 LTS and 4.\+1 or newer.
+\item Support for Twig 1.\+34 and below as well as 2.\+4 and below (for 2.\+x) releases was dropped.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md157}{}\doxysection{Commands}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md157}
+
+\begin{DoxyItemize}
+\item Deprecated instantiating {\ttfamily Doctrine\textbackslash{}Bundle\textbackslash{}Doctrine\+Bundle\textbackslash{}Command} without a {\ttfamily Manager\+Registry} instance.
+\item Deprecated {\ttfamily set\+Container} and {\ttfamily get\+Container} in {\ttfamily Doctrine\textbackslash{}Bundle\textbackslash{}Doctrine\+Bundle\textbackslash{}Command}.
+\item {\ttfamily Doctrine\textbackslash{}Bundle\textbackslash{}Doctrine\+Bundle\textbackslash{}Command} no longer implements {\ttfamily Container\+Aware\+Interface}.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md158}{}\doxysection{Mapping}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md158}
+
+\begin{DoxyItemize}
+\item Renamed {\ttfamily Container\+Aware\+Entity\+Listener\+Resolver} to {\ttfamily Container\+Entity\+Listener\+Resolver}.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md159}{}\doxysection{Types}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_11_autotoc_md159}
+
+\begin{DoxyItemize}
+\item Marking types as commented in the configuration is deprecated. Instead, mark them commented using the {\ttfamily requires\+SQLComment\+Hint()} method of the type.
+\item The {\ttfamily commented} configuration option for types will be dropped in a future release. You should avoid using it. 
+\end{DoxyItemize}

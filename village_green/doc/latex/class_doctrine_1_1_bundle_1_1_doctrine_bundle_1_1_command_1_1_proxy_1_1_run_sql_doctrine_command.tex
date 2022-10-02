@@ -1,0 +1,95 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command}{}\doxysection{Run\+Sql\+Doctrine\+Command Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command}\index{RunSqlDoctrineCommand@{RunSqlDoctrineCommand}}
+Inheritance diagram for Run\+Sql\+Doctrine\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_aa601d9291120357a403afd6b3a690b10}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_aa601d9291120357a403afd6b3a690b10}} 
+{\bfseries \+\_\+\+\_\+construct} (?\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_tools_1_1_console_1_1_connection_provider}{Connection\+Provider}} \$connection\+Provider=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{configure}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_ab31c72b72ddaf7116db5d84c055d3c0b}{execute}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}} \$input, \mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_output_1_1_output_interface}{Output\+Interface}} \$output)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Execute a SQL query and output the results.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000195}{Deprecated}}]use Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Tools\textbackslash{}\+Console\textbackslash{}\+Command\textbackslash{}\+Run\+Sql\+Command instead \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}} 
+\index{RunSqlDoctrineCommand@{RunSqlDoctrineCommand}!configure@{configure}}
+\index{configure@{configure}!RunSqlDoctrineCommand@{RunSqlDoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_tools_1_1_console_1_1_command_1_1_run_sql_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Run\+Sql\+Command}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_ab31c72b72ddaf7116db5d84c055d3c0b}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_run_sql_doctrine_command_ab31c72b72ddaf7116db5d84c055d3c0b}} 
+\index{RunSqlDoctrineCommand@{RunSqlDoctrineCommand}!execute@{execute}}
+\index{execute@{execute}!RunSqlDoctrineCommand@{RunSqlDoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}}}]{\$input,  }\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_output_1_1_output_interface}{Output\+Interface}}}]{\$output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{\{Executes the current command.
+
+This method is not abstract because you can use this class as a concrete class. In this case, instead of defining the \mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_ab31c72b72ddaf7116db5d84c055d3c0b}{execute()}} method, you set the code to execute by passing a Closure to the \mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_a4181163392cba2c6e81d8e3532a093a7}{set\+Code()}} method.
+
+\begin{DoxyReturn}{Returns}
+int 0 if everything went fine, or an exit code
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Logic\+Exception} & When this abstract method is not implemented\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_a4181163392cba2c6e81d8e3532a093a7}{set\+Code()}}
+\end{DoxySeeAlso}
+\}
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_tools_1_1_console_1_1_command_1_1_run_sql_command_ab31c72b72ddaf7116db5d84c055d3c0b}{Run\+Sql\+Command}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Command/\+Proxy/Run\+Sql\+Doctrine\+Command.\+php\end{DoxyCompactItemize}

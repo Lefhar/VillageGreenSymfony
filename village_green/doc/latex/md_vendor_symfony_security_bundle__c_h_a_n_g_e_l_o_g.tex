@@ -1,0 +1,223 @@
+\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1785}{}\doxysection{5.\+4}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1785}
+
+\begin{DoxyItemize}
+\item Deprecate {\ttfamily Firewall\+Config\+::get\+Listeners()}, use {\ttfamily Firewall\+Config\+::get\+Authenticators()} instead
+\item Deprecate {\ttfamily security.\+authentication.\+basic\+\_\+entry\+\_\+point} and {\ttfamily security.\+authentication.\+retry\+\_\+entry\+\_\+point} services, the logic is moved into the {\ttfamily Http\+Basic\+Authenticator} and {\ttfamily Channel\+Listener} respectively
+\item Deprecate {\ttfamily Firewall\+Config\+::allows\+Anonymous()} and the {\ttfamily allows\+\_\+anonymous} from the data collector data, there will be no anonymous concept as of version 6.
+\item Deprecate not setting {\ttfamily \$authenticator\+Manager\+Enabled} to {\ttfamily true} in {\ttfamily Security\+Data\+Collector} and {\ttfamily Debug\+Firewall\+Command}
+\item Deprecate {\ttfamily Security\+Factory\+Interface} and {\ttfamily Security\+Extension\+::add\+Security\+Listener\+Factory()} in favor of {\ttfamily Authenticator\+Factory\+Interface} and {\ttfamily Security\+Extension\+::add\+Authenticator\+Factory()}
+\item Add {\ttfamily Authenticator\+Factory\+Interface\+::get\+Priority()} which replaces {\ttfamily Security\+Factory\+Interface\+::get\+Position()}
+\item Deprecate passing an array of arrays as 1st argument to {\ttfamily Main\+Configuration}, pass a sorted flat array of factories instead.
+\item Deprecate the {\ttfamily always\+\_\+authenticate\+\_\+before\+\_\+granting} option
+\item Display the roles of the logged-\/in user in the Web Debug Toolbar
+\item Add the {\ttfamily security.\+access\+\_\+decision\+\_\+manager.\+strategy\+\_\+service} option
+\item Deprecate not configuring explicitly a provider for custom\+\_\+authenticators when there is more than one registered provider
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1786}{}\doxysection{5.\+3}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1786}
+
+\begin{DoxyItemize}
+\item The authenticator system is no longer experimental
+\item Login Link functionality is no longer experimental
+\item Add {\ttfamily required\+\_\+badges} firewall config option
+\item \mbox{[}BC break\mbox{]} Add {\ttfamily login\+\_\+throttling.\+lock\+\_\+factory} setting defaulting to {\ttfamily null} (instead of {\ttfamily lock.\+factory})
+\item Add a {\ttfamily login\+\_\+throttling.\+interval} (in {\ttfamily security.\+firewalls}) option to change the default throttling interval.
+\item Add the {\ttfamily debug\+:firewall} command.
+\item Deprecate {\ttfamily User\+Password\+Encoder\+Command} class and the corresponding {\ttfamily user\+:encode-\/password} command, use {\ttfamily User\+Password\+Hash\+Command} and {\ttfamily user\+:hash-\/password} instead
+\item Deprecate the {\ttfamily security.\+encoder\+\_\+factory.\+generic} service, the {\ttfamily security.\+encoder\+\_\+factory} and {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}\mbox{\hyperlink{namespace_encoder}{Encoder}}\textbackslash{}Encoder\+Factory\+Interface} aliases, use {\ttfamily security.\+password\+\_\+hasher\+\_\+factory} and {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Password\+Hasher\textbackslash{}Hasher\textbackslash{}Password\+Hasher\+Factory\+Interface} instead
+\item Deprecate the {\ttfamily security.\+user\+\_\+password\+\_\+encoder.\+generic} service, the {\ttfamily security.\+password\+\_\+encoder} and the {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}\mbox{\hyperlink{namespace_encoder}{Encoder}}\textbackslash{}User\+Password\+Encoder\+Interface} aliases, use {\ttfamily security.\+user\+\_\+password\+\_\+hasher}, {\ttfamily security.\+password\+\_\+hasher} and {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Password\+Hasher\textbackslash{}Hasher\textbackslash{}User\+Password\+Hasher\+Interface} instead
+\item Deprecate the public {\ttfamily security.\+authorization\+\_\+checker} and {\ttfamily security.\+token\+\_\+storage} services to private
+\item Not setting the {\ttfamily enable\+\_\+authenticator\+\_\+manager} config option to {\ttfamily true} is deprecated
+\item Deprecate the {\ttfamily security.\+authentication.\+provider.$\ast$} services, use the new authenticator system instead
+\item Deprecate the {\ttfamily security.\+authentication.\+listener.$\ast$} services, use the new authenticator system instead
+\item Deprecate the Guard component integration, use the new authenticator system instead
+\item Add {\ttfamily form\+\_\+login.\+form\+\_\+only} option
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1787}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1787}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Firewall\+Listener\+Factory\+Interface}, which can be implemented by security factories to add firewall listeners
+\item Added {\ttfamily Sort\+Firewall\+Listeners\+Pass} to make the execution order of firewall listeners configurable by leveraging {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Http\textbackslash{}Firewall\textbackslash{}Firewall\+Listener\+Interface}
+\item Added ability to use comma separated ip address list for {\ttfamily security.\+access\+\_\+control}
+\item \mbox{[}BC break\mbox{]} Removed {\ttfamily Entry\+Point\+Factory\+Interface}, authenticators must now implement {\ttfamily Authentication\+Entry\+Point\+Interface} if they require autoregistration of a Security entry point.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1788}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1788}
+
+\begin{DoxyItemize}
+\item Added XSD for configuration
+\item Added security configuration for priority-\/based access decision strategy
+\item Marked the {\ttfamily Anonymous\+Factory}, {\ttfamily Form\+Login\+Factory}, {\ttfamily Form\+Login\+Ldap\+Factory}, {\ttfamily Guard\+Authentication\+Factory}, {\ttfamily Http\+Basic\+Factory}, {\ttfamily Http\+Basic\+Ldap\+Factory}, {\ttfamily Json\+Login\+Factory}, {\ttfamily Json\+Login\+Ldap\+Factory}, {\ttfamily Remember\+Me\+Factory}, {\ttfamily Remote\+User\+Factory} and {\ttfamily X509\+Factory} as {\ttfamily @internal}
+\item Renamed method {\ttfamily Abstract\+Factory\#create\+Entry\+Point()} to {\ttfamily Abstract\+Factory\#create\+Default\+Entry\+Point()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1789}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1789}
+
+\begin{DoxyItemize}
+\item The {\ttfamily switch\+\_\+user.\+stateless} firewall option has been removed.
+\item Removed the ability to configure encoders using {\ttfamily argon2i} or {\ttfamily bcrypt} as algorithm, use {\ttfamily auto} instead
+\item The {\ttfamily simple\+\_\+form} and {\ttfamily simple\+\_\+preauth} authentication listeners have been removed, use Guard instead.
+\item The {\ttfamily Simple\+Form\+Factory} and {\ttfamily Simple\+Pre\+Authentication\+Factory} classes have been removed, use Guard instead.
+\item Removed {\ttfamily Logout\+Url\+Helper} and {\ttfamily Security\+Helper} templating helpers, use Twig instead
+\item Removed the {\ttfamily logout\+\_\+on\+\_\+user\+\_\+change} firewall option
+\item Removed the {\ttfamily threads} encoder option
+\item Removed the {\ttfamily security.\+authentication.\+trust\+\_\+resolver.\+anonymous\+\_\+class} parameter
+\item Removed the {\ttfamily security.\+authentication.\+trust\+\_\+resolver.\+rememberme\+\_\+class} parameter
+\item Removed the {\ttfamily security.\+user.\+provider.\+in\+\_\+memory.\+user} service.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1790}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1790}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily anonymous\+: lazy} mode to firewalls to make them (not) start the session as late as possible
+\item Added {\ttfamily migrate\+\_\+from} option to encoders configuration.
+\item Added new {\ttfamily argon2id} encoder, undeprecated the {\ttfamily bcrypt} and {\ttfamily argon2i} ones (using {\ttfamily auto} is still recommended by default.)
+\item Deprecated the usage of \char`\"{}query\+\_\+string\char`\"{} without a \char`\"{}search\+\_\+dn\char`\"{} and a \char`\"{}search\+\_\+password\char`\"{} config key in Ldap factories.
+\item Marked the {\ttfamily Security\+Data\+Collector} class as {\ttfamily @final}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1791}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1791}
+
+\begin{DoxyItemize}
+\item Added new encoder types\+: {\ttfamily auto} (recommended), {\ttfamily native} and {\ttfamily sodium}
+\item The normalization of the cookie names configured in the {\ttfamily logout.\+delete\+\_\+cookies} option is deprecated and will be disabled in Symfony 5.\+0. This affects to cookies with dashes in their names. For example, starting from Symfony 5.\+0, the {\ttfamily my-\/cookie} name will delete {\ttfamily my-\/cookie} (with a dash) instead of {\ttfamily my\+\_\+cookie} (with an underscore).
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1792}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1792}
+
+\begin{DoxyItemize}
+\item Using the {\ttfamily security.\+authentication.\+trust\+\_\+resolver.\+anonymous\+\_\+class} and {\ttfamily security.\+authentication.\+trust\+\_\+resolver.\+rememberme\+\_\+class} parameters to define the token classes is deprecated. To use custom tokens extend the existing {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}Authentication\textbackslash{}Token\textbackslash{}Anonymous\+Token}. or {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}Authentication\textbackslash{}Token\textbackslash{}Remember\+Me\+Token}.
+\item Added {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Security\+Bundle\textbackslash{}Dependency\+Injection\textbackslash{}Compiler\textbackslash{}Add\+Expression\+Language\+Providers\+Pass}
+\item Added {\ttfamily json\+\_\+login\+\_\+ldap} authentication provider to use LDAP authentication with a REST API.
+\item Made remember-\/me cookies inherit their default config from {\ttfamily framework.\+session.\+cookie\+\_\+$\ast$} and added an \char`\"{}auto\char`\"{} mode to their \char`\"{}secure\char`\"{} config option to make them secure on HTTPS automatically.
+\item Deprecated the {\ttfamily simple\+\_\+form} and {\ttfamily simple\+\_\+preauth} authentication listeners, use Guard instead.
+\item Deprecated the {\ttfamily Simple\+Form\+Factory} and {\ttfamily Simple\+Pre\+Authentication\+Factory} classes, use Guard instead.
+\item Added {\ttfamily port} in access\+\_\+control
+\item Added individual voter decisions to the profiler
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1793}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1793}
+
+\begin{DoxyItemize}
+\item The {\ttfamily switch\+\_\+user.\+stateless} firewall option is deprecated, use the {\ttfamily stateless} option instead.
+\item The {\ttfamily logout\+\_\+on\+\_\+user\+\_\+change} firewall option is deprecated.
+\item deprecated {\ttfamily Security\+User\+Value\+Resolver}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Http\textbackslash{}Controller\textbackslash{}User\+Value\+Resolver} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1794}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1794}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Firewall\+Context\+::get\+Context()}
+\item made {\ttfamily Firewall\+Map\+::\$container} and {\ttfamily \+::\$map} private
+\item made the first {\ttfamily User\+Password\+Encoder\+Command\+::\+\_\+construct()} argument mandatory
+\item {\ttfamily User\+Password\+Encoder\+Command} does not extend {\ttfamily Container\+Aware\+Command} anymore
+\item removed support for voters that don\textquotesingle{}t implement the {\ttfamily Voter\+Interface}
+\item removed HTTP digest authentication
+\item removed command {\ttfamily acl\+:set} along with {\ttfamily Set\+Acl\+Command} class
+\item removed command {\ttfamily init\+:acl} along with {\ttfamily Init\+Acl\+Command} class
+\item removed {\ttfamily acl} configuration key and related services, use symfony/acl-\/bundle instead
+\item removed auto picking the first registered provider when no configured provider on a firewall and ambiguous
+\item the firewall option {\ttfamily logout\+\_\+on\+\_\+user\+\_\+change} is now always true, which will trigger a logout if the user changes between requests
+\item the {\ttfamily switch\+\_\+user.\+stateless} firewall option is {\ttfamily true} for stateless firewalls
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1795}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1795}
+
+\begin{DoxyItemize}
+\item Added new {\ttfamily security.\+helper} service that is an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}Security} and provides shortcuts for common security tasks.
+\item Tagging voters with the {\ttfamily security.\+voter} tag without implementing the {\ttfamily Voter\+Interface} on the class is now deprecated and will be removed in 4.\+0.
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily Firewall\+Context\+::get\+Listeners()} now returns {\ttfamily \textbackslash{}Traversable$\vert$array}
+\item added info about called security listeners in profiler
+\item Added {\ttfamily logout\+\_\+on\+\_\+user\+\_\+change} to the firewall options. This config item will trigger a logout when the user has changed. Should be set to true to avoid deprecations in the configuration.
+\item deprecated HTTP digest authentication
+\item deprecated command {\ttfamily acl\+:set} along with {\ttfamily Set\+Acl\+Command} class
+\item deprecated command {\ttfamily init\+:acl} along with {\ttfamily Init\+Acl\+Command} class
+\item Added support for the new Argon2i password encoder
+\item added {\ttfamily stateless} option to the {\ttfamily switch\+\_\+user} listener
+\item deprecated auto picking the first registered provider when no configured provider on a firewall and ambiguous
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1796}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1796}
+
+\begin{DoxyItemize}
+\item Deprecated instantiating {\ttfamily User\+Password\+Encoder\+Command} without its constructor arguments fully provided.
+\item Deprecated {\ttfamily User\+Password\+Encoder\+Command\+::get\+Container()} and relying on the {\ttfamily Container\+Aware\+Command} sub class or {\ttfamily Container\+Aware\+Interface} implementation for this command.
+\item Deprecated the {\ttfamily Firewall\+Map\+::\$map} and {\ttfamily \$container} properties.
+\item \mbox{[}BC BREAK\mbox{]} Keys of the {\ttfamily users} node for {\ttfamily in\+\_\+memory} user provider are no longer normalized.
+\item deprecated {\ttfamily Firewall\+Context\+::get\+Listeners()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1797}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1797}
+
+\begin{DoxyItemize}
+\item Added the {\ttfamily Security\+User\+Value\+Resolver} to inject the security users in actions via {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}User\textbackslash{}User\+Interface} in the method signature.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1798}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1798}
+
+\begin{DoxyItemize}
+\item Removed the {\ttfamily security.\+context} service.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1799}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1799}
+
+\begin{DoxyItemize}
+\item deprecated the {\ttfamily key} setting of {\ttfamily anonymous}, {\ttfamily remember\+\_\+me} and {\ttfamily http\+\_\+digest} in favor of the {\ttfamily secret} setting.
+\item deprecated the {\ttfamily intention} firewall listener setting in favor of the {\ttfamily csrf\+\_\+token\+\_\+id}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1800}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1800}
+
+\begin{DoxyItemize}
+\item Added the possibility to override the default success/failure handler to get the provider key and the options injected
+\item Deprecated the {\ttfamily security.\+context} service for the {\ttfamily security.\+token\+\_\+storage} and {\ttfamily security.\+authorization\+\_\+checker} services.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1801}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1801}
+
+\begin{DoxyItemize}
+\item Added \textquotesingle{}host\textquotesingle{} option to firewall configuration
+\item Added \textquotesingle{}csrf\+\_\+token\+\_\+generator\textquotesingle{} and \textquotesingle{}csrf\+\_\+token\+\_\+id\textquotesingle{} options to firewall logout listener configuration to supersede/alias \textquotesingle{}csrf\+\_\+provider\textquotesingle{} and \textquotesingle{}intention\textquotesingle{} respectively
+\item Moved \textquotesingle{}security.\+secure\+\_\+random\textquotesingle{} service configuration to Framework\+Bundle
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1802}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1802}
+
+\begin{DoxyItemize}
+\item allowed for multiple IP address in security access\+\_\+control rules
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1803}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1803}
+
+\begin{DoxyItemize}
+\item Added PBKDF2 Password encoder
+\item Added BCrypt password encoder
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1804}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_security_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1804}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} The custom factories for the firewall configuration are now registered during the build method of bundles instead of being registered by the end-\/user (you need to remove the \textquotesingle{}factories\textquotesingle{} keys in your security configuration).
+\item \mbox{[}BC BREAK\mbox{]} The Firewall listener is now registered after the Router one. This means that specific Firewall URLs (like /login\+\_\+check and /logout must now have proper route defined in your routing configuration)
+\item \mbox{[}BC BREAK\mbox{]} refactored the user provider configuration. The configuration changed for the chain provider and the memory provider\+:
+
+Before\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{security:}
+\DoxyCodeLine{    providers:}
+\DoxyCodeLine{        my\_chain\_provider:}
+\DoxyCodeLine{            providers: [my\_memory\_provider, my\_doctrine\_provider]}
+\DoxyCodeLine{        my\_memory\_provider:}
+\DoxyCodeLine{            users:}
+\DoxyCodeLine{                toto: \{ password: foobar, roles: [ROLE\_USER] \}}
+\DoxyCodeLine{                foo: \{ password: bar, roles: [ROLE\_USER, ROLE\_ADMIN] \}}
+
+\end{DoxyCode}
+
+
+After\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{security:}
+\DoxyCodeLine{    providers:}
+\DoxyCodeLine{        my\_chain\_provider:}
+\DoxyCodeLine{            chain:}
+\DoxyCodeLine{                providers: [my\_memory\_provider, my\_doctrine\_provider]}
+\DoxyCodeLine{        my\_memory\_provider:}
+\DoxyCodeLine{            memory:}
+\DoxyCodeLine{                users:}
+\DoxyCodeLine{                    toto: \{ password: foobar, roles: [ROLE\_USER] \}}
+\DoxyCodeLine{                    foo: \{ password: bar, roles: [ROLE\_USER, ROLE\_ADMIN] \}}
+
+\end{DoxyCode}
+
+\item \mbox{[}BC BREAK\mbox{]} Method {\ttfamily equals} was removed from {\ttfamily User\+Interface} to its own new {\ttfamily Equatable\+Interface}. The user class can now implement this interface to override the default implementation of users equality test.
+\item added a validator for the user password
+\item added \textquotesingle{}erase\+\_\+credentials\textquotesingle{} as a configuration key (true by default)
+\item added new events\+: {\ttfamily security.\+authentication.\+success} and {\ttfamily security.\+authentication.\+failure} fired on authentication success/failure, regardless of authentication method, events are defined in new event class\+: {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Security\textbackslash{}Core\textbackslash{}Authentication\+Events}.
+\item Added optional CSRF protection to Logout\+Listener\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{security:}
+\DoxyCodeLine{    firewalls:}
+\DoxyCodeLine{        default:}
+\DoxyCodeLine{            logout:}
+\DoxyCodeLine{                path: /logout\_path}
+\DoxyCodeLine{                target: /}
+\DoxyCodeLine{                csrf\_parameter: \_csrf\_token                   \# Optional (defaults to "{}\_csrf\_token"{})}
+\DoxyCodeLine{                csrf\_provider:  security.csrf.token\_generator \# Required to enable protection}
+\DoxyCodeLine{                intention:      logout                        \# Optional (defaults to "{}logout"{})}
+
+\end{DoxyCode}
+
+
+If the Logout\+Listener has CSRF protection enabled but cannot validate a token, then a Logout\+Exception will be thrown.
+\item Added {\ttfamily logout\+\_\+url} templating helper and Twig extension, which may be used to generate logout URL\textquotesingle{}s within templates. The security firewall\textquotesingle{}s config key must be specified. If a firewall\textquotesingle{}s logout listener has CSRF protection enabled, a token will be automatically added to the generated URL. 
+\end{DoxyItemize}

@@ -1,0 +1,63 @@
+\hypertarget{class_amp_1_1_sync_1_1_threaded_semaphore}{}\doxysection{Threaded\+Semaphore Class Reference}
+\label{class_amp_1_1_sync_1_1_threaded_semaphore}\index{ThreadedSemaphore@{ThreadedSemaphore}}
+Inheritance diagram for Threaded\+Semaphore\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_sync_1_1_threaded_semaphore}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_threaded_semaphore_a67f1e79e6d6d19df184fbaf679f8fefa}{\+\_\+\+\_\+construct}} (int \$locks)
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_threaded_semaphore_afb36e5d94e5d65b937c6eec4830313e7}{acquire}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An asynchronous semaphore based on pthreads\textquotesingle{} synchronization methods.
+
+This is an implementation of a thread-\/safe semaphore that has non-\/blocking acquire methods. There is a small tradeoff for asynchronous semaphores; you may not acquire a lock immediately when one is available and there may be a small delay. However, the small delay will not block the thread.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000024}{Deprecated}}]ext-\/pthreads development has been halted, see \href{https://github.com/krakjoe/pthreads/issues/929}{\texttt{ https\+://github.\+com/krakjoe/pthreads/issues/929}} \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_threaded_semaphore_a67f1e79e6d6d19df184fbaf679f8fefa}\label{class_amp_1_1_sync_1_1_threaded_semaphore_a67f1e79e6d6d19df184fbaf679f8fefa}} 
+\index{ThreadedSemaphore@{ThreadedSemaphore}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ThreadedSemaphore@{ThreadedSemaphore}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$locks }\end{DoxyParamCaption})}
+
+Creates a new semaphore with a given number of locks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$locks} & The maximum number of locks that can be acquired from the semaphore. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_threaded_semaphore_afb36e5d94e5d65b937c6eec4830313e7}\label{class_amp_1_1_sync_1_1_threaded_semaphore_afb36e5d94e5d65b937c6eec4830313e7}} 
+\index{ThreadedSemaphore@{ThreadedSemaphore}!acquire@{acquire}}
+\index{acquire@{acquire}!ThreadedSemaphore@{ThreadedSemaphore}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Acquires a lock on the semaphore.
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Lock$>$ Resolves with an integer keyed lock object. Identifiers returned by the locks should be 0-\/indexed. Releasing an identifier MUST make that same identifier available. May fail with a \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}} if an error occurs when attempting to obtain the lock (e.\+g. a shared memory segment closed).
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_sync_1_1_semaphore_afb36e5d94e5d65b937c6eec4830313e7}{Semaphore}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/Threaded\+Semaphore.\+php\end{DoxyCompactItemize}

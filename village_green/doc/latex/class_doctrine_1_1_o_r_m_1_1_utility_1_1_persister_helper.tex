@@ -1,0 +1,60 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper}{}\doxysection{Persister\+Helper Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper}\index{PersisterHelper@{PersisterHelper}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper_a35ce5d5645a0cebdcb796e6bd35871a9}{get\+Type\+Of\+Field}} (\$field\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper_a7afe775e0d9d3626282a2fb2df817248}{get\+Type\+Of\+Column}} (\$column\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper}{Persister\+Helper}} contains logic to infer binding types which is used in several persisters.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper_a7afe775e0d9d3626282a2fb2df817248}\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper_a7afe775e0d9d3626282a2fb2df817248}} 
+\index{PersisterHelper@{PersisterHelper}!getTypeOfColumn@{getTypeOfColumn}}
+\index{getTypeOfColumn@{getTypeOfColumn}!PersisterHelper@{PersisterHelper}}
+\doxysubsubsection{\texorpdfstring{getTypeOfColumn()}{getTypeOfColumn()}}
+{\footnotesize\ttfamily static get\+Type\+Of\+Column (\begin{DoxyParamCaption}\item[{}]{\$column\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$column\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper_a35ce5d5645a0cebdcb796e6bd35871a9}\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_persister_helper_a35ce5d5645a0cebdcb796e6bd35871a9}} 
+\index{PersisterHelper@{PersisterHelper}!getTypeOfField@{getTypeOfField}}
+\index{getTypeOfField@{getTypeOfField}!PersisterHelper@{PersisterHelper}}
+\doxysubsubsection{\texorpdfstring{getTypeOfField()}{getTypeOfField()}}
+{\footnotesize\ttfamily static get\+Type\+Of\+Field (\begin{DoxyParamCaption}\item[{}]{\$field\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$int, string$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Query\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Utility/Persister\+Helper.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{class_amp_1_1_internal_1_1_private_promise}{}\doxysection{Private\+Promise Class Reference}
+\label{class_amp_1_1_internal_1_1_private_promise}\index{PrivatePromise@{PrivatePromise}}
+Inheritance diagram for Private\+Promise\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_internal_1_1_private_promise}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_private_promise_a79e481369ec4a7f6cdbbaac8bc903d0f}\label{class_amp_1_1_internal_1_1_private_promise_a79e481369ec4a7f6cdbbaac8bc903d0f}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} \$promise)
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_private_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{on\+Resolve}} (callable \$on\+Resolved)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps a \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} instance that has public methods to resolve and fail the promise into an object that only allows access to the public API methods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_private_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}\label{class_amp_1_1_internal_1_1_private_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}} 
+\index{PrivatePromise@{PrivatePromise}!onResolve@{onResolve}}
+\index{onResolve@{onResolve}!PrivatePromise@{PrivatePromise}}
+\doxysubsubsection{\texorpdfstring{onResolve()}{onResolve()}}
+{\footnotesize\ttfamily on\+Resolve (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Resolved }\end{DoxyParamCaption})}
+
+Registers a callback to be invoked when the promise is resolved.
+
+If this method is called multiple times, additional handlers will be registered instead of replacing any already existing handlers.
+
+If the promise is already resolved, the callback MUST be executed immediately.
+
+Exceptions MUST NOT be thrown from this method. Any exceptions thrown from invoked callbacks MUST be forwarded to the event-\/loop error handler.
+
+Note\+: You shouldn\textquotesingle{}t implement this interface yourself. Instead, provide a method that returns a promise for the operation you\textquotesingle{}re implementing. Objects other than pure placeholders implementing it are a very bad idea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Resolved} & The first argument shall be {\ttfamily null} on success, while the second shall be {\ttfamily null} on failure.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$on\+Resolved
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{Promise}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Internal/Private\+Promise.\+php\end{DoxyCompactItemize}

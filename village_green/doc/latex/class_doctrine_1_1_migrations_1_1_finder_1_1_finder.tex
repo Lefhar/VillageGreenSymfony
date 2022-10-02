@@ -1,0 +1,83 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_finder_1_1_finder}{}\doxysection{Finder Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_finder_1_1_finder}\index{Finder@{Finder}}
+Inheritance diagram for Finder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_migrations_1_1_finder_1_1_finder}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a39b992e2cd3e89c112174f6a80ddb9a5}{get\+Real\+Path}} (string \$directory)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a8e54732a8b0a46c10e0204c3964b900f}{load\+Migrations}} (array \$files, ?string \$namespace)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a106821adb1c6ee341036a5b38c7003ef}{load\+Migration\+Classes}} (array \$files, ?string \$namespace=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a14da5ca620126078c8338bee4a0d94ba}\label{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a14da5ca620126078c8338bee4a0d94ba}} 
+static {\bfseries require\+Once} (string \$path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_finder_1_1_finder}{Finder}} class is responsible for for finding migrations on disk at a given path. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a39b992e2cd3e89c112174f6a80ddb9a5}\label{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a39b992e2cd3e89c112174f6a80ddb9a5}} 
+\index{Finder@{Finder}!getRealPath@{getRealPath}}
+\index{getRealPath@{getRealPath}!Finder@{Finder}}
+\doxysubsubsection{\texorpdfstring{getRealPath()}{getRealPath()}}
+{\footnotesize\ttfamily get\+Real\+Path (\begin{DoxyParamCaption}\item[{string}]{\$directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Directory} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a106821adb1c6ee341036a5b38c7003ef}\label{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a106821adb1c6ee341036a5b38c7003ef}} 
+\index{Finder@{Finder}!loadMigrationClasses@{loadMigrationClasses}}
+\index{loadMigrationClasses@{loadMigrationClasses}!Finder@{Finder}}
+\doxysubsubsection{\texorpdfstring{loadMigrationClasses()}{loadMigrationClasses()}}
+{\footnotesize\ttfamily load\+Migration\+Classes (\begin{DoxyParamCaption}\item[{array}]{\$files,  }\item[{?string}]{\$namespace = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Look up all declared classes and find those classes contained in the given {\ttfamily \$files} array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$files} & The set of files that were {\ttfamily required} \\
+\hline
+string | null & {\em \$namespace} & If not null only classes in this namespace will be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reflection\+Class$<$object$>$\mbox{[}\mbox{]} the classes in {\ttfamily \$files} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a8e54732a8b0a46c10e0204c3964b900f}\label{class_doctrine_1_1_migrations_1_1_finder_1_1_finder_a8e54732a8b0a46c10e0204c3964b900f}} 
+\index{Finder@{Finder}!loadMigrations@{loadMigrations}}
+\index{loadMigrations@{loadMigrations}!Finder@{Finder}}
+\doxysubsubsection{\texorpdfstring{loadMigrations()}{loadMigrations()}}
+{\footnotesize\ttfamily load\+Migrations (\begin{DoxyParamCaption}\item[{array}]{\$files,  }\item[{?string}]{\$namespace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$files} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Name\+Is\+Reserved} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Finder/Finder.\+php\end{DoxyCompactItemize}

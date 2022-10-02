@@ -1,0 +1,256 @@
+\hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection}{}\doxysection{Method\+Reflection Class Reference}
+\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection}\index{MethodReflection@{MethodReflection}}
+Inheritance diagram for Method\+Reflection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a0e52f3960713c420d313cac6c3cbc037}{get\+Doc\+Block}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a10bdf2eeda71802c9d9be2eaff097407}{get\+Start\+Line}} (\$include\+Doc\+Comment=false)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_aacff3f8d93cc250281f0f73bff3422e1}{get\+Declaring\+Class}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a61dd66fb5314878df2c679a31d84a250}{get\+Prototype}} (\$format=self\+::\+PROTOTYPE\+\_\+\+AS\+\_\+\+ARRAY)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a015cb52e5774a1972d296c9694d2a3c3}{get\+Parameters}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ae73fd1c65db5de04be290a6aa4e8ebd2}{get\+Contents}} (\$include\+Doc\+Block=true)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad7bab1db052fb9fcc8bd0b4f3eac29ac}{get\+Body}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a5558c5d549f41597377fa1ea8a1cefa3}{to\+String}} ()
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a24ee68b2076949fe09b7d006dd976518}{PROTOTYPE\+\_\+\+AS\+\_\+\+ARRAY}} = \textquotesingle{}prototype\+\_\+as\+\_\+array\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ac7cdb3a7cfe3e3e4baaed0c11ca49d8f}{PROTOTYPE\+\_\+\+AS\+\_\+\+STRING}} = \textquotesingle{}prototype\+\_\+as\+\_\+string\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a8e68dddaf327df9927c65d0e78784ac3}{extract\+Method\+Contents}} (\$body\+Only=false)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad4a137e125fbe5a6049692eefede43ac}{extract\+Prefixed\+Whitespace}} (\$haystack, \$position)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad14288b29305e675936bdff8ac6702af}{is\+Ending\+Brace}} (\$haystack, \$position)
+\item 
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a726f741b36dcbabeaf298ae6abac14cb}{is\+Valid\+Function}} (\$haystack, \$position, \$function\+Name=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{MethodReflection@{MethodReflection}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a8e68dddaf327df9927c65d0e78784ac3}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a8e68dddaf327df9927c65d0e78784ac3}} 
+\index{MethodReflection@{MethodReflection}!extractMethodContents@{extractMethodContents}}
+\index{extractMethodContents@{extractMethodContents}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{extractMethodContents()}{extractMethodContents()}}
+{\footnotesize\ttfamily extract\+Method\+Contents (\begin{DoxyParamCaption}\item[{}]{\$body\+Only = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tokenize method string and return concatenated body
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$body\+Only} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad4a137e125fbe5a6049692eefede43ac}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad4a137e125fbe5a6049692eefede43ac}} 
+\index{MethodReflection@{MethodReflection}!extractPrefixedWhitespace@{extractPrefixedWhitespace}}
+\index{extractPrefixedWhitespace@{extractPrefixedWhitespace}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{extractPrefixedWhitespace()}{extractPrefixedWhitespace()}}
+{\footnotesize\ttfamily extract\+Prefixed\+Whitespace (\begin{DoxyParamCaption}\item[{}]{\$haystack,  }\item[{}]{\$position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Take current position and find any whitespace
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$haystack} & \\
+\hline
+int & {\em \$position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad7bab1db052fb9fcc8bd0b4f3eac29ac}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad7bab1db052fb9fcc8bd0b4f3eac29ac}} 
+\index{MethodReflection@{MethodReflection}!getBody@{getBody}}
+\index{getBody@{getBody}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getBody()}{getBody()}}
+{\footnotesize\ttfamily get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get method body
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ae73fd1c65db5de04be290a6aa4e8ebd2}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ae73fd1c65db5de04be290a6aa4e8ebd2}} 
+\index{MethodReflection@{MethodReflection}!getContents@{getContents}}
+\index{getContents@{getContents}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getContents()}{getContents()}}
+{\footnotesize\ttfamily get\+Contents (\begin{DoxyParamCaption}\item[{}]{\$include\+Doc\+Block = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Get method contents
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$include\+Doc\+Block} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_aacff3f8d93cc250281f0f73bff3422e1}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_aacff3f8d93cc250281f0f73bff3422e1}} 
+\index{MethodReflection@{MethodReflection}!getDeclaringClass@{getDeclaringClass}}
+\index{getDeclaringClass@{getDeclaringClass}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getDeclaringClass()}{getDeclaringClass()}}
+{\footnotesize\ttfamily get\+Declaring\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get reflection of declaring class
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_class_reflection}{Class\+Reflection}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a0e52f3960713c420d313cac6c3cbc037}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a0e52f3960713c420d313cac6c3cbc037}} 
+\index{MethodReflection@{MethodReflection}!getDocBlock@{getDocBlock}}
+\index{getDocBlock@{getDocBlock}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getDocBlock()}{getDocBlock()}}
+{\footnotesize\ttfamily get\+Doc\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve method Doc\+Block reflection
+
+\begin{DoxyReturn}{Returns}
+Doc\+Block\+Reflection$\vert$false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a015cb52e5774a1972d296c9694d2a3c3}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a015cb52e5774a1972d296c9694d2a3c3}} 
+\index{MethodReflection@{MethodReflection}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}}
+{\footnotesize\ttfamily get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get all method parameter reflection objects
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_laminas_1_1_code_1_1_reflection_1_1_parameter_reflection}{Parameter\+Reflection}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a61dd66fb5314878df2c679a31d84a250}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a61dd66fb5314878df2c679a31d84a250}} 
+\index{MethodReflection@{MethodReflection}!getPrototype@{getPrototype}}
+\index{getPrototype@{getPrototype}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getPrototype()}{getPrototype()}}
+{\footnotesize\ttfamily get\+Prototype (\begin{DoxyParamCaption}\item[{}]{\$format = {\ttfamily self\+:\+:PROTOTYPE\+\_\+AS\+\_\+ARRAY} }\end{DoxyParamCaption})}
+
+Get method prototype
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$format} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a10bdf2eeda71802c9d9be2eaff097407}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a10bdf2eeda71802c9d9be2eaff097407}} 
+\index{MethodReflection@{MethodReflection}!getStartLine@{getStartLine}}
+\index{getStartLine@{getStartLine}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{getStartLine()}{getStartLine()}}
+{\footnotesize\ttfamily get\+Start\+Line (\begin{DoxyParamCaption}\item[{}]{\$include\+Doc\+Comment = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get start line (position) of method
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$include\+Doc\+Comment} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad14288b29305e675936bdff8ac6702af}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ad14288b29305e675936bdff8ac6702af}} 
+\index{MethodReflection@{MethodReflection}!isEndingBrace@{isEndingBrace}}
+\index{isEndingBrace@{isEndingBrace}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{isEndingBrace()}{isEndingBrace()}}
+{\footnotesize\ttfamily is\+Ending\+Brace (\begin{DoxyParamCaption}\item[{}]{\$haystack,  }\item[{}]{\$position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Test for ending brace
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$haystack} & \\
+\hline
+int & {\em \$position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a726f741b36dcbabeaf298ae6abac14cb}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a726f741b36dcbabeaf298ae6abac14cb}} 
+\index{MethodReflection@{MethodReflection}!isValidFunction@{isValidFunction}}
+\index{isValidFunction@{isValidFunction}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{isValidFunction()}{isValidFunction()}}
+{\footnotesize\ttfamily is\+Valid\+Function (\begin{DoxyParamCaption}\item[{}]{\$haystack,  }\item[{}]{\$position,  }\item[{}]{\$function\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Test to see if current position is valid function or closure. Returns true if it\textquotesingle{}s a function and NOT a closure
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$haystack} & \\
+\hline
+int & {\em \$position} & \\
+\hline
+string & {\em \$function\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a5558c5d549f41597377fa1ea8a1cefa3}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a5558c5d549f41597377fa1ea8a1cefa3}} 
+\index{MethodReflection@{MethodReflection}!toString@{toString}}
+\index{toString@{toString}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_laminas_1_1_code_1_1_reflection_1_1_reflection_interface_a5558c5d549f41597377fa1ea8a1cefa3}{Reflection\+Interface}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a24ee68b2076949fe09b7d006dd976518}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_a24ee68b2076949fe09b7d006dd976518}} 
+\index{MethodReflection@{MethodReflection}!PROTOTYPE\_AS\_ARRAY@{PROTOTYPE\_AS\_ARRAY}}
+\index{PROTOTYPE\_AS\_ARRAY@{PROTOTYPE\_AS\_ARRAY}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{PROTOTYPE\_AS\_ARRAY}{PROTOTYPE\_AS\_ARRAY}}
+{\footnotesize\ttfamily const PROTOTYPE\+\_\+\+AS\+\_\+\+ARRAY = \textquotesingle{}prototype\+\_\+as\+\_\+array\textquotesingle{}}
+
+Constant use in @\+Method\+Reflection to display prototype as an array \mbox{\Hypertarget{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ac7cdb3a7cfe3e3e4baaed0c11ca49d8f}\label{class_laminas_1_1_code_1_1_reflection_1_1_method_reflection_ac7cdb3a7cfe3e3e4baaed0c11ca49d8f}} 
+\index{MethodReflection@{MethodReflection}!PROTOTYPE\_AS\_STRING@{PROTOTYPE\_AS\_STRING}}
+\index{PROTOTYPE\_AS\_STRING@{PROTOTYPE\_AS\_STRING}!MethodReflection@{MethodReflection}}
+\doxysubsubsection{\texorpdfstring{PROTOTYPE\_AS\_STRING}{PROTOTYPE\_AS\_STRING}}
+{\footnotesize\ttfamily const PROTOTYPE\+\_\+\+AS\+\_\+\+STRING = \textquotesingle{}prototype\+\_\+as\+\_\+string\textquotesingle{}}
+
+Constant use in @\+Method\+Reflection to display prototype as a string 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/laminas/laminas-\/code/src/\+Reflection/Method\+Reflection.\+php\end{DoxyCompactItemize}

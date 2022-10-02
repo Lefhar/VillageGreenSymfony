@@ -1,0 +1,95 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_connection_registry}{}\doxysection{Connection\+Registry Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_connection_registry}\index{ConnectionRegistry@{ConnectionRegistry}}
+Inheritance diagram for Connection\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{interface_doctrine_1_1_persistence_1_1_connection_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_connection_registry_aea8234fbe5fe3e579e12d39cc54ceafd}{get\+Default\+Connection\+Name}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_connection_registry_afcfe486f73fea2e7e2fa2bfa9e900952}{get\+Connection}} (\$name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_connection_registry_aa078d9e28131579ede55b9f2a133269a}{get\+Connections}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_connection_registry_a7b6cd92f967b969b1482b26b7d2254c6}{get\+Connection\+Names}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract covering connection for a Doctrine persistence layer \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}} class to implement. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_connection_registry_afcfe486f73fea2e7e2fa2bfa9e900952}\label{interface_doctrine_1_1_persistence_1_1_connection_registry_afcfe486f73fea2e7e2fa2bfa9e900952}} 
+\index{ConnectionRegistry@{ConnectionRegistry}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!ConnectionRegistry@{ConnectionRegistry}}
+\doxysubsubsection{\texorpdfstring{getConnection()}{getConnection()}}
+{\footnotesize\ttfamily get\+Connection (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets the named connection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The connection name (null for the default one).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_afcfe486f73fea2e7e2fa2bfa9e900952}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_connection_registry_a7b6cd92f967b969b1482b26b7d2254c6}\label{interface_doctrine_1_1_persistence_1_1_connection_registry_a7b6cd92f967b969b1482b26b7d2254c6}} 
+\index{ConnectionRegistry@{ConnectionRegistry}!getConnectionNames@{getConnectionNames}}
+\index{getConnectionNames@{getConnectionNames}!ConnectionRegistry@{ConnectionRegistry}}
+\doxysubsubsection{\texorpdfstring{getConnectionNames()}{getConnectionNames()}}
+{\footnotesize\ttfamily get\+Connection\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all connection names.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} An array of connection names. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_a7b6cd92f967b969b1482b26b7d2254c6}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_connection_registry_aa078d9e28131579ede55b9f2a133269a}\label{interface_doctrine_1_1_persistence_1_1_connection_registry_aa078d9e28131579ede55b9f2a133269a}} 
+\index{ConnectionRegistry@{ConnectionRegistry}!getConnections@{getConnections}}
+\index{getConnections@{getConnections}!ConnectionRegistry@{ConnectionRegistry}}
+\doxysubsubsection{\texorpdfstring{getConnections()}{getConnections()}}
+{\footnotesize\ttfamily get\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets an array of all registered connections.
+
+\begin{DoxyReturn}{Returns}
+object\mbox{[}\mbox{]} An array of Connection instances. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_aa078d9e28131579ede55b9f2a133269a}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_connection_registry_aea8234fbe5fe3e579e12d39cc54ceafd}\label{interface_doctrine_1_1_persistence_1_1_connection_registry_aea8234fbe5fe3e579e12d39cc54ceafd}} 
+\index{ConnectionRegistry@{ConnectionRegistry}!getDefaultConnectionName@{getDefaultConnectionName}}
+\index{getDefaultConnectionName@{getDefaultConnectionName}!ConnectionRegistry@{ConnectionRegistry}}
+\doxysubsubsection{\texorpdfstring{getDefaultConnectionName()}{getDefaultConnectionName()}}
+{\footnotesize\ttfamily get\+Default\+Connection\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the default connection name.
+
+\begin{DoxyReturn}{Returns}
+string The default connection name. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_aea8234fbe5fe3e579e12d39cc54ceafd}{Abstract\+Manager\+Registry}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Connection\+Registry.\+php\end{DoxyCompactItemize}

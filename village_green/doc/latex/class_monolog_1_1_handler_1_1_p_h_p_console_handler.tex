@@ -1,0 +1,126 @@
+\hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler}{}\doxysection{PHPConsole\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler}\index{PHPConsoleHandler@{PHPConsoleHandler}}
+Inheritance diagram for PHPConsole\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_p_h_p_console_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_p_h_p_console_handler_aa609767fd2b25657eccc0c57cecb97b4}{\+\_\+\+\_\+construct}} (array \$options=\mbox{[}$\,$\mbox{]}, ?Connector \$connector=null, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a8559271d6a6c009d51a62dda78fd937c}\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a8559271d6a6c009d51a62dda78fd937c}} 
+{\bfseries get\+Connector} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_p_h_p_console_handler_ad54b568c673b7b4fc724268a54313603}{handle}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_p_h_p_console_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Monolog handler for Google Chrome extension \char`\"{}\+PHP Console\char`\"{}
+
+Display PHP error/debug log messages in Google Chrome console and notification popups, executes PHP code remotely
+
+Usage\+:
+\begin{DoxyEnumerate}
+\item Install Google Chrome extension \href{https://chrome.google.com/webstore/detail/php-console/nfhmhhlpfleoednkpnnnkolmclajemef}{\texttt{ https\+://chrome.\+google.\+com/webstore/detail/php-\/console/nfhmhhlpfleoednkpnnnkolmclajemef}}
+\item See overview \href{https://github.com/barbushin/php-console\#overview}{\texttt{ https\+://github.\+com/barbushin/php-\/console\#overview}}
+\item Install PHP Console library \href{https://github.com/barbushin/php-console\#installation}{\texttt{ https\+://github.\+com/barbushin/php-\/console\#installation}}
+\item Example (result will looks like \href{http://i.hizliresim.com/vg3Pz4.png}{\texttt{ http\+://i.\+hizliresim.\+com/vg3\+Pz4.\+png}})
+
+\$logger = new \textbackslash{}\+Monolog\textbackslash{}\+Logger(\textquotesingle{}all\textquotesingle{}, array(new \textbackslash{}\+Monolog\textbackslash{}\+Handler\textbackslash{}\+PHPConsole\+Handler())); \textbackslash{}\+Monolog\textbackslash{}\+Error\+Handler\+::register(\$logger); echo \$undefined\+Var; \$logger-\/\texorpdfstring{$>$}{>}debug(\textquotesingle{}SELECT $\ast$ FROM users\textquotesingle{}, array(\textquotesingle{}db\textquotesingle{}, \textquotesingle{}time\textquotesingle{} =\texorpdfstring{$>$}{>} 0.\+012)); PC\+::debug(\$\+\_\+\+SERVER); // PHP Console debugger for any type of vars
+\end{DoxyEnumerate}
+
+\begin{DoxyAuthor}{Author}
+Sergey Barbushin \href{https://www.linkedin.com/in/barbushin}{\texttt{ https\+://www.\+linkedin.\+com/in/barbushin}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler_aa609767fd2b25657eccc0c57cecb97b4}\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler_aa609767fd2b25657eccc0c57cecb97b4}} 
+\index{PHPConsoleHandler@{PHPConsoleHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PHPConsoleHandler@{PHPConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{?Connector}]{\$connector = {\ttfamily null},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em array$<$string,mixed$>$} & \$options See \textbackslash{}\+Monolog\textbackslash{}\+Handler\textbackslash{}\+PHPConsole\+Handler\+::\$options for more details \\
+\hline
+Connector | null & {\em \$connector} & Instance of \textbackslash{}\+Php\+Console\textbackslash{}\+Connector class (optional) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{PHPConsoleHandler@{PHPConsoleHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!PHPConsoleHandler@{PHPConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a1a49b8dded6e91a52e2fd07195d334da}\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{PHPConsoleHandler@{PHPConsoleHandler}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!PHPConsoleHandler@{PHPConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, mixed$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler_ad54b568c673b7b4fc724268a54313603}\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler_ad54b568c673b7b4fc724268a54313603}} 
+\index{PHPConsoleHandler@{PHPConsoleHandler}!handle@{handle}}
+\index{handle@{handle}!PHPConsoleHandler@{PHPConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily handle (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Handles a record.
+
+All records may be passed to this method, and the handler should discard those that it does not want to handle.
+
+The return value of this function controls the bubbling process of the handler stack. Unless the bubbling is interrupted (by returning true), the \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} class will keep on calling further handlers in the stack with a given log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & The record to handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true means that this handler handled the record, and that bubbling is not permitted. false means the record was either not processed or that this handler allows bubbling.
+\end{DoxyReturn}
+@phpstan-\/param Record \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_p_h_p_console_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_p_h_p_console_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{PHPConsoleHandler@{PHPConsoleHandler}!write@{write}}
+\index{write@{write}!PHPConsoleHandler@{PHPConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/PHPConsole\+Handler.\+php\end{DoxyCompactItemize}

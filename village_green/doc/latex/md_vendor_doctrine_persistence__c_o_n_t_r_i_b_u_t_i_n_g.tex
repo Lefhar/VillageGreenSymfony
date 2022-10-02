@@ -1,0 +1,10 @@
+This package has a development dependency on {\ttfamily doctrine/common}, which has a regular dependency on this package ({\ttfamily $^\wedge$2.0} at the time of writing).
+
+To be able to use Composer, one has to let it understand that this is version 2 (even when developing on 3.\+0.\+x), as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{COMPOSER\_ROOT\_VERSION=2.0 composer update -\/v}
+
+\end{DoxyCode}
+ 

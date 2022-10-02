@@ -1,0 +1,81 @@
+\hypertarget{class_monolog_1_1_handler_1_1_deduplication_handler}{}\doxysection{Deduplication\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_deduplication_handler}\index{DeduplicationHandler@{DeduplicationHandler}}
+Inheritance diagram for Deduplication\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_deduplication_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_deduplication_handler_a0ad297188c9b6686d8b43b7146d569b5}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} \$handler, ?string \$deduplication\+Store=null, \$deduplication\+Level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, int \$time=60, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_deduplication_handler_a7751f77b5263bcf940ece6e824a05b38}{flush}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_deduplication_handler_a8b0df9267f7acdbd07e5bbd69148d72e}\label{class_monolog_1_1_handler_1_1_deduplication_handler_a8b0df9267f7acdbd07e5bbd69148d72e}} 
+{\bfseries \$deduplication\+Store}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_deduplication_handler_a93f65fb96fda792b9840ddd55b2d0354}\label{class_monolog_1_1_handler_1_1_deduplication_handler_a93f65fb96fda792b9840ddd55b2d0354}} 
+{\bfseries \$deduplication\+Level}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_deduplication_handler_a78db1a0602e3b6ac1d9a1b5ec103c160}\label{class_monolog_1_1_handler_1_1_deduplication_handler_a78db1a0602e3b6ac1d9a1b5ec103c160}} 
+{\bfseries \$time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple handler wrapper that deduplicates log records across multiple requests
+
+It also includes the \mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler}{Buffer\+Handler}} functionality and will buffer all messages until the end of the request or flush() is called.
+
+This works by storing all log records\textquotesingle{} messages above \$deduplication\+Level to the file specified by \$deduplication\+Store. When further logs come in at the end of the request (or when flush() is called), all those above \$deduplication\+Level are checked against the existing stored logs. If they match and the timestamps in the stored log is not older than \$time seconds, the new log record is discarded. If no log record is new, the whole data set is discarded.
+
+This is mainly useful in combination with Mail handlers or things like Slack or Hip\+Chat handlers that send messages to people, to avoid spamming with the same message over and over in case of a major component failure like a database server being down which makes all requests fail in the same way.
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_deduplication_handler_a0ad297188c9b6686d8b43b7146d569b5}\label{class_monolog_1_1_handler_1_1_deduplication_handler_a0ad297188c9b6686d8b43b7146d569b5}} 
+\index{DeduplicationHandler@{DeduplicationHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DeduplicationHandler@{DeduplicationHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}}}]{\$handler,  }\item[{?string}]{\$deduplication\+Store = {\ttfamily null},  }\item[{}]{\$deduplication\+Level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{int}]{\$time = {\ttfamily 60},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} & {\em \$handler} & \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}}. \\
+\hline
+string & {\em \$deduplication\+Store} & The file/path where the deduplication log should be kept \\
+\hline
+string | int & {\em \$deduplication\+Level} & The minimum logging level for log records to be looked at for deduplication purposes \\
+\hline
+int & {\em \$time} & The period (in seconds) during which duplicate entries should be suppressed after a given log is sent through \\
+\hline
+bool & {\em \$bubble} & Whether the messages that are handled can bubble up the stack or not\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$deduplication\+Level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_deduplication_handler_a7751f77b5263bcf940ece6e824a05b38}\label{class_monolog_1_1_handler_1_1_deduplication_handler_a7751f77b5263bcf940ece6e824a05b38}} 
+\index{DeduplicationHandler@{DeduplicationHandler}!flush@{flush}}
+\index{flush@{flush}!DeduplicationHandler@{DeduplicationHandler}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_buffer_handler}{Buffer\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Deduplication\+Handler.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement}{}\doxysection{Statement Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement}\index{Statement@{Statement}}
+Inheritance diagram for Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement_a889ebbf208c783e209cf264a8595d19a}{\+\_\+\+\_\+construct}} (Driver\+Statement \$stmt, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter}{Converter}} \$converter)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement_abf65f493280888db7095b3b820131181}{execute}} (\$params=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Portability wrapper for a \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement}{Statement}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement_a889ebbf208c783e209cf264a8595d19a}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement_a889ebbf208c783e209cf264a8595d19a}} 
+\index{Statement@{Statement}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Driver\+Statement}]{\$stmt,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter}{Converter}}}]{\$converter }\end{DoxyParamCaption})}
+
+Wraps {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement}{Statement}}} and applies portability measures. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement_abf65f493280888db7095b3b820131181}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_statement_abf65f493280888db7095b3b820131181}} 
+\index{Statement@{Statement}!execute@{execute}}
+\index{execute@{execute}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\{Executes a prepared statement
+
+If the prepared statement included parameter markers, you must either\+: call \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_statement_a96968444927e79aa3b3de64f133886e6}{bind\+Param()}}\} to bind PHP variables to the parameter markers\+: bound variables pass their value as input and receive the output value, if any, of their associated parameter markers or pass an array of input-\/only parameter values.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$params} & A numeric array of values with as many elements as there are bound parameters in the SQL statement being executed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_statement_middleware_abf65f493280888db7095b3b820131181}{Abstract\+Statement\+Middleware}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Portability/Statement.\+php\end{DoxyCompactItemize}

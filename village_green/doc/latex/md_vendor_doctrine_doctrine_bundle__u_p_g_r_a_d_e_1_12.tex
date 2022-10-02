@@ -1,0 +1,38 @@
+\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_12_autotoc_md160}{}\doxysection{Deprecation of Doctrine\+Cache\+Bundle}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_12_autotoc_md160}
+With Doctrine\+Cache\+Bundle \href{https://github.com/doctrine/DoctrineCacheBundle/issues/156}{\texttt{ being deprecated}}, configuring caches through it has been deprecated. If you are using anything other than the {\ttfamily pool} or {\ttfamily id} cache types, please update your configuration to either use symfony/cache through the {\ttfamily pool} type or configure your cache services manually and use the {\ttfamily service} type.\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_12_autotoc_md161}{}\doxysection{Service aliases}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_12_autotoc_md161}
+
+\begin{DoxyItemize}
+\item Deprecated the {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Doctrine\textbackslash{}Registry\+Interface} and {\ttfamily Doctrine\textbackslash{}Bundle\textbackslash{}Doctrine\+Bundle\textbackslash{}Registry} service alias, use {\ttfamily Doctrine\textbackslash{}Common\textbackslash{}Persistence\textbackslash{}Manager\+Registry} instead.
+\item Deprecated the {\ttfamily Doctrine\textbackslash{}Common\textbackslash{}Persistence\textbackslash{}Object\+Manager} service alias, use {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Manager\+Interface} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_12_autotoc_md162}{}\doxysection{Unit\+Of\+Work cleared between each request}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_1_12_autotoc_md162}
+If all of these are true\+:
+\begin{DoxyItemize}
+\item You call {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Client\+::disable\+Reboot()} in your test case
+\item Trigger multiple HTTP requests (via {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Client\+::request()} etc.) within your test case
+\item Your test case relies on Doctrine ORM keeping references to old entities between requests (this is most obvious when calling {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Object\+Manager\+::refresh})
+\end{DoxyItemize}
+
+Your test case will fail since {\ttfamily Doctrine\+Bundle} 1.\+12.\+3, as identity map is now cleared between each request to better simulate real requests and avoid memory leaks. You have two options to solve this\+:
+
+
+\begin{DoxyEnumerate}
+\item Change your test cases with new behaviour in mind. In a lot of cases this just means to replace {\ttfamily Object\+Manager\+::refresh(\$entity)} with {\ttfamily \$entity = Object\+Manager\+::find(\$entity-\/\texorpdfstring{$>$}{>}get\+Id())}. This is the recommended solution.
+\item Write a compiler pass which restores old behaviour, e.\+g. by adding the following to your {\ttfamily Kernel} class\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{protected} \textcolor{keyword}{function} build(\(\backslash\)Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)ContainerBuilder \$container)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    parent::build(\$container);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\$this-\/>environment === \textcolor{stringliteral}{'test'}) \{}
+\DoxyCodeLine{        \$container-\/>addCompilerPass(\textcolor{keyword}{new} \textcolor{keyword}{class} implements \(\backslash\)Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Compiler\(\backslash\)CompilerPassInterface \{}
+\DoxyCodeLine{            \textcolor{keyword}{public} \textcolor{keyword}{function} process(\(\backslash\)Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)ContainerBuilder \$container)}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                \$container-\/>getDefinition(\textcolor{stringliteral}{'doctrine'})-\/>clearTag(\textcolor{stringliteral}{'kernel.reset'});}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}, \(\backslash\)Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Compiler\(\backslash\)PassConfig::TYPE\_BEFORE\_OPTIMIZATION, 1);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}

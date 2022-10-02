@@ -1,0 +1,68 @@
+\hypertarget{class_monolog_1_1_handler_1_1_abstract_processing_handler}{}\doxysection{Abstract\+Processing\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_abstract_processing_handler}\index{AbstractProcessingHandler@{AbstractProcessingHandler}}
+Inheritance diagram for Abstract\+Processing\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_monolog_1_1_handler_1_1_abstract_processing_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} class providing the \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} structure, including processors and formatters
+
+Classes extending it should (in most cases) only implement write(\$record)
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}} 
+
+Christophe Coevoet \href{mailto:stof@notk.org}{\texttt{ stof@notk.\+org}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/type Formatted\+Record array\{message\+: string, context\+: mixed\mbox{[}\mbox{]}, level\+: Level, level\+\_\+name\+: Level\+Name, channel\+: string, datetime\+: \textbackslash{}\+Date\+Time\+Immutable, extra\+: mixed\mbox{[}\mbox{]}, formatted\+: mixed\} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{AbstractProcessingHandler@{AbstractProcessingHandler}!reset@{reset}}
+\index{reset@{reset}!AbstractProcessingHandler@{AbstractProcessingHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_handler_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_a4a20559544fdf4dcb457e258dc976cf8}{Browser\+Console\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_a4a20559544fdf4dcb457e258dc976cf8}{Rollbar\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_a4a20559544fdf4dcb457e258dc976cf8}{Rotating\+File\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a4a20559544fdf4dcb457e258dc976cf8}{Test\+Handler}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_swift_mailer_handler_a4a20559544fdf4dcb457e258dc976cf8}{Swift\+Mailer\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{AbstractProcessingHandler@{AbstractProcessingHandler}!write@{write}}
+\index{write@{write}!AbstractProcessingHandler@{AbstractProcessingHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_amqp_handler_afa17604fd899fffdc1ee326afe177cb5}{Amqp\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_afa17604fd899fffdc1ee326afe177cb5}{Browser\+Console\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}{Chrome\+PHPHandler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_couch_d_b_handler_afa17604fd899fffdc1ee326afe177cb5}{Couch\+DBHandler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_cube_handler_afa17604fd899fffdc1ee326afe177cb5}{Cube\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_doctrine_couch_d_b_handler_afa17604fd899fffdc1ee326afe177cb5}{Doctrine\+Couch\+DBHandler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_dynamo_db_handler_afa17604fd899fffdc1ee326afe177cb5}{Dynamo\+Db\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_afa17604fd899fffdc1ee326afe177cb5}{Elastica\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_elasticsearch_handler_afa17604fd899fffdc1ee326afe177cb5}{Elasticsearch\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_error_log_handler_afa17604fd899fffdc1ee326afe177cb5}{Error\+Log\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}{Fire\+PHPHandler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fleep_hook_handler_afa17604fd899fffdc1ee326afe177cb5}{Fleep\+Hook\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_afa17604fd899fffdc1ee326afe177cb5}{Flowdock\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_gelf_handler_afa17604fd899fffdc1ee326afe177cb5}{Gelf\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_i_f_t_t_t_handler_afa17604fd899fffdc1ee326afe177cb5}{IFTTTHandler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_afa17604fd899fffdc1ee326afe177cb5}{Loggly\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_afa17604fd899fffdc1ee326afe177cb5}{Mail\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mongo_d_b_handler_afa17604fd899fffdc1ee326afe177cb5}{Mongo\+DBHandler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_new_relic_handler_afa17604fd899fffdc1ee326afe177cb5}{New\+Relic\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_p_h_p_console_handler_afa17604fd899fffdc1ee326afe177cb5}{PHPConsole\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_process_handler_afa17604fd899fffdc1ee326afe177cb5}{Process\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_afa17604fd899fffdc1ee326afe177cb5}{Pushover\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_redis_handler_afa17604fd899fffdc1ee326afe177cb5}{Redis\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_redis_pub_sub_handler_afa17604fd899fffdc1ee326afe177cb5}{Redis\+Pub\+Sub\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_afa17604fd899fffdc1ee326afe177cb5}{Rollbar\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_afa17604fd899fffdc1ee326afe177cb5}{Rotating\+File\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_afa17604fd899fffdc1ee326afe177cb5}{Slack\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_webhook_handler_afa17604fd899fffdc1ee326afe177cb5}{Slack\+Webhook\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_afa17604fd899fffdc1ee326afe177cb5}{Socket\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_sqs_handler_afa17604fd899fffdc1ee326afe177cb5}{Sqs\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_afa17604fd899fffdc1ee326afe177cb5}{Stream\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_handler_afa17604fd899fffdc1ee326afe177cb5}{Syslog\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_udp_handler_afa17604fd899fffdc1ee326afe177cb5}{Syslog\+Udp\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_telegram_bot_handler_afa17604fd899fffdc1ee326afe177cb5}{Telegram\+Bot\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_afa17604fd899fffdc1ee326afe177cb5}{Test\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_zend_monitor_handler_afa17604fd899fffdc1ee326afe177cb5}{Zend\+Monitor\+Handler}}, \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_console_handler_afa17604fd899fffdc1ee326afe177cb5}{Console\+Handler}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_mailer_handler_afa17604fd899fffdc1ee326afe177cb5}{Mailer\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Abstract\+Processing\+Handler.\+php\end{DoxyCompactItemize}

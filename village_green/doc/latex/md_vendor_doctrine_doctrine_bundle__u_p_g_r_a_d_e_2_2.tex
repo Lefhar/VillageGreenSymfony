@@ -1,0 +1,15 @@
+\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_2_2_autotoc_md173}{}\doxysection{Commands}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_2_2_autotoc_md173}
+
+\begin{DoxyItemize}
+\item {\ttfamily doctrine\+:query\+:sql} command has been deprecated. Use {\ttfamily dbal\+:run-\/sql} command instead.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_2_2_autotoc_md174}{}\doxysection{Configuration}\label{md_vendor_doctrine_doctrine_bundle__u_p_g_r_a_d_e_2_2_autotoc_md174}
+
+\begin{DoxyItemize}
+\item Following the \href{https://github.com/doctrine/dbal/pull/4054}{\texttt{ changes in DBAL 2.\+11}}, we deprecated following configuration keys\+:
+\begin{DoxyItemize}
+\item {\ttfamily doctrine.\+dbal.\+slaves}. Use {\ttfamily doctrine.\+dbal.\+replicas}
+\item {\ttfamily doctrine.\+dbal.\+keep\+\_\+slave}. Use {\ttfamily doctrine.\+dbal.\+keep\+\_\+replica}
+\end{DoxyItemize}
+
+Similarly, if you use XML configuration, please replace {\ttfamily \texorpdfstring{$<$}{<}slave\texorpdfstring{$>$}{>}} with {\ttfamily \texorpdfstring{$<$}{<}replica\texorpdfstring{$>$}{>}}. 
+\end{DoxyItemize}

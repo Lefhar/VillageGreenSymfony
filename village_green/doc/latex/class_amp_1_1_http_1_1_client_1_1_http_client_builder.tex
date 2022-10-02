@@ -1,0 +1,156 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder}{}\doxysection{Http\+Client\+Builder Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder}\index{HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a9dd3b402417afed60bb31399284be107}{using\+Pool}} (\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool}{Connection\+Pool}} \$pool)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a98d3896111258f3ef1e07440f62ebcd1}{intercept}} (\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_application_interceptor}{Application\+Interceptor}} \$interceptor)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a919212cf399dec780ca9d6fe1d04ade5}{intercept\+Network}} (\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}} \$interceptor)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a7e83b688f741b1066e5d74453b9ff548}{retry}} (int \$retry\+Limit)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a9aef1fb7ca6b8b11346deed61e7f1fa8}{follow\+Redirects}} (int \$limit=10)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a55a5fe2db1e1b236ddda427eabf6c13a}{allow\+Deprecated\+Uri\+User\+Info}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_aef1201c29511db6794dc900f358067f0}{skip\+Default\+Accept\+Header}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a975d0969441e8ad8ca1af63b96c4b786}{skip\+Default\+User\+Agent}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a8d01ab2458657d94947df3b9e73111fc}{skip\+Automatic\+Compression}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_afeb52f8262476c4190fe6c1655c07e48}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_afeb52f8262476c4190fe6c1655c07e48}} 
+static {\bfseries build\+Default} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows building an \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client}{Http\+Client}} instance.
+
+The builder is the recommended way to build an \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_client}{Http\+Client}} instance. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a55a5fe2db1e1b236ddda427eabf6c13a}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a55a5fe2db1e1b236ddda427eabf6c13a}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!allowDeprecatedUriUserInfo@{allowDeprecatedUriUserInfo}}
+\index{allowDeprecatedUriUserInfo@{allowDeprecatedUriUserInfo}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{allowDeprecatedUriUserInfo()}{allowDeprecatedUriUserInfo()}}
+{\footnotesize\ttfamily allow\+Deprecated\+Uri\+User\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the default restriction of user\+:password in request URIs.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a9aef1fb7ca6b8b11346deed61e7f1fa8}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a9aef1fb7ca6b8b11346deed61e7f1fa8}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!followRedirects@{followRedirects}}
+\index{followRedirects@{followRedirects}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{followRedirects()}{followRedirects()}}
+{\footnotesize\ttfamily follow\+Redirects (\begin{DoxyParamCaption}\item[{int}]{\$limit = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$limit} & Maximum number of redirects to follow. The client will automatically request the URI supplied by a redirect response (3xx status codes) and returns that response instead.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a98d3896111258f3ef1e07440f62ebcd1}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a98d3896111258f3ef1e07440f62ebcd1}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!intercept@{intercept}}
+\index{intercept@{intercept}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{intercept()}{intercept()}}
+{\footnotesize\ttfamily intercept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_application_interceptor}{Application\+Interceptor}}}]{\$interceptor }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_application_interceptor}{Application\+Interceptor}} & {\em \$interceptor} & This interceptor gets added to the interceptor queue, so interceptors are executed in the order given to this method.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a919212cf399dec780ca9d6fe1d04ade5}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a919212cf399dec780ca9d6fe1d04ade5}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!interceptNetwork@{interceptNetwork}}
+\index{interceptNetwork@{interceptNetwork}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{interceptNetwork()}{interceptNetwork()}}
+{\footnotesize\ttfamily intercept\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}}}]{\$interceptor }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}} & {\em \$interceptor} & This interceptor gets added to the interceptor queue, so interceptors are executed in the order given to this method.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a7e83b688f741b1066e5d74453b9ff548}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a7e83b688f741b1066e5d74453b9ff548}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!retry@{retry}}
+\index{retry@{retry}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{retry()}{retry()}}
+{\footnotesize\ttfamily retry (\begin{DoxyParamCaption}\item[{int}]{\$retry\+Limit }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$retry\+Limit} & Maximum number of times a request may be retried. Only certain requests will be retried automatically (GET, HEAD, PUT, and DELETE requests are automatically retried, or any request that was indicated as unprocessed by the connection).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a8d01ab2458657d94947df3b9e73111fc}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a8d01ab2458657d94947df3b9e73111fc}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!skipAutomaticCompression@{skipAutomaticCompression}}
+\index{skipAutomaticCompression@{skipAutomaticCompression}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{skipAutomaticCompression()}{skipAutomaticCompression()}}
+{\footnotesize\ttfamily skip\+Automatic\+Compression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Doesn\textquotesingle{}t automatically set an \textquotesingle{}accept-\/encoding\textquotesingle{} header and decompress the response.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_aef1201c29511db6794dc900f358067f0}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_aef1201c29511db6794dc900f358067f0}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!skipDefaultAcceptHeader@{skipDefaultAcceptHeader}}
+\index{skipDefaultAcceptHeader@{skipDefaultAcceptHeader}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{skipDefaultAcceptHeader()}{skipDefaultAcceptHeader()}}
+{\footnotesize\ttfamily skip\+Default\+Accept\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Doesn\textquotesingle{}t automatically set an \textquotesingle{}accept\textquotesingle{} header.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a975d0969441e8ad8ca1af63b96c4b786}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a975d0969441e8ad8ca1af63b96c4b786}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!skipDefaultUserAgent@{skipDefaultUserAgent}}
+\index{skipDefaultUserAgent@{skipDefaultUserAgent}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{skipDefaultUserAgent()}{skipDefaultUserAgent()}}
+{\footnotesize\ttfamily skip\+Default\+User\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Doesn\textquotesingle{}t automatically set a \textquotesingle{}user-\/agent\textquotesingle{} header.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a9dd3b402417afed60bb31399284be107}\label{class_amp_1_1_http_1_1_client_1_1_http_client_builder_a9dd3b402417afed60bb31399284be107}} 
+\index{HttpClientBuilder@{HttpClientBuilder}!usingPool@{usingPool}}
+\index{usingPool@{usingPool}!HttpClientBuilder@{HttpClientBuilder}}
+\doxysubsubsection{\texorpdfstring{usingPool()}{usingPool()}}
+{\footnotesize\ttfamily using\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool}{Connection\+Pool}}}]{\$pool }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Connection\+Pool & {\em \$pool} & \mbox{\hyperlink{namespace_amp_1_1_http_1_1_client_1_1_connection}{Connection}} pool to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/Http\+Client\+Builder.\+php\end{DoxyCompactItemize}

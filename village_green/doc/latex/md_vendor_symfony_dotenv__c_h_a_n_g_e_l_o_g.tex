@@ -1,0 +1,32 @@
+\hypertarget{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1469}{}\doxysection{5.\+4}\label{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1469}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily dotenv\+:dump} command to compile the contents of the .env files into a PHP-\/optimized file called {\ttfamily .env.\+local.\+php}
+\item Add {\ttfamily debug\+:dotenv} command to list all dotenv files with variables and values
+\item Add {\ttfamily \$override\+Existing\+Vars} on {\ttfamily Dotenv\+::boot\+Env()} and {\ttfamily Dotenv\+::load\+Env()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1470}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1470}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Dotenv\+::boot\+Env()} to check for {\ttfamily .env.\+local.\+php} before calling {\ttfamily Dotenv\+::load\+Env()}
+\item added {\ttfamily Dotenv\+::set\+Prod\+Envs()} and {\ttfamily Dotenv\+::use\+Putenv()}
+\item made Dotenv\textquotesingle{}s constructor accept {\ttfamily \$env\+Key} and {\ttfamily \$debug\+Key} arguments, to define the name of the env vars that configure the env name and debug settings
+\item deprecated passing {\ttfamily \$use\+Putenv} argument to Dotenv\textquotesingle{}s constructor
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1471}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1471}
+
+\begin{DoxyItemize}
+\item using {\ttfamily putenv()} is disabled by default
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1472}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1472}
+
+\begin{DoxyItemize}
+\item deprecated use of {\ttfamily putenv()} by default. This feature will be opted-\/in with a constructor argument to {\ttfamily Dotenv}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1473}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1473}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Dotenv\+::overload()} and {\ttfamily \$override\+Existing\+Vars} as optional parameter of {\ttfamily Dotenv\+::populate()}
+\item added {\ttfamily Dotenv\+::load\+Env()} to load a .env file and its corresponding .env.\+local, .env.\$env and .env.\$env.\+local files if they exist
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1474}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_dotenv__c_h_a_n_g_e_l_o_g_autotoc_md1474}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} Since v3.\+3.\+7, the latest Dotenv files override the previous ones. Real env vars are not affected and are not overridden.
+\item added the component 
+\end{DoxyItemize}

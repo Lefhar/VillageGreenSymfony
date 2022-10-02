@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Village Green!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta itemprop="description" name="description"
+          content="{% block description %}Village Green le roi de la musique!{% endblock %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="icon" href="/favicon.ico">
+    <!--reseau sociaux Meta Tags-->
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url"
+          content="{{ app.request.getSchemeAndHttpHost() }}{{ path(app.request.attributes.get('_route'),
+              app.request.attributes.get('_route_params')) }}"/>
+    <meta property="og:title" content="{{ block('title') }}">
+    <meta property="og:description" content="{{ block('description') }}">
+    <meta property="og:image"
+          content="{{ app.request.getSchemeAndHttpHost() }}{% block picture %}/assets/src/logo.png{% endblock %}">
+    <meta property="og:site_name" content="Village Green">
+    <!--End reseau sociaux  Meta Tags-->
+</head>
+<body>
+<header>
+    <!--
+         header
+
+     -->
+
+    <!--  barre du menu
+ -->
+    <div class="container bg-menu-top">
+        <div class="row">
+
+
+            <nav class="navbar  navbar-light d-lg-none  ml-auto">
+
+                <a class="navbar-brand mb-0 h1" href=""{{ path("app_login") }}""></a>
+                {% if app.user %}
+                    <li class="nav-item dropdown">
+                        <a class="navbar-brand mb-0 h1 dropdown-toggle" href="#" id="navbaruserDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-solid fa-2x bgcaddie  fa-user"></i> </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbaruserDropdown">
+
+                            <li><a class="dropdown-item" href="{{ path('app_profil') }}">
+                                    Mon profil
+                                </a></li>
+                            <li><a class="dropdown-item" href="{{ path('mescommandes') }}">
+                                    Mes commandes
+                                </a></li>
+                            <li><a class="dropdown-item" href="{{ path('app_logout') }}">
+                                    Deconnexion
+                                </a></li>
+                        </ul>
+
+                    </li>
+
+                {% else %}
+
+                    <a class="navbar-brand mb-0 h1" href="{{ path('app_login') }}">
+                        <i class="fa fa-solid fa-2x bgcaddie  fa-user"></i> </a>
+
+                {% endif %}
+
+                <a class="navbar-brand mb-0 h1 panier" href="#" onclick="openNav()">
+                    <span class="fa fa-shopping-cart  fa-2x bgcaddie"></span>
+                    {# {{ dump(app.session.get('panier')) }} #}
+                    {% if app.session.get('panier') %}
+                        {% set TotalPanier =0 %}
+                        {% for key,cpte in app.session.get('panier') %}
+                            {% if key matches '/^\\d+$/' %}
+                                {% set TotalPanier =  TotalPanier + app.session.get('panier')[key]["qte"] %}
+                            {% endif %}
+                        {% endfor %}
+                        <span class="badge badge-pill badge-danger">{{ TotalPanier }}</span>
+                    {% endif %}
+                </a>
+
+            </nav>
+            <div class="divLogo">
+                <a class="LinkLogo" href="{{ path('accueil') }}">
+                    <span class="fa fa-music fa-3x text-dark"></span>
+                    <span class="textLogo bgcaddie">Village</span><i class="fa fa-solid fa-guitar"></i><span
+                            class="textLogo text-dark">Green</span>
+                </a>
+            </div>
+
+            <div class="brand">
+
+                <!--bouton sur mobile-->
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-menu-top navbar-lg">
+                    <!--bouton sur mobile-->
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mr-5">
+
+                            {% if app.user %}
+                                <li class="nav-item dropdown">
+                                    <a class="navbar-brand mb-0 h1 dropdown-toggle" href="#" id="navbaruserDropdown"
+                                       role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Bonjour {{ app.user.email }}   </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbaruserDropdown">
+
+                                        <li><a class="dropdown-item" href="{{ path('app_profil') }}">
+                                                Mon profil
+                                            </a></li>
+                                        <li><a class="dropdown-item" href="{{ path('mescommandes') }}">
+                                                Mes commandes
+                                            </a></li>
+                                        <li><a class="dropdown-item" href="{{ path('app_logout') }}">
+                                                Deconnexion
+                                            </a></li>
+
+                                    </ul>
+
+                                </li>
+
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="navbar-brand mb-0 h1" href="{{ path('app_login') }}">
+                                        Espace Client </a>
+                                </li>
+                            {% endif %}
+
+
+                            <li class="nav-item">
+                                <a class="navbar-brand mb-0 h1 panier" href="#" onclick="openNav()">
+                                    <span class="fa fa-shopping-cart fa-2x bgcaddie"></span>
+                                    {#                                    <img class="img-fluid" src="/assets/src/picto-panier.png" alt="Panier"/> #}
+                                    {% if app.session.get('panier') %}
+
+                                        {% set TotalPanier =0 %}
+                                        {% for key,row in app.session.get('panier') %}
+                                            {% if key matches '/^\\d+$/' %}
+                                                {% set TotalPanier =  TotalPanier + app.session.get('panier')[key]["qte"] %}
+                                            {% endif %}
+                                        {% endfor %}
+
+                                        <span class="badge badge-pill badge-danger">{{ TotalPanier }}</span>
+                                    {% endif %}
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="navbar-brand mb-0 h1" href=/annonces/liste">
+                                    <img class="img-fluid" src="/assets/src/picto-pays.png" alt="pays"/>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--
+                            barre de recherche dans la nav bar
+                        -->
+
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-menu-second navbar-lg">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <form class="form-inline my-4 my-lg-0" action="{{ path('search') }}" method="get">
+                            <input class="form-control mr-sm-2" type="search" name="q"
+                                   placeholder="entrez votre recherche" aria-label="entrez votre recherche">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
+                        </form>
+                        <ul class="navbar-nav ml-auto mr-4">
+                            <li class="nav-item navitem-second">
+                                <a class="navbar-brand mb-0 h1" href="{{ path('produits') }}">Produits</a>
+                            </li>
+                            <li class="nav-item navitem-second">
+                                <a class="navbar-brand mb-0 h1" href="/annonces/liste">Services</a>
+                            </li>
+                            <li class="nav-item navitem-second">
+                                <a class="navbar-brand mb-0 h1" href="/contact">Aide</a>
+                            </li>
+
+                            <li class="nav-item navitem-second">
+                                <a class="navbar-brand mb-0 h1" href="/users/connexion">A propos</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-menu-three navbar-lg">
+                    <!--bouton sur mobile-->
+
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mr-4">
+
+
+                            {% for nav in menu %}
+                                <li class="nav-item navitem-three">
+                                    {% if nav.souscat is null %}
+
+                                        <a class="navbar-brand mb-0 h1"
+                                           href="{{ path('categories',{id:nav.id}) }}"
+                                        >
+                                            {{ nav.name|upper }}
+                                        </a>
+
+                                    {% endif %}
+
+
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                        <!--
+                            barre de recherche dans la nav bar
+                        -->
+
+                    </div>
+
+                </nav>
+
+                <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-menu-three navbar-sm"> -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-menu-three navbar-sm">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                                 {% for nav in menu %}
+                                <li class="nav-item navitem-three">
+                                    {% if nav.souscat is null %}
+
+                                        <a class="navbar-brand mb-0 h1"
+                                           href="{{ path('categories',{id:nav.id}) }}"
+                                        >
+                                            {{ nav.name|upper }}
+                                        </a>
+
+                                    {% endif %}
+
+
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </nav>
+
+                <form action="{{ path('search') }}" method="get" class="p-2 d-lg-none d-sm-block">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control border border-primary borderinput"
+                               placeholder="entrez votre recherche" aria-label="entrez votre recherche"
+                               aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary bgcaddie" type="button">Rechercher</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="sideNavigation" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="contenupanier">
+    {% if app.session.get('panier') %}
+        {% set TotalPanier =0 %}
+        {% for key,row in app.session.get('panier') %}
+            <p><img height='50px' src='/assets/src/{{ row.photo }}' alt='{{ row.name }}'> {{ row.name }}</p>
+            <p>Quantité : <span class='text-success'>{{ row.qte }}</span>  Prix : <span class='text-success'>{{ row.prix }}€</span></p><hr>
+
+            {% if key matches '/^\\d+$/' %}
+                {% set TotalPanier =  TotalPanier + app.session.get('panier')[key]["qte"]*row.prix %}
+            {% endif %}
+        {% endfor %}
+        <p>Total : <span class='text-success'>  {{ TotalPanier }} €</span> </p>
+        <p> <a class="btn btn-success text-light" href="{{ path('paniers') }}">Voir le panier</a></p>
+    {% else %}
+       <p><span class="text-light fw-bold">Votre panier est vide</span></p>
+
+    {% endif %}
+
+    </div>
+</div>
+<!-- fin header-->
+{% block body %}{% endblock %}
+<!-- début footer-->
+<footer>
+    <div class="container pt-2">
+        <div class="row">
+            <img src="/assets/src/footer.png" class="w-100">
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="/assets/js/script.js?id="></script>
+
+</body>
+</html>
+<!-- fin footer-->

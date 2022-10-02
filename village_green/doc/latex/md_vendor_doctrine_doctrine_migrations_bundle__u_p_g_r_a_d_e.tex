@@ -1,0 +1,108 @@
+\hypertarget{md_vendor_doctrine_doctrine_migrations_bundle__u_p_g_r_a_d_e_autotoc_md186}{}\doxysection{From 2.\+x to 3.\+0.\+0}\label{md_vendor_doctrine_doctrine_migrations_bundle__u_p_g_r_a_d_e_autotoc_md186}
+
+\begin{DoxyItemize}
+\item The configuration for the migration namespace and directory changed as follows\+:
+\end{DoxyItemize}
+
+Before
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    dir\_name: '\%kernel.project\_dir\%/src/Migrations'}
+\DoxyCodeLine{    namespace: DoctrineMigrations}
+
+\end{DoxyCode}
+
+
+After
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    migrations\_paths:}
+\DoxyCodeLine{        'DoctrineMigrations': '\%kernel.project\_dir\%/src/Migrations'}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item The configuration for the metadata table definition changed as follows\+:
+\end{DoxyItemize}
+
+Before
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    table\_name: 'migration\_versions'}
+\DoxyCodeLine{    column\_name: 'version'}
+\DoxyCodeLine{    column\_length: 14}
+\DoxyCodeLine{    executed\_at\_column\_name: 'executed\_at'}
+
+\end{DoxyCode}
+
+
+After
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    storage:}
+\DoxyCodeLine{        table\_storage:}
+\DoxyCodeLine{            table\_name: 'migration\_versions'}
+\DoxyCodeLine{            version\_column\_name: 'version'}
+\DoxyCodeLine{            version\_column\_length: 191}
+\DoxyCodeLine{            executed\_at\_column\_name: 'executed\_at'}
+
+\end{DoxyCode}
+ If your project did not originally specify its own table definition configuration, you will need to configure the table name after the upgrade\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    storage:}
+\DoxyCodeLine{        table\_storage:}
+\DoxyCodeLine{            table\_name: 'migration\_versions'}
+
+\end{DoxyCode}
+ and then run the {\ttfamily doctrine\+:migrations\+:sync-\/metadata-\/storage} command.
+\begin{DoxyItemize}
+\item The migration name has been dropped\+:
+\end{DoxyItemize}
+
+Before
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    name: 'Application Migrations'}
+
+\end{DoxyCode}
+
+
+After
+
+The parameter {\ttfamily name} has been dropped.
+
+
+\begin{DoxyItemize}
+\item The default for {\ttfamily table\+\_\+name} changed from {\ttfamily migration\+\_\+versions} to {\ttfamily doctrine\+\_\+migration\+\_\+versions}. If you did not specify the {\ttfamily table\+\_\+name} option, you now need to declare it explicitly to not lose migration data.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doctrine\_migrations:}
+\DoxyCodeLine{    storage:}
+\DoxyCodeLine{        table\_storage:}
+\DoxyCodeLine{            table\_name: 'migration\_versions'}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_doctrine_migrations_bundle__u_p_g_r_a_d_e_autotoc_md187}{}\doxysubsection{Underlying doctrine/migrations library}\label{md_vendor_doctrine_doctrine_migrations_bundle__u_p_g_r_a_d_e_autotoc_md187}
+Upgrading this bundle to {\ttfamily 3.\+0} will also update the {\ttfamily doctrine/migrations} library to the version {\ttfamily 3.\+0}. Backward incompatible changes in {\ttfamily doctrine/migrations} 3.\+0 are documented in the dedicated \href{https://github.com/doctrine/migrations/blob/3.0.x/UPGRADE.md}{\texttt{ UPGRADE}} document.
+
+
+\begin{DoxyItemize}
+\item The container is not automatically injected anymore when a migration implements {\ttfamily Container\+Aware\+Interface}. Custom migration factories should be used to inject additional dependencies into migrations. 
+\end{DoxyItemize}

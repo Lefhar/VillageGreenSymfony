@@ -1,0 +1,1363 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain}{}\doxysection{Tree\+Walker\+Chain Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain}\index{TreeWalkerChain@{TreeWalkerChain}}
+Inheritance diagram for Tree\+Walker\+Chain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a12fc4119636989b461b7160c0c93d712}{get\+Query\+Components}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a18e43e98a791909d3202357c0f6a5d94}{set\+Query\+Component}} (\$dql\+Alias, array \$query\+Component)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a84443a0f93eaa8b3ff990a4865dfc22c}{\+\_\+\+\_\+construct}} (\$query, \$parser\+Result, array \$query\+Components)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab57acb14d0e47198c272fe8f9c533a03}{add\+Tree\+Walker}} (\$walker\+Class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab509373da4a08d26b0f79a3fa0d4db89}{walk\+Select\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{AST\textbackslash{}\+Select\+Statement}} \$AST)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a82d895fc829d3d569260e81ccd7512cb}{walk\+Select\+Clause}} (\$select\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a80c087c2bb549aed6bce7cde8ed7e02c}{walk\+From\+Clause}} (\$from\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a44326d688e46570bf3a13df5b6773dfe}{walk\+Function}} (\$function)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a939d0e40a1223a36a2ffa1a822d8efb9}{walk\+Order\+By\+Clause}} (\$order\+By\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a90c8d4f5f099bb888156b89a0cc258e0}{walk\+Order\+By\+Item}} (\$order\+By\+Item)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aafafa0bb031362af38c606c78ea96020}{walk\+Having\+Clause}} (\$having\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a067c4b8f462276d8c0fa5ca21804253b}{walk\+Join}} (\$join)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aa5ee5887d8caa22337ed362f0c58e75f}{walk\+Select\+Expression}} (\$select\+Expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_afb433ee0775a363bddb5538f2fd54713}{walk\+Quantified\+Expression}} (\$q\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a36e860fac722428bd9ec76a3a2663a22}{walk\+Subselect}} (\$subselect)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ae474bf7792dfcb78581a381ac396e9f8}{walk\+Subselect\+From\+Clause}} (\$subselect\+From\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab8f394b38418042b325fec1d355cf31e}{walk\+Simple\+Select\+Clause}} (\$simple\+Select\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5f37b5cb4e775300d812d1b7a7020e80}{walk\+Simple\+Select\+Expression}} (\$simple\+Select\+Expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab55ca59041f95f2b39418ef4fd3de449}{walk\+Aggregate\+Expression}} (\$agg\+Expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a54d0223c6c15fc7090ace59a5c5d6125}{walk\+Group\+By\+Clause}} (\$group\+By\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a99c7a5e1265a961530ec99145297e56d}{walk\+Group\+By\+Item}} (\$group\+By\+Item)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a38218e46b246814cb94237cf068ab7c8}{walk\+Update\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_statement}{AST\textbackslash{}\+Update\+Statement}} \$AST)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad6af0a5cd726fecb5aa05f6326364c5b}{walk\+Delete\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_statement}{AST\textbackslash{}\+Delete\+Statement}} \$AST)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a484659e7642082e547f039e7fe499a78}{walk\+Delete\+Clause}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_clause}{AST\textbackslash{}\+Delete\+Clause}} \$delete\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ac40460079bd9d0a7a3a8ffd9dc2d6a63}{walk\+Update\+Clause}} (\$update\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad466f05a7fc48a5e9eed4357d95fe7c0}{walk\+Update\+Item}} (\$update\+Item)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a31092c4cdd5716f2f12b3ab77f39386b}{walk\+Where\+Clause}} (\$where\+Clause)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a0846d3c398e5731574f468337e7489cf}{walk\+Conditional\+Expression}} (\$cond\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a88efbd83091e06ff93e6f13dff08b99a}{walk\+Conditional\+Term}} (\$cond\+Term)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5b4935763c51b50ec8a87c480cd0e0ad}{walk\+Conditional\+Factor}} (\$factor)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a87a121aa87ea04cf17e734193256cf57}{walk\+Conditional\+Primary}} (\$cond\+Primary)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a8ab1fe33b17c5e584c666bfc30892529}{walk\+Exists\+Expression}} (\$exists\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aaa30ed395a8c4c97ba860ffa1b1a402c}{walk\+Collection\+Member\+Expression}} (\$coll\+Member\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5ec0098d32dfbabcd5c31c919948e35b}{walk\+Empty\+Collection\+Comparison\+Expression}} (\$empty\+Coll\+Comp\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab2e063a2cfb2e7ffed86fa3b5a9dcd6b}{walk\+Null\+Comparison\+Expression}} (\$null\+Comp\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a8fe51192c9ee8337b6652193327b5a95}{walk\+In\+Expression}} (\$in\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad06e4f2c023f39795272395b369ce719}{walk\+Instance\+Of\+Expression}} (\$instance\+Of\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_adfad2866ac88a88824b1493db561ba9e}{walk\+Literal}} (\$literal)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a157024b82f2ca0d840bb39994a0128f1}{walk\+Between\+Expression}} (\$between\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad5a6d7affaeb54188858194848d24af0}{walk\+Like\+Expression}} (\$like\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_abab23325fb798e99c2301fe1b6c4a6ad}{walk\+State\+Field\+Path\+Expression}} (\$state\+Field\+Path\+Expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aa7bf6435b49c2b9d41e53c79297d71d0}{walk\+Comparison\+Expression}} (\$comp\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a93780d378267345dba20719eb5378fae}{walk\+Input\+Parameter}} (\$input\+Param)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_af54ce73c252cf2581972fae88fdb20a6}{walk\+Arithmetic\+Expression}} (\$arithmetic\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a81805e1ba922116475e39f62460a9ce9}{walk\+Arithmetic\+Term}} (\$term)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad742b0277a4b1cdfa5d6635b4aef9952}{walk\+String\+Primary}} (\$string\+Primary)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a100024eaebbaf5ac0c7cc3100ee7c352}{walk\+Arithmetic\+Factor}} (\$factor)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aad9677dfcfd028e3e36dc7d0879ea022}{walk\+Simple\+Arithmetic\+Expression}} (\$simple\+Arithmetic\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a11ea4deb22c4c08e897b727cf86d8438}{walk\+Path\+Expression}} (\$path\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a857cd1acf1154e7f4239c992371ae351}{walk\+Result\+Variable}} (\$result\+Variable)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ae7ea120d07f751c561e45944ece41b2b}{get\+Executor}} (\$AST)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a chain of tree walkers that modify an AST and finally emit output. Only the last walker in the chain can emit output. Any previous walkers can modify the AST to influence the final output produced by the last walker. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a84443a0f93eaa8b3ff990a4865dfc22c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a84443a0f93eaa8b3ff990a4865dfc22c}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$parser\+Result,  }\item[{array}]{\$query\+Components }\end{DoxyParamCaption})}
+
+\{Initializes \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker}{Tree\+Walker}} with important information about the ASTs to be walked.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query}{Abstract\+Query}} & {\em \$query} & The parsed \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}}. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}} & {\em \$parser\+Result} & The result of the parsing process. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$query\+Components} & The query components (symbol table).\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a84443a0f93eaa8b3ff990a4865dfc22c}{Tree\+Walker}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab57acb14d0e47198c272fe8f9c533a03}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab57acb14d0e47198c272fe8f9c533a03}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!addTreeWalker@{addTreeWalker}}
+\index{addTreeWalker@{addTreeWalker}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{addTreeWalker()}{addTreeWalker()}}
+{\footnotesize\ttfamily add\+Tree\+Walker (\begin{DoxyParamCaption}\item[{}]{\$walker\+Class }\end{DoxyParamCaption})}
+
+Adds a tree walker to the chain.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$walker\+Class} & The class of the walker to instantiate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ae7ea120d07f751c561e45944ece41b2b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ae7ea120d07f751c561e45944ece41b2b}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!getExecutor@{getExecutor}}
+\index{getExecutor@{getExecutor}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{getExecutor()}{getExecutor()}}
+{\footnotesize\ttfamily get\+Executor (\begin{DoxyParamCaption}\item[{}]{\$\+AST }\end{DoxyParamCaption})}
+
+\{Gets an executor that can be used to execute the result of this walker.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Delete\+Statement | AST\textbackslash{}\+Update\+Statement | AST\textbackslash{}\+Select\+Statement & {\em \$\+AST} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exec\textbackslash{}\+Abstract\+Sql\+Executor
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ae7ea120d07f751c561e45944ece41b2b}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a12fc4119636989b461b7160c0c93d712}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a12fc4119636989b461b7160c0c93d712}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!getQueryComponents@{getQueryComponents}}
+\index{getQueryComponents@{getQueryComponents}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{getQueryComponents()}{getQueryComponents()}}
+{\footnotesize\ttfamily get\+Query\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the internal query\+Components array.
+
+Returns internal query\+Components array.
+
+\begin{DoxyReturn}{Returns}
+array$<$string, array$<$string, mixed$>$$>$ @psalm-\/return array\texorpdfstring{$<$}{<}string, array\{ metadata\+: Class\+Metadata, parent\+: string, relation\+: mixed\mbox{[}\mbox{]}, map\+: mixed, nesting\+Level\+: int, token\+: array \}\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a12fc4119636989b461b7160c0c93d712}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a18e43e98a791909d3202357c0f6a5d94}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a18e43e98a791909d3202357c0f6a5d94}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!setQueryComponent@{setQueryComponent}}
+\index{setQueryComponent@{setQueryComponent}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{setQueryComponent()}{setQueryComponent()}}
+{\footnotesize\ttfamily set\+Query\+Component (\begin{DoxyParamCaption}\item[{}]{\$dql\+Alias,  }\item[{array}]{\$query\+Component }\end{DoxyParamCaption})}
+
+\{Sets or overrides a query component for a given dql alias.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$dql\+Alias} & The DQL alias. \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$query\+Component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a18e43e98a791909d3202357c0f6a5d94}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab55ca59041f95f2b39418ef4fd3de449}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab55ca59041f95f2b39418ef4fd3de449}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkAggregateExpression@{walkAggregateExpression}}
+\index{walkAggregateExpression@{walkAggregateExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkAggregateExpression()}{walkAggregateExpression()}}
+{\footnotesize\ttfamily walk\+Aggregate\+Expression (\begin{DoxyParamCaption}\item[{}]{\$agg\+Expression }\end{DoxyParamCaption})}
+
+\{Walks down an Aggregate\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Aggregate\+Expression & {\em \$agg\+Expression} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ab55ca59041f95f2b39418ef4fd3de449}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_af54ce73c252cf2581972fae88fdb20a6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_af54ce73c252cf2581972fae88fdb20a6}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkArithmeticExpression@{walkArithmeticExpression}}
+\index{walkArithmeticExpression@{walkArithmeticExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkArithmeticExpression()}{walkArithmeticExpression()}}
+{\footnotesize\ttfamily walk\+Arithmetic\+Expression (\begin{DoxyParamCaption}\item[{}]{\$arithmetic\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down an Arithmetic\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Arithmetic\+Expression & {\em \$arithmetic\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_af54ce73c252cf2581972fae88fdb20a6}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a100024eaebbaf5ac0c7cc3100ee7c352}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a100024eaebbaf5ac0c7cc3100ee7c352}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkArithmeticFactor@{walkArithmeticFactor}}
+\index{walkArithmeticFactor@{walkArithmeticFactor}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkArithmeticFactor()}{walkArithmeticFactor()}}
+{\footnotesize\ttfamily walk\+Arithmetic\+Factor (\begin{DoxyParamCaption}\item[{}]{\$factor }\end{DoxyParamCaption})}
+
+\{Walks down an Arithmetic\+Factor that represents an AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$factor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a100024eaebbaf5ac0c7cc3100ee7c352}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a81805e1ba922116475e39f62460a9ce9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a81805e1ba922116475e39f62460a9ce9}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkArithmeticTerm@{walkArithmeticTerm}}
+\index{walkArithmeticTerm@{walkArithmeticTerm}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkArithmeticTerm()}{walkArithmeticTerm()}}
+{\footnotesize\ttfamily walk\+Arithmetic\+Term (\begin{DoxyParamCaption}\item[{}]{\$term }\end{DoxyParamCaption})}
+
+\{Walks down an Arithmetic\+Term AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$term} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a81805e1ba922116475e39f62460a9ce9}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a157024b82f2ca0d840bb39994a0128f1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a157024b82f2ca0d840bb39994a0128f1}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkBetweenExpression@{walkBetweenExpression}}
+\index{walkBetweenExpression@{walkBetweenExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkBetweenExpression()}{walkBetweenExpression()}}
+{\footnotesize\ttfamily walk\+Between\+Expression (\begin{DoxyParamCaption}\item[{}]{\$between\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Between\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Between\+Expression & {\em \$between\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a157024b82f2ca0d840bb39994a0128f1}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aaa30ed395a8c4c97ba860ffa1b1a402c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aaa30ed395a8c4c97ba860ffa1b1a402c}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkCollectionMemberExpression@{walkCollectionMemberExpression}}
+\index{walkCollectionMemberExpression@{walkCollectionMemberExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkCollectionMemberExpression()}{walkCollectionMemberExpression()}}
+{\footnotesize\ttfamily walk\+Collection\+Member\+Expression (\begin{DoxyParamCaption}\item[{}]{\$coll\+Member\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Collection\+Member\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Collection\+Member\+Expression & {\em \$coll\+Member\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_aaa30ed395a8c4c97ba860ffa1b1a402c}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aa7bf6435b49c2b9d41e53c79297d71d0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aa7bf6435b49c2b9d41e53c79297d71d0}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkComparisonExpression@{walkComparisonExpression}}
+\index{walkComparisonExpression@{walkComparisonExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkComparisonExpression()}{walkComparisonExpression()}}
+{\footnotesize\ttfamily walk\+Comparison\+Expression (\begin{DoxyParamCaption}\item[{}]{\$comp\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Comparison\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Comparison\+Expression & {\em \$comp\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_aa7bf6435b49c2b9d41e53c79297d71d0}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a0846d3c398e5731574f468337e7489cf}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a0846d3c398e5731574f468337e7489cf}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkConditionalExpression@{walkConditionalExpression}}
+\index{walkConditionalExpression@{walkConditionalExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkConditionalExpression()}{walkConditionalExpression()}}
+{\footnotesize\ttfamily walk\+Conditional\+Expression (\begin{DoxyParamCaption}\item[{}]{\$cond\+Expr }\end{DoxyParamCaption})}
+
+\{Walk down a Conditional\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Conditional\+Expression & {\em \$cond\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a0846d3c398e5731574f468337e7489cf}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5b4935763c51b50ec8a87c480cd0e0ad}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5b4935763c51b50ec8a87c480cd0e0ad}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkConditionalFactor@{walkConditionalFactor}}
+\index{walkConditionalFactor@{walkConditionalFactor}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkConditionalFactor()}{walkConditionalFactor()}}
+{\footnotesize\ttfamily walk\+Conditional\+Factor (\begin{DoxyParamCaption}\item[{}]{\$factor }\end{DoxyParamCaption})}
+
+\{Walks down a Conditional\+Factor AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Conditional\+Factor & {\em \$factor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a5b4935763c51b50ec8a87c480cd0e0ad}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a87a121aa87ea04cf17e734193256cf57}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a87a121aa87ea04cf17e734193256cf57}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkConditionalPrimary@{walkConditionalPrimary}}
+\index{walkConditionalPrimary@{walkConditionalPrimary}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkConditionalPrimary()}{walkConditionalPrimary()}}
+{\footnotesize\ttfamily walk\+Conditional\+Primary (\begin{DoxyParamCaption}\item[{}]{\$cond\+Primary }\end{DoxyParamCaption})}
+
+\{Walks down a Conditional\+Primary AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Conditional\+Primary & {\em \$primary} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a40eab2cde7a3d2b8d25ce38d0322a8a1}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a88efbd83091e06ff93e6f13dff08b99a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a88efbd83091e06ff93e6f13dff08b99a}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkConditionalTerm@{walkConditionalTerm}}
+\index{walkConditionalTerm@{walkConditionalTerm}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkConditionalTerm()}{walkConditionalTerm()}}
+{\footnotesize\ttfamily walk\+Conditional\+Term (\begin{DoxyParamCaption}\item[{}]{\$cond\+Term }\end{DoxyParamCaption})}
+
+\{Walks down a Conditional\+Term AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Conditional\+Term & {\em \$cond\+Term} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a88efbd83091e06ff93e6f13dff08b99a}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a484659e7642082e547f039e7fe499a78}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a484659e7642082e547f039e7fe499a78}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkDeleteClause@{walkDeleteClause}}
+\index{walkDeleteClause@{walkDeleteClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkDeleteClause()}{walkDeleteClause()}}
+{\footnotesize\ttfamily walk\+Delete\+Clause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_clause}{AST\textbackslash{}\+Delete\+Clause}}}]{\$delete\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Delete\+Clause AST node, thereby generating the appropriate SQL.
+
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a484659e7642082e547f039e7fe499a78}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad6af0a5cd726fecb5aa05f6326364c5b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad6af0a5cd726fecb5aa05f6326364c5b}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkDeleteStatement@{walkDeleteStatement}}
+\index{walkDeleteStatement@{walkDeleteStatement}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkDeleteStatement()}{walkDeleteStatement()}}
+{\footnotesize\ttfamily walk\+Delete\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_statement}{AST\textbackslash{}\+Delete\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+\{Walks down a Delete\+Statement AST node, thereby generating the appropriate SQL.
+
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ad6af0a5cd726fecb5aa05f6326364c5b}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5ec0098d32dfbabcd5c31c919948e35b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5ec0098d32dfbabcd5c31c919948e35b}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkEmptyCollectionComparisonExpression@{walkEmptyCollectionComparisonExpression}}
+\index{walkEmptyCollectionComparisonExpression@{walkEmptyCollectionComparisonExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkEmptyCollectionComparisonExpression()}{walkEmptyCollectionComparisonExpression()}}
+{\footnotesize\ttfamily walk\+Empty\+Collection\+Comparison\+Expression (\begin{DoxyParamCaption}\item[{}]{\$empty\+Coll\+Comp\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down an Empty\+Collection\+Comparison\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Empty\+Collection\+Comparison\+Expression & {\em \$empty\+Coll\+Comp\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a5ec0098d32dfbabcd5c31c919948e35b}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a8ab1fe33b17c5e584c666bfc30892529}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a8ab1fe33b17c5e584c666bfc30892529}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkExistsExpression@{walkExistsExpression}}
+\index{walkExistsExpression@{walkExistsExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkExistsExpression()}{walkExistsExpression()}}
+{\footnotesize\ttfamily walk\+Exists\+Expression (\begin{DoxyParamCaption}\item[{}]{\$exists\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down an Exists\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Exists\+Expression & {\em \$exists\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a8ab1fe33b17c5e584c666bfc30892529}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a80c087c2bb549aed6bce7cde8ed7e02c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a80c087c2bb549aed6bce7cde8ed7e02c}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkFromClause@{walkFromClause}}
+\index{walkFromClause@{walkFromClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkFromClause()}{walkFromClause()}}
+{\footnotesize\ttfamily walk\+From\+Clause (\begin{DoxyParamCaption}\item[{}]{\$from\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a From\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+From\+Clause & {\em \$from\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a80c087c2bb549aed6bce7cde8ed7e02c}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a44326d688e46570bf3a13df5b6773dfe}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a44326d688e46570bf3a13df5b6773dfe}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkFunction@{walkFunction}}
+\index{walkFunction@{walkFunction}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkFunction()}{walkFunction()}}
+{\footnotesize\ttfamily walk\+Function (\begin{DoxyParamCaption}\item[{}]{\$function }\end{DoxyParamCaption})}
+
+\{Walks down a Function\+Node AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Functions\textbackslash{}\+Function\+Node & {\em \$function} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a44326d688e46570bf3a13df5b6773dfe}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a54d0223c6c15fc7090ace59a5c5d6125}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a54d0223c6c15fc7090ace59a5c5d6125}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkGroupByClause@{walkGroupByClause}}
+\index{walkGroupByClause@{walkGroupByClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkGroupByClause()}{walkGroupByClause()}}
+{\footnotesize\ttfamily walk\+Group\+By\+Clause (\begin{DoxyParamCaption}\item[{}]{\$group\+By\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Group\+By\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Group\+By\+Clause & {\em \$group\+By\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a54d0223c6c15fc7090ace59a5c5d6125}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a99c7a5e1265a961530ec99145297e56d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a99c7a5e1265a961530ec99145297e56d}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkGroupByItem@{walkGroupByItem}}
+\index{walkGroupByItem@{walkGroupByItem}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkGroupByItem()}{walkGroupByItem()}}
+{\footnotesize\ttfamily walk\+Group\+By\+Item (\begin{DoxyParamCaption}\item[{}]{\$group\+By\+Item }\end{DoxyParamCaption})}
+
+\{Walks down a Group\+By\+Item AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Path\+Expression | string & {\em \$group\+By\+Item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a99c7a5e1265a961530ec99145297e56d}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aafafa0bb031362af38c606c78ea96020}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aafafa0bb031362af38c606c78ea96020}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkHavingClause@{walkHavingClause}}
+\index{walkHavingClause@{walkHavingClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkHavingClause()}{walkHavingClause()}}
+{\footnotesize\ttfamily walk\+Having\+Clause (\begin{DoxyParamCaption}\item[{}]{\$having\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Having\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Having\+Clause & {\em \$having\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_aafafa0bb031362af38c606c78ea96020}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a8fe51192c9ee8337b6652193327b5a95}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a8fe51192c9ee8337b6652193327b5a95}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkInExpression@{walkInExpression}}
+\index{walkInExpression@{walkInExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkInExpression()}{walkInExpression()}}
+{\footnotesize\ttfamily walk\+In\+Expression (\begin{DoxyParamCaption}\item[{}]{\$in\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down an In\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+In\+Expression & {\em \$in\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a8fe51192c9ee8337b6652193327b5a95}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a93780d378267345dba20719eb5378fae}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a93780d378267345dba20719eb5378fae}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkInputParameter@{walkInputParameter}}
+\index{walkInputParameter@{walkInputParameter}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkInputParameter()}{walkInputParameter()}}
+{\footnotesize\ttfamily walk\+Input\+Parameter (\begin{DoxyParamCaption}\item[{}]{\$input\+Param }\end{DoxyParamCaption})}
+
+\{Walks down an Input\+Parameter AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Input\+Parameter & {\em \$input\+Param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a93780d378267345dba20719eb5378fae}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad06e4f2c023f39795272395b369ce719}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad06e4f2c023f39795272395b369ce719}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkInstanceOfExpression@{walkInstanceOfExpression}}
+\index{walkInstanceOfExpression@{walkInstanceOfExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkInstanceOfExpression()}{walkInstanceOfExpression()}}
+{\footnotesize\ttfamily walk\+Instance\+Of\+Expression (\begin{DoxyParamCaption}\item[{}]{\$instance\+Of\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down an Instance\+Of\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Instance\+Of\+Expression & {\em \$instance\+Of\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ad06e4f2c023f39795272395b369ce719}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a067c4b8f462276d8c0fa5ca21804253b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a067c4b8f462276d8c0fa5ca21804253b}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkJoin@{walkJoin}}
+\index{walkJoin@{walkJoin}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkJoin()}{walkJoin()}}
+{\footnotesize\ttfamily walk\+Join (\begin{DoxyParamCaption}\item[{}]{\$join }\end{DoxyParamCaption})}
+
+\{Walks down a Join AST node and creates the corresponding SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Join & {\em \$join} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a067c4b8f462276d8c0fa5ca21804253b}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad5a6d7affaeb54188858194848d24af0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad5a6d7affaeb54188858194848d24af0}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkLikeExpression@{walkLikeExpression}}
+\index{walkLikeExpression@{walkLikeExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkLikeExpression()}{walkLikeExpression()}}
+{\footnotesize\ttfamily walk\+Like\+Expression (\begin{DoxyParamCaption}\item[{}]{\$like\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Like\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Like\+Expression & {\em \$like\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ad5a6d7affaeb54188858194848d24af0}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_adfad2866ac88a88824b1493db561ba9e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_adfad2866ac88a88824b1493db561ba9e}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkLiteral@{walkLiteral}}
+\index{walkLiteral@{walkLiteral}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkLiteral()}{walkLiteral()}}
+{\footnotesize\ttfamily walk\+Literal (\begin{DoxyParamCaption}\item[{}]{\$literal }\end{DoxyParamCaption})}
+
+\{Walks down a literal that represents an AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$literal} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_adfad2866ac88a88824b1493db561ba9e}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab2e063a2cfb2e7ffed86fa3b5a9dcd6b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab2e063a2cfb2e7ffed86fa3b5a9dcd6b}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkNullComparisonExpression@{walkNullComparisonExpression}}
+\index{walkNullComparisonExpression@{walkNullComparisonExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkNullComparisonExpression()}{walkNullComparisonExpression()}}
+{\footnotesize\ttfamily walk\+Null\+Comparison\+Expression (\begin{DoxyParamCaption}\item[{}]{\$null\+Comp\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Null\+Comparison\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Null\+Comparison\+Expression & {\em \$null\+Comp\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ab2e063a2cfb2e7ffed86fa3b5a9dcd6b}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a939d0e40a1223a36a2ffa1a822d8efb9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a939d0e40a1223a36a2ffa1a822d8efb9}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkOrderByClause@{walkOrderByClause}}
+\index{walkOrderByClause@{walkOrderByClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkOrderByClause()}{walkOrderByClause()}}
+{\footnotesize\ttfamily walk\+Order\+By\+Clause (\begin{DoxyParamCaption}\item[{}]{\$order\+By\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down an Order\+By\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Order\+By\+Clause & {\em \$order\+By\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a939d0e40a1223a36a2ffa1a822d8efb9}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a90c8d4f5f099bb888156b89a0cc258e0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a90c8d4f5f099bb888156b89a0cc258e0}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkOrderByItem@{walkOrderByItem}}
+\index{walkOrderByItem@{walkOrderByItem}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkOrderByItem()}{walkOrderByItem()}}
+{\footnotesize\ttfamily walk\+Order\+By\+Item (\begin{DoxyParamCaption}\item[{}]{\$order\+By\+Item }\end{DoxyParamCaption})}
+
+\{Walks down an Order\+By\+Item AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Order\+By\+Item & {\em \$order\+By\+Item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a90c8d4f5f099bb888156b89a0cc258e0}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a11ea4deb22c4c08e897b727cf86d8438}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a11ea4deb22c4c08e897b727cf86d8438}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkPathExpression@{walkPathExpression}}
+\index{walkPathExpression@{walkPathExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkPathExpression()}{walkPathExpression()}}
+{\footnotesize\ttfamily walk\+Path\+Expression (\begin{DoxyParamCaption}\item[{}]{\$path\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Path\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$path\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a11ea4deb22c4c08e897b727cf86d8438}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_afb433ee0775a363bddb5538f2fd54713}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_afb433ee0775a363bddb5538f2fd54713}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkQuantifiedExpression@{walkQuantifiedExpression}}
+\index{walkQuantifiedExpression@{walkQuantifiedExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkQuantifiedExpression()}{walkQuantifiedExpression()}}
+{\footnotesize\ttfamily walk\+Quantified\+Expression (\begin{DoxyParamCaption}\item[{}]{\$q\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down a Quantified\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Quantified\+Expression & {\em \$q\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_afb433ee0775a363bddb5538f2fd54713}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a857cd1acf1154e7f4239c992371ae351}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a857cd1acf1154e7f4239c992371ae351}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkResultVariable@{walkResultVariable}}
+\index{walkResultVariable@{walkResultVariable}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkResultVariable()}{walkResultVariable()}}
+{\footnotesize\ttfamily walk\+Result\+Variable (\begin{DoxyParamCaption}\item[{}]{\$result\+Variable }\end{DoxyParamCaption})}
+
+\{Walks down a Result\+Variable that represents an AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$result\+Variable} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a857cd1acf1154e7f4239c992371ae351}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a82d895fc829d3d569260e81ccd7512cb}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a82d895fc829d3d569260e81ccd7512cb}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSelectClause@{walkSelectClause}}
+\index{walkSelectClause@{walkSelectClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSelectClause()}{walkSelectClause()}}
+{\footnotesize\ttfamily walk\+Select\+Clause (\begin{DoxyParamCaption}\item[{}]{\$select\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Select\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Select\+Clause & {\em \$select\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a82d895fc829d3d569260e81ccd7512cb}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aa5ee5887d8caa22337ed362f0c58e75f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aa5ee5887d8caa22337ed362f0c58e75f}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSelectExpression@{walkSelectExpression}}
+\index{walkSelectExpression@{walkSelectExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSelectExpression()}{walkSelectExpression()}}
+{\footnotesize\ttfamily walk\+Select\+Expression (\begin{DoxyParamCaption}\item[{}]{\$select\+Expression }\end{DoxyParamCaption})}
+
+\{Walks down a Select\+Expression AST node and generates the corresponding SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Select\+Expression & {\em \$select\+Expression} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_aa5ee5887d8caa22337ed362f0c58e75f}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab509373da4a08d26b0f79a3fa0d4db89}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab509373da4a08d26b0f79a3fa0d4db89}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSelectStatement@{walkSelectStatement}}
+\index{walkSelectStatement@{walkSelectStatement}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatement()}{walkSelectStatement()}}
+{\footnotesize\ttfamily walk\+Select\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{AST\textbackslash{}\+Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+\{Walks down a Select\+Statement AST node, thereby generating the appropriate SQL.
+
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ab509373da4a08d26b0f79a3fa0d4db89}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aad9677dfcfd028e3e36dc7d0879ea022}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_aad9677dfcfd028e3e36dc7d0879ea022}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSimpleArithmeticExpression@{walkSimpleArithmeticExpression}}
+\index{walkSimpleArithmeticExpression@{walkSimpleArithmeticExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSimpleArithmeticExpression()}{walkSimpleArithmeticExpression()}}
+{\footnotesize\ttfamily walk\+Simple\+Arithmetic\+Expression (\begin{DoxyParamCaption}\item[{}]{\$simple\+Arithmetic\+Expr }\end{DoxyParamCaption})}
+
+\{Walks down an Simple\+Arithmetic\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Simple\+Arithmetic\+Expression & {\em \$simple\+Arithmetic\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_aad9677dfcfd028e3e36dc7d0879ea022}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab8f394b38418042b325fec1d355cf31e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ab8f394b38418042b325fec1d355cf31e}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSimpleSelectClause@{walkSimpleSelectClause}}
+\index{walkSimpleSelectClause@{walkSimpleSelectClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSimpleSelectClause()}{walkSimpleSelectClause()}}
+{\footnotesize\ttfamily walk\+Simple\+Select\+Clause (\begin{DoxyParamCaption}\item[{}]{\$simple\+Select\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Simple\+Select\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Simple\+Select\+Clause & {\em \$simple\+Select\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ab8f394b38418042b325fec1d355cf31e}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5f37b5cb4e775300d812d1b7a7020e80}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a5f37b5cb4e775300d812d1b7a7020e80}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSimpleSelectExpression@{walkSimpleSelectExpression}}
+\index{walkSimpleSelectExpression@{walkSimpleSelectExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSimpleSelectExpression()}{walkSimpleSelectExpression()}}
+{\footnotesize\ttfamily walk\+Simple\+Select\+Expression (\begin{DoxyParamCaption}\item[{}]{\$simple\+Select\+Expression }\end{DoxyParamCaption})}
+
+\{Walks down a Simple\+Select\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Simple\+Select\+Expression & {\em \$simple\+Select\+Expression} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a5f37b5cb4e775300d812d1b7a7020e80}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_abab23325fb798e99c2301fe1b6c4a6ad}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_abab23325fb798e99c2301fe1b6c4a6ad}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkStateFieldPathExpression@{walkStateFieldPathExpression}}
+\index{walkStateFieldPathExpression@{walkStateFieldPathExpression}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkStateFieldPathExpression()}{walkStateFieldPathExpression()}}
+{\footnotesize\ttfamily walk\+State\+Field\+Path\+Expression (\begin{DoxyParamCaption}\item[{}]{\$state\+Field\+Path\+Expression }\end{DoxyParamCaption})}
+
+\{Walks down a State\+Field\+Path\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Path\+Expression & {\em \$state\+Field\+Path\+Expression} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_abab23325fb798e99c2301fe1b6c4a6ad}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad742b0277a4b1cdfa5d6635b4aef9952}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad742b0277a4b1cdfa5d6635b4aef9952}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkStringPrimary@{walkStringPrimary}}
+\index{walkStringPrimary@{walkStringPrimary}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkStringPrimary()}{walkStringPrimary()}}
+{\footnotesize\ttfamily walk\+String\+Primary (\begin{DoxyParamCaption}\item[{}]{\$string\+Primary }\end{DoxyParamCaption})}
+
+\{Walks down a String\+Primary that represents an AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$string\+Primary} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ad742b0277a4b1cdfa5d6635b4aef9952}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a36e860fac722428bd9ec76a3a2663a22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a36e860fac722428bd9ec76a3a2663a22}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSubselect@{walkSubselect}}
+\index{walkSubselect@{walkSubselect}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSubselect()}{walkSubselect()}}
+{\footnotesize\ttfamily walk\+Subselect (\begin{DoxyParamCaption}\item[{}]{\$subselect }\end{DoxyParamCaption})}
+
+\{Walks down a Subselect AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Subselect & {\em \$subselect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a36e860fac722428bd9ec76a3a2663a22}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ae474bf7792dfcb78581a381ac396e9f8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ae474bf7792dfcb78581a381ac396e9f8}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkSubselectFromClause@{walkSubselectFromClause}}
+\index{walkSubselectFromClause@{walkSubselectFromClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkSubselectFromClause()}{walkSubselectFromClause()}}
+{\footnotesize\ttfamily walk\+Subselect\+From\+Clause (\begin{DoxyParamCaption}\item[{}]{\$subselect\+From\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Subselect\+From\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Subselect\+From\+Clause & {\em \$subselect\+From\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ae474bf7792dfcb78581a381ac396e9f8}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ac40460079bd9d0a7a3a8ffd9dc2d6a63}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ac40460079bd9d0a7a3a8ffd9dc2d6a63}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkUpdateClause@{walkUpdateClause}}
+\index{walkUpdateClause@{walkUpdateClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkUpdateClause()}{walkUpdateClause()}}
+{\footnotesize\ttfamily walk\+Update\+Clause (\begin{DoxyParamCaption}\item[{}]{\$update\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down an Update\+Clause AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Update\+Clause & {\em \$update\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ac40460079bd9d0a7a3a8ffd9dc2d6a63}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad466f05a7fc48a5e9eed4357d95fe7c0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_ad466f05a7fc48a5e9eed4357d95fe7c0}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkUpdateItem@{walkUpdateItem}}
+\index{walkUpdateItem@{walkUpdateItem}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkUpdateItem()}{walkUpdateItem()}}
+{\footnotesize\ttfamily walk\+Update\+Item (\begin{DoxyParamCaption}\item[{}]{\$update\+Item }\end{DoxyParamCaption})}
+
+\{Walks down an Update\+Item AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Update\+Item & {\em \$update\+Item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_ad466f05a7fc48a5e9eed4357d95fe7c0}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a38218e46b246814cb94237cf068ab7c8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a38218e46b246814cb94237cf068ab7c8}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkUpdateStatement@{walkUpdateStatement}}
+\index{walkUpdateStatement@{walkUpdateStatement}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkUpdateStatement()}{walkUpdateStatement()}}
+{\footnotesize\ttfamily walk\+Update\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_statement}{AST\textbackslash{}\+Update\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+\{Walks down an Update\+Statement AST node, thereby generating the appropriate SQL.
+
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a38218e46b246814cb94237cf068ab7c8}{Tree\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a31092c4cdd5716f2f12b3ab77f39386b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_chain_a31092c4cdd5716f2f12b3ab77f39386b}} 
+\index{TreeWalkerChain@{TreeWalkerChain}!walkWhereClause@{walkWhereClause}}
+\index{walkWhereClause@{walkWhereClause}!TreeWalkerChain@{TreeWalkerChain}}
+\doxysubsubsection{\texorpdfstring{walkWhereClause()}{walkWhereClause()}}
+{\footnotesize\ttfamily walk\+Where\+Clause (\begin{DoxyParamCaption}\item[{}]{\$where\+Clause }\end{DoxyParamCaption})}
+
+\{Walks down a Where\+Clause AST node, thereby generating the appropriate SQL. Where\+Clause or not, the appropriate discriminator sql is added.
+
+
+\begin{DoxyParams}[1]{Parameters}
+AST\textbackslash{}\+Where\+Clause & {\em \$where\+Clause} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_query_1_1_tree_walker_a31092c4cdd5716f2f12b3ab77f39386b}{Tree\+Walker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Tree\+Walker\+Chain.\+php\end{DoxyCompactItemize}

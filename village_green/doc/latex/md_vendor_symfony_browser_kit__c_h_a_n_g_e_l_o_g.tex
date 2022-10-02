@@ -1,0 +1,45 @@
+\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1344}{}\doxysection{5.\+3}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1344}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily json\+Request} method to {\ttfamily Abstract\+Browser}
+\item Allowed sending a body with GET requests when a content-\/type is defined
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1345}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1345}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} Request parameters are now casted to string in {\ttfamily Request\+::\+\_\+\+\_\+construct()}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1346}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1346}
+
+\begin{DoxyItemize}
+\item Added PHPUnit constraints\+: {\ttfamily Browser\+Cookie\+Value\+Same} and {\ttfamily Browser\+Has\+Cookie}
+\item Added {\ttfamily Http\+Browser}, an implementation of a browser with the Http\+Client component
+\item Renamed {\ttfamily Client} to {\ttfamily Abstract\+Browser}
+\item Marked {\ttfamily Response} final.
+\item Deprecated {\ttfamily Response\+::build\+Header()}
+\item Deprecated {\ttfamily Response\+::get\+Status()}, use {\ttfamily Response\+::get\+Status\+Code()} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1347}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1347}
+
+\begin{DoxyItemize}
+\item The method {\ttfamily Client\+::submit()} will have a new {\ttfamily \$server\+Parameters} argument in version 5.\+0, not defining it is deprecated
+\item Added ability to read the \char`\"{}samesite\char`\"{} attribute of cookies using {\ttfamily Cookie\+::get\+Same\+Site()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1348}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1348}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} Client will skip redirects during history navigation (back and forward calls) according to W3C Browsers recommendation
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1349}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1349}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} The request method is dropped from POST to GET when the response status code is 301.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1350}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1350}
+
+\begin{DoxyItemize}
+\item Client HTTP user agent has been changed to \textquotesingle{}Symfony Browser\+Kit\textquotesingle{}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1351}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1351}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily Client\+::follow\+Redirect()} won\textquotesingle{}t redirect responses with a non-\/3xx Status Code and {\ttfamily Location} header anymore, as per \href{http://tools.ietf.org/html/rfc2616\#section-14.30}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc2616\#section-\/14.\+30}}
+\item added {\ttfamily Client\+::get\+Internal\+Request()} and {\ttfamily Client\+::get\+Internal\+Response()} to have access to the Browser\+Kit internal request and response objects
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1352}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_browser_kit__c_h_a_n_g_e_l_o_g_autotoc_md1352}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} The Cookie\+Jar internals have changed to allow cookies with the same name on different sub-\/domains/sub-\/paths 
+\end{DoxyItemize}

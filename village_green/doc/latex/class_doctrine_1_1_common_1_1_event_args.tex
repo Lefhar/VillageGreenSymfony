@@ -1,0 +1,38 @@
+\hypertarget{class_doctrine_1_1_common_1_1_event_args}{}\doxysection{Event\+Args Class Reference}
+\label{class_doctrine_1_1_common_1_1_event_args}\index{EventArgs@{EventArgs}}
+Inheritance diagram for Event\+Args\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doctrine_1_1_common_1_1_event_args}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args_a475e13ecba9b0e71a1d629f54b639668}{get\+Empty\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} is the base class for classes containing event data.
+
+This class contains no event data. It is used by events that do not pass state information to an event handler when an event is raised. The single empty \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} instance can be obtained through \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args_a475e13ecba9b0e71a1d629f54b639668}{get\+Empty\+Instance}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_event_args_a475e13ecba9b0e71a1d629f54b639668}\label{class_doctrine_1_1_common_1_1_event_args_a475e13ecba9b0e71a1d629f54b639668}} 
+\index{EventArgs@{EventArgs}!getEmptyInstance@{getEmptyInstance}}
+\index{getEmptyInstance@{getEmptyInstance}!EventArgs@{EventArgs}}
+\doxysubsubsection{\texorpdfstring{getEmptyInstance()}{getEmptyInstance()}}
+{\footnotesize\ttfamily static get\+Empty\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the single, empty and immutable \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_args}{Event\+Args}} instance.
+
+This instance will be used when events are dispatched without any parameter, like this\+: \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager_acf481b18cabfdd7e43ec5ab0cce872f8}{Event\+Manager\+::dispatch\+Event}}(\textquotesingle{}eventname\textquotesingle{});
+
+The benefit from this is that only one empty instance is instantiated and shared (otherwise there would be instances for every dispatched in the abovementioned form).
+
+\mbox{\hyperlink{}{Event\+Manager\+::dispatch\+Event  Event\+Args }}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/event-\/manager/lib/\+Doctrine/\+Common/Event\+Args.\+php\end{DoxyCompactItemize}

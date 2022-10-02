@@ -1,0 +1,275 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region}{}\doxysection{File\+Lock\+Region Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region}\index{FileLockRegion@{FileLockRegion}}
+Inheritance diagram for File\+Lock\+Region\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a074f3a0c2eaf4a3bc71705f4e54c3a4b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region}{Region}} \$region, \$directory, \$lock\+Lifetime)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a9a4bfb762353d4892472c17f7ea0c91e}{contains}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ae090d9287bcba9278d7b60d9704c2c5f}{get}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3e3d57668e7a1747bf087108c2590b8b}{get\+Multiple}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} \$collection)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_af397abd14a07f97eda4d5907e1ab4655}{put}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_entry}{Cache\+Entry}} \$entry, ?\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}} \$\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}{lock}}=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a6bd9e8eeec9f5f32777f1ef67836ac28}{evict}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a88805bfa0c453b5b66a051d648dd0aef}{evict\+All}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}{lock}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ac3a0fee1712be05ed482a9b5bb40453f}{unlock}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} \$key, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}} \$\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}{lock}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a310280b0c0e2233ab15fba3c4798505a}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a310280b0c0e2233ab15fba3c4798505a}} 
+const {\bfseries LOCK\+\_\+\+EXTENSION} = \textquotesingle{}\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}{lock}}\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Very naive concurrent region, based on file locks. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a074f3a0c2eaf4a3bc71705f4e54c3a4b}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a074f3a0c2eaf4a3bc71705f4e54c3a4b}} 
+\index{FileLockRegion@{FileLockRegion}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region}{Region}}}]{\$region,  }\item[{}]{\$directory,  }\item[{}]{\$lock\+Lifetime }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$directory} & \\
+\hline
+numeric-\/string & {\em \$lock\+Lifetime} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a9a4bfb762353d4892472c17f7ea0c91e}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a9a4bfb762353d4892472c17f7ea0c91e}} 
+\index{FileLockRegion@{FileLockRegion}!contains@{contains}}
+\index{contains@{contains}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+\{Determine whether this region contains data for the given key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The cache key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the underlying cache contains corresponding data; FALSE otherwise.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region_a9a4bfb762353d4892472c17f7ea0c91e}{Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a6bd9e8eeec9f5f32777f1ef67836ac28}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a6bd9e8eeec9f5f32777f1ef67836ac28}} 
+\index{FileLockRegion@{FileLockRegion}!evict@{evict}}
+\index{evict@{evict}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{evict()}{evict()}}
+{\footnotesize\ttfamily evict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+\{Remove an item from the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key under which to cache the item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & Indicates a problem accessing the region.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region_a6bd9e8eeec9f5f32777f1ef67836ac28}{Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a88805bfa0c453b5b66a051d648dd0aef}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a88805bfa0c453b5b66a051d648dd0aef}} 
+\index{FileLockRegion@{FileLockRegion}!evictAll@{evictAll}}
+\index{evictAll@{evictAll}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{evictAll()}{evictAll()}}
+{\footnotesize\ttfamily evict\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Remove all contents of this particular cache region.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & Indicates problem accessing the region.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region_a88805bfa0c453b5b66a051d648dd0aef}{Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ae090d9287bcba9278d7b60d9704c2c5f}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ae090d9287bcba9278d7b60d9704c2c5f}} 
+\index{FileLockRegion@{FileLockRegion}!get@{get}}
+\index{get@{get}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+\{Get an item from the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key of the item to be retrieved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cache\+Entry$\vert$null The cached entry or NULL
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & Indicates a problem accessing the item or region.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region_ae090d9287bcba9278d7b60d9704c2c5f}{Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3e3d57668e7a1747bf087108c2590b8b}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3e3d57668e7a1747bf087108c2590b8b}} 
+\index{FileLockRegion@{FileLockRegion}!getMultiple@{getMultiple}}
+\index{getMultiple@{getMultiple}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{getMultiple()}{getMultiple()}}
+{\footnotesize\ttfamily get\+Multiple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}}}]{\$collection }\end{DoxyParamCaption})}
+
+\{Get all items from the cache identified by \$keys. It returns NULL if some elements can not be found.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} & {\em \$collection} & The collection of the items to be retrieved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_entry}{Cache\+Entry}}\mbox{[}\mbox{]}$\vert$null The cached entries or NULL if one or more entries can not be found
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_multi_get_region_a3e3d57668e7a1747bf087108c2590b8b}{Multi\+Get\+Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a3d0963e68bb313b163a73f2803c64600}} 
+\index{FileLockRegion@{FileLockRegion}!getName@{getName}}
+\index{getName@{getName}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Retrieve the name of this region.
+
+\begin{DoxyReturn}{Returns}
+string The region name
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region_a3d0963e68bb313b163a73f2803c64600}{Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_a8ec1b88e6830ed1ec98c21b18861ff63}} 
+\index{FileLockRegion@{FileLockRegion}!lock@{lock}}
+\index{lock@{lock}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key }\end{DoxyParamCaption})}
+
+\{Attempts to read lock the mapping for the given key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key of the item to lock.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lock$\vert$null A lock instance or NULL if the lock already exists.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock_exception}{Lock\+Exception}}} & Indicates a problem accessing the region.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_a8ec1b88e6830ed1ec98c21b18861ff63}{Concurrent\+Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_af397abd14a07f97eda4d5907e1ab4655}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_af397abd14a07f97eda4d5907e1ab4655}} 
+\index{FileLockRegion@{FileLockRegion}!put@{put}}
+\index{put@{put}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_entry}{Cache\+Entry}}}]{\$entry,  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}}}]{\$lock = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Put an item into the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key under which to cache the item. \\
+\hline
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_entry}{Cache\+Entry}} & {\em \$entry} & The entry to cache. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}} | null & {\em \$lock} & The lock previously obtained.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & Indicates a problem accessing the region.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region_af397abd14a07f97eda4d5907e1ab4655}{Region}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ac3a0fee1712be05ed482a9b5bb40453f}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_region_1_1_file_lock_region_ac3a0fee1712be05ed482a9b5bb40453f}} 
+\index{FileLockRegion@{FileLockRegion}!unlock@{unlock}}
+\index{unlock@{unlock}!FileLockRegion@{FileLockRegion}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}}}]{\$lock }\end{DoxyParamCaption})}
+
+\{Attempts to read unlock the mapping for the given key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_cache_key}{Cache\+Key}} & {\em \$key} & The key of the item to unlock. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock}{Lock}} & {\em \$lock} & The lock previously obtained from \mbox{\hyperlink{}{read\+Lock}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_lock_exception}{Lock\+Exception}}} & Indicates a problem accessing the region.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_concurrent_region_ac3a0fee1712be05ed482a9b5bb40453f}{Concurrent\+Region}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/\+Region/File\+Lock\+Region.\+php\end{DoxyCompactItemize}

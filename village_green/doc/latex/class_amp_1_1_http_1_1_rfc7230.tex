@@ -1,0 +1,112 @@
+\hypertarget{class_amp_1_1_http_1_1_rfc7230}{}\doxysection{Rfc7230 Class Reference}
+\label{class_amp_1_1_http_1_1_rfc7230}\index{Rfc7230@{Rfc7230}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_rfc7230_a9667b3b2012542605eeca826944a6210}{parse\+Headers}} (string \$raw\+Headers)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_rfc7230_a715aea7b6e6a5c96f2199166da184715}{format\+Headers}} (array \$headers)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_rfc7230_ad4b0742657267288c567d982df2113dc}{format\+Raw\+Headers}} (array \$headers)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_a237920164d35a15166279dab8e58bb9b}\label{class_amp_1_1_http_1_1_rfc7230_a237920164d35a15166279dab8e58bb9b}} 
+const {\bfseries HEADER\+\_\+\+NAME\+\_\+\+REGEX} = \char`\"{}($^\wedge$(\mbox{[}$^\wedge$()$<$$>$@,;\+:\textbackslash{}\textbackslash{}\textbackslash{}\char`\"{}/\mbox{[}\textbackslash{}\mbox{]}?=\{\}\textbackslash{}x01-\/\textbackslash{}x20\textbackslash{}x7F\mbox{]}++)\$)\char`\"{}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_af43ccddafb913db66daf42701d634de6}\label{class_amp_1_1_http_1_1_rfc7230_af43ccddafb913db66daf42701d634de6}} 
+const {\bfseries HEADER\+\_\+\+VALUE\+\_\+\+REGEX} = \char`\"{}($^\wedge$\mbox{[} \textbackslash{}t\mbox{]}$\ast$+((?\+:\mbox{[} \textbackslash{}t\mbox{]}$\ast$+\mbox{[}\textbackslash{}x21-\/\textbackslash{}x7\+E\textbackslash{}x80-\/\textbackslash{}x\+FF\mbox{]}++)$\ast$+)\mbox{[} \textbackslash{}t\mbox{]}$\ast$+\$)\char`\"{}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_a415ab42ec5482ab3a86876b25d76990c}\label{class_amp_1_1_http_1_1_rfc7230_a415ab42ec5482ab3a86876b25d76990c}} 
+const {\bfseries HEADER\+\_\+\+REGEX} = \char`\"{}($^\wedge$(\mbox{[}$^\wedge$()$<$$>$@,;\+:\textbackslash{}\textbackslash{}\textbackslash{}\char`\"{}/\mbox{[}\textbackslash{}\mbox{]}?=\{\}\textbackslash{}x01-\/\textbackslash{}x20\textbackslash{}x7F\mbox{]}++)\+:\mbox{[} \textbackslash{}t\mbox{]}$\ast$+((?\+:\mbox{[} \textbackslash{}t\mbox{]}$\ast$+\mbox{[}\textbackslash{}x21-\/\textbackslash{}x7\+E\textbackslash{}x80-\/\textbackslash{}x\+FF\mbox{]}++)$\ast$+)\mbox{[} \textbackslash{}t\mbox{]}$\ast$+\textbackslash{}r\textbackslash{}n)m\char`\"{}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_a41b28cb970fddefc8b61149cac6310aa}\label{class_amp_1_1_http_1_1_rfc7230_a41b28cb970fddefc8b61149cac6310aa}} 
+const {\bfseries HEADER\+\_\+\+FOLD\+\_\+\+REGEX} = \char`\"{}(\textbackslash{}r\textbackslash{}n\mbox{[} \textbackslash{}t\mbox{]}++)\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{}{\href{https://tools.ietf.org/html/rfc2616}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc2616}}  \href{https://tools.ietf.org/html/rfc5234}{\texttt{ https\+://tools.\+ietf.\+org/html/rfc5234}} }}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_a715aea7b6e6a5c96f2199166da184715}\label{class_amp_1_1_http_1_1_rfc7230_a715aea7b6e6a5c96f2199166da184715}} 
+\index{Rfc7230@{Rfc7230}!formatHeaders@{formatHeaders}}
+\index{formatHeaders@{formatHeaders}!Rfc7230@{Rfc7230}}
+\doxysubsubsection{\texorpdfstring{formatHeaders()}{formatHeaders()}}
+{\footnotesize\ttfamily static format\+Headers (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Format headers in to their on-\/the-\/wire format.
+
+Headers are always validated syntactically. This protects against response splitting and header injection attacks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$headers} & Headers in a format as returned by \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_rfc7230_a9667b3b2012542605eeca826944a6210}{parse\+Headers()}}\}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string Formatted headers.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_invalid_header_exception}{Invalid\+Header\+Exception}}} & If header names or values are invalid. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_ad4b0742657267288c567d982df2113dc}\label{class_amp_1_1_http_1_1_rfc7230_ad4b0742657267288c567d982df2113dc}} 
+\index{Rfc7230@{Rfc7230}!formatRawHeaders@{formatRawHeaders}}
+\index{formatRawHeaders@{formatRawHeaders}!Rfc7230@{Rfc7230}}
+\doxysubsubsection{\texorpdfstring{formatRawHeaders()}{formatRawHeaders()}}
+{\footnotesize\ttfamily static format\+Raw\+Headers (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Format headers in to their on-\/the-\/wire HTTP/1 format.
+
+Headers are always validated syntactically. This protects against response splitting and header injection attacks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$headers} & List of headers in \mbox{[}field, value\mbox{]} format as returned by \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_a7457a37a1633a369602f8919c71f7216}{Message\+::get\+Raw\+Headers()}}\}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string Formatted headers.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_invalid_header_exception}{Invalid\+Header\+Exception}}} & If header names or values are invalid. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_rfc7230_a9667b3b2012542605eeca826944a6210}\label{class_amp_1_1_http_1_1_rfc7230_a9667b3b2012542605eeca826944a6210}} 
+\index{Rfc7230@{Rfc7230}!parseHeaders@{parseHeaders}}
+\index{parseHeaders@{parseHeaders}!Rfc7230@{Rfc7230}}
+\doxysubsubsection{\texorpdfstring{parseHeaders()}{parseHeaders()}}
+{\footnotesize\ttfamily static parse\+Headers (\begin{DoxyParamCaption}\item[{string}]{\$raw\+Headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parses headers according to RFC 7230 and 2616.
+
+Allows empty header values, as HTTP/1.\+0 allows that.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$raw\+Headers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Associative array mapping header names to arrays of values.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_invalid_header_exception}{Invalid\+Header\+Exception}}} & If invalid headers have been passed. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http/src/Rfc7230.\+php\end{DoxyCompactItemize}

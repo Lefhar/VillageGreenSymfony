@@ -1,0 +1,67 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker}{}\doxysection{Where\+In\+Walker Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker}\index{WhereInWalker@{WhereInWalker}}
+Inheritance diagram for Where\+In\+Walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_a3610174d13cc7a5b18cf1196be4c76e4}{walk\+Select\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_a2dc4208b81091563f490767d64b1d0c9}{HINT\+\_\+\+PAGINATOR\+\_\+\+ID\+\_\+\+COUNT}} = \textquotesingle{}doctrine.\+id.\+count\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_ad457afb9e5539e6ba792ca3c3ad535c8}{PAGINATOR\+\_\+\+ID\+\_\+\+ALIAS}} = \textquotesingle{}dpid\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Appends a condition \char`\"{}id IN (\+:foo\+\_\+1, \+:foo\+\_\+2)\char`\"{} to the where\+Clause of the AST. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_a3610174d13cc7a5b18cf1196be4c76e4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_a3610174d13cc7a5b18cf1196be4c76e4}} 
+\index{WhereInWalker@{WhereInWalker}!walkSelectStatement@{walkSelectStatement}}
+\index{walkSelectStatement@{walkSelectStatement}!WhereInWalker@{WhereInWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatement()}{walkSelectStatement()}}
+{\footnotesize\ttfamily walk\+Select\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+Appends a condition equivalent to \char`\"{}\+WHERE IN (\+:dpid\+\_\+1, \+:dpid\+\_\+2, ...)\char`\"{} to the where\+Clause of the AST.
+
+The parameter namespace (dpid) is defined by the PAGINATOR\+\_\+\+ID\+\_\+\+ALIAS
+
+The total number of parameters is retrieved from the HINT\+\_\+\+PAGINATOR\+\_\+\+ID\+\_\+\+COUNT query hint.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_a2dc4208b81091563f490767d64b1d0c9}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_a2dc4208b81091563f490767d64b1d0c9}} 
+\index{WhereInWalker@{WhereInWalker}!HINT\_PAGINATOR\_ID\_COUNT@{HINT\_PAGINATOR\_ID\_COUNT}}
+\index{HINT\_PAGINATOR\_ID\_COUNT@{HINT\_PAGINATOR\_ID\_COUNT}!WhereInWalker@{WhereInWalker}}
+\doxysubsubsection{\texorpdfstring{HINT\_PAGINATOR\_ID\_COUNT}{HINT\_PAGINATOR\_ID\_COUNT}}
+{\footnotesize\ttfamily const HINT\+\_\+\+PAGINATOR\+\_\+\+ID\+\_\+\+COUNT = \textquotesingle{}doctrine.\+id.\+count\textquotesingle{}}
+
+ID Count hint name. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_ad457afb9e5539e6ba792ca3c3ad535c8}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_where_in_walker_ad457afb9e5539e6ba792ca3c3ad535c8}} 
+\index{WhereInWalker@{WhereInWalker}!PAGINATOR\_ID\_ALIAS@{PAGINATOR\_ID\_ALIAS}}
+\index{PAGINATOR\_ID\_ALIAS@{PAGINATOR\_ID\_ALIAS}!WhereInWalker@{WhereInWalker}}
+\doxysubsubsection{\texorpdfstring{PAGINATOR\_ID\_ALIAS}{PAGINATOR\_ID\_ALIAS}}
+{\footnotesize\ttfamily const PAGINATOR\+\_\+\+ID\+\_\+\+ALIAS = \textquotesingle{}dpid\textquotesingle{}}
+
+Primary key alias for query. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Pagination/Where\+In\+Walker.\+php\end{DoxyCompactItemize}

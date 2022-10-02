@@ -1,0 +1,149 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup}{}\doxysection{Setup Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup}\index{Setup@{Setup}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_aaa4082c3482764c9bc7f0314cd1958c3}{register\+Autoload\+Directory}} (\$directory)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_aef4db36f249bc6fe7bbebb0f872ef846}{create\+Annotation\+Metadata\+Configuration}} (array \$paths, \$is\+Dev\+Mode=false, \$proxy\+Dir=null, ?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}} \$cache=null, \$use\+Simple\+Annotation\+Reader=true)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_a45f41faa42944c13a0547ca03a9d1fc7}{create\+Attribute\+Metadata\+Configuration}} (array \$paths, \$is\+Dev\+Mode=false, \$proxy\+Dir=null, ?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}} \$cache=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_ac47d69750e66bf66f01c6f20e22b8a04}{create\+XMLMetadata\+Configuration}} (array \$paths, \$is\+Dev\+Mode=false, \$proxy\+Dir=null, ?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}} \$cache=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_a7be8d5f9c77fe2c889db91b9e858db04}{create\+YAMLMetadata\+Configuration}} (array \$paths, \$is\+Dev\+Mode=false, \$proxy\+Dir=null, ?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}} \$cache=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_afee181499408e4832e12bd88eecd4e03}{create\+Configuration}} (\$is\+Dev\+Mode=false, \$proxy\+Dir=null, ?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}} \$cache=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Convenience class for setting up Doctrine from different installations and configurations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_aef4db36f249bc6fe7bbebb0f872ef846}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_aef4db36f249bc6fe7bbebb0f872ef846}} 
+\index{Setup@{Setup}!createAnnotationMetadataConfiguration@{createAnnotationMetadataConfiguration}}
+\index{createAnnotationMetadataConfiguration@{createAnnotationMetadataConfiguration}!Setup@{Setup}}
+\doxysubsubsection{\texorpdfstring{createAnnotationMetadataConfiguration()}{createAnnotationMetadataConfiguration()}}
+{\footnotesize\ttfamily static create\+Annotation\+Metadata\+Configuration (\begin{DoxyParamCaption}\item[{array}]{\$paths,  }\item[{}]{\$is\+Dev\+Mode = {\ttfamily false},  }\item[{}]{\$proxy\+Dir = {\ttfamily null},  }\item[{?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}}}]{\$cache = {\ttfamily null},  }\item[{}]{\$use\+Simple\+Annotation\+Reader = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a configuration with an annotation metadata driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$paths} & \\
+\hline
+bool & {\em \$is\+Dev\+Mode} & \\
+\hline
+string & {\em \$proxy\+Dir} & \\
+\hline
+bool & {\em \$use\+Simple\+Annotation\+Reader} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration}{Configuration}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_a45f41faa42944c13a0547ca03a9d1fc7}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_a45f41faa42944c13a0547ca03a9d1fc7}} 
+\index{Setup@{Setup}!createAttributeMetadataConfiguration@{createAttributeMetadataConfiguration}}
+\index{createAttributeMetadataConfiguration@{createAttributeMetadataConfiguration}!Setup@{Setup}}
+\doxysubsubsection{\texorpdfstring{createAttributeMetadataConfiguration()}{createAttributeMetadataConfiguration()}}
+{\footnotesize\ttfamily static create\+Attribute\+Metadata\+Configuration (\begin{DoxyParamCaption}\item[{array}]{\$paths,  }\item[{}]{\$is\+Dev\+Mode = {\ttfamily false},  }\item[{}]{\$proxy\+Dir = {\ttfamily null},  }\item[{?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}}}]{\$cache = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a configuration with an attribute metadata driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$paths} & \\
+\hline
+bool & {\em \$is\+Dev\+Mode} & \\
+\hline
+string & {\em \$proxy\+Dir} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_afee181499408e4832e12bd88eecd4e03}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_afee181499408e4832e12bd88eecd4e03}} 
+\index{Setup@{Setup}!createConfiguration@{createConfiguration}}
+\index{createConfiguration@{createConfiguration}!Setup@{Setup}}
+\doxysubsubsection{\texorpdfstring{createConfiguration()}{createConfiguration()}}
+{\footnotesize\ttfamily static create\+Configuration (\begin{DoxyParamCaption}\item[{}]{\$is\+Dev\+Mode = {\ttfamily false},  }\item[{}]{\$proxy\+Dir = {\ttfamily null},  }\item[{?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}}}]{\$cache = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a configuration without a metadata driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$is\+Dev\+Mode} & \\
+\hline
+string & {\em \$proxy\+Dir} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration}{Configuration}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_ac47d69750e66bf66f01c6f20e22b8a04}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_ac47d69750e66bf66f01c6f20e22b8a04}} 
+\index{Setup@{Setup}!createXMLMetadataConfiguration@{createXMLMetadataConfiguration}}
+\index{createXMLMetadataConfiguration@{createXMLMetadataConfiguration}!Setup@{Setup}}
+\doxysubsubsection{\texorpdfstring{createXMLMetadataConfiguration()}{createXMLMetadataConfiguration()}}
+{\footnotesize\ttfamily static create\+XMLMetadata\+Configuration (\begin{DoxyParamCaption}\item[{array}]{\$paths,  }\item[{}]{\$is\+Dev\+Mode = {\ttfamily false},  }\item[{}]{\$proxy\+Dir = {\ttfamily null},  }\item[{?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}}}]{\$cache = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a configuration with a xml metadata driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$paths} & \\
+\hline
+bool & {\em \$is\+Dev\+Mode} & \\
+\hline
+string & {\em \$proxy\+Dir} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration}{Configuration}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_a7be8d5f9c77fe2c889db91b9e858db04}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_a7be8d5f9c77fe2c889db91b9e858db04}} 
+\index{Setup@{Setup}!createYAMLMetadataConfiguration@{createYAMLMetadataConfiguration}}
+\index{createYAMLMetadataConfiguration@{createYAMLMetadataConfiguration}!Setup@{Setup}}
+\doxysubsubsection{\texorpdfstring{createYAMLMetadataConfiguration()}{createYAMLMetadataConfiguration()}}
+{\footnotesize\ttfamily static create\+YAMLMetadata\+Configuration (\begin{DoxyParamCaption}\item[{array}]{\$paths,  }\item[{}]{\$is\+Dev\+Mode = {\ttfamily false},  }\item[{}]{\$proxy\+Dir = {\ttfamily null},  }\item[{?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}}}]{\$cache = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a configuration with a yaml metadata driver.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000301}{Deprecated}}]YAML metadata mapping is deprecated and will be removed in 3.\+0\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$paths} & \\
+\hline
+bool & {\em \$is\+Dev\+Mode} & \\
+\hline
+string & {\em \$proxy\+Dir} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration}{Configuration}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_aaa4082c3482764c9bc7f0314cd1958c3}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_setup_aaa4082c3482764c9bc7f0314cd1958c3}} 
+\index{Setup@{Setup}!registerAutoloadDirectory@{registerAutoloadDirectory}}
+\index{registerAutoloadDirectory@{registerAutoloadDirectory}!Setup@{Setup}}
+\doxysubsubsection{\texorpdfstring{registerAutoloadDirectory()}{registerAutoloadDirectory()}}
+{\footnotesize\ttfamily static register\+Autoload\+Directory (\begin{DoxyParamCaption}\item[{}]{\$directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Use this method to register all autoloads for a downloaded Doctrine library. Pick the directory the library was uncompressed into.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000300}{Deprecated}}]Use Composer\textquotesingle{}s autoloader instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$directory} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Setup.\+php\end{DoxyCompactItemize}

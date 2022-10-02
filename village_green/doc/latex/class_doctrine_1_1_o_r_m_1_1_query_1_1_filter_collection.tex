@@ -1,0 +1,196 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection}{}\doxysection{Filter\+Collection Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection}\index{FilterCollection@{FilterCollection}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a25f4258aeb5ce2a61a2504cb7c058485}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a25f4258aeb5ce2a61a2504cb7c058485}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a44e0c9ef7944f5f7fb758eae9f724345}{get\+Enabled\+Filters}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a2c079ab89bf6b4d12460827858d051da}{enable}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_aca6763bb29b9222a44bcfe46ead58bb1}{disable}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a4a7bab9eccf45585b757bc4637d49c51}{get\+Filter}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a623d004aa083376c599112f235c0af9d}{has}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a93a715509e6f7be3b1c21d62044d5f18}{is\+Enabled}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a001264a1fee8d2370c57b6db1ab8023f}{is\+Clean}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a10220afb27800deb78f48b4698a74742}{get\+Hash}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a86730d61200d8e6413fb7bfb0fc8c9bc}{set\+Filters\+State\+Dirty}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a0cdfb75a8ec3d87561f0bcd10d5c6512}{FILTERS\+\_\+\+STATE\+\_\+\+CLEAN}} = 1
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_abe684b7dca671a9104af4b71bdb68125}{FILTERS\+\_\+\+STATE\+\_\+\+DIRTY}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collection class for all the query filters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_aca6763bb29b9222a44bcfe46ead58bb1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_aca6763bb29b9222a44bcfe46ead58bb1}} 
+\index{FilterCollection@{FilterCollection}!disable@{disable}}
+\index{disable@{disable}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily disable (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Disables a filter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the filter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SQLFilter The disabled filter.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & If the filter does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a2c079ab89bf6b4d12460827858d051da}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a2c079ab89bf6b4d12460827858d051da}} 
+\index{FilterCollection@{FilterCollection}!enable@{enable}}
+\index{enable@{enable}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily enable (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Enables a filter from the collection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the filter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SQLFilter The enabled filter.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & If the filter does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a44e0c9ef7944f5f7fb758eae9f724345}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a44e0c9ef7944f5f7fb758eae9f724345}} 
+\index{FilterCollection@{FilterCollection}!getEnabledFilters@{getEnabledFilters}}
+\index{getEnabledFilters@{getEnabledFilters}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{getEnabledFilters()}{getEnabledFilters()}}
+{\footnotesize\ttfamily get\+Enabled\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all the enabled filters.
+
+\begin{DoxyReturn}{Returns}
+SQLFilter\mbox{[}\mbox{]} The enabled filters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a4a7bab9eccf45585b757bc4637d49c51}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a4a7bab9eccf45585b757bc4637d49c51}} 
+\index{FilterCollection@{FilterCollection}!getFilter@{getFilter}}
+\index{getFilter@{getFilter}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{getFilter()}{getFilter()}}
+{\footnotesize\ttfamily get\+Filter (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Gets an enabled filter from the collection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the filter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SQLFilter The filter.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & If the filter is not enabled. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a10220afb27800deb78f48b4698a74742}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a10220afb27800deb78f48b4698a74742}} 
+\index{FilterCollection@{FilterCollection}!getHash@{getHash}}
+\index{getHash@{getHash}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{getHash()}{getHash()}}
+{\footnotesize\ttfamily get\+Hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generates a string of currently enabled filters to use for the cache id.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a623d004aa083376c599112f235c0af9d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a623d004aa083376c599112f235c0af9d}} 
+\index{FilterCollection@{FilterCollection}!has@{has}}
+\index{has@{has}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}}
+{\footnotesize\ttfamily has (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Checks whether filter with given name is defined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the filter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the filter exists, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a001264a1fee8d2370c57b6db1ab8023f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a001264a1fee8d2370c57b6db1ab8023f}} 
+\index{FilterCollection@{FilterCollection}!isClean@{isClean}}
+\index{isClean@{isClean}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{isClean()}{isClean()}}
+{\footnotesize\ttfamily is\+Clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool True, if the filter collection is clean. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a93a715509e6f7be3b1c21d62044d5f18}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a93a715509e6f7be3b1c21d62044d5f18}} 
+\index{FilterCollection@{FilterCollection}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}}
+{\footnotesize\ttfamily is\+Enabled (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Checks if a filter is enabled.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the filter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the filter is enabled, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a86730d61200d8e6413fb7bfb0fc8c9bc}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a86730d61200d8e6413fb7bfb0fc8c9bc}} 
+\index{FilterCollection@{FilterCollection}!setFiltersStateDirty@{setFiltersStateDirty}}
+\index{setFiltersStateDirty@{setFiltersStateDirty}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{setFiltersStateDirty()}{setFiltersStateDirty()}}
+{\footnotesize\ttfamily set\+Filters\+State\+Dirty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets the filter state to dirty.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a0cdfb75a8ec3d87561f0bcd10d5c6512}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_a0cdfb75a8ec3d87561f0bcd10d5c6512}} 
+\index{FilterCollection@{FilterCollection}!FILTERS\_STATE\_CLEAN@{FILTERS\_STATE\_CLEAN}}
+\index{FILTERS\_STATE\_CLEAN@{FILTERS\_STATE\_CLEAN}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{FILTERS\_STATE\_CLEAN}{FILTERS\_STATE\_CLEAN}}
+{\footnotesize\ttfamily const FILTERS\+\_\+\+STATE\+\_\+\+CLEAN = 1}
+
+A filter object is in CLEAN state when it has no changed parameters. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_abe684b7dca671a9104af4b71bdb68125}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_filter_collection_abe684b7dca671a9104af4b71bdb68125}} 
+\index{FilterCollection@{FilterCollection}!FILTERS\_STATE\_DIRTY@{FILTERS\_STATE\_DIRTY}}
+\index{FILTERS\_STATE\_DIRTY@{FILTERS\_STATE\_DIRTY}!FilterCollection@{FilterCollection}}
+\doxysubsubsection{\texorpdfstring{FILTERS\_STATE\_DIRTY}{FILTERS\_STATE\_DIRTY}}
+{\footnotesize\ttfamily const FILTERS\+\_\+\+STATE\+\_\+\+DIRTY = 2}
+
+A filter object is in DIRTY state when it has changed parameters. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Filter\+Collection.\+php\end{DoxyCompactItemize}

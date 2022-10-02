@@ -1,0 +1,216 @@
+\hypertarget{class_monolog_1_1_handler_1_1_slack_handler}{}\doxysection{Slack\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_slack_handler}\index{SlackHandler@{SlackHandler}}
+Inheritance diagram for Slack\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_slack_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_acad37206ec46df1cfd879976b5709757}{\+\_\+\+\_\+construct}} (string \$token, string \$channel, ?string \$username=null, bool \$use\+Attachment=true, ?string \$icon\+Emoji=null, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}, bool \$bubble=true, bool \$use\+Short\+Attachment=false, bool \$include\+Context\+And\+Extra=false, array \$\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_a8b58f1702d34bfb74d8e3b788f48ff5d}{exclude\+Fields}}=array())
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a2e1602a17dc749ea8690b9ecc0d923d4}\label{class_monolog_1_1_handler_1_1_slack_handler_a2e1602a17dc749ea8690b9ecc0d923d4}} 
+{\bfseries get\+Slack\+Record} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a211a2979c22afcd7d9056a2bb55aa449}\label{class_monolog_1_1_handler_1_1_slack_handler_a211a2979c22afcd7d9056a2bb55aa449}} 
+{\bfseries get\+Token} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_aad3a8e83c90770a1f71a75bb51e782d8}{get\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_a08e99a5fe2c5fc4a844ba7bce165daf0}{set\+Channel}} (string \$channel)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_a6fcb92ccc9c50d72d73b6bb2908db9bc}{set\+Username}} (string \$username)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a755c96f4701682cd07c4587ba245152c}\label{class_monolog_1_1_handler_1_1_slack_handler_a755c96f4701682cd07c4587ba245152c}} 
+{\bfseries use\+Attachment} (bool \$use\+Attachment)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a3319c842d93328b23d43979aecb423f5}\label{class_monolog_1_1_handler_1_1_slack_handler_a3319c842d93328b23d43979aecb423f5}} 
+{\bfseries set\+Icon\+Emoji} (string \$icon\+Emoji)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a0e7a3f9adfb9d532bea58853878d8388}\label{class_monolog_1_1_handler_1_1_slack_handler_a0e7a3f9adfb9d532bea58853878d8388}} 
+{\bfseries use\+Short\+Attachment} (bool \$use\+Short\+Attachment)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a01c188f93f231e20c50101d72397c92b}\label{class_monolog_1_1_handler_1_1_slack_handler_a01c188f93f231e20c50101d72397c92b}} 
+{\bfseries include\+Context\+And\+Extra} (bool \$include\+Context\+And\+Extra)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_a8b58f1702d34bfb74d8e3b788f48ff5d}{exclude\+Fields}} (array \$exclude\+Fields)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_aa0cd29bf257a2a5ac41d88cbed6efe83}{prepare\+Content\+Data}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_slack_handler_a88f32bb830d4df498b15491ca7e119cc}{finalize\+Write}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Sends notifications through Slack API
+
+\begin{DoxyAuthor}{Author}
+Greg Kedzierski \href{mailto:greg@gregkedzierski.com}{\texttt{ greg@gregkedzierski.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://api.slack.com/}{\texttt{ https\+://api.\+slack.\+com/}}
+\end{DoxySeeAlso}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_acad37206ec46df1cfd879976b5709757}\label{class_monolog_1_1_handler_1_1_slack_handler_acad37206ec46df1cfd879976b5709757}} 
+\index{SlackHandler@{SlackHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{string}]{\$channel,  }\item[{?string}]{\$username = {\ttfamily null},  }\item[{bool}]{\$use\+Attachment = {\ttfamily true},  }\item[{?string}]{\$icon\+Emoji = {\ttfamily null},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{bool}]{\$use\+Short\+Attachment = {\ttfamily false},  }\item[{bool}]{\$include\+Context\+And\+Extra = {\ttfamily false},  }\item[{array}]{\$exclude\+Fields = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & Slack API token \\
+\hline
+string & {\em \$channel} & Slack channel (encoded ID or name) \\
+\hline
+string | null & {\em \$username} & Name of a bot \\
+\hline
+bool & {\em \$use\+Attachment} & Whether the message should be added to Slack as attachment (plain text otherwise) \\
+\hline
+string | null & {\em \$icon\+Emoji} & The emoji name to use (or null) \\
+\hline
+bool & {\em \$use\+Short\+Attachment} & Whether the context/extra messages added to Slack as attachments are in a short style \\
+\hline
+bool & {\em \$include\+Context\+And\+Extra} & Whether the attachment should include context and extra data \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$exclude\+Fields} & Dot separated list of fields to exclude from slack message. E.\+g. \mbox{[}\textquotesingle{}context.\+field1\textquotesingle{}, \textquotesingle{}extra.\+field2\textquotesingle{}\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & If no Open\+SSL PHP extension configured \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a8b58f1702d34bfb74d8e3b788f48ff5d}\label{class_monolog_1_1_handler_1_1_slack_handler_a8b58f1702d34bfb74d8e3b788f48ff5d}} 
+\index{SlackHandler@{SlackHandler}!excludeFields@{excludeFields}}
+\index{excludeFields@{excludeFields}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{excludeFields()}{excludeFields()}}
+{\footnotesize\ttfamily exclude\+Fields (\begin{DoxyParamCaption}\item[{array}]{\$exclude\+Fields }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$exclude\+Fields} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a88f32bb830d4df498b15491ca7e119cc}\label{class_monolog_1_1_handler_1_1_slack_handler_a88f32bb830d4df498b15491ca7e119cc}} 
+\index{SlackHandler@{SlackHandler}!finalizeWrite@{finalizeWrite}}
+\index{finalizeWrite@{finalizeWrite}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{finalizeWrite()}{finalizeWrite()}}
+{\footnotesize\ttfamily finalize\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Finalizes the request by reading some bytes and then closing the socket
+
+If we do not read some but close the socket too early, slack sometimes drops the request entirely. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_slack_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{SlackHandler@{SlackHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_aad3a8e83c90770a1f71a75bb51e782d8}\label{class_monolog_1_1_handler_1_1_slack_handler_aad3a8e83c90770a1f71a75bb51e782d8}} 
+\index{SlackHandler@{SlackHandler}!getFormatter@{getFormatter}}
+\index{getFormatter@{getFormatter}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{getFormatter()}{getFormatter()}}
+{\footnotesize\ttfamily get\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the formatter.
+
+\begin{DoxyReturn}{Returns}
+Formatter\+Interface 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_aad3a8e83c90770a1f71a75bb51e782d8}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_aa0cd29bf257a2a5ac41d88cbed6efe83}\label{class_monolog_1_1_handler_1_1_slack_handler_aa0cd29bf257a2a5ac41d88cbed6efe83}} 
+\index{SlackHandler@{SlackHandler}!prepareContentData@{prepareContentData}}
+\index{prepareContentData@{prepareContentData}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{prepareContentData()}{prepareContentData()}}
+{\footnotesize\ttfamily prepare\+Content\+Data (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record \begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a08e99a5fe2c5fc4a844ba7bce165daf0}\label{class_monolog_1_1_handler_1_1_slack_handler_a08e99a5fe2c5fc4a844ba7bce165daf0}} 
+\index{SlackHandler@{SlackHandler}!setChannel@{setChannel}}
+\index{setChannel@{setChannel}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{setChannel()}{setChannel()}}
+{\footnotesize\ttfamily set\+Channel (\begin{DoxyParamCaption}\item[{string}]{\$channel }\end{DoxyParamCaption})}
+
+Channel used by the bot when posting \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_slack_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{SlackHandler@{SlackHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_a6fcb92ccc9c50d72d73b6bb2908db9bc}\label{class_monolog_1_1_handler_1_1_slack_handler_a6fcb92ccc9c50d72d73b6bb2908db9bc}} 
+\index{SlackHandler@{SlackHandler}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily set\+Username (\begin{DoxyParamCaption}\item[{string}]{\$username }\end{DoxyParamCaption})}
+
+Username used by the bot when posting \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_slack_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_slack_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{SlackHandler@{SlackHandler}!write@{write}}
+\index{write@{write}!SlackHandler@{SlackHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Connect (if necessary) and write to the socket
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_afa17604fd899fffdc1ee326afe177cb5}{Socket\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Slack\+Handler.\+php\end{DoxyCompactItemize}

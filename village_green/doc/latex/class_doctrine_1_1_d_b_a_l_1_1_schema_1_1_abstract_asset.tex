@@ -1,0 +1,234 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset}{}\doxysection{Abstract\+Asset Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset}\index{AbstractAsset@{AbstractAsset}}
+Inheritance diagram for Abstract\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a53481cd9af628c47caf3ce023a3ce237}{is\+In\+Default\+Namespace}} (\$default\+Namespace\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af5438a8f8b82f3d239f5ad1eb3d07eff}{get\+Namespace\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a22ea7af39f1802eabe2f4a08b106b0e9}{get\+Shortest\+Name}} (\$default\+Namespace\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a6030a773688273171158172d5e8ef5ea}{get\+Full\+Qualified\+Name}} (\$default\+Namespace\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a52b1291ed6188a2bd0794515e2c171b9}{is\+Quoted}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af9f51fa7c968a4d48e616d72c72cefeb}{get\+Quoted\+Name}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a2cc68857f63d7a2a49b0a01af9b92849}{\+\_\+set\+Name}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_afb743c30c987152db95f29eeefdffc85}{is\+Identifier\+Quoted}} (\$identifier)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_ab2546d538b3647694117848ed814fcf9}{trim\+Quotes}} (\$identifier)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_aee8afbf0b36cf016470bae8d584c0eaa}{\+\_\+generate\+Identifier\+Name}} (\$column\+Names, \$prefix=\textquotesingle{}\textquotesingle{}, \$max\+Size=30)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a1c89defaf5aa7ac8e526065e8572f580}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a1c89defaf5aa7ac8e526065e8572f580}} 
+{\bfseries \$\+\_\+name} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af5798f1ff14736637728a9f5ac702753}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af5798f1ff14736637728a9f5ac702753}} 
+{\bfseries \$\+\_\+namespace}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a158b5d88e666139c6fa2398762e5f9b6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a158b5d88e666139c6fa2398762e5f9b6}} 
+{\bfseries \$\+\_\+quoted} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The abstract asset allows to reset the name of all assets without publishing this to the public userland.
+
+This encapsulation hack is necessary to keep a consistent state of the database schema. Say we have a list of tables array(\$table\+Name =\texorpdfstring{$>$}{>} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}(\$table\+Name)); if you want to rename the table, you have to make sure 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_aee8afbf0b36cf016470bae8d584c0eaa}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_aee8afbf0b36cf016470bae8d584c0eaa}} 
+\index{AbstractAsset@{AbstractAsset}!\_generateIdentifierName@{\_generateIdentifierName}}
+\index{\_generateIdentifierName@{\_generateIdentifierName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{\_generateIdentifierName()}{\_generateIdentifierName()}}
+{\footnotesize\ttfamily \+\_\+generate\+Identifier\+Name (\begin{DoxyParamCaption}\item[{}]{\$column\+Names,  }\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$max\+Size = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates an identifier from a list of column names obeying a certain string length.
+
+This is especially important for Oracle, since it does not allow identifiers larger than 30 chars, however building idents automatically for foreign keys, composite keys or such can easily create very long names.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Names} & \\
+\hline
+string & {\em \$prefix} & \\
+\hline
+int & {\em \$max\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a2cc68857f63d7a2a49b0a01af9b92849}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a2cc68857f63d7a2a49b0a01af9b92849}} 
+\index{AbstractAsset@{AbstractAsset}!\_setName@{\_setName}}
+\index{\_setName@{\_setName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{\_setName()}{\_setName()}}
+{\footnotesize\ttfamily \+\_\+set\+Name (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets the name of this asset.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a6030a773688273171158172d5e8ef5ea}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a6030a773688273171158172d5e8ef5ea}} 
+\index{AbstractAsset@{AbstractAsset}!getFullQualifiedName@{getFullQualifiedName}}
+\index{getFullQualifiedName@{getFullQualifiedName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{getFullQualifiedName()}{getFullQualifiedName()}}
+{\footnotesize\ttfamily get\+Full\+Qualified\+Name (\begin{DoxyParamCaption}\item[{}]{\$default\+Namespace\+Name }\end{DoxyParamCaption})}
+
+The normalized name is full-\/qualified and lower-\/cased. Lower-\/casing is actually wrong, but we have to do it to keep our sanity. If you are using database objects that only differentiate in the casing (FOO vs Foo) then you will NOT be able to use Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} abstraction.
+
+Every non-\/namespaced element is prefixed with the default namespace name which is passed as argument to this method.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000151}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af5438a8f8b82f3d239f5ad1eb3d07eff}{get\+Namespace\+Name()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a3d0963e68bb313b163a73f2803c64600}{get\+Name()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$default\+Namespace\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a3d0963e68bb313b163a73f2803c64600}} 
+\index{AbstractAsset@{AbstractAsset}!getName@{getName}}
+\index{getName@{getName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the name of this schema asset.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af5438a8f8b82f3d239f5ad1eb3d07eff}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af5438a8f8b82f3d239f5ad1eb3d07eff}} 
+\index{AbstractAsset@{AbstractAsset}!getNamespaceName@{getNamespaceName}}
+\index{getNamespaceName@{getNamespaceName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{getNamespaceName()}{getNamespaceName()}}
+{\footnotesize\ttfamily get\+Namespace\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the namespace name of this asset.
+
+If NULL is returned this means the default namespace is used.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af9f51fa7c968a4d48e616d72c72cefeb}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_af9f51fa7c968a4d48e616d72c72cefeb}} 
+\index{AbstractAsset@{AbstractAsset}!getQuotedName@{getQuotedName}}
+\index{getQuotedName@{getQuotedName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{getQuotedName()}{getQuotedName()}}
+{\footnotesize\ttfamily get\+Quoted\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Gets the quoted representation of this asset but only if it was defined with one. Otherwise return the plain unquoted value as inserted.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a22ea7af39f1802eabe2f4a08b106b0e9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a22ea7af39f1802eabe2f4a08b106b0e9}} 
+\index{AbstractAsset@{AbstractAsset}!getShortestName@{getShortestName}}
+\index{getShortestName@{getShortestName}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{getShortestName()}{getShortestName()}}
+{\footnotesize\ttfamily get\+Shortest\+Name (\begin{DoxyParamCaption}\item[{}]{\$default\+Namespace\+Name }\end{DoxyParamCaption})}
+
+The shortest name is stripped of the default namespace. All other namespaced elements are returned as full-\/qualified names.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$default\+Namespace\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_afb743c30c987152db95f29eeefdffc85}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_afb743c30c987152db95f29eeefdffc85}} 
+\index{AbstractAsset@{AbstractAsset}!isIdentifierQuoted@{isIdentifierQuoted}}
+\index{isIdentifierQuoted@{isIdentifierQuoted}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{isIdentifierQuoted()}{isIdentifierQuoted()}}
+{\footnotesize\ttfamily is\+Identifier\+Quoted (\begin{DoxyParamCaption}\item[{}]{\$identifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Checks if this identifier is quoted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$identifier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a53481cd9af628c47caf3ce023a3ce237}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a53481cd9af628c47caf3ce023a3ce237}} 
+\index{AbstractAsset@{AbstractAsset}!isInDefaultNamespace@{isInDefaultNamespace}}
+\index{isInDefaultNamespace@{isInDefaultNamespace}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{isInDefaultNamespace()}{isInDefaultNamespace()}}
+{\footnotesize\ttfamily is\+In\+Default\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$default\+Namespace\+Name }\end{DoxyParamCaption})}
+
+Is this asset in the default namespace?
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$default\+Namespace\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a52b1291ed6188a2bd0794515e2c171b9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_a52b1291ed6188a2bd0794515e2c171b9}} 
+\index{AbstractAsset@{AbstractAsset}!isQuoted@{isQuoted}}
+\index{isQuoted@{isQuoted}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{isQuoted()}{isQuoted()}}
+{\footnotesize\ttfamily is\+Quoted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if this asset\textquotesingle{}s name is quoted.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_ab2546d538b3647694117848ed814fcf9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_asset_ab2546d538b3647694117848ed814fcf9}} 
+\index{AbstractAsset@{AbstractAsset}!trimQuotes@{trimQuotes}}
+\index{trimQuotes@{trimQuotes}!AbstractAsset@{AbstractAsset}}
+\doxysubsubsection{\texorpdfstring{trimQuotes()}{trimQuotes()}}
+{\footnotesize\ttfamily trim\+Quotes (\begin{DoxyParamCaption}\item[{}]{\$identifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Trim quotes from the identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$identifier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/Abstract\+Asset.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_html_formatter}{}\doxysection{Html\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_html_formatter}\index{HtmlFormatter@{HtmlFormatter}}
+Inheritance diagram for Html\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_formatter_1_1_html_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{\+\_\+\+\_\+construct}} (?string \$date\+Format=null)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a11f3cde7544eac9e23b0517d513a362b}{format\+Batch}} (array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a825cb750464fba7b6a10fe2ad2d1cf58}{add\+Row}} (string \$th, string \$td=\textquotesingle{} \textquotesingle{}, bool \$escape\+Td=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a7253581ded1303fad8836894da4f0961}{add\+Title}} (string \$title, int \$level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_af0d62134609e4d22ede3fb11b9e32f5d}{convert\+To\+String}} (\$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a6d19e801b09403c3ffa99c0aa173976e}{\$log\+Levels}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Formats incoming records into an HTML table
+
+This is especially useful for html email logging
+
+\begin{DoxyAuthor}{Author}
+Tiago Brito \href{mailto:tlfbrito@gmail.com}{\texttt{ tlfbrito@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}\label{class_monolog_1_1_formatter_1_1_html_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}} 
+\index{HtmlFormatter@{HtmlFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{?string}]{\$date\+Format = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$date\+Format} & The format of the timestamp\+: one supported by Date\+Time\+::format \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{Normalizer\+Formatter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_a825cb750464fba7b6a10fe2ad2d1cf58}\label{class_monolog_1_1_formatter_1_1_html_formatter_a825cb750464fba7b6a10fe2ad2d1cf58}} 
+\index{HtmlFormatter@{HtmlFormatter}!addRow@{addRow}}
+\index{addRow@{addRow}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{addRow()}{addRow()}}
+{\footnotesize\ttfamily add\+Row (\begin{DoxyParamCaption}\item[{string}]{\$th,  }\item[{string}]{\$td = {\ttfamily \textquotesingle{}~\textquotesingle{}},  }\item[{bool}]{\$escape\+Td = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates an HTML table row
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$th} & Row header content \\
+\hline
+string & {\em \$td} & Row standard cell content \\
+\hline
+bool & {\em \$escape\+Td} & false if td content must not be html escaped \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_a7253581ded1303fad8836894da4f0961}\label{class_monolog_1_1_formatter_1_1_html_formatter_a7253581ded1303fad8836894da4f0961}} 
+\index{HtmlFormatter@{HtmlFormatter}!addTitle@{addTitle}}
+\index{addTitle@{addTitle}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{addTitle()}{addTitle()}}
+{\footnotesize\ttfamily add\+Title (\begin{DoxyParamCaption}\item[{string}]{\$title,  }\item[{int}]{\$level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a HTML h1 tag
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$title} & Text to be in the h1 \\
+\hline
+int & {\em \$level} & Error level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_af0d62134609e4d22ede3fb11b9e32f5d}\label{class_monolog_1_1_formatter_1_1_html_formatter_af0d62134609e4d22ede3fb11b9e32f5d}} 
+\index{HtmlFormatter@{HtmlFormatter}!convertToString@{convertToString}}
+\index{convertToString@{convertToString}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{convertToString()}{convertToString()}}
+{\footnotesize\ttfamily convert\+To\+String (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_html_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{HtmlFormatter@{HtmlFormatter}!format@{format}}
+\index{format@{format}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+\begin{DoxyReturn}{Returns}
+string The formatted record 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Normalizer\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_a11f3cde7544eac9e23b0517d513a362b}\label{class_monolog_1_1_formatter_1_1_html_formatter_a11f3cde7544eac9e23b0517d513a362b}} 
+\index{HtmlFormatter@{HtmlFormatter}!formatBatch@{formatBatch}}
+\index{formatBatch@{formatBatch}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatch()}{formatBatch()}}
+{\footnotesize\ttfamily format\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Formats a set of log records.
+
+\begin{DoxyReturn}{Returns}
+string The formatted set of records 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a11f3cde7544eac9e23b0517d513a362b}{Normalizer\+Formatter}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_html_formatter_a6d19e801b09403c3ffa99c0aa173976e}\label{class_monolog_1_1_formatter_1_1_html_formatter_a6d19e801b09403c3ffa99c0aa173976e}} 
+\index{HtmlFormatter@{HtmlFormatter}!\$logLevels@{\$logLevels}}
+\index{\$logLevels@{\$logLevels}!HtmlFormatter@{HtmlFormatter}}
+\doxysubsubsection{\texorpdfstring{\$logLevels}{$logLevels}}
+{\footnotesize\ttfamily \$log\+Levels\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger::DEBUG}}     => \textcolor{stringliteral}{'\#CCCCCC'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_af2d1bd27ecbe33ecaadb558404e9c669}{Logger::INFO}}      => \textcolor{stringliteral}{'\#28A745'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a0b32ca69140ca26e6614dddf004ae3d9}{Logger::NOTICE}}    => \textcolor{stringliteral}{'\#17A2B8'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_ad0c7ccd2f8b92a760391d21d0ec7b339}{Logger::WARNING}}   => \textcolor{stringliteral}{'\#FFC107'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger::ERROR}}     => \textcolor{stringliteral}{'\#FD7E14'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger::CRITICAL}}  => \textcolor{stringliteral}{'\#DC3545'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a037a7f6e892e6adb07c2aa099fbaf69d}{Logger::ALERT}}     => \textcolor{stringliteral}{'\#821722'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger::EMERGENCY}} => \textcolor{stringliteral}{'\#000000'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Html\+Formatter.\+php\end{DoxyCompactItemize}

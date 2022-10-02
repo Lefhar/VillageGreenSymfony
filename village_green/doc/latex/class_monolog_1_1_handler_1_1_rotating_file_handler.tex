@@ -1,0 +1,157 @@
+\hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler}{}\doxysection{Rotating\+File\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_rotating_file_handler}\index{RotatingFileHandler@{RotatingFileHandler}}
+Inheritance diagram for Rotating\+File\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_rotating_file_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_a04b817d37db116ed16d8e3f689c93960}{\+\_\+\+\_\+construct}} (string \$filename, int \$max\+Files=0, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, ?int \$file\+Permission=null, bool \$use\+Locking=false)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a57d904db965ba2a41bab08c4403fb5f8}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a57d904db965ba2a41bab08c4403fb5f8}} 
+{\bfseries set\+Filename\+Format} (string \$filename\+Format, string \$date\+Format)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_aa583bcfe744de95d76727a24b9a189e0}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_aa583bcfe744de95d76727a24b9a189e0}} 
+const {\bfseries FILE\+\_\+\+PER\+\_\+\+DAY} = \textquotesingle{}Y-\/m-\/d\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a5f1804fa71c0edd7d0d3e8a2a06a1474}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a5f1804fa71c0edd7d0d3e8a2a06a1474}} 
+const {\bfseries FILE\+\_\+\+PER\+\_\+\+MONTH} = \textquotesingle{}Y-\/m\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a2c5119c83458f3c1c8ed80809576933b}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a2c5119c83458f3c1c8ed80809576933b}} 
+const {\bfseries FILE\+\_\+\+PER\+\_\+\+YEAR} = \textquotesingle{}Y\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rotating_file_handler_a74e94d71195d9cbb9c9e3bca3353d912}{rotate}} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_aedb5898d5d57b1f5b88213b5fc75468a}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_aedb5898d5d57b1f5b88213b5fc75468a}} 
+{\bfseries get\+Timed\+Filename} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_aa80ea866a9ce589e9cd055785cfc7be7}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_aa80ea866a9ce589e9cd055785cfc7be7}} 
+{\bfseries get\+Glob\+Pattern} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a0722441477f957078ee2437054556cbc}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a0722441477f957078ee2437054556cbc}} 
+{\bfseries \$filename}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a15d7e34c04f9a45b0f07ca6093da5c67}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a15d7e34c04f9a45b0f07ca6093da5c67}} 
+{\bfseries \$max\+Files}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_ab1eae766b5375854522264aec89c5422}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_ab1eae766b5375854522264aec89c5422}} 
+{\bfseries \$must\+Rotate}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a09748d2d6fbcd41b77bc97d42cc096e7}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a09748d2d6fbcd41b77bc97d42cc096e7}} 
+{\bfseries \$next\+Rotation}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a2cccbb68fe4068e85c10de68841fcd4e}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a2cccbb68fe4068e85c10de68841fcd4e}} 
+{\bfseries \$filename\+Format}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_af0dfb5d24b27115a6f7952bf4e3e200f}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_af0dfb5d24b27115a6f7952bf4e3e200f}} 
+{\bfseries \$date\+Format}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores logs to files that are rotated every day and a limited number of files are kept.
+
+This rotation is only intended to be used as a workaround. Using logrotate to handle the rotation is strongly encouraged when you can use it.
+
+\begin{DoxyAuthor}{Author}
+Christophe Coevoet \href{mailto:stof@notk.org}{\texttt{ stof@notk.\+org}} 
+
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a04b817d37db116ed16d8e3f689c93960}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a04b817d37db116ed16d8e3f689c93960}} 
+\index{RotatingFileHandler@{RotatingFileHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RotatingFileHandler@{RotatingFileHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$filename,  }\item[{int}]{\$max\+Files = {\ttfamily 0},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{?int}]{\$file\+Permission = {\ttfamily null},  }\item[{bool}]{\$use\+Locking = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & \\
+\hline
+int & {\em \$max\+Files} & The maximal amount of files to keep (0 means unlimited) \\
+\hline
+int | null & {\em \$file\+Permission} & Optional file permissions (default (0644) are only for owner read/write) \\
+\hline
+bool & {\em \$use\+Locking} & Try to lock log file before doing any writes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{RotatingFileHandler@{RotatingFileHandler}!close@{close}}
+\index{close@{close}!RotatingFileHandler@{RotatingFileHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Stream\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{RotatingFileHandler@{RotatingFileHandler}!reset@{reset}}
+\index{reset@{reset}!RotatingFileHandler@{RotatingFileHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Processing\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_a74e94d71195d9cbb9c9e3bca3353d912}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_a74e94d71195d9cbb9c9e3bca3353d912}} 
+\index{RotatingFileHandler@{RotatingFileHandler}!rotate@{rotate}}
+\index{rotate@{rotate}!RotatingFileHandler@{RotatingFileHandler}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Rotates the files. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rotating_file_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_rotating_file_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{RotatingFileHandler@{RotatingFileHandler}!write@{write}}
+\index{write@{write}!RotatingFileHandler@{RotatingFileHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_stream_handler_afa17604fd899fffdc1ee326afe177cb5}{Stream\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Rotating\+File\+Handler.\+php\end{DoxyCompactItemize}

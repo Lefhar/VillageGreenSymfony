@@ -1,0 +1,62 @@
+\hypertarget{class_monolog_1_1_processor_1_1_introspection_processor}{}\doxysection{Introspection\+Processor Class Reference}
+\label{class_monolog_1_1_processor_1_1_introspection_processor}\index{IntrospectionProcessor@{IntrospectionProcessor}}
+Inheritance diagram for Introspection\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_monolog_1_1_processor_1_1_introspection_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_processor_1_1_introspection_processor_a78df3d7f9caca888cbdf02e2d07f8cd9}{\+\_\+\+\_\+construct}} (\$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, array \$skip\+Classes\+Partials=\mbox{[}$\,$\mbox{]}, int \$skip\+Stack\+Frames\+Count=0)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_processor_1_1_introspection_processor_af6bdfd8d87fb85ab75b06b34a3f3c1af}{\+\_\+\+\_\+invoke}} (array \$record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Injects line/file\+:class/function where the log message came from
+
+Warning\+: This only works if the handler processes the logs directly. If you put the processor on a handler that is behind a Fingers\+Crossed\+Handler for example, the processor will only be called once the trigger level is reached, and all the log records will have the same file/line/.. data from the call that triggered the Fingers\+Crossed\+Handler.
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_processor_1_1_introspection_processor_a78df3d7f9caca888cbdf02e2d07f8cd9}\label{class_monolog_1_1_processor_1_1_introspection_processor_a78df3d7f9caca888cbdf02e2d07f8cd9}} 
+\index{IntrospectionProcessor@{IntrospectionProcessor}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!IntrospectionProcessor@{IntrospectionProcessor}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{array}]{\$skip\+Classes\+Partials = {\ttfamily \mbox{[}\mbox{]}},  }\item[{int}]{\$skip\+Stack\+Frames\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$level} & The minimum logging level at which this Processor will be triggered \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$skip\+Classes\+Partials} & \\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_processor_1_1_introspection_processor_af6bdfd8d87fb85ab75b06b34a3f3c1af}\label{class_monolog_1_1_processor_1_1_introspection_processor_af6bdfd8d87fb85ab75b06b34a3f3c1af}} 
+\index{IntrospectionProcessor@{IntrospectionProcessor}!\_\_invoke@{\_\_invoke}}
+\index{\_\_invoke@{\_\_invoke}!IntrospectionProcessor@{IntrospectionProcessor}}
+\doxysubsubsection{\texorpdfstring{\_\_invoke()}{\_\_invoke()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+invoke (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array The processed record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record @phpstan-\/return Record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_processor_1_1_processor_interface_af6bdfd8d87fb85ab75b06b34a3f3c1af}{Processor\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Processor/Introspection\+Processor.\+php\end{DoxyCompactItemize}

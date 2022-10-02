@@ -1,0 +1,182 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool}{}\doxysection{Schema\+Tool Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool}\index{SchemaTool@{SchemaTool}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a25f4258aeb5ce2a61a2504cb7c058485}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a63bb3faa6ed3f2eb0614174ce8679989}{create\+Schema}} (array \$classes)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a60d6a1c73d73d071e7d74e84fc8076c4}{get\+Create\+Schema\+Sql}} (array \$classes)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a83723aec983430c288e79f79d02548b9}{get\+Schema\+From\+Metadata}} (array \$classes)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a6e2e11a725e0ae7b21f35aafc40bce9c}{drop\+Schema}} (array \$classes)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a4444ee2ac45cbcee4fb9309ddf48276c}{drop\+Database}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a45445171b10886ed166908dd673cbdf6}{get\+Drop\+Database\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a9ac8021214af366ac7a851db3c81e894}{get\+Drop\+Schema\+SQL}} (array \$classes)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a873eacf28d990a28ffd4c08d3ed2e739}{update\+Schema}} (array \$classes, \$save\+Mode=false)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a642ce6744814f3e7f846ae0696c4d287}{get\+Update\+Schema\+Sql}} (array \$classes, \$save\+Mode=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool}{Schema\+Tool}} is a tool to create/drop/update database schemas based on {\ttfamily Class\+Metadata} class descriptors.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a25f4258aeb5ce2a61a2504cb7c058485}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a25f4258aeb5ce2a61a2504cb7c058485}} 
+\index{SchemaTool@{SchemaTool}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool}{Schema\+Tool}} instance that uses the connection of the provided \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a63bb3faa6ed3f2eb0614174ce8679989}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a63bb3faa6ed3f2eb0614174ce8679989}} 
+\index{SchemaTool@{SchemaTool}!createSchema@{createSchema}}
+\index{createSchema@{createSchema}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{createSchema()}{createSchema()}}
+{\footnotesize\ttfamily create\+Schema (\begin{DoxyParamCaption}\item[{array}]{\$classes }\end{DoxyParamCaption})}
+
+Creates the database schema for the given array of Class\+Metadata instances.
+
+@psalm-\/param list$<$\+Class\+Metadata$>$ \$classes
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tools_exception}{Tools\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a4444ee2ac45cbcee4fb9309ddf48276c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a4444ee2ac45cbcee4fb9309ddf48276c}} 
+\index{SchemaTool@{SchemaTool}!dropDatabase@{dropDatabase}}
+\index{dropDatabase@{dropDatabase}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{dropDatabase()}{dropDatabase()}}
+{\footnotesize\ttfamily drop\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Drops all elements in the database of the current connection.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a6e2e11a725e0ae7b21f35aafc40bce9c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a6e2e11a725e0ae7b21f35aafc40bce9c}} 
+\index{SchemaTool@{SchemaTool}!dropSchema@{dropSchema}}
+\index{dropSchema@{dropSchema}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{dropSchema()}{dropSchema()}}
+{\footnotesize\ttfamily drop\+Schema (\begin{DoxyParamCaption}\item[{array}]{\$classes }\end{DoxyParamCaption})}
+
+Drops the database schema for the given classes.
+
+In any way when an exception is thrown it is suppressed since drop was issued for all classes of the schema and some probably just don\textquotesingle{}t exist.
+
+@psalm-\/param list$<$\+Class\+Metadata$>$ \$classes
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a60d6a1c73d73d071e7d74e84fc8076c4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a60d6a1c73d73d071e7d74e84fc8076c4}} 
+\index{SchemaTool@{SchemaTool}!getCreateSchemaSql@{getCreateSchemaSql}}
+\index{getCreateSchemaSql@{getCreateSchemaSql}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{getCreateSchemaSql()}{getCreateSchemaSql()}}
+{\footnotesize\ttfamily get\+Create\+Schema\+Sql (\begin{DoxyParamCaption}\item[{array}]{\$classes }\end{DoxyParamCaption})}
+
+Gets the list of DDL statements that are required to create the database schema for the given list of Class\+Metadata instances.
+
+@psalm-\/param list$<$\+Class\+Metadata$>$ \$classes
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The SQL statements needed to create the schema for the classes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a45445171b10886ed166908dd673cbdf6}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a45445171b10886ed166908dd673cbdf6}} 
+\index{SchemaTool@{SchemaTool}!getDropDatabaseSQL@{getDropDatabaseSQL}}
+\index{getDropDatabaseSQL@{getDropDatabaseSQL}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{getDropDatabaseSQL()}{getDropDatabaseSQL()}}
+{\footnotesize\ttfamily get\+Drop\+Database\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the SQL needed to drop the database schema for the connections database.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a9ac8021214af366ac7a851db3c81e894}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a9ac8021214af366ac7a851db3c81e894}} 
+\index{SchemaTool@{SchemaTool}!getDropSchemaSQL@{getDropSchemaSQL}}
+\index{getDropSchemaSQL@{getDropSchemaSQL}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{getDropSchemaSQL()}{getDropSchemaSQL()}}
+{\footnotesize\ttfamily get\+Drop\+Schema\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$classes }\end{DoxyParamCaption})}
+
+Gets SQL to drop the tables defined by the passed classes.
+
+@psalm-\/param list$<$\+Class\+Metadata$>$ \$classes
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a83723aec983430c288e79f79d02548b9}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a83723aec983430c288e79f79d02548b9}} 
+\index{SchemaTool@{SchemaTool}!getSchemaFromMetadata@{getSchemaFromMetadata}}
+\index{getSchemaFromMetadata@{getSchemaFromMetadata}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{getSchemaFromMetadata()}{getSchemaFromMetadata()}}
+{\footnotesize\ttfamily get\+Schema\+From\+Metadata (\begin{DoxyParamCaption}\item[{array}]{\$classes }\end{DoxyParamCaption})}
+
+Creates a Schema instance from a given set of metadata classes.
+
+@psalm-\/param list$<$\+Class\+Metadata$>$ \$classes
+
+\begin{DoxyReturn}{Returns}
+Schema
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\+Supported} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a642ce6744814f3e7f846ae0696c4d287}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a642ce6744814f3e7f846ae0696c4d287}} 
+\index{SchemaTool@{SchemaTool}!getUpdateSchemaSql@{getUpdateSchemaSql}}
+\index{getUpdateSchemaSql@{getUpdateSchemaSql}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{getUpdateSchemaSql()}{getUpdateSchemaSql()}}
+{\footnotesize\ttfamily get\+Update\+Schema\+Sql (\begin{DoxyParamCaption}\item[{array}]{\$classes,  }\item[{}]{\$save\+Mode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Gets the sequence of SQL statements that need to be performed in order to bring the given class mappings in-\/synch with the relational schema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$classes} & The classes to consider. \\
+\hline
+bool & {\em \$save\+Mode} & If TRUE, only generates SQL for a partial update that does not include SQL for dropping assets which are scheduled for deletion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The sequence of SQL statements. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a873eacf28d990a28ffd4c08d3ed2e739}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a873eacf28d990a28ffd4c08d3ed2e739}} 
+\index{SchemaTool@{SchemaTool}!updateSchema@{updateSchema}}
+\index{updateSchema@{updateSchema}!SchemaTool@{SchemaTool}}
+\doxysubsubsection{\texorpdfstring{updateSchema()}{updateSchema()}}
+{\footnotesize\ttfamily update\+Schema (\begin{DoxyParamCaption}\item[{array}]{\$classes,  }\item[{}]{\$save\+Mode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Updates the database schema of the given classes by comparing the Class\+Metadata instances to the current database schema that is inspected.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$classes} & \\
+\hline
+bool & {\em \$save\+Mode} & If TRUE, only performs a partial update without dropping assets which are scheduled for deletion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Schema\+Tool.\+php\end{DoxyCompactItemize}

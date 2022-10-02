@@ -1,0 +1,77 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body}{}\doxysection{String\+Body Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body}\index{StringBody@{StringBody}}
+Inheritance diagram for String\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a6fca79961bf8c1352a4a1ee844799a1e}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a6fca79961bf8c1352a4a1ee844799a1e}} 
+{\bfseries \+\_\+\+\_\+construct} (string \$body)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a79fd9be53b1ab8783733113e557a1c7d}{create\+Body\+Stream}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a157e0005d82edaa21cbea07fdc5c62da}{get\+Headers}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a67da67f6676fbfc2a87e7c2567a5b260}{get\+Body\+Length}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a79fd9be53b1ab8783733113e557a1c7d}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a79fd9be53b1ab8783733113e557a1c7d}} 
+\index{StringBody@{StringBody}!createBodyStream@{createBodyStream}}
+\index{createBodyStream@{createBodyStream}!StringBody@{StringBody}}
+\doxysubsubsection{\texorpdfstring{createBodyStream()}{createBodyStream()}}
+{\footnotesize\ttfamily create\+Body\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create the HTTP message body to be sent.
+
+Further calls MUST return a new stream to make it possible to resend bodies on redirects.
+
+\begin{DoxyReturn}{Returns}
+Input\+Stream 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a79fd9be53b1ab8783733113e557a1c7d}{Request\+Body}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a67da67f6676fbfc2a87e7c2567a5b260}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a67da67f6676fbfc2a87e7c2567a5b260}} 
+\index{StringBody@{StringBody}!getBodyLength@{getBodyLength}}
+\index{getBodyLength@{getBodyLength}!StringBody@{StringBody}}
+\doxysubsubsection{\texorpdfstring{getBodyLength()}{getBodyLength()}}
+{\footnotesize\ttfamily get\+Body\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the HTTP message body length. If not available, return -\/1.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a67da67f6676fbfc2a87e7c2567a5b260}{Request\+Body}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a157e0005d82edaa21cbea07fdc5c62da}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a157e0005d82edaa21cbea07fdc5c62da}} 
+\index{StringBody@{StringBody}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!StringBody@{StringBody}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve a key-\/value array of headers to add to the outbound request.
+
+The resolved promise value must be a key-\/value array mapping header fields to values.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a157e0005d82edaa21cbea07fdc5c62da}{Request\+Body}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Body/String\+Body.\+php\end{DoxyCompactItemize}

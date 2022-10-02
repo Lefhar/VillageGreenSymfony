@@ -1,0 +1,173 @@
+\hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler}{}\doxysection{Chrome\+PHPHandler Class Reference}
+\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler}\index{ChromePHPHandler@{ChromePHPHandler}}
+Inheritance diagram for Chrome\+PHPHandler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}{\+\_\+\+\_\+construct}} (\$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a12bcef5130168b80d3d52dc82213f19a}{send}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}{send\+Header}} (string \$header, string \$content)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}{headers\+Accepted}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_af71005841ce53adac00581ab0ba24c1f}{VERSION}} = \textquotesingle{}4.\+0\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_aeb59d0e16b3958b6de9b89114cf37e30}{HEADER\+\_\+\+NAME}} = \textquotesingle{}X-\/Chrome\+Logger-\/Data\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_ad1c715b81b72efcd9112e694158be5b1}{USER\+\_\+\+AGENT\+\_\+\+REGEX}} = \textquotesingle{}\{\textbackslash{}b(?\+:Chrome/\textbackslash{}d+(?\+:\textbackslash{}.\textbackslash{}d+)$\ast$$\vert$Headless\+Chrome$\vert$Firefox/(?\+:4\mbox{[}3-\/9\mbox{]}$\vert$\mbox{[}5-\/9\mbox{]}\textbackslash{}d$\vert$\textbackslash{}d\{3,\})(?\+:\textbackslash{}.\textbackslash{}d)$\ast$)\textbackslash{}b\}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a533c66c9995bd9f022b5f5b325c12ad4}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a533c66c9995bd9f022b5f5b325c12ad4}} 
+static {\bfseries \$initialized} = false
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a23be8a2eadb16530f8034f46627c8971}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a23be8a2eadb16530f8034f46627c8971}} 
+static {\bfseries \$overflowed} = false
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_acedd13b51401130848ce18f4d5c52605}{\$json}}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a3102bd7761d2b6b65712a7308c82b6ee}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a3102bd7761d2b6b65712a7308c82b6ee}} 
+static {\bfseries \$send\+Headers} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} sending logs to the Chrome\+PHP extension (\href{http://www.chromephp.com/}{\texttt{ http\+://www.\+chromephp.\+com/}})
+
+This also works out of the box with Firefox 43+
+
+\begin{DoxyAuthor}{Author}
+Christophe Coevoet \href{mailto:stof@notk.org}{\texttt{ stof@notk.\+org}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$level} & The minimum logging level at which this handler will be triggered \\
+\hline
+bool & {\em \$bubble} & Whether the messages that are handled can bubble up the stack or not\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_handler_a6d40ebd1c8e1bb525417cb02ecaf4185}{Abstract\+Handler}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!headersAccepted@{headersAccepted}}
+\index{headersAccepted@{headersAccepted}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{headersAccepted()}{headersAccepted()}}
+{\footnotesize\ttfamily headers\+Accepted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Verifies if the headers are accepted by the current user agent 
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_chrome_php_handler_a207ea9af107e1a4bbb43773eb740097e}{Chrome\+Php\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a12bcef5130168b80d3d52dc82213f19a}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a12bcef5130168b80d3d52dc82213f19a}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!send@{send}}
+\index{send@{send}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sends the log header
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}{send\+Header()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!sendHeader@{sendHeader}}
+\index{sendHeader@{sendHeader}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{sendHeader()}{sendHeader()}}
+{\footnotesize\ttfamily send\+Header (\begin{DoxyParamCaption}\item[{string}]{\$header,  }\item[{string}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send header string to the client \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!write@{write}}
+\index{write@{write}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates \& sends header for a record
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}{send\+Header()}} 
+
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_a12bcef5130168b80d3d52dc82213f19a}{send()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_acedd13b51401130848ce18f4d5c52605}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_acedd13b51401130848ce18f4d5c52605}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!\$json@{\$json}}
+\index{\$json@{\$json}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'version'} => \mbox{\hyperlink{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_af71005841ce53adac00581ab0ba24c1f}{self::VERSION}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'columns'} => [\textcolor{stringliteral}{'label'}, \textcolor{stringliteral}{'log'}, \textcolor{stringliteral}{'backtrace'}, \textcolor{stringliteral}{'type'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'rows'} => [],}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_aeb59d0e16b3958b6de9b89114cf37e30}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_aeb59d0e16b3958b6de9b89114cf37e30}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!HEADER\_NAME@{HEADER\_NAME}}
+\index{HEADER\_NAME@{HEADER\_NAME}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{HEADER\_NAME}{HEADER\_NAME}}
+{\footnotesize\ttfamily const HEADER\+\_\+\+NAME = \textquotesingle{}X-\/Chrome\+Logger-\/Data\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Header name \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_ad1c715b81b72efcd9112e694158be5b1}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_ad1c715b81b72efcd9112e694158be5b1}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!USER\_AGENT\_REGEX@{USER\_AGENT\_REGEX}}
+\index{USER\_AGENT\_REGEX@{USER\_AGENT\_REGEX}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{USER\_AGENT\_REGEX}{USER\_AGENT\_REGEX}}
+{\footnotesize\ttfamily const USER\+\_\+\+AGENT\+\_\+\+REGEX = \textquotesingle{}\{\textbackslash{}b(?\+:Chrome/\textbackslash{}d+(?\+:\textbackslash{}.\textbackslash{}d+)$\ast$$\vert$Headless\+Chrome$\vert$Firefox/(?\+:4\mbox{[}3-\/9\mbox{]}$\vert$\mbox{[}5-\/9\mbox{]}\textbackslash{}d$\vert$\textbackslash{}d\{3,\})(?\+:\textbackslash{}.\textbackslash{}d)$\ast$)\textbackslash{}b\}\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Regular expression to detect supported browsers (matches any Chrome, or Firefox 43+) \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_af71005841ce53adac00581ab0ba24c1f}\label{class_monolog_1_1_handler_1_1_chrome_p_h_p_handler_af71005841ce53adac00581ab0ba24c1f}} 
+\index{ChromePHPHandler@{ChromePHPHandler}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!ChromePHPHandler@{ChromePHPHandler}}
+\doxysubsubsection{\texorpdfstring{VERSION}{VERSION}}
+{\footnotesize\ttfamily const VERSION = \textquotesingle{}4.\+0\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Version of the extension 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Chrome\+PHPHandler.\+php\end{DoxyCompactItemize}

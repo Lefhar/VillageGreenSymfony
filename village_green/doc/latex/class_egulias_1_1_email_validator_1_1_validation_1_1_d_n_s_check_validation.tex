@@ -1,0 +1,102 @@
+\hypertarget{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation}{}\doxysection{DNSCheck\+Validation Class Reference}
+\label{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation}\index{DNSCheckValidation@{DNSCheckValidation}}
+Inheritance diagram for DNSCheck\+Validation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a39689a555c91ccde4c2f9d8bb8c5937a}{is\+Valid}} (string \$email, \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer}{Email\+Lexer}} \$email\+Lexer)
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a24ada5decce3d1b79cd82f5a90ccf404}{get\+Error}} ()
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_adc3b82cf30d1a6f68351b9bbcc88602e}{get\+Warnings}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a618fd55d18d984fc21ef8f137ec0b779}{check\+Dns}} (\$host)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_afd17febb73928786ea5e937fee03551a}\label{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_afd17febb73928786ea5e937fee03551a}} 
+const {\bfseries DNS\+\_\+\+RECORD\+\_\+\+TYPES\+\_\+\+TO\+\_\+\+CHECK} = DNS\+\_\+\+MX + DNS\+\_\+A + DNS\+\_\+\+AAAA
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a618fd55d18d984fc21ef8f137ec0b779}\label{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a618fd55d18d984fc21ef8f137ec0b779}} 
+\index{DNSCheckValidation@{DNSCheckValidation}!checkDns@{checkDns}}
+\index{checkDns@{checkDns}!DNSCheckValidation@{DNSCheckValidation}}
+\doxysubsubsection{\texorpdfstring{checkDns()}{checkDns()}}
+{\footnotesize\ttfamily check\+Dns (\begin{DoxyParamCaption}\item[{}]{\$host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$host} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a24ada5decce3d1b79cd82f5a90ccf404}\label{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a24ada5decce3d1b79cd82f5a90ccf404}} 
+\index{DNSCheckValidation@{DNSCheckValidation}!getError@{getError}}
+\index{getError@{getError}!DNSCheckValidation@{DNSCheckValidation}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the validation error.
+
+\begin{DoxyReturn}{Returns}
+Invalid\+Email$\vert$null 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_egulias_1_1_email_validator_1_1_validation_1_1_email_validation_a24ada5decce3d1b79cd82f5a90ccf404}{Email\+Validation}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_adc3b82cf30d1a6f68351b9bbcc88602e}\label{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_adc3b82cf30d1a6f68351b9bbcc88602e}} 
+\index{DNSCheckValidation@{DNSCheckValidation}!getWarnings@{getWarnings}}
+\index{getWarnings@{getWarnings}!DNSCheckValidation@{DNSCheckValidation}}
+\doxysubsubsection{\texorpdfstring{getWarnings()}{getWarnings()}}
+{\footnotesize\ttfamily get\+Warnings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the validation warnings.
+
+\begin{DoxyReturn}{Returns}
+Warning\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_egulias_1_1_email_validator_1_1_validation_1_1_email_validation_adc3b82cf30d1a6f68351b9bbcc88602e}{Email\+Validation}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a39689a555c91ccde4c2f9d8bb8c5937a}\label{class_egulias_1_1_email_validator_1_1_validation_1_1_d_n_s_check_validation_a39689a555c91ccde4c2f9d8bb8c5937a}} 
+\index{DNSCheckValidation@{DNSCheckValidation}!isValid@{isValid}}
+\index{isValid@{isValid}!DNSCheckValidation@{DNSCheckValidation}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily is\+Valid (\begin{DoxyParamCaption}\item[{string}]{\$email,  }\item[{\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer}{Email\+Lexer}}}]{\$email\+Lexer }\end{DoxyParamCaption})}
+
+Returns true if the given email is valid.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$email} & The email you want to validate. \\
+\hline
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer}{Email\+Lexer}} & {\em \$email\+Lexer} & The email lexer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_egulias_1_1_email_validator_1_1_validation_1_1_email_validation_a39689a555c91ccde4c2f9d8bb8c5937a}{Email\+Validation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/egulias/email-\/validator/src/\+Validation/DNSCheck\+Validation.\+php\end{DoxyCompactItemize}

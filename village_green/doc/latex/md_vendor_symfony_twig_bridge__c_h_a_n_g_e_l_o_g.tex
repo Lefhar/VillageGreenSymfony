@@ -1,0 +1,148 @@
+\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1880}{}\doxysection{5.\+4}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1880}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily github} format \& autodetection to render errors as annotations when running the Twig linter command in a Github Actions environment.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1881}{}\doxysection{5.\+3}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1881}
+
+\begin{DoxyItemize}
+\item Add a new {\ttfamily mark\+As\+Public} method on {\ttfamily Notification\+Email} to change the {\ttfamily importance} context option to null after creation
+\item Add a new {\ttfamily fragment\+\_\+uri()} helper to generate the URI of a fragment
+\item Add support of Bootstrap 5 for form theming
+\item Add a new {\ttfamily serialize} filter to serialize objects using the Serializer component
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1882}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1882}
+
+\begin{DoxyItemize}
+\item added the {\ttfamily impersonation\+\_\+exit\+\_\+url()} and {\ttfamily impersonation\+\_\+exit\+\_\+path()} functions. They return a URL that allows to switch back to the original user.
+\item added the {\ttfamily workflow\+\_\+transition()} function to easily retrieve a specific transition object
+\item added support for translating {\ttfamily Translatable\+Interface} objects
+\item added the {\ttfamily t()} function to easily create {\ttfamily Translatable\+Message} objects
+\item Added support for extracting messages from the {\ttfamily t()} function
+\item Added {\ttfamily field\+\_\+$\ast$} Twig functions to access string values from Form fields
+\item changed the {\ttfamily importance} context option of {\ttfamily Notification\+Email} to allow {\ttfamily null}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1883}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1883}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Twig\+Engine} class, use {\ttfamily \textbackslash{}Twig\textbackslash{}Environment} instead.
+\item removed {\ttfamily trans\+Choice} filter and token
+\item {\ttfamily Http\+Foundation\+Extension} requires a {\ttfamily Url\+Helper} on instantiation
+\item removed support for implicit STDIN usage in the {\ttfamily lint\+:twig} command, use {\ttfamily lint\+:twig -\/} (append a dash) instead to make it explicit.
+\item added form theme for Foundation 6
+\item added support for Foundation 6 switches\+: add the {\ttfamily switch-\/input} class to the attributes of a {\ttfamily Checkbox\+Type}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1884}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1884}
+
+\begin{DoxyItemize}
+\item added a new {\ttfamily Twig\+Error\+Renderer} for {\ttfamily html} format, integrated with the {\ttfamily Error\+Handler} component
+\item marked all classes extending twig as {\ttfamily @final}
+\item deprecated to pass {\ttfamily \$root\+Dir} and {\ttfamily \$file\+Link\+Formatter} as 5th and 6th argument respectively to the {\ttfamily Debug\+Command\+::\+\_\+\+\_\+construct()} method, swap the variables position.
+\item the {\ttfamily Lint\+Command} lints all the templates stored in all configured Twig paths if none argument is provided
+\item deprecated accepting STDIN implicitly when using the {\ttfamily lint\+:twig} command, use {\ttfamily lint\+:twig -\/} (append a dash) instead to make it explicit.
+\item added {\ttfamily -\/-\/show-\/deprecations} option to the {\ttfamily lint\+:twig} command
+\item added support for Bootstrap4 switches\+: add the {\ttfamily switch-\/custom} class to the label attributes of a {\ttfamily Checkbox\+Type}
+\item Marked the {\ttfamily Twig\+Data\+Collector} class as {\ttfamily @final}.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1885}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1885}
+
+\begin{DoxyItemize}
+\item added the {\ttfamily form\+\_\+parent()} function that allows to reliably retrieve the parent form in Twig templates
+\item added the {\ttfamily workflow\+\_\+transition\+\_\+blockers()} function
+\item deprecated the {\ttfamily \$request\+Stack} and {\ttfamily \$request\+Context} arguments of the {\ttfamily Http\+Foundation\+Extension}, pass a {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Foundation\textbackslash{}Url\+Helper} instance as the only argument instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1886}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1886}
+
+\begin{DoxyItemize}
+\item add bundle name suggestion on wrongly overridden templates paths
+\item added {\ttfamily name} argument in {\ttfamily debug\+:twig} command and changed {\ttfamily filter} argument as {\ttfamily -\/-\/filter} option
+\item deprecated the {\ttfamily transchoice} tag and filter, use the {\ttfamily trans} ones instead with a {\ttfamily count\%} parameter
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1887}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1887}
+
+\begin{DoxyItemize}
+\item add a {\ttfamily workflow\+\_\+metadata} function
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1888}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1888}
+
+\begin{DoxyItemize}
+\item added an {\ttfamily only} keyword to {\ttfamily form\+\_\+theme} tag to disable usage of default themes when rendering a form
+\item deprecated {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Twig\textbackslash{}Form\textbackslash{}Twig\+Renderer}
+\item deprecated {\ttfamily Debug\+Command\+::set/get\+Twig\+Environment}. Pass an instance of {\ttfamily Twig\textbackslash{}Environment} as first argument of the constructor instead
+\item deprecated {\ttfamily Lint\+Command\+::set/get\+Twig\+Environment}. Pass an instance of {\ttfamily Twig\textbackslash{}Environment} as first argument of the constructor instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1889}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1889}
+
+\begin{DoxyItemize}
+\item added a {\ttfamily workflow\+\_\+has\+\_\+marked\+\_\+place} function
+\item added a {\ttfamily workflow\+\_\+marked\+\_\+places} function
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1890}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1890}
+
+\begin{DoxyItemize}
+\item added {\ttfamily App\+Variable\+::get\+Token()}
+\item Deprecated the possibility to inject the Form {\ttfamily Twig\+Renderer} into the {\ttfamily Form\+Extension}.
+\item \mbox{[}BC BREAK\mbox{]} Registering the {\ttfamily Form\+Extension} without configuring a runtime loader for the {\ttfamily Twig\+Renderer} doesn\textquotesingle{}t work anymore.
+
+Before\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_twig_1_1_extension_1_1_form_extension}{Symfony\(\backslash\)Bridge\(\backslash\)Twig\(\backslash\)Extension\(\backslash\)FormExtension}};}
+\DoxyCodeLine{use Symfony\(\backslash\)Bridge\(\backslash\)Twig\(\backslash\)Form\(\backslash\)TwigRenderer;}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_twig_1_1_form_1_1_twig_renderer_engine}{Symfony\(\backslash\)Bridge\(\backslash\)Twig\(\backslash\)Form\(\backslash\)TwigRendererEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// ...}}
+\DoxyCodeLine{\$rendererEngine = \textcolor{keyword}{new} TwigRendererEngine([\textcolor{stringliteral}{'form\_div\_layout.html.twig'}]);}
+\DoxyCodeLine{\$rendererEngine-\/>setEnvironment(\$twig);}
+\DoxyCodeLine{\$twig-\/>addExtension(\textcolor{keyword}{new} FormExtension(\textcolor{keyword}{new} TwigRenderer(\$rendererEngine, \$csrfTokenManager)));}
+
+\end{DoxyCode}
+
+
+After\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// ...}}
+\DoxyCodeLine{\$rendererEngine = \textcolor{keyword}{new} TwigRendererEngine([\textcolor{stringliteral}{'form\_div\_layout.html.twig'}], \$twig);}
+\DoxyCodeLine{\textcolor{comment}{// require Twig 1.30+}}
+\DoxyCodeLine{\$twig-\/>addRuntimeLoader(\textcolor{keyword}{new} \(\backslash\)Twig\(\backslash\)RuntimeLoader\(\backslash\)FactoryRuntimeLoader([}
+\DoxyCodeLine{    TwigRenderer::class => \textcolor{keyword}{function} () use (\$rendererEngine, \$csrfTokenManager) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} TwigRenderer(\$rendererEngine, \$csrfTokenManager);}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{]));}
+\DoxyCodeLine{\$twig-\/>addExtension(\textcolor{keyword}{new} FormExtension());}
+
+\end{DoxyCode}
+
+\item Deprecated the {\ttfamily Twig\+Renderer\+Engine\+Interface} interface.
+\item added Workflow\+Extension (provides {\ttfamily workflow\+\_\+can} and {\ttfamily workflow\+\_\+transitions})
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1891}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1891}
+
+\begin{DoxyItemize}
+\item added Logout\+Url\+Extension (provides {\ttfamily logout\+\_\+url} and {\ttfamily logout\+\_\+path})
+\item added an Http\+Foundation extension (provides the {\ttfamily absolute\+\_\+url} and the {\ttfamily relative\+\_\+path} functions)
+\item added Asset\+Extension (provides the {\ttfamily asset} and {\ttfamily asset\+\_\+version} functions)
+\item Added possibility to extract translation messages from a file or files besides extracting from a directory
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1892}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1892}
+
+\begin{DoxyItemize}
+\item moved command {\ttfamily twig\+:lint} from {\ttfamily Twig\+Bundle}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1893}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1893}
+
+\begin{DoxyItemize}
+\item added stopwatch tag to time templates with the Web\+Profiler\+Bundle
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1894}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1894}
+
+\begin{DoxyItemize}
+\item added helpers form(), form\+\_\+start() and form\+\_\+end()
+\item deprecated form\+\_\+enctype() in favor of form\+\_\+start()
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1895}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1895}
+
+\begin{DoxyItemize}
+\item added a {\ttfamily controller} function to help generating controller references
+\item added a {\ttfamily render\+\_\+esi} and a {\ttfamily render\+\_\+hinclude} function
+\item \mbox{[}BC BREAK\mbox{]} restricted the {\ttfamily render} tag to only accept URIs or Controller\+Reference instances (the signature changed)
+\item added a {\ttfamily render} function to render a request
+\item The {\ttfamily app} global variable is now injected even when using the twig service directly.
+\item Added an optional parameter to the {\ttfamily path} and {\ttfamily url} function which allows to generate relative paths (e.\+g. \char`\"{}../parent-\/file\char`\"{}) and scheme-\/relative URLs (e.\+g. \char`\"{}//example.\+com/dir/file\char`\"{}).
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1896}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_twig_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1896}
+
+\begin{DoxyItemize}
+\item added global variables access in a form theme
+\item added Twig\+Engine
+\item added Twig\+Extractor
+\item added a csrf\+\_\+token function
+\item added a way to specify a default domain for a Twig template (via the \textquotesingle{}trans\+\_\+default\+\_\+domain\textquotesingle{} tag) 
+\end{DoxyItemize}

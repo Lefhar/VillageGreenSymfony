@@ -1,0 +1,110 @@
+\hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor}{}\doxysection{Schema\+Diff\+Visitor Interface Reference}
+\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor}\index{SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a102f430dfd7ca88a732151411cf4554a}{visit\+Orphaned\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$foreign\+Key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a18f6bc20d724ab14e10b045aa003379a}{visit\+Changed\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a0148f0db031744995c778a29b4cb50c3}{visit\+Removed\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ae04c09d008e9c5aee1bc6477c7577be2}{visit\+New\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a7859f0ce033144ac5916869d9f9caac4}{visit\+New\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a3218f11d940a47182e044be93ea8d4a5}{visit\+New\+Table\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$foreign\+Key)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ab1a423bba5b94836603d4f2d8326a30f}{visit\+Removed\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ac4485c9d52f66d872450ba2edc2561fd}{visit\+Changed\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$table\+Diff)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Visit a \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_diff}{Schema\+Diff}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a18f6bc20d724ab14e10b045aa003379a}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a18f6bc20d724ab14e10b045aa003379a}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitChangedSequence@{visitChangedSequence}}
+\index{visitChangedSequence@{visitChangedSequence}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitChangedSequence()}{visitChangedSequence()}}
+{\footnotesize\ttfamily visit\+Changed\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+Visit a sequence that has changed.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ac4485c9d52f66d872450ba2edc2561fd}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ac4485c9d52f66d872450ba2edc2561fd}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitChangedTable@{visitChangedTable}}
+\index{visitChangedTable@{visitChangedTable}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitChangedTable()}{visitChangedTable()}}
+{\footnotesize\ttfamily visit\+Changed\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$table\+Diff }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ae04c09d008e9c5aee1bc6477c7577be2}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ae04c09d008e9c5aee1bc6477c7577be2}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitNewSequence@{visitNewSequence}}
+\index{visitNewSequence@{visitNewSequence}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitNewSequence()}{visitNewSequence()}}
+{\footnotesize\ttfamily visit\+New\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a7859f0ce033144ac5916869d9f9caac4}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a7859f0ce033144ac5916869d9f9caac4}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitNewTable@{visitNewTable}}
+\index{visitNewTable@{visitNewTable}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitNewTable()}{visitNewTable()}}
+{\footnotesize\ttfamily visit\+New\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a3218f11d940a47182e044be93ea8d4a5}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a3218f11d940a47182e044be93ea8d4a5}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitNewTableForeignKey@{visitNewTableForeignKey}}
+\index{visitNewTableForeignKey@{visitNewTableForeignKey}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitNewTableForeignKey()}{visitNewTableForeignKey()}}
+{\footnotesize\ttfamily visit\+New\+Table\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$foreign\+Key }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a102f430dfd7ca88a732151411cf4554a}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a102f430dfd7ca88a732151411cf4554a}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitOrphanedForeignKey@{visitOrphanedForeignKey}}
+\index{visitOrphanedForeignKey@{visitOrphanedForeignKey}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitOrphanedForeignKey()}{visitOrphanedForeignKey()}}
+{\footnotesize\ttfamily visit\+Orphaned\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$foreign\+Key }\end{DoxyParamCaption})}
+
+Visit an orphaned foreign key whose table was deleted.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a0148f0db031744995c778a29b4cb50c3}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_a0148f0db031744995c778a29b4cb50c3}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitRemovedSequence@{visitRemovedSequence}}
+\index{visitRemovedSequence@{visitRemovedSequence}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitRemovedSequence()}{visitRemovedSequence()}}
+{\footnotesize\ttfamily visit\+Removed\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+Visit a sequence that has been removed.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ab1a423bba5b94836603d4f2d8326a30f}\label{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_schema_diff_visitor_ab1a423bba5b94836603d4f2d8326a30f}} 
+\index{SchemaDiffVisitor@{SchemaDiffVisitor}!visitRemovedTable@{visitRemovedTable}}
+\index{visitRemovedTable@{visitRemovedTable}!SchemaDiffVisitor@{SchemaDiffVisitor}}
+\doxysubsubsection{\texorpdfstring{visitRemovedTable()}{visitRemovedTable()}}
+{\footnotesize\ttfamily visit\+Removed\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/\+Visitor/Schema\+Diff\+Visitor.\+php\end{DoxyCompactItemize}

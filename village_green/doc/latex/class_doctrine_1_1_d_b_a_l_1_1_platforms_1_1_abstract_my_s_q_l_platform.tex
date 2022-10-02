@@ -1,0 +1,1384 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform}{}\doxysection{Abstract\+My\+SQLPlatform Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform}\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+Inheritance diagram for Abstract\+My\+SQLPlatform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_abe110235c204cd4ee1cdb5df2d2a852c}{get\+Identifier\+Quote\+Character}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0550956e267ebac0f632b67e93e4513e}{get\+Regexp\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1f584894e46ff7498b15a96ba6644f19}{get\+Locate\+Expression}} (\$str, \$substr, \$start\+Pos=false)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac5316692b63126c094eb57d020d75b45}{get\+Concat\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aa8d617f8a6e1c62959272d9b84b8f74b}{get\+Date\+Diff\+Expression}} (\$date1, \$date2)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a8dbd134eb43c3bfc42e6e97849400b9a}{get\+Current\+Database\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5f03bfefa13b082606d104fd53c22028}{get\+Length\+Expression}} (\$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a34923e81ab3db8853f07d836b7709d97}{get\+List\+Databases\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a47b92b37af21f1c9ed96cec31fa78f01}{get\+List\+Table\+Constraints\+SQL}} (\$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_adadfc8cabb06d3cccc3f51b5628dffc6}{get\+List\+Table\+Indexes\+SQL}} (\$table, \$database=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a93fdf729de82bf2b7bf2f04cad2eedb0}{get\+List\+Views\+SQL}} (\$database)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a673e5a5f1824f46bcb5c39be714d5fca}{get\+List\+Table\+Foreign\+Keys\+SQL}} (\$table, \$database=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac6270814c40ff140254cabc8aa919446}{get\+Clob\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2eb64bdae860ab058d54ee8f9a986f80}{get\+Date\+Time\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aae6630b83c940a1db074ba90a94381f3}{get\+Date\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_acf36895ef627b46e1f217a3b3578e374}{get\+Time\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0cd49dacba44493e03a1cc7d72093e4d}{get\+Boolean\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a01967044348ec336728cc930b2eeb566}{prefers\+Identity\+Columns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1ad0b04abece9baae2835717c77e59e5}{supports\+Identity\+Columns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a65e77f2872c978a862381d71d7c7d636}{supports\+Inline\+Column\+Comments}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a337c92b5bee4600cf73a47d072ef50af}{supports\+Column\+Collation}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad392004e4fe8a99b5590674a1d58b729}{get\+List\+Tables\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_afb537f69b3ba4b6c887a85b0b1660497}{get\+List\+Table\+Columns\+SQL}} (\$table, \$database=null)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a3d6a918eccc1359afe2e46963d2df8c7}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a3d6a918eccc1359afe2e46963d2df8c7}} 
+{\bfseries get\+List\+Table\+Metadata\+SQL} (string \$table, ?string \$database=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5941c97836fcaf895ae74879c89f619a}{get\+Default\+Value\+Declaration\+SQL}} (\$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a14b1a736b1506feef963073097411765}{get\+Alter\+Table\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a33c2523b9f0547ee42347ad310a9b1da}{get\+Integer\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac647aa60a1574e292632bb09adea99a7}{get\+Big\+Int\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2f7841588847fe0424734904bee1dc19}{get\+Small\+Int\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad06a3d3e8fe56b55c5f9c04df1ca8856}{get\+Float\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5d629d17a648396b7a3350f562d09e59}{get\+Decimal\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a67fda68f2e52a3b2522d9e9eccff0de2}{get\+Column\+Charset\+Declaration\+SQL}} (\$charset)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7951ba9e71c6a4cb1ab85122ddd657f9}{get\+Column\+Collation\+Declaration\+SQL}} (\$collation)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2167f9775b5f98264119f2d361b1b330}{get\+Advanced\+Foreign\+Key\+Options\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$foreign\+Key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a89df0f3beaf5af3d97471daf18fcb618}{get\+Drop\+Index\+SQL}} (\$index, \$table=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1a03395a4754f183d455cdc8601fbc41}{get\+Drop\+Unique\+Constraint\+SQL}} (string \$name, string \$table\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2f9f3dfedc825a624b105fa5591c1fdf}{get\+Set\+Transaction\+Isolation\+SQL}} (\$level)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a821885993ed4c14395fb2d899522c956}{get\+Read\+Lock\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7b8e2ec30b20ab4e55881deb2e4ce8fe}{get\+Varchar\+Max\+Length}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a00cb56d39e543f83c8a631d4e3d08d8d}{get\+Binary\+Max\+Length}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab4a875a8a73241a969983f93957e5c2e}{get\+Drop\+Temporary\+Table\+SQL}} (\$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab3bb6f375c4bef757d3e72fcc4dd1c14}{get\+Blob\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a720faaf167cbc9cbfccb43b8879aea7f}{quote\+String\+Literal}} (\$str)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a50518a6b9c5bb31e55451ad9f6673a87}{get\+Default\+Transaction\+Isolation\+Level}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a47405357f1ac52dd836b8e3618afab04}{supports\+Column\+Length\+Indexes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a07f93537436d36e3b32324a9d974ec8e}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a07f93537436d36e3b32324a9d974ec8e}} 
+const {\bfseries LENGTH\+\_\+\+LIMIT\+\_\+\+TINYTEXT} = 255
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aef80b807eea7244615c25953e9628308}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aef80b807eea7244615c25953e9628308}} 
+const {\bfseries LENGTH\+\_\+\+LIMIT\+\_\+\+TEXT} = 65535
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_afb744da72e2c5c06884e551d1a9b3b10}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_afb744da72e2c5c06884e551d1a9b3b10}} 
+const {\bfseries LENGTH\+\_\+\+LIMIT\+\_\+\+MEDIUMTEXT} = 16777215
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac42a1e19a92b816adb44966f08f608ba}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac42a1e19a92b816adb44966f08f608ba}} 
+const {\bfseries LENGTH\+\_\+\+LIMIT\+\_\+\+TINYBLOB} = 255
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7b700de3d7f64cab0b40cb6579b87d4e}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7b700de3d7f64cab0b40cb6579b87d4e}} 
+const {\bfseries LENGTH\+\_\+\+LIMIT\+\_\+\+BLOB} = 65535
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a9c43027bd65967af4285040723213c5d}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a9c43027bd65967af4285040723213c5d}} 
+const {\bfseries LENGTH\+\_\+\+LIMIT\+\_\+\+MEDIUMBLOB} = 16777215
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_af3b3579f658f5f51ad39b4cc2ad01453}{do\+Modify\+Limit\+Query}} (\$query, \$limit, \$offset)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad207418a9a428034bf4993d54643db33}{get\+Date\+Arithmetic\+Interval\+Expression}} (\$date, \$operator, \$interval, \$unit)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aae87d3ff0e100d15d85215dc118b7117}{get\+Varchar\+Type\+Declaration\+SQLSnippet}} (\$length, \$fixed)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1e6567162e1ca667d8be4c5eedc0291b}{get\+Binary\+Type\+Declaration\+SQLSnippet}} (\$length, \$fixed)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a290e8c9da68396f02a260dd241a81fb8}{\+\_\+get\+Create\+Table\+SQL}} (\$name, array \$columns, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a84037beca1f59fab6c3f9b3a273f40ce}{get\+Pre\+Alter\+Table\+Index\+Foreign\+Key\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab383becff371a0fa573def5faaeff441}{get\+Pre\+Alter\+Table\+Rename\+Index\+Foreign\+Key\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0b2c5c0a551c366c9a2ce56410f80a9d}{get\+Post\+Alter\+Table\+Index\+Foreign\+Key\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aa11b25100765e7b411750f0069a528e1}{get\+Post\+Alter\+Table\+Rename\+Index\+Foreign\+Key\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_adc959aa7157b64a057ba7a386ac14274}{get\+Create\+Index\+SQLFlags}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} \$index)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ae13fc488dbc0af58f2d1829cd9170366}{\+\_\+get\+Common\+Integer\+Type\+Declaration\+SQL}} (array \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a24b87eb0cacce154edd3b1a651950c96}{get\+Drop\+Primary\+Key\+SQL}} (\$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab7e85c57ffa161f6ba6743d55ebfcfd6}{initialize\+Doctrine\+Type\+Mappings}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a9bec88eef6cc48f786e7a8677f0cca56}{get\+Reserved\+Keywords\+Class}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Provides the base implementation for the lowest versions of supported My\+SQL-\/like database platforms. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ae13fc488dbc0af58f2d1829cd9170366}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ae13fc488dbc0af58f2d1829cd9170366}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!\_getCommonIntegerTypeDeclarationSQL@{\_getCommonIntegerTypeDeclarationSQL}}
+\index{\_getCommonIntegerTypeDeclarationSQL@{\_getCommonIntegerTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{\_getCommonIntegerTypeDeclarationSQL()}{\_getCommonIntegerTypeDeclarationSQL()}}
+{\footnotesize\ttfamily \+\_\+get\+Common\+Integer\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the SQL snippet that declares common properties of an integer column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ae13fc488dbc0af58f2d1829cd9170366}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a290e8c9da68396f02a260dd241a81fb8}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a290e8c9da68396f02a260dd241a81fb8}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!\_getCreateTableSQL@{\_getCreateTableSQL}}
+\index{\_getCreateTableSQL@{\_getCreateTableSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{\_getCreateTableSQL()}{\_getCreateTableSQL()}}
+{\footnotesize\ttfamily \+\_\+get\+Create\+Table\+SQL (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array}]{\$columns,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the SQL used to create a table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$columns} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a290e8c9da68396f02a260dd241a81fb8}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_af3b3579f658f5f51ad39b4cc2ad01453}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_af3b3579f658f5f51ad39b4cc2ad01453}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!doModifyLimitQuery@{doModifyLimitQuery}}
+\index{doModifyLimitQuery@{doModifyLimitQuery}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{doModifyLimitQuery()}{doModifyLimitQuery()}}
+{\footnotesize\ttfamily do\+Modify\+Limit\+Query (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$limit,  }\item[{}]{\$offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds an platform-\/specific LIMIT clause to the query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query} & \\
+\hline
+int | null & {\em \$limit} & \\
+\hline
+int & {\em \$offset} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_af3b3579f658f5f51ad39b4cc2ad01453}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2167f9775b5f98264119f2d361b1b330}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2167f9775b5f98264119f2d361b1b330}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getAdvancedForeignKeyOptionsSQL@{getAdvancedForeignKeyOptionsSQL}}
+\index{getAdvancedForeignKeyOptionsSQL@{getAdvancedForeignKeyOptionsSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getAdvancedForeignKeyOptionsSQL()}{getAdvancedForeignKeyOptionsSQL()}}
+{\footnotesize\ttfamily get\+Advanced\+Foreign\+Key\+Options\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$foreign\+Key }\end{DoxyParamCaption})}
+
+Returns the FOREIGN KEY query section dealing with non-\/standard options as MATCH, INITIALLY DEFERRED, ON UPDATE, ...
+
+
+\begin{DoxyParams}[1]{Parameters}
+Foreign\+Key\+Constraint & {\em \$foreign\+Key} & The foreign key definition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a2167f9775b5f98264119f2d361b1b330}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a14b1a736b1506feef963073097411765}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a14b1a736b1506feef963073097411765}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getAlterTableSQL@{getAlterTableSQL}}
+\index{getAlterTableSQL@{getAlterTableSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getAlterTableSQL()}{getAlterTableSQL()}}
+{\footnotesize\ttfamily get\+Alter\+Table\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$diff }\end{DoxyParamCaption})}
+
+Gets the SQL statements for altering an existing table.
+
+This method returns an array of SQL statements, since some platforms need several statements.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a14b1a736b1506feef963073097411765}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac647aa60a1574e292632bb09adea99a7}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac647aa60a1574e292632bb09adea99a7}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getBigIntTypeDeclarationSQL@{getBigIntTypeDeclarationSQL}}
+\index{getBigIntTypeDeclarationSQL@{getBigIntTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getBigIntTypeDeclarationSQL()}{getBigIntTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Big\+Int\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Returns the SQL snippet that declares an 8 byte integer column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ac647aa60a1574e292632bb09adea99a7}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a00cb56d39e543f83c8a631d4e3d08d8d}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a00cb56d39e543f83c8a631d4e3d08d8d}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getBinaryMaxLength@{getBinaryMaxLength}}
+\index{getBinaryMaxLength@{getBinaryMaxLength}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getBinaryMaxLength()}{getBinaryMaxLength()}}
+{\footnotesize\ttfamily get\+Binary\+Max\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the maximum length of a binary column.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000075}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a00cb56d39e543f83c8a631d4e3d08d8d}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1e6567162e1ca667d8be4c5eedc0291b}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1e6567162e1ca667d8be4c5eedc0291b}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getBinaryTypeDeclarationSQLSnippet@{getBinaryTypeDeclarationSQLSnippet}}
+\index{getBinaryTypeDeclarationSQLSnippet@{getBinaryTypeDeclarationSQLSnippet}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getBinaryTypeDeclarationSQLSnippet()}{getBinaryTypeDeclarationSQLSnippet()}}
+{\footnotesize\ttfamily get\+Binary\+Type\+Declaration\+SQLSnippet (\begin{DoxyParamCaption}\item[{}]{\$length,  }\item[{}]{\$fixed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Returns the SQL snippet used to declare a BINARY/\+VARBINARY column type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | false & {\em \$length} & The length of the column. \\
+\hline
+bool & {\em \$fixed} & Whether the column length is fixed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a1e6567162e1ca667d8be4c5eedc0291b}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab3bb6f375c4bef757d3e72fcc4dd1c14}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab3bb6f375c4bef757d3e72fcc4dd1c14}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getBlobTypeDeclarationSQL@{getBlobTypeDeclarationSQL}}
+\index{getBlobTypeDeclarationSQL@{getBlobTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getBlobTypeDeclarationSQL()}{getBlobTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Blob\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Gets the SQL Snippet used to declare a BLOB column type. TINYBLOB \+: 2 $^\wedge$ 8 -\/ 1 = 255 BLOB \+: 2 $^\wedge$ 16 -\/ 1 = 65535 MEDIUMBLOB \+: 2 $^\wedge$ 24 -\/ 1 = 16777215 LONGBLOB \+: 2 $^\wedge$ 32 -\/ 1 = 4294967295
+
+Returns the SQL Snippet used to declare a BLOB column type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ab3bb6f375c4bef757d3e72fcc4dd1c14}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0cd49dacba44493e03a1cc7d72093e4d}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0cd49dacba44493e03a1cc7d72093e4d}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getBooleanTypeDeclarationSQL@{getBooleanTypeDeclarationSQL}}
+\index{getBooleanTypeDeclarationSQL@{getBooleanTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getBooleanTypeDeclarationSQL()}{getBooleanTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Boolean\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Returns the SQL snippet that declares a boolean column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a0cd49dacba44493e03a1cc7d72093e4d}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac6270814c40ff140254cabc8aa919446}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac6270814c40ff140254cabc8aa919446}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getClobTypeDeclarationSQL@{getClobTypeDeclarationSQL}}
+\index{getClobTypeDeclarationSQL@{getClobTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getClobTypeDeclarationSQL()}{getClobTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Clob\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Gets the SQL snippet used to declare a CLOB column type. TINYTEXT \+: 2 $^\wedge$ 8 -\/ 1 = 255 TEXT \+: 2 $^\wedge$ 16 -\/ 1 = 65535 MEDIUMTEXT \+: 2 $^\wedge$ 24 -\/ 1 = 16777215 LONGTEXT \+: 2 $^\wedge$ 32 -\/ 1 = 4294967295
+
+Returns the SQL snippet used to declare a CLOB column type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ac6270814c40ff140254cabc8aa919446}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a67fda68f2e52a3b2522d9e9eccff0de2}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a67fda68f2e52a3b2522d9e9eccff0de2}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getColumnCharsetDeclarationSQL@{getColumnCharsetDeclarationSQL}}
+\index{getColumnCharsetDeclarationSQL@{getColumnCharsetDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getColumnCharsetDeclarationSQL()}{getColumnCharsetDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Column\+Charset\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{}]{\$charset }\end{DoxyParamCaption})}
+
+Obtains DBMS specific SQL code portion needed to set the CHARACTER SET of a column declaration to be used in statements like CREATE TABLE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$charset} & The name of the charset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string DBMS specific SQL code portion needed to set the CHARACTER SET of a column declaration.
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a67fda68f2e52a3b2522d9e9eccff0de2}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7951ba9e71c6a4cb1ab85122ddd657f9}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7951ba9e71c6a4cb1ab85122ddd657f9}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getColumnCollationDeclarationSQL@{getColumnCollationDeclarationSQL}}
+\index{getColumnCollationDeclarationSQL@{getColumnCollationDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getColumnCollationDeclarationSQL()}{getColumnCollationDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Column\+Collation\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{}]{\$collation }\end{DoxyParamCaption})}
+
+Obtains DBMS specific SQL code portion needed to set the COLLATION of a column declaration to be used in statements like CREATE TABLE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$collation} & The name of the collation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string DBMS specific SQL code portion needed to set the COLLATION of a column declaration.
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a7951ba9e71c6a4cb1ab85122ddd657f9}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac5316692b63126c094eb57d020d75b45}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ac5316692b63126c094eb57d020d75b45}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getConcatExpression@{getConcatExpression}}
+\index{getConcatExpression@{getConcatExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getConcatExpression()}{getConcatExpression()}}
+{\footnotesize\ttfamily get\+Concat\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a SQL snippet to concatenate the given expressions.
+
+Accepts an arbitrary number of string parameters. Each parameter must contain an expression.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ac5316692b63126c094eb57d020d75b45}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_adc959aa7157b64a057ba7a386ac14274}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_adc959aa7157b64a057ba7a386ac14274}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getCreateIndexSQLFlags@{getCreateIndexSQLFlags}}
+\index{getCreateIndexSQLFlags@{getCreateIndexSQLFlags}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getCreateIndexSQLFlags()}{getCreateIndexSQLFlags()}}
+{\footnotesize\ttfamily get\+Create\+Index\+SQLFlags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}}]{\$index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds additional flags for index generation.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_adc959aa7157b64a057ba7a386ac14274}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a8dbd134eb43c3bfc42e6e97849400b9a}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a8dbd134eb43c3bfc42e6e97849400b9a}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getCurrentDatabaseExpression@{getCurrentDatabaseExpression}}
+\index{getCurrentDatabaseExpression@{getCurrentDatabaseExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getCurrentDatabaseExpression()}{getCurrentDatabaseExpression()}}
+{\footnotesize\ttfamily get\+Current\+Database\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the SQL expression which represents the currently selected database. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a8dbd134eb43c3bfc42e6e97849400b9a}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad207418a9a428034bf4993d54643db33}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad207418a9a428034bf4993d54643db33}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDateArithmeticIntervalExpression@{getDateArithmeticIntervalExpression}}
+\index{getDateArithmeticIntervalExpression@{getDateArithmeticIntervalExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDateArithmeticIntervalExpression()}{getDateArithmeticIntervalExpression()}}
+{\footnotesize\ttfamily get\+Date\+Arithmetic\+Interval\+Expression (\begin{DoxyParamCaption}\item[{}]{\$date,  }\item[{}]{\$operator,  }\item[{}]{\$interval,  }\item[{}]{\$unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Returns the SQL for a date arithmetic expression.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$date} & The column or literal representing a date to perform the arithmetic operation on. \\
+\hline
+string & {\em \$operator} & The arithmetic operator (+ or -\/). \\
+\hline
+int & {\em \$interval} & The interval that shall be calculated into the date. \\
+\hline
+string & {\em \$unit} & The unit of the interval that shall be calculated into the date. One of the DATE\+\_\+\+INTERVAL\+\_\+\+UNIT\+\_\+$\ast$ constants.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ad207418a9a428034bf4993d54643db33}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aa8d617f8a6e1c62959272d9b84b8f74b}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aa8d617f8a6e1c62959272d9b84b8f74b}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDateDiffExpression@{getDateDiffExpression}}
+\index{getDateDiffExpression@{getDateDiffExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDateDiffExpression()}{getDateDiffExpression()}}
+{\footnotesize\ttfamily get\+Date\+Diff\+Expression (\begin{DoxyParamCaption}\item[{}]{\$date1,  }\item[{}]{\$date2 }\end{DoxyParamCaption})}
+
+Returns the SQL to calculate the difference in days between the two passed dates.
+
+Computes diff = date1 -\/ date2.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$date1} & \\
+\hline
+string & {\em \$date2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_aa8d617f8a6e1c62959272d9b84b8f74b}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2eb64bdae860ab058d54ee8f9a986f80}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2eb64bdae860ab058d54ee8f9a986f80}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDateTimeTypeDeclarationSQL@{getDateTimeTypeDeclarationSQL}}
+\index{getDateTimeTypeDeclarationSQL@{getDateTimeTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDateTimeTypeDeclarationSQL()}{getDateTimeTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Date\+Time\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Obtains DBMS specific SQL to be used to create datetime columns in statements like CREATE TABLE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a2eb64bdae860ab058d54ee8f9a986f80}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aae6630b83c940a1db074ba90a94381f3}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aae6630b83c940a1db074ba90a94381f3}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDateTypeDeclarationSQL@{getDateTypeDeclarationSQL}}
+\index{getDateTypeDeclarationSQL@{getDateTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDateTypeDeclarationSQL()}{getDateTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Date\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Obtains DBMS specific SQL to be used to create date columns in statements like CREATE TABLE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_aae6630b83c940a1db074ba90a94381f3}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5d629d17a648396b7a3350f562d09e59}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5d629d17a648396b7a3350f562d09e59}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDecimalTypeDeclarationSQL@{getDecimalTypeDeclarationSQL}}
+\index{getDecimalTypeDeclarationSQL@{getDecimalTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDecimalTypeDeclarationSQL()}{getDecimalTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Decimal\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+\{Returns the SQL snippet that declares a floating point column of arbitrary precision.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a5d629d17a648396b7a3350f562d09e59}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a50518a6b9c5bb31e55451ad9f6673a87}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a50518a6b9c5bb31e55451ad9f6673a87}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDefaultTransactionIsolationLevel@{getDefaultTransactionIsolationLevel}}
+\index{getDefaultTransactionIsolationLevel@{getDefaultTransactionIsolationLevel}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDefaultTransactionIsolationLevel()}{getDefaultTransactionIsolationLevel()}}
+{\footnotesize\ttfamily get\+Default\+Transaction\+Isolation\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the default transaction isolation level of the platform.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_transaction_isolation_level}{Transaction\+Isolation\+Level}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+int The default isolation level.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a50518a6b9c5bb31e55451ad9f6673a87}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5941c97836fcaf895ae74879c89f619a}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5941c97836fcaf895ae74879c89f619a}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDefaultValueDeclarationSQL@{getDefaultValueDeclarationSQL}}
+\index{getDefaultValueDeclarationSQL@{getDefaultValueDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDefaultValueDeclarationSQL()}{getDefaultValueDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Default\+Value\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{}]{\$column }\end{DoxyParamCaption})}
+
+\{Obtains DBMS specific SQL code portion needed to set a default value declaration to be used in statements like CREATE TABLE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & The column definition array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string DBMS specific SQL code portion needed to set a default value.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a5941c97836fcaf895ae74879c89f619a}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a89df0f3beaf5af3d97471daf18fcb618}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a89df0f3beaf5af3d97471daf18fcb618}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDropIndexSQL@{getDropIndexSQL}}
+\index{getDropIndexSQL@{getDropIndexSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDropIndexSQL()}{getDropIndexSQL()}}
+{\footnotesize\ttfamily get\+Drop\+Index\+SQL (\begin{DoxyParamCaption}\item[{}]{\$index,  }\item[{}]{\$table = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Returns the SQL to drop an index from a table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Index | string & {\em \$index} & \\
+\hline
+Table | string | null & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a89df0f3beaf5af3d97471daf18fcb618}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a24b87eb0cacce154edd3b1a651950c96}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a24b87eb0cacce154edd3b1a651950c96}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDropPrimaryKeySQL@{getDropPrimaryKeySQL}}
+\index{getDropPrimaryKeySQL@{getDropPrimaryKeySQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDropPrimaryKeySQL()}{getDropPrimaryKeySQL()}}
+{\footnotesize\ttfamily get\+Drop\+Primary\+Key\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab4a875a8a73241a969983f93957e5c2e}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab4a875a8a73241a969983f93957e5c2e}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDropTemporaryTableSQL@{getDropTemporaryTableSQL}}
+\index{getDropTemporaryTableSQL@{getDropTemporaryTableSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDropTemporaryTableSQL()}{getDropTemporaryTableSQL()}}
+{\footnotesize\ttfamily get\+Drop\+Temporary\+Table\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Returns the SQL to safely drop a temporary table WITHOUT implicitly committing an open transaction.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Table | string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+
+My\+SQL commits a transaction implicitly when DROP TABLE is executed, however not if DROP TEMPORARY TABLE is executed. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ab4a875a8a73241a969983f93957e5c2e}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1a03395a4754f183d455cdc8601fbc41}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1a03395a4754f183d455cdc8601fbc41}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getDropUniqueConstraintSQL@{getDropUniqueConstraintSQL}}
+\index{getDropUniqueConstraintSQL@{getDropUniqueConstraintSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getDropUniqueConstraintSQL()}{getDropUniqueConstraintSQL()}}
+{\footnotesize\ttfamily get\+Drop\+Unique\+Constraint\+SQL (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$table\+Name }\end{DoxyParamCaption})}
+
+The {\ttfamily ALTER TABLE ... DROP CONSTRAINT} syntax is only available as of My\+SQL 8.\+0.\+19.
+
+\mbox{\hyperlink{}{https\+://dev.\+mysql.\+com/doc/refman/8.\+0/en/alter-\/table.\+html}}
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a1a03395a4754f183d455cdc8601fbc41}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad06a3d3e8fe56b55c5f9c04df1ca8856}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad06a3d3e8fe56b55c5f9c04df1ca8856}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getFloatDeclarationSQL@{getFloatDeclarationSQL}}
+\index{getFloatDeclarationSQL@{getFloatDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getFloatDeclarationSQL()}{getFloatDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Float\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+\{
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ad06a3d3e8fe56b55c5f9c04df1ca8856}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_abe110235c204cd4ee1cdb5df2d2a852c}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_abe110235c204cd4ee1cdb5df2d2a852c}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getIdentifierQuoteCharacter@{getIdentifierQuoteCharacter}}
+\index{getIdentifierQuoteCharacter@{getIdentifierQuoteCharacter}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getIdentifierQuoteCharacter()}{getIdentifierQuoteCharacter()}}
+{\footnotesize\ttfamily get\+Identifier\+Quote\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the character used for identifier quoting.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_abe110235c204cd4ee1cdb5df2d2a852c}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a33c2523b9f0547ee42347ad310a9b1da}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a33c2523b9f0547ee42347ad310a9b1da}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getIntegerTypeDeclarationSQL@{getIntegerTypeDeclarationSQL}}
+\index{getIntegerTypeDeclarationSQL@{getIntegerTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getIntegerTypeDeclarationSQL()}{getIntegerTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Integer\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Returns the SQL snippet that declares a 4 byte integer column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a33c2523b9f0547ee42347ad310a9b1da}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5f03bfefa13b082606d104fd53c22028}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a5f03bfefa13b082606d104fd53c22028}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getLengthExpression@{getLengthExpression}}
+\index{getLengthExpression@{getLengthExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getLengthExpression()}{getLengthExpression()}}
+{\footnotesize\ttfamily get\+Length\+Expression (\begin{DoxyParamCaption}\item[{}]{\$column }\end{DoxyParamCaption})}
+
+Returns the SQL snippet to get the length of a text column in characters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a5f03bfefa13b082606d104fd53c22028}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a34923e81ab3db8853f07d836b7709d97}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a34923e81ab3db8853f07d836b7709d97}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListDatabasesSQL@{getListDatabasesSQL}}
+\index{getListDatabasesSQL@{getListDatabasesSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListDatabasesSQL()}{getListDatabasesSQL()}}
+{\footnotesize\ttfamily get\+List\+Databases\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a34923e81ab3db8853f07d836b7709d97}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_afb537f69b3ba4b6c887a85b0b1660497}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_afb537f69b3ba4b6c887a85b0b1660497}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListTableColumnsSQL@{getListTableColumnsSQL}}
+\index{getListTableColumnsSQL@{getListTableColumnsSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListTableColumnsSQL()}{getListTableColumnsSQL()}}
+{\footnotesize\ttfamily get\+List\+Table\+Columns\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+string & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_afb537f69b3ba4b6c887a85b0b1660497}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a47b92b37af21f1c9ed96cec31fa78f01}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a47b92b37af21f1c9ed96cec31fa78f01}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListTableConstraintsSQL@{getListTableConstraintsSQL}}
+\index{getListTableConstraintsSQL@{getListTableConstraintsSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListTableConstraintsSQL()}{getListTableConstraintsSQL()}}
+{\footnotesize\ttfamily get\+List\+Table\+Constraints\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a47b92b37af21f1c9ed96cec31fa78f01}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a673e5a5f1824f46bcb5c39be714d5fca}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a673e5a5f1824f46bcb5c39be714d5fca}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListTableForeignKeysSQL@{getListTableForeignKeysSQL}}
+\index{getListTableForeignKeysSQL@{getListTableForeignKeysSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListTableForeignKeysSQL()}{getListTableForeignKeysSQL()}}
+{\footnotesize\ttfamily get\+List\+Table\+Foreign\+Keys\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+string | null & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_adadfc8cabb06d3cccc3f51b5628dffc6}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_adadfc8cabb06d3cccc3f51b5628dffc6}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListTableIndexesSQL@{getListTableIndexesSQL}}
+\index{getListTableIndexesSQL@{getListTableIndexesSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListTableIndexesSQL()}{getListTableIndexesSQL()}}
+{\footnotesize\ttfamily get\+List\+Table\+Indexes\+SQL (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Returns the list of indexes for the current database.
+
+The current database parameter is optional but will always be passed when using the Schema\+Manager API and is the database the given table is in.
+
+Attention\+: Some platforms only support current\+Database when they are connected with that database. Cross-\/database information schema requests may be impossible.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & \\
+\hline
+string & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+
+
+Two approaches to listing the table indexes. The information\+\_\+schema is preferred, because it doesn\textquotesingle{}t cause problems with SQL keywords such as \char`\"{}order\char`\"{} or \char`\"{}table\char`\"{}. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_adadfc8cabb06d3cccc3f51b5628dffc6}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad392004e4fe8a99b5590674a1d58b729}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ad392004e4fe8a99b5590674a1d58b729}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListTablesSQL@{getListTablesSQL}}
+\index{getListTablesSQL@{getListTablesSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListTablesSQL()}{getListTablesSQL()}}
+{\footnotesize\ttfamily get\+List\+Tables\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ad392004e4fe8a99b5590674a1d58b729}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a93fdf729de82bf2b7bf2f04cad2eedb0}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a93fdf729de82bf2b7bf2f04cad2eedb0}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getListViewsSQL@{getListViewsSQL}}
+\index{getListViewsSQL@{getListViewsSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getListViewsSQL()}{getListViewsSQL()}}
+{\footnotesize\ttfamily get\+List\+Views\+SQL (\begin{DoxyParamCaption}\item[{}]{\$database }\end{DoxyParamCaption})}
+
+Returns the SQL to list all views of a database or user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a93fdf729de82bf2b7bf2f04cad2eedb0}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1f584894e46ff7498b15a96ba6644f19}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1f584894e46ff7498b15a96ba6644f19}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getLocateExpression@{getLocateExpression}}
+\index{getLocateExpression@{getLocateExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getLocateExpression()}{getLocateExpression()}}
+{\footnotesize\ttfamily get\+Locate\+Expression (\begin{DoxyParamCaption}\item[{}]{\$str,  }\item[{}]{\$substr,  }\item[{}]{\$start\+Pos = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Returns the SQL snippet to get the position of the first occurrence of substring \$substr in string \$str.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & Literal string. \\
+\hline
+string & {\em \$substr} & Literal string to find. \\
+\hline
+string | int | false & {\em \$start\+Pos} & Position to start at, beginning of string by default.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a1f584894e46ff7498b15a96ba6644f19}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a3d0963e68bb313b163a73f2803c64600}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getName@{getName}}
+\index{getName@{getName}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the name of the platform.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000067}{Deprecated}}]Identify platforms by their class.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a3d0963e68bb313b163a73f2803c64600}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0b2c5c0a551c366c9a2ce56410f80a9d}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0b2c5c0a551c366c9a2ce56410f80a9d}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getPostAlterTableIndexForeignKeySQL@{getPostAlterTableIndexForeignKeySQL}}
+\index{getPostAlterTableIndexForeignKeySQL@{getPostAlterTableIndexForeignKeySQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getPostAlterTableIndexForeignKeySQL()}{getPostAlterTableIndexForeignKeySQL()}}
+{\footnotesize\ttfamily get\+Post\+Alter\+Table\+Index\+Foreign\+Key\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a0b2c5c0a551c366c9a2ce56410f80a9d}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aa11b25100765e7b411750f0069a528e1}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aa11b25100765e7b411750f0069a528e1}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getPostAlterTableRenameIndexForeignKeySQL@{getPostAlterTableRenameIndexForeignKeySQL}}
+\index{getPostAlterTableRenameIndexForeignKeySQL@{getPostAlterTableRenameIndexForeignKeySQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getPostAlterTableRenameIndexForeignKeySQL()}{getPostAlterTableRenameIndexForeignKeySQL()}}
+{\footnotesize\ttfamily get\+Post\+Alter\+Table\+Rename\+Index\+Foreign\+Key\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Table\+Diff & {\em \$diff} & The table diff to gather the SQL for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_my_s_q_l57_platform_aa11b25100765e7b411750f0069a528e1}{My\+SQL57\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a84037beca1f59fab6c3f9b3a273f40ce}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a84037beca1f59fab6c3f9b3a273f40ce}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getPreAlterTableIndexForeignKeySQL@{getPreAlterTableIndexForeignKeySQL}}
+\index{getPreAlterTableIndexForeignKeySQL@{getPreAlterTableIndexForeignKeySQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getPreAlterTableIndexForeignKeySQL()}{getPreAlterTableIndexForeignKeySQL()}}
+{\footnotesize\ttfamily get\+Pre\+Alter\+Table\+Index\+Foreign\+Key\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a84037beca1f59fab6c3f9b3a273f40ce}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab383becff371a0fa573def5faaeff441}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab383becff371a0fa573def5faaeff441}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getPreAlterTableRenameIndexForeignKeySQL@{getPreAlterTableRenameIndexForeignKeySQL}}
+\index{getPreAlterTableRenameIndexForeignKeySQL@{getPreAlterTableRenameIndexForeignKeySQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getPreAlterTableRenameIndexForeignKeySQL()}{getPreAlterTableRenameIndexForeignKeySQL()}}
+{\footnotesize\ttfamily get\+Pre\+Alter\+Table\+Rename\+Index\+Foreign\+Key\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Table\+Diff & {\em \$diff} & The table diff to gather the SQL for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_my_s_q_l57_platform_ab383becff371a0fa573def5faaeff441}{My\+SQL57\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a821885993ed4c14395fb2d899522c956}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a821885993ed4c14395fb2d899522c956}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getReadLockSQL@{getReadLockSQL}}
+\index{getReadLockSQL@{getReadLockSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getReadLockSQL()}{getReadLockSQL()}}
+{\footnotesize\ttfamily get\+Read\+Lock\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the SQL snippet to append to any SELECT statement which locks rows in shared read lock.
+
+This defaults to the ANSI SQL \char`\"{}\+FOR UPDATE\char`\"{}, which is an exclusive lock (Write). Some database vendors allow to lighten this constraint up to be a real read lock.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a821885993ed4c14395fb2d899522c956}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0550956e267ebac0f632b67e93e4513e}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a0550956e267ebac0f632b67e93e4513e}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getRegexpExpression@{getRegexpExpression}}
+\index{getRegexpExpression@{getRegexpExpression}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getRegexpExpression()}{getRegexpExpression()}}
+{\footnotesize\ttfamily get\+Regexp\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the regular expression operator.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a0550956e267ebac0f632b67e93e4513e}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a9bec88eef6cc48f786e7a8677f0cca56}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a9bec88eef6cc48f786e7a8677f0cca56}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getReservedKeywordsClass@{getReservedKeywordsClass}}
+\index{getReservedKeywordsClass@{getReservedKeywordsClass}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getReservedKeywordsClass()}{getReservedKeywordsClass()}}
+{\footnotesize\ttfamily get\+Reserved\+Keywords\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the class name of the reserved keywords list.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000113}{Deprecated}}]Implement \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a7584e7d8256fa80bc466e173852dba7b}{create\+Reserved\+Keywords\+List()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string$<$\+Keyword\+List$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000065}{Deprecated}}]Implement \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a7584e7d8256fa80bc466e173852dba7b}{create\+Reserved\+Keywords\+List()}}\} instead. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a9bec88eef6cc48f786e7a8677f0cca56}{Abstract\+Platform}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_maria_d_b_platform_a9bec88eef6cc48f786e7a8677f0cca56}{Maria\+DBPlatform}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_my_s_q_l57_platform_a9bec88eef6cc48f786e7a8677f0cca56}{My\+SQL57\+Platform}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_my_s_q_l80_platform_a9bec88eef6cc48f786e7a8677f0cca56}{My\+SQL80\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2f9f3dfedc825a624b105fa5591c1fdf}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2f9f3dfedc825a624b105fa5591c1fdf}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getSetTransactionIsolationSQL@{getSetTransactionIsolationSQL}}
+\index{getSetTransactionIsolationSQL@{getSetTransactionIsolationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getSetTransactionIsolationSQL()}{getSetTransactionIsolationSQL()}}
+{\footnotesize\ttfamily get\+Set\+Transaction\+Isolation\+SQL (\begin{DoxyParamCaption}\item[{}]{\$level }\end{DoxyParamCaption})}
+
+Returns the SQL to set the transaction isolation level.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$level} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a2f9f3dfedc825a624b105fa5591c1fdf}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2f7841588847fe0424734904bee1dc19}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a2f7841588847fe0424734904bee1dc19}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getSmallIntTypeDeclarationSQL@{getSmallIntTypeDeclarationSQL}}
+\index{getSmallIntTypeDeclarationSQL@{getSmallIntTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getSmallIntTypeDeclarationSQL()}{getSmallIntTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Small\+Int\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Returns the SQL snippet that declares a 2 byte integer column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a2f7841588847fe0424734904bee1dc19}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_acf36895ef627b46e1f217a3b3578e374}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_acf36895ef627b46e1f217a3b3578e374}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getTimeTypeDeclarationSQL@{getTimeTypeDeclarationSQL}}
+\index{getTimeTypeDeclarationSQL@{getTimeTypeDeclarationSQL}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getTimeTypeDeclarationSQL()}{getTimeTypeDeclarationSQL()}}
+{\footnotesize\ttfamily get\+Time\+Type\+Declaration\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$column }\end{DoxyParamCaption})}
+
+Obtains DBMS specific SQL to be used to create time columns in statements like CREATE TABLE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_acf36895ef627b46e1f217a3b3578e374}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7b8e2ec30b20ab4e55881deb2e4ce8fe}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a7b8e2ec30b20ab4e55881deb2e4ce8fe}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getVarcharMaxLength@{getVarcharMaxLength}}
+\index{getVarcharMaxLength@{getVarcharMaxLength}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getVarcharMaxLength()}{getVarcharMaxLength()}}
+{\footnotesize\ttfamily get\+Varchar\+Max\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the maximum length of a varchar column.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000073}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a7b8e2ec30b20ab4e55881deb2e4ce8fe}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aae87d3ff0e100d15d85215dc118b7117}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_aae87d3ff0e100d15d85215dc118b7117}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!getVarcharTypeDeclarationSQLSnippet@{getVarcharTypeDeclarationSQLSnippet}}
+\index{getVarcharTypeDeclarationSQLSnippet@{getVarcharTypeDeclarationSQLSnippet}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{getVarcharTypeDeclarationSQLSnippet()}{getVarcharTypeDeclarationSQLSnippet()}}
+{\footnotesize\ttfamily get\+Varchar\+Type\+Declaration\+SQLSnippet (\begin{DoxyParamCaption}\item[{}]{\$length,  }\item[{}]{\$fixed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | false & {\em \$length} & \\
+\hline
+bool & {\em \$fixed} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & If not supported on this platform.\\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_aae87d3ff0e100d15d85215dc118b7117}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab7e85c57ffa161f6ba6743d55ebfcfd6}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_ab7e85c57ffa161f6ba6743d55ebfcfd6}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!initializeDoctrineTypeMappings@{initializeDoctrineTypeMappings}}
+\index{initializeDoctrineTypeMappings@{initializeDoctrineTypeMappings}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{initializeDoctrineTypeMappings()}{initializeDoctrineTypeMappings()}}
+{\footnotesize\ttfamily initialize\+Doctrine\+Type\+Mappings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Lazy load Doctrine Type Mappings.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_ab7e85c57ffa161f6ba6743d55ebfcfd6}{Abstract\+Platform}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_maria_d_b_platform_ab7e85c57ffa161f6ba6743d55ebfcfd6}{Maria\+DBPlatform}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_my_s_q_l57_platform_ab7e85c57ffa161f6ba6743d55ebfcfd6}{My\+SQL57\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a01967044348ec336728cc930b2eeb566}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a01967044348ec336728cc930b2eeb566}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!prefersIdentityColumns@{prefersIdentityColumns}}
+\index{prefersIdentityColumns@{prefersIdentityColumns}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{prefersIdentityColumns()}{prefersIdentityColumns()}}
+{\footnotesize\ttfamily prefers\+Identity\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Whether the platform prefers identity columns (eg. autoincrement) for ID generation. Subclasses should override this method to return TRUE if they prefer identity columns.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000102}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000064}{Deprecated}}]\end{DoxyRefDesc}
+
+
+My\+SQL prefers \char`\"{}autoincrement\char`\"{} identity columns since sequences can only be emulated with a table. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a01967044348ec336728cc930b2eeb566}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a720faaf167cbc9cbfccb43b8879aea7f}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a720faaf167cbc9cbfccb43b8879aea7f}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!quoteStringLiteral@{quoteStringLiteral}}
+\index{quoteStringLiteral@{quoteStringLiteral}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{quoteStringLiteral()}{quoteStringLiteral()}}
+{\footnotesize\ttfamily quote\+String\+Literal (\begin{DoxyParamCaption}\item[{}]{\$str }\end{DoxyParamCaption})}
+
+\{Quotes a literal string. This method is NOT meant to fix SQL injections! It is only meant to escape this platform\textquotesingle{}s string literal quote character inside the given literal string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$str} & The literal string to be quoted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The quoted literal string.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a720faaf167cbc9cbfccb43b8879aea7f}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a337c92b5bee4600cf73a47d072ef50af}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a337c92b5bee4600cf73a47d072ef50af}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!supportsColumnCollation@{supportsColumnCollation}}
+\index{supportsColumnCollation@{supportsColumnCollation}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{supportsColumnCollation()}{supportsColumnCollation()}}
+{\footnotesize\ttfamily supports\+Column\+Collation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Does this platform support column collation?
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a337c92b5bee4600cf73a47d072ef50af}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a47405357f1ac52dd836b8e3618afab04}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a47405357f1ac52dd836b8e3618afab04}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!supportsColumnLengthIndexes@{supportsColumnLengthIndexes}}
+\index{supportsColumnLengthIndexes@{supportsColumnLengthIndexes}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{supportsColumnLengthIndexes()}{supportsColumnLengthIndexes()}}
+{\footnotesize\ttfamily supports\+Column\+Length\+Indexes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Whether the platform supports indexes with column length definitions. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a47405357f1ac52dd836b8e3618afab04}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1ad0b04abece9baae2835717c77e59e5}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a1ad0b04abece9baae2835717c77e59e5}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!supportsIdentityColumns@{supportsIdentityColumns}}
+\index{supportsIdentityColumns@{supportsIdentityColumns}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{supportsIdentityColumns()}{supportsIdentityColumns()}}
+{\footnotesize\ttfamily supports\+Identity\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Whether the platform supports identity columns.
+
+Identity columns are columns that receive an auto-\/generated value from the database on insert of a row.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+
+My\+SQL supports this through AUTO\+\_\+\+INCREMENT columns. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a1ad0b04abece9baae2835717c77e59e5}{Abstract\+Platform}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a65e77f2872c978a862381d71d7c7d636}\label{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_my_s_q_l_platform_a65e77f2872c978a862381d71d7c7d636}} 
+\index{AbstractMySQLPlatform@{AbstractMySQLPlatform}!supportsInlineColumnComments@{supportsInlineColumnComments}}
+\index{supportsInlineColumnComments@{supportsInlineColumnComments}!AbstractMySQLPlatform@{AbstractMySQLPlatform}}
+\doxysubsubsection{\texorpdfstring{supportsInlineColumnComments()}{supportsInlineColumnComments()}}
+{\footnotesize\ttfamily supports\+Inline\+Column\+Comments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Whether this platform support to add inline column comments as postfix.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a65e77f2872c978a862381d71d7c7d636}{Abstract\+Platform}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Platforms/Abstract\+My\+SQLPlatform.\+php\end{DoxyCompactItemize}

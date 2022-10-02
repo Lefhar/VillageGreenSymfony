@@ -1,0 +1,94 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache}{}\doxysection{Query\+Cache Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache}\index{QueryCache@{QueryCache}}
+Inheritance diagram for Query\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aff0bf28a9ab25ed42d07f2aee794783e}{put}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} \$key, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} \$rsm, \$result, array \$hints=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aecba60d39c275c439222cf6aa8432b6b}{get}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}} \$key, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} \$rsm, array \$hints=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_ab955facad00afb9d014661f76cb2a659}{get\+Region}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for caches capable of storing query results. These caches should only concern themselves with storing the matching result ids. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aa821bec12eaa7e0f649397c9675ff505}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{QueryCache@{QueryCache}!clear@{clear}}
+\index{clear@{clear}!QueryCache@{QueryCache}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_query_cache_aa821bec12eaa7e0f649397c9675ff505}{Default\+Query\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aecba60d39c275c439222cf6aa8432b6b}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aecba60d39c275c439222cf6aa8432b6b}} 
+\index{QueryCache@{QueryCache}!get@{get}}
+\index{get@{get}!QueryCache@{QueryCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}}}]{\$rsm,  }\item[{array}]{\$hints = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$hints} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_query_cache_aecba60d39c275c439222cf6aa8432b6b}{Default\+Query\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_ab955facad00afb9d014661f76cb2a659}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_ab955facad00afb9d014661f76cb2a659}} 
+\index{QueryCache@{QueryCache}!getRegion@{getRegion}}
+\index{getRegion@{getRegion}!QueryCache@{QueryCache}}
+\doxysubsubsection{\texorpdfstring{getRegion()}{getRegion()}}
+{\footnotesize\ttfamily get\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region}{Region}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_query_cache_ab955facad00afb9d014661f76cb2a659}{Default\+Query\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aff0bf28a9ab25ed42d07f2aee794783e}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_aff0bf28a9ab25ed42d07f2aee794783e}} 
+\index{QueryCache@{QueryCache}!put@{put}}
+\index{put@{put}!QueryCache@{QueryCache}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Query\+Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}}}]{\$rsm,  }\item[{}]{\$result,  }\item[{array}]{\$hints = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$result} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$hints} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_query_cache_aff0bf28a9ab25ed42d07f2aee794783e}{Default\+Query\+Cache}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/Query\+Cache.\+php\end{DoxyCompactItemize}

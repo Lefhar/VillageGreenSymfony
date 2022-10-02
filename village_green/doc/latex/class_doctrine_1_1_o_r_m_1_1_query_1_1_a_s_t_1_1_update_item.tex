@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}{}\doxysection{Update\+Item Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}\index{UpdateItem@{UpdateItem}}
+Inheritance diagram for Update\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a943d58f18ee7ea23b084841409f30196}{\+\_\+\+\_\+construct}} (\$path\+Expression, \$new\+Value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_aa43e751e13dfb7df8c85f74517b1f263}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_aa43e751e13dfb7df8c85f74517b1f263}} 
+{\bfseries \$path\+Expression}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a0cb21000f70c1b33e05b6e95b4f70c64}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a0cb21000f70c1b33e05b6e95b4f70c64}} 
+{\bfseries \$new\+Value}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}{Update\+Item}} \+::= \mbox{[}Identification\+Variable \char`\"{}.\char`\"{}\mbox{]} \{State\+Field $\vert$ Single\+Valued\+Association\+Field\} \char`\"{}=\char`\"{} New\+Value New\+Value \+::= \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_arithmetic_expression}{Simple\+Arithmetic\+Expression}} $\vert$ String\+Primary $\vert$ Datetime\+Primary $\vert$ Boolean\+Primary $\vert$ Enum\+Primary $\vert$ Simple\+Entity\+Expression $\vert$ \char`\"{}\+NULL\char`\"{}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a943d58f18ee7ea23b084841409f30196}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a943d58f18ee7ea23b084841409f30196}} 
+\index{UpdateItem@{UpdateItem}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UpdateItem@{UpdateItem}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$path\+Expression,  }\item[{}]{\$new\+Value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression}{Path\+Expression}} & {\em \$path\+Expression} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_input_parameter}{Input\+Parameter}} | \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression}{Arithmetic\+Expression}} | null & {\em \$new\+Value} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{UpdateItem@{UpdateItem}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!UpdateItem@{UpdateItem}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Update\+Item.\+php\end{DoxyCompactItemize}

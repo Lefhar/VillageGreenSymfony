@@ -1,0 +1,41 @@
+\hypertarget{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection}{}\doxysection{Intersection Class Reference}
+\label{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection}\index{Intersection@{Intersection}}
+Inheritance diagram for Intersection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection_a66c0bd71b182b3e6d120705f4e011f0c}{\+\_\+\+\_\+construct}} (array \$types)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Value Object representing a \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_compound}{Compound}} \mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}}.
+
+A \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection}{Intersection}} \mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}} is not so much a special keyword or object reference but is a series of \mbox{\hyperlink{namespacephp_documentor_1_1_reflection_1_1_types}{Types}} that are separated using an AND operator ({\ttfamily \&}). \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_this}{This}} combination of types signifies that whatever is associated with this \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection}{Intersection}} type may contain a value with any of the given types.
+
+@psalm-\/immutable 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection_a66c0bd71b182b3e6d120705f4e011f0c}\label{classphp_documentor_1_1_reflection_1_1_types_1_1_intersection_a66c0bd71b182b3e6d120705f4e011f0c}} 
+\index{Intersection@{Intersection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$types }\end{DoxyParamCaption})}
+
+Initializes a intersection type (i.\+e. {\ttfamily \textbackslash{}A\&\textbackslash{}B}) and tests if the provided types all implement the \mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}} interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$\+Type$>$} & \$types \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/phpdocumentor/type-\/resolver/src/\+Types/Intersection.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,1381 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser}{}\doxysection{Parser Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser}\index{Parser@{Parser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a03cffdafca1956a6b911a75e90c8b4da}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} \$query)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a276f1c7b470ff805fa2891b338d5b177}{set\+Custom\+Output\+Tree\+Walker}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6d9e574d4c8707082dafa021840b1961}{add\+Custom\+Tree\+Walker}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a41904927ec501424d235015965e8cdee}{get\+Lexer}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac396c020c74557596e136eab3119bf4f}{get\+Parser\+Result}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae2b0e1dbe7640aefaf7d54c6a94d08fe}{get\+Entity\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a99d6ce1ecccfd93456c2e4710d28622b}{get\+AST}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a23544c9dd5c6448b8192a99b5c36c469}{match}} (\$token)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a05a7033ebe3fd20333a376de52d2a6e6}{free}} (\$deep=false, \$position=0)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a38d99acc70a1d8fd8f94455743b2d237}{parse}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af5d7d0cccb97806a1ecfe091ca818171}{syntax\+Error}} (\$expected=\textquotesingle{}\textquotesingle{}, \$token=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8481cf396ae019723b15ec3e9fcda589}{semantical\+Error}} (\$message=\textquotesingle{}\textquotesingle{}, \$token=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a71cf4305fcc0e36c9d893d561c3cae54}{Query\+Language}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9fca7b84b3d2a55784f433e429b8acac}{Select\+Statement}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5af74ab1c0a856fcb7ce4f76b4b380b7}{Update\+Statement}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aaf7cc18a84766bb5f396f21a8ce5249f}{Delete\+Statement}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac365712d88ba63a1bcb8176417495fac}{Identification\+Variable}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a760a98f9408762b8810bafc7e51dfc2b}{Alias\+Identification\+Variable}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a72382c1eeed344e83b555a56d25fd2eb}{Abstract\+Schema\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a58aba15e3f82bf8bcaa704989695e300}{Alias\+Result\+Variable}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af0c4795c2f591669ea9bb8d3edb41f3a}{Result\+Variable}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_acb870d31e2cb8bdade935c89761311dc}{Join\+Association\+Path\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9544e87d1e15cff1b60f26113a8564b1}{Path\+Expression}} (\$expected\+Types)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a58a6e1c310166535b4206adfd597ac07}{Association\+Path\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_acecdb7f75b98c0be4b593b1f5ae1d89f}{Single\+Valued\+Path\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3bdd006d60b2e21289b754bce78b3653}{State\+Field\+Path\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a91f2b7f38ecc0f9662fe839286fc533e}{Single\+Valued\+Association\+Path\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae7289adcc7711c94eecc872fb83bbc7b}{Collection\+Valued\+Path\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aff983b2da2bc42b939b901675e0240ab}{Select\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8956e1dfcec83213640201b47f850f09}{Simple\+Select\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab87ebf3d087c47e381492a6bf7af1573}{Update\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9b3eb3938e2d2a93f650432d55570f8c}{Delete\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a20eb5cd5979674d2d3ce51120ebd10fd}{From\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2368278d3291103a42dc3dc2fb09b49d}{Subselect\+From\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0416cb705ff794a6da911b373081fae9}{Where\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8b5f39d0642e84994e23c45dfae54437}{Having\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8193241bce0413b3df3c37448210747a}{Group\+By\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ade12f6152416ee7fe3151465a221c039}{Order\+By\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2d436715350293d8a2891ea004a6bf4f}{Subselect}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abac1bc172391aa5461b12f33c230ad2a}{Update\+Item}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3b827169f26d9680045340a84b2ed3e1}{Group\+By\+Item}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a86fdbf5bb90387433a8d25efb2aa9cf0}{Order\+By\+Item}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa0b5c32a8a55d3386424d25f9aaf773d}{New\+Value}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_adbb4ce85f71e7b99bf41cff27b240520}{Identification\+Variable\+Declaration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a03bfc45788d192a79b0bf7030fc0a738}{Subselect\+Identification\+Variable\+Declaration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af7da1cd77b478e2dc66b37eeeb35aa67}{Join}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae30865d0bdacf3ccfc90ac3ecac23381}{Range\+Variable\+Declaration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7bd667582aa032a6b7ba589bd83cc0e9}{Join\+Association\+Declaration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0b01b3b5b53370db589b6a4a823b9abd}{Partial\+Object\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab515881ffeff8f2e9d728089989152df}{New\+Object\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a306c4e2b9134cee7ee8803e5bd726fa8}{New\+Object\+Arg}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ad7cefb40cf5849c439805396ecd350dd}{Index\+By}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6703a3cce69e56ed41abe4d0121a1b4d}{Scalar\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2c451153339c98f19f9a5ba5c3e8cf54}{Case\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a124230d234ccbae279ce45e2eba5903f}{Coalesce\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a16d17b23bc4e28bfb5b29c73987193a4}{Null\+If\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aefe5cd25f1e27ba5b182f6bd08f17b46}{General\+Case\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa1a7563af39802a765700e3b3405a644}{Simple\+Case\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a38a4e63ba4e1416666e042dd5a6ca158}{When\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0aa5b4ca42186735d7f1af81b5052079}{Simple\+When\+Clause}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a714f08b840768701716398ee9fa5368e}{Select\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab184d533aa16b951aa9f589d0decda71}{Simple\+Select\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aea6d577e1295ec7e5630bd7a1dcf2673}{Conditional\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae2705e7f8cb2c8aaf3556b4a1f5dad60}{Conditional\+Term}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac36d789ad25e95337be9d2a1745601d4}{Conditional\+Factor}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abdedb9cbd9c8f61bf4633f9f978e4da3}{Conditional\+Primary}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a1030220b1ce73aa3b55f85cb208ab9d4}{Simple\+Conditional\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8f9c808f2f12a15ac04ef7172a64355e}{Empty\+Collection\+Comparison\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3dea6a26078ee8fe09415534f3727950}{Collection\+Member\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9784d5d367dedd98ed04e2fa348f074f}{Literal}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a69eae82e025035b6fd4daf1c3fc0a1f1}{In\+Parameter}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8f557722160b4ecf75d92b8acf001453}{Input\+Parameter}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0d3ee74549bcd3fa67a52fc440405da1}{Arithmetic\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af65d55662eb1330137689da79966c500}{Simple\+Arithmetic\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a59a385031d174423714ef25ddf70f543}{Arithmetic\+Term}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9752c91f6f8acdfb53892aad96c46019}{Arithmetic\+Factor}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac0aa5aee024b64d44ec7f5da8a8e9b6a}{Arithmetic\+Primary}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5ea92ddb5401a90d964924e744c6e760}{String\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a79145d98ab0356db4067f41a1d1b618f}{String\+Primary}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a08d2d4ffc524a8c456c466538d321a37}{Entity\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7f11bb7fc591526844ac3333ece8e052}{Simple\+Entity\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa372d809ae065d56b631e0203f99a967}{Aggregate\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af210d3ef32ce621a59e35b3e54816f20}{Quantified\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a16d495bd438b4308072520d53b283fa9}{Between\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8b1fec47b24eb0e3bf70bd2d98e089eb}{Comparison\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a177b4133b8be9c5a10c1fb4751cd428e}{In\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a891678597f45892993c33013c7e9486e}{Instance\+Of\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5fce0a16b9ed3f6b2218d2c3d3ef0860}{Instance\+Of\+Parameter}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0f86e732d099bdda59d4f45b6dd64e2e}{Like\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6867ff8b86b9bb9121d6db822ec308d5}{Null\+Comparison\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7cf040c91264c839d9d7ed55f01d215f}{Exists\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af856eb69103388385ff00566f2a41541}{Comparison\+Operator}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abe204710cbfc4cc10e9ca17669061e84}{Function\+Declaration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a32f8da37e2adb4022cc954fbaad9dc43}{Functions\+Returning\+Numerics}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_affe15f5557014e00206d4dd219dcf862}{Custom\+Functions\+Returning\+Numerics}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af335e7c8010e218273b70b35c6ea8e2c}{Functions\+Returning\+Datetime}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a384b4c3984399cfb966dbd902f29cdc7}{Custom\+Functions\+Returning\+Datetime}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af8a76d179c6881a9133bdf5d92ff9707}{Functions\+Returning\+Strings}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a96aae714cb22d1125af89ffbc3d8c13c}{Custom\+Functions\+Returning\+Strings}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An LL($\ast$) recursive-\/descent parser for the context-\/free grammar of the Doctrine \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} Language. Parses a DQL query, reports any errors in it, and generates an AST. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a03cffdafca1956a6b911a75e90c8b4da}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a03cffdafca1956a6b911a75e90c8b4da}} 
+\index{Parser@{Parser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}}}]{\$query }\end{DoxyParamCaption})}
+
+Creates a new query parser object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} & {\em \$query} & The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} to parse. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a72382c1eeed344e83b555a56d25fd2eb}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a72382c1eeed344e83b555a56d25fd2eb}} 
+\index{Parser@{Parser}!AbstractSchemaName@{AbstractSchemaName}}
+\index{AbstractSchemaName@{AbstractSchemaName}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{AbstractSchemaName()}{AbstractSchemaName()}}
+{\footnotesize\ttfamily Abstract\+Schema\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Abstract\+Schema\+Name \+::= fully\+\_\+qualified\+\_\+name $\vert$ aliased\+\_\+name $\vert$ identifier
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6d9e574d4c8707082dafa021840b1961}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6d9e574d4c8707082dafa021840b1961}} 
+\index{Parser@{Parser}!addCustomTreeWalker@{addCustomTreeWalker}}
+\index{addCustomTreeWalker@{addCustomTreeWalker}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{addCustomTreeWalker()}{addCustomTreeWalker()}}
+{\footnotesize\ttfamily add\+Custom\+Tree\+Walker (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Adds a custom tree walker for modifying the AST.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa372d809ae065d56b631e0203f99a967}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa372d809ae065d56b631e0203f99a967}} 
+\index{Parser@{Parser}!AggregateExpression@{AggregateExpression}}
+\index{AggregateExpression@{AggregateExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{AggregateExpression()}{AggregateExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_aggregate_expression}{Aggregate\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Aggregate\+Expression \+::= (\char`\"{}\+AVG\char`\"{} $\vert$ \char`\"{}\+MAX\char`\"{} $\vert$ \char`\"{}\+MIN\char`\"{} $\vert$ \char`\"{}\+SUM\char`\"{} $\vert$ \char`\"{}\+COUNT\char`\"{}) \char`\"{}(\char`\"{} \mbox{[}\char`\"{}\+DISTINCT\char`\"{}\mbox{]} Simple\+Arithmetic\+Expression \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Aggregate\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a760a98f9408762b8810bafc7e51dfc2b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a760a98f9408762b8810bafc7e51dfc2b}} 
+\index{Parser@{Parser}!AliasIdentificationVariable@{AliasIdentificationVariable}}
+\index{AliasIdentificationVariable@{AliasIdentificationVariable}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{AliasIdentificationVariable()}{AliasIdentificationVariable()}}
+{\footnotesize\ttfamily Alias\+Identification\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Alias\+Identification\+Variable = identifier
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a58aba15e3f82bf8bcaa704989695e300}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a58aba15e3f82bf8bcaa704989695e300}} 
+\index{Parser@{Parser}!AliasResultVariable@{AliasResultVariable}}
+\index{AliasResultVariable@{AliasResultVariable}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{AliasResultVariable()}{AliasResultVariable()}}
+{\footnotesize\ttfamily Alias\+Result\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Alias\+Result\+Variable \+::= identifier
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0d3ee74549bcd3fa67a52fc440405da1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0d3ee74549bcd3fa67a52fc440405da1}} 
+\index{Parser@{Parser}!ArithmeticExpression@{ArithmeticExpression}}
+\index{ArithmeticExpression@{ArithmeticExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ArithmeticExpression()}{ArithmeticExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression}{Arithmetic\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Arithmetic\+Expression \+::= Simple\+Arithmetic\+Expression $\vert$ \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Arithmetic\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9752c91f6f8acdfb53892aad96c46019}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9752c91f6f8acdfb53892aad96c46019}} 
+\index{Parser@{Parser}!ArithmeticFactor@{ArithmeticFactor}}
+\index{ArithmeticFactor@{ArithmeticFactor}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ArithmeticFactor()}{ArithmeticFactor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_factor}{Arithmetic\+Factor}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Arithmetic\+Factor \+::= \mbox{[}(\char`\"{}+\char`\"{} $\vert$ \char`\"{}-\/\char`\"{})\mbox{]} Arithmetic\+Primary
+
+\begin{DoxyReturn}{Returns}
+Arithmetic\+Factor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac0aa5aee024b64d44ec7f5da8a8e9b6a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac0aa5aee024b64d44ec7f5da8a8e9b6a}} 
+\index{Parser@{Parser}!ArithmeticPrimary@{ArithmeticPrimary}}
+\index{ArithmeticPrimary@{ArithmeticPrimary}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ArithmeticPrimary()}{ArithmeticPrimary()}}
+{\footnotesize\ttfamily Arithmetic\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Arithmetic\+Primary \+::= Single\+Valued\+Path\+Expression $\vert$ Literal $\vert$ Parenthesis\+Expression $\vert$ Functions\+Returning\+Numerics $\vert$ Aggregate\+Expression $\vert$ Functions\+Returning\+Strings $\vert$ Functions\+Returning\+Datetime $\vert$ Identification\+Variable $\vert$ Result\+Variable $\vert$ Input\+Parameter $\vert$ Case\+Expression
+
+\begin{DoxyReturn}{Returns}
+Node$\vert$string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a59a385031d174423714ef25ddf70f543}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a59a385031d174423714ef25ddf70f543}} 
+\index{Parser@{Parser}!ArithmeticTerm@{ArithmeticTerm}}
+\index{ArithmeticTerm@{ArithmeticTerm}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ArithmeticTerm()}{ArithmeticTerm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_term}{Arithmetic\+Term}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Arithmetic\+Term \+::= Arithmetic\+Factor \{(\char`\"{}$\ast$\char`\"{} $\vert$ \char`\"{}/\char`\"{}) Arithmetic\+Factor\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Arithmetic\+Term 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a58a6e1c310166535b4206adfd597ac07}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a58a6e1c310166535b4206adfd597ac07}} 
+\index{Parser@{Parser}!AssociationPathExpression@{AssociationPathExpression}}
+\index{AssociationPathExpression@{AssociationPathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{AssociationPathExpression()}{AssociationPathExpression()}}
+{\footnotesize\ttfamily Association\+Path\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Association\+Path\+Expression \+::= Collection\+Valued\+Path\+Expression $\vert$ Single\+Valued\+Association\+Path\+Expression
+
+\begin{DoxyReturn}{Returns}
+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a16d495bd438b4308072520d53b283fa9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a16d495bd438b4308072520d53b283fa9}} 
+\index{Parser@{Parser}!BetweenExpression@{BetweenExpression}}
+\index{BetweenExpression@{BetweenExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{BetweenExpression()}{BetweenExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_between_expression}{Between\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Between\+Expression \+::= Arithmetic\+Expression \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+BETWEEN\char`\"{} Arithmetic\+Expression \char`\"{}\+AND\char`\"{} Arithmetic\+Expression
+
+\begin{DoxyReturn}{Returns}
+Between\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2c451153339c98f19f9a5ba5c3e8cf54}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2c451153339c98f19f9a5ba5c3e8cf54}} 
+\index{Parser@{Parser}!CaseExpression@{CaseExpression}}
+\index{CaseExpression@{CaseExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CaseExpression()}{CaseExpression()}}
+{\footnotesize\ttfamily Case\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Case\+Expression \+::= General\+Case\+Expression $\vert$ Simple\+Case\+Expression $\vert$ Coalesce\+Expression $\vert$ Nullif\+Expression General\+Case\+Expression \+::= \char`\"{}\+CASE\char`\"{} When\+Clause \{When\+Clause\}$\ast$ \char`\"{}\+ELSE\char`\"{} Scalar\+Expression \char`\"{}\+END\char`\"{} When\+Clause \+::= \char`\"{}\+WHEN\char`\"{} Conditional\+Expression \char`\"{}\+THEN\char`\"{} Scalar\+Expression Simple\+Case\+Expression \+::= \char`\"{}\+CASE\char`\"{} Case\+Operand Simple\+When\+Clause \{Simple\+When\+Clause\}$\ast$ \char`\"{}\+ELSE\char`\"{} Scalar\+Expression \char`\"{}\+END\char`\"{} Case\+Operand \+::= State\+Field\+Path\+Expression $\vert$ Type\+Discriminator Simple\+When\+Clause \+::= \char`\"{}\+WHEN\char`\"{} Scalar\+Expression \char`\"{}\+THEN\char`\"{} Scalar\+Expression Coalesce\+Expression \+::= \char`\"{}\+COALESCE\char`\"{} \char`\"{}(\char`\"{} Scalar\+Expression \{\char`\"{},\char`\"{} Scalar\+Expression\}$\ast$ \char`\"{})\char`\"{} Nullif\+Expression \+::= \char`\"{}\+NULLIF\char`\"{} \char`\"{}(\char`\"{} Scalar\+Expression \char`\"{},\char`\"{} Scalar\+Expression \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+mixed One of the possible expressions or subexpressions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a124230d234ccbae279ce45e2eba5903f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a124230d234ccbae279ce45e2eba5903f}} 
+\index{Parser@{Parser}!CoalesceExpression@{CoalesceExpression}}
+\index{CoalesceExpression@{CoalesceExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CoalesceExpression()}{CoalesceExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_coalesce_expression}{Coalesce\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Coalesce\+Expression \+::= \char`\"{}\+COALESCE\char`\"{} \char`\"{}(\char`\"{} Scalar\+Expression \{\char`\"{},\char`\"{} Scalar\+Expression\}$\ast$ \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Coalesce\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3dea6a26078ee8fe09415534f3727950}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3dea6a26078ee8fe09415534f3727950}} 
+\index{Parser@{Parser}!CollectionMemberExpression@{CollectionMemberExpression}}
+\index{CollectionMemberExpression@{CollectionMemberExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CollectionMemberExpression()}{CollectionMemberExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression}{Collection\+Member\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Collection\+Member\+Expression \+::= Entity\+Expression \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+MEMBER\char`\"{} \mbox{[}\char`\"{}\+OF\char`\"{}\mbox{]} Collection\+Valued\+Path\+Expression
+
+Entity\+Expression \+::= Single\+Valued\+Association\+Path\+Expression $\vert$ Simple\+Entity\+Expression Simple\+Entity\+Expression \+::= Identification\+Variable $\vert$ Input\+Parameter
+
+\begin{DoxyReturn}{Returns}
+Collection\+Member\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae7289adcc7711c94eecc872fb83bbc7b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae7289adcc7711c94eecc872fb83bbc7b}} 
+\index{Parser@{Parser}!CollectionValuedPathExpression@{CollectionValuedPathExpression}}
+\index{CollectionValuedPathExpression@{CollectionValuedPathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CollectionValuedPathExpression()}{CollectionValuedPathExpression()}}
+{\footnotesize\ttfamily Collection\+Valued\+Path\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Collection\+Valued\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} Collection\+Valued\+Association\+Field
+
+\begin{DoxyReturn}{Returns}
+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8b1fec47b24eb0e3bf70bd2d98e089eb}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8b1fec47b24eb0e3bf70bd2d98e089eb}} 
+\index{Parser@{Parser}!ComparisonExpression@{ComparisonExpression}}
+\index{ComparisonExpression@{ComparisonExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ComparisonExpression()}{ComparisonExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_comparison_expression}{Comparison\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Comparison\+Expression \+::= Arithmetic\+Expression Comparison\+Operator ( Quantified\+Expression $\vert$ Arithmetic\+Expression )
+
+\begin{DoxyReturn}{Returns}
+Comparison\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af856eb69103388385ff00566f2a41541}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af856eb69103388385ff00566f2a41541}} 
+\index{Parser@{Parser}!ComparisonOperator@{ComparisonOperator}}
+\index{ComparisonOperator@{ComparisonOperator}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ComparisonOperator()}{ComparisonOperator()}}
+{\footnotesize\ttfamily Comparison\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Comparison\+Operator \+::= \char`\"{}=\char`\"{} $\vert$ \char`\"{}$<$\char`\"{} $\vert$ \char`\"{}$<$=\char`\"{} $\vert$ \char`\"{}$<$$>$\char`\"{} $\vert$ \char`\"{}$>$\char`\"{} $\vert$ \char`\"{}$>$=\char`\"{} $\vert$ \char`\"{}!=\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aea6d577e1295ec7e5630bd7a1dcf2673}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aea6d577e1295ec7e5630bd7a1dcf2673}} 
+\index{Parser@{Parser}!ConditionalExpression@{ConditionalExpression}}
+\index{ConditionalExpression@{ConditionalExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ConditionalExpression()}{ConditionalExpression()}}
+{\footnotesize\ttfamily Conditional\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conditional\+Expression \+::= Conditional\+Term \{\char`\"{}\+OR\char`\"{} Conditional\+Term\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Conditional\+Expression$\vert$\+AST\textbackslash{}\+Conditional\+Factor$\vert$\+AST\textbackslash{}\+Conditional\+Primary$\vert$\+AST\textbackslash{}\+Conditional\+Term 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac36d789ad25e95337be9d2a1745601d4}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac36d789ad25e95337be9d2a1745601d4}} 
+\index{Parser@{Parser}!ConditionalFactor@{ConditionalFactor}}
+\index{ConditionalFactor@{ConditionalFactor}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ConditionalFactor()}{ConditionalFactor()}}
+{\footnotesize\ttfamily Conditional\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conditional\+Factor \+::= \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} Conditional\+Primary
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Conditional\+Factor$\vert$\+AST\textbackslash{}\+Conditional\+Primary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abdedb9cbd9c8f61bf4633f9f978e4da3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abdedb9cbd9c8f61bf4633f9f978e4da3}} 
+\index{Parser@{Parser}!ConditionalPrimary@{ConditionalPrimary}}
+\index{ConditionalPrimary@{ConditionalPrimary}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ConditionalPrimary()}{ConditionalPrimary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_conditional_primary}{Conditional\+Primary}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conditional\+Primary \+::= Simple\+Conditional\+Expression $\vert$ \char`\"{}(\char`\"{} Conditional\+Expression \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Conditional\+Primary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae2705e7f8cb2c8aaf3556b4a1f5dad60}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae2705e7f8cb2c8aaf3556b4a1f5dad60}} 
+\index{Parser@{Parser}!ConditionalTerm@{ConditionalTerm}}
+\index{ConditionalTerm@{ConditionalTerm}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ConditionalTerm()}{ConditionalTerm()}}
+{\footnotesize\ttfamily Conditional\+Term (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conditional\+Term \+::= Conditional\+Factor \{\char`\"{}\+AND\char`\"{} Conditional\+Factor\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Conditional\+Factor$\vert$\+AST\textbackslash{}\+Conditional\+Primary$\vert$\+AST\textbackslash{}\+Conditional\+Term 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a384b4c3984399cfb966dbd902f29cdc7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a384b4c3984399cfb966dbd902f29cdc7}} 
+\index{Parser@{Parser}!CustomFunctionsReturningDatetime@{CustomFunctionsReturningDatetime}}
+\index{CustomFunctionsReturningDatetime@{CustomFunctionsReturningDatetime}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CustomFunctionsReturningDatetime()}{CustomFunctionsReturningDatetime()}}
+{\footnotesize\ttfamily Custom\+Functions\+Returning\+Datetime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_affe15f5557014e00206d4dd219dcf862}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_affe15f5557014e00206d4dd219dcf862}} 
+\index{Parser@{Parser}!CustomFunctionsReturningNumerics@{CustomFunctionsReturningNumerics}}
+\index{CustomFunctionsReturningNumerics@{CustomFunctionsReturningNumerics}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CustomFunctionsReturningNumerics()}{CustomFunctionsReturningNumerics()}}
+{\footnotesize\ttfamily Custom\+Functions\+Returning\+Numerics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a96aae714cb22d1125af89ffbc3d8c13c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a96aae714cb22d1125af89ffbc3d8c13c}} 
+\index{Parser@{Parser}!CustomFunctionsReturningStrings@{CustomFunctionsReturningStrings}}
+\index{CustomFunctionsReturningStrings@{CustomFunctionsReturningStrings}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{CustomFunctionsReturningStrings()}{CustomFunctionsReturningStrings()}}
+{\footnotesize\ttfamily Custom\+Functions\+Returning\+Strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9b3eb3938e2d2a93f650432d55570f8c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9b3eb3938e2d2a93f650432d55570f8c}} 
+\index{Parser@{Parser}!DeleteClause@{DeleteClause}}
+\index{DeleteClause@{DeleteClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{DeleteClause()}{DeleteClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_clause}{Delete\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delete\+Clause \+::= \char`\"{}\+DELETE\char`\"{} \mbox{[}\char`\"{}\+FROM\char`\"{}\mbox{]} Abstract\+Schema\+Name \mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Identification\+Variable
+
+\begin{DoxyReturn}{Returns}
+Delete\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aaf7cc18a84766bb5f396f21a8ce5249f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aaf7cc18a84766bb5f396f21a8ce5249f}} 
+\index{Parser@{Parser}!DeleteStatement@{DeleteStatement}}
+\index{DeleteStatement@{DeleteStatement}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{DeleteStatement()}{DeleteStatement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_delete_statement}{Delete\+Statement}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delete\+Statement \+::= Delete\+Clause \mbox{[}Where\+Clause\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Delete\+Statement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8f9c808f2f12a15ac04ef7172a64355e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8f9c808f2f12a15ac04ef7172a64355e}} 
+\index{Parser@{Parser}!EmptyCollectionComparisonExpression@{EmptyCollectionComparisonExpression}}
+\index{EmptyCollectionComparisonExpression@{EmptyCollectionComparisonExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{EmptyCollectionComparisonExpression()}{EmptyCollectionComparisonExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_empty_collection_comparison_expression}{Empty\+Collection\+Comparison\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Empty\+Collection\+Comparison\+Expression \+::= Collection\+Valued\+Path\+Expression \char`\"{}\+IS\char`\"{} \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+EMPTY\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Empty\+Collection\+Comparison\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a08d2d4ffc524a8c456c466538d321a37}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a08d2d4ffc524a8c456c466538d321a37}} 
+\index{Parser@{Parser}!EntityExpression@{EntityExpression}}
+\index{EntityExpression@{EntityExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{EntityExpression()}{EntityExpression()}}
+{\footnotesize\ttfamily Entity\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Entity\+Expression \+::= Single\+Valued\+Association\+Path\+Expression $\vert$ Simple\+Entity\+Expression
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Input\+Parameter$\vert$\+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7cf040c91264c839d9d7ed55f01d215f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7cf040c91264c839d9d7ed55f01d215f}} 
+\index{Parser@{Parser}!ExistsExpression@{ExistsExpression}}
+\index{ExistsExpression@{ExistsExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ExistsExpression()}{ExistsExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_exists_expression}{Exists\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Exists\+Expression \+::= \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+EXISTS\char`\"{} \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Exists\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a05a7033ebe3fd20333a376de52d2a6e6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a05a7033ebe3fd20333a376de52d2a6e6}} 
+\index{Parser@{Parser}!free@{free}}
+\index{free@{free}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily free (\begin{DoxyParamCaption}\item[{}]{\$deep = {\ttfamily false},  }\item[{}]{\$position = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Frees this parser, enabling it to be reused.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$deep} & Whether to clean peek and reset errors. \\
+\hline
+int & {\em \$position} & Position to reset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a20eb5cd5979674d2d3ce51120ebd10fd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a20eb5cd5979674d2d3ce51120ebd10fd}} 
+\index{Parser@{Parser}!FromClause@{FromClause}}
+\index{FromClause@{FromClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{FromClause()}{FromClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_from_clause}{From\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+From\+Clause \+::= \char`\"{}\+FROM\char`\"{} Identification\+Variable\+Declaration \{\char`\"{},\char`\"{} Identification\+Variable\+Declaration\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+From\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abe204710cbfc4cc10e9ca17669061e84}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abe204710cbfc4cc10e9ca17669061e84}} 
+\index{Parser@{Parser}!FunctionDeclaration@{FunctionDeclaration}}
+\index{FunctionDeclaration@{FunctionDeclaration}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{FunctionDeclaration()}{FunctionDeclaration()}}
+{\footnotesize\ttfamily Function\+Declaration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+Declaration \+::= Functions\+Returning\+Strings $\vert$ Functions\+Returning\+Numerics $\vert$ Functions\+Returning\+Datetime
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af335e7c8010e218273b70b35c6ea8e2c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af335e7c8010e218273b70b35c6ea8e2c}} 
+\index{Parser@{Parser}!FunctionsReturningDatetime@{FunctionsReturningDatetime}}
+\index{FunctionsReturningDatetime@{FunctionsReturningDatetime}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{FunctionsReturningDatetime()}{FunctionsReturningDatetime()}}
+{\footnotesize\ttfamily Functions\+Returning\+Datetime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Functions\+Returning\+Date\+Time \+::= \char`\"{}\+CURRENT\+\_\+\+DATE\char`\"{} $\vert$ \char`\"{}\+CURRENT\+\_\+\+TIME\char`\"{} $\vert$ \char`\"{}\+CURRENT\+\_\+\+TIMESTAMP\char`\"{} $\vert$ \char`\"{}\+DATE\+\_\+\+ADD\char`\"{} \char`\"{}(\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} String\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+DATE\+\_\+\+SUB\char`\"{} \char`\"{}(\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} String\+Primary \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a32f8da37e2adb4022cc954fbaad9dc43}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a32f8da37e2adb4022cc954fbaad9dc43}} 
+\index{Parser@{Parser}!FunctionsReturningNumerics@{FunctionsReturningNumerics}}
+\index{FunctionsReturningNumerics@{FunctionsReturningNumerics}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{FunctionsReturningNumerics()}{FunctionsReturningNumerics()}}
+{\footnotesize\ttfamily Functions\+Returning\+Numerics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Functions\+Returning\+Numerics \+::= \char`\"{}\+LENGTH\char`\"{} \char`\"{}(\char`\"{} String\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+LOCATE\char`\"{} \char`\"{}(\char`\"{} String\+Primary \char`\"{},\char`\"{} String\+Primary \mbox{[}\char`\"{},\char`\"{} Simple\+Arithmetic\+Expression\mbox{]}\char`\"{})\char`\"{} $\vert$ \char`\"{}\+ABS\char`\"{} \char`\"{}(\char`\"{} Simple\+Arithmetic\+Expression \char`\"{})\char`\"{} $\vert$ \char`\"{}\+SQRT\char`\"{} \char`\"{}(\char`\"{} Simple\+Arithmetic\+Expression \char`\"{})\char`\"{} $\vert$ \char`\"{}\+MOD\char`\"{} \char`\"{}(\char`\"{} Simple\+Arithmetic\+Expression \char`\"{},\char`\"{} Simple\+Arithmetic\+Expression \char`\"{})\char`\"{} $\vert$ \char`\"{}\+SIZE\char`\"{} \char`\"{}(\char`\"{} Collection\+Valued\+Path\+Expression \char`\"{})\char`\"{} $\vert$ \char`\"{}\+DATE\+\_\+\+DIFF\char`\"{} \char`\"{}(\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} Arithmetic\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+BIT\+\_\+\+AND\char`\"{} \char`\"{}(\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} Arithmetic\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+BIT\+\_\+\+OR\char`\"{} \char`\"{}(\char`\"{} Arithmetic\+Primary \char`\"{},\char`\"{} Arithmetic\+Primary \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af8a76d179c6881a9133bdf5d92ff9707}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af8a76d179c6881a9133bdf5d92ff9707}} 
+\index{Parser@{Parser}!FunctionsReturningStrings@{FunctionsReturningStrings}}
+\index{FunctionsReturningStrings@{FunctionsReturningStrings}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{FunctionsReturningStrings()}{FunctionsReturningStrings()}}
+{\footnotesize\ttfamily Functions\+Returning\+Strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Functions\+Returning\+Strings \+::= \char`\"{}\+CONCAT\char`\"{} \char`\"{}(\char`\"{} String\+Primary \char`\"{},\char`\"{} String\+Primary \{\char`\"{},\char`\"{} String\+Primary\}$\ast$ \char`\"{})\char`\"{} $\vert$ \char`\"{}\+SUBSTRING\char`\"{} \char`\"{}(\char`\"{} String\+Primary \char`\"{},\char`\"{} Simple\+Arithmetic\+Expression \char`\"{},\char`\"{} Simple\+Arithmetic\+Expression \char`\"{})\char`\"{} $\vert$ \char`\"{}\+TRIM\char`\"{} \char`\"{}(\char`\"{} \mbox{[}\mbox{[}\char`\"{}\+LEADING\char`\"{} $\vert$ \char`\"{}\+TRAILING\char`\"{} $\vert$ \char`\"{}\+BOTH\char`\"{}\mbox{]} \mbox{[}char\mbox{]} \char`\"{}\+FROM\char`\"{}\mbox{]} String\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+LOWER\char`\"{} \char`\"{}(\char`\"{} String\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+UPPER\char`\"{} \char`\"{}(\char`\"{} String\+Primary \char`\"{})\char`\"{} $\vert$ \char`\"{}\+IDENTITY\char`\"{} \char`\"{}(\char`\"{} Single\+Valued\+Association\+Path\+Expression \{\char`\"{},\char`\"{} string\} \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Function\+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aefe5cd25f1e27ba5b182f6bd08f17b46}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aefe5cd25f1e27ba5b182f6bd08f17b46}} 
+\index{Parser@{Parser}!GeneralCaseExpression@{GeneralCaseExpression}}
+\index{GeneralCaseExpression@{GeneralCaseExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{GeneralCaseExpression()}{GeneralCaseExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_general_case_expression}{General\+Case\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+General\+Case\+Expression \+::= \char`\"{}\+CASE\char`\"{} When\+Clause \{When\+Clause\}$\ast$ \char`\"{}\+ELSE\char`\"{} Scalar\+Expression \char`\"{}\+END\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+General\+Case\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a99d6ce1ecccfd93456c2e4710d28622b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a99d6ce1ecccfd93456c2e4710d28622b}} 
+\index{Parser@{Parser}!getAST@{getAST}}
+\index{getAST@{getAST}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{getAST()}{getAST()}}
+{\footnotesize\ttfamily get\+AST (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Parses and builds AST for the given \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}}.
+
+\begin{DoxyReturn}{Returns}
+Select\+Statement$\vert$\+Update\+Statement$\vert$\+Delete\+Statement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae2b0e1dbe7640aefaf7d54c6a94d08fe}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae2b0e1dbe7640aefaf7d54c6a94d08fe}} 
+\index{Parser@{Parser}!getEntityManager@{getEntityManager}}
+\index{getEntityManager@{getEntityManager}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{getEntityManager()}{getEntityManager()}}
+{\footnotesize\ttfamily get\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} used by the parser.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a41904927ec501424d235015965e8cdee}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a41904927ec501424d235015965e8cdee}} 
+\index{Parser@{Parser}!getLexer@{getLexer}}
+\index{getLexer@{getLexer}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{getLexer()}{getLexer()}}
+{\footnotesize\ttfamily get\+Lexer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the lexer used by the parser.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer}{Lexer}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac396c020c74557596e136eab3119bf4f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac396c020c74557596e136eab3119bf4f}} 
+\index{Parser@{Parser}!getParserResult@{getParserResult}}
+\index{getParserResult@{getParserResult}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{getParserResult()}{getParserResult()}}
+{\footnotesize\ttfamily get\+Parser\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}} that is being filled with information during parsing.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8193241bce0413b3df3c37448210747a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8193241bce0413b3df3c37448210747a}} 
+\index{Parser@{Parser}!GroupByClause@{GroupByClause}}
+\index{GroupByClause@{GroupByClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{GroupByClause()}{GroupByClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_group_by_clause}{Group\+By\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Group\+By\+Clause \+::= \char`\"{}\+GROUP\char`\"{} \char`\"{}\+BY\char`\"{} Group\+By\+Item \{\char`\"{},\char`\"{} Group\+By\+Item\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Group\+By\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3b827169f26d9680045340a84b2ed3e1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3b827169f26d9680045340a84b2ed3e1}} 
+\index{Parser@{Parser}!GroupByItem@{GroupByItem}}
+\index{GroupByItem@{GroupByItem}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{GroupByItem()}{GroupByItem()}}
+{\footnotesize\ttfamily Group\+By\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Group\+By\+Item \+::= Identification\+Variable $\vert$ Result\+Variable $\vert$ Single\+Valued\+Path\+Expression
+
+\begin{DoxyReturn}{Returns}
+string$\vert$\+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8b5f39d0642e84994e23c45dfae54437}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8b5f39d0642e84994e23c45dfae54437}} 
+\index{Parser@{Parser}!HavingClause@{HavingClause}}
+\index{HavingClause@{HavingClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{HavingClause()}{HavingClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_having_clause}{Having\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Having\+Clause \+::= \char`\"{}\+HAVING\char`\"{} Conditional\+Expression
+
+\begin{DoxyReturn}{Returns}
+Having\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac365712d88ba63a1bcb8176417495fac}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ac365712d88ba63a1bcb8176417495fac}} 
+\index{Parser@{Parser}!IdentificationVariable@{IdentificationVariable}}
+\index{IdentificationVariable@{IdentificationVariable}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{IdentificationVariable()}{IdentificationVariable()}}
+{\footnotesize\ttfamily Identification\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Identification\+Variable \+::= identifier
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_adbb4ce85f71e7b99bf41cff27b240520}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_adbb4ce85f71e7b99bf41cff27b240520}} 
+\index{Parser@{Parser}!IdentificationVariableDeclaration@{IdentificationVariableDeclaration}}
+\index{IdentificationVariableDeclaration@{IdentificationVariableDeclaration}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{IdentificationVariableDeclaration()}{IdentificationVariableDeclaration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_identification_variable_declaration}{Identification\+Variable\+Declaration}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Identification\+Variable\+Declaration \+::= Range\+Variable\+Declaration \mbox{[}Index\+By\mbox{]} \{Join\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Identification\+Variable\+Declaration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ad7cefb40cf5849c439805396ecd350dd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ad7cefb40cf5849c439805396ecd350dd}} 
+\index{Parser@{Parser}!IndexBy@{IndexBy}}
+\index{IndexBy@{IndexBy}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{IndexBy()}{IndexBy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_index_by}{Index\+By}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Index\+By \+::= \char`\"{}\+INDEX\char`\"{} \char`\"{}\+BY\char`\"{} Single\+Valued\+Path\+Expression
+
+\begin{DoxyReturn}{Returns}
+Index\+By 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a177b4133b8be9c5a10c1fb4751cd428e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a177b4133b8be9c5a10c1fb4751cd428e}} 
+\index{Parser@{Parser}!InExpression@{InExpression}}
+\index{InExpression@{InExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{InExpression()}{InExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_in_expression}{In\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+In\+Expression \+::= Single\+Valued\+Path\+Expression \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+IN\char`\"{} \char`\"{}(\char`\"{} (In\+Parameter \{\char`\"{},\char`\"{} In\+Parameter\}$\ast$ $\vert$ Subselect) \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+In\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a69eae82e025035b6fd4daf1c3fc0a1f1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a69eae82e025035b6fd4daf1c3fc0a1f1}} 
+\index{Parser@{Parser}!InParameter@{InParameter}}
+\index{InParameter@{InParameter}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{InParameter()}{InParameter()}}
+{\footnotesize\ttfamily In\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+In\+Parameter \+::= Arithmetic\+Expression $\vert$ Input\+Parameter
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Input\+Parameter$\vert$\+AST\textbackslash{}\+Arithmetic\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8f557722160b4ecf75d92b8acf001453}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8f557722160b4ecf75d92b8acf001453}} 
+\index{Parser@{Parser}!InputParameter@{InputParameter}}
+\index{InputParameter@{InputParameter}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{InputParameter()}{InputParameter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_input_parameter}{Input\+Parameter}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Input\+Parameter \+::= Positional\+Parameter $\vert$ Named\+Parameter
+
+\begin{DoxyReturn}{Returns}
+Input\+Parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a891678597f45892993c33013c7e9486e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a891678597f45892993c33013c7e9486e}} 
+\index{Parser@{Parser}!InstanceOfExpression@{InstanceOfExpression}}
+\index{InstanceOfExpression@{InstanceOfExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{InstanceOfExpression()}{InstanceOfExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression}{Instance\+Of\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Instance\+Of\+Expression \+::= Identification\+Variable \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+INSTANCE\char`\"{} \mbox{[}\char`\"{}\+OF\char`\"{}\mbox{]} (Instance\+Of\+Parameter $\vert$ \char`\"{}(\char`\"{} Instance\+Of\+Parameter \{\char`\"{},\char`\"{} Instance\+Of\+Parameter\}$\ast$ \char`\"{})\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+Instance\+Of\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5fce0a16b9ed3f6b2218d2c3d3ef0860}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5fce0a16b9ed3f6b2218d2c3d3ef0860}} 
+\index{Parser@{Parser}!InstanceOfParameter@{InstanceOfParameter}}
+\index{InstanceOfParameter@{InstanceOfParameter}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{InstanceOfParameter()}{InstanceOfParameter()}}
+{\footnotesize\ttfamily Instance\+Of\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Instance\+Of\+Parameter \+::= Abstract\+Schema\+Name $\vert$ Input\+Parameter
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af7da1cd77b478e2dc66b37eeeb35aa67}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af7da1cd77b478e2dc66b37eeeb35aa67}} 
+\index{Parser@{Parser}!Join@{Join}}
+\index{Join@{Join}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{Join()}{Join()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join}{Join}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Join \+::= \mbox{[}\char`\"{}\+LEFT\char`\"{} \mbox{[}\char`\"{}\+OUTER\char`\"{}\mbox{]} $\vert$ \char`\"{}\+INNER\char`\"{}\mbox{]} \char`\"{}\+JOIN\char`\"{} (Join\+Association\+Declaration $\vert$ Range\+Variable\+Declaration) \mbox{[}\char`\"{}\+WITH\char`\"{} Conditional\+Expression\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Join 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7bd667582aa032a6b7ba589bd83cc0e9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7bd667582aa032a6b7ba589bd83cc0e9}} 
+\index{Parser@{Parser}!JoinAssociationDeclaration@{JoinAssociationDeclaration}}
+\index{JoinAssociationDeclaration@{JoinAssociationDeclaration}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{JoinAssociationDeclaration()}{JoinAssociationDeclaration()}}
+{\footnotesize\ttfamily Join\+Association\+Declaration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Join\+Association\+Declaration \+::= Join\+Association\+Path\+Expression \mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Identification\+Variable \mbox{[}Index\+By\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Join\+Association\+Declaration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_acb870d31e2cb8bdade935c89761311dc}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_acb870d31e2cb8bdade935c89761311dc}} 
+\index{Parser@{Parser}!JoinAssociationPathExpression@{JoinAssociationPathExpression}}
+\index{JoinAssociationPathExpression@{JoinAssociationPathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{JoinAssociationPathExpression()}{JoinAssociationPathExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_join_association_path_expression}{Join\+Association\+Path\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Join\+Association\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} (Collection\+Valued\+Association\+Field $\vert$ Single\+Valued\+Association\+Field)
+
+\begin{DoxyReturn}{Returns}
+Join\+Association\+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0f86e732d099bdda59d4f45b6dd64e2e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0f86e732d099bdda59d4f45b6dd64e2e}} 
+\index{Parser@{Parser}!LikeExpression@{LikeExpression}}
+\index{LikeExpression@{LikeExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{LikeExpression()}{LikeExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_like_expression}{Like\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Like\+Expression \+::= String\+Expression \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+LIKE\char`\"{} String\+Primary \mbox{[}\char`\"{}\+ESCAPE\char`\"{} char\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Like\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9784d5d367dedd98ed04e2fa348f074f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9784d5d367dedd98ed04e2fa348f074f}} 
+\index{Parser@{Parser}!Literal@{Literal}}
+\index{Literal@{Literal}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{Literal()}{Literal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_literal}{Literal}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Literal \+::= string $\vert$ char $\vert$ integer $\vert$ float $\vert$ boolean
+
+\begin{DoxyReturn}{Returns}
+Literal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a23544c9dd5c6448b8192a99b5c36c469}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a23544c9dd5c6448b8192a99b5c36c469}} 
+\index{Parser@{Parser}!match@{match}}
+\index{match@{match}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily match (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Attempts to match the given token with the current lookahead token.
+
+If they match, updates the lookahead token; otherwise raises a syntax error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$token} & The token type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_exception}{Query\+Exception}}} & If the tokens don\textquotesingle{}t match. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a306c4e2b9134cee7ee8803e5bd726fa8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a306c4e2b9134cee7ee8803e5bd726fa8}} 
+\index{Parser@{Parser}!NewObjectArg@{NewObjectArg}}
+\index{NewObjectArg@{NewObjectArg}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{NewObjectArg()}{NewObjectArg()}}
+{\footnotesize\ttfamily New\+Object\+Arg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+New\+Object\+Arg \+::= Scalar\+Expression $\vert$ \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab515881ffeff8f2e9d728089989152df}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab515881ffeff8f2e9d728089989152df}} 
+\index{Parser@{Parser}!NewObjectExpression@{NewObjectExpression}}
+\index{NewObjectExpression@{NewObjectExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{NewObjectExpression()}{NewObjectExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_new_object_expression}{New\+Object\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+New\+Object\+Expression \+::= \char`\"{}\+NEW\char`\"{} Abstract\+Schema\+Name \char`\"{}(\char`\"{} New\+Object\+Arg \{\char`\"{},\char`\"{} New\+Object\+Arg\}$\ast$ \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+New\+Object\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa0b5c32a8a55d3386424d25f9aaf773d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa0b5c32a8a55d3386424d25f9aaf773d}} 
+\index{Parser@{Parser}!NewValue@{NewValue}}
+\index{NewValue@{NewValue}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{NewValue()}{NewValue()}}
+{\footnotesize\ttfamily New\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+New\+Value \+::= Simple\+Arithmetic\+Expression $\vert$ String\+Primary $\vert$ Datetime\+Primary $\vert$ Boolean\+Primary $\vert$ Enum\+Primary $\vert$ Simple\+Entity\+Expression $\vert$ \char`\"{}\+NULL\char`\"{}
+
+NOTE\+: Since it is not possible to correctly recognize individual types, here is the full grammar that needs to be supported\+:
+
+New\+Value \+::= Simple\+Arithmetic\+Expression $\vert$ \char`\"{}\+NULL\char`\"{}
+
+Simple\+Arithmetic\+Expression covers all $\ast$\+Primary grammar rules and also Simple\+Entity\+Expression
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Arithmetic\+Expression$\vert$\+AST\textbackslash{}\+Input\+Parameter$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6867ff8b86b9bb9121d6db822ec308d5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6867ff8b86b9bb9121d6db822ec308d5}} 
+\index{Parser@{Parser}!NullComparisonExpression@{NullComparisonExpression}}
+\index{NullComparisonExpression@{NullComparisonExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{NullComparisonExpression()}{NullComparisonExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_null_comparison_expression}{Null\+Comparison\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Null\+Comparison\+Expression \+::= (Input\+Parameter $\vert$ Null\+If\+Expression $\vert$ Coalesce\+Expression $\vert$ Aggregate\+Expression $\vert$ Function\+Declaration $\vert$ Identification\+Variable $\vert$ Single\+Valued\+Path\+Expression $\vert$ Result\+Variable) \char`\"{}\+IS\char`\"{} \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+NULL\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Null\+Comparison\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a16d17b23bc4e28bfb5b29c73987193a4}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a16d17b23bc4e28bfb5b29c73987193a4}} 
+\index{Parser@{Parser}!NullIfExpression@{NullIfExpression}}
+\index{NullIfExpression@{NullIfExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{NullIfExpression()}{NullIfExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_null_if_expression}{Null\+If\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Null\+If\+Expression \+::= \char`\"{}\+NULLIF\char`\"{} \char`\"{}(\char`\"{} Scalar\+Expression \char`\"{},\char`\"{} Scalar\+Expression \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Null\+If\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ade12f6152416ee7fe3151465a221c039}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ade12f6152416ee7fe3151465a221c039}} 
+\index{Parser@{Parser}!OrderByClause@{OrderByClause}}
+\index{OrderByClause@{OrderByClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{OrderByClause()}{OrderByClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_order_by_clause}{Order\+By\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Order\+By\+Clause \+::= \char`\"{}\+ORDER\char`\"{} \char`\"{}\+BY\char`\"{} Order\+By\+Item \{\char`\"{},\char`\"{} Order\+By\+Item\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Order\+By\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a86fdbf5bb90387433a8d25efb2aa9cf0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a86fdbf5bb90387433a8d25efb2aa9cf0}} 
+\index{Parser@{Parser}!OrderByItem@{OrderByItem}}
+\index{OrderByItem@{OrderByItem}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{OrderByItem()}{OrderByItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_order_by_item}{Order\+By\+Item}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Order\+By\+Item \+::= ( Simple\+Arithmetic\+Expression $\vert$ Single\+Valued\+Path\+Expression $\vert$ Case\+Expression $\vert$ Scalar\+Expression $\vert$ Result\+Variable $\vert$ Function\+Declaration ) \mbox{[}\char`\"{}\+ASC\char`\"{} $\vert$ \char`\"{}\+DESC\char`\"{}\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Order\+By\+Item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a38d99acc70a1d8fd8f94455743b2d237}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a38d99acc70a1d8fd8f94455743b2d237}} 
+\index{Parser@{Parser}!parse@{parse}}
+\index{parse@{parse}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Parses a query string.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_result}{Parser\+Result}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0b01b3b5b53370db589b6a4a823b9abd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0b01b3b5b53370db589b6a4a823b9abd}} 
+\index{Parser@{Parser}!PartialObjectExpression@{PartialObjectExpression}}
+\index{PartialObjectExpression@{PartialObjectExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{PartialObjectExpression()}{PartialObjectExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_partial_object_expression}{Partial\+Object\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Partial\+Object\+Expression \+::= \char`\"{}\+PARTIAL\char`\"{} Identification\+Variable \char`\"{}.\char`\"{} Partial\+Field\+Set Partial\+Field\+Set \+::= \char`\"{}\{\char`\"{} Simple\+State\+Field \{\char`\"{},\char`\"{} Simple\+State\+Field\}$\ast$ \char`\"{}\}\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Partial\+Object\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9544e87d1e15cff1b60f26113a8564b1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9544e87d1e15cff1b60f26113a8564b1}} 
+\index{Parser@{Parser}!PathExpression@{PathExpression}}
+\index{PathExpression@{PathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{PathExpression()}{PathExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression}{Path\+Expression}} (\begin{DoxyParamCaption}\item[{}]{\$expected\+Types }\end{DoxyParamCaption})}
+
+Parses an arbitrary path expression and defers semantical validation based on expected types.
+
+Path\+Expression \+::= Identification\+Variable \{\char`\"{}.\char`\"{} identifier\}$\ast$
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$expected\+Types} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af210d3ef32ce621a59e35b3e54816f20}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af210d3ef32ce621a59e35b3e54816f20}} 
+\index{Parser@{Parser}!QuantifiedExpression@{QuantifiedExpression}}
+\index{QuantifiedExpression@{QuantifiedExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{QuantifiedExpression()}{QuantifiedExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_quantified_expression}{Quantified\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Quantified\+Expression \+::= (\char`\"{}\+ALL\char`\"{} $\vert$ \char`\"{}\+ANY\char`\"{} $\vert$ \char`\"{}\+SOME\char`\"{}) \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Quantified\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a71cf4305fcc0e36c9d893d561c3cae54}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a71cf4305fcc0e36c9d893d561c3cae54}} 
+\index{Parser@{Parser}!QueryLanguage@{QueryLanguage}}
+\index{QueryLanguage@{QueryLanguage}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{QueryLanguage()}{QueryLanguage()}}
+{\footnotesize\ttfamily Query\+Language (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Query\+Language \+::= Select\+Statement $\vert$ Update\+Statement $\vert$ Delete\+Statement
+
+\begin{DoxyReturn}{Returns}
+Select\+Statement$\vert$\+Update\+Statement$\vert$\+Delete\+Statement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae30865d0bdacf3ccfc90ac3ecac23381}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ae30865d0bdacf3ccfc90ac3ecac23381}} 
+\index{Parser@{Parser}!RangeVariableDeclaration@{RangeVariableDeclaration}}
+\index{RangeVariableDeclaration@{RangeVariableDeclaration}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{RangeVariableDeclaration()}{RangeVariableDeclaration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_range_variable_declaration}{Range\+Variable\+Declaration}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Range\+Variable\+Declaration \+::= Abstract\+Schema\+Name \mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Identification\+Variable
+
+\begin{DoxyReturn}{Returns}
+Range\+Variable\+Declaration
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_exception}{Query\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af0c4795c2f591669ea9bb8d3edb41f3a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af0c4795c2f591669ea9bb8d3edb41f3a}} 
+\index{Parser@{Parser}!ResultVariable@{ResultVariable}}
+\index{ResultVariable@{ResultVariable}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ResultVariable()}{ResultVariable()}}
+{\footnotesize\ttfamily Result\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Result\+Variable \+::= identifier
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6703a3cce69e56ed41abe4d0121a1b4d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a6703a3cce69e56ed41abe4d0121a1b4d}} 
+\index{Parser@{Parser}!ScalarExpression@{ScalarExpression}}
+\index{ScalarExpression@{ScalarExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{ScalarExpression()}{ScalarExpression()}}
+{\footnotesize\ttfamily Scalar\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Scalar\+Expression \+::= Simple\+Arithmetic\+Expression $\vert$ String\+Primary $\vert$ Date\+Time\+Primary $\vert$ State\+Field\+Path\+Expression $\vert$ Boolean\+Primary $\vert$ Case\+Expression $\vert$ Instance\+Of\+Expression
+
+\begin{DoxyReturn}{Returns}
+mixed One of the possible expressions or subexpressions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aff983b2da2bc42b939b901675e0240ab}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aff983b2da2bc42b939b901675e0240ab}} 
+\index{Parser@{Parser}!SelectClause@{SelectClause}}
+\index{SelectClause@{SelectClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SelectClause()}{SelectClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_clause}{Select\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Select\+Clause \+::= \char`\"{}\+SELECT\char`\"{} \mbox{[}\char`\"{}\+DISTINCT\char`\"{}\mbox{]} Select\+Expression \{\char`\"{},\char`\"{} Select\+Expression\}
+
+\begin{DoxyReturn}{Returns}
+Select\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a714f08b840768701716398ee9fa5368e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a714f08b840768701716398ee9fa5368e}} 
+\index{Parser@{Parser}!SelectExpression@{SelectExpression}}
+\index{SelectExpression@{SelectExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SelectExpression()}{SelectExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_expression}{Select\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Select\+Expression \+::= ( Identification\+Variable $\vert$ Scalar\+Expression $\vert$ Aggregate\+Expression $\vert$ Function\+Declaration $\vert$ Partial\+Object\+Expression $\vert$ \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{} $\vert$ Case\+Expression $\vert$ New\+Object\+Expression ) \mbox{[}\mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} \mbox{[}\char`\"{}\+HIDDEN\char`\"{}\mbox{]} Alias\+Result\+Variable\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Select\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9fca7b84b3d2a55784f433e429b8acac}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a9fca7b84b3d2a55784f433e429b8acac}} 
+\index{Parser@{Parser}!SelectStatement@{SelectStatement}}
+\index{SelectStatement@{SelectStatement}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SelectStatement()}{SelectStatement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Select\+Statement \+::= Select\+Clause From\+Clause \mbox{[}Where\+Clause\mbox{]} \mbox{[}Group\+By\+Clause\mbox{]} \mbox{[}Having\+Clause\mbox{]} \mbox{[}Order\+By\+Clause\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Select\+Statement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8481cf396ae019723b15ec3e9fcda589}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8481cf396ae019723b15ec3e9fcda589}} 
+\index{Parser@{Parser}!semanticalError@{semanticalError}}
+\index{semanticalError@{semanticalError}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{semanticalError()}{semanticalError()}}
+{\footnotesize\ttfamily semantical\+Error (\begin{DoxyParamCaption}\item[{}]{\$message = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Generates a new semantical error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$message} & Optional message. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$token} & Optional token. @psalm-\/param array$<$string, mixed$>$$\vert$null \$token\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_exception}{Query\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a276f1c7b470ff805fa2891b338d5b177}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a276f1c7b470ff805fa2891b338d5b177}} 
+\index{Parser@{Parser}!setCustomOutputTreeWalker@{setCustomOutputTreeWalker}}
+\index{setCustomOutputTreeWalker@{setCustomOutputTreeWalker}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{setCustomOutputTreeWalker()}{setCustomOutputTreeWalker()}}
+{\footnotesize\ttfamily set\+Custom\+Output\+Tree\+Walker (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Sets a custom tree walker that produces output. This tree walker will be run last over the AST, after any other walkers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af65d55662eb1330137689da79966c500}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af65d55662eb1330137689da79966c500}} 
+\index{Parser@{Parser}!SimpleArithmeticExpression@{SimpleArithmeticExpression}}
+\index{SimpleArithmeticExpression@{SimpleArithmeticExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleArithmeticExpression()}{SimpleArithmeticExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_arithmetic_expression}{Simple\+Arithmetic\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+Arithmetic\+Expression \+::= Arithmetic\+Term \{(\char`\"{}+\char`\"{} $\vert$ \char`\"{}-\/\char`\"{}) Arithmetic\+Term\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Simple\+Arithmetic\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa1a7563af39802a765700e3b3405a644}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_aa1a7563af39802a765700e3b3405a644}} 
+\index{Parser@{Parser}!SimpleCaseExpression@{SimpleCaseExpression}}
+\index{SimpleCaseExpression@{SimpleCaseExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleCaseExpression()}{SimpleCaseExpression()}}
+{\footnotesize\ttfamily Simple\+Case\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+Case\+Expression \+::= \char`\"{}\+CASE\char`\"{} Case\+Operand Simple\+When\+Clause \{Simple\+When\+Clause\}$\ast$ \char`\"{}\+ELSE\char`\"{} Scalar\+Expression \char`\"{}\+END\char`\"{} Case\+Operand \+::= State\+Field\+Path\+Expression $\vert$ Type\+Discriminator
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Simple\+Case\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a1030220b1ce73aa3b55f85cb208ab9d4}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a1030220b1ce73aa3b55f85cb208ab9d4}} 
+\index{Parser@{Parser}!SimpleConditionalExpression@{SimpleConditionalExpression}}
+\index{SimpleConditionalExpression@{SimpleConditionalExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleConditionalExpression()}{SimpleConditionalExpression()}}
+{\footnotesize\ttfamily Simple\+Conditional\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+Conditional\+Expression \+::= Comparison\+Expression $\vert$ Between\+Expression $\vert$ Like\+Expression $\vert$ In\+Expression $\vert$ Null\+Comparison\+Expression $\vert$ Exists\+Expression $\vert$ Empty\+Collection\+Comparison\+Expression $\vert$ Collection\+Member\+Expression $\vert$ Instance\+Of\+Expression
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Between\+Expression$\vert$ AST\textbackslash{}\+Collection\+Member\+Expression$\vert$ AST\textbackslash{}\+Comparison\+Expression$\vert$ AST\textbackslash{}\+Empty\+Collection\+Comparison\+Expression$\vert$ AST\textbackslash{}\+Exists\+Expression$\vert$ AST\textbackslash{}\+In\+Expression$\vert$ AST\textbackslash{}\+Instance\+Of\+Expression$\vert$ AST\textbackslash{}\+Like\+Expression$\vert$ AST\textbackslash{}\+Null\+Comparison\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7f11bb7fc591526844ac3333ece8e052}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a7f11bb7fc591526844ac3333ece8e052}} 
+\index{Parser@{Parser}!SimpleEntityExpression@{SimpleEntityExpression}}
+\index{SimpleEntityExpression@{SimpleEntityExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleEntityExpression()}{SimpleEntityExpression()}}
+{\footnotesize\ttfamily Simple\+Entity\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+Entity\+Expression \+::= Identification\+Variable $\vert$ Input\+Parameter
+
+\begin{DoxyReturn}{Returns}
+AST\textbackslash{}\+Input\+Parameter$\vert$\+AST\textbackslash{}\+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8956e1dfcec83213640201b47f850f09}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a8956e1dfcec83213640201b47f850f09}} 
+\index{Parser@{Parser}!SimpleSelectClause@{SimpleSelectClause}}
+\index{SimpleSelectClause@{SimpleSelectClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleSelectClause()}{SimpleSelectClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause}{Simple\+Select\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+Select\+Clause \+::= \char`\"{}\+SELECT\char`\"{} \mbox{[}\char`\"{}\+DISTINCT\char`\"{}\mbox{]} Simple\+Select\+Expression
+
+\begin{DoxyReturn}{Returns}
+Simple\+Select\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab184d533aa16b951aa9f589d0decda71}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab184d533aa16b951aa9f589d0decda71}} 
+\index{Parser@{Parser}!SimpleSelectExpression@{SimpleSelectExpression}}
+\index{SimpleSelectExpression@{SimpleSelectExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleSelectExpression()}{SimpleSelectExpression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_expression}{Simple\+Select\+Expression}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+Select\+Expression \+::= ( State\+Field\+Path\+Expression $\vert$ Identification\+Variable $\vert$ Function\+Declaration $\vert$ Aggregate\+Expression $\vert$ \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{} $\vert$ Scalar\+Expression ) \mbox{[}\mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Result\+Variable\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Simple\+Select\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0aa5b4ca42186735d7f1af81b5052079}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0aa5b4ca42186735d7f1af81b5052079}} 
+\index{Parser@{Parser}!SimpleWhenClause@{SimpleWhenClause}}
+\index{SimpleWhenClause@{SimpleWhenClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SimpleWhenClause()}{SimpleWhenClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_when_clause}{Simple\+When\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple\+When\+Clause \+::= \char`\"{}\+WHEN\char`\"{} Scalar\+Expression \char`\"{}\+THEN\char`\"{} Scalar\+Expression
+
+\begin{DoxyReturn}{Returns}
+Simple\+When\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a91f2b7f38ecc0f9662fe839286fc533e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a91f2b7f38ecc0f9662fe839286fc533e}} 
+\index{Parser@{Parser}!SingleValuedAssociationPathExpression@{SingleValuedAssociationPathExpression}}
+\index{SingleValuedAssociationPathExpression@{SingleValuedAssociationPathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SingleValuedAssociationPathExpression()}{SingleValuedAssociationPathExpression()}}
+{\footnotesize\ttfamily Single\+Valued\+Association\+Path\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Single\+Valued\+Association\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} Single\+Valued\+Association\+Field
+
+\begin{DoxyReturn}{Returns}
+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_acecdb7f75b98c0be4b593b1f5ae1d89f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_acecdb7f75b98c0be4b593b1f5ae1d89f}} 
+\index{Parser@{Parser}!SingleValuedPathExpression@{SingleValuedPathExpression}}
+\index{SingleValuedPathExpression@{SingleValuedPathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SingleValuedPathExpression()}{SingleValuedPathExpression()}}
+{\footnotesize\ttfamily Single\+Valued\+Path\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Single\+Valued\+Path\+Expression \+::= State\+Field\+Path\+Expression $\vert$ Single\+Valued\+Association\+Path\+Expression
+
+\begin{DoxyReturn}{Returns}
+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3bdd006d60b2e21289b754bce78b3653}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a3bdd006d60b2e21289b754bce78b3653}} 
+\index{Parser@{Parser}!StateFieldPathExpression@{StateFieldPathExpression}}
+\index{StateFieldPathExpression@{StateFieldPathExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{StateFieldPathExpression()}{StateFieldPathExpression()}}
+{\footnotesize\ttfamily State\+Field\+Path\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+State\+Field\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} State\+Field
+
+\begin{DoxyReturn}{Returns}
+Path\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5ea92ddb5401a90d964924e744c6e760}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5ea92ddb5401a90d964924e744c6e760}} 
+\index{Parser@{Parser}!StringExpression@{StringExpression}}
+\index{StringExpression@{StringExpression}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{StringExpression()}{StringExpression()}}
+{\footnotesize\ttfamily String\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+String\+Expression \+::= String\+Primary $\vert$ Result\+Variable $\vert$ \char`\"{}(\char`\"{} Subselect \char`\"{})\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+Subselect$\vert$\+Node$\vert$string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a79145d98ab0356db4067f41a1d1b618f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a79145d98ab0356db4067f41a1d1b618f}} 
+\index{Parser@{Parser}!StringPrimary@{StringPrimary}}
+\index{StringPrimary@{StringPrimary}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{StringPrimary()}{StringPrimary()}}
+{\footnotesize\ttfamily String\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+String\+Primary \+::= State\+Field\+Path\+Expression $\vert$ string $\vert$ Input\+Parameter $\vert$ Functions\+Returning\+Strings $\vert$ Aggregate\+Expression $\vert$ Case\+Expression
+
+\begin{DoxyReturn}{Returns}
+Node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2d436715350293d8a2891ea004a6bf4f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2d436715350293d8a2891ea004a6bf4f}} 
+\index{Parser@{Parser}!Subselect@{Subselect}}
+\index{Subselect@{Subselect}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{Subselect()}{Subselect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect}{Subselect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Subselect \+::= Simple\+Select\+Clause Subselect\+From\+Clause \mbox{[}Where\+Clause\mbox{]} \mbox{[}Group\+By\+Clause\mbox{]} \mbox{[}Having\+Clause\mbox{]} \mbox{[}Order\+By\+Clause\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Subselect 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2368278d3291103a42dc3dc2fb09b49d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a2368278d3291103a42dc3dc2fb09b49d}} 
+\index{Parser@{Parser}!SubselectFromClause@{SubselectFromClause}}
+\index{SubselectFromClause@{SubselectFromClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SubselectFromClause()}{SubselectFromClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect_from_clause}{Subselect\+From\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Subselect\+From\+Clause \+::= \char`\"{}\+FROM\char`\"{} Subselect\+Identification\+Variable\+Declaration \{\char`\"{},\char`\"{} Subselect\+Identification\+Variable\+Declaration\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Subselect\+From\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a03bfc45788d192a79b0bf7030fc0a738}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a03bfc45788d192a79b0bf7030fc0a738}} 
+\index{Parser@{Parser}!SubselectIdentificationVariableDeclaration@{SubselectIdentificationVariableDeclaration}}
+\index{SubselectIdentificationVariableDeclaration@{SubselectIdentificationVariableDeclaration}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{SubselectIdentificationVariableDeclaration()}{SubselectIdentificationVariableDeclaration()}}
+{\footnotesize\ttfamily Subselect\+Identification\+Variable\+Declaration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Subselect\+Identification\+Variable\+Declaration \+::= Identification\+Variable\+Declaration
+
+\{Internal note\+: WARNING\+: Solution is harder than a bare implementation. Desired EBNF support\+:
+
+Subselect\+Identification\+Variable\+Declaration \+::= Identification\+Variable\+Declaration $\vert$ (Association\+Path\+Expression \mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Identification\+Variable)
+
+It demands that entire SQL generation to become programmatical. This is needed because association based subselect requires \char`\"{}\+WHERE\char`\"{} conditional expressions to be injected, but there is no scope to do that. Only scope accessible is \char`\"{}\+FROM\char`\"{}, prohibiting an easy implementation without larger changes.\}
+
+\begin{DoxyReturn}{Returns}
+Identification\+Variable\+Declaration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af5d7d0cccb97806a1ecfe091ca818171}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_af5d7d0cccb97806a1ecfe091ca818171}} 
+\index{Parser@{Parser}!syntaxError@{syntaxError}}
+\index{syntaxError@{syntaxError}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{syntaxError()}{syntaxError()}}
+{\footnotesize\ttfamily syntax\+Error (\begin{DoxyParamCaption}\item[{}]{\$expected = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Generates a new syntax error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$expected} & Expected string. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$token} & Got token. @psalm-\/param array$<$string, mixed$>$$\vert$null \$token\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void @psalm-\/return no-\/return
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_exception}{Query\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab87ebf3d087c47e381492a6bf7af1573}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_ab87ebf3d087c47e381492a6bf7af1573}} 
+\index{Parser@{Parser}!UpdateClause@{UpdateClause}}
+\index{UpdateClause@{UpdateClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{UpdateClause()}{UpdateClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause}{Update\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update\+Clause \+::= \char`\"{}\+UPDATE\char`\"{} Abstract\+Schema\+Name \mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Identification\+Variable \char`\"{}\+SET\char`\"{} Update\+Item \{\char`\"{},\char`\"{} Update\+Item\}$\ast$
+
+\begin{DoxyReturn}{Returns}
+Update\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abac1bc172391aa5461b12f33c230ad2a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_abac1bc172391aa5461b12f33c230ad2a}} 
+\index{Parser@{Parser}!UpdateItem@{UpdateItem}}
+\index{UpdateItem@{UpdateItem}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{UpdateItem()}{UpdateItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}{Update\+Item}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update\+Item \+::= Single\+Valued\+Path\+Expression \char`\"{}=\char`\"{} New\+Value
+
+\begin{DoxyReturn}{Returns}
+Update\+Item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5af74ab1c0a856fcb7ce4f76b4b380b7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a5af74ab1c0a856fcb7ce4f76b4b380b7}} 
+\index{Parser@{Parser}!UpdateStatement@{UpdateStatement}}
+\index{UpdateStatement@{UpdateStatement}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{UpdateStatement()}{UpdateStatement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_statement}{Update\+Statement}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update\+Statement \+::= Update\+Clause \mbox{[}Where\+Clause\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+Update\+Statement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a38a4e63ba4e1416666e042dd5a6ca158}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a38a4e63ba4e1416666e042dd5a6ca158}} 
+\index{Parser@{Parser}!WhenClause@{WhenClause}}
+\index{WhenClause@{WhenClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{WhenClause()}{WhenClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_when_clause}{When\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+When\+Clause \+::= \char`\"{}\+WHEN\char`\"{} Conditional\+Expression \char`\"{}\+THEN\char`\"{} Scalar\+Expression
+
+\begin{DoxyReturn}{Returns}
+When\+Clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0416cb705ff794a6da911b373081fae9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_parser_a0416cb705ff794a6da911b373081fae9}} 
+\index{Parser@{Parser}!WhereClause@{WhereClause}}
+\index{WhereClause@{WhereClause}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{WhereClause()}{WhereClause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_where_clause}{Where\+Clause}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Where\+Clause \+::= \char`\"{}\+WHERE\char`\"{} Conditional\+Expression
+
+\begin{DoxyReturn}{Returns}
+Where\+Clause 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Parser.\+php\end{DoxyCompactItemize}

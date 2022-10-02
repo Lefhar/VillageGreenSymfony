@@ -1,0 +1,87 @@
+\hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_binary_op}{}\doxysection{Binary\+Op Class Reference}
+\label{class_php_parser_1_1_node_1_1_expr_1_1_binary_op}\index{BinaryOp@{BinaryOp}}
+Inheritance diagram for Binary\+Op\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_php_parser_1_1_node_1_1_expr_1_1_binary_op}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_ab8aab10b326c798ff3774de1e5dfa266}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}} \$left, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}} \$right, array \$attributes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a7e06a91cc526dc52826d18313e64798a}{get\+Sub\+Node\+Names}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_aed7b4ab91d29701a3d5f4936de669b72}{get\+Operator\+Sigil}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a8ce48148e988ab5ecd61213c1d460962}\label{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a8ce48148e988ab5ecd61213c1d460962}} 
+{\bfseries \$left}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a79e068e5169b6f084dcf0baf74137378}\label{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a79e068e5169b6f084dcf0baf74137378}} 
+{\bfseries \$right}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_ab8aab10b326c798ff3774de1e5dfa266}\label{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_ab8aab10b326c798ff3774de1e5dfa266}} 
+\index{BinaryOp@{BinaryOp}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BinaryOp@{BinaryOp}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}}}]{\$left,  }\item[{\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}}}]{\$right,  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs a binary operator node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}} & {\em \$left} & The left hand side expression \\
+\hline
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}} & {\em \$right} & The right hand side expression \\
+\hline
+array & {\em \$attributes} & Additional attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_aed7b4ab91d29701a3d5f4936de669b72}\label{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_aed7b4ab91d29701a3d5f4936de669b72}} 
+\index{BinaryOp@{BinaryOp}!getOperatorSigil@{getOperatorSigil}}
+\index{getOperatorSigil@{getOperatorSigil}!BinaryOp@{BinaryOp}}
+\doxysubsubsection{\texorpdfstring{getOperatorSigil()}{getOperatorSigil()}}
+{\footnotesize\ttfamily get\+Operator\+Sigil (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Get the operator sigil for this binary operation.
+
+In the case there are multiple possible sigils for an operator, this method does not necessarily return the one used in the parsed code.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_bitwise_and_aed7b4ab91d29701a3d5f4936de669b72}{Bitwise\+And}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_bitwise_or_aed7b4ab91d29701a3d5f4936de669b72}{Bitwise\+Or}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_bitwise_xor_aed7b4ab91d29701a3d5f4936de669b72}{Bitwise\+Xor}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_boolean_and_aed7b4ab91d29701a3d5f4936de669b72}{Boolean\+And}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_boolean_or_aed7b4ab91d29701a3d5f4936de669b72}{Boolean\+Or}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_coalesce_aed7b4ab91d29701a3d5f4936de669b72}{Coalesce}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_concat_aed7b4ab91d29701a3d5f4936de669b72}{Concat}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_div_aed7b4ab91d29701a3d5f4936de669b72}{Div}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_equal_aed7b4ab91d29701a3d5f4936de669b72}{Equal}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_greater_aed7b4ab91d29701a3d5f4936de669b72}{Greater}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_greater_or_equal_aed7b4ab91d29701a3d5f4936de669b72}{Greater\+Or\+Equal}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_identical_aed7b4ab91d29701a3d5f4936de669b72}{Identical}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_logical_and_aed7b4ab91d29701a3d5f4936de669b72}{Logical\+And}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_logical_or_aed7b4ab91d29701a3d5f4936de669b72}{Logical\+Or}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_logical_xor_aed7b4ab91d29701a3d5f4936de669b72}{Logical\+Xor}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_minus_aed7b4ab91d29701a3d5f4936de669b72}{Minus}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_mod_aed7b4ab91d29701a3d5f4936de669b72}{Mod}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_mul_aed7b4ab91d29701a3d5f4936de669b72}{Mul}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_not_equal_aed7b4ab91d29701a3d5f4936de669b72}{Not\+Equal}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_not_identical_aed7b4ab91d29701a3d5f4936de669b72}{Not\+Identical}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_plus_aed7b4ab91d29701a3d5f4936de669b72}{Plus}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_pow_aed7b4ab91d29701a3d5f4936de669b72}{Pow}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_shift_left_aed7b4ab91d29701a3d5f4936de669b72}{Shift\+Left}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_shift_right_aed7b4ab91d29701a3d5f4936de669b72}{Shift\+Right}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_smaller_aed7b4ab91d29701a3d5f4936de669b72}{Smaller}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_smaller_or_equal_aed7b4ab91d29701a3d5f4936de669b72}{Smaller\+Or\+Equal}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_1_1_spaceship_aed7b4ab91d29701a3d5f4936de669b72}{Spaceship}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a7e06a91cc526dc52826d18313e64798a}\label{class_php_parser_1_1_node_1_1_expr_1_1_binary_op_a7e06a91cc526dc52826d18313e64798a}} 
+\index{BinaryOp@{BinaryOp}!getSubNodeNames@{getSubNodeNames}}
+\index{getSubNodeNames@{getSubNodeNames}!BinaryOp@{BinaryOp}}
+\doxysubsubsection{\texorpdfstring{getSubNodeNames()}{getSubNodeNames()}}
+{\footnotesize\ttfamily get\+Sub\+Node\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of the sub nodes.
+
+\begin{DoxyReturn}{Returns}
+array Names of sub nodes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a7e06a91cc526dc52826d18313e64798a}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Expr/Binary\+Op.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args}{}\doxysection{Schema\+Alter\+Table\+Add\+Column\+Event\+Args Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args}\index{SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}}
+Inheritance diagram for Schema\+Alter\+Table\+Add\+Column\+Event\+Args\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_aa14a0c5bb9e40b4973c8d10f7a18b195}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_aa14a0c5bb9e40b4973c8d10f7a18b195}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} \$column, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$table\+Diff, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_a6368934d4a94b76943cd6b5bebfcdaf3}{get\+Column}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_acaf8151dd90c4e2d931922e065984dd3}{get\+Table\+Diff}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_accec9beff2ce6cd137d37f5f902a42b1}{get\+Platform}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_a16e93a1f04fdc5ebed520956f2679b84}{add\+Sql}} (\$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_ad53d6d06affd7337d46e4efce0f6b2a1}{get\+Sql}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Event Arguments used when SQL queries for adding table columns are generated inside \{\begin{DoxySeeAlso}{See also}
+Abstract\+Platform\}. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_a16e93a1f04fdc5ebed520956f2679b84}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_a16e93a1f04fdc5ebed520956f2679b84}} 
+\index{SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}!addSql@{addSql}}
+\index{addSql@{addSql}!SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}}
+\doxysubsubsection{\texorpdfstring{addSql()}{addSql()}}
+{\footnotesize\ttfamily add\+Sql (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Passing multiple SQL statements as an array is deprecated. Pass each statement as an individual argument instead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$sql} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args}{Schema\+Alter\+Table\+Add\+Column\+Event\+Args}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_a6368934d4a94b76943cd6b5bebfcdaf3}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_a6368934d4a94b76943cd6b5bebfcdaf3}} 
+\index{SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}!getColumn@{getColumn}}
+\index{getColumn@{getColumn}!SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}}
+\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+{\footnotesize\ttfamily get\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_accec9beff2ce6cd137d37f5f902a42b1}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_accec9beff2ce6cd137d37f5f902a42b1}} 
+\index{SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}!getPlatform@{getPlatform}}
+\index{getPlatform@{getPlatform}!SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}}
+\doxysubsubsection{\texorpdfstring{getPlatform()}{getPlatform()}}
+{\footnotesize\ttfamily get\+Platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Abstract\+Platform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_ad53d6d06affd7337d46e4efce0f6b2a1}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_ad53d6d06affd7337d46e4efce0f6b2a1}} 
+\index{SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}!getSql@{getSql}}
+\index{getSql@{getSql}!SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}}
+\doxysubsubsection{\texorpdfstring{getSql()}{getSql()}}
+{\footnotesize\ttfamily get\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_acaf8151dd90c4e2d931922e065984dd3}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_alter_table_add_column_event_args_acaf8151dd90c4e2d931922e065984dd3}} 
+\index{SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}!getTableDiff@{getTableDiff}}
+\index{getTableDiff@{getTableDiff}!SchemaAlterTableAddColumnEventArgs@{SchemaAlterTableAddColumnEventArgs}}
+\doxysubsubsection{\texorpdfstring{getTableDiff()}{getTableDiff()}}
+{\footnotesize\ttfamily get\+Table\+Diff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Table\+Diff 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Event/Schema\+Alter\+Table\+Add\+Column\+Event\+Args.\+php\end{DoxyCompactItemize}

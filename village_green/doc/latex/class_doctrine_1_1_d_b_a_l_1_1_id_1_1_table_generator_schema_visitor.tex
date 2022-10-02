@@ -1,0 +1,140 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor}{}\doxysection{Table\+Generator\+Schema\+Visitor Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor}\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+Inheritance diagram for Table\+Generator\+Schema\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ac7fe06afcfc87d371d55305429177078}{\+\_\+\+\_\+construct}} (\$generator\+Table\+Name=\textquotesingle{}sequences\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a44934a45140355aab7a1658f7578c1ea}{accept\+Schema}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ac5742f5275487d8398673f968dd309f5}{accept\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a96bb086515a496e9639eb8ba5845a003}{accept\+Column}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ae58b895c39722cee749b419c428c81a4}{accept\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$local\+Table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$fk\+Constraint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a93cbdcba49e668e858c632e0f8eca954}{accept\+Index}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} \$index)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ad5446680d542ed76e79b84b7d3641d8f}{accept\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000060}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ac7fe06afcfc87d371d55305429177078}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ac7fe06afcfc87d371d55305429177078}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$generator\+Table\+Name = {\ttfamily \textquotesingle{}sequences\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$generator\+Table\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a96bb086515a496e9639eb8ba5845a003}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a96bb086515a496e9639eb8ba5845a003}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!acceptColumn@{acceptColumn}}
+\index{acceptColumn@{acceptColumn}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{acceptColumn()}{acceptColumn()}}
+{\footnotesize\ttfamily accept\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}}]{\$column }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor_a96bb086515a496e9639eb8ba5845a003}{Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ae58b895c39722cee749b419c428c81a4}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ae58b895c39722cee749b419c428c81a4}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!acceptForeignKey@{acceptForeignKey}}
+\index{acceptForeignKey@{acceptForeignKey}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{acceptForeignKey()}{acceptForeignKey()}}
+{\footnotesize\ttfamily accept\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$local\+Table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$fk\+Constraint }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor_ae58b895c39722cee749b419c428c81a4}{Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a93cbdcba49e668e858c632e0f8eca954}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a93cbdcba49e668e858c632e0f8eca954}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!acceptIndex@{acceptIndex}}
+\index{acceptIndex@{acceptIndex}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{acceptIndex()}{acceptIndex()}}
+{\footnotesize\ttfamily accept\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}}]{\$index }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor_a93cbdcba49e668e858c632e0f8eca954}{Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a44934a45140355aab7a1658f7578c1ea}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_a44934a45140355aab7a1658f7578c1ea}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!acceptSchema@{acceptSchema}}
+\index{acceptSchema@{acceptSchema}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{acceptSchema()}{acceptSchema()}}
+{\footnotesize\ttfamily accept\+Schema (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor_a44934a45140355aab7a1658f7578c1ea}{Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ad5446680d542ed76e79b84b7d3641d8f}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ad5446680d542ed76e79b84b7d3641d8f}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!acceptSequence@{acceptSequence}}
+\index{acceptSequence@{acceptSequence}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{acceptSequence()}{acceptSequence()}}
+{\footnotesize\ttfamily accept\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor_ad5446680d542ed76e79b84b7d3641d8f}{Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ac5742f5275487d8398673f968dd309f5}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor_ac5742f5275487d8398673f968dd309f5}} 
+\index{TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}!acceptTable@{acceptTable}}
+\index{acceptTable@{acceptTable}!TableGeneratorSchemaVisitor@{TableGeneratorSchemaVisitor}}
+\doxysubsubsection{\texorpdfstring{acceptTable()}{acceptTable()}}
+{\footnotesize\ttfamily accept\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor_ac5742f5275487d8398673f968dd309f5}{Visitor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Id/Table\+Generator\+Schema\+Visitor.\+php\end{DoxyCompactItemize}

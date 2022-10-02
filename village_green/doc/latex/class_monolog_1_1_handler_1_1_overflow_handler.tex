@@ -1,0 +1,134 @@
+\hypertarget{class_monolog_1_1_handler_1_1_overflow_handler}{}\doxysection{Overflow\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_overflow_handler}\index{OverflowHandler@{OverflowHandler}}
+Inheritance diagram for Overflow\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_monolog_1_1_handler_1_1_overflow_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_overflow_handler_a2d6294e4c6e85aa65d6e271a218df95a}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} \$handler, array \$threshold\+Map=\mbox{[}$\,$\mbox{]}, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_overflow_handler_ad54b568c673b7b4fc724268a54313603}{handle}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_overflow_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_overflow_handler_aad3a8e83c90770a1f71a75bb51e782d8}{get\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} to only pass log messages when a certain threshold of number of messages is reached.
+
+This can be useful in cases of processing a batch of data, but you\textquotesingle{}re for example only interested in case it fails catastrophically instead of a warning for 1 or 2 events. Worse things can happen, right?
+
+Usage example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$log = \textcolor{keyword}{new} Logger(\textcolor{stringliteral}{'application'});}
+\DoxyCodeLine{\$handler = \textcolor{keyword}{new} SomeHandler(...)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Pass all warnings to the handler when more than 10 \& all error messages when more then 5}}
+\DoxyCodeLine{\$overflow = new OverflowHandler(\$handler, [Logger::WARNING => 10, Logger::ERROR => 5]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$log-\/>pushHandler(\$overflow);}
+
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Kris Buist \href{mailto:krisbuist@gmail.com}{\texttt{ krisbuist@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_overflow_handler_a2d6294e4c6e85aa65d6e271a218df95a}\label{class_monolog_1_1_handler_1_1_overflow_handler_a2d6294e4c6e85aa65d6e271a218df95a}} 
+\index{OverflowHandler@{OverflowHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!OverflowHandler@{OverflowHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}}}]{\$handler,  }\item[{array}]{\$threshold\+Map = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} & {\em \$handler} & \\
+\hline
+int\mbox{[}$\,$\mbox{]} & {\em \$threshold\+Map} & Dictionary of logger level =\texorpdfstring{$>$}{>} threshold \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_overflow_handler_aad3a8e83c90770a1f71a75bb51e782d8}\label{class_monolog_1_1_handler_1_1_overflow_handler_aad3a8e83c90770a1f71a75bb51e782d8}} 
+\index{OverflowHandler@{OverflowHandler}!getFormatter@{getFormatter}}
+\index{getFormatter@{getFormatter}!OverflowHandler@{OverflowHandler}}
+\doxysubsubsection{\texorpdfstring{getFormatter()}{getFormatter()}}
+{\footnotesize\ttfamily get\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the formatter.
+
+\begin{DoxyReturn}{Returns}
+Formatter\+Interface
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_aad3a8e83c90770a1f71a75bb51e782d8}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_overflow_handler_ad54b568c673b7b4fc724268a54313603}\label{class_monolog_1_1_handler_1_1_overflow_handler_ad54b568c673b7b4fc724268a54313603}} 
+\index{OverflowHandler@{OverflowHandler}!handle@{handle}}
+\index{handle@{handle}!OverflowHandler@{OverflowHandler}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily handle (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Handles a record.
+
+All records may be passed to this method, and the handler should discard those that it does not want to handle.
+
+The return value of this function controls the bubbling process of the handler stack. Unless the bubbling is interrupted (by returning true), the \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} class will keep on calling further handlers in the stack with a given log record.
+
+Handles a record.
+
+All records may be passed to this method, and the handler should discard those that it does not want to handle.
+
+The return value of this function controls the bubbling process of the handler stack. Unless the bubbling is interrupted (by returning true), the \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} class will keep on calling further handlers in the stack with a given log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & The record to handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true means that this handler handled the record, and that bubbling is not permitted. false means the record was either not processed or that this handler allows bubbling.
+\end{DoxyReturn}
+@phpstan-\/param Record \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_overflow_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_overflow_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{OverflowHandler@{OverflowHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!OverflowHandler@{OverflowHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Overflow\+Handler.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{class_app_1_1_controller_1_1_admin_products_controller}{}\doxysection{Admin\+Products\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_admin_products_controller}\index{AdminProductsController@{AdminProductsController}}
+Inheritance diagram for Admin\+Products\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_admin_products_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_products_controller_a9cbd56990f420ddf385aaaf34c4031a7}{index}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$products\+Repository)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_products_controller_a84845d75eae95bf4eecc0f49f04c765a}{new}} (Request \$request, Entity\+Manager\+Interface \$entity\+Manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_products_controller_a3646258a2c605000dc8a8a3c423c2d83}{edit}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}} \$product, Entity\+Manager\+Interface \$entity\+Manager)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_products_controller_a4972511590f3de47d0e9e2fb0804106d}{show}} (\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}} \$product)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_admin_products_controller_ada4325384431209b33a060a6536e13ad}{delete}} (Request \$request, \mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}} \$product, Entity\+Manager\+Interface \$entity\+Manager)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Route(\char`\"{}/admin/produit\char`\"{}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_products_controller_ada4325384431209b33a060a6536e13ad}\label{class_app_1_1_controller_1_1_admin_products_controller_ada4325384431209b33a060a6536e13ad}} 
+\index{AdminProductsController@{AdminProductsController}!delete@{delete}}
+\index{delete@{delete}!AdminProductsController@{AdminProductsController}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}}}]{\$product,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\{id\}\char`\"{}, name=\char`\"{}admin\+\_\+delete\char`\"{}, methods=\{\char`\"{}\+POST\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_products_controller_a3646258a2c605000dc8a8a3c423c2d83}\label{class_app_1_1_controller_1_1_admin_products_controller_a3646258a2c605000dc8a8a3c423c2d83}} 
+\index{AdminProductsController@{AdminProductsController}!edit@{edit}}
+\index{edit@{edit}!AdminProductsController@{AdminProductsController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}}}]{\$product,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\{id\}/edit\char`\"{}, name=\char`\"{}admin\+\_\+edit\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}, \char`\"{}\+POST\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_products_controller_a9cbd56990f420ddf385aaaf34c4031a7}\label{class_app_1_1_controller_1_1_admin_products_controller_a9cbd56990f420ddf385aaaf34c4031a7}} 
+\index{AdminProductsController@{AdminProductsController}!index@{index}}
+\index{index@{index}!AdminProductsController@{AdminProductsController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$products\+Repository }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\char`\"{}, name=\char`\"{}admin\+\_\+index\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_products_controller_a84845d75eae95bf4eecc0f49f04c765a}\label{class_app_1_1_controller_1_1_admin_products_controller_a84845d75eae95bf4eecc0f49f04c765a}} 
+\index{AdminProductsController@{AdminProductsController}!new@{new}}
+\index{new@{new}!AdminProductsController@{AdminProductsController}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{Entity\+Manager\+Interface}]{\$entity\+Manager }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/new\char`\"{}, name=\char`\"{}admin\+\_\+new\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}, \char`\"{}\+POST\char`\"{}\}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_admin_products_controller_a4972511590f3de47d0e9e2fb0804106d}\label{class_app_1_1_controller_1_1_admin_products_controller_a4972511590f3de47d0e9e2fb0804106d}} 
+\index{AdminProductsController@{AdminProductsController}!show@{show}}
+\index{show@{show}!AdminProductsController@{AdminProductsController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_entity_1_1_products}{Products}}}]{\$product }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/\{id\}\char`\"{}, name=\char`\"{}admin\+\_\+show\char`\"{}, methods=\{\char`\"{}\+GET\char`\"{}\}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Admin\+Products\+Controller.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{interface_php_parser_1_1_node_1_1_function_like}{}\doxysection{Function\+Like Interface Reference}
+\label{interface_php_parser_1_1_node_1_1_function_like}\index{FunctionLike@{FunctionLike}}
+Inheritance diagram for Function\+Like\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_php_parser_1_1_node_1_1_function_like}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_php_parser_1_1_node_1_1_function_like_adef7cd6ca4145c7ff9d43049f67268ae}{returns\+By\+Ref}} ()
+\item 
+\mbox{\hyperlink{interface_php_parser_1_1_node_1_1_function_like_ae32cd7c32721b02d676bb63b4b1366db}{get\+Params}} ()
+\item 
+\mbox{\hyperlink{interface_php_parser_1_1_node_1_1_function_like_a8d833642f3f98773f6ad2d64943be1b2}{get\+Return\+Type}} ()
+\item 
+\mbox{\hyperlink{interface_php_parser_1_1_node_1_1_function_like_a50ff17b7495cc1618bb06708d881e680}{get\+Stmts}} ()
+\item 
+\mbox{\hyperlink{interface_php_parser_1_1_node_1_1_function_like_af76eea7b49ba39be54fbac2debb45f23}{get\+Attr\+Groups}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_php_parser_1_1_node_1_1_function_like_af76eea7b49ba39be54fbac2debb45f23}\label{interface_php_parser_1_1_node_1_1_function_like_af76eea7b49ba39be54fbac2debb45f23}} 
+\index{FunctionLike@{FunctionLike}!getAttrGroups@{getAttrGroups}}
+\index{getAttrGroups@{getAttrGroups}!FunctionLike@{FunctionLike}}
+\doxysubsubsection{\texorpdfstring{getAttrGroups()}{getAttrGroups()}}
+{\footnotesize\ttfamily get\+Attr\+Groups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get PHP attribute groups.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_attribute_group}{Attribute\+Group}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_arrow_function_af76eea7b49ba39be54fbac2debb45f23}{Arrow\+Function}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_closure_af76eea7b49ba39be54fbac2debb45f23}{Closure}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_method_af76eea7b49ba39be54fbac2debb45f23}{Class\+Method}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_function___af76eea7b49ba39be54fbac2debb45f23}{Function\+\_\+}}.
+
+\mbox{\Hypertarget{interface_php_parser_1_1_node_1_1_function_like_ae32cd7c32721b02d676bb63b4b1366db}\label{interface_php_parser_1_1_node_1_1_function_like_ae32cd7c32721b02d676bb63b4b1366db}} 
+\index{FunctionLike@{FunctionLike}!getParams@{getParams}}
+\index{getParams@{getParams}!FunctionLike@{FunctionLike}}
+\doxysubsubsection{\texorpdfstring{getParams()}{getParams()}}
+{\footnotesize\ttfamily get\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+List of parameters
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_param}{Param}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_arrow_function_ae32cd7c32721b02d676bb63b4b1366db}{Arrow\+Function}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_closure_ae32cd7c32721b02d676bb63b4b1366db}{Closure}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_method_ae32cd7c32721b02d676bb63b4b1366db}{Class\+Method}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_function___ae32cd7c32721b02d676bb63b4b1366db}{Function\+\_\+}}.
+
+\mbox{\Hypertarget{interface_php_parser_1_1_node_1_1_function_like_a8d833642f3f98773f6ad2d64943be1b2}\label{interface_php_parser_1_1_node_1_1_function_like_a8d833642f3f98773f6ad2d64943be1b2}} 
+\index{FunctionLike@{FunctionLike}!getReturnType@{getReturnType}}
+\index{getReturnType@{getReturnType}!FunctionLike@{FunctionLike}}
+\doxysubsubsection{\texorpdfstring{getReturnType()}{getReturnType()}}
+{\footnotesize\ttfamily get\+Return\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the declared return type or null
+
+\begin{DoxyReturn}{Returns}
+null$\vert$\+Identifier$\vert$\+Name$\vert$\+Complex\+Type 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_arrow_function_a8d833642f3f98773f6ad2d64943be1b2}{Arrow\+Function}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_closure_a8d833642f3f98773f6ad2d64943be1b2}{Closure}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_method_a8d833642f3f98773f6ad2d64943be1b2}{Class\+Method}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_function___a8d833642f3f98773f6ad2d64943be1b2}{Function\+\_\+}}.
+
+\mbox{\Hypertarget{interface_php_parser_1_1_node_1_1_function_like_a50ff17b7495cc1618bb06708d881e680}\label{interface_php_parser_1_1_node_1_1_function_like_a50ff17b7495cc1618bb06708d881e680}} 
+\index{FunctionLike@{FunctionLike}!getStmts@{getStmts}}
+\index{getStmts@{getStmts}!FunctionLike@{FunctionLike}}
+\doxysubsubsection{\texorpdfstring{getStmts()}{getStmts()}}
+{\footnotesize\ttfamily get\+Stmts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The function body
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt}{Stmt}}\mbox{[}\mbox{]}$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_arrow_function_a50ff17b7495cc1618bb06708d881e680}{Arrow\+Function}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_closure_a50ff17b7495cc1618bb06708d881e680}{Closure}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_method_a50ff17b7495cc1618bb06708d881e680}{Class\+Method}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_function___a50ff17b7495cc1618bb06708d881e680}{Function\+\_\+}}.
+
+\mbox{\Hypertarget{interface_php_parser_1_1_node_1_1_function_like_adef7cd6ca4145c7ff9d43049f67268ae}\label{interface_php_parser_1_1_node_1_1_function_like_adef7cd6ca4145c7ff9d43049f67268ae}} 
+\index{FunctionLike@{FunctionLike}!returnsByRef@{returnsByRef}}
+\index{returnsByRef@{returnsByRef}!FunctionLike@{FunctionLike}}
+\doxysubsubsection{\texorpdfstring{returnsByRef()}{returnsByRef()}}
+{\footnotesize\ttfamily returns\+By\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Whether to return by reference
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_arrow_function_adef7cd6ca4145c7ff9d43049f67268ae}{Arrow\+Function}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_closure_adef7cd6ca4145c7ff9d43049f67268ae}{Closure}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_method_adef7cd6ca4145c7ff9d43049f67268ae}{Class\+Method}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_function___adef7cd6ca4145c7ff9d43049f67268ae}{Function\+\_\+}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/Function\+Like.\+php\end{DoxyCompactItemize}

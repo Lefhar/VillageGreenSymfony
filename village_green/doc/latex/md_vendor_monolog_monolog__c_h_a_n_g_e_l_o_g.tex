@@ -1,0 +1,555 @@
+
+\begin{DoxyItemize}
+\item Fixed regression in Stream\+Handler since 2.\+3.\+3 on systems with the memory\+\_\+limit set to \texorpdfstring{$>$}{>}=20GB (\#1592)
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md437}{}\doxysubsection{2.\+3.\+4 (2021-\/09-\/15)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md437}
+
+\begin{DoxyItemize}
+\item Fixed support for psr/log 3.\+x (\#1589)
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md438}{}\doxysubsection{2.\+3.\+3 (2021-\/09-\/14)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md438}
+
+\begin{DoxyItemize}
+\item Fixed memory usage when using Stream\+Handler and calling stream\+\_\+get\+\_\+contents on the resource you passed to it (\#1578, \#1577)
+\item Fixed support for psr/log 2.\+x (\#1587)
+\item Fixed some type annotations
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md439}{}\doxysubsection{2.\+3.\+2 (2021-\/07-\/23)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md439}
+
+\begin{DoxyItemize}
+\item Fixed compatibility with PHP 7.\+2 -\/ 7.\+4 when experiencing PCRE errors (\#1568)
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md440}{}\doxysubsection{2.\+3.\+1 (2021-\/07-\/14)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md440}
+
+\begin{DoxyItemize}
+\item Fixed Utils\+::get\+Class handling of anonymous classes not being fully compatible with PHP 8 (\#1563)
+\item Fixed some {\ttfamily @inherit\+Doc} annotations having the wrong case
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md441}{}\doxysubsection{2.\+3.\+0 (2021-\/07-\/05)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md441}
+
+\begin{DoxyItemize}
+\item Added a ton of PHPStan type annotations as well as type aliases on Monolog\textbackslash{}\+Logger for Record, Level and Level\+Name that you can import (\#1557)
+\item Added ability to customize date format when using Json\+Formatter (\#1561)
+\item Fixed Filter\+Handler not calling reset on its internal handler when reset() is called on it (\#1531)
+\item Fixed Syslog\+Udp\+Handler not setting the timezone correctly on Date\+Time\+Immutable instances (\#1540)
+\item Fixed Stream\+Handler thread safety -\/ chunk size set to 2GB now to avoid interlacing when doing concurrent writes (\#1553)
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md442}{}\doxysubsection{2.\+2.\+0 (2020-\/12-\/14)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md442}
+
+\begin{DoxyItemize}
+\item Added JSON\+\_\+\+PARTIAL\+\_\+\+OUTPUT\+\_\+\+ON\+\_\+\+ERROR to default json encoding flags, to avoid dropping entire context data or even records due to an invalid subset of it somewhere
+\item Added set\+Date\+Format to Normalizer\+Formatter (and Line/\+Json formatters by extension) to allow changing this after object creation
+\item Added Redis\+Pub\+Sub\+Handler to log records to a Redis channel using PUBLISH
+\item Added support for Elastica 7, and deprecated the \$type argument of Elastica\+Formatter which is not in use anymore as of Elastica 7
+\item Added support for millisecond write timeouts in Socket\+Handler, you can now pass floats to set\+Writing\+Timeout, e.\+g. 0.\+2 is 200ms
+\item Added support for unix sockets in Syslog\+Udp\+Handler (set \$port to 0 to make the \$host a unix socket)
+\item Added handle\+Batch support for Telegram\+Bot\+Handler
+\item Added RFC5424e extended date format including milliseconds to Syslog\+Udp\+Handler
+\item Added support for configuring handlers with numeric level values in strings (coming from e.\+g. env vars)
+\item Fixed Wildfire/\+Fire\+PHP/\+Chrome\+PHP handling of unicode characters
+\item Fixed PHP 8 issues in Syslog\+Udp\+Handler
+\item Fixed internal type error when mbstring is missing
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md443}{}\doxysubsection{2.\+1.\+1 (2020-\/07-\/23)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md443}
+
+\begin{DoxyItemize}
+\item Fixed removing of json encoding options
+\item Fixed type hint of \$level not accepting strings in Send\+Grid\+Handler and Overflow\+Handler
+\item Fixed Swift\+Mailer\+Handler not accepting email templates with an empty subject
+\item Fixed array access on null in Raven\+Handler
+\item Fixed unique\+\_\+id in Web\+Processor not being disableable
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md444}{}\doxysubsection{2.\+1.\+0 (2020-\/05-\/22)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md444}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily JSON\+\_\+\+INVALID\+\_\+\+UTF8\+\_\+\+SUBSTITUTE} to default json flags, so that invalid UTF8 characters now get converted to \href{https://en.wikipedia.org/wiki/Specials_(Unicode_block)\#Replacement_character}{\texttt{ {\ucr}}} instead of being converted from ISO-\/8859-\/15 to UTF8 as it was before, which was hardly a comprehensive solution
+\item Added {\ttfamily \$ignore\+Empty\+Context\+And\+Extra} option to Json\+Formatter to skip empty context/extra entirely from the output
+\item Added {\ttfamily \$parse\+Mode}, {\ttfamily \$disable\+Web\+Page\+Preview} and {\ttfamily \$disable\+Notification} options to Telegram\+Bot\+Handler
+\item Added tentative support for PHP 8
+\item Normalizer\+Formatter\+::add\+Json\+Encode\+Option and remove\+Json\+Encode\+Option are now public to allow modifying default json flags
+\item Fixed Git\+Processor type error when there is no git repo present
+\item Fixed normalization of Soap\+Fault objects containing deeply nested objects as \char`\"{}detail\char`\"{}
+\item Fixed support for relative paths in Rotating\+File\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md445}{}\doxysubsection{2.\+0.\+2 (2019-\/12-\/20)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md445}
+
+\begin{DoxyItemize}
+\item Fixed Elasticsearch\+Handler swallowing exceptions details when failing to index log records
+\item Fixed normalization of Soap\+Fault objects containing non-\/strings as \char`\"{}detail\char`\"{} in Line\+Formatter
+\item Fixed formatting of resources in Json\+Formatter
+\item Fixed Redis\+Handler failing to use MULTI properly when passed a proxied Redis instance (e.\+g. in Symfony with lazy services)
+\item Fixed Filter\+Handler triggering a notice when handle\+Batch was filtering all records passed to it
+\item Fixed Turkish locale messing up the conversion of level names to their constant values
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md446}{}\doxysubsection{2.\+0.\+1 (2019-\/11-\/13)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md446}
+
+\begin{DoxyItemize}
+\item Fixed normalization of Traversables to avoid traversing them as not all of them are rewindable
+\item Fixed set\+Formatter/get\+Formatter to forward to the nested handler in Filter\+Handler, Fingers\+Crossed\+Handler, Buffer\+Handler, Overflow\+Handler and Sampling\+Handler
+\item Fixed Browser\+Console\+Handler formatting when using multiple styles
+\item Fixed normalization of exception codes to be always integers even for PDOException which have them as numeric strings
+\item Fixed normalization of Soap\+Fault objects containing non-\/strings as \char`\"{}detail\char`\"{}
+\item Fixed json encoding across all handlers to always attempt recovery of non-\/\+UTF-\/8 strings instead of failing the whole encoding
+\item Fixed Chrome\+PHPHandler to avoid sending more data than latest Chrome versions allow in headers (4KB down from 256KB).
+\item Fixed type error in Browser\+Console\+Handler when the context array of log records was not associative.
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md447}{}\doxysubsection{2.\+0.\+0 (2019-\/08-\/30)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md447}
+
+\begin{DoxyItemize}
+\item BC Break\+: This is a major release, see \mbox{\hyperlink{md_vendor_monolog_monolog__u_p_g_r_a_d_e}{UPGRADE.md}} for details if you are coming from a 1.\+x release
+\item BC Break\+: Logger methods log/debug/info/notice/warning/error/critical/alert/emergency now have explicit void return types
+\item Added Fallback\+Group\+Handler which works like the What\+Failure\+Group\+Handler but stops dispatching log records as soon as one handler accepted it
+\item Fixed support for UTF-\/8 when cutting strings to avoid cutting a multibyte-\/character in half
+\item Fixed normalizers handling of exception backtraces to avoid serializing arguments in some cases
+\item Fixed date timezone handling in Syslog\+Udp\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md448}{}\doxysubsection{2.\+0.\+0-\/beta2 (2019-\/07-\/06)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md448}
+
+\begin{DoxyItemize}
+\item BC Break\+: This is a major release, see \mbox{\hyperlink{md_vendor_monolog_monolog__u_p_g_r_a_d_e}{UPGRADE.md}} for details if you are coming from a 1.\+x release
+\item BC Break\+: PHP 7.\+2 is now the minimum required PHP version.
+\item BC Break\+: Removed Slackbot\+Handler, Raven\+Handler and Hip\+Chat\+Handler, see \mbox{\hyperlink{md_vendor_monolog_monolog__u_p_g_r_a_d_e}{UPGRADE.md}} for details
+\item Added Overflow\+Handler which will only flush log records to its nested handler when reaching a certain amount of logs (i.\+e. only pass through when things go really bad)
+\item Added Telegram\+Bot\+Handler to log records to a \href{https://core.telegram.org/bots/api}{\texttt{ Telegram}} bot account
+\item Added support for Json\+Serializable when normalizing exceptions
+\item Added support for RFC3164 (outdated BSD syslog protocol) to Syslog\+Udp\+Handler
+\item Added Soap\+Fault details to formatted exceptions
+\item Fixed Deduplication\+Handler silently failing to start when file could not be opened
+\item Fixed issue in Group\+Handler and What\+Failure\+Group\+Handler where setting multiple processors would duplicate records
+\item Fixed Gelf\+Formatter losing some data when one attachment was too long
+\item Fixed issue in Signal\+Handler restarting syscalls functionality
+\item Improved performance of Loggly\+Handler when sending multiple logs in a single request
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md449}{}\doxysubsection{2.\+0.\+0-\/beta1 (2018-\/12-\/08)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md449}
+
+\begin{DoxyItemize}
+\item BC Break\+: This is a major release, see \mbox{\hyperlink{md_vendor_monolog_monolog__u_p_g_r_a_d_e}{UPGRADE.md}} for details if you are coming from a 1.\+x release
+\item BC Break\+: PHP 7.\+1 is now the minimum required PHP version.
+\item BC Break\+: Quite a few interface changes, only relevant if you implemented your own handlers/processors/formatters
+\item BC Break\+: Removed non-\/\+PSR-\/3 methods to add records, all the {\ttfamily add$\ast$} (e.\+g. {\ttfamily add\+Warning}) methods as well as {\ttfamily emerg}, {\ttfamily crit}, {\ttfamily err} and {\ttfamily warn}
+\item BC Break\+: The record timezone is now set per Logger instance and not statically anymore
+\item BC Break\+: There is no more default handler configured on empty Logger instances
+\item BC Break\+: Elastic\+Search\+Handler renamed to Elastica\+Handler
+\item BC Break\+: Various handler-\/specific breaks, see \mbox{\hyperlink{md_vendor_monolog_monolog__u_p_g_r_a_d_e}{UPGRADE.md}} for details
+\item Added scalar type hints and return hints in all the places it was possible. Switched strict\+\_\+types on for more reliability.
+\item Added Date\+Time\+Immutable support, all record datetime are now immutable, and will to\+String/json serialize with the correct date format, including microseconds (unless disabled)
+\item Added timezone and microseconds to the default date format
+\item Added Send\+Grid\+Handler to use the Send\+Grid API to send emails
+\item Added Logmatic\+Handler to use the Logmatic.\+io API to store log records
+\item Added Sqs\+Handler to send log records to an AWS SQS queue
+\item Added Elasticsearch\+Handler to send records via the official ES library. Elastica users should now use Elastica\+Handler instead of Elastic\+Search\+Handler
+\item Added Noop\+Handler which is similar to the Null\+Handle but does not prevent the bubbling of log records to handlers further down the configuration, useful for temporarily disabling a handler in configuration files
+\item Added Process\+Handler to write log output to the STDIN of a given process
+\item Added Hostname\+Processor that adds the machine\textquotesingle{}s hostname to log records
+\item Added a {\ttfamily \$date\+Format} option to the Psr\+Log\+Message\+Processor which lets you format Date\+Time instances nicely
+\item Added support for the PHP 7.\+x {\ttfamily mongodb} extension in the Mongo\+DBHandler
+\item Fixed many minor issues in various handlers, and probably added a few regressions too
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md450}{}\doxysubsection{1.\+26.\+1 (2021-\/05-\/28)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md450}
+
+\begin{DoxyItemize}
+\item Fixed PHP 8.\+1 deprecation warning
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md451}{}\doxysubsection{1.\+26.\+0 (2020-\/12-\/14)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md451}
+
+\begin{DoxyItemize}
+\item Added \$date\+Format and \$remove\+Used\+Context\+Fields arguments to Psr\+Log\+Message\+Processor (backport from 2.\+x)
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md452}{}\doxysubsection{1.\+25.\+5 (2020-\/07-\/23)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md452}
+
+\begin{DoxyItemize}
+\item Fixed array access on null in Raven\+Handler
+\item Fixed unique\+\_\+id in Web\+Processor not being disableable
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md453}{}\doxysubsection{1.\+25.\+4 (2020-\/05-\/22)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md453}
+
+\begin{DoxyItemize}
+\item Fixed Git\+Processor type error when there is no git repo present
+\item Fixed normalization of Soap\+Fault objects containing deeply nested objects as \char`\"{}detail\char`\"{}
+\item Fixed support for relative paths in Rotating\+File\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md454}{}\doxysubsection{1.\+25.\+3 (2019-\/12-\/20)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md454}
+
+\begin{DoxyItemize}
+\item Fixed formatting of resources in Json\+Formatter
+\item Fixed Redis\+Handler failing to use MULTI properly when passed a proxied Redis instance (e.\+g. in Symfony with lazy services)
+\item Fixed Filter\+Handler triggering a notice when handle\+Batch was filtering all records passed to it
+\item Fixed Turkish locale messing up the conversion of level names to their constant values
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md455}{}\doxysubsection{1.\+25.\+2 (2019-\/11-\/13)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md455}
+
+\begin{DoxyItemize}
+\item Fixed normalization of Traversables to avoid traversing them as not all of them are rewindable
+\item Fixed set\+Formatter/get\+Formatter to forward to the nested handler in Filter\+Handler, Fingers\+Crossed\+Handler, Buffer\+Handler and Sampling\+Handler
+\item Fixed Browser\+Console\+Handler formatting when using multiple styles
+\item Fixed normalization of exception codes to be always integers even for PDOException which have them as numeric strings
+\item Fixed normalization of Soap\+Fault objects containing non-\/strings as \char`\"{}detail\char`\"{}
+\item Fixed json encoding across all handlers to always attempt recovery of non-\/\+UTF-\/8 strings instead of failing the whole encoding
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md456}{}\doxysubsection{1.\+25.\+1 (2019-\/09-\/06)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md456}
+
+\begin{DoxyItemize}
+\item Fixed forward-\/compatible interfaces to be compatible with Monolog 1.\+x too.
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md457}{}\doxysubsection{1.\+25.\+0 (2019-\/09-\/06)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md457}
+
+\begin{DoxyItemize}
+\item Deprecated Slackbot\+Handler, use Slack\+Webhook\+Handler or Slack\+Handler instead
+\item Deprecated Raven\+Handler, use sentry/sentry 2.\+x and their Sentry\textbackslash{}\+Monolog\textbackslash{}\+Handler instead
+\item Deprecated Hip\+Chat\+Handler, migrate to Slack and use Slack\+Webhook\+Handler or Slack\+Handler instead
+\item Added forward-\/compatible interfaces and traits Formattable\+Handler\+Interface, Formattable\+Handler\+Trait, Processable\+Handler\+Interface, Processable\+Handler\+Trait. If you use modern PHP and want to make code compatible with Monolog 1 and 2 this can help. You will have to require at least Monolog 1.\+25 though.
+\item Added support for RFC3164 (outdated BSD syslog protocol) to Syslog\+Udp\+Handler
+\item Fixed issue in Group\+Handler and What\+Failure\+Group\+Handler where setting multiple processors would duplicate records
+\item Fixed issue in Signal\+Handler restarting syscalls functionality
+\item Fixed normalizers handling of exception backtraces to avoid serializing arguments in some cases
+\item Fixed Zend\+Monitor\+Handler to work with the latest Zend Server versions
+\item Fixed Chrome\+PHPHandler to avoid sending more data than latest Chrome versions allow in headers (4KB down from 256KB).
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md458}{}\doxysubsection{1.\+24.\+0 (2018-\/11-\/05)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md458}
+
+\begin{DoxyItemize}
+\item BC Notice\+: If you are extending any of the Monolog\textquotesingle{}s Formatters\textquotesingle{} {\ttfamily normalize} method, make sure you add the new {\ttfamily \$depth = 0} argument to your function signature to avoid strict PHP warnings.
+\item Added a {\ttfamily Resettable\+Interface} in order to reset/reset/clear/flush handlers and processors
+\item Added a {\ttfamily Processor\+Interface} as an optional way to label a class as being a processor (mostly useful for autowiring dependency containers)
+\item Added a way to log signals being received using Monolog\textbackslash{}\+Signal\+Handler
+\item Added ability to customize error handling at the Logger level using Logger\+::set\+Exception\+Handler
+\item Added Insight\+Ops\+Handler to migrate users of the Log\+Entries\+Handler
+\item Added protection to Normalizer\+Formatter against circular and very deep structures, it now stops normalizing at a depth of 9
+\item Added capture of stack traces to Error\+Handler when logging PHP errors
+\item Added Raven\+Handler support for a {\ttfamily contexts} context or extra key to forward that to Sentry\textquotesingle{}s contexts
+\item Added forwarding of context info to Fluentd\+Formatter
+\item Added Socket\+Handler\+::set\+Chunk\+Size to override the default chunk size in case you must send large log lines to rsyslog for example
+\item Added ability to extend/override Browser\+Console\+Handler
+\item Added Slack\+Webhook\+Handler\+::get\+Webhook\+Url and Slack\+Handler\+::get\+Token to enable class extensibility
+\item Added Swift\+Mailer\+Handler\+::get\+Subject\+Formatter to enable class extensibility
+\item Dropped official support for HHVM in test builds
+\item Fixed normalization of exception traces when call\+\_\+user\+\_\+func is used to avoid serializing objects and the data they contain
+\item Fixed naming of fields in Slack handler, all field names are now capitalized in all cases
+\item Fixed Hip\+Chat\+Handler bug where slack dropped messages randomly
+\item Fixed normalization of objects in Slack handlers
+\item Fixed support for PHP7\textquotesingle{}s Throwable in New\+Relic\+Handler
+\item Fixed race bug when Stream\+Handler sometimes incorrectly reported it failed to create a directory
+\item Fixed table row styling issues in Html\+Formatter
+\item Fixed Raven\+Handler dropping the message when logging exception
+\item Fixed What\+Failure\+Group\+Handler skipping processors when using handle\+Batch and implement it where possible
+\item Fixed display of anonymous class names
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md459}{}\doxysubsection{1.\+23.\+0 (2017-\/06-\/19)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md459}
+
+\begin{DoxyItemize}
+\item Improved Syslog\+Udp\+Handler\textquotesingle{}s support for RFC5424 and added optional {\ttfamily \$ident} argument
+\item Fixed Gelf\+Handler truncation to be per field and not per message
+\item Fixed compatibility issue with PHP \texorpdfstring{$<$}{<}5.\+3.\+6
+\item Fixed support for headless Chrome in Chrome\+PHPHandler
+\item Fixed support for latest Aws SDK in Dynamo\+Db\+Handler
+\item Fixed support for Swift\+Mailer 6.\+0+ in Swift\+Mailer\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md460}{}\doxysubsection{1.\+22.\+1 (2017-\/03-\/13)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md460}
+
+\begin{DoxyItemize}
+\item Fixed lots of minor issues in the new Slack integrations
+\item Fixed support for allow\+Inline\+Line\+Breaks in Line\+Formatter when formatting exception backtraces
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md461}{}\doxysubsection{1.\+22.\+0 (2016-\/11-\/26)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md461}
+
+\begin{DoxyItemize}
+\item Added Slackbot\+Handler and Slack\+Webhook\+Handler to set up Slack integration more easily
+\item Added Mercurial\+Processor to add mercurial revision and branch names to log records
+\item Added support for AWS SDK v3 in Dynamo\+Db\+Handler
+\item Fixed fatal errors occurring when normalizing generators that have been fully consumed
+\item Fixed Rollbar\+Handler to include a level (rollbar level), monolog\+\_\+level (original name), channel and datetime (unix)
+\item Fixed Rollbar\+Handler not flushing records automatically, calling close() explicitly is not necessary anymore
+\item Fixed Syslog\+Udp\+Handler to avoid sending empty frames
+\item Fixed a few PHP 7.\+0 and 7.\+1 compatibility issues
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md462}{}\doxysubsection{1.\+21.\+0 (2016-\/07-\/29)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md462}
+
+\begin{DoxyItemize}
+\item Break\+: Reverted the addition of \$context when the Error\+Handler handles regular php errors from 1.\+20.\+0 as it was causing issues
+\item Added support for more formats in Rotating\+File\+Handler\+::set\+Filename\+Format as long as they have Y, m and d in order
+\item Added ability to format the main line of text the Slack\+Handler sends by explicitly setting a formatter on the handler
+\item Added information about Soap\+Fault instances in Normalizer\+Formatter
+\item Added \$handle\+Only\+Reported\+Errors option on Error\+Handler\+::register\+Error\+Handler (default true) to allow logging of all errors no matter the error\+\_\+reporting level
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md463}{}\doxysubsection{1.\+20.\+0 (2016-\/07-\/02)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md463}
+
+\begin{DoxyItemize}
+\item Added Fingers\+Crossed\+Handler\+::activate() to manually trigger the handler regardless of the activation policy
+\item Added Stream\+Handler\+::get\+Url to retrieve the stream\textquotesingle{}s URL
+\item Added ability to override add\+Row/add\+Title in Html\+Formatter
+\item Added the \$context to context information when the Error\+Handler handles a regular php error
+\item Deprecated Rotating\+File\+Handler\+::set\+Filename\+Format to only support 3 formats\+: Y, Y-\/m and Y-\/m-\/d
+\item Fixed What\+Failure\+Group\+Handler to work with PHP7 throwables
+\item Fixed a few minor bugs
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md464}{}\doxysubsection{1.\+19.\+0 (2016-\/04-\/12)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md464}
+
+\begin{DoxyItemize}
+\item Break\+: Stream\+Handler will not close streams automatically that it does not own. If you pass in a stream (not a path/url), then it will not close it for you. You can retrieve those using get\+Stream() if needed
+\item Added Deduplication\+Handler to remove duplicate records from notifications across multiple requests, useful for email or other notifications on errors
+\item Added ability to use {\ttfamily message\%} and other Line\+Formatter replacements in the subject line of emails sent with Native\+Mail\+Handler and Swift\+Mailer\+Handler
+\item Fixed Hip\+Chat\+Handler handling of long messages
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md465}{}\doxysubsection{1.\+18.\+2 (2016-\/04-\/02)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md465}
+
+\begin{DoxyItemize}
+\item Fixed Elastica\+Formatter to use more precise dates
+\item Fixed Gelf\+Message\+Formatter sending too long messages
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md466}{}\doxysubsection{1.\+18.\+1 (2016-\/03-\/13)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md466}
+
+\begin{DoxyItemize}
+\item Fixed Slack\+Handler bug where slack dropped messages randomly
+\item Fixed Redis\+Handler issue when using with the PHPRedis extension
+\item Fixed Amqp\+Handler content-\/type being incorrectly set when using with the AMQP extension
+\item Fixed Browser\+Console\+Handler regression
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md467}{}\doxysubsection{1.\+18.\+0 (2016-\/03-\/01)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md467}
+
+\begin{DoxyItemize}
+\item Added optional reduction of timestamp precision via {\ttfamily Logger-\/\texorpdfstring{$>$}{>}use\+Microsecond\+Timestamps(false)}, disabling it gets you a bit of performance boost but reduces the precision to the second instead of microsecond
+\item Added possibility to skip some extra stack frames in Introspection\+Processor if you have some library wrapping Monolog that is always adding frames
+\item Added {\ttfamily Logger-\/\texorpdfstring{$>$}{>}with\+Name} to clone a logger (keeping all handlers) with a new name
+\item Added Fluentd\+Formatter for the Fluentd unix socket protocol
+\item Added Handler\+Wrapper base class to ease the creation of handler wrappers, just extend it and override as needed
+\item Added support for replacing context sub-\/keys using {\ttfamily context.$\ast$\%} in Line\+Formatter
+\item Added support for {\ttfamily payload} context value in Rollbar\+Handler
+\item Added set\+Release to Raven\+Handler to describe the application version, sent with every log
+\item Added support for {\ttfamily fingerprint} context value in Raven\+Handler
+\item Fixed JSON encoding errors that would gobble up the whole log record, we now handle those more gracefully by dropping chars as needed
+\item Fixed write timeouts in Socket\+Handler and derivatives, set to 10sec by default, lower it with {\ttfamily set\+Writing\+Timeout()}
+\item Fixed PHP7 compatibility with regard to Exception/\+Throwable handling in a few places
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md468}{}\doxysubsection{1.\+17.\+2 (2015-\/10-\/14)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md468}
+
+\begin{DoxyItemize}
+\item Fixed Error\+Handler compatibility with non-\/\+Monolog PSR-\/3 loggers
+\item Fixed Slack\+Handler handling to use slack functionalities better
+\item Fixed Swift\+Mailer\+Handler bug when sending multiple emails they all had the same id
+\item Fixed 5.\+3 compatibility regression
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md469}{}\doxysubsection{1.\+17.\+1 (2015-\/08-\/31)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md469}
+
+\begin{DoxyItemize}
+\item Fixed Rollbar\+Handler triggering PHP notices
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md470}{}\doxysubsection{1.\+17.\+0 (2015-\/08-\/30)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md470}
+
+\begin{DoxyItemize}
+\item Added support for {\ttfamily checksum} and {\ttfamily release} context/extra values in Raven\+Handler
+\item Added better support for exceptions in Rollbar\+Handler
+\item Added Uid\+Processor\+::get\+Uid
+\item Added support for showing the resource type in Normalized\+Formatter
+\item Fixed Introspection\+Processor triggering PHP notices
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md471}{}\doxysubsection{1.\+16.\+0 (2015-\/08-\/09)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md471}
+
+\begin{DoxyItemize}
+\item Added IFTTTHandler to notify ifttt.\+com triggers
+\item Added Logger\+::set\+Handlers() to allow setting/replacing all handlers
+\item Added \$cap\+Size in Redis\+Handler to cap the log size
+\item Fixed Stream\+Handler creation of directory to only trigger when the first log write happens
+\item Fixed bug in the handling of curl failures
+\item Fixed duplicate logging of fatal errors when both error and fatal error handlers are registered in monolog\textquotesingle{}s Error\+Handler
+\item Fixed missing fatal errors records with handlers that need to be closed to flush log records
+\item Fixed Tag\+Processor\+::add\+Tags support for associative arrays
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md472}{}\doxysubsection{1.\+15.\+0 (2015-\/07-\/12)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md472}
+
+\begin{DoxyItemize}
+\item Added add\+Tags and set\+Tags methods to change a Tag\+Processor
+\item Added automatic creation of directories if they are missing for a Stream\+Handler to open a log file
+\item Added retry functionality to Loggly, Cube and Mandrill handlers so they retry up to 5 times in case of network failure
+\item Fixed process exit code being incorrectly reset to 0 if Error\+Handler\+::register\+Exception\+Handler was used
+\item Fixed HTML/\+JS escaping in Browser\+Console\+Handler
+\item Fixed JSON encoding errors being silently suppressed (PHP 5.\+5+ only)
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md473}{}\doxysubsection{1.\+14.\+0 (2015-\/06-\/19)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md473}
+
+\begin{DoxyItemize}
+\item Added PHPConsole\+Handler to send record to Chrome\textquotesingle{}s PHP Console extension and library
+\item Added support for objects implementing \+\_\+\+\_\+to\+String in the Normalizer\+Formatter
+\item Added support for Hip\+Chat\textquotesingle{}s v2 API in Hip\+Chat\+Handler
+\item Added Logger\+::set\+Timezone() to initialize the timezone monolog should use in case date.\+timezone isn\textquotesingle{}t correct for your app
+\item Added an option to send formatted message instead of the raw record on Pushover\+Handler via -\/\texorpdfstring{$>$}{>}use\+Formatted\+Message(true)
+\item Fixed curl errors being silently suppressed
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md474}{}\doxysubsection{1.\+13.\+1 (2015-\/03-\/09)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md474}
+
+\begin{DoxyItemize}
+\item Fixed regression in Hip\+Chat requiring a new token to be created
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md475}{}\doxysubsection{1.\+13.\+0 (2015-\/03-\/05)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md475}
+
+\begin{DoxyItemize}
+\item Added Registry\+::has\+Logger to check for the presence of a logger instance
+\item Added context.\+user support to Raven\+Handler
+\item Added Hip\+Chat API v2 support in the Hip\+Chat\+Handler
+\item Added Native\+Mailer\+Handler\+::add\+Parameter to pass params to the mail() process
+\item Added context data to Slack\+Handler when \$include\+Context\+And\+Extra is true
+\item Added ability to customize the Swift\+\_\+\+Message per-\/email in Swift\+Mailer\+Handler
+\item Fixed Swift\+Mailer\+Handler to lazily create message instances if a callback is provided
+\item Fixed serialization of INF and NaN values in \mbox{\hyperlink{class_normalizer}{Normalizer}} and Line\+Formatter
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md476}{}\doxysubsection{1.\+12.\+0 (2014-\/12-\/29)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md476}
+
+\begin{DoxyItemize}
+\item Break\+: Handler\+Interface\+::is\+Handling now receives a partial record containing only a level key. This was always the intent and does not break any Monolog handler but is strictly speaking a BC break and you should check if you relied on any other field in your own handlers.
+\item Added Psr\+Handler to forward records to another PSR-\/3 logger
+\item Added Sampling\+Handler to wrap around a handler and include only every Nth record
+\item Added Mongo\+DBFormatter to support better storage with Mongo\+DBHandler (it must be enabled manually for now)
+\item Added exception codes in the output of most formatters
+\item Added Line\+Formatter\+::include\+Stacktraces to enable exception stack traces in logs (uses more than one line)
+\item Added \$use\+Short\+Attachment to Slack\+Handler to minify attachment size and \$include\+Extra to append extra data
+\item Added \$host to Hip\+Chat\+Handler for users of private instances
+\item Added \$transaction\+Name to New\+Relic\+Handler and support for a transaction\+\_\+name context value
+\item Fixed Mandrill\+Handler to avoid outputting API call responses
+\item Fixed some non-\/standard behaviors in Syslog\+Udp\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md477}{}\doxysubsection{1.\+11.\+0 (2014-\/09-\/30)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md477}
+
+\begin{DoxyItemize}
+\item Break\+: The New\+Relic\+Handler extra and context data are now prefixed with extra\+\_\+ and context\+\_\+ to avoid clashes. Watch out if you have scripts reading those from the API and rely on names
+\item Added What\+Failure\+Group\+Handler to suppress any exception coming from the wrapped handlers and avoid chain failures if a logging service fails
+\item Added Mandrill\+Handler to send emails via the Mandrillapp.\+com API
+\item Added Slack\+Handler to log records to a Slack.\+com account
+\item Added Fleep\+Hook\+Handler to log records to a Fleep.\+io account
+\item Added Loggly\+Handler\+::add\+Tag to allow adding tags to an existing handler
+\item Added \$ignore\+Empty\+Context\+And\+Extra to Line\+Formatter to avoid empty \mbox{[}\mbox{]} at the end
+\item Added \$use\+Locking to Stream\+Handler and Rotating\+File\+Handler to enable flock() while writing
+\item Added support for Php\+Amqp\+Lib in the Amqp\+Handler
+\item Added Fingers\+Crossed\+Handler\+::clear and Buffer\+Handler\+::clear to reset them between batches in long running jobs
+\item Added support for adding extra fields from \$\+\_\+\+SERVER in the Web\+Processor
+\item Fixed support for non-\/string values in Prs\+Log\+Message\+Processor
+\item Fixed Swift\+Mailer messages being sent with the wrong date in long running scripts
+\item Fixed minor PHP 5.\+6 compatibility issues
+\item Fixed Buffer\+Handler\+::close being called twice
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md478}{}\doxysubsection{1.\+10.\+0 (2014-\/06-\/04)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md478}
+
+\begin{DoxyItemize}
+\item Added Logger\+::get\+Handlers() and Logger\+::get\+Processors() methods
+\item Added \$passthru\+Level argument to Fingers\+Crossed\+Handler to let it always pass some records through even if the trigger level is not reached
+\item Added support for extra data in New\+Relic\+Handler
+\item Added \$expand\+Newlines flag to the Error\+Log\+Handler to create multiple log entries when a message has multiple lines
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md479}{}\doxysubsection{1.\+9.\+1 (2014-\/04-\/24)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md479}
+
+\begin{DoxyItemize}
+\item Fixed regression in Rotating\+File\+Handler file permissions
+\item Fixed initialization of the Buffer\+Handler to make sure it gets flushed after receiving records
+\item Fixed Chrome\+PHPHandler and Fire\+PHPHandler\textquotesingle{}s activation strategies to be more conservative
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md480}{}\doxysubsection{1.\+9.\+0 (2014-\/04-\/20)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md480}
+
+\begin{DoxyItemize}
+\item Added Log\+Entries\+Handler to send logs to a Log\+Entries account
+\item Added \$file\+Permissions to tweak file mode on Stream\+Handler and Rotating\+File\+Handler
+\item Added \$use\+Formatting flag to Memory\+Processor to make it send raw data in bytes
+\item Added support for table formatting in Fire\+PHPHandler via the table context key
+\item Added a Tag\+Processor to add tags to records, and support for tags in Raven\+Handler
+\item Added \$append\+Newline flag to the Json\+Formatter to enable using it when logging to files
+\item Added sound support to the Pushover\+Handler
+\item Fixed multi-\/threading support in Stream\+Handler
+\item Fixed empty headers issue when Chrome\+PHPHandler received no records
+\item Fixed default format of the Error\+Log\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md481}{}\doxysubsection{1.\+8.\+0 (2014-\/03-\/23)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md481}
+
+\begin{DoxyItemize}
+\item Break\+: the Line\+Formatter now strips newlines by default because this was a bug, set \$allow\+Inline\+Line\+Breaks to true if you need them
+\item Added Browser\+Console\+Handler to send logs to any browser\textquotesingle{}s console via console.\+log() injection in the output
+\item Added Filter\+Handler to filter records and only allow those of a given list of levels through to the wrapped handler
+\item Added Flowdock\+Handler to send logs to a Flowdock account
+\item Added Rollbar\+Handler to send logs to a Rollbar account
+\item Added Html\+Formatter to send prettier log emails with colors for each log level
+\item Added Git\+Processor to add the current branch/commit to extra record data
+\item Added a Monolog\textbackslash{}\+Registry class to allow easier global access to pre-\/configured loggers
+\item Added support for the new official graylog2/gelf-\/php lib for Gelf\+Handler, upgrade if you can by replacing the mlehner/gelf-\/php requirement
+\item Added support for HHVM
+\item Added support for Loggly batch uploads
+\item Added support for tweaking the content type and encoding in Native\+Mailer\+Handler
+\item Added \$skip\+Classes\+Partials to tweak the ignored classes in the Introspection\+Processor
+\item Fixed batch request support in Gelf\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md482}{}\doxysubsection{1.\+7.\+0 (2013-\/11-\/14)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md482}
+
+\begin{DoxyItemize}
+\item Added Elastic\+Search\+Handler to send logs to an Elastic Search server
+\item Added Dynamo\+Db\+Handler and Scalar\+Formatter to send logs to Amazon\textquotesingle{}s Dynamo DB
+\item Added Syslog\+Udp\+Handler to send logs to a remote syslogd server
+\item Added Loggly\+Handler to send logs to a Loggly account
+\item Added \$level to Introspection\+Processor so it only adds backtraces when needed
+\item Added \$version to Logstash\+Formatter to allow using the new v1 Logstash format
+\item Added \$app\+Name to New\+Relic\+Handler
+\item Added configuration of Pushover notification retries/expiry
+\item Added \$max\+Column\+Width to Native\+Mailer\+Handler to change the 70 chars default
+\item Added chainability to most setters for all handlers
+\item Fixed Raven\+Handler batch processing so it takes the message from the record with highest priority
+\item Fixed Hip\+Chat\+Handler batch processing so it sends all messages at once
+\item Fixed issues with e\+Accelerator
+\item Fixed and improved many small things
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md483}{}\doxysubsection{1.\+6.\+0 (2013-\/07-\/29)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md483}
+
+\begin{DoxyItemize}
+\item Added Hip\+Chat\+Handler to send logs to a Hip\+Chat chat room
+\item Added Error\+Log\+Handler to send logs to PHP\textquotesingle{}s error\+\_\+log function
+\item Added New\+Relic\+Handler to send logs to New\+Relic\textquotesingle{}s service
+\item Added Monolog\textbackslash{}\+Error\+Handler helper class to register a Logger as exception/error/fatal handler
+\item Added Channel\+Level\+Activation\+Strategy for the Fingers\+Crossed\+Handler to customize levels by channel
+\item Added stack traces output when normalizing exceptions (json output \& co)
+\item Added Monolog\textbackslash{}\+Logger\+::\+API constant (currently 1)
+\item Added support for Chrome\+PHP\textquotesingle{}s v4.\+0 extension
+\item Added support for message priorities in Pushover\+Handler, see \$high\+Priority\+Level and \$emergency\+Level
+\item Added support for sending messages to multiple users at once with the Pushover\+Handler
+\item Fixed Raven\+Handler\textquotesingle{}s support for batch sending of messages (when behind a Buffer or Fingers\+Crossed\+Handler)
+\item Fixed normalization of Traversables with very large data sets, only the first 1000 items are shown now
+\item Fixed issue in Rotating\+File\+Handler when an open\+\_\+basedir restriction is active
+\item Fixed minor issues in Raven\+Handler and bumped the API to Raven 0.\+5.\+0
+\item Fixed Syslog\+Handler issue when many were used concurrently with different facilities
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md484}{}\doxysubsection{1.\+5.\+0 (2013-\/04-\/23)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md484}
+
+\begin{DoxyItemize}
+\item Added Process\+Id\+Processor to inject the PID in log records
+\item Added Uid\+Processor to inject a unique identifier to all log records of one request/run
+\item Added support for previous exceptions in the Line\+Formatter exception serialization
+\item Added Monolog\textbackslash{}\+Logger\+::get\+Levels() to get all available levels
+\item Fixed Chrome\+PHPHandler so it avoids sending headers larger than Chrome can handle
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md485}{}\doxysubsection{1.\+4.\+1 (2013-\/04-\/01)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md485}
+
+\begin{DoxyItemize}
+\item Fixed exception formatting in the Line\+Formatter to be more minimalistic
+\item Fixed Raven\+Handler\textquotesingle{}s handling of context/extra data, requires Raven client \texorpdfstring{$>$}{>}0.\+1.\+0
+\item Fixed log rotation in Rotating\+File\+Handler to work with long running scripts spanning multiple days
+\item Fixed Web\+Processor array access so it checks for data presence
+\item Fixed Buffer, Group and Fingers\+Crossed handlers to make use of their processors
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md486}{}\doxysubsection{1.\+4.\+0 (2013-\/02-\/13)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md486}
+
+\begin{DoxyItemize}
+\item Added Redis\+Handler to log to Redis via the Predis library or the phpredis extension
+\item Added Zend\+Monitor\+Handler to log to the Zend Server monitor
+\item Added the possibility to pass arrays of handlers and processors directly in the Logger constructor
+\item Added {\ttfamily \$use\+SSL} option to the Pushover\+Handler which is enabled by default
+\item Fixed Chrome\+PHPHandler and Fire\+PHPHandler issue when multiple instances are used simultaneously
+\item Fixed header injection capability in the Native\+Mail\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md487}{}\doxysubsection{1.\+3.\+1 (2013-\/01-\/11)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md487}
+
+\begin{DoxyItemize}
+\item Fixed Logstash\+Formatter to be usable with stream handlers
+\item Fixed Gelf\+Message\+Formatter levels on Windows
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md488}{}\doxysubsection{1.\+3.\+0 (2013-\/01-\/08)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md488}
+
+\begin{DoxyItemize}
+\item Added PSR-\/3 compliance, the {\ttfamily Monolog\textbackslash{}Logger} class is now an instance of {\ttfamily Psr\textbackslash{}Log\textbackslash{}Logger\+Interface}
+\item Added Psr\+Log\+Message\+Processor that you can selectively enable for full PSR-\/3 compliance
+\item Added Logstash\+Formatter (combine with Socket\+Handler or Stream\+Handler to send logs to Logstash)
+\item Added Pushover\+Handler to send mobile notifications
+\item Added Couch\+DBHandler and Doctrine\+Couch\+DBHandler
+\item Added Raven\+Handler to send data to Sentry servers
+\item Added support for the new Mongo\+Client class in Mongo\+DBHandler
+\item Added microsecond precision to log records\textquotesingle{} timestamps
+\item Added {\ttfamily \$flush\+On\+Overflow} param to Buffer\+Handler to flush by batches instead of losing the oldest entries
+\item Fixed normalization of objects with cyclic references
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md489}{}\doxysubsection{1.\+2.\+1 (2012-\/08-\/29)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md489}
+
+\begin{DoxyItemize}
+\item Added new \$logopts arg to Syslog\+Handler to provide custom openlog options
+\item Fixed fatal error in Syslog\+Handler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md490}{}\doxysubsection{1.\+2.\+0 (2012-\/08-\/18)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md490}
+
+\begin{DoxyItemize}
+\item Added Amqp\+Handler (for use with AMQP servers)
+\item Added Cube\+Handler
+\item Added Native\+Mailer\+Handler\+::add\+Header() to send custom headers in mails
+\item Added the possibility to specify more than one recipient in Native\+Mailer\+Handler
+\item Added the possibility to specify float timeouts in Socket\+Handler
+\item Added NOTICE and EMERGENCY levels to conform with RFC 5424
+\item Fixed the log records to use the php default timezone instead of UTC
+\item Fixed Buffer\+Handler not being flushed properly on PHP fatal errors
+\item Fixed normalization of exotic resource types
+\item Fixed the default format of the Syslog\+Handler to avoid duplicating datetimes in syslog
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md491}{}\doxysubsection{1.\+1.\+0 (2012-\/04-\/23)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md491}
+
+\begin{DoxyItemize}
+\item Added Monolog\textbackslash{}\+Logger\+::is\+Handling() to check if a handler will handle the given log level
+\item Added Chrome\+PHPHandler
+\item Added Mongo\+DBHandler
+\item Added Gelf\+Handler (for use with Graylog2 servers)
+\item Added Socket\+Handler (for use with syslog-\/ng for example)
+\item Added Normalizer\+Formatter
+\item Added the possibility to change the activation strategy of the Fingers\+Crossed\+Handler
+\item Added possibility to show microseconds in logs
+\item Added {\ttfamily server} and {\ttfamily referer} to Web\+Processor output
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md492}{}\doxysubsection{1.\+0.\+2 (2011-\/10-\/24)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md492}
+
+\begin{DoxyItemize}
+\item Fixed bug in IE with large response headers and Fire\+PHPHandler
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md493}{}\doxysubsection{1.\+0.\+1 (2011-\/08-\/25)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md493}
+
+\begin{DoxyItemize}
+\item Added Memory\+Peak\+Usage\+Processor and Memory\+Usage\+Processor
+\item Added Monolog\textbackslash{}\+Logger\+::get\+Name() to get a logger\textquotesingle{}s channel name
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md494}{}\doxysubsection{1.\+0.\+0 (2011-\/07-\/06)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md494}
+
+\begin{DoxyItemize}
+\item Added Introspection\+Processor to get info from where the logger was called
+\item Fixed Web\+Processor in CLI
+\end{DoxyItemize}\hypertarget{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md495}{}\doxysubsection{1.\+0.\+0-\/\+RC1 (2011-\/07-\/01)}\label{md_vendor_monolog_monolog__c_h_a_n_g_e_l_o_g_autotoc_md495}
+
+\begin{DoxyItemize}
+\item Initial release 
+\end{DoxyItemize}

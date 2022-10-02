@@ -1,0 +1,58 @@
+\hypertarget{class_monolog_1_1_processor_1_1_mercurial_processor}{}\doxysection{Mercurial\+Processor Class Reference}
+\label{class_monolog_1_1_processor_1_1_mercurial_processor}\index{MercurialProcessor@{MercurialProcessor}}
+Inheritance diagram for Mercurial\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_monolog_1_1_processor_1_1_mercurial_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_processor_1_1_mercurial_processor_a482070a9644ebf12b4589e9f641f17dd}{\+\_\+\+\_\+construct}} (\$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}})
+\item 
+\mbox{\hyperlink{class_monolog_1_1_processor_1_1_mercurial_processor_af6bdfd8d87fb85ab75b06b34a3f3c1af}{\+\_\+\+\_\+invoke}} (array \$record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Injects Hg branch and Hg revision number in all records
+
+\begin{DoxyAuthor}{Author}
+Jonathan A. Schweder \href{mailto:jonathanschweder@gmail.com}{\texttt{ jonathanschweder@gmail.\+com}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_processor_1_1_mercurial_processor_a482070a9644ebf12b4589e9f641f17dd}\label{class_monolog_1_1_processor_1_1_mercurial_processor_a482070a9644ebf12b4589e9f641f17dd}} 
+\index{MercurialProcessor@{MercurialProcessor}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MercurialProcessor@{MercurialProcessor}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$level} & The minimum logging level at which this Processor will be triggered\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_processor_1_1_mercurial_processor_af6bdfd8d87fb85ab75b06b34a3f3c1af}\label{class_monolog_1_1_processor_1_1_mercurial_processor_af6bdfd8d87fb85ab75b06b34a3f3c1af}} 
+\index{MercurialProcessor@{MercurialProcessor}!\_\_invoke@{\_\_invoke}}
+\index{\_\_invoke@{\_\_invoke}!MercurialProcessor@{MercurialProcessor}}
+\doxysubsubsection{\texorpdfstring{\_\_invoke()}{\_\_invoke()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+invoke (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array The processed record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record @phpstan-\/return Record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_processor_1_1_processor_interface_af6bdfd8d87fb85ab75b06b34a3f3c1af}{Processor\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Processor/Mercurial\+Processor.\+php\end{DoxyCompactItemize}

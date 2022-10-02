@@ -1,0 +1,55 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker}{}\doxysection{Count\+Walker Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker}\index{CountWalker@{CountWalker}}
+Inheritance diagram for Count\+Walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker_a3610174d13cc7a5b18cf1196be4c76e4}{walk\+Select\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker_a6be89b46f80c1c7a439c6ab72f2f65d0}{HINT\+\_\+\+DISTINCT}} = \textquotesingle{}doctrine\+\_\+paginator.\+distinct\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Replaces the select\+Clause of the AST with a COUNT statement. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker_a3610174d13cc7a5b18cf1196be4c76e4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker_a3610174d13cc7a5b18cf1196be4c76e4}} 
+\index{CountWalker@{CountWalker}!walkSelectStatement@{walkSelectStatement}}
+\index{walkSelectStatement@{walkSelectStatement}!CountWalker@{CountWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatement()}{walkSelectStatement()}}
+{\footnotesize\ttfamily walk\+Select\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+Walks down a Select\+Statement AST node, modifying it to retrieve a COUNT.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker_a6be89b46f80c1c7a439c6ab72f2f65d0}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_walker_a6be89b46f80c1c7a439c6ab72f2f65d0}} 
+\index{CountWalker@{CountWalker}!HINT\_DISTINCT@{HINT\_DISTINCT}}
+\index{HINT\_DISTINCT@{HINT\_DISTINCT}!CountWalker@{CountWalker}}
+\doxysubsubsection{\texorpdfstring{HINT\_DISTINCT}{HINT\_DISTINCT}}
+{\footnotesize\ttfamily const HINT\+\_\+\+DISTINCT = \textquotesingle{}doctrine\+\_\+paginator.\+distinct\textquotesingle{}}
+
+Distinct mode hint name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Pagination/Count\+Walker.\+php\end{DoxyCompactItemize}

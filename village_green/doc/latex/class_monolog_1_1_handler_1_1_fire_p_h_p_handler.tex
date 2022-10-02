@@ -1,0 +1,181 @@
+\hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler}{}\doxysection{Fire\+PHPHandler Class Reference}
+\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler}\index{FirePHPHandler@{FirePHPHandler}}
+Inheritance diagram for Fire\+PHPHandler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_fire_p_h_p_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa88207afc089706c82008dda64a62d23}{create\+Header}} (array \$meta, string \$message)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa3ed8bbf8ac2a9cb8cb2d976aec9ba3b}{create\+Record\+Header}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a35d947a51239c362174727cb35ba6003}{get\+Init\+Headers}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}{send\+Header}} (string \$header, string \$content)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}{headers\+Accepted}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_acd76aed7e7638a232a5bcd7088fddf15}{PROTOCOL\+\_\+\+URI}} = \textquotesingle{}http\+://meta.\+wildfirehq.\+org/Protocol/Json\+Stream/0.\+2\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_ac8849b6f99d5b7c53ed93239893312f9}{STRUCTURE\+\_\+\+URI}} = \textquotesingle{}http\+://meta.\+firephp.\+org/Wildfire/Structure/Fire\+PHP/Firebug\+Console/0.\+1\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a4ba70891d3a8684a16d619094938afb2}{PLUGIN\+\_\+\+URI}} = \textquotesingle{}http\+://meta.\+firephp.\+org/Wildfire/Plugin/Fire\+PHP/Library-\/Fire\+PHPCore/0.\+3\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a30fe8c991d4b675bb276c935490ff186}{HEADER\+\_\+\+PREFIX}} = \textquotesingle{}X-\/Wf\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a533c66c9995bd9f022b5f5b325c12ad4}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a533c66c9995bd9f022b5f5b325c12ad4}} 
+static {\bfseries \$initialized} = false
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a52da5b9dc0426270cc036316ea1c70ea}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a52da5b9dc0426270cc036316ea1c70ea}} 
+static {\bfseries \$message\+Index} = 1
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a3102bd7761d2b6b65712a7308c82b6ee}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a3102bd7761d2b6b65712a7308c82b6ee}} 
+static {\bfseries \$send\+Headers} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Simple Fire\+PHP \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} (\href{http://www.firephp.org/}{\texttt{ http\+://www.\+firephp.\+org/}}), which uses the Wildfire protocol.
+
+\begin{DoxyAuthor}{Author}
+Eric Clemmons (@ericclemmons) \href{mailto:eric@uxdriven.com}{\texttt{ eric@uxdriven.\+com}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa88207afc089706c82008dda64a62d23}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa88207afc089706c82008dda64a62d23}} 
+\index{FirePHPHandler@{FirePHPHandler}!createHeader@{createHeader}}
+\index{createHeader@{createHeader}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{createHeader()}{createHeader()}}
+{\footnotesize\ttfamily create\+Header (\begin{DoxyParamCaption}\item[{array}]{\$meta,  }\item[{string}]{\$message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Base header creation function used by init headers \& record headers
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em array$<$int$\vert$string$>$} & \$meta Wildfire Plugin, Protocol \& Structure Indexes \\
+\hline
+string & {\em \$message} & Log message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$string, string$>$ Complete header string ready for the client as key and message as value
+\end{DoxyReturn}
+@phpstan-\/return non-\/empty-\/array\texorpdfstring{$<$}{<}string, string\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa3ed8bbf8ac2a9cb8cb2d976aec9ba3b}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa3ed8bbf8ac2a9cb8cb2d976aec9ba3b}} 
+\index{FirePHPHandler@{FirePHPHandler}!createRecordHeader@{createRecordHeader}}
+\index{createRecordHeader@{createRecordHeader}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{createRecordHeader()}{createRecordHeader()}}
+{\footnotesize\ttfamily create\+Record\+Header (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates message header from record
+
+\begin{DoxyReturn}{Returns}
+array$<$string, string$>$
+\end{DoxyReturn}
+@phpstan-\/return non-\/empty-\/array\texorpdfstring{$<$}{<}string, string\texorpdfstring{$>$}{>}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa88207afc089706c82008dda64a62d23}{create\+Header()}}
+\end{DoxySeeAlso}
+@phpstan-\/param Formatted\+Record \$record \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{FirePHPHandler@{FirePHPHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a35d947a51239c362174727cb35ba6003}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a35d947a51239c362174727cb35ba6003}} 
+\index{FirePHPHandler@{FirePHPHandler}!getInitHeaders@{getInitHeaders}}
+\index{getInitHeaders@{getInitHeaders}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{getInitHeaders()}{getInitHeaders()}}
+{\footnotesize\ttfamily get\+Init\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Wildfire initialization headers to enable message parsing
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_aa88207afc089706c82008dda64a62d23}{create\+Header()}} 
+
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}{send\+Header()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+array$<$string, string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}} 
+\index{FirePHPHandler@{FirePHPHandler}!headersAccepted@{headersAccepted}}
+\index{headersAccepted@{headersAccepted}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{headersAccepted()}{headersAccepted()}}
+{\footnotesize\ttfamily headers\+Accepted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Verifies if the headers are accepted by the current user agent 
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_fire_p_h_p_handler_a207ea9af107e1a4bbb43773eb740097e}{Fire\+PHPHandler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}} 
+\index{FirePHPHandler@{FirePHPHandler}!sendHeader@{sendHeader}}
+\index{sendHeader@{sendHeader}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{sendHeader()}{sendHeader()}}
+{\footnotesize\ttfamily send\+Header (\begin{DoxyParamCaption}\item[{string}]{\$header,  }\item[{string}]{\$content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send header string to the client \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{FirePHPHandler@{FirePHPHandler}!write@{write}}
+\index{write@{write}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates \& sends header for a record, ensuring init headers have been sent prior
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a31f1330cd35571b69cf426acce1d4520}{send\+Header()}} 
+
+send\+Init\+Headers() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a30fe8c991d4b675bb276c935490ff186}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a30fe8c991d4b675bb276c935490ff186}} 
+\index{FirePHPHandler@{FirePHPHandler}!HEADER\_PREFIX@{HEADER\_PREFIX}}
+\index{HEADER\_PREFIX@{HEADER\_PREFIX}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{HEADER\_PREFIX}{HEADER\_PREFIX}}
+{\footnotesize\ttfamily const HEADER\+\_\+\+PREFIX = \textquotesingle{}X-\/Wf\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Header prefix for Wildfire to recognize \& parse headers \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a4ba70891d3a8684a16d619094938afb2}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_a4ba70891d3a8684a16d619094938afb2}} 
+\index{FirePHPHandler@{FirePHPHandler}!PLUGIN\_URI@{PLUGIN\_URI}}
+\index{PLUGIN\_URI@{PLUGIN\_URI}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{PLUGIN\_URI}{PLUGIN\_URI}}
+{\footnotesize\ttfamily const PLUGIN\+\_\+\+URI = \textquotesingle{}http\+://meta.\+firephp.\+org/Wildfire/Plugin/Fire\+PHP/Library-\/Fire\+PHPCore/0.\+3\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Must reference a \char`\"{}known\char`\"{} plugin, otherwise headers won\textquotesingle{}t display in Fire\+PHP \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_acd76aed7e7638a232a5bcd7088fddf15}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_acd76aed7e7638a232a5bcd7088fddf15}} 
+\index{FirePHPHandler@{FirePHPHandler}!PROTOCOL\_URI@{PROTOCOL\_URI}}
+\index{PROTOCOL\_URI@{PROTOCOL\_URI}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{PROTOCOL\_URI}{PROTOCOL\_URI}}
+{\footnotesize\ttfamily const PROTOCOL\+\_\+\+URI = \textquotesingle{}http\+://meta.\+wildfirehq.\+org/Protocol/Json\+Stream/0.\+2\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Wild\+Fire JSON header message format \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_ac8849b6f99d5b7c53ed93239893312f9}\label{class_monolog_1_1_handler_1_1_fire_p_h_p_handler_ac8849b6f99d5b7c53ed93239893312f9}} 
+\index{FirePHPHandler@{FirePHPHandler}!STRUCTURE\_URI@{STRUCTURE\_URI}}
+\index{STRUCTURE\_URI@{STRUCTURE\_URI}!FirePHPHandler@{FirePHPHandler}}
+\doxysubsubsection{\texorpdfstring{STRUCTURE\_URI}{STRUCTURE\_URI}}
+{\footnotesize\ttfamily const STRUCTURE\+\_\+\+URI = \textquotesingle{}http\+://meta.\+firephp.\+org/Wildfire/Structure/Fire\+PHP/Firebug\+Console/0.\+1\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fire\+PHP structure for parsing messages \& their presentation 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Fire\+PHPHandler.\+php\end{DoxyCompactItemize}

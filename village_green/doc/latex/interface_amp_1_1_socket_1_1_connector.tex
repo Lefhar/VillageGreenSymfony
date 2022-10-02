@@ -1,0 +1,52 @@
+\hypertarget{interface_amp_1_1_socket_1_1_connector}{}\doxysection{Connector Interface Reference}
+\label{interface_amp_1_1_socket_1_1_connector}\index{Connector@{Connector}}
+Inheritance diagram for Connector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_socket_1_1_connector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_connector_a8203da5b98ccce0c3ac9a1d3389666e4}{connect}} (string \$uri, ?\mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}} \$context=null, ?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$token=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_connector_a8203da5b98ccce0c3ac9a1d3389666e4}\label{interface_amp_1_1_socket_1_1_connector_a8203da5b98ccce0c3ac9a1d3389666e4}} 
+\index{Connector@{Connector}!connect@{connect}}
+\index{connect@{connect}!Connector@{Connector}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily connect (\begin{DoxyParamCaption}\item[{string}]{\$uri,  }\item[{?\mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}}}]{\$context = {\ttfamily null},  }\item[{?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Asynchronously establish a socket connection to the specified URI.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$uri} & URI in scheme\+://host\+:port format. TCP is assumed if no scheme is present. \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}} & {\em \$context} & \mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket}{Socket}} connect context to use when connecting. \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} | null & {\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Encryptable\+Socket$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_exception}{Connect\+Exception}}} & \\
+\hline
+{\em \mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_static_connector_a8203da5b98ccce0c3ac9a1d3389666e4}{Static\+Connector}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Connector.\+php\end{DoxyCompactItemize}

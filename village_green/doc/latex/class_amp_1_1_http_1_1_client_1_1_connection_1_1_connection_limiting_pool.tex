@@ -1,0 +1,54 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool}{}\doxysection{Connection\+Limiting\+Pool Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool}\index{ConnectionLimitingPool@{ConnectionLimitingPool}}
+Inheritance diagram for Connection\+Limiting\+Pool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_ad0cb87b388bc74d63dc884accdca8713}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_ad0cb87b388bc74d63dc884accdca8713}} 
+{\bfseries \+\_\+\+\_\+clone} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a63c88dcb04b926179d767e03265bc727}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a63c88dcb04b926179d767e03265bc727}} 
+{\bfseries get\+Total\+Connection\+Attempts} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a055998d8592d0112d5554030ec62e763}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a055998d8592d0112d5554030ec62e763}} 
+{\bfseries get\+Total\+Stream\+Requests} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a599ee510e8d02999214e1c6893ca1d3a}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a599ee510e8d02999214e1c6893ca1d3a}} 
+{\bfseries get\+Open\+Connection\+Count} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a1f4a6bd20fdd11b7d944f91bf009d56c}{by\+Authority}} (int \$connection\+Limit, ?\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_factory}{Connection\+Factory}} \$connection\+Factory=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a1f4a6bd20fdd11b7d944f91bf009d56c}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_limiting_pool_a1f4a6bd20fdd11b7d944f91bf009d56c}} 
+\index{ConnectionLimitingPool@{ConnectionLimitingPool}!byAuthority@{byAuthority}}
+\index{byAuthority@{byAuthority}!ConnectionLimitingPool@{ConnectionLimitingPool}}
+\doxysubsubsection{\texorpdfstring{byAuthority()}{byAuthority()}}
+{\footnotesize\ttfamily static by\+Authority (\begin{DoxyParamCaption}\item[{int}]{\$connection\+Limit,  }\item[{?\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_factory}{Connection\+Factory}}}]{\$connection\+Factory = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a connection pool that limits the number of connections per authority.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$connection\+Limit} & Maximum number of connections allowed to a single authority. \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_factory}{Connection\+Factory}} | null & {\em \$connection\+Factory} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/Connection\+Limiting\+Pool.\+php\end{DoxyCompactItemize}

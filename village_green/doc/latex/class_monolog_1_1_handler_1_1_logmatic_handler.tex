@@ -1,0 +1,76 @@
+\hypertarget{class_monolog_1_1_handler_1_1_logmatic_handler}{}\doxysection{Logmatic\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_logmatic_handler}\index{LogmaticHandler@{LogmaticHandler}}
+Inheritance diagram for Logmatic\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_logmatic_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_logmatic_handler_a08e6299748f20f02fb78e80d1e8dc96e}{\+\_\+\+\_\+construct}} (string \$token, string \$hostname=\textquotesingle{}\textquotesingle{}, string \$appname=\textquotesingle{}\textquotesingle{}, bool \$use\+SSL=true, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_logmatic_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_logmatic_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Julien Breux \href{mailto:julien.breux@gmail.com}{\texttt{ julien.\+breux@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_logmatic_handler_a08e6299748f20f02fb78e80d1e8dc96e}\label{class_monolog_1_1_handler_1_1_logmatic_handler_a08e6299748f20f02fb78e80d1e8dc96e}} 
+\index{LogmaticHandler@{LogmaticHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogmaticHandler@{LogmaticHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{string}]{\$hostname = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{string}]{\$appname = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{bool}]{\$use\+SSL = {\ttfamily true},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & Log token supplied by Logmatic. \\
+\hline
+string & {\em \$hostname} & Host name supplied by Logmatic. \\
+\hline
+string & {\em \$appname} & Application name supplied by Logmatic. \\
+\hline
+bool & {\em \$use\+SSL} & Whether or not SSL encryption should be used.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & If SSL encryption is set to true and Open\+SSL is missing \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_logmatic_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_logmatic_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{LogmaticHandler@{LogmaticHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!LogmaticHandler@{LogmaticHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_logmatic_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_logmatic_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{LogmaticHandler@{LogmaticHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!LogmaticHandler@{LogmaticHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Logmatic\+Handler.\+php\end{DoxyCompactItemize}

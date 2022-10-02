@@ -1,0 +1,151 @@
+\hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler}{}\doxysection{Native\+Mailer\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_native_mailer_handler}\index{NativeMailerHandler@{NativeMailerHandler}}
+Inheritance diagram for Native\+Mailer\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_native_mailer_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler_a4c6d38fe4135a0ddcc6d4789e5a415df}{\+\_\+\+\_\+construct}} (\$to, string \$subject, string \$from, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true, int \$max\+Column\+Width=70)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler_a99d2f6849c97c07cae557e7922797bc1}{add\+Header}} (\$headers)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler_a802acefd8f2dbb8c2336fcd200e1e423}{add\+Parameter}} (\$parameters)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_aa843137beb02bc2516fe0551c00ff7d7}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_aa843137beb02bc2516fe0551c00ff7d7}} 
+{\bfseries get\+Content\+Type} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a515b2653f040b0c8a4ed093878232943}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a515b2653f040b0c8a4ed093878232943}} 
+{\bfseries get\+Encoding} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler_a6faed7d241ac38b8caf543b8a76d1593}{set\+Content\+Type}} (string \$content\+Type)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a96cb0180d43023c46c608c717fdf9e41}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a96cb0180d43023c46c608c717fdf9e41}} 
+{\bfseries set\+Encoding} (string \$encoding)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}{send}} (string \$content, array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_ac19f839b525d6d99d063fe56bf2a6d3b}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_ac19f839b525d6d99d063fe56bf2a6d3b}} 
+{\bfseries \$to}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_afea90503726cd5ad2eb80baf0b6d217d}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_afea90503726cd5ad2eb80baf0b6d217d}} 
+{\bfseries \$subject}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a52500036ee807241b8b4b7e2367c49ef}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a52500036ee807241b8b4b7e2367c49ef}} 
+{\bfseries \$headers} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_ab79d246480c4ac3a0db6bbceca92ad32}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_ab79d246480c4ac3a0db6bbceca92ad32}} 
+{\bfseries \$parameters} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a836ccbd3f6c2a425ad635907478b35b2}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a836ccbd3f6c2a425ad635907478b35b2}} 
+{\bfseries \$max\+Column\+Width}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_ab8c052d0ddebb9f14151f8682916a587}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_ab8c052d0ddebb9f14151f8682916a587}} 
+{\bfseries \$content\+Type}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_aee271b7ce67fbe00b9976e6c347cbfbf}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_aee271b7ce67fbe00b9976e6c347cbfbf}} 
+{\bfseries \$encoding} = \textquotesingle{}utf-\/8\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler}{Native\+Mailer\+Handler}} uses the mail() function to send the emails
+
+\begin{DoxyAuthor}{Author}
+Christophe Coevoet \href{mailto:stof@notk.org}{\texttt{ stof@notk.\+org}} 
+
+Mark Garrett \href{mailto:mark@moderndeveloperllc.com}{\texttt{ mark@moderndeveloperllc.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a4c6d38fe4135a0ddcc6d4789e5a415df}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a4c6d38fe4135a0ddcc6d4789e5a415df}} 
+\index{NativeMailerHandler@{NativeMailerHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!NativeMailerHandler@{NativeMailerHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$to,  }\item[{string}]{\$subject,  }\item[{string}]{\$from,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{int}]{\$max\+Column\+Width = {\ttfamily 70} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$to} & The receiver of the mail \\
+\hline
+string & {\em \$subject} & The subject of the mail \\
+\hline
+string & {\em \$from} & The sender of the mail \\
+\hline
+int & {\em \$max\+Column\+Width} & The maximum column width that the message lines will have \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a99d2f6849c97c07cae557e7922797bc1}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a99d2f6849c97c07cae557e7922797bc1}} 
+\index{NativeMailerHandler@{NativeMailerHandler}!addHeader@{addHeader}}
+\index{addHeader@{addHeader}!NativeMailerHandler@{NativeMailerHandler}}
+\doxysubsubsection{\texorpdfstring{addHeader()}{addHeader()}}
+{\footnotesize\ttfamily add\+Header (\begin{DoxyParamCaption}\item[{}]{\$headers }\end{DoxyParamCaption})}
+
+Add headers to the message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$headers} & Custom added headers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a802acefd8f2dbb8c2336fcd200e1e423}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a802acefd8f2dbb8c2336fcd200e1e423}} 
+\index{NativeMailerHandler@{NativeMailerHandler}!addParameter@{addParameter}}
+\index{addParameter@{addParameter}!NativeMailerHandler@{NativeMailerHandler}}
+\doxysubsubsection{\texorpdfstring{addParameter()}{addParameter()}}
+{\footnotesize\ttfamily add\+Parameter (\begin{DoxyParamCaption}\item[{}]{\$parameters }\end{DoxyParamCaption})}
+
+Add parameters to the message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$parameters} & Custom added parameters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}} 
+\index{NativeMailerHandler@{NativeMailerHandler}!send@{send}}
+\index{send@{send}!NativeMailerHandler@{NativeMailerHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{string}]{\$content,  }\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send a mail with the given content
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & formatted email body to be sent \\
+\hline
+array & {\em \$records} & the array of log records that formed this content\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}{Mail\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_native_mailer_handler_a6faed7d241ac38b8caf543b8a76d1593}\label{class_monolog_1_1_handler_1_1_native_mailer_handler_a6faed7d241ac38b8caf543b8a76d1593}} 
+\index{NativeMailerHandler@{NativeMailerHandler}!setContentType@{setContentType}}
+\index{setContentType@{setContentType}!NativeMailerHandler@{NativeMailerHandler}}
+\doxysubsubsection{\texorpdfstring{setContentType()}{setContentType()}}
+{\footnotesize\ttfamily set\+Content\+Type (\begin{DoxyParamCaption}\item[{string}]{\$content\+Type }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content\+Type} & The content type of the email -\/ Defaults to text/plain. Use text/html for HTML messages. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Native\+Mailer\+Handler.\+php\end{DoxyCompactItemize}

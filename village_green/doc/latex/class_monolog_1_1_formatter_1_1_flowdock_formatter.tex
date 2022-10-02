@@ -1,0 +1,87 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_flowdock_formatter}{}\doxysection{Flowdock\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_flowdock_formatter}\index{FlowdockFormatter@{FlowdockFormatter}}
+Inheritance diagram for Flowdock\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_monolog_1_1_formatter_1_1_flowdock_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_flowdock_formatter_aa0d66b0468d23fbd00011c0d9a2e93ae}\label{class_monolog_1_1_formatter_1_1_flowdock_formatter_aa0d66b0468d23fbd00011c0d9a2e93ae}} 
+{\bfseries \+\_\+\+\_\+construct} (string \$source, string \$source\+Email)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_flowdock_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_flowdock_formatter_a11f3cde7544eac9e23b0517d513a362b}{format\+Batch}} (array \$records)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_flowdock_formatter_aeb6992919940db2eca105edc4db95de4}\label{class_monolog_1_1_formatter_1_1_flowdock_formatter_aeb6992919940db2eca105edc4db95de4}} 
+{\bfseries get\+Short\+Message} (string \$message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+formats the record to be used in the Flowdock\+Handler
+
+\begin{DoxyAuthor}{Author}
+Dominik Liebler \href{mailto:liebler.dominik@gmail.com}{\texttt{ liebler.\+dominik@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_flowdock_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_flowdock_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{FlowdockFormatter@{FlowdockFormatter}!format@{format}}
+\index{format@{format}!FlowdockFormatter@{FlowdockFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Formatter\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_flowdock_formatter_a11f3cde7544eac9e23b0517d513a362b}\label{class_monolog_1_1_formatter_1_1_flowdock_formatter_a11f3cde7544eac9e23b0517d513a362b}} 
+\index{FlowdockFormatter@{FlowdockFormatter}!formatBatch@{formatBatch}}
+\index{formatBatch@{formatBatch}!FlowdockFormatter@{FlowdockFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatch()}{formatBatch()}}
+{\footnotesize\ttfamily format\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Formats a set of log records.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & A set of records to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted set of records
+\end{DoxyReturn}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface_a11f3cde7544eac9e23b0517d513a362b}{Formatter\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Flowdock\+Formatter.\+php\end{DoxyCompactItemize}

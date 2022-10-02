@@ -1,0 +1,128 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args}{}\doxysection{Pre\+Update\+Event\+Args Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args}\index{PreUpdateEventArgs@{PreUpdateEventArgs}}
+Inheritance diagram for Pre\+Update\+Event\+Args\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ad8ecf6e65374a559942d06c3fe1d9abe}{\+\_\+\+\_\+construct}} (\$entity, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, array \&\$change\+Set)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ae6c2d9d3671db05a27ef293f41edd6aa}{get\+Entity\+Change\+Set}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a3e3aad476b0fb02f1e0436ad1054af76}{has\+Changed\+Field}} (\$field)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a2e330dba80cf9b2a748dce46f4b87777}{get\+Old\+Value}} (\$field)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ae6f7945fde42af879f7bdd0092c78779}{get\+New\+Value}} (\$field)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a71209971c31d1258d2d21a2709d1eee5}{set\+New\+Value}} (\$field, \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class that holds event arguments for a pre\+Insert/pre\+Update event. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ad8ecf6e65374a559942d06c3fe1d9abe}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ad8ecf6e65374a559942d06c3fe1d9abe}} 
+\index{PreUpdateEventArgs@{PreUpdateEventArgs}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PreUpdateEventArgs@{PreUpdateEventArgs}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{array \&}]{\$change\+Set }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$change\+Set} & @psalm-\/param array\texorpdfstring{$<$}{<}string, array\{mixed, mixed\}$\vert$\+Persistent\+Collection\texorpdfstring{$>$}{>} \$change\+Set \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ae6c2d9d3671db05a27ef293f41edd6aa}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ae6c2d9d3671db05a27ef293f41edd6aa}} 
+\index{PreUpdateEventArgs@{PreUpdateEventArgs}!getEntityChangeSet@{getEntityChangeSet}}
+\index{getEntityChangeSet@{getEntityChangeSet}!PreUpdateEventArgs@{PreUpdateEventArgs}}
+\doxysubsubsection{\texorpdfstring{getEntityChangeSet()}{getEntityChangeSet()}}
+{\footnotesize\ttfamily get\+Entity\+Change\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves entity changeset.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}\mbox{[}\mbox{]} @psalm-\/return array\texorpdfstring{$<$}{<}string, array\{mixed, mixed\}$\vert$\+Persistent\+Collection\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ae6f7945fde42af879f7bdd0092c78779}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_ae6f7945fde42af879f7bdd0092c78779}} 
+\index{PreUpdateEventArgs@{PreUpdateEventArgs}!getNewValue@{getNewValue}}
+\index{getNewValue@{getNewValue}!PreUpdateEventArgs@{PreUpdateEventArgs}}
+\doxysubsubsection{\texorpdfstring{getNewValue()}{getNewValue()}}
+{\footnotesize\ttfamily get\+New\+Value (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Gets the new value of the changeset of the changed field.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a2e330dba80cf9b2a748dce46f4b87777}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a2e330dba80cf9b2a748dce46f4b87777}} 
+\index{PreUpdateEventArgs@{PreUpdateEventArgs}!getOldValue@{getOldValue}}
+\index{getOldValue@{getOldValue}!PreUpdateEventArgs@{PreUpdateEventArgs}}
+\doxysubsubsection{\texorpdfstring{getOldValue()}{getOldValue()}}
+{\footnotesize\ttfamily get\+Old\+Value (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Gets the old value of the changeset of the changed field.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a3e3aad476b0fb02f1e0436ad1054af76}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a3e3aad476b0fb02f1e0436ad1054af76}} 
+\index{PreUpdateEventArgs@{PreUpdateEventArgs}!hasChangedField@{hasChangedField}}
+\index{hasChangedField@{hasChangedField}!PreUpdateEventArgs@{PreUpdateEventArgs}}
+\doxysubsubsection{\texorpdfstring{hasChangedField()}{hasChangedField()}}
+{\footnotesize\ttfamily has\+Changed\+Field (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})}
+
+Checks if field has a changeset.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a71209971c31d1258d2d21a2709d1eee5}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_pre_update_event_args_a71209971c31d1258d2d21a2709d1eee5}} 
+\index{PreUpdateEventArgs@{PreUpdateEventArgs}!setNewValue@{setNewValue}}
+\index{setNewValue@{setNewValue}!PreUpdateEventArgs@{PreUpdateEventArgs}}
+\doxysubsubsection{\texorpdfstring{setNewValue()}{setNewValue()}}
+{\footnotesize\ttfamily set\+New\+Value (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Sets the new value of this field.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Event/Pre\+Update\+Event\+Args.\+php\end{DoxyCompactItemize}

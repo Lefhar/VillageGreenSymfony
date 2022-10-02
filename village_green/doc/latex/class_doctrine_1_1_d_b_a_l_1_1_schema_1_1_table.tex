@@ -1,0 +1,840 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{}\doxysection{Table Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}\index{Table@{Table}}
+Inheritance diagram for Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3eaeb20c85249bb6d933cd9a3a9de043}{\+\_\+\+\_\+construct}} (string \$name, array \$columns=\mbox{[}$\,$\mbox{]}, array \$indexes=\mbox{[}$\,$\mbox{]}, array \$unique\+Constraints=\mbox{[}$\,$\mbox{]}, array \$fk\+Constraints=\mbox{[}$\,$\mbox{]}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aa4819584d1a24117c5cd46bc6e515c98}{set\+Schema\+Config}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_config}{Schema\+Config}} \$schema\+Config)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3a1025f2b216f4def71f6a5c37861f31}{set\+Primary\+Key}} (array \$column\+Names, \$index\+Name=false)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a99d9821b60f4a886641a47ffc4399696}{add\+Index}} (array \$column\+Names, ?string \$index\+Name=null, array \$flags=\mbox{[}$\,$\mbox{]}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a88eda986d3babe310ec738d221f0a60b}{add\+Unique\+Constraint}} (array \$column\+Names, ?string \$index\+Name=null, array \$flags=\mbox{[}$\,$\mbox{]}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_acf18d74cd2baac5407e3d4df37ad50cd}{drop\+Primary\+Key}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a30fdaa11f0a0f4297bf6f407747c4360}{drop\+Index}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af842b546e55fe7e6a0d94c59b56764d9}{add\+Unique\+Index}} (array \$column\+Names, \$index\+Name=null, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a40ef787560bb533c349a2d889ea08393}{rename\+Index}} (\$old\+Name, \$new\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a36f77ac7b0a45eca572a88d725a707dd}{columns\+Are\+Indexed}} (array \$column\+Names)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a9f524c171349d936cf34d8220c199f8c}{add\+Column}} (\$name, \$type\+Name, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af283e75cd19cc7cac967bd2691fd7865}{change\+Column}} (\$name, array \$options)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aa604adeb53815bcb1bdbdaf29779138b}{drop\+Column}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a60dccf6784e25e25c805684aa47c84b9}{add\+Foreign\+Key\+Constraint}} ( \$foreign\+Table, array \$local\+Column\+Names, array \$foreign\+Column\+Names, array \$options=\mbox{[}$\,$\mbox{]}, \$name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a959c56c4a4dc3b3455299cc5f3bd1bdb}{add\+Option}} (\$name, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a8e5a3f342303ffa4be8b2d498428e86a}{has\+Foreign\+Key}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0ad189e64cdb220bc30b44bcd95405fd}{get\+Foreign\+Key}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af0b403f517b98a3511dda8ac78bf21d5}{remove\+Foreign\+Key}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a63fcb044276d8d698ee69c75079d29fe}{has\+Unique\+Constraint}} (string \$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a66989713ce948e9cc3617bb1f48a46ae}{get\+Unique\+Constraint}} (string \$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0b7cf0ffb2aed421a61c008ddfc1c682}{remove\+Unique\+Constraint}} (string \$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6287262cb9628d7a89d8fc16dcb51177}{get\+Columns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ac507dd68bd8a56ce24f8dda4c1c37154}{get\+Foreign\+Key\+Columns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ad22f74443f99e6130b829d2b7bdb4bdf}{has\+Column}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ac9a15ffc053fb67244794678caa654ac}{get\+Column}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a7ec14e8ec3cff8883cd8ca176af2807c}{get\+Primary\+Key}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a16c595d1e040509d1b14f344f7113d30}{get\+Primary\+Key\+Columns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a2bc9e69bd4c60c643ab468a116115205}{has\+Primary\+Key}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3fcc8dd6892df4e464b95851f7426c93}{has\+Index}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a047318107c994dfc592ba5ab662cdd30}{get\+Index}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a27fea0dd9538f3b025ded4f08f04bab2}{get\+Indexes}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6f16c8ef226532b3981fc8505e3cc8ba}{get\+Unique\+Constraints}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6f686d921a13ee5b03b7ac931b011b95}{get\+Foreign\+Keys}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a93cc4c82c649f5685d81ed5c3327e913}{has\+Option}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a86acce3c002ca1af709fd1b04f2f82fa}{get\+Option}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6484621604080c3f7471ea1a5cf3a213}{visit}} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor}{Visitor}} \$visitor)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ad0cb87b388bc74d63dc884accdca8713}{\+\_\+\+\_\+clone}} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ae1bfc93cadcdc2ef59d5c8c91a438c52}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ae1bfc93cadcdc2ef59d5c8c91a438c52}} 
+{\bfseries set\+Comment} (?string \$comment)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_adb57c3d1b74c19589ba1d641ea1a390e}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_adb57c3d1b74c19589ba1d641ea1a390e}} 
+{\bfseries get\+Comment} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_afc8aebe8d2dd99da8c562db711fc17c3}{\+\_\+get\+Max\+Identifier\+Length}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aff4c45c85c21208c39bc82fae9554ef9}{\+\_\+add\+Column}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} \$column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a841757e67ab54549be74059ea606fb6d}{\+\_\+add\+Index}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} \$index\+Candidate)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ab03061ff5c7fbb573be1b568b96ec073}{\+\_\+add\+Unique\+Constraint}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_unique_constraint}{Unique\+Constraint}} \$constraint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a5052e754e7e6669286adbe218a9a3ddb}{\+\_\+add\+Foreign\+Key\+Constraint}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$constraint)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a5fceff2607cd15442917d37141b168d1}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a5fceff2607cd15442917d37141b168d1}} 
+{\bfseries \$\+\_\+columns} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ae79c13caa6022ab3d7c8706e5fdb1541}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ae79c13caa6022ab3d7c8706e5fdb1541}} 
+{\bfseries \$\+\_\+indexes} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a76e8f9f164f623d5d144e9634afe7ea3}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a76e8f9f164f623d5d144e9634afe7ea3}} 
+{\bfseries \$\+\_\+primary\+Key\+Name}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aff1e7241877e83df4ed630234725473c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aff1e7241877e83df4ed630234725473c}} 
+{\bfseries \$unique\+Constraints} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0767b05544f35659a9ee7e86cd88b65a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0767b05544f35659a9ee7e86cd88b65a}} 
+{\bfseries \$\+\_\+fk\+Constraints} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a1bebdc689c84eee59ad24c77e5531762}{\$\+\_\+options}}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3ee1e7a5d8482923191365f914d3bc19}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3ee1e7a5d8482923191365f914d3bc19}} 
+{\bfseries \$\+\_\+schema\+Config}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object Representation of a table. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3eaeb20c85249bb6d933cd9a3a9de043}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3eaeb20c85249bb6d933cd9a3a9de043}} 
+\index{Table@{Table}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{array}]{\$columns = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$indexes = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$unique\+Constraints = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$fk\+Constraints = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}\mbox{[}$\,$\mbox{]} & {\em \$columns} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}\mbox{[}$\,$\mbox{]} & {\em \$indexes} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_unique_constraint}{Unique\+Constraint}}\mbox{[}$\,$\mbox{]} & {\em \$unique\+Constraints} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}\mbox{[}$\,$\mbox{]} & {\em \$fk\+Constraints} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ad0cb87b388bc74d63dc884accdca8713}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ad0cb87b388bc74d63dc884accdca8713}} 
+\index{Table@{Table}!\_\_clone@{\_\_clone}}
+\index{\_\_clone@{\_\_clone}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_\_clone()}{\_\_clone()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clone of a \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} triggers a deep clone of all affected assets.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aff4c45c85c21208c39bc82fae9554ef9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aff4c45c85c21208c39bc82fae9554ef9}} 
+\index{Table@{Table}!\_addColumn@{\_addColumn}}
+\index{\_addColumn@{\_addColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_addColumn()}{\_addColumn()}}
+{\footnotesize\ttfamily \+\_\+add\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}}]{\$column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a5052e754e7e6669286adbe218a9a3ddb}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a5052e754e7e6669286adbe218a9a3ddb}} 
+\index{Table@{Table}!\_addForeignKeyConstraint@{\_addForeignKeyConstraint}}
+\index{\_addForeignKeyConstraint@{\_addForeignKeyConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_addForeignKeyConstraint()}{\_addForeignKeyConstraint()}}
+{\footnotesize\ttfamily \+\_\+add\+Foreign\+Key\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a841757e67ab54549be74059ea606fb6d}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a841757e67ab54549be74059ea606fb6d}} 
+\index{Table@{Table}!\_addIndex@{\_addIndex}}
+\index{\_addIndex@{\_addIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_addIndex()}{\_addIndex()}}
+{\footnotesize\ttfamily \+\_\+add\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}}]{\$index\+Candidate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds an index to the table.
+
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ab03061ff5c7fbb573be1b568b96ec073}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ab03061ff5c7fbb573be1b568b96ec073}} 
+\index{Table@{Table}!\_addUniqueConstraint@{\_addUniqueConstraint}}
+\index{\_addUniqueConstraint@{\_addUniqueConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_addUniqueConstraint()}{\_addUniqueConstraint()}}
+{\footnotesize\ttfamily \+\_\+add\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_unique_constraint}{Unique\+Constraint}}}]{\$constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_afc8aebe8d2dd99da8c562db711fc17c3}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_afc8aebe8d2dd99da8c562db711fc17c3}} 
+\index{Table@{Table}!\_getMaxIdentifierLength@{\_getMaxIdentifierLength}}
+\index{\_getMaxIdentifierLength@{\_getMaxIdentifierLength}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_getMaxIdentifierLength()}{\_getMaxIdentifierLength()}}
+{\footnotesize\ttfamily \+\_\+get\+Max\+Identifier\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a9f524c171349d936cf34d8220c199f8c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a9f524c171349d936cf34d8220c199f8c}} 
+\index{Table@{Table}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}}
+{\footnotesize\ttfamily add\+Column (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$type\+Name,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string & {\em \$type\+Name} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a60dccf6784e25e25c805684aa47c84b9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a60dccf6784e25e25c805684aa47c84b9}} 
+\index{Table@{Table}!addForeignKeyConstraint@{addForeignKeyConstraint}}
+\index{addForeignKeyConstraint@{addForeignKeyConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addForeignKeyConstraint()}{addForeignKeyConstraint()}}
+{\footnotesize\ttfamily add\+Foreign\+Key\+Constraint (\begin{DoxyParamCaption}\item[{}]{\$foreign\+Table,  }\item[{array}]{\$local\+Column\+Names,  }\item[{array}]{\$foreign\+Column\+Names,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Adds a foreign key constraint.
+
+Name is inferred from the local columns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$foreign\+Table} & \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} schema instance or table name \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$local\+Column\+Names} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$foreign\+Column\+Names} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+string | null & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a99d9821b60f4a886641a47ffc4399696}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a99d9821b60f4a886641a47ffc4399696}} 
+\index{Table@{Table}!addIndex@{addIndex}}
+\index{addIndex@{addIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addIndex()}{addIndex()}}
+{\footnotesize\ttfamily add\+Index (\begin{DoxyParamCaption}\item[{array}]{\$column\+Names,  }\item[{?string}]{\$index\+Name = {\ttfamily null},  }\item[{array}]{\$flags = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Names} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$flags} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a959c56c4a4dc3b3455299cc5f3bd1bdb}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a959c56c4a4dc3b3455299cc5f3bd1bdb}} 
+\index{Table@{Table}!addOption@{addOption}}
+\index{addOption@{addOption}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addOption()}{addOption()}}
+{\footnotesize\ttfamily add\+Option (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a88eda986d3babe310ec738d221f0a60b}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a88eda986d3babe310ec738d221f0a60b}} 
+\index{Table@{Table}!addUniqueConstraint@{addUniqueConstraint}}
+\index{addUniqueConstraint@{addUniqueConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addUniqueConstraint()}{addUniqueConstraint()}}
+{\footnotesize\ttfamily add\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{array}]{\$column\+Names,  }\item[{?string}]{\$index\+Name = {\ttfamily null},  }\item[{array}]{\$flags = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Names} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$flags} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af842b546e55fe7e6a0d94c59b56764d9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af842b546e55fe7e6a0d94c59b56764d9}} 
+\index{Table@{Table}!addUniqueIndex@{addUniqueIndex}}
+\index{addUniqueIndex@{addUniqueIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addUniqueIndex()}{addUniqueIndex()}}
+{\footnotesize\ttfamily add\+Unique\+Index (\begin{DoxyParamCaption}\item[{array}]{\$column\+Names,  }\item[{}]{\$index\+Name = {\ttfamily null},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Names} & \\
+\hline
+string | null & {\em \$index\+Name} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af283e75cd19cc7cac967bd2691fd7865}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af283e75cd19cc7cac967bd2691fd7865}} 
+\index{Table@{Table}!changeColumn@{changeColumn}}
+\index{changeColumn@{changeColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{changeColumn()}{changeColumn()}}
+{\footnotesize\ttfamily change\+Column (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array}]{\$options }\end{DoxyParamCaption})}
+
+Change \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} Details.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a36f77ac7b0a45eca572a88d725a707dd}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a36f77ac7b0a45eca572a88d725a707dd}} 
+\index{Table@{Table}!columnsAreIndexed@{columnsAreIndexed}}
+\index{columnsAreIndexed@{columnsAreIndexed}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{columnsAreIndexed()}{columnsAreIndexed()}}
+{\footnotesize\ttfamily columns\+Are\+Indexed (\begin{DoxyParamCaption}\item[{array}]{\$column\+Names }\end{DoxyParamCaption})}
+
+Checks if an index begins in the order of the given columns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Names} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aa604adeb53815bcb1bdbdaf29779138b}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aa604adeb53815bcb1bdbdaf29779138b}} 
+\index{Table@{Table}!dropColumn@{dropColumn}}
+\index{dropColumn@{dropColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{dropColumn()}{dropColumn()}}
+{\footnotesize\ttfamily drop\+Column (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Drops a \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} from the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a30fdaa11f0a0f4297bf6f407747c4360}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a30fdaa11f0a0f4297bf6f407747c4360}} 
+\index{Table@{Table}!dropIndex@{dropIndex}}
+\index{dropIndex@{dropIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{dropIndex()}{dropIndex()}}
+{\footnotesize\ttfamily drop\+Index (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Drops an index from this table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The index name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If the index does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_acf18d74cd2baac5407e3d4df37ad50cd}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_acf18d74cd2baac5407e3d4df37ad50cd}} 
+\index{Table@{Table}!dropPrimaryKey@{dropPrimaryKey}}
+\index{dropPrimaryKey@{dropPrimaryKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{dropPrimaryKey()}{dropPrimaryKey()}}
+{\footnotesize\ttfamily drop\+Primary\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Drops the primary key from this table.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ac9a15ffc053fb67244794678caa654ac}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ac9a15ffc053fb67244794678caa654ac}} 
+\index{Table@{Table}!getColumn@{getColumn}}
+\index{getColumn@{getColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+{\footnotesize\ttfamily get\+Column (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Returns the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The column name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If the column does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6287262cb9628d7a89d8fc16dcb51177}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6287262cb9628d7a89d8fc16dcb51177}} 
+\index{Table@{Table}!getColumns@{getColumns}}
+\index{getColumns@{getColumns}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getColumns()}{getColumns()}}
+{\footnotesize\ttfamily get\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns ordered list of columns (primary keys are first, then foreign keys, then the rest)
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0ad189e64cdb220bc30b44bcd95405fd}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0ad189e64cdb220bc30b44bcd95405fd}} 
+\index{Table@{Table}!getForeignKey@{getForeignKey}}
+\index{getForeignKey@{getForeignKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getForeignKey()}{getForeignKey()}}
+{\footnotesize\ttfamily get\+Foreign\+Key (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Returns the foreign key constraint with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The constraint name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If the foreign key does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ac507dd68bd8a56ce24f8dda4c1c37154}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ac507dd68bd8a56ce24f8dda4c1c37154}} 
+\index{Table@{Table}!getForeignKeyColumns@{getForeignKeyColumns}}
+\index{getForeignKeyColumns@{getForeignKeyColumns}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getForeignKeyColumns()}{getForeignKeyColumns()}}
+{\footnotesize\ttfamily get\+Foreign\+Key\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the foreign key columns
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6f686d921a13ee5b03b7ac931b011b95}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6f686d921a13ee5b03b7ac931b011b95}} 
+\index{Table@{Table}!getForeignKeys@{getForeignKeys}}
+\index{getForeignKeys@{getForeignKeys}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getForeignKeys()}{getForeignKeys()}}
+{\footnotesize\ttfamily get\+Foreign\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the foreign key constraints.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a047318107c994dfc592ba5ab662cdd30}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a047318107c994dfc592ba5ab662cdd30}} 
+\index{Table@{Table}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily get\+Index (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Returns the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The index name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If the index does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a27fea0dd9538f3b025ded4f08f04bab2}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a27fea0dd9538f3b025ded4f08f04bab2}} 
+\index{Table@{Table}!getIndexes@{getIndexes}}
+\index{getIndexes@{getIndexes}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getIndexes()}{getIndexes()}}
+{\footnotesize\ttfamily get\+Indexes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a86acce3c002ca1af709fd1b04f2f82fa}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a86acce3c002ca1af709fd1b04f2f82fa}} 
+\index{Table@{Table}!getOption@{getOption}}
+\index{getOption@{getOption}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getOption()}{getOption()}}
+{\footnotesize\ttfamily get\+Option (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a1a49b8dded6e91a52e2fd07195d334da}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{Table@{Table}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a7ec14e8ec3cff8883cd8ca176af2807c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a7ec14e8ec3cff8883cd8ca176af2807c}} 
+\index{Table@{Table}!getPrimaryKey@{getPrimaryKey}}
+\index{getPrimaryKey@{getPrimaryKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getPrimaryKey()}{getPrimaryKey()}}
+{\footnotesize\ttfamily get\+Primary\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the primary key.
+
+\begin{DoxyReturn}{Returns}
+Index$\vert$null The primary key, or null if this \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} has no primary key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a16c595d1e040509d1b14f344f7113d30}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a16c595d1e040509d1b14f344f7113d30}} 
+\index{Table@{Table}!getPrimaryKeyColumns@{getPrimaryKeyColumns}}
+\index{getPrimaryKeyColumns@{getPrimaryKeyColumns}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getPrimaryKeyColumns()}{getPrimaryKeyColumns()}}
+{\footnotesize\ttfamily get\+Primary\+Key\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the primary key columns.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a66989713ce948e9cc3617bb1f48a46ae}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a66989713ce948e9cc3617bb1f48a46ae}} 
+\index{Table@{Table}!getUniqueConstraint@{getUniqueConstraint}}
+\index{getUniqueConstraint@{getUniqueConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getUniqueConstraint()}{getUniqueConstraint()}}
+{\footnotesize\ttfamily get\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Returns the unique constraint with the given name.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If the unique constraint does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6f16c8ef226532b3981fc8505e3cc8ba}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6f16c8ef226532b3981fc8505e3cc8ba}} 
+\index{Table@{Table}!getUniqueConstraints@{getUniqueConstraints}}
+\index{getUniqueConstraints@{getUniqueConstraints}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getUniqueConstraints()}{getUniqueConstraints()}}
+{\footnotesize\ttfamily get\+Unique\+Constraints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the unique constraints.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_unique_constraint}{Unique\+Constraint}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ad22f74443f99e6130b829d2b7bdb4bdf}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_ad22f74443f99e6130b829d2b7bdb4bdf}} 
+\index{Table@{Table}!hasColumn@{hasColumn}}
+\index{hasColumn@{hasColumn}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{hasColumn()}{hasColumn()}}
+{\footnotesize\ttfamily has\+Column (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Returns whether this table has a \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The column name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a8e5a3f342303ffa4be8b2d498428e86a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a8e5a3f342303ffa4be8b2d498428e86a}} 
+\index{Table@{Table}!hasForeignKey@{hasForeignKey}}
+\index{hasForeignKey@{hasForeignKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{hasForeignKey()}{hasForeignKey()}}
+{\footnotesize\ttfamily has\+Foreign\+Key (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Returns whether this table has a foreign key constraint with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3fcc8dd6892df4e464b95851f7426c93}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3fcc8dd6892df4e464b95851f7426c93}} 
+\index{Table@{Table}!hasIndex@{hasIndex}}
+\index{hasIndex@{hasIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{hasIndex()}{hasIndex()}}
+{\footnotesize\ttfamily has\+Index (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Returns whether this table has an \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The index name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a93cc4c82c649f5685d81ed5c3327e913}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a93cc4c82c649f5685d81ed5c3327e913}} 
+\index{Table@{Table}!hasOption@{hasOption}}
+\index{hasOption@{hasOption}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{hasOption()}{hasOption()}}
+{\footnotesize\ttfamily has\+Option (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a2bc9e69bd4c60c643ab468a116115205}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a2bc9e69bd4c60c643ab468a116115205}} 
+\index{Table@{Table}!hasPrimaryKey@{hasPrimaryKey}}
+\index{hasPrimaryKey@{hasPrimaryKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{hasPrimaryKey()}{hasPrimaryKey()}}
+{\footnotesize\ttfamily has\+Primary\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether this table has a primary key.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a63fcb044276d8d698ee69c75079d29fe}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a63fcb044276d8d698ee69c75079d29fe}} 
+\index{Table@{Table}!hasUniqueConstraint@{hasUniqueConstraint}}
+\index{hasUniqueConstraint@{hasUniqueConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{hasUniqueConstraint()}{hasUniqueConstraint()}}
+{\footnotesize\ttfamily has\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Returns whether this table has a unique constraint with the given name. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af0b403f517b98a3511dda8ac78bf21d5}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_af0b403f517b98a3511dda8ac78bf21d5}} 
+\index{Table@{Table}!removeForeignKey@{removeForeignKey}}
+\index{removeForeignKey@{removeForeignKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{removeForeignKey()}{removeForeignKey()}}
+{\footnotesize\ttfamily remove\+Foreign\+Key (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Removes the foreign key constraint with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The constraint name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0b7cf0ffb2aed421a61c008ddfc1c682}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a0b7cf0ffb2aed421a61c008ddfc1c682}} 
+\index{Table@{Table}!removeUniqueConstraint@{removeUniqueConstraint}}
+\index{removeUniqueConstraint@{removeUniqueConstraint}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{removeUniqueConstraint()}{removeUniqueConstraint()}}
+{\footnotesize\ttfamily remove\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Removes the unique constraint with the given name.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If the unique constraint does not exist. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a40ef787560bb533c349a2d889ea08393}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a40ef787560bb533c349a2d889ea08393}} 
+\index{Table@{Table}!renameIndex@{renameIndex}}
+\index{renameIndex@{renameIndex}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{renameIndex()}{renameIndex()}}
+{\footnotesize\ttfamily rename\+Index (\begin{DoxyParamCaption}\item[{}]{\$old\+Name,  }\item[{}]{\$new\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Renames an index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$old\+Name} & The name of the index to rename from. \\
+\hline
+string | null & {\em \$new\+Name} & The name of the index to rename to. If null is given, the index name will be auto-\/generated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self This table instance.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & If no index exists for the given current name or if an index with the given new name already exists on this table. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3a1025f2b216f4def71f6a5c37861f31}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a3a1025f2b216f4def71f6a5c37861f31}} 
+\index{Table@{Table}!setPrimaryKey@{setPrimaryKey}}
+\index{setPrimaryKey@{setPrimaryKey}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setPrimaryKey()}{setPrimaryKey()}}
+{\footnotesize\ttfamily set\+Primary\+Key (\begin{DoxyParamCaption}\item[{array}]{\$column\+Names,  }\item[{}]{\$index\+Name = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sets the Primary Key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Names} & \\
+\hline
+string | false & {\em \$index\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aa4819584d1a24117c5cd46bc6e515c98}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_aa4819584d1a24117c5cd46bc6e515c98}} 
+\index{Table@{Table}!setSchemaConfig@{setSchemaConfig}}
+\index{setSchemaConfig@{setSchemaConfig}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setSchemaConfig()}{setSchemaConfig()}}
+{\footnotesize\ttfamily set\+Schema\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_config}{Schema\+Config}}}]{\$schema\+Config }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6484621604080c3f7471ea1a5cf3a213}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a6484621604080c3f7471ea1a5cf3a213}} 
+\index{Table@{Table}!visit@{visit}}
+\index{visit@{visit}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_visitor}{Visitor}}}]{\$visitor }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a1bebdc689c84eee59ad24c77e5531762}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_a1bebdc689c84eee59ad24c77e5531762}} 
+\index{Table@{Table}!\$\_options@{\$\_options}}
+\index{\$\_options@{\$\_options}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$\_options}{$\_options}}
+{\footnotesize\ttfamily \$\+\_\+options\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'create\_options'} => [],}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/Table.\+php\end{DoxyCompactItemize}

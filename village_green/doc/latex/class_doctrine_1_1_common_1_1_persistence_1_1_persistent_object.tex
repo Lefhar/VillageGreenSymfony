@@ -1,0 +1,105 @@
+\hypertarget{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object}{}\doxysection{Persistent\+Object Class Reference}
+\label{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object}\index{PersistentObject@{PersistentObject}}
+Inheritance diagram for Persistent\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a658c92f90d5bfde790746ac7b139869d}{inject\+Object\+Manager}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} \$object\+Manager, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class\+Metadata)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9f1179240d068c94a040021326032bed}{\+\_\+\+\_\+call}} (\$method, \$args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_afe2b5caf4241123023f1434a9cddd30a}{set\+Object\+Manager}} (?\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} \$object\+Manager=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9cad8f502c7cf740b9860782a02401f9}{get\+Object\+Manager}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9f1179240d068c94a040021326032bed}\label{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9f1179240d068c94a040021326032bed}} 
+\index{PersistentObject@{PersistentObject}!\_\_call@{\_\_call}}
+\index{\_\_call@{\_\_call}!PersistentObject@{PersistentObject}}
+\doxysubsubsection{\texorpdfstring{\_\_call()}{\_\_call()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+call (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$args }\end{DoxyParamCaption})}
+
+Magic methods.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Method\+Call\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9cad8f502c7cf740b9860782a02401f9}\label{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a9cad8f502c7cf740b9860782a02401f9}} 
+\index{PersistentObject@{PersistentObject}!getObjectManager@{getObjectManager}}
+\index{getObjectManager@{getObjectManager}!PersistentObject@{PersistentObject}}
+\doxysubsubsection{\texorpdfstring{getObjectManager()}{getObjectManager()}}
+{\footnotesize\ttfamily static get\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Object\+Manager$\vert$null 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a658c92f90d5bfde790746ac7b139869d}\label{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a658c92f90d5bfde790746ac7b139869d}} 
+\index{PersistentObject@{PersistentObject}!injectObjectManager@{injectObjectManager}}
+\index{injectObjectManager@{injectObjectManager}!PersistentObject@{PersistentObject}}
+\doxysubsubsection{\texorpdfstring{injectObjectManager()}{injectObjectManager()}}
+{\footnotesize\ttfamily inject\+Object\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}}]{\$object\+Manager,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class\+Metadata }\end{DoxyParamCaption})}
+
+Injects the Doctrine Object Manager.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_aware_a658c92f90d5bfde790746ac7b139869d}{Object\+Manager\+Aware}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_afe2b5caf4241123023f1434a9cddd30a}\label{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_afe2b5caf4241123023f1434a9cddd30a}} 
+\index{PersistentObject@{PersistentObject}!setObjectManager@{setObjectManager}}
+\index{setObjectManager@{setObjectManager}!PersistentObject@{PersistentObject}}
+\doxysubsubsection{\texorpdfstring{setObjectManager()}{setObjectManager()}}
+{\footnotesize\ttfamily static set\+Object\+Manager (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}}]{\$object\+Manager = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the object manager responsible for all persistent object base classes.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/Persistent\+Object.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter}{}\doxysection{Class\+Metadata\+Exporter Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter}\index{ClassMetadataExporter@{ClassMetadataExporter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter_a77845edbe19895d1f3ed705de1335f1b}{get\+Exporter}} (\$type, \$dest=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter_a857b7bad9c3f560500174980760e7912}{register\+Export\+Driver}} (\$name, \$class)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used for converting your mapping information between the supported formats\+: yaml, xml, and php/annotation.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000293}{Deprecated}}]2.\+7 This class is being removed from the ORM and won\textquotesingle{}t have any replacement\end{DoxyRefDesc}
+
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter_a77845edbe19895d1f3ed705de1335f1b}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter_a77845edbe19895d1f3ed705de1335f1b}} 
+\index{ClassMetadataExporter@{ClassMetadataExporter}!getExporter@{getExporter}}
+\index{getExporter@{getExporter}!ClassMetadataExporter@{ClassMetadataExporter}}
+\doxysubsubsection{\texorpdfstring{getExporter()}{getExporter()}}
+{\footnotesize\ttfamily get\+Exporter (\begin{DoxyParamCaption}\item[{}]{\$type,  }\item[{}]{\$dest = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets an exporter driver instance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & The type to get (yml, xml, etc.). \\
+\hline
+string | null & {\em \$dest} & The directory where the exporter will export to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Driver\textbackslash{}\+Abstract\+Exporter
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_export_exception}{Export\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter_a857b7bad9c3f560500174980760e7912}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter_a857b7bad9c3f560500174980760e7912}} 
+\index{ClassMetadataExporter@{ClassMetadataExporter}!registerExportDriver@{registerExportDriver}}
+\index{registerExportDriver@{registerExportDriver}!ClassMetadataExporter@{ClassMetadataExporter}}
+\doxysubsubsection{\texorpdfstring{registerExportDriver()}{registerExportDriver()}}
+{\footnotesize\ttfamily static register\+Export\+Driver (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers a new exporter driver class under a specified name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string & {\em \$class} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Export/Class\+Metadata\+Exporter.\+php\end{DoxyCompactItemize}

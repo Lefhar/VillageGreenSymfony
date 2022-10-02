@@ -1,0 +1,140 @@
+\hypertarget{class_amp_1_1_serialization_1_1_json_serializer}{}\doxysection{Json\+Serializer Class Reference}
+\label{class_amp_1_1_serialization_1_1_json_serializer}\index{JsonSerializer@{JsonSerializer}}
+Inheritance diagram for Json\+Serializer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_serialization_1_1_json_serializer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_serialization_1_1_json_serializer_ab4aa2f08b0453ed9fbdbeafe26c6f8c7}{serialize}} (\$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_serialization_1_1_json_serializer_a429f38a9f871921ed271c9cf73498ce0}{unserialize}} (string \$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_serialization_1_1_json_serializer_a0bbe1cb93e3601f5e3c7aa121e944b99}{with\+Associative\+Arrays}} (int \$encode\+Options=0, int \$decode\+Options=0, int \$depth=512)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_serialization_1_1_json_serializer_a5c50e4304499b45a9ef8ab1150edcab9}{with\+Objects}} (int \$encode\+Options=0, int \$decode\+Options=0, int \$depth=512)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_serialization_1_1_json_serializer_ab4aa2f08b0453ed9fbdbeafe26c6f8c7}\label{class_amp_1_1_serialization_1_1_json_serializer_ab4aa2f08b0453ed9fbdbeafe26c6f8c7}} 
+\index{JsonSerializer@{JsonSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!JsonSerializer@{JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily serialize (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_serialization_1_1_serialization_exception}{Serialization\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_serialization_1_1_serializer_ab4aa2f08b0453ed9fbdbeafe26c6f8c7}{Serializer}}.
+
+\mbox{\Hypertarget{class_amp_1_1_serialization_1_1_json_serializer_a429f38a9f871921ed271c9cf73498ce0}\label{class_amp_1_1_serialization_1_1_json_serializer_a429f38a9f871921ed271c9cf73498ce0}} 
+\index{JsonSerializer@{JsonSerializer}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!JsonSerializer@{JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{unserialize()}{unserialize()}}
+{\footnotesize\ttfamily unserialize (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The unserialized data.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_serialization_1_1_serialization_exception}{Serialization\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_serialization_1_1_serializer_a429f38a9f871921ed271c9cf73498ce0}{Serializer}}.
+
+\mbox{\Hypertarget{class_amp_1_1_serialization_1_1_json_serializer_a0bbe1cb93e3601f5e3c7aa121e944b99}\label{class_amp_1_1_serialization_1_1_json_serializer_a0bbe1cb93e3601f5e3c7aa121e944b99}} 
+\index{JsonSerializer@{JsonSerializer}!withAssociativeArrays@{withAssociativeArrays}}
+\index{withAssociativeArrays@{withAssociativeArrays}!JsonSerializer@{JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{withAssociativeArrays()}{withAssociativeArrays()}}
+{\footnotesize\ttfamily static with\+Associative\+Arrays (\begin{DoxyParamCaption}\item[{int}]{\$encode\+Options = {\ttfamily 0},  }\item[{int}]{\$decode\+Options = {\ttfamily 0},  }\item[{int}]{\$depth = {\ttfamily 512} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a JSON serializer that decodes objects to associative arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$encode\+Options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}json\+\_\+encode() options parameter. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$decode\+Options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}json\+\_\+decode() options parameter. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$depth} & Maximum recursion depth.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_serialization_1_1_json_serializer_a5c50e4304499b45a9ef8ab1150edcab9}\label{class_amp_1_1_serialization_1_1_json_serializer_a5c50e4304499b45a9ef8ab1150edcab9}} 
+\index{JsonSerializer@{JsonSerializer}!withObjects@{withObjects}}
+\index{withObjects@{withObjects}!JsonSerializer@{JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{withObjects()}{withObjects()}}
+{\footnotesize\ttfamily static with\+Objects (\begin{DoxyParamCaption}\item[{int}]{\$encode\+Options = {\ttfamily 0},  }\item[{int}]{\$decode\+Options = {\ttfamily 0},  }\item[{int}]{\$depth = {\ttfamily 512} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a JSON serializer that decodes objects to instances of std\+Class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$encode\+Options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}json\+\_\+encode() options parameter. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$decode\+Options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}json\+\_\+decode() options parameter. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$depth} & Maximum recursion depth.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/serialization/src/Json\+Serializer.\+php\end{DoxyCompactItemize}

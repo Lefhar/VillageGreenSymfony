@@ -1,0 +1,257 @@
+\hypertarget{class_doctrine_1_1_common_1_1_class_loader}{}\doxysection{Class\+Loader Class Reference}
+\label{class_doctrine_1_1_common_1_1_class_loader}\index{ClassLoader@{ClassLoader}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a5aa281a36af2206e6b406e46f9ebbade}{\+\_\+\+\_\+construct}} (\$ns=null, \$include\+Path=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_ac715eb322b7cf2ecf8f45de1631dba0a}{set\+Namespace\+Separator}} (\$sep)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_abe19f0f03b47a7ff10ec421043737dbb}{get\+Namespace\+Separator}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a24c05c7b3a2132d294fe918e1e64c416}{set\+Include\+Path}} (\$include\+Path)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a621c05f2bef78888deeac9c15e87f0c6}{get\+Include\+Path}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a6b89955dbf06f8bed09b81df9460a4d2}{set\+File\+Extension}} (\$file\+Extension)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a18b33fa498e8c8ffcb5b5c760b1a9b09}{get\+File\+Extension}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_acc294a6cc8e69743746820e3d15e3f78}{register}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a501cedfa611556a0100e024a0e102d9d}{unregister}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a3eeebc8a0eb1d30bd4c52dd93d9205d8}{load\+Class}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a7e2e1700a69d975ff0fc491120f5eb49}{can\+Load\+Class}} (\$class\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a7bc94c6c0b4fa52b62a9eb23db3a935e}{class\+Exists}} (\$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a454dafced618242b346b9697a5849a65}{get\+Class\+Loader}} (\$class\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a345045be388474a13776c59c7aa8aead}\label{class_doctrine_1_1_common_1_1_class_loader_a345045be388474a13776c59c7aa8aead}} 
+{\bfseries \$file\+Extension} = \textquotesingle{}.php\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a3825c9b9060c2d6ef594385997cd60aa}\label{class_doctrine_1_1_common_1_1_class_loader_a3825c9b9060c2d6ef594385997cd60aa}} 
+{\bfseries \$namespace}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_ae6240bb628db09ef633f32b62fab3b46}\label{class_doctrine_1_1_common_1_1_class_loader_ae6240bb628db09ef633f32b62fab3b46}} 
+{\bfseries \$include\+Path}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a1a56ba80b7fb55a600619a8831369cdc}\label{class_doctrine_1_1_common_1_1_class_loader_a1a56ba80b7fb55a600619a8831369cdc}} 
+{\bfseries \$namespace\+Separator} = \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}} is an autoloader for class files that can be installed on the SPL autoload stack. It is a class loader that either loads only classes of a specific namespace or all namespaces and it is suitable for working together with other autoloaders in the SPL autoload stack.
+
+If no include path is configured through the constructor or \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a24c05c7b3a2132d294fe918e1e64c416}{set\+Include\+Path}}, a \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} relies on the PHP {\ttfamily include\+\_\+path}.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000039}{Deprecated}}]The \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} is deprecated and will be removed in version 4.\+0 of doctrine/common. \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a5aa281a36af2206e6b406e46f9ebbade}\label{class_doctrine_1_1_common_1_1_class_loader_a5aa281a36af2206e6b406e46f9ebbade}} 
+\index{ClassLoader@{ClassLoader}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$ns = {\ttfamily null},  }\item[{}]{\$include\+Path = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Creates a new {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}} that loads classes of the specified namespace from the specified include path.
+
+If no include path is given, the \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} relies on the PHP include\+\_\+path. If neither a namespace nor an include path is given, the \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} will be responsible for loading all classes, thereby relying on the PHP include\+\_\+path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$ns} & The namespace of the classes to load. \\
+\hline
+string | null & {\em \$include\+Path} & The base include path to use. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a7e2e1700a69d975ff0fc491120f5eb49}\label{class_doctrine_1_1_common_1_1_class_loader_a7e2e1700a69d975ff0fc491120f5eb49}} 
+\index{ClassLoader@{ClassLoader}!canLoadClass@{canLoadClass}}
+\index{canLoadClass@{canLoadClass}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{canLoadClass()}{canLoadClass()}}
+{\footnotesize\ttfamily can\+Load\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Asks this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} whether it can potentially load the class (file) with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The fully-\/qualified name of the class. @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} can load the class, FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a7bc94c6c0b4fa52b62a9eb23db3a935e}\label{class_doctrine_1_1_common_1_1_class_loader_a7bc94c6c0b4fa52b62a9eb23db3a935e}} 
+\index{ClassLoader@{ClassLoader}!classExists@{classExists}}
+\index{classExists@{classExists}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{classExists()}{classExists()}}
+{\footnotesize\ttfamily static class\+Exists (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks whether a class with a given name exists. A class \char`\"{}exists\char`\"{} if it is either already defined in the current request or if there is an autoloader on the SPL autoload stack that is a) responsible for the class in question and b) is able to load a class file in which the class definition resides.
+
+If the class is not already defined, each autoloader in the SPL autoload stack is asked whether it is able to tell if the class exists. If the autoloader is a {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}}, \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader_a7e2e1700a69d975ff0fc491120f5eb49}{can\+Load\+Class}} is used, otherwise the autoload function of the autoloader is invoked and expected to return a value that evaluates to TRUE if the class (file) exists. As soon as one autoloader reports that the class exists, TRUE is returned.
+
+Note that, depending on what kinds of autoloaders are installed on the SPL autoload stack, the class (file) might already be loaded as a result of checking for its existence. This is not the case with a {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}}, who separates these responsibilities.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The fully-\/qualified name of the class. @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the class exists as per the definition given above, FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a454dafced618242b346b9697a5849a65}\label{class_doctrine_1_1_common_1_1_class_loader_a454dafced618242b346b9697a5849a65}} 
+\index{ClassLoader@{ClassLoader}!getClassLoader@{getClassLoader}}
+\index{getClassLoader@{getClassLoader}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{getClassLoader()}{getClassLoader()}}
+{\footnotesize\ttfamily static get\+Class\+Loader (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}} from the SPL autoload stack that is responsible for (and is able to load) the class with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The name of the class. @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Loader$\vert$null The {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}} for the class or NULL if no such {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}} exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a18b33fa498e8c8ffcb5b5c760b1a9b09}\label{class_doctrine_1_1_common_1_1_class_loader_a18b33fa498e8c8ffcb5b5c760b1a9b09}} 
+\index{ClassLoader@{ClassLoader}!getFileExtension@{getFileExtension}}
+\index{getFileExtension@{getFileExtension}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{getFileExtension()}{getFileExtension()}}
+{\footnotesize\ttfamily get\+File\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the file extension of class files in the namespace of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a621c05f2bef78888deeac9c15e87f0c6}\label{class_doctrine_1_1_common_1_1_class_loader_a621c05f2bef78888deeac9c15e87f0c6}} 
+\index{ClassLoader@{ClassLoader}!getIncludePath@{getIncludePath}}
+\index{getIncludePath@{getIncludePath}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{getIncludePath()}{getIncludePath()}}
+{\footnotesize\ttfamily get\+Include\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the base include path for all class files in the namespace of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_abe19f0f03b47a7ff10ec421043737dbb}\label{class_doctrine_1_1_common_1_1_class_loader_abe19f0f03b47a7ff10ec421043737dbb}} 
+\index{ClassLoader@{ClassLoader}!getNamespaceSeparator@{getNamespaceSeparator}}
+\index{getNamespaceSeparator@{getNamespaceSeparator}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{getNamespaceSeparator()}{getNamespaceSeparator()}}
+{\footnotesize\ttfamily get\+Namespace\+Separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the namespace separator used by classes in the namespace of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a3eeebc8a0eb1d30bd4c52dd93d9205d8}\label{class_doctrine_1_1_common_1_1_class_loader_a3eeebc8a0eb1d30bd4c52dd93d9205d8}} 
+\index{ClassLoader@{ClassLoader}!loadClass@{loadClass}}
+\index{loadClass@{loadClass}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{loadClass()}{loadClass()}}
+{\footnotesize\ttfamily load\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Loads the given class or interface.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The name of the class to load. @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the class has been successfully loaded, FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_acc294a6cc8e69743746820e3d15e3f78}\label{class_doctrine_1_1_common_1_1_class_loader_acc294a6cc8e69743746820e3d15e3f78}} 
+\index{ClassLoader@{ClassLoader}!register@{register}}
+\index{register@{register}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Registers this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} on the SPL autoload stack.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a6b89955dbf06f8bed09b81df9460a4d2}\label{class_doctrine_1_1_common_1_1_class_loader_a6b89955dbf06f8bed09b81df9460a4d2}} 
+\index{ClassLoader@{ClassLoader}!setFileExtension@{setFileExtension}}
+\index{setFileExtension@{setFileExtension}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{setFileExtension()}{setFileExtension()}}
+{\footnotesize\ttfamily set\+File\+Extension (\begin{DoxyParamCaption}\item[{}]{\$file\+Extension }\end{DoxyParamCaption})}
+
+Sets the file extension of class files in the namespace of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file\+Extension} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a24c05c7b3a2132d294fe918e1e64c416}\label{class_doctrine_1_1_common_1_1_class_loader_a24c05c7b3a2132d294fe918e1e64c416}} 
+\index{ClassLoader@{ClassLoader}!setIncludePath@{setIncludePath}}
+\index{setIncludePath@{setIncludePath}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{setIncludePath()}{setIncludePath()}}
+{\footnotesize\ttfamily set\+Include\+Path (\begin{DoxyParamCaption}\item[{}]{\$include\+Path }\end{DoxyParamCaption})}
+
+Sets the base include path for all class files in the namespace of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$include\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_ac715eb322b7cf2ecf8f45de1631dba0a}\label{class_doctrine_1_1_common_1_1_class_loader_ac715eb322b7cf2ecf8f45de1631dba0a}} 
+\index{ClassLoader@{ClassLoader}!setNamespaceSeparator@{setNamespaceSeparator}}
+\index{setNamespaceSeparator@{setNamespaceSeparator}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{setNamespaceSeparator()}{setNamespaceSeparator()}}
+{\footnotesize\ttfamily set\+Namespace\+Separator (\begin{DoxyParamCaption}\item[{}]{\$sep }\end{DoxyParamCaption})}
+
+Sets the namespace separator used by classes in the namespace of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sep} & The separator to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_class_loader_a501cedfa611556a0100e024a0e102d9d}\label{class_doctrine_1_1_common_1_1_class_loader_a501cedfa611556a0100e024a0e102d9d}} 
+\index{ClassLoader@{ClassLoader}!unregister@{unregister}}
+\index{unregister@{unregister}!ClassLoader@{ClassLoader}}
+\doxysubsubsection{\texorpdfstring{unregister()}{unregister()}}
+{\footnotesize\ttfamily unregister (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_class_loader}{Class\+Loader}} from the SPL autoload stack.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/common/lib/\+Doctrine/\+Common/Class\+Loader.\+php\end{DoxyCompactItemize}

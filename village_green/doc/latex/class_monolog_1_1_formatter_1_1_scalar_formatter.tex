@@ -1,0 +1,78 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_scalar_formatter}{}\doxysection{Scalar\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_scalar_formatter}\index{ScalarFormatter@{ScalarFormatter}}
+Inheritance diagram for Scalar\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_formatter_1_1_scalar_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_scalar_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_scalar_formatter_a4a24c635dd106853f3641523fe9b2bac}{normalize\+Value}} (\$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Formats data into an associative array of scalar values. Objects and arrays will be JSON encoded.
+
+\begin{DoxyAuthor}{Author}
+Andrew Lawson \href{mailto:adlawson@gmail.com}{\texttt{ adlawson@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_scalar_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_scalar_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{ScalarFormatter@{ScalarFormatter}!format@{format}}
+\index{format@{format}!ScalarFormatter@{ScalarFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+
+
+@phpstan-\/return array\texorpdfstring{$<$}{<}string, scalar$\vert$null\texorpdfstring{$>$}{>} \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Normalizer\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_scalar_formatter_a4a24c635dd106853f3641523fe9b2bac}\label{class_monolog_1_1_formatter_1_1_scalar_formatter_a4a24c635dd106853f3641523fe9b2bac}} 
+\index{ScalarFormatter@{ScalarFormatter}!normalizeValue@{normalizeValue}}
+\index{normalizeValue@{normalizeValue}!ScalarFormatter@{ScalarFormatter}}
+\doxysubsubsection{\texorpdfstring{normalizeValue()}{normalizeValue()}}
+{\footnotesize\ttfamily normalize\+Value (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+scalar$\vert$null 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Scalar\+Formatter.\+php\end{DoxyCompactItemize}

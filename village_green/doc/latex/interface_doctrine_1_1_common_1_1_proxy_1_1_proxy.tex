@@ -1,0 +1,114 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{}\doxysection{Proxy Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}\index{Proxy@{Proxy}}
+Inheritance diagram for Proxy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a5986e4dafe219ac607c860396608f24f}{\+\_\+\+\_\+set\+Initialized}} (\$initialized)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a676f8753ce620439fdc20a5289528a2d}{\+\_\+\+\_\+set\+Initializer}} (?Closure \$initializer=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a47de0173b25d7ad732030a9aae0d0b10}{\+\_\+\+\_\+get\+Initializer}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a9117d191d6d019d2b8c928bc8b0a6d2c}{\+\_\+\+\_\+set\+Cloner}} (?Closure \$cloner=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a043e55c97da1641430311d15b6937cfe}{\+\_\+\+\_\+get\+Cloner}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a348d80f841ef3fd4d89ef3a41e7373e7}{\+\_\+\+\_\+get\+Lazy\+Properties}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Interface for proxy classes.
+
+@template T of object @template-\/extends Base\+Proxy$<$\+T$>$ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a043e55c97da1641430311d15b6937cfe}\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a043e55c97da1641430311d15b6937cfe}} 
+\index{Proxy@{Proxy}!\_\_getCloner@{\_\_getCloner}}
+\index{\_\_getCloner@{\_\_getCloner}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{\_\_getCloner()}{\_\_getCloner()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+get\+Cloner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the callback to be used when cloning the proxy.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a9117d191d6d019d2b8c928bc8b0a6d2c}{\+\_\+\+\_\+set\+Cloner}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Closure$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a47de0173b25d7ad732030a9aae0d0b10}\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a47de0173b25d7ad732030a9aae0d0b10}} 
+\index{Proxy@{Proxy}!\_\_getInitializer@{\_\_getInitializer}}
+\index{\_\_getInitializer@{\_\_getInitializer}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{\_\_getInitializer()}{\_\_getInitializer()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+get\+Initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the initializer callback used to initialize the proxy.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a676f8753ce620439fdc20a5289528a2d}{\+\_\+\+\_\+set\+Initializer}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Closure$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a348d80f841ef3fd4d89ef3a41e7373e7}\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a348d80f841ef3fd4d89ef3a41e7373e7}} 
+\index{Proxy@{Proxy}!\_\_getLazyProperties@{\_\_getLazyProperties}}
+\index{\_\_getLazyProperties@{\_\_getLazyProperties}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{\_\_getLazyProperties()}{\_\_getLazyProperties()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+get\+Lazy\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of lazy loaded properties for a given proxy
+
+\begin{DoxyReturn}{Returns}
+array$<$string, mixed$>$ Keys are the property names, and values are the default values for those properties. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a9117d191d6d019d2b8c928bc8b0a6d2c}\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a9117d191d6d019d2b8c928bc8b0a6d2c}} 
+\index{Proxy@{Proxy}!\_\_setCloner@{\_\_setCloner}}
+\index{\_\_setCloner@{\_\_setCloner}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{\_\_setCloner()}{\_\_setCloner()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+set\+Cloner (\begin{DoxyParamCaption}\item[{?Closure}]{\$cloner = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Sets the callback to be used when cloning the proxy. That initializer should accept a single parameter, which is the cloned proxy instance itself.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a5986e4dafe219ac607c860396608f24f}\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a5986e4dafe219ac607c860396608f24f}} 
+\index{Proxy@{Proxy}!\_\_setInitialized@{\_\_setInitialized}}
+\index{\_\_setInitialized@{\_\_setInitialized}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{\_\_setInitialized()}{\_\_setInitialized()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+set\+Initialized (\begin{DoxyParamCaption}\item[{}]{\$initialized }\end{DoxyParamCaption})}
+
+Marks the proxy as initialized or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$initialized} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a676f8753ce620439fdc20a5289528a2d}\label{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy_a676f8753ce620439fdc20a5289528a2d}} 
+\index{Proxy@{Proxy}!\_\_setInitializer@{\_\_setInitializer}}
+\index{\_\_setInitializer@{\_\_setInitializer}!Proxy@{Proxy}}
+\doxysubsubsection{\texorpdfstring{\_\_setInitializer()}{\_\_setInitializer()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+set\+Initializer (\begin{DoxyParamCaption}\item[{?Closure}]{\$initializer = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Sets the initializer callback to be used when initializing the proxy. That initializer should accept 3 parameters\+: \$proxy, \$method and \$params. Those are respectively the proxy object that is being initialized, the method name that triggered initialization and the parameters passed to that method.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/common/lib/\+Doctrine/\+Common/\+Proxy/Proxy.\+php\end{DoxyCompactItemize}

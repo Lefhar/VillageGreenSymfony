@@ -1,0 +1,61 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver}{}\doxysection{Default\+Alias\+Resolver Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver}\index{DefaultAliasResolver@{DefaultAliasResolver}}
+Inheritance diagram for Default\+Alias\+Resolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver_a6966f9e869564b2a76870505a7b4eb38}\label{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver_a6966f9e869564b2a76870505a7b4eb38}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator}{Migration\+Plan\+Calculator}} \$migration\+Plan\+Calculator, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_metadata_1_1_storage_1_1_metadata_storage}{Metadata\+Storage}} \$metadata\+Storage, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_status_calculator}{Migration\+Status\+Calculator}} \$migration\+Status\+Calculator)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver_a698f63f1784ccdee3e760902c862ac31}{resolve\+Version\+Alias}} (string \$alias)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver}{Default\+Alias\+Resolver}} class is responsible for resolving aliases like first, current, etc. to the actual version number. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver_a698f63f1784ccdee3e760902c862ac31}\label{class_doctrine_1_1_migrations_1_1_version_1_1_default_alias_resolver_a698f63f1784ccdee3e760902c862ac31}} 
+\index{DefaultAliasResolver@{DefaultAliasResolver}!resolveVersionAlias@{resolveVersionAlias}}
+\index{resolveVersionAlias@{resolveVersionAlias}!DefaultAliasResolver@{DefaultAliasResolver}}
+\doxysubsubsection{\texorpdfstring{resolveVersionAlias()}{resolveVersionAlias()}}
+{\footnotesize\ttfamily resolve\+Version\+Alias (\begin{DoxyParamCaption}\item[{string}]{\$alias }\end{DoxyParamCaption})}
+
+Returns the version number from an alias.
+
+Supported aliases are\+:
+
+
+\begin{DoxyItemize}
+\item first\+: The very first version before any migrations have been run.
+\item current\+: The current version.
+\item prev\+: The version prior to the current version.
+\item next\+: The version following the current version.
+\item latest\+: The latest available version.
+\end{DoxyItemize}
+
+If an existing version number is specified, it is returned verbatimly.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em No\+Migrations\+To\+Execute} & \\
+\hline
+{\em Unknown\+Migration\+Version} & \\
+\hline
+{\em No\+Migrations\+Found\+With\+Criteria} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_alias_resolver_a698f63f1784ccdee3e760902c862ac31}{Alias\+Resolver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Version/Default\+Alias\+Resolver.\+php\end{DoxyCompactItemize}

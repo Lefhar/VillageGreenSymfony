@@ -1,0 +1,131 @@
+\hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item}{}\doxysection{Typed\+Cache\+Item Class Reference}
+\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item}\index{TypedCacheItem@{TypedCacheItem}}
+Inheritance diagram for Typed\+Cache\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a1ae0d3e221d3533fcfdf8894d141b712}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a1ae0d3e221d3533fcfdf8894d141b712}} 
+{\bfseries \+\_\+\+\_\+construct} (private string \$key, private mixed \$value, private bool \$\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}{is\+Hit}},)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ad40c766ec8aced9770fe6ae269a1e781}{get\+Key}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ac33ee765f5ad9f134540bac393721cfe}{get}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}{is\+Hit}} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_af1159af0d199935e9bb37640d36b30bb}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_af1159af0d199935e9bb37640d36b30bb}} 
+{\bfseries set} (mixed \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a510b58afc5eb34fe1b3c63d157164fd2}{expires\+At}} (\$expiration)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_af8b16c2a1196d10c281b9165811ca9ad}{expires\+After}} (\$time)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a00e23b6060fac1e12db3b48fc06eccaa}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a00e23b6060fac1e12db3b48fc06eccaa}} 
+{\bfseries get\+Expiry} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_af8b16c2a1196d10c281b9165811ca9ad}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_af8b16c2a1196d10c281b9165811ca9ad}} 
+\index{TypedCacheItem@{TypedCacheItem}!expiresAfter@{expiresAfter}}
+\index{expiresAfter@{expiresAfter}!TypedCacheItem@{TypedCacheItem}}
+\doxysubsubsection{\texorpdfstring{expiresAfter()}{expiresAfter()}}
+{\footnotesize\ttfamily expires\+After (\begin{DoxyParamCaption}\item[{}]{\$time }\end{DoxyParamCaption})}
+
+Sets the expiration time for this cache item.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | \textbackslash{}\+Date\+Interval | null & {\em \$time} & The period of time from the present after which the item MUST be considered expired. An integer parameter is understood to be the time in seconds until expiration. If null is passed explicitly, a default value MAY be used. If none is set, the value should be stored permanently or for as long as the implementation allows.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static The called object.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_interface_af8b16c2a1196d10c281b9165811ca9ad}{Cache\+Item\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a510b58afc5eb34fe1b3c63d157164fd2}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a510b58afc5eb34fe1b3c63d157164fd2}} 
+\index{TypedCacheItem@{TypedCacheItem}!expiresAt@{expiresAt}}
+\index{expiresAt@{expiresAt}!TypedCacheItem@{TypedCacheItem}}
+\doxysubsubsection{\texorpdfstring{expiresAt()}{expiresAt()}}
+{\footnotesize\ttfamily expires\+At (\begin{DoxyParamCaption}\item[{}]{\$expiration }\end{DoxyParamCaption})}
+
+Sets the expiration time for this cache item.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Date\+Time\+Interface | null & {\em \$expiration} & The point in time after which the item MUST be considered expired. If null is passed explicitly, a default value MAY be used. If none is set, the value should be stored permanently or for as long as the implementation allows.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static The called object.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_interface_a510b58afc5eb34fe1b3c63d157164fd2}{Cache\+Item\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ac33ee765f5ad9f134540bac393721cfe}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ac33ee765f5ad9f134540bac393721cfe}} 
+\index{TypedCacheItem@{TypedCacheItem}!get@{get}}
+\index{get@{get}!TypedCacheItem@{TypedCacheItem}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the value of the item from the cache associated with this object\textquotesingle{}s key.
+
+The value returned must be identical to the value originally stored by set().
+
+If \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}{is\+Hit()}} returns false, this method MUST return null. Note that null is a legitimate cached value, so the \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}{is\+Hit()}} method SHOULD be used to differentiate between \char`\"{}null value was found\char`\"{} and \char`\"{}no value was found.\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+mixed The value corresponding to this cache item\textquotesingle{}s key, or null if not found. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_interface_ac33ee765f5ad9f134540bac393721cfe}{Cache\+Item\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ad40c766ec8aced9770fe6ae269a1e781}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ad40c766ec8aced9770fe6ae269a1e781}} 
+\index{TypedCacheItem@{TypedCacheItem}!getKey@{getKey}}
+\index{getKey@{getKey}!TypedCacheItem@{TypedCacheItem}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the key for the current cache item.
+
+The key is loaded by the Implementing Library, but should be available to the higher level callers when needed.
+
+\begin{DoxyReturn}{Returns}
+string The key string for this cache item. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_interface_ad40c766ec8aced9770fe6ae269a1e781}{Cache\+Item\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}} 
+\index{TypedCacheItem@{TypedCacheItem}!isHit@{isHit}}
+\index{isHit@{isHit}!TypedCacheItem@{TypedCacheItem}}
+\doxysubsubsection{\texorpdfstring{isHit()}{isHit()}}
+{\footnotesize\ttfamily is\+Hit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Confirms if the cache item lookup resulted in a cache hit.
+
+Note\+: This method MUST NOT have a race condition between calling \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_a9edde1a99d52816445bf060251c49c01}{is\+Hit()}} and calling \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_typed_cache_item_ac33ee765f5ad9f134540bac393721cfe}{get()}}.
+
+\begin{DoxyReturn}{Returns}
+bool True if the request resulted in a cache hit. False otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_interface_a9edde1a99d52816445bf060251c49c01}{Cache\+Item\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/\+Psr6/Typed\+Cache\+Item.\+php\end{DoxyCompactItemize}

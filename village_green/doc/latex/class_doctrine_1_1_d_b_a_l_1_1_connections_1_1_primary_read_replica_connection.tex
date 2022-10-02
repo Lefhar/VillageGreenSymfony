@@ -1,0 +1,412 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection}{}\doxysection{Primary\+Read\+Replica\+Connection Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection}\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+Inheritance diagram for Primary\+Read\+Replica\+Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a6e3c5b805d1bc87fab80314d58793ce5}{\+\_\+\+\_\+construct}} (array \$params, \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}} \$driver, ?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Configuration}} \$config=null, ?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Event\+Manager}} \$event\+Manager=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a172d6679b9fc2462de310e0728ccb7ca}{is\+Connected\+To\+Primary}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a8175603e97e112b02246ed9bf676241a}{connect}} (\$connection\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}{ensure\+Connected\+To\+Primary}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abafa240fcfd9c5a75907dc1b758a147f}{ensure\+Connected\+To\+Replica}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a116b619379bad860f5730ba8e658e4a0}{execute\+Statement}} (\$sql, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af3380f3b13931d581fa973a382946b32}{begin\+Transaction}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af5674c27d4a92f6228565010eacbb9cb}{commit}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aebaea4cae21e0e75ec1489c1648caeb3}{roll\+Back}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a57a252644e309a73b4dbee4a564779ce}{create\+Savepoint}} (\$savepoint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a640cada9593ba5f9d2be8e2f800da774}{release\+Savepoint}} (\$savepoint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_adcfb14588f49281d8b62bbbe7533d1ff}{rollback\+Savepoint}} (\$savepoint)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0f741e7b39d5685c909a704708ed1033}{prepare}} (string \$sql)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a838b4b238eb34ea2040bb66f10b65d35}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a838b4b238eb34ea2040bb66f10b65d35}} 
+{\bfseries perform\+Connect} (?string \$connection\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af156759262c721342d102dbe7b7b9026}{connect\+To}} (\$connection\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abcdaea31efc77bc4ae34e89557d3b9af}{choose\+Connection\+Configuration}} (\$connection\+Name, \$params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a8d01870fbfcf9232c0e94c50a7142331}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a8d01870fbfcf9232c0e94c50a7142331}} 
+{\bfseries \$connections} = \mbox{[}\textquotesingle{}primary\textquotesingle{} =$>$ null, \textquotesingle{}replica\textquotesingle{} =$>$ null\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0cf4dd287a9bcf761dd6bb669464b676}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0cf4dd287a9bcf761dd6bb669464b676}} 
+{\bfseries \$keep\+Replica} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}}.\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a6e3c5b805d1bc87fab80314d58793ce5}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a6e3c5b805d1bc87fab80314d58793ce5}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$params,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}}}]{\$driver,  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_configuration}{Configuration}}}]{\$config = {\ttfamily null},  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Event\+Manager}}}]{\$event\+Manager = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Creates Primary Replica \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a6e3c5b805d1bc87fab80314d58793ce5}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af3380f3b13931d581fa973a382946b32}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af3380f3b13931d581fa973a382946b32}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abcdaea31efc77bc4ae34e89557d3b9af}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abcdaea31efc77bc4ae34e89557d3b9af}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!chooseConnectionConfiguration@{chooseConnectionConfiguration}}
+\index{chooseConnectionConfiguration@{chooseConnectionConfiguration}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{chooseConnectionConfiguration()}{chooseConnectionConfiguration()}}
+{\footnotesize\ttfamily choose\+Connection\+Configuration (\begin{DoxyParamCaption}\item[{}]{\$connection\+Name,  }\item[{}]{\$params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$connection\+Name} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!close@{close}}
+\index{close@{close}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the connection.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af5674c27d4a92f6228565010eacbb9cb}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af5674c27d4a92f6228565010eacbb9cb}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!commit@{commit}}
+\index{commit@{commit}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a8175603e97e112b02246ed9bf676241a}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a8175603e97e112b02246ed9bf676241a}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!connect@{connect}}
+\index{connect@{connect}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily connect (\begin{DoxyParamCaption}\item[{}]{\$connection\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$connection\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af156759262c721342d102dbe7b7b9026}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_af156759262c721342d102dbe7b7b9026}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!connectTo@{connectTo}}
+\index{connectTo@{connectTo}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{connectTo()}{connectTo()}}
+{\footnotesize\ttfamily connect\+To (\begin{DoxyParamCaption}\item[{}]{\$connection\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Connects to a specific connection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$connection\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Driver\+Connection
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a57a252644e309a73b4dbee4a564779ce}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a57a252644e309a73b4dbee4a564779ce}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!createSavepoint@{createSavepoint}}
+\index{createSavepoint@{createSavepoint}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{createSavepoint()}{createSavepoint()}}
+{\footnotesize\ttfamily create\+Savepoint (\begin{DoxyParamCaption}\item[{}]{\$savepoint }\end{DoxyParamCaption})}
+
+Creates a new savepoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$savepoint} & The name of the savepoint to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a57a252644e309a73b4dbee4a564779ce}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a4a735388ba9c31340ce7819161229811}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!ensureConnectedToPrimary@{ensureConnectedToPrimary}}
+\index{ensureConnectedToPrimary@{ensureConnectedToPrimary}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{ensureConnectedToPrimary()}{ensureConnectedToPrimary()}}
+{\footnotesize\ttfamily ensure\+Connected\+To\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Connects to the primary node of the database cluster.
+
+All following statements after this will be executed against the primary node. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abafa240fcfd9c5a75907dc1b758a147f}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_abafa240fcfd9c5a75907dc1b758a147f}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!ensureConnectedToReplica@{ensureConnectedToReplica}}
+\index{ensureConnectedToReplica@{ensureConnectedToReplica}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{ensureConnectedToReplica()}{ensureConnectedToReplica()}}
+{\footnotesize\ttfamily ensure\+Connected\+To\+Replica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Connects to a replica node of the database cluster.
+
+All following statements after this will be executed against the replica node, unless the keep\+Replica option is set to false and a primary connection was already opened. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a116b619379bad860f5730ba8e658e4a0}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a116b619379bad860f5730ba8e658e4a0}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!executeStatement@{executeStatement}}
+\index{executeStatement@{executeStatement}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{executeStatement()}{executeStatement()}}
+{\footnotesize\ttfamily execute\+Statement (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Executes an SQL statement with the given parameters and returns the number of affected rows.
+
+Could be used for\+:
+\begin{DoxyItemize}
+\item DML statements\+: INSERT, UPDATE, DELETE, etc.
+\item DDL statements\+: CREATE, DROP, ALTER, etc.
+\item DCL statements\+: GRANT, REVOKE, etc.
+\item Session control statements\+: ALTER SESSION, SET, DECLARE, etc.
+\item Other statements that don\textquotesingle{}t yield a row set.
+\end{DoxyItemize}
+
+This method supports PDO binding types as well as DBAL mapping types.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & SQL statement \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement}{Statement}} parameters \\
+\hline
+ & {\em array$<$int,int$\vert$string$\vert$\+Type$\vert$null$>$$\vert$array$<$string,int$\vert$string$\vert$\+Type$\vert$null$>$} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The number of affected rows.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a116b619379bad860f5730ba8e658e4a0}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a172d6679b9fc2462de310e0728ccb7ca}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a172d6679b9fc2462de310e0728ccb7ca}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!isConnectedToPrimary@{isConnectedToPrimary}}
+\index{isConnectedToPrimary@{isConnectedToPrimary}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{isConnectedToPrimary()}{isConnectedToPrimary()}}
+{\footnotesize\ttfamily is\+Connected\+To\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the connection is currently towards the primary or not. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0f741e7b39d5685c909a704708ed1033}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a0f741e7b39d5685c909a704708ed1033}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!prepare@{prepare}}
+\index{prepare@{prepare}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily prepare (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+Prepares an SQL statement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & The SQL statement to prepare.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a640cada9593ba5f9d2be8e2f800da774}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_a640cada9593ba5f9d2be8e2f800da774}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!releaseSavepoint@{releaseSavepoint}}
+\index{releaseSavepoint@{releaseSavepoint}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{releaseSavepoint()}{releaseSavepoint()}}
+{\footnotesize\ttfamily release\+Savepoint (\begin{DoxyParamCaption}\item[{}]{\$savepoint }\end{DoxyParamCaption})}
+
+Releases the given savepoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$savepoint} & The name of the savepoint to release.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a640cada9593ba5f9d2be8e2f800da774}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aebaea4cae21e0e75ec1489c1648caeb3}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_aebaea4cae21e0e75ec1489c1648caeb3}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!rollBack@{rollBack}}
+\index{rollBack@{rollBack}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{rollBack()}{rollBack()}}
+{\footnotesize\ttfamily roll\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cancels any database changes done during the current transaction.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_adcfb14588f49281d8b62bbbe7533d1ff}\label{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection_adcfb14588f49281d8b62bbbe7533d1ff}} 
+\index{PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}!rollbackSavepoint@{rollbackSavepoint}}
+\index{rollbackSavepoint@{rollbackSavepoint}!PrimaryReadReplicaConnection@{PrimaryReadReplicaConnection}}
+\doxysubsubsection{\texorpdfstring{rollbackSavepoint()}{rollbackSavepoint()}}
+{\footnotesize\ttfamily rollback\+Savepoint (\begin{DoxyParamCaption}\item[{}]{\$savepoint }\end{DoxyParamCaption})}
+
+Rolls back to the given savepoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$savepoint} & The name of the savepoint to rollback to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_adcfb14588f49281d8b62bbbe7533d1ff}{Connection}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Connections/Primary\+Read\+Replica\+Connection.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,218 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter}{}\doxysection{Normalizer\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_normalizer_formatter}\index{NormalizerFormatter@{NormalizerFormatter}}
+Inheritance diagram for Normalizer\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{class_monolog_1_1_formatter_1_1_normalizer_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{\+\_\+\+\_\+construct}} (?string \$date\+Format=null)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a11f3cde7544eac9e23b0517d513a362b}{format\+Batch}} (array \$records)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac8d28832fbeea9d3a9e4e591c9af4c93}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac8d28832fbeea9d3a9e4e591c9af4c93}} 
+{\bfseries get\+Date\+Format} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_aece8800acc8bc77d5f138cb0e64c3e8b}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_aece8800acc8bc77d5f138cb0e64c3e8b}} 
+{\bfseries set\+Date\+Format} (string \$date\+Format)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac188ed5dfd742587298dc74eefb26fd4}{get\+Max\+Normalize\+Depth}} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a0b2a387b10f99121cc487231b522d8bc}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a0b2a387b10f99121cc487231b522d8bc}} 
+{\bfseries set\+Max\+Normalize\+Depth} (int \$max\+Normalize\+Depth)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac23a7a250ed29675a928f6fc26b255db}{get\+Max\+Normalize\+Item\+Count}} ()
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a85bbd8998d6630db62fcfe179f2132e7}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a85bbd8998d6630db62fcfe179f2132e7}} 
+{\bfseries set\+Max\+Normalize\+Item\+Count} (int \$max\+Normalize\+Item\+Count)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_aa1c1494840caf3c3cc75be7e714f05a9}{set\+Json\+Pretty\+Print}} (bool \$enable)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a25a2f24c4e503c007e90f8ddd218df78}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a25a2f24c4e503c007e90f8ddd218df78}} 
+{\bfseries add\+Json\+Encode\+Option} (int \$option)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a39a75fd68c5b8b5fbf3da17ad18cef18}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a39a75fd68c5b8b5fbf3da17ad18cef18}} 
+{\bfseries remove\+Json\+Encode\+Option} (int \$option)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_abc0f4fada3cb818e2458cc95fd6305f2}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_abc0f4fada3cb818e2458cc95fd6305f2}} 
+const {\bfseries SIMPLE\+\_\+\+DATE} = \char`\"{}Y-\/m-\/d\textbackslash{}\+TH\+:i\+:sP\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a5e6a2c0909a65cbc711a38ece36c8190}{normalize\+Exception}} (Throwable \$e, int \$depth=0)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a924968eb82e6df597cc6b74bd2c0b488}{to\+Json}} (\$data, bool \$ignore\+Errors=false)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a1f4a4c92ae2b33b2586f29be6de5da31}{format\+Date}} (\textbackslash{}Date\+Time\+Interface \$date)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_af0dfb5d24b27115a6f7952bf4e3e200f}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_af0dfb5d24b27115a6f7952bf4e3e200f}} 
+{\bfseries \$date\+Format}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a76b72167e0e64cd720fc431571b12b9c}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a76b72167e0e64cd720fc431571b12b9c}} 
+{\bfseries \$max\+Normalize\+Depth} = 9
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_af04a1b0660642b740dec8b1cd81a2b57}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_af04a1b0660642b740dec8b1cd81a2b57}} 
+{\bfseries \$max\+Normalize\+Item\+Count} = 1000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Normalizes incoming records to remove objects/resources so it\textquotesingle{}s easier to dump to various targets
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{?string}]{\$date\+Format = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$date\+Format} & The format of the timestamp\+: one supported by Date\+Time\+::format \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{Html\+Formatter}}, and \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_wildfire_formatter_abfcd0c26d66c4c41cd1d46b2e3833be1}{Wildfire\+Formatter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!format@{format}}
+\index{format@{format}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Formatter\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elastica_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Elastica\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_elasticsearch_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Elasticsearch\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Html\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Json\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_line_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Line\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_loggly_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Loggly\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_logmatic_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Logmatic\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_logstash_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Logstash\+Formatter}}, and \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_scalar_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Scalar\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a11f3cde7544eac9e23b0517d513a362b}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a11f3cde7544eac9e23b0517d513a362b}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!formatBatch@{formatBatch}}
+\index{formatBatch@{formatBatch}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatch()}{formatBatch()}}
+{\footnotesize\ttfamily format\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Formats a set of log records.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & A set of records to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted set of records
+\end{DoxyReturn}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface_a11f3cde7544eac9e23b0517d513a362b}{Formatter\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_html_formatter_a11f3cde7544eac9e23b0517d513a362b}{Html\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a11f3cde7544eac9e23b0517d513a362b}{Json\+Formatter}}, \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_line_formatter_a11f3cde7544eac9e23b0517d513a362b}{Line\+Formatter}}, and \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_wildfire_formatter_a11f3cde7544eac9e23b0517d513a362b}{Wildfire\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a1f4a4c92ae2b33b2586f29be6de5da31}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a1f4a4c92ae2b33b2586f29be6de5da31}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!formatDate@{formatDate}}
+\index{formatDate@{formatDate}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{formatDate()}{formatDate()}}
+{\footnotesize\ttfamily format\+Date (\begin{DoxyParamCaption}\item[{\textbackslash{}Date\+Time\+Interface}]{\$date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac188ed5dfd742587298dc74eefb26fd4}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac188ed5dfd742587298dc74eefb26fd4}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!getMaxNormalizeDepth@{getMaxNormalizeDepth}}
+\index{getMaxNormalizeDepth@{getMaxNormalizeDepth}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{getMaxNormalizeDepth()}{getMaxNormalizeDepth()}}
+{\footnotesize\ttfamily get\+Max\+Normalize\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The maximum number of normalization levels to go through \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac23a7a250ed29675a928f6fc26b255db}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_ac23a7a250ed29675a928f6fc26b255db}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!getMaxNormalizeItemCount@{getMaxNormalizeItemCount}}
+\index{getMaxNormalizeItemCount@{getMaxNormalizeItemCount}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{getMaxNormalizeItemCount()}{getMaxNormalizeItemCount()}}
+{\footnotesize\ttfamily get\+Max\+Normalize\+Item\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The maximum number of items to normalize per level \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a5e6a2c0909a65cbc711a38ece36c8190}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a5e6a2c0909a65cbc711a38ece36c8190}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!normalizeException@{normalizeException}}
+\index{normalizeException@{normalizeException}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{normalizeException()}{normalizeException()}}
+{\footnotesize\ttfamily normalize\+Exception (\begin{DoxyParamCaption}\item[{Throwable}]{\$e,  }\item[{int}]{\$depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a5e6a2c0909a65cbc711a38ece36c8190}{Json\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_aa1c1494840caf3c3cc75be7e714f05a9}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_aa1c1494840caf3c3cc75be7e714f05a9}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!setJsonPrettyPrint@{setJsonPrettyPrint}}
+\index{setJsonPrettyPrint@{setJsonPrettyPrint}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{setJsonPrettyPrint()}{setJsonPrettyPrint()}}
+{\footnotesize\ttfamily set\+Json\+Pretty\+Print (\begin{DoxyParamCaption}\item[{bool}]{\$enable }\end{DoxyParamCaption})}
+
+Enables {\ttfamily json\+\_\+encode} pretty print. \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_normalizer_formatter_a924968eb82e6df597cc6b74bd2c0b488}\label{class_monolog_1_1_formatter_1_1_normalizer_formatter_a924968eb82e6df597cc6b74bd2c0b488}} 
+\index{NormalizerFormatter@{NormalizerFormatter}!toJson@{toJson}}
+\index{toJson@{toJson}!NormalizerFormatter@{NormalizerFormatter}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily to\+Json (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{bool}]{\$ignore\+Errors = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Return the JSON representation of a value
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception if encoding fails and errors are not ignored \begin{DoxyReturn}{Returns}
+string if encoding fails and ignore\+Errors is true \textquotesingle{}null\textquotesingle{} is returned 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Normalizer\+Formatter.\+php\end{DoxyCompactItemize}

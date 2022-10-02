@@ -1,0 +1,195 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry}{}\doxysection{Manager\+Registry Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_manager_registry}\index{ManagerRegistry@{ManagerRegistry}}
+Inheritance diagram for Manager\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{interface_doctrine_1_1_persistence_1_1_manager_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_afdbad6c65c4afa0fe7715e53923b7eeb}{get\+Default\+Manager\+Name}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_a9e21618a754b3f3ae7070b301d34b3ea}{get\+Manager}} (\$name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_ad95db5fc15a0c5d28a6b49a4a72f8cae}{get\+Managers}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_a58c634184e925bea27faec9308013cdc}{reset\+Manager}} (\$name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_ab235b819d0c647fcaed905d8c49037d5}{get\+Alias\+Namespace}} (\$alias)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_ab085ee59fc64283ddf9acf8b17dd1f07}{get\+Manager\+Names}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_ad78e13cf1b8de75b2bb9b8baef782133}{get\+Repository}} (\$persistent\+Object, \$persistent\+Manager\+Name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_ae0b520097918af8cc69d65c8539f049a}{get\+Manager\+For\+Class}} (\$class)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract covering object managers for a Doctrine persistence layer \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}} class to implement. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_ab235b819d0c647fcaed905d8c49037d5}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_ab235b819d0c647fcaed905d8c49037d5}} 
+\index{ManagerRegistry@{ManagerRegistry}!getAliasNamespace@{getAliasNamespace}}
+\index{getAliasNamespace@{getAliasNamespace}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getAliasNamespace()}{getAliasNamespace()}}
+{\footnotesize\ttfamily get\+Alias\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$alias }\end{DoxyParamCaption})}
+
+Resolves a registered namespace alias to the full namespace.
+
+This method looks for the alias in all registered object managers.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000306}{Deprecated}}]This method is deprecated along with short namespace aliases.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alias} & The alias.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The full namespace. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab235b819d0c647fcaed905d8c49037d5}{Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_afdbad6c65c4afa0fe7715e53923b7eeb}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_afdbad6c65c4afa0fe7715e53923b7eeb}} 
+\index{ManagerRegistry@{ManagerRegistry}!getDefaultManagerName@{getDefaultManagerName}}
+\index{getDefaultManagerName@{getDefaultManagerName}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getDefaultManagerName()}{getDefaultManagerName()}}
+{\footnotesize\ttfamily get\+Default\+Manager\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the default object manager name.
+
+\begin{DoxyReturn}{Returns}
+string The default object manager name. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_afdbad6c65c4afa0fe7715e53923b7eeb}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_a9e21618a754b3f3ae7070b301d34b3ea}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_a9e21618a754b3f3ae7070b301d34b3ea}} 
+\index{ManagerRegistry@{ManagerRegistry}!getManager@{getManager}}
+\index{getManager@{getManager}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getManager()}{getManager()}}
+{\footnotesize\ttfamily get\+Manager (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets a named object manager.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The object manager name (null for the default one).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_a9e21618a754b3f3ae7070b301d34b3ea}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_ae0b520097918af8cc69d65c8539f049a}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_ae0b520097918af8cc69d65c8539f049a}} 
+\index{ManagerRegistry@{ManagerRegistry}!getManagerForClass@{getManagerForClass}}
+\index{getManagerForClass@{getManagerForClass}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getManagerForClass()}{getManagerForClass()}}
+{\footnotesize\ttfamily get\+Manager\+For\+Class (\begin{DoxyParamCaption}\item[{}]{\$class }\end{DoxyParamCaption})}
+
+Gets the object manager associated with a given class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & A persistent object class name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object\+Manager$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_ae0b520097918af8cc69d65c8539f049a}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_ab085ee59fc64283ddf9acf8b17dd1f07}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_ab085ee59fc64283ddf9acf8b17dd1f07}} 
+\index{ManagerRegistry@{ManagerRegistry}!getManagerNames@{getManagerNames}}
+\index{getManagerNames@{getManagerNames}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getManagerNames()}{getManagerNames()}}
+{\footnotesize\ttfamily get\+Manager\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all object manager names.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} An array of object manager names. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_ab085ee59fc64283ddf9acf8b17dd1f07}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_ad95db5fc15a0c5d28a6b49a4a72f8cae}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_ad95db5fc15a0c5d28a6b49a4a72f8cae}} 
+\index{ManagerRegistry@{ManagerRegistry}!getManagers@{getManagers}}
+\index{getManagers@{getManagers}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getManagers()}{getManagers()}}
+{\footnotesize\ttfamily get\+Managers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets an array of all registered object managers.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}\mbox{[}\mbox{]} An array of \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} instances 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_ad95db5fc15a0c5d28a6b49a4a72f8cae}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_ad78e13cf1b8de75b2bb9b8baef782133}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_ad78e13cf1b8de75b2bb9b8baef782133}} 
+\index{ManagerRegistry@{ManagerRegistry}!getRepository@{getRepository}}
+\index{getRepository@{getRepository}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{getRepository()}{getRepository()}}
+{\footnotesize\ttfamily get\+Repository (\begin{DoxyParamCaption}\item[{}]{\$persistent\+Object,  }\item[{}]{\$persistent\+Manager\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository}{Object\+Repository}} for a persistent object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$persistent\+Object} & The name of the persistent object. \\
+\hline
+string & {\em \$persistent\+Manager\+Name} & The object manager name (null for the default one). @psalm-\/param class-\/string$<$\+T$>$ \$persistent\+Object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository}{Object\+Repository}} @psalm-\/return Object\+Repository$<$\+T$>$
+\end{DoxyReturn}
+@template T 
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_ad78e13cf1b8de75b2bb9b8baef782133}{Abstract\+Manager\+Registry}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_manager_registry_a58c634184e925bea27faec9308013cdc}\label{interface_doctrine_1_1_persistence_1_1_manager_registry_a58c634184e925bea27faec9308013cdc}} 
+\index{ManagerRegistry@{ManagerRegistry}!resetManager@{resetManager}}
+\index{resetManager@{resetManager}!ManagerRegistry@{ManagerRegistry}}
+\doxysubsubsection{\texorpdfstring{resetManager()}{resetManager()}}
+{\footnotesize\ttfamily reset\+Manager (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Resets a named object manager.
+
+This method is useful when an object manager has been closed because of a rollbacked transaction AND when you think that it makes sense to get a new one to replace the closed one.
+
+Be warned that you will get a brand new object manager as the existing one is not useable anymore. This means that any other object with a dependency on this object manager will hold an obsolete reference. You can inject the registry instead to avoid this problem.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$name} & The object manager name (null for the default one).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_abstract_manager_registry_a58c634184e925bea27faec9308013cdc}{Abstract\+Manager\+Registry}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Manager\+Registry.\+php\end{DoxyCompactItemize}

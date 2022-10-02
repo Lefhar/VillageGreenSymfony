@@ -1,0 +1,78 @@
+\hypertarget{class_amp_1_1_deferred}{}\doxysection{Deferred Class Reference}
+\label{class_amp_1_1_deferred}\index{Deferred@{Deferred}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_deferred_a544e3978ada76faea2f7c4f5ef4d438b}{promise}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_deferred_a5103de34e145f0a92b4bcfa53c379d58}{resolve}} (\$value=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_deferred_a5df97dc03c3c97cdf40b90fbf101f54f}{fail}} (\textbackslash{}Throwable \$reason)
+\item 
+\mbox{\hyperlink{class_amp_1_1_deferred_aca736aa63ec92455d6bfc515b5ff857c}{is\+Resolved}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_amp_1_1_deferred}{Deferred}} is a container for a promise that is resolved using the \mbox{\hyperlink{class_amp_1_1_deferred_a5103de34e145f0a92b4bcfa53c379d58}{resolve()}} and \mbox{\hyperlink{class_amp_1_1_deferred_a5df97dc03c3c97cdf40b90fbf101f54f}{fail()}} methods of this object. The contained promise may be accessed using the \mbox{\hyperlink{class_amp_1_1_deferred_a544e3978ada76faea2f7c4f5ef4d438b}{promise()}} method. This object should not be part of a public API, but used internally to create and resolve a promise.
+
+@template TValue 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_deferred_a5df97dc03c3c97cdf40b90fbf101f54f}\label{class_amp_1_1_deferred_a5df97dc03c3c97cdf40b90fbf101f54f}} 
+\index{Deferred@{Deferred}!fail@{fail}}
+\index{fail@{fail}!Deferred@{Deferred}}
+\doxysubsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily fail (\begin{DoxyParamCaption}\item[{\textbackslash{}Throwable}]{\$reason }\end{DoxyParamCaption})}
+
+Fails the promise the the given reason.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable & {\em \$reason} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Undefined\+Interface\+Method\mbox{\Hypertarget{class_amp_1_1_deferred_aca736aa63ec92455d6bfc515b5ff857c}\label{class_amp_1_1_deferred_aca736aa63ec92455d6bfc515b5ff857c}} 
+\index{Deferred@{Deferred}!isResolved@{isResolved}}
+\index{isResolved@{isResolved}!Deferred@{Deferred}}
+\doxysubsubsection{\texorpdfstring{isResolved()}{isResolved()}}
+{\footnotesize\ttfamily is\+Resolved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool True if the promise has been resolved. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_deferred_a544e3978ada76faea2f7c4f5ef4d438b}\label{class_amp_1_1_deferred_a544e3978ada76faea2f7c4f5ef4d438b}} 
+\index{Deferred@{Deferred}!promise@{promise}}
+\index{promise@{promise}!Deferred@{Deferred}}
+\doxysubsubsection{\texorpdfstring{promise()}{promise()}}
+{\footnotesize\ttfamily promise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+TValue$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_deferred_a5103de34e145f0a92b4bcfa53c379d58}\label{class_amp_1_1_deferred_a5103de34e145f0a92b4bcfa53c379d58}} 
+\index{Deferred@{Deferred}!resolve@{resolve}}
+\index{resolve@{resolve}!Deferred@{Deferred}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily resolve (\begin{DoxyParamCaption}\item[{}]{\$value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Fulfill the promise with the given value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param TValue$\vert$\+Promise$<$\+TValue$>$ \$value
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Undefined\+Interface\+Method
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Deferred.\+php\end{DoxyCompactItemize}

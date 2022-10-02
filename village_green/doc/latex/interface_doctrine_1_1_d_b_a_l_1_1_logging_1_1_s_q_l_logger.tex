@@ -1,0 +1,74 @@
+\hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger}{}\doxysection{SQLLogger Interface Reference}
+\label{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger}\index{SQLLogger@{SQLLogger}}
+Inheritance diagram for SQLLogger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_ac99e60655b39f908612c6b206e2bb30d}{start\+Query}} (\$sql, ?array \$params=null, ?array \$types=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_a3a03e709c639bb9ea5a2b12e4d9bff52}{stop\+Query}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for SQL loggers.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000063}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Logging\textbackslash{}\+Middleware\} or implement \{
+
+\textbackslash{}\+Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Driver\textbackslash{}\+Middleware\} instead. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_ac99e60655b39f908612c6b206e2bb30d}\label{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_ac99e60655b39f908612c6b206e2bb30d}} 
+\index{SQLLogger@{SQLLogger}!startQuery@{startQuery}}
+\index{startQuery@{startQuery}!SQLLogger@{SQLLogger}}
+\doxysubsubsection{\texorpdfstring{startQuery()}{startQuery()}}
+{\footnotesize\ttfamily start\+Query (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{?array}]{\$params = {\ttfamily null},  }\item[{?array}]{\$types = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Logs a SQL statement somewhere.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & SQL statement \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$$\vert$null} & \$params \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement}{Statement}} parameters \\
+\hline
+ & {\em array$<$int,Type$\vert$int$\vert$string$\vert$null$>$$\vert$array$<$string,Type$\vert$int$\vert$string$\vert$null$>$$\vert$null} & \$types Parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_debug_stack_ac99e60655b39f908612c6b206e2bb30d}{Debug\+Stack}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_ac99e60655b39f908612c6b206e2bb30d}{Logger\+Chain}}, and \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dbal_1_1_logging_1_1_backtrace_logger_ac99e60655b39f908612c6b206e2bb30d}{Backtrace\+Logger}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_a3a03e709c639bb9ea5a2b12e4d9bff52}\label{interface_doctrine_1_1_d_b_a_l_1_1_logging_1_1_s_q_l_logger_a3a03e709c639bb9ea5a2b12e4d9bff52}} 
+\index{SQLLogger@{SQLLogger}!stopQuery@{stopQuery}}
+\index{stopQuery@{stopQuery}!SQLLogger@{SQLLogger}}
+\doxysubsubsection{\texorpdfstring{stopQuery()}{stopQuery()}}
+{\footnotesize\ttfamily stop\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Marks the last started query as stopped. This can be used for timing of queries.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_debug_stack_a3a03e709c639bb9ea5a2b12e4d9bff52}{Debug\+Stack}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain_a3a03e709c639bb9ea5a2b12e4d9bff52}{Logger\+Chain}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_logger_1_1_dbal_logger_a3a03e709c639bb9ea5a2b12e4d9bff52}{Dbal\+Logger}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Logging/SQLLogger.\+php\end{DoxyCompactItemize}

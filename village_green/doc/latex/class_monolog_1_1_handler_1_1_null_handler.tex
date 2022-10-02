@@ -1,0 +1,97 @@
+\hypertarget{class_monolog_1_1_handler_1_1_null_handler}{}\doxysection{Null\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_null_handler}\index{NullHandler@{NullHandler}}
+Inheritance diagram for Null\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_handler_1_1_null_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_null_handler_a482070a9644ebf12b4589e9f641f17dd}{\+\_\+\+\_\+construct}} (\$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}})
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_null_handler_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_null_handler_ad54b568c673b7b4fc724268a54313603}{handle}} (array \$record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Blackhole
+
+Any record it can handle will be thrown away. This can be used to put on top of an existing stack to override it temporarily.
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_null_handler_a482070a9644ebf12b4589e9f641f17dd}\label{class_monolog_1_1_handler_1_1_null_handler_a482070a9644ebf12b4589e9f641f17dd}} 
+\index{NullHandler@{NullHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!NullHandler@{NullHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$level} & The minimum logging level at which this handler will be triggered\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_null_handler_ad54b568c673b7b4fc724268a54313603}\label{class_monolog_1_1_handler_1_1_null_handler_ad54b568c673b7b4fc724268a54313603}} 
+\index{NullHandler@{NullHandler}!handle@{handle}}
+\index{handle@{handle}!NullHandler@{NullHandler}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily handle (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Handles a record.
+
+All records may be passed to this method, and the handler should discard those that it does not want to handle.
+
+The return value of this function controls the bubbling process of the handler stack. Unless the bubbling is interrupted (by returning true), the \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} class will keep on calling further handlers in the stack with a given log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & The record to handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true means that this handler handled the record, and that bubbling is not permitted. false means the record was either not processed or that this handler allows bubbling.
+\end{DoxyReturn}
+@phpstan-\/param Record \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_null_handler_abbfbbcd3430dea8422ecd3c725737758}\label{class_monolog_1_1_handler_1_1_null_handler_abbfbbcd3430dea8422ecd3c725737758}} 
+\index{NullHandler@{NullHandler}!isHandling@{isHandling}}
+\index{isHandling@{isHandling}!NullHandler@{NullHandler}}
+\doxysubsubsection{\texorpdfstring{isHandling()}{isHandling()}}
+{\footnotesize\ttfamily is\+Handling (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Checks whether the given record will be handled by this handler.
+
+This is mostly done for performance reasons, to avoid calling processors for nothing.
+
+Handlers should still check the record levels within \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}}, returning false in \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling()}} is no guarantee that \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} will not be called, and \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{is\+Handling()}} might not be called for a given record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & Partial log record containing only a level key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+@phpstan-\/param array\{level\+: Level\} \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_abbfbbcd3430dea8422ecd3c725737758}{Handler\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Null\+Handler.\+php\end{DoxyCompactItemize}

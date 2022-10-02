@@ -1,0 +1,152 @@
+\hypertarget{class_monolog_1_1_handler_1_1_pushover_handler}{}\doxysection{Pushover\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_pushover_handler}\index{PushoverHandler@{PushoverHandler}}
+Inheritance diagram for Pushover\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_pushover_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_a4b073f9ca198cdf52618ff732f036bff}{\+\_\+\+\_\+construct}} (string \$token, \$users, ?string \$title=null, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}, bool \$bubble=true, bool \$use\+SSL=true, \$high\+Priority\+Level=\mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}, \$emergency\+Level=\mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger\+::\+EMERGENCY}}, int \$retry=30, int \$expire=25200)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_a4ac2edf14cb1bc0df36d487185910777}{set\+High\+Priority\+Level}} (\$value)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_a2669a4b5b2dea3e0df457a9510520331}{set\+Emergency\+Level}} (\$value)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_a445aea350c9592a3477b9ba6596e8c03}{use\+Formatted\+Message}} (bool \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_pushover_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Sends notifications through the pushover api to mobile phones
+
+\begin{DoxyAuthor}{Author}
+Sebastian Göttschkes \href{mailto:sebastian.goettschkes@googlemail.com}{\texttt{ sebastian.\+goettschkes@googlemail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.pushover.net/api}{\texttt{ https\+://www.\+pushover.\+net/api}}
+\end{DoxySeeAlso}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_pushover_handler_a4b073f9ca198cdf52618ff732f036bff}\label{class_monolog_1_1_handler_1_1_pushover_handler_a4b073f9ca198cdf52618ff732f036bff}} 
+\index{PushoverHandler@{PushoverHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PushoverHandler@{PushoverHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{}]{\$users,  }\item[{?string}]{\$title = {\ttfamily null},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{bool}]{\$use\+SSL = {\ttfamily true},  }\item[{}]{\$high\+Priority\+Level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger\+::\+CRITICAL}}},  }\item[{}]{\$emergency\+Level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger\+::\+EMERGENCY}}},  }\item[{int}]{\$retry = {\ttfamily 30},  }\item[{int}]{\$expire = {\ttfamily 25200} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & Pushover api token \\
+\hline
+string | array & {\em \$users} & Pushover user id or array of ids the message will be sent to \\
+\hline
+string | null & {\em \$title} & Title sent to the Pushover API \\
+\hline
+bool & {\em \$use\+SSL} & Whether to connect via SSL. Required when pushing messages to users that are not the pushover.\+net app owner. Open\+SSL is required for this option. \\
+\hline
+string | int & {\em \$high\+Priority\+Level} & The minimum logging level at which this handler will start sending \char`\"{}high priority\char`\"{} requests to the Pushover API \\
+\hline
+string | int & {\em \$emergency\+Level} & The minimum logging level at which this handler will start sending \char`\"{}emergency\char`\"{} requests to the Pushover API \\
+\hline
+int & {\em \$retry} & The retry parameter specifies how often (in seconds) the Pushover servers will send the same notification to the user. \\
+\hline
+int & {\em \$expire} & The expire parameter specifies how many seconds your notification will continue to be retried for (every retry seconds).\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param string$\vert$array\texorpdfstring{$<$}{<}int$\vert$string\texorpdfstring{$>$}{>} \$users @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$high\+Priority\+Level @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$emergency\+Level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_pushover_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_pushover_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{PushoverHandler@{PushoverHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!PushoverHandler@{PushoverHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_pushover_handler_a2669a4b5b2dea3e0df457a9510520331}\label{class_monolog_1_1_handler_1_1_pushover_handler_a2669a4b5b2dea3e0df457a9510520331}} 
+\index{PushoverHandler@{PushoverHandler}!setEmergencyLevel@{setEmergencyLevel}}
+\index{setEmergencyLevel@{setEmergencyLevel}!PushoverHandler@{PushoverHandler}}
+\doxysubsubsection{\texorpdfstring{setEmergencyLevel()}{setEmergencyLevel()}}
+{\footnotesize\ttfamily set\+Emergency\+Level (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$value \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_pushover_handler_a4ac2edf14cb1bc0df36d487185910777}\label{class_monolog_1_1_handler_1_1_pushover_handler_a4ac2edf14cb1bc0df36d487185910777}} 
+\index{PushoverHandler@{PushoverHandler}!setHighPriorityLevel@{setHighPriorityLevel}}
+\index{setHighPriorityLevel@{setHighPriorityLevel}!PushoverHandler@{PushoverHandler}}
+\doxysubsubsection{\texorpdfstring{setHighPriorityLevel()}{setHighPriorityLevel()}}
+{\footnotesize\ttfamily set\+High\+Priority\+Level (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$value \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_pushover_handler_a445aea350c9592a3477b9ba6596e8c03}\label{class_monolog_1_1_handler_1_1_pushover_handler_a445aea350c9592a3477b9ba6596e8c03}} 
+\index{PushoverHandler@{PushoverHandler}!useFormattedMessage@{useFormattedMessage}}
+\index{useFormattedMessage@{useFormattedMessage}!PushoverHandler@{PushoverHandler}}
+\doxysubsubsection{\texorpdfstring{useFormattedMessage()}{useFormattedMessage()}}
+{\footnotesize\ttfamily use\+Formatted\+Message (\begin{DoxyParamCaption}\item[{bool}]{\$value }\end{DoxyParamCaption})}
+
+Use the formatted message? \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_pushover_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_pushover_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{PushoverHandler@{PushoverHandler}!write@{write}}
+\index{write@{write}!PushoverHandler@{PushoverHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Connect (if necessary) and write to the socket
+
+Connect (if necessary) and write to the socket
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_afa17604fd899fffdc1ee326afe177cb5}{Socket\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Pushover\+Handler.\+php\end{DoxyCompactItemize}

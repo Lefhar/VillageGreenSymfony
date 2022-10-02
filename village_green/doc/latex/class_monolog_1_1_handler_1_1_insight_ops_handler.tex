@@ -1,0 +1,75 @@
+\hypertarget{class_monolog_1_1_handler_1_1_insight_ops_handler}{}\doxysection{Insight\+Ops\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_insight_ops_handler}\index{InsightOpsHandler@{InsightOpsHandler}}
+Inheritance diagram for Insight\+Ops\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_insight_ops_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_insight_ops_handler_ae4cd962e63e20a812f0b0b58b3638a8f}{\+\_\+\+\_\+construct}} (string \$token, string \$region=\textquotesingle{}us\textquotesingle{}, bool \$use\+SSL=true, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_insight_ops_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_insight_ops_handler_abaa9c35cc1e2905e54999cbe0ebcdd45}\label{class_monolog_1_1_handler_1_1_insight_ops_handler_abaa9c35cc1e2905e54999cbe0ebcdd45}} 
+{\bfseries \$log\+Token}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inspired on \mbox{\hyperlink{class_monolog_1_1_handler_1_1_log_entries_handler}{Log\+Entries\+Handler}}.
+
+\begin{DoxyAuthor}{Author}
+Robert Kaufmann III \href{mailto:rok3@rok3.me}{\texttt{ rok3@rok3.\+me}} 
+
+Gabriel Machado \href{mailto:gabriel.ms1@hotmail.com}{\texttt{ gabriel.\+ms1@hotmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_insight_ops_handler_ae4cd962e63e20a812f0b0b58b3638a8f}\label{class_monolog_1_1_handler_1_1_insight_ops_handler_ae4cd962e63e20a812f0b0b58b3638a8f}} 
+\index{InsightOpsHandler@{InsightOpsHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!InsightOpsHandler@{InsightOpsHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{string}]{\$region = {\ttfamily \textquotesingle{}us\textquotesingle{}},  }\item[{bool}]{\$use\+SSL = {\ttfamily true},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & Log token supplied by Insight\+Ops \\
+\hline
+string & {\em \$region} & Region where Insight\+Ops account is hosted. Could be \textquotesingle{}us\textquotesingle{} or \textquotesingle{}eu\textquotesingle{}. \\
+\hline
+bool & {\em \$use\+SSL} & Whether or not SSL encryption should be used\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & If SSL encryption is set to true and Open\+SSL is missing \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_insight_ops_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_insight_ops_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{InsightOpsHandler@{InsightOpsHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!InsightOpsHandler@{InsightOpsHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Insight\+Ops\+Handler.\+php\end{DoxyCompactItemize}

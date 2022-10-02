@@ -1,0 +1,55 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests}{}\doxysection{Retry\+Requests Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests}\index{RetryRequests@{RetryRequests}}
+Inheritance diagram for Retry\+Requests\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests_a9659f7369ea20ac9174c4488d213cff7}\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests_a9659f7369ea20ac9174c4488d213cff7}} 
+{\bfseries \+\_\+\+\_\+construct} (int \$retry\+Limit)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests_a52e3bae929a024829dab8535eae7ec3e}{request}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation, \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_delegate_http_client}{Delegate\+Http\+Client}} \$http\+Client)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests_a52e3bae929a024829dab8535eae7ec3e}\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests_a52e3bae929a024829dab8535eae7ec3e}} 
+\index{RetryRequests@{RetryRequests}!request@{request}}
+\index{request@{request}!RetryRequests@{RetryRequests}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation,  }\item[{\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_delegate_http_client}{Delegate\+Http\+Client}}}]{\$http\+Client }\end{DoxyParamCaption})}
+
+Intercepts an application request to an HTTP resource.
+
+The implementation might modify the request, delegate the request handling to the {\ttfamily \$http\+Client}, and/or modify the response after the promise returned from {\ttfamily \$http\+Client-\/\texorpdfstring{$>$}{>}request(...)} resolves.
+
+An interceptor might also short-\/circuit and not delegate to the {\ttfamily \$http\+Client} at all.
+
+Any retry or cloned follow-\/up request must be manually cloned from {\ttfamily \$request} to ensure a properly working interceptor chain, e.\+g. the \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response}{Decompress\+Response}}\} interceptor only decodes a response if the {\ttfamily accept-\/encoding} header isn\textquotesingle{}t set manually. If the \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_retry_requests_a52e3bae929a024829dab8535eae7ec3e}{request}} isn\textquotesingle{}t cloned, the first attempt will set the header and the second attempt will see the header and won\textquotesingle{}t decode the response, because it thinks another interceptor or the application itself will care about the decoding.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_delegate_http_client}{Delegate\+Http\+Client}} & {\em \$http\+Client} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Response$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_application_interceptor_a52e3bae929a024829dab8535eae7ec3e}{Application\+Interceptor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Interceptor/Retry\+Requests.\+php\end{DoxyCompactItemize}

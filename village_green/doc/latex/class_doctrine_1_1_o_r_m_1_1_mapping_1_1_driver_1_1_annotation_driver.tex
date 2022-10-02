@@ -1,0 +1,77 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver}{}\doxysection{Annotation\+Driver Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver}\index{AnnotationDriver@{AnnotationDriver}}
+Inheritance diagram for Annotation\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_ad327635eed919cc071fe20c12e00fafb}{load\+Metadata\+For\+Class}} (\$class\+Name, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_adf4b76ff275f71d74e3171c95e401048}{create}} (\$paths=\mbox{[}$\,$\mbox{]}, ?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader}{Annotation\+Reader}} \$reader=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_ab106a85a075096a2aef6f0d8b6d4e3b6}{\$entity\+Annotation\+Classes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver}{Annotation\+Driver}} reads the mapping metadata from docblock annotations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_adf4b76ff275f71d74e3171c95e401048}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_adf4b76ff275f71d74e3171c95e401048}} 
+\index{AnnotationDriver@{AnnotationDriver}!create@{create}}
+\index{create@{create}!AnnotationDriver@{AnnotationDriver}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}\item[{}]{\$paths = {\ttfamily \mbox{[}\mbox{]}},  }\item[{?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader}{Annotation\+Reader}}}]{\$reader = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Factory method for the \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_annotation}{Annotation}} Driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | string & {\em \$paths} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver}{Annotation\+Driver}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_ad327635eed919cc071fe20c12e00fafb}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_ad327635eed919cc071fe20c12e00fafb}} 
+\index{AnnotationDriver@{AnnotationDriver}!loadMetadataForClass@{loadMetadataForClass}}
+\index{loadMetadataForClass@{loadMetadataForClass}!AnnotationDriver@{AnnotationDriver}}
+\doxysubsubsection{\texorpdfstring{loadMetadataForClass()}{loadMetadataForClass()}}
+{\footnotesize\ttfamily load\+Metadata\+For\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_attribute_driver_ad327635eed919cc071fe20c12e00fafb}{Attribute\+Driver}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_ab106a85a075096a2aef6f0d8b6d4e3b6}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_annotation_driver_ab106a85a075096a2aef6f0d8b6d4e3b6}} 
+\index{AnnotationDriver@{AnnotationDriver}!\$entityAnnotationClasses@{\$entityAnnotationClasses}}
+\index{\$entityAnnotationClasses@{\$entityAnnotationClasses}!AnnotationDriver@{AnnotationDriver}}
+\doxysubsubsection{\texorpdfstring{\$entityAnnotationClasses}{$entityAnnotationClasses}}
+{\footnotesize\ttfamily \$entity\+Annotation\+Classes\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        Mapping\(\backslash\)Entity::class => 1,}
+\DoxyCodeLine{        Mapping\(\backslash\)MappedSuperclass::class => 2,}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/\+Driver/Annotation\+Driver.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\hypertarget{class_amp_1_1_lazy_promise}{}\doxysection{Lazy\+Promise Class Reference}
+\label{class_amp_1_1_lazy_promise}\index{LazyPromise@{LazyPromise}}
+Inheritance diagram for Lazy\+Promise\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_lazy_promise}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_lazy_promise_aaf5a5b74a0666ad45e7a0c790df6566a}{\+\_\+\+\_\+construct}} (callable \$promisor)
+\item 
+\mbox{\hyperlink{class_amp_1_1_lazy_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{on\+Resolve}} (callable \$on\+Resolved)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates a promise that calls \$promisor only when the result of the promise is requested (i.\+e. \mbox{\hyperlink{class_amp_1_1_lazy_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{on\+Resolve()}} is called on the promise). \$promisor can return a promise or any value. If \$promisor throws an exception, the promise fails with that exception. If \$promisor returns a Generator, it will be run as a coroutine. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_lazy_promise_aaf5a5b74a0666ad45e7a0c790df6566a}\label{class_amp_1_1_lazy_promise_aaf5a5b74a0666ad45e7a0c790df6566a}} 
+\index{LazyPromise@{LazyPromise}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LazyPromise@{LazyPromise}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{callable}]{\$promisor }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$promisor} & Function which starts an async operation, returning a \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} (or any value). Generators will be run as a coroutine. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_lazy_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}\label{class_amp_1_1_lazy_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}} 
+\index{LazyPromise@{LazyPromise}!onResolve@{onResolve}}
+\index{onResolve@{onResolve}!LazyPromise@{LazyPromise}}
+\doxysubsubsection{\texorpdfstring{onResolve()}{onResolve()}}
+{\footnotesize\ttfamily on\+Resolve (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Resolved }\end{DoxyParamCaption})}
+
+\{Registers a callback to be invoked when the promise is resolved.
+
+If this method is called multiple times, additional handlers will be registered instead of replacing any already existing handlers.
+
+If the promise is already resolved, the callback MUST be executed immediately.
+
+Exceptions MUST NOT be thrown from this method. Any exceptions thrown from invoked callbacks MUST be forwarded to the event-\/loop error handler.
+
+Note\+: You shouldn\textquotesingle{}t implement this interface yourself. Instead, provide a method that returns a promise for the operation you\textquotesingle{}re implementing. Objects other than pure placeholders implementing it are a very bad idea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Resolved} & The first argument shall be {\ttfamily null} on success, while the second shall be {\ttfamily null} on failure.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$on\+Resolved
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{Promise}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Lazy\+Promise.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_event_subscriber}{}\doxysection{Event\+Subscriber Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_event_subscriber}\index{EventSubscriber@{EventSubscriber}}
+Inheritance diagram for Event\+Subscriber\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.358210cm]{interface_doctrine_1_1_common_1_1_event_subscriber}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}} knows himself what events he is interested in. If an \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber}{Event\+Subscriber}} is added to an \mbox{\hyperlink{class_doctrine_1_1_common_1_1_event_manager}{Event\+Manager}}, the manager invokes \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}{get\+Subscribed\+Events}} and registers the subscriber as a listener for all returned events. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}\label{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}} 
+\index{EventSubscriber@{EventSubscriber}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!EventSubscriber@{EventSubscriber}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an array of events this subscriber wants to listen to.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77d372ed259d7e188f408e350d4f1d66}{SQLSession\+Init}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_event_1_1_listeners_1_1_auto_commit_listener_a77d372ed259d7e188f408e350d4f1d66}{Auto\+Commit\+Listener}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_resolve_target_entity_listener_a77d372ed259d7e188f408e350d4f1d66}{Resolve\+Target\+Entity\+Listener}}, \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_doctrine_dbal_cache_adapter_schema_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Doctrine\+Dbal\+Cache\+Adapter\+Schema\+Subscriber}}, \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_messenger_transport_doctrine_schema_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Messenger\+Transport\+Doctrine\+Schema\+Subscriber}}, \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_pdo_cache_adapter_doctrine_schema_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Pdo\+Cache\+Adapter\+Doctrine\+Schema\+Subscriber}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_remember_me_token_provider_doctrine_schema_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Remember\+Me\+Token\+Provider\+Doctrine\+Schema\+Subscriber}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/event-\/manager/lib/\+Doctrine/\+Common/Event\+Subscriber.\+php\end{DoxyCompactItemize}

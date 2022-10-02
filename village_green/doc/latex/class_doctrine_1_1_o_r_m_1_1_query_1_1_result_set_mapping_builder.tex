@@ -1,0 +1,265 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder}{}\doxysection{Result\+Set\+Mapping\+Builder Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder}\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+Inheritance diagram for Result\+Set\+Mapping\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_aa68667a5e908da23378c1fb2aebbbf1a}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \$default\+Rename\+Mode=self\+::\+COLUMN\+\_\+\+RENAMING\+\_\+\+NONE)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a35fc2c4b961999a8ffd49d42a27af70e}{add\+Root\+Entity\+From\+Class\+Metadata}} (\$class, \$alias, \$renamed\+Columns=\mbox{[}$\,$\mbox{]}, \$rename\+Mode=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac73f7336c44909bfec876c82d14baa55}{add\+Joined\+Entity\+From\+Class\+Metadata}} (\$class, \$alias, \$parent\+Alias, \$relation, \$renamed\+Columns=\mbox{[}$\,$\mbox{]}, \$rename\+Mode=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_af7dcd3d8dca68c0babe747e39389b3b7}{add\+Named\+Native\+Query\+Mapping}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} \$class, array \$query\+Mapping)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a21467ffb1aac591d4a42bb86784eb2e1}{add\+Named\+Native\+Query\+Result\+Class\+Mapping}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} \$class, \$result\+Class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ab0d09866a67873cd6059aa13a4d323b7}{add\+Named\+Native\+Query\+Result\+Set\+Mapping}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} \$class, \$result\+Set\+Mapping\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a6f9f1239d8a47e4629d156c426617dc0}{add\+Named\+Native\+Query\+Entity\+Result\+Mapping}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} \$class\+Metadata, array \$entity\+Mapping, \$alias)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a117f7d28df278136a23d59257f4a1af4}{generate\+Select\+Clause}} (\$table\+Aliases=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a243e65831bc62b1be92b582dadf4f66a}{COLUMN\+\_\+\+RENAMING\+\_\+\+NONE}} = 1
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac9a6c61c40d81a380457b4bca73094a4}{COLUMN\+\_\+\+RENAMING\+\_\+\+CUSTOM}} = 2
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a924fb5c5f2165928fc7f5c05be153d72}{COLUMN\+\_\+\+RENAMING\+\_\+\+INCREMENT}} = 3
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac1c105dfb098c1c938a042597a14a38d}{add\+All\+Class\+Fields}} (\$class, \$alias, \$column\+Alias\+Map=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder}{Result\+Set\+Mapping\+Builder}} uses the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} to automatically populate entity fields. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_aa68667a5e908da23378c1fb2aebbbf1a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_aa68667a5e908da23378c1fb2aebbbf1a}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{}]{\$default\+Rename\+Mode = {\ttfamily self\+:\+:COLUMN\+\_\+RENAMING\+\_\+NONE} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$default\+Rename\+Mode} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac1c105dfb098c1c938a042597a14a38d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac1c105dfb098c1c938a042597a14a38d}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addAllClassFields@{addAllClassFields}}
+\index{addAllClassFields@{addAllClassFields}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addAllClassFields()}{addAllClassFields()}}
+{\footnotesize\ttfamily add\+All\+Class\+Fields (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$alias,  }\item[{}]{\$column\+Alias\+Map = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds all fields of the given class to the result set mapping (columns and meta fields).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & \\
+\hline
+string & {\em \$alias} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$column\+Alias\+Map} & @psalm-\/param array$<$string, string$>$ \$column\+Alias\+Map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac73f7336c44909bfec876c82d14baa55}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac73f7336c44909bfec876c82d14baa55}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addJoinedEntityFromClassMetadata@{addJoinedEntityFromClassMetadata}}
+\index{addJoinedEntityFromClassMetadata@{addJoinedEntityFromClassMetadata}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addJoinedEntityFromClassMetadata()}{addJoinedEntityFromClassMetadata()}}
+{\footnotesize\ttfamily add\+Joined\+Entity\+From\+Class\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$alias,  }\item[{}]{\$parent\+Alias,  }\item[{}]{\$relation,  }\item[{}]{\$renamed\+Columns = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$rename\+Mode = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Adds a joined entity and all of its fields to the result set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & The class name of the joined entity. \\
+\hline
+string & {\em \$alias} & The unique alias to use for the joined entity. \\
+\hline
+string & {\em \$parent\+Alias} & The alias of the entity result that is the parent of this joined result. \\
+\hline
+string & {\em \$relation} & The association field that connects the parent entity result with the joined entity result. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$renamed\+Columns} & Columns that have been renamed (table\+Column\+Name =\texorpdfstring{$>$}{>} query\+Column\+Name). \\
+\hline
+int | null & {\em \$rename\+Mode} & One of the COLUMN\+\_\+\+RENAMING\+\_\+$\ast$ constants or array for BC reasons (CUSTOM). @psalm-\/param array$<$string, string$>$ \$renamed\+Columns\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a6f9f1239d8a47e4629d156c426617dc0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a6f9f1239d8a47e4629d156c426617dc0}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addNamedNativeQueryEntityResultMapping@{addNamedNativeQueryEntityResultMapping}}
+\index{addNamedNativeQueryEntityResultMapping@{addNamedNativeQueryEntityResultMapping}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addNamedNativeQueryEntityResultMapping()}{addNamedNativeQueryEntityResultMapping()}}
+{\footnotesize\ttfamily add\+Named\+Native\+Query\+Entity\+Result\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}}}]{\$class\+Metadata,  }\item[{array}]{\$entity\+Mapping,  }\item[{}]{\$alias }\end{DoxyParamCaption})}
+
+Adds the entity result mapping of the results of native SQL queries to the result set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$entity\+Mapping} & \\
+\hline
+string & {\em \$alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Mapping\+Exception} & \\
+\hline
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_af7dcd3d8dca68c0babe747e39389b3b7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_af7dcd3d8dca68c0babe747e39389b3b7}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addNamedNativeQueryMapping@{addNamedNativeQueryMapping}}
+\index{addNamedNativeQueryMapping@{addNamedNativeQueryMapping}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addNamedNativeQueryMapping()}{addNamedNativeQueryMapping()}}
+{\footnotesize\ttfamily add\+Named\+Native\+Query\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}}}]{\$class,  }\item[{array}]{\$query\+Mapping }\end{DoxyParamCaption})}
+
+Adds the mappings of the results of native SQL queries to the result set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$query\+Mapping} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder}{Result\+Set\+Mapping\+Builder}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a21467ffb1aac591d4a42bb86784eb2e1}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a21467ffb1aac591d4a42bb86784eb2e1}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addNamedNativeQueryResultClassMapping@{addNamedNativeQueryResultClassMapping}}
+\index{addNamedNativeQueryResultClassMapping@{addNamedNativeQueryResultClassMapping}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addNamedNativeQueryResultClassMapping()}{addNamedNativeQueryResultClassMapping()}}
+{\footnotesize\ttfamily add\+Named\+Native\+Query\+Result\+Class\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}}}]{\$class,  }\item[{}]{\$result\+Class\+Name }\end{DoxyParamCaption})}
+
+Adds the class mapping of the results of native SQL queries to the result set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$result\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ab0d09866a67873cd6059aa13a4d323b7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ab0d09866a67873cd6059aa13a4d323b7}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addNamedNativeQueryResultSetMapping@{addNamedNativeQueryResultSetMapping}}
+\index{addNamedNativeQueryResultSetMapping@{addNamedNativeQueryResultSetMapping}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addNamedNativeQueryResultSetMapping()}{addNamedNativeQueryResultSetMapping()}}
+{\footnotesize\ttfamily add\+Named\+Native\+Query\+Result\+Set\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}}}]{\$class,  }\item[{}]{\$result\+Set\+Mapping\+Name }\end{DoxyParamCaption})}
+
+Adds the result set mapping of the results of native SQL queries to the result set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$result\+Set\+Mapping\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a35fc2c4b961999a8ffd49d42a27af70e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a35fc2c4b961999a8ffd49d42a27af70e}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!addRootEntityFromClassMetadata@{addRootEntityFromClassMetadata}}
+\index{addRootEntityFromClassMetadata@{addRootEntityFromClassMetadata}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{addRootEntityFromClassMetadata()}{addRootEntityFromClassMetadata()}}
+{\footnotesize\ttfamily add\+Root\+Entity\+From\+Class\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$alias,  }\item[{}]{\$renamed\+Columns = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$rename\+Mode = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Adds a root entity and all of its fields to the result set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & The class name of the root entity. \\
+\hline
+string & {\em \$alias} & The unique alias to use for the root entity. \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$renamed\+Columns} & Columns that have been renamed (table\+Column\+Name =\texorpdfstring{$>$}{>} query\+Column\+Name). \\
+\hline
+int | null & {\em \$rename\+Mode} & One of the COLUMN\+\_\+\+RENAMING\+\_\+$\ast$ constants or array for BC reasons (CUSTOM). @psalm-\/param array$<$string, string$>$ \$renamed\+Columns\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a117f7d28df278136a23d59257f4a1af4}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a117f7d28df278136a23d59257f4a1af4}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!generateSelectClause@{generateSelectClause}}
+\index{generateSelectClause@{generateSelectClause}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{generateSelectClause()}{generateSelectClause()}}
+{\footnotesize\ttfamily generate\+Select\+Clause (\begin{DoxyParamCaption}\item[{}]{\$table\+Aliases = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Generates the Select clause from this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder}{Result\+Set\+Mapping\+Builder}}.
+
+Works only for all the entity results. The select parts for scalar expressions have to be written manually.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$table\+Aliases} & @psalm-\/param array$<$string, string$>$ \$table\+Aliases\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac9a6c61c40d81a380457b4bca73094a4}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_ac9a6c61c40d81a380457b4bca73094a4}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!COLUMN\_RENAMING\_CUSTOM@{COLUMN\_RENAMING\_CUSTOM}}
+\index{COLUMN\_RENAMING\_CUSTOM@{COLUMN\_RENAMING\_CUSTOM}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{COLUMN\_RENAMING\_CUSTOM}{COLUMN\_RENAMING\_CUSTOM}}
+{\footnotesize\ttfamily const COLUMN\+\_\+\+RENAMING\+\_\+\+CUSTOM = 2}
+
+Picking custom renaming allows the user to define the renaming of specific columns with a rename array that contains column names as keys and result alias as values. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a924fb5c5f2165928fc7f5c05be153d72}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a924fb5c5f2165928fc7f5c05be153d72}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!COLUMN\_RENAMING\_INCREMENT@{COLUMN\_RENAMING\_INCREMENT}}
+\index{COLUMN\_RENAMING\_INCREMENT@{COLUMN\_RENAMING\_INCREMENT}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{COLUMN\_RENAMING\_INCREMENT}{COLUMN\_RENAMING\_INCREMENT}}
+{\footnotesize\ttfamily const COLUMN\+\_\+\+RENAMING\+\_\+\+INCREMENT = 3}
+
+Incremental renaming uses a result set mapping internal counter to add a number to each column result, leading to uniqueness. This only works if you use \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a117f7d28df278136a23d59257f4a1af4}{generate\+Select\+Clause()}}\} to generate the SELECT clause for you. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a243e65831bc62b1be92b582dadf4f66a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping_builder_a243e65831bc62b1be92b582dadf4f66a}} 
+\index{ResultSetMappingBuilder@{ResultSetMappingBuilder}!COLUMN\_RENAMING\_NONE@{COLUMN\_RENAMING\_NONE}}
+\index{COLUMN\_RENAMING\_NONE@{COLUMN\_RENAMING\_NONE}!ResultSetMappingBuilder@{ResultSetMappingBuilder}}
+\doxysubsubsection{\texorpdfstring{COLUMN\_RENAMING\_NONE}{COLUMN\_RENAMING\_NONE}}
+{\footnotesize\ttfamily const COLUMN\+\_\+\+RENAMING\+\_\+\+NONE = 1}
+
+Picking this rename mode will register entity columns as is, as they are in the database. This can cause clashes when multiple entities are fetched that have columns with the same name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Result\+Set\+Mapping\+Builder.\+php\end{DoxyCompactItemize}

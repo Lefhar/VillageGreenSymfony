@@ -1,0 +1,47 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property}{}\doxysection{Runtime\+Public\+Reflection\+Property Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property}\index{RuntimePublicReflectionProperty@{RuntimePublicReflectionProperty}}
+Inheritance diagram for Runtime\+Public\+Reflection\+Property\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property_ac7576c14fc42c3df9b9c01f670b493ed}{get\+Value}} (\$object=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property_ab63f6692463cf6181f2ea8253080970d}{set\+Value}} (\$object, \$value=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PHP Runtime Reflection Public Property -\/ special overrides for public properties. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property_ac7576c14fc42c3df9b9c01f670b493ed}\label{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property_ac7576c14fc42c3df9b9c01f670b493ed}} 
+\index{RuntimePublicReflectionProperty@{RuntimePublicReflectionProperty}!getValue@{getValue}}
+\index{getValue@{getValue}!RuntimePublicReflectionProperty@{RuntimePublicReflectionProperty}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily get\+Value (\begin{DoxyParamCaption}\item[{}]{\$object = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Checks is the value actually exist before fetching it. This is to avoid calling {\ttfamily \+\_\+\+\_\+get} on the provided \$object if it is a \{\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Doctrine\textbackslash{}\+Common\textbackslash{}\+Proxy\textbackslash{}\+Proxy\}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property_ab63f6692463cf6181f2ea8253080970d}\label{class_doctrine_1_1_persistence_1_1_reflection_1_1_runtime_public_reflection_property_ab63f6692463cf6181f2ea8253080970d}} 
+\index{RuntimePublicReflectionProperty@{RuntimePublicReflectionProperty}!setValue@{setValue}}
+\index{setValue@{setValue}!RuntimePublicReflectionProperty@{RuntimePublicReflectionProperty}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily set\+Value (\begin{DoxyParamCaption}\item[{}]{\$object,  }\item[{}]{\$value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Avoids triggering lazy loading via {\ttfamily \+\_\+\+\_\+set} if the provided object is a \{\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Doctrine\textbackslash{}\+Common\textbackslash{}\+Proxy\textbackslash{}\+Proxy\}.
+\end{DoxySeeAlso}
+\mbox{\hyperlink{}{object \$object  mixed \$value  void }}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Reflection/Runtime\+Public\+Reflection\+Property.\+php\end{DoxyCompactItemize}

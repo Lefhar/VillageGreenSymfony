@@ -1,0 +1,70 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_pooled_http_client}{}\doxysection{Pooled\+Http\+Client Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_pooled_http_client}\index{PooledHttpClient@{PooledHttpClient}}
+Inheritance diagram for Pooled\+Http\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_pooled_http_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_a39f4768b1fa9a5a3418f0335a5b8f8c1}\label{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_a39f4768b1fa9a5a3418f0335a5b8f8c1}} 
+{\bfseries \+\_\+\+\_\+construct} (?\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool}{Connection\+Pool}} \$connection\+Pool=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_ae92be99a598a3a6249217209a9263c38}{request}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_a02aad7231d94bef6138453fcf823f4ac}{intercept}} (\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}} \$network\+Interceptor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_a02aad7231d94bef6138453fcf823f4ac}\label{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_a02aad7231d94bef6138453fcf823f4ac}} 
+\index{PooledHttpClient@{PooledHttpClient}!intercept@{intercept}}
+\index{intercept@{intercept}!PooledHttpClient@{PooledHttpClient}}
+\doxysubsubsection{\texorpdfstring{intercept()}{intercept()}}
+{\footnotesize\ttfamily intercept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}}}]{\$network\+Interceptor }\end{DoxyParamCaption})}
+
+Adds a network interceptor.
+
+Network interceptors are only invoked if the request requires network access, i.\+e. there\textquotesingle{}s no short-\/circuit by an application interceptor, e.\+g. a cache.
+
+Whether the given network interceptor will be respected for currently running requests is undefined.
+
+Any new requests have to take the new interceptor into account.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}} & {\em \$network\+Interceptor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_ae92be99a598a3a6249217209a9263c38}\label{class_amp_1_1_http_1_1_client_1_1_pooled_http_client_ae92be99a598a3a6249217209a9263c38}} 
+\index{PooledHttpClient@{PooledHttpClient}!request@{request}}
+\index{request@{request}!PooledHttpClient@{PooledHttpClient}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} a specific resource from an HTTP server.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Response$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_delegate_http_client_ae92be99a598a3a6249217209a9263c38}{Delegate\+Http\+Client}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/Pooled\+Http\+Client.\+php\end{DoxyCompactItemize}

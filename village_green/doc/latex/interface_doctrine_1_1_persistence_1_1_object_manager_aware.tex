@@ -1,0 +1,50 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_aware}{}\doxysection{Object\+Manager\+Aware Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_object_manager_aware}\index{ObjectManagerAware@{ObjectManagerAware}}
+Inheritance diagram for Object\+Manager\+Aware\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_persistence_1_1_object_manager_aware}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_aware_a658c92f90d5bfde790746ac7b139869d}{inject\+Object\+Manager}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} \$object\+Manager, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class\+Metadata)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Makes a Persistent Objects aware of its own object-\/manager.
+
+Using this interface the managing object manager and class metadata instances are injected into the persistent object after construction. This allows you to implement Active\+Record functionality on top of the persistence-\/ignorance that Doctrine propagates.
+
+Word of Warning\+: This is a very powerful hook to change how you can work with your domain models. Using this hook will break the Single Responsibility Principle inside your Domain Objects and increase the coupling of database and objects.
+
+Every \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} has to implement this functionality itself. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_aware_a658c92f90d5bfde790746ac7b139869d}\label{interface_doctrine_1_1_persistence_1_1_object_manager_aware_a658c92f90d5bfde790746ac7b139869d}} 
+\index{ObjectManagerAware@{ObjectManagerAware}!injectObjectManager@{injectObjectManager}}
+\index{injectObjectManager@{injectObjectManager}!ObjectManagerAware@{ObjectManagerAware}}
+\doxysubsubsection{\texorpdfstring{injectObjectManager()}{injectObjectManager()}}
+{\footnotesize\ttfamily inject\+Object\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}}]{\$object\+Manager,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class\+Metadata }\end{DoxyParamCaption})}
+
+Injects responsible \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} and the Class\+Metadata into this persistent object.
+
+@psalm-\/param Class\+Metadata$<$object$>$ \$class\+Metadata
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_persistence_1_1_persistent_object_a658c92f90d5bfde790746ac7b139869d}{Persistent\+Object}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Object\+Manager\+Aware.\+php\end{DoxyCompactItemize}

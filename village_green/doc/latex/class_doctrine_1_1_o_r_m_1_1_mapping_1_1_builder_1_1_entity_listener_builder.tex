@@ -1,0 +1,41 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_entity_listener_builder}{}\doxysection{Entity\+Listener\+Builder Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_entity_listener_builder}\index{EntityListenerBuilder@{EntityListenerBuilder}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_entity_listener_builder_a4dda91edfbc42e89af5f2cc565d5036c}{bind\+Entity\+Listener}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \$class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Builder for entity listeners. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_entity_listener_builder_a4dda91edfbc42e89af5f2cc565d5036c}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_entity_listener_builder_a4dda91edfbc42e89af5f2cc565d5036c}} 
+\index{EntityListenerBuilder@{EntityListenerBuilder}!bindEntityListener@{bindEntityListener}}
+\index{bindEntityListener@{bindEntityListener}!EntityListenerBuilder@{EntityListenerBuilder}}
+\doxysubsubsection{\texorpdfstring{bindEntityListener()}{bindEntityListener()}}
+{\footnotesize\ttfamily static bind\+Entity\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Lookup the entity class to find methods that match to event lifecycle names
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} & {\em \$metadata} & The entity metadata. \\
+\hline
+string & {\em \$class\+Name} & The listener class name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_mapping_exception}{Mapping\+Exception}}} & When the listener class not found. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/\+Builder/Entity\+Listener\+Builder.\+php\end{DoxyCompactItemize}

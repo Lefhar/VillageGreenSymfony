@@ -1,0 +1,45 @@
+\hypertarget{class_doctrine_1_1_inflector_1_1_ruleset_inflector}{}\doxysection{Ruleset\+Inflector Class Reference}
+\label{class_doctrine_1_1_inflector_1_1_ruleset_inflector}\index{RulesetInflector@{RulesetInflector}}
+Inheritance diagram for Ruleset\+Inflector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_inflector_1_1_ruleset_inflector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_inflector_1_1_ruleset_inflector_a31cd5f3fbacc090759db89f07e052f02}\label{class_doctrine_1_1_inflector_1_1_ruleset_inflector_a31cd5f3fbacc090759db89f07e052f02}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_inflector_1_1_rules_1_1_ruleset}{Ruleset}} \$ruleset, \mbox{\hyperlink{class_doctrine_1_1_inflector_1_1_rules_1_1_ruleset}{Ruleset}} ... \$rulesets)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_inflector_1_1_ruleset_inflector_ab2d7b61bb819b58794c01e0ebc4668c7}{inflect}} (string \$word)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inflects based on multiple rulesets.
+
+Rules\+:
+\begin{DoxyItemize}
+\item If the word matches any uninflected word pattern, it is not inflected
+\item The first ruleset that returns a different value for an irregular word wins
+\item The first ruleset that returns a different value for a regular word wins
+\item If none of the above match, the word is left as-\/is 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_inflector_1_1_ruleset_inflector_ab2d7b61bb819b58794c01e0ebc4668c7}\label{class_doctrine_1_1_inflector_1_1_ruleset_inflector_ab2d7b61bb819b58794c01e0ebc4668c7}} 
+\index{RulesetInflector@{RulesetInflector}!inflect@{inflect}}
+\index{inflect@{inflect}!RulesetInflector@{RulesetInflector}}
+\doxysubsubsection{\texorpdfstring{inflect()}{inflect()}}
+{\footnotesize\ttfamily inflect (\begin{DoxyParamCaption}\item[{string}]{\$word }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_inflector_1_1_word_inflector}{Word\+Inflector}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/inflector/lib/\+Doctrine/\+Inflector/Ruleset\+Inflector.\+php\end{DoxyCompactItemize}

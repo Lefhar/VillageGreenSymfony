@@ -1,0 +1,68 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator}{}\doxysection{Collection\+Hydrator Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator}\index{CollectionHydrator@{CollectionHydrator}}
+Inheritance diagram for Collection\+Hydrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator_a3d9b04422aa68a04d2a195ec1cdb542d}{build\+Cache\+Entry}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key, \$collection)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator_a8fc0276bf698e416e7e94284b7f93ec4}{load\+Cache\+Entry}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} \$key, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} \$entry, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$collection)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hydrator cache entry for collections 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator_a3d9b04422aa68a04d2a195ec1cdb542d}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator_a3d9b04422aa68a04d2a195ec1cdb542d}} 
+\index{CollectionHydrator@{CollectionHydrator}!buildCacheEntry@{buildCacheEntry}}
+\index{buildCacheEntry@{buildCacheEntry}!CollectionHydrator@{CollectionHydrator}}
+\doxysubsubsection{\texorpdfstring{buildCacheEntry()}{buildCacheEntry()}}
+{\footnotesize\ttfamily build\+Cache\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key,  }\item[{}]{\$collection }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$metadata} & The entity metadata. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} & {\em \$key} & The cached collection key. \\
+\hline
+array | mixed\mbox{[}$\,$\mbox{]} | Collection & {\em \$collection} & The collection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_collection_hydrator_a3d9b04422aa68a04d2a195ec1cdb542d}{Default\+Collection\+Hydrator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator_a8fc0276bf698e416e7e94284b7f93ec4}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_hydrator_a8fc0276bf698e416e7e94284b7f93ec4}} 
+\index{CollectionHydrator@{CollectionHydrator}!loadCacheEntry@{loadCacheEntry}}
+\index{loadCacheEntry@{loadCacheEntry}!CollectionHydrator@{CollectionHydrator}}
+\doxysubsubsection{\texorpdfstring{loadCacheEntry()}{loadCacheEntry()}}
+{\footnotesize\ttfamily load\+Cache\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}}}]{\$entry,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$collection }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$metadata} & The owning entity metadata. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_key}{Collection\+Cache\+Key}} & {\em \$key} & The cached collection key. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_collection_cache_entry}{Collection\+Cache\+Entry}} & {\em \$entry} & The cached collection entry. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} & {\em \$collection} & The collection to load the cache into.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}$\vert$null 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/Collection\+Hydrator.\+php\end{DoxyCompactItemize}

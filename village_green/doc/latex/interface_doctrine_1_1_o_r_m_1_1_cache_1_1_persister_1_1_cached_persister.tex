@@ -1,0 +1,63 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister}{}\doxysection{Cached\+Persister Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister}\index{CachedPersister@{CachedPersister}}
+Inheritance diagram for Cached\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.500000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a69fd009392446b047b2b1fa09345680d}{after\+Transaction\+Complete}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a070eb74b461495bcaeba211fcd775f0a}{after\+Transaction\+Rolled\+Back}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a8e79364c6045908971ae729b0807dd5e}{get\+Cache\+Region}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for persister that support second level cache. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a69fd009392446b047b2b1fa09345680d}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a69fd009392446b047b2b1fa09345680d}} 
+\index{CachedPersister@{CachedPersister}!afterTransactionComplete@{afterTransactionComplete}}
+\index{afterTransactionComplete@{afterTransactionComplete}!CachedPersister@{CachedPersister}}
+\doxysubsubsection{\texorpdfstring{afterTransactionComplete()}{afterTransactionComplete()}}
+{\footnotesize\ttfamily after\+Transaction\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Perform whatever processing is encapsulated here after completion of the transaction. 
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_non_strict_read_write_cached_collection_persister_a69fd009392446b047b2b1fa09345680d}{Non\+Strict\+Read\+Write\+Cached\+Collection\+Persister}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a69fd009392446b047b2b1fa09345680d}{Read\+Write\+Cached\+Collection\+Persister}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a69fd009392446b047b2b1fa09345680d}{Non\+Strict\+Read\+Write\+Cached\+Entity\+Persister}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_read_write_cached_entity_persister_a69fd009392446b047b2b1fa09345680d}{Read\+Write\+Cached\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a070eb74b461495bcaeba211fcd775f0a}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a070eb74b461495bcaeba211fcd775f0a}} 
+\index{CachedPersister@{CachedPersister}!afterTransactionRolledBack@{afterTransactionRolledBack}}
+\index{afterTransactionRolledBack@{afterTransactionRolledBack}!CachedPersister@{CachedPersister}}
+\doxysubsubsection{\texorpdfstring{afterTransactionRolledBack()}{afterTransactionRolledBack()}}
+{\footnotesize\ttfamily after\+Transaction\+Rolled\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Perform whatever processing is encapsulated here after completion of the rolled-\/back. 
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_non_strict_read_write_cached_collection_persister_a070eb74b461495bcaeba211fcd775f0a}{Non\+Strict\+Read\+Write\+Cached\+Collection\+Persister}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_read_write_cached_collection_persister_a070eb74b461495bcaeba211fcd775f0a}{Read\+Write\+Cached\+Collection\+Persister}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a070eb74b461495bcaeba211fcd775f0a}{Non\+Strict\+Read\+Write\+Cached\+Entity\+Persister}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_read_write_cached_entity_persister_a070eb74b461495bcaeba211fcd775f0a}{Read\+Write\+Cached\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a8e79364c6045908971ae729b0807dd5e}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a8e79364c6045908971ae729b0807dd5e}} 
+\index{CachedPersister@{CachedPersister}!getCacheRegion@{getCacheRegion}}
+\index{getCacheRegion@{getCacheRegion}!CachedPersister@{CachedPersister}}
+\doxysubsubsection{\texorpdfstring{getCacheRegion()}{getCacheRegion()}}
+{\footnotesize\ttfamily get\+Cache\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the The region access.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_region}{Region}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_collection_1_1_abstract_collection_persister_a8e79364c6045908971ae729b0807dd5e}{Abstract\+Collection\+Persister}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_abstract_entity_persister_a8e79364c6045908971ae729b0807dd5e}{Abstract\+Entity\+Persister}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/\+Persister/Cached\+Persister.\+php\end{DoxyCompactItemize}

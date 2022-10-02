@@ -1,0 +1,44 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_clearable_cache}{}\doxysection{Clearable\+Cache Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_cache_1_1_clearable_cache}\index{ClearableCache@{ClearableCache}}
+Inheritance diagram for Clearable\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_doctrine_1_1_common_1_1_cache_1_1_clearable_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_clearable_cache_ac2240ef160b9a6b52f12cb5c4ab8ea03}{delete\+All}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for cache that can be flushed.
+
+Intended to be used for partial clearing of a cache namespace. For a more global \char`\"{}flushing\char`\"{}, see \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_flushable_cache}{Flushable\+Cache}}\}.
+\end{DoxySeeAlso}
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_clearable_cache_ac2240ef160b9a6b52f12cb5c4ab8ea03}\label{interface_doctrine_1_1_common_1_1_cache_1_1_clearable_cache_ac2240ef160b9a6b52f12cb5c4ab8ea03}} 
+\index{ClearableCache@{ClearableCache}!deleteAll@{deleteAll}}
+\index{deleteAll@{deleteAll}!ClearableCache@{ClearableCache}}
+\doxysubsubsection{\texorpdfstring{deleteAll()}{deleteAll()}}
+{\footnotesize\ttfamily delete\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deletes all cache entries in the current cache namespace.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if the cache entries were successfully deleted, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_ac2240ef160b9a6b52f12cb5c4ab8ea03}{Cache\+Provider}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/Clearable\+Cache.\+php\end{DoxyCompactItemize}

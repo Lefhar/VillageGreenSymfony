@@ -1,0 +1,87 @@
+\hypertarget{class_monolog_1_1_handler_1_1_mail_handler}{}\doxysection{Mail\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_mail_handler}\index{MailHandler@{MailHandler}}
+Inheritance diagram for Mail\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.297297cm]{class_monolog_1_1_handler_1_1_mail_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}{send}} (string \$content, array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_ad1412ea8612c94893d24e14d750e2122}{get\+Highest\+Record}} (array \$records)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mail_handler_afbd37fb26de76c8dbfa32a7ebb235389}\label{class_monolog_1_1_handler_1_1_mail_handler_afbd37fb26de76c8dbfa32a7ebb235389}} 
+{\bfseries is\+Html\+Body} (string \$body)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for all mail handlers
+
+\begin{DoxyAuthor}{Author}
+Gyula Sallai
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mail_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_mail_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{MailHandler@{MailHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!MailHandler@{MailHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the default formatter.
+
+\begin{DoxyReturn}{Returns}
+Formatter\+Interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mail_handler_ad1412ea8612c94893d24e14d750e2122}\label{class_monolog_1_1_handler_1_1_mail_handler_ad1412ea8612c94893d24e14d750e2122}} 
+\index{MailHandler@{MailHandler}!getHighestRecord@{getHighestRecord}}
+\index{getHighestRecord@{getHighestRecord}!MailHandler@{MailHandler}}
+\doxysubsubsection{\texorpdfstring{getHighestRecord()}{getHighestRecord()}}
+{\footnotesize\ttfamily get\+Highest\+Record (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param non-\/empty-\/array$<$\+Record$>$ \$records @phpstan-\/return Record \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}\label{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}} 
+\index{MailHandler@{MailHandler}!send@{send}}
+\index{send@{send}!MailHandler@{MailHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{string}]{\$content,  }\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Send a mail with the given content
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & formatted email body to be sent \\
+\hline
+array & {\em \$records} & the array of log records that formed this content\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mandrill_handler_a7986db5d2c2ac3aee83038720fde8b45}{Mandrill\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_native_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}{Native\+Mailer\+Handler}}, \mbox{\hyperlink{class_monolog_1_1_handler_1_1_send_grid_handler_a7986db5d2c2ac3aee83038720fde8b45}{Send\+Grid\+Handler}}, and \mbox{\hyperlink{class_monolog_1_1_handler_1_1_swift_mailer_handler_a7986db5d2c2ac3aee83038720fde8b45}{Swift\+Mailer\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mail_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_mail_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{MailHandler@{MailHandler}!write@{write}}
+\index{write@{write}!MailHandler@{MailHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Mail\+Handler.\+php\end{DoxyCompactItemize}

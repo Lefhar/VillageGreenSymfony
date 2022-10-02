@@ -1,0 +1,1566 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}{}\doxysection{Abstract\+Schema\+Manager Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}\index{AbstractSchemaManager@{AbstractSchemaManager}}
+Inheritance diagram for Abstract\+Schema\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a07a2cd076ab3deee559d94c87854aa1a}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$connection, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a602d4b79ea2e33e68be7054e042aab99}{get\+Database\+Platform}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad5367eeb5c7acdc4519e657883d1a654}{try\+Method}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a33a4a9b68e9ce5ea2cb15023a77f75c6}{list\+Databases}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abcd43264f9919cbf6ae468187c02f480}{list\+Namespace\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8fe361f36bbef3f19b3e627559161301}{list\+Schema\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af6ac337761899a1abb85b45811a87def}{list\+Sequences}} (\$database=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a1c626279c76ae84d8af8aee5868d1a62}{list\+Table\+Columns}} (\$table, \$database=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0f0c0e0f16a32f524bc6e899b488eb64}{list\+Table\+Indexes}} (\$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac64b99f43e3906dfad9c54716cec042c}{tables\+Exist}} (\$names)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac20fea7ef261b7bf9e5a322627933e9d}{list\+Table\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0b89d51988f2b14063a1f8e0c163debf}{list\+Tables}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{list\+Table\+Details}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5969f372637b56eedef283a9f1e95197}{list\+Views}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a936caa998dfb060f90c854e159f8e9d6}{list\+Table\+Foreign\+Keys}} (\$table, \$database=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3a58eeff2c29c1886ea9f49b8e6cf7d9}{drop\+Database}} (\$database)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3be2aba1b75a34e22771c3e9d1d45af6}{drop\+Schema}} (string \$schema\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3471d37afdd3d76f5379dfe7364db0b6}{drop\+Table}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2eca259ddb1060aadc4c1a93a8ad4cc6}{drop\+Index}} (\$index, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa24637d4272cb732f77990a218174b07}{drop\+Constraint}} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_constraint}{Constraint}} \$constraint, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0e9e03779d13600896c3418ebeb055fe}{drop\+Foreign\+Key}} (\$foreign\+Key, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a16f841d3f40d6d4f8cd4aa71bd444e5a}{drop\+Sequence}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0ec2020cd6318d9e41b33d174d17df27}{drop\+Unique\+Constraint}} (string \$name, string \$table\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58826159c88ca1f786fe9e47db5a21e3}{drop\+View}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aaf90cd22757e5814ba96f9bfab6e508f}{create\+Database}} (\$database)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a93e544c5d554ba3c4bc0c92fc0d616d2}{create\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a4404c7539d64a78eda0e1ccb9313f4db}{create\+Sequence}} (\$sequence)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5416a35bfe1846cb2cf6e653f6f23263}{create\+Constraint}} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_constraint}{Constraint}} \$constraint, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a21b8352596049b2254ac7f6e90e26f0a}{create\+Index}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} \$index, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af012e65791e87336ee90173bb894a66d}{create\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$foreign\+Key, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5563e58fc423ec3732c55fbdb90332a7}{create\+Unique\+Constraint}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_unique_constraint}{Unique\+Constraint}} \$unique\+Constraint, string \$table\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a163b79923fda4b5bb3bebe230a08c6a7}{create\+View}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_view}{View}} \$view)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2b616f41e0c6942238d262fa277ab39d}{drop\+And\+Create\+Constraint}} (\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_constraint}{Constraint}} \$constraint, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a9b34ebe07cdc4ab6b670d67c72dc0454}{drop\+And\+Create\+Index}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} \$index, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a449a3799c8e471bfe02d0817beb7514a}{drop\+And\+Create\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$foreign\+Key, \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac262dbfec5fa074101d64eec9fbe9390}{drop\+And\+Create\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab021d4c1f5a3b0f8f210f8077ebf262e}{drop\+And\+Create\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ae2836725d50b70fc25b49ccc421a3286}{drop\+And\+Create\+Database}} (\$database)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3d8fa7790d48c8122fda76b2fefc9900}{drop\+And\+Create\+View}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_view}{View}} \$view)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_acff28019a2f6a5576f1cb4bb808cbda0}{alter\+Schema}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_diff}{Schema\+Diff}} \$schema\+Diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa5884c04814ccdf25e93481eb6afe5c6}{migrate\+Schema}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$to\+Schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5e46c937c706b3f79b4dfa4f7c2be6bb}{alter\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}} \$table\+Diff)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8e61a742d3bbd76308c982c0ef0d317b}{rename\+Table}} (\$name, \$new\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aefaabd1ae47fdd9288aded26bb1d1fe0}{create\+Schema}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5ff3cb7e11fef97165928b8fd5c774d1}{create\+Schema\+Config}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa8e99688d763f7a80d27ba733b806e0c}{get\+Schema\+Search\+Paths}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a6f529ca07e03837738ff2496ab4b6c89}{extract\+Doctrine\+Type\+From\+Comment}} (\$comment, \$current\+Type)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad94db4d552a3c1c97293b43cb8f69ef0}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad94db4d552a3c1c97293b43cb8f69ef0}} 
+{\bfseries remove\+Doctrine\+Type\+From\+Comment} (\$comment, \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58e5c9cf66031e35bdafc42a39bd3d8d}{create\+Comparator}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a507124588446edc7db13e0ec650c7b74}{filter\+Asset\+Names}} (\$asset\+Names)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a9354f5b79f872f3267667f76c2d0cb01}{\+\_\+get\+Portable\+Databases\+List}} (\$databases)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abf3394b2241fd4a7607f58267bb8cd4e}{get\+Portable\+Namespaces\+List}} (array \$namespaces)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abc1d15c36f040bea41cdc202834b0112}{\+\_\+get\+Portable\+Database\+Definition}} (\$database)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a389a2ab1477a583c0569f3627e5ffc6f}{get\+Portable\+Namespace\+Definition}} (array \$namespace)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac640169b738517855bc692c3083d16ba}{\+\_\+get\+Portable\+Sequences\+List}} (\$sequences)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac34506c330ea0165f7904620d8e955f6}{\+\_\+get\+Portable\+Sequence\+Definition}} (\$sequence)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a28d766dec01bfd7b6a58862a8fc47944}{\+\_\+get\+Portable\+Table\+Column\+List}} (\$table, \$database, \$table\+Columns)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af438cf8d0435847452fa4d58646974cd}{\+\_\+get\+Portable\+Table\+Column\+Definition}} (\$table\+Column)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{\+\_\+get\+Portable\+Table\+Indexes\+List}} (\$table\+Indexes, \$table\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab09aa24ad6633e5ffa70d13ff498e2be}{\+\_\+get\+Portable\+Tables\+List}} (\$tables)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}{\+\_\+get\+Portable\+Table\+Definition}} (\$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a17b114126f08bf47b19b992807c2c50f}{\+\_\+get\+Portable\+Users\+List}} (\$users)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a379f312510196565270fbf6f63569e71}{\+\_\+get\+Portable\+User\+Definition}} (\$user)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aca2038a237d4d80b8b6bfdabf0a19e01}{\+\_\+get\+Portable\+Views\+List}} (\$views)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{\+\_\+get\+Portable\+View\+Definition}} (\$view)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_afee771013df802fed4e27df68beeecb0}{\+\_\+get\+Portable\+Table\+Foreign\+Keys\+List}} (\$table\+Foreign\+Keys)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a7bc66a4428cb9b4f4c5f654789980ef7}{\+\_\+get\+Portable\+Table\+Foreign\+Key\+Definition}} (\$table\+Foreign\+Key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a54128e9e82d1029cbd344f6698c6b060}{\+\_\+exec\+Sql}} (\$sql)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad3b07e45d2fa59b3c0ae7464ef32a470}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad3b07e45d2fa59b3c0ae7464ef32a470}} 
+{\bfseries \$\+\_\+conn}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a991522cf981c79f4faf96b16a91f8a3c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a991522cf981c79f4faf96b16a91f8a3c}} 
+{\bfseries \$\+\_\+platform}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for schema managers. \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} managers are used to inspect and/or modify the database schema/structure.
+
+@template T of Abstract\+Platform 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a07a2cd076ab3deee559d94c87854aa1a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a07a2cd076ab3deee559d94c87854aa1a}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}}]{\$connection,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+T & {\em \$platform} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a54128e9e82d1029cbd344f6698c6b060}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a54128e9e82d1029cbd344f6698c6b060}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_execSql@{\_execSql}}
+\index{\_execSql@{\_execSql}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_execSql()}{\_execSql()}}
+{\footnotesize\ttfamily \+\_\+exec\+Sql (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string & {\em \$sql} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abc1d15c36f040bea41cdc202834b0112}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abc1d15c36f040bea41cdc202834b0112}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableDatabaseDefinition@{\_getPortableDatabaseDefinition}}
+\index{\_getPortableDatabaseDefinition@{\_getPortableDatabaseDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableDatabaseDefinition()}{\_getPortableDatabaseDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Database\+Definition (\begin{DoxyParamCaption}\item[{}]{\$database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_abc1d15c36f040bea41cdc202834b0112}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_abc1d15c36f040bea41cdc202834b0112}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_abc1d15c36f040bea41cdc202834b0112}{Postgre\+SQLSchema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_abc1d15c36f040bea41cdc202834b0112}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a9354f5b79f872f3267667f76c2d0cb01}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a9354f5b79f872f3267667f76c2d0cb01}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableDatabasesList@{\_getPortableDatabasesList}}
+\index{\_getPortableDatabasesList@{\_getPortableDatabasesList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableDatabasesList()}{\_getPortableDatabasesList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Databases\+List (\begin{DoxyParamCaption}\item[{}]{\$databases }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Methods for filtering return values of list$\ast$() methods to convert the native DBMS data definition to a portable Doctrine definition 
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$databases} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac34506c330ea0165f7904620d8e955f6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac34506c330ea0165f7904620d8e955f6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableSequenceDefinition@{\_getPortableSequenceDefinition}}
+\index{\_getPortableSequenceDefinition@{\_getPortableSequenceDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableSequenceDefinition()}{\_getPortableSequenceDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Sequence\+Definition (\begin{DoxyParamCaption}\item[{}]{\$sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$sequence} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_ac34506c330ea0165f7904620d8e955f6}{Oracle\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_ac34506c330ea0165f7904620d8e955f6}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac640169b738517855bc692c3083d16ba}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac640169b738517855bc692c3083d16ba}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableSequencesList@{\_getPortableSequencesList}}
+\index{\_getPortableSequencesList@{\_getPortableSequencesList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableSequencesList()}{\_getPortableSequencesList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Sequences\+List (\begin{DoxyParamCaption}\item[{}]{\$sequences }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$sequences} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_ac640169b738517855bc692c3083d16ba}{Postgre\+SQLSchema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af438cf8d0435847452fa4d58646974cd}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af438cf8d0435847452fa4d58646974cd}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTableColumnDefinition@{\_getPortableTableColumnDefinition}}
+\index{\_getPortableTableColumnDefinition@{\_getPortableTableColumnDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTableColumnDefinition()}{\_getPortableTableColumnDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Table\+Column\+Definition (\begin{DoxyParamCaption}\item[{}]{\$table\+Column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Gets \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}} Definition.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$table\+Column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_af438cf8d0435847452fa4d58646974cd}{DB2\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_af438cf8d0435847452fa4d58646974cd}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_af438cf8d0435847452fa4d58646974cd}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_af438cf8d0435847452fa4d58646974cd}{Postgre\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_af438cf8d0435847452fa4d58646974cd}{Sqlite\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_af438cf8d0435847452fa4d58646974cd}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a28d766dec01bfd7b6a58862a8fc47944}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a28d766dec01bfd7b6a58862a8fc47944}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTableColumnList@{\_getPortableTableColumnList}}
+\index{\_getPortableTableColumnList@{\_getPortableTableColumnList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTableColumnList()}{\_getPortableTableColumnList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Table\+Column\+List (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$database,  }\item[{}]{\$table\+Columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Independent of the database the keys of the column list result are lowercased.
+
+The name of the created column instance however is kept in its case.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & The name of the table. \\
+\hline
+string & {\em \$database} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$table\+Columns} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a28d766dec01bfd7b6a58862a8fc47944}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTableDefinition@{\_getPortableTableDefinition}}
+\index{\_getPortableTableDefinition@{\_getPortableTableDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTableDefinition()}{\_getPortableTableDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Table\+Definition (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}{Postgre\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}{Sqlite\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a2a3ccc7770741c829fc73fa182b9fee6}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a7bc66a4428cb9b4f4c5f654789980ef7}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a7bc66a4428cb9b4f4c5f654789980ef7}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTableForeignKeyDefinition@{\_getPortableTableForeignKeyDefinition}}
+\index{\_getPortableTableForeignKeyDefinition@{\_getPortableTableForeignKeyDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTableForeignKeyDefinition()}{\_getPortableTableForeignKeyDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Table\+Foreign\+Key\+Definition (\begin{DoxyParamCaption}\item[{}]{\$table\+Foreign\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$table\+Foreign\+Key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_a7bc66a4428cb9b4f4c5f654789980ef7}{DB2\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_a7bc66a4428cb9b4f4c5f654789980ef7}{Postgre\+SQLSchema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a7bc66a4428cb9b4f4c5f654789980ef7}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_afee771013df802fed4e27df68beeecb0}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_afee771013df802fed4e27df68beeecb0}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTableForeignKeysList@{\_getPortableTableForeignKeysList}}
+\index{\_getPortableTableForeignKeysList@{\_getPortableTableForeignKeysList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTableForeignKeysList()}{\_getPortableTableForeignKeysList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Table\+Foreign\+Keys\+List (\begin{DoxyParamCaption}\item[{}]{\$table\+Foreign\+Keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$table\+Foreign\+Keys} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_afee771013df802fed4e27df68beeecb0}{DB2\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_afee771013df802fed4e27df68beeecb0}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_afee771013df802fed4e27df68beeecb0}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_afee771013df802fed4e27df68beeecb0}{Sqlite\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_afee771013df802fed4e27df68beeecb0}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTableIndexesList@{\_getPortableTableIndexesList}}
+\index{\_getPortableTableIndexesList@{\_getPortableTableIndexesList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTableIndexesList()}{\_getPortableTableIndexesList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Table\+Indexes\+List (\begin{DoxyParamCaption}\item[{}]{\$table\+Indexes,  }\item[{}]{\$table\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Aggregates and groups the index results according to the required data result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$table\+Indexes} & \\
+\hline
+string | null & {\em \$table\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{DB2\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{Postgre\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{Sqlite\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_ac3a46de66efb1e5e72f46a4f73d65819}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab09aa24ad6633e5ffa70d13ff498e2be}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab09aa24ad6633e5ffa70d13ff498e2be}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableTablesList@{\_getPortableTablesList}}
+\index{\_getPortableTablesList@{\_getPortableTablesList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableTablesList()}{\_getPortableTablesList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Tables\+List (\begin{DoxyParamCaption}\item[{}]{\$tables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$tables} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_ab09aa24ad6633e5ffa70d13ff498e2be}{DB2\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a379f312510196565270fbf6f63569e71}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a379f312510196565270fbf6f63569e71}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableUserDefinition@{\_getPortableUserDefinition}}
+\index{\_getPortableUserDefinition@{\_getPortableUserDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableUserDefinition()}{\_getPortableUserDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+User\+Definition (\begin{DoxyParamCaption}\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_a379f312510196565270fbf6f63569e71}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_a379f312510196565270fbf6f63569e71}{Oracle\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_a379f312510196565270fbf6f63569e71}{Postgre\+SQLSchema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a17b114126f08bf47b19b992807c2c50f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a17b114126f08bf47b19b992807c2c50f}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableUsersList@{\_getPortableUsersList}}
+\index{\_getPortableUsersList@{\_getPortableUsersList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableUsersList()}{\_getPortableUsersList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Users\+List (\begin{DoxyParamCaption}\item[{}]{\$users }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$users} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableViewDefinition@{\_getPortableViewDefinition}}
+\index{\_getPortableViewDefinition@{\_getPortableViewDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableViewDefinition()}{\_getPortableViewDefinition()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+View\+Definition (\begin{DoxyParamCaption}\item[{}]{\$view }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$view} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View$\vert$false 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{DB2\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{Postgre\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{Sqlite\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a479e7446241b6dc1bde725fdc8d07d16}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aca2038a237d4d80b8b6bfdabf0a19e01}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aca2038a237d4d80b8b6bfdabf0a19e01}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!\_getPortableViewsList@{\_getPortableViewsList}}
+\index{\_getPortableViewsList@{\_getPortableViewsList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{\_getPortableViewsList()}{\_getPortableViewsList()}}
+{\footnotesize\ttfamily \+\_\+get\+Portable\+Views\+List (\begin{DoxyParamCaption}\item[{}]{\$views }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$views} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_view}{View}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_acff28019a2f6a5576f1cb4bb808cbda0}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_acff28019a2f6a5576f1cb4bb808cbda0}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!alterSchema@{alterSchema}}
+\index{alterSchema@{alterSchema}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{alterSchema()}{alterSchema()}}
+{\footnotesize\ttfamily alter\+Schema (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_diff}{Schema\+Diff}}}]{\$schema\+Diff }\end{DoxyParamCaption})}
+
+Alters an existing schema.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5e46c937c706b3f79b4dfa4f7c2be6bb}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5e46c937c706b3f79b4dfa4f7c2be6bb}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!alterTable@{alterTable}}
+\index{alterTable@{alterTable}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{alterTable()}{alterTable()}}
+{\footnotesize\ttfamily alter\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table_diff}{Table\+Diff}}}]{\$table\+Diff }\end{DoxyParamCaption})}
+
+Alters an existing tables schema.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a5e46c937c706b3f79b4dfa4f7c2be6bb}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58e5c9cf66031e35bdafc42a39bd3d8d}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58e5c9cf66031e35bdafc42a39bd3d8d}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createComparator@{createComparator}}
+\index{createComparator@{createComparator}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createComparator()}{createComparator()}}
+{\footnotesize\ttfamily create\+Comparator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a58e5c9cf66031e35bdafc42a39bd3d8d}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5416a35bfe1846cb2cf6e653f6f23263}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5416a35bfe1846cb2cf6e653f6f23263}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createConstraint@{createConstraint}}
+\index{createConstraint@{createConstraint}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createConstraint()}{createConstraint()}}
+{\footnotesize\ttfamily create\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_constraint}{Constraint}}}]{\$constraint,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Creates a constraint on a table.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000155}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a21b8352596049b2254ac7f6e90e26f0a}{create\+Index()}}\}, \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af012e65791e87336ee90173bb894a66d}{create\+Foreign\+Key()}}\} or \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5563e58fc423ec3732c55fbdb90332a7}{create\+Unique\+Constraint()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aaf90cd22757e5814ba96f9bfab6e508f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aaf90cd22757e5814ba96f9bfab6e508f}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createDatabase@{createDatabase}}
+\index{createDatabase@{createDatabase}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createDatabase()}{createDatabase()}}
+{\footnotesize\ttfamily create\+Database (\begin{DoxyParamCaption}\item[{}]{\$database }\end{DoxyParamCaption})}
+
+Creates a new database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$database} & The name of the database to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_aaf90cd22757e5814ba96f9bfab6e508f}{Oracle\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_aaf90cd22757e5814ba96f9bfab6e508f}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af012e65791e87336ee90173bb894a66d}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af012e65791e87336ee90173bb894a66d}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createForeignKey@{createForeignKey}}
+\index{createForeignKey@{createForeignKey}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createForeignKey()}{createForeignKey()}}
+{\footnotesize\ttfamily create\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$foreign\+Key,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Creates a new foreign key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} & {\em \$foreign\+Key} & The Foreign\+Key instance. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table on which the foreign key is to be created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_af012e65791e87336ee90173bb894a66d}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a21b8352596049b2254ac7f6e90e26f0a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a21b8352596049b2254ac7f6e90e26f0a}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createIndex@{createIndex}}
+\index{createIndex@{createIndex}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createIndex()}{createIndex()}}
+{\footnotesize\ttfamily create\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}}]{\$index,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Creates a new index on a table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table on which the index is to be created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aefaabd1ae47fdd9288aded26bb1d1fe0}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aefaabd1ae47fdd9288aded26bb1d1fe0}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createSchema@{createSchema}}
+\index{createSchema@{createSchema}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createSchema()}{createSchema()}}
+{\footnotesize\ttfamily create\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a schema instance for the current database.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5ff3cb7e11fef97165928b8fd5c774d1}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5ff3cb7e11fef97165928b8fd5c774d1}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createSchemaConfig@{createSchemaConfig}}
+\index{createSchemaConfig@{createSchemaConfig}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createSchemaConfig()}{createSchemaConfig()}}
+{\footnotesize\ttfamily create\+Schema\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates the configuration for this schema.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_config}{Schema\+Config}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a4404c7539d64a78eda0e1ccb9313f4db}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a4404c7539d64a78eda0e1ccb9313f4db}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createSequence@{createSequence}}
+\index{createSequence@{createSequence}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createSequence()}{createSequence()}}
+{\footnotesize\ttfamily create\+Sequence (\begin{DoxyParamCaption}\item[{}]{\$sequence }\end{DoxyParamCaption})}
+
+Creates a new sequence.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} & {\em \$sequence} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a93e544c5d554ba3c4bc0c92fc0d616d2}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a93e544c5d554ba3c4bc0c92fc0d616d2}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createTable@{createTable}}
+\index{createTable@{createTable}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createTable()}{createTable()}}
+{\footnotesize\ttfamily create\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+Creates a new table.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5563e58fc423ec3732c55fbdb90332a7}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5563e58fc423ec3732c55fbdb90332a7}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createUniqueConstraint@{createUniqueConstraint}}
+\index{createUniqueConstraint@{createUniqueConstraint}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createUniqueConstraint()}{createUniqueConstraint()}}
+{\footnotesize\ttfamily create\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_unique_constraint}{Unique\+Constraint}}}]{\$unique\+Constraint,  }\item[{string}]{\$table\+Name }\end{DoxyParamCaption})}
+
+Creates a unique constraint on a table.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a163b79923fda4b5bb3bebe230a08c6a7}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a163b79923fda4b5bb3bebe230a08c6a7}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!createView@{createView}}
+\index{createView@{createView}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{createView()}{createView()}}
+{\footnotesize\ttfamily create\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_view}{View}}}]{\$view }\end{DoxyParamCaption})}
+
+Creates a new view.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2b616f41e0c6942238d262fa277ab39d}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2b616f41e0c6942238d262fa277ab39d}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateConstraint@{dropAndCreateConstraint}}
+\index{dropAndCreateConstraint@{dropAndCreateConstraint}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateConstraint()}{dropAndCreateConstraint()}}
+{\footnotesize\ttfamily drop\+And\+Create\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_constraint}{Constraint}}}]{\$constraint,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Drops and creates a constraint.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000156}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2eca259ddb1060aadc4c1a93a8ad4cc6}{drop\+Index()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a21b8352596049b2254ac7f6e90e26f0a}{create\+Index()}}\}, \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0e9e03779d13600896c3418ebeb055fe}{drop\+Foreign\+Key()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af012e65791e87336ee90173bb894a66d}{create\+Foreign\+Key()}}\} or \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0ec2020cd6318d9e41b33d174d17df27}{drop\+Unique\+Constraint()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5563e58fc423ec3732c55fbdb90332a7}{create\+Unique\+Constraint()}}\} instead.
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa24637d4272cb732f77990a218174b07}{drop\+Constraint()}} 
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5416a35bfe1846cb2cf6e653f6f23263}{create\+Constraint()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ae2836725d50b70fc25b49ccc421a3286}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ae2836725d50b70fc25b49ccc421a3286}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateDatabase@{dropAndCreateDatabase}}
+\index{dropAndCreateDatabase@{dropAndCreateDatabase}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateDatabase()}{dropAndCreateDatabase()}}
+{\footnotesize\ttfamily drop\+And\+Create\+Database (\begin{DoxyParamCaption}\item[{}]{\$database }\end{DoxyParamCaption})}
+
+Drops and creates a new database.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000161}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3a58eeff2c29c1886ea9f49b8e6cf7d9}{drop\+Database()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aaf90cd22757e5814ba96f9bfab6e508f}{create\+Database()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$database} & The name of the database to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a449a3799c8e471bfe02d0817beb7514a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a449a3799c8e471bfe02d0817beb7514a}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateForeignKey@{dropAndCreateForeignKey}}
+\index{dropAndCreateForeignKey@{dropAndCreateForeignKey}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateForeignKey()}{dropAndCreateForeignKey()}}
+{\footnotesize\ttfamily drop\+And\+Create\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$foreign\+Key,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Drops and creates a new foreign key.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000158}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0e9e03779d13600896c3418ebeb055fe}{drop\+Foreign\+Key()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af012e65791e87336ee90173bb894a66d}{create\+Foreign\+Key()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} & {\em \$foreign\+Key} & An associative array that defines properties of the foreign key to be created. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table on which the foreign key is to be created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a449a3799c8e471bfe02d0817beb7514a}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a9b34ebe07cdc4ab6b670d67c72dc0454}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a9b34ebe07cdc4ab6b670d67c72dc0454}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateIndex@{dropAndCreateIndex}}
+\index{dropAndCreateIndex@{dropAndCreateIndex}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateIndex()}{dropAndCreateIndex()}}
+{\footnotesize\ttfamily drop\+And\+Create\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}}]{\$index,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Drops and creates a new index on a table.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000157}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2eca259ddb1060aadc4c1a93a8ad4cc6}{drop\+Index()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a21b8352596049b2254ac7f6e90e26f0a}{create\+Index()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table on which the index is to be created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac262dbfec5fa074101d64eec9fbe9390}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac262dbfec5fa074101d64eec9fbe9390}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateSequence@{dropAndCreateSequence}}
+\index{dropAndCreateSequence@{dropAndCreateSequence}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateSequence()}{dropAndCreateSequence()}}
+{\footnotesize\ttfamily drop\+And\+Create\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+Drops and create a new sequence.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000159}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a16f841d3f40d6d4f8cd4aa71bd444e5a}{drop\+Sequence()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a4404c7539d64a78eda0e1ccb9313f4db}{create\+Sequence()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab021d4c1f5a3b0f8f210f8077ebf262e}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab021d4c1f5a3b0f8f210f8077ebf262e}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateTable@{dropAndCreateTable}}
+\index{dropAndCreateTable@{dropAndCreateTable}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateTable()}{dropAndCreateTable()}}
+{\footnotesize\ttfamily drop\+And\+Create\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+Drops and creates a new table.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000160}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3471d37afdd3d76f5379dfe7364db0b6}{drop\+Table()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a93e544c5d554ba3c4bc0c92fc0d616d2}{create\+Table()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3d8fa7790d48c8122fda76b2fefc9900}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3d8fa7790d48c8122fda76b2fefc9900}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropAndCreateView@{dropAndCreateView}}
+\index{dropAndCreateView@{dropAndCreateView}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropAndCreateView()}{dropAndCreateView()}}
+{\footnotesize\ttfamily drop\+And\+Create\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_view}{View}}}]{\$view }\end{DoxyParamCaption})}
+
+Drops and creates a new view.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000162}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58826159c88ca1f786fe9e47db5a21e3}{drop\+View()}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a163b79923fda4b5bb3bebe230a08c6a7}{create\+View()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa24637d4272cb732f77990a218174b07}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa24637d4272cb732f77990a218174b07}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropConstraint@{dropConstraint}}
+\index{dropConstraint@{dropConstraint}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropConstraint()}{dropConstraint()}}
+{\footnotesize\ttfamily drop\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_schema_1_1_constraint}{Constraint}}}]{\$constraint,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Drops the constraint from the given table.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000154}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2eca259ddb1060aadc4c1a93a8ad4cc6}{drop\+Index()}}\}, \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0e9e03779d13600896c3418ebeb055fe}{drop\+Foreign\+Key()}}\} or \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0ec2020cd6318d9e41b33d174d17df27}{drop\+Unique\+Constraint()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3a58eeff2c29c1886ea9f49b8e6cf7d9}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3a58eeff2c29c1886ea9f49b8e6cf7d9}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropDatabase@{dropDatabase}}
+\index{dropDatabase@{dropDatabase}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropDatabase()}{dropDatabase()}}
+{\footnotesize\ttfamily drop\+Database (\begin{DoxyParamCaption}\item[{}]{\$database }\end{DoxyParamCaption})}
+
+Drops a database.
+
+NOTE\+: You can not drop the database this Schema\+Manager is currently connected to.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$database} & The name of the database to drop.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a3a58eeff2c29c1886ea9f49b8e6cf7d9}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0e9e03779d13600896c3418ebeb055fe}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0e9e03779d13600896c3418ebeb055fe}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropForeignKey@{dropForeignKey}}
+\index{dropForeignKey@{dropForeignKey}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropForeignKey()}{dropForeignKey()}}
+{\footnotesize\ttfamily drop\+Foreign\+Key (\begin{DoxyParamCaption}\item[{}]{\$foreign\+Key,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Drops a foreign key from a table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} | string & {\em \$foreign\+Key} & The name of the foreign key. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table with the foreign key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a0e9e03779d13600896c3418ebeb055fe}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2eca259ddb1060aadc4c1a93a8ad4cc6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a2eca259ddb1060aadc4c1a93a8ad4cc6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropIndex@{dropIndex}}
+\index{dropIndex@{dropIndex}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropIndex()}{dropIndex()}}
+{\footnotesize\ttfamily drop\+Index (\begin{DoxyParamCaption}\item[{}]{\$index,  }\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Drops the index from the given table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} | string & {\em \$index} & The name of the index. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} | string & {\em \$table} & The name of the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3be2aba1b75a34e22771c3e9d1d45af6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3be2aba1b75a34e22771c3e9d1d45af6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropSchema@{dropSchema}}
+\index{dropSchema@{dropSchema}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropSchema()}{dropSchema()}}
+{\footnotesize\ttfamily drop\+Schema (\begin{DoxyParamCaption}\item[{string}]{\$schema\+Name }\end{DoxyParamCaption})}
+
+Drops a schema.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a16f841d3f40d6d4f8cd4aa71bd444e5a}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a16f841d3f40d6d4f8cd4aa71bd444e5a}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropSequence@{dropSequence}}
+\index{dropSequence@{dropSequence}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropSequence()}{dropSequence()}}
+{\footnotesize\ttfamily drop\+Sequence (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Drops a sequence with a given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the sequence to drop.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3471d37afdd3d76f5379dfe7364db0b6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a3471d37afdd3d76f5379dfe7364db0b6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropTable@{dropTable}}
+\index{dropTable@{dropTable}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropTable()}{dropTable()}}
+{\footnotesize\ttfamily drop\+Table (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Drops the given table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the table to drop.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_a3471d37afdd3d76f5379dfe7364db0b6}{Oracle\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0ec2020cd6318d9e41b33d174d17df27}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0ec2020cd6318d9e41b33d174d17df27}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropUniqueConstraint@{dropUniqueConstraint}}
+\index{dropUniqueConstraint@{dropUniqueConstraint}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropUniqueConstraint()}{dropUniqueConstraint()}}
+{\footnotesize\ttfamily drop\+Unique\+Constraint (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$table\+Name }\end{DoxyParamCaption})}
+
+Drops the unique constraint from the given table.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58826159c88ca1f786fe9e47db5a21e3}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a58826159c88ca1f786fe9e47db5a21e3}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!dropView@{dropView}}
+\index{dropView@{dropView}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{dropView()}{dropView()}}
+{\footnotesize\ttfamily drop\+View (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Drops a view.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the view.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a6f529ca07e03837738ff2496ab4b6c89}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a6f529ca07e03837738ff2496ab4b6c89}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!extractDoctrineTypeFromComment@{extractDoctrineTypeFromComment}}
+\index{extractDoctrineTypeFromComment@{extractDoctrineTypeFromComment}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{extractDoctrineTypeFromComment()}{extractDoctrineTypeFromComment()}}
+{\footnotesize\ttfamily extract\+Doctrine\+Type\+From\+Comment (\begin{DoxyParamCaption}\item[{}]{\$comment,  }\item[{}]{\$current\+Type }\end{DoxyParamCaption})}
+
+Given a table comment this method tries to extract a typehint for Doctrine Type, or returns the type given as default. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a507124588446edc7db13e0ec650c7b74}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a507124588446edc7db13e0ec650c7b74}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!filterAssetNames@{filterAssetNames}}
+\index{filterAssetNames@{filterAssetNames}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{filterAssetNames()}{filterAssetNames()}}
+{\footnotesize\ttfamily filter\+Asset\+Names (\begin{DoxyParamCaption}\item[{}]{\$asset\+Names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Filters asset names if they are configured to return only a subset of all the found elements.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$asset\+Names} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a602d4b79ea2e33e68be7054e042aab99}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a602d4b79ea2e33e68be7054e042aab99}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!getDatabasePlatform@{getDatabasePlatform}}
+\index{getDatabasePlatform@{getDatabasePlatform}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{getDatabasePlatform()}{getDatabasePlatform()}}
+{\footnotesize\ttfamily get\+Database\+Platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the associated platform.
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a389a2ab1477a583c0569f3627e5ffc6f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a389a2ab1477a583c0569f3627e5ffc6f}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!getPortableNamespaceDefinition@{getPortableNamespaceDefinition}}
+\index{getPortableNamespaceDefinition@{getPortableNamespaceDefinition}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{getPortableNamespaceDefinition()}{getPortableNamespaceDefinition()}}
+{\footnotesize\ttfamily get\+Portable\+Namespace\+Definition (\begin{DoxyParamCaption}\item[{array}]{\$namespace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Converts a namespace definition from the native DBMS data definition to a portable Doctrine definition.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000164}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8fe361f36bbef3f19b3e627559161301}{list\+Schema\+Names()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,mixed$>$} & \$namespace The native DBMS namespace definition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_a389a2ab1477a583c0569f3627e5ffc6f}{Postgre\+SQLSchema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a389a2ab1477a583c0569f3627e5ffc6f}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abf3394b2241fd4a7607f58267bb8cd4e}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abf3394b2241fd4a7607f58267bb8cd4e}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!getPortableNamespacesList@{getPortableNamespacesList}}
+\index{getPortableNamespacesList@{getPortableNamespacesList}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{getPortableNamespacesList()}{getPortableNamespacesList()}}
+{\footnotesize\ttfamily get\+Portable\+Namespaces\+List (\begin{DoxyParamCaption}\item[{array}]{\$namespaces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Converts a list of namespace names from the native DBMS data definition to a portable Doctrine definition.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000163}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8fe361f36bbef3f19b3e627559161301}{list\+Schema\+Names()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$int,array$<$string,mixed$>$$>$} & \$namespaces The list of namespace names in the native DBMS data definition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa8e99688d763f7a80d27ba733b806e0c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa8e99688d763f7a80d27ba733b806e0c}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!getSchemaSearchPaths@{getSchemaSearchPaths}}
+\index{getSchemaSearchPaths@{getSchemaSearchPaths}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{getSchemaSearchPaths()}{getSchemaSearchPaths()}}
+{\footnotesize\ttfamily get\+Schema\+Search\+Paths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The search path for namespaces in the currently connected database.
+
+The first entry is usually the default namespace in the \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}. All further namespaces contain tables/sequences which can also be addressed with a short, not full-\/qualified name.
+
+For databases that don\textquotesingle{}t support subschema/namespaces this method returns the name of the currently connected database.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000165}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_aa8e99688d763f7a80d27ba733b806e0c}{Postgre\+SQLSchema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_aa8e99688d763f7a80d27ba733b806e0c}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a33a4a9b68e9ce5ea2cb15023a77f75c6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a33a4a9b68e9ce5ea2cb15023a77f75c6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listDatabases@{listDatabases}}
+\index{listDatabases@{listDatabases}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listDatabases()}{listDatabases()}}
+{\footnotesize\ttfamily list\+Databases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists the available databases for this connection.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abcd43264f9919cbf6ae468187c02f480}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_abcd43264f9919cbf6ae468187c02f480}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listNamespaceNames@{listNamespaceNames}}
+\index{listNamespaceNames@{listNamespaceNames}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listNamespaceNames()}{listNamespaceNames()}}
+{\footnotesize\ttfamily list\+Namespace\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a list of all namespaces in the current database.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000153}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8fe361f36bbef3f19b3e627559161301}{list\+Schema\+Names()}}\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8fe361f36bbef3f19b3e627559161301}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8fe361f36bbef3f19b3e627559161301}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listSchemaNames@{listSchemaNames}}
+\index{listSchemaNames@{listSchemaNames}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listSchemaNames()}{listSchemaNames()}}
+{\footnotesize\ttfamily list\+Schema\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a list of the names of all schemata in the current database.
+
+\begin{DoxyReturn}{Returns}
+list$<$string$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_a8fe361f36bbef3f19b3e627559161301}{Postgre\+SQLSchema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a8fe361f36bbef3f19b3e627559161301}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af6ac337761899a1abb85b45811a87def}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_af6ac337761899a1abb85b45811a87def}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listSequences@{listSequences}}
+\index{listSequences@{listSequences}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listSequences()}{listSequences()}}
+{\footnotesize\ttfamily list\+Sequences (\begin{DoxyParamCaption}\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Lists the available sequences for this connection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a1c626279c76ae84d8af8aee5868d1a62}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a1c626279c76ae84d8af8aee5868d1a62}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listTableColumns@{listTableColumns}}
+\index{listTableColumns@{listTableColumns}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listTableColumns()}{listTableColumns()}}
+{\footnotesize\ttfamily list\+Table\+Columns (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Lists the columns for a given table.
+
+In contrast to other libraries and to the old version of Doctrine, this column definition does try to contain the \textquotesingle{}primary\textquotesingle{} column for the reason that it is not portable across different RDBMS. Use \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0f0c0e0f16a32f524bc6e899b488eb64}{list\+Table\+Indexes}}(\$table\+Name)\} to retrieve the primary key of a table. Where a RDBMS specifies more details, these are held in the platform\+Details array.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & The name of the table. \\
+\hline
+string | null & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_column}{Column}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listTableDetails@{listTableDetails}}
+\index{listTableDetails@{listTableDetails}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listTableDetails()}{listTableDetails()}}
+{\footnotesize\ttfamily list\+Table\+Details (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{DB2\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_my_s_q_l_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{My\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_oracle_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{Oracle\+Schema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_postgre_s_q_l_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{Postgre\+SQLSchema\+Manager}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{Sqlite\+Schema\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_ab3eeb0a63282bd8bcacbce382069703f}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a936caa998dfb060f90c854e159f8e9d6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a936caa998dfb060f90c854e159f8e9d6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listTableForeignKeys@{listTableForeignKeys}}
+\index{listTableForeignKeys@{listTableForeignKeys}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listTableForeignKeys()}{listTableForeignKeys()}}
+{\footnotesize\ttfamily list\+Table\+Foreign\+Keys (\begin{DoxyParamCaption}\item[{}]{\$table,  }\item[{}]{\$database = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Lists the foreign keys for the given table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & The name of the table. \\
+\hline
+string | null & {\em \$database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a936caa998dfb060f90c854e159f8e9d6}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0f0c0e0f16a32f524bc6e899b488eb64}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0f0c0e0f16a32f524bc6e899b488eb64}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listTableIndexes@{listTableIndexes}}
+\index{listTableIndexes@{listTableIndexes}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listTableIndexes()}{listTableIndexes()}}
+{\footnotesize\ttfamily list\+Table\+Indexes (\begin{DoxyParamCaption}\item[{}]{\$table }\end{DoxyParamCaption})}
+
+Lists the indexes for a given table returning an array of \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}} instances.
+
+Keys of the portable indexes list are all lower-\/cased.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table} & The name of the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_index}{Index}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_s_q_l_server_schema_manager_a0f0c0e0f16a32f524bc6e899b488eb64}{SQLServer\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac20fea7ef261b7bf9e5a322627933e9d}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac20fea7ef261b7bf9e5a322627933e9d}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listTableNames@{listTableNames}}
+\index{listTableNames@{listTableNames}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listTableNames()}{listTableNames()}}
+{\footnotesize\ttfamily list\+Table\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a list of all tables in the current database.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_d_b2_schema_manager_ac20fea7ef261b7bf9e5a322627933e9d}{DB2\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0b89d51988f2b14063a1f8e0c163debf}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a0b89d51988f2b14063a1f8e0c163debf}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listTables@{listTables}}
+\index{listTables@{listTables}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listTables()}{listTables()}}
+{\footnotesize\ttfamily list\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists the tables for this connection.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5969f372637b56eedef283a9f1e95197}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a5969f372637b56eedef283a9f1e95197}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!listViews@{listViews}}
+\index{listViews@{listViews}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{listViews()}{listViews()}}
+{\footnotesize\ttfamily list\+Views (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists the views this connection has.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_view}{View}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa5884c04814ccdf25e93481eb6afe5c6}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_aa5884c04814ccdf25e93481eb6afe5c6}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!migrateSchema@{migrateSchema}}
+\index{migrateSchema@{migrateSchema}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{migrateSchema()}{migrateSchema()}}
+{\footnotesize\ttfamily migrate\+Schema (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$to\+Schema }\end{DoxyParamCaption})}
+
+Migrates an existing schema to a new schema.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8e61a742d3bbd76308c982c0ef0d317b}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_a8e61a742d3bbd76308c982c0ef0d317b}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!renameTable@{renameTable}}
+\index{renameTable@{renameTable}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{renameTable()}{renameTable()}}
+{\footnotesize\ttfamily rename\+Table (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$new\+Name }\end{DoxyParamCaption})}
+
+Renames a given table to another name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The current name of the table. \\
+\hline
+string & {\em \$new\+Name} & The new name of the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sqlite_schema_manager_a8e61a742d3bbd76308c982c0ef0d317b}{Sqlite\+Schema\+Manager}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac64b99f43e3906dfad9c54716cec042c}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ac64b99f43e3906dfad9c54716cec042c}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!tablesExist@{tablesExist}}
+\index{tablesExist@{tablesExist}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{tablesExist()}{tablesExist()}}
+{\footnotesize\ttfamily tables\+Exist (\begin{DoxyParamCaption}\item[{}]{\$names }\end{DoxyParamCaption})}
+
+Returns true if all the given tables exist.
+
+The usage of a string \$table\+Names is deprecated. Pass a one-\/element array instead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$names} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad5367eeb5c7acdc4519e657883d1a654}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager_ad5367eeb5c7acdc4519e657883d1a654}} 
+\index{AbstractSchemaManager@{AbstractSchemaManager}!tryMethod@{tryMethod}}
+\index{tryMethod@{tryMethod}!AbstractSchemaManager@{AbstractSchemaManager}}
+\doxysubsubsection{\texorpdfstring{tryMethod()}{tryMethod()}}
+{\footnotesize\ttfamily try\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tries any method on the schema manager. Normally a method throws an exception when your DBMS doesn\textquotesingle{}t support it or if an error occurs. This method allows you to try and method on your Schema\+Manager instance and will return false if it does not work or is not supported.
+
+{\ttfamily  \$result = \$sm-\/\texorpdfstring{$>$}{>}try\+Method(\textquotesingle{}drop\+View\textquotesingle{}, \textquotesingle{}view\+\_\+name\textquotesingle{}); }
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000152}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/Abstract\+Schema\+Manager.\+php\end{DoxyCompactItemize}

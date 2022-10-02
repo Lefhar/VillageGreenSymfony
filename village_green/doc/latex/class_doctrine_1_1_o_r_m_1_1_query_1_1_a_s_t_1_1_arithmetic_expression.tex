@@ -1,0 +1,84 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression}{}\doxysection{Arithmetic\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression}\index{ArithmeticExpression@{ArithmeticExpression}}
+Inheritance diagram for Arithmetic\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a8a9eaf25a229e105fe355810a3d12fe8}{is\+Simple\+Arithmetic\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_aac0d81d2fd96d9b3bd49f7c346345734}{is\+Subselect}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a9242968cc8550364eac9b9fb259abb46}{dispatch}} (\$walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_af9bc9b72e8d56d32d17ee22e309e6298}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_af9bc9b72e8d56d32d17ee22e309e6298}} 
+{\bfseries \$simple\+Arithmetic\+Expression}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_afa185578294f8726b0298e6522a90dff}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_afa185578294f8726b0298e6522a90dff}} 
+{\bfseries \$subselect}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression}{Arithmetic\+Expression}} \+::= \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_arithmetic_expression}{Simple\+Arithmetic\+Expression}} $\vert$ \char`\"{}(\char`\"{} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_subselect}{Subselect}} \char`\"{})\char`\"{}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a9242968cc8550364eac9b9fb259abb46}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a9242968cc8550364eac9b9fb259abb46}} 
+\index{ArithmeticExpression@{ArithmeticExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!ArithmeticExpression@{ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a8a9eaf25a229e105fe355810a3d12fe8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_a8a9eaf25a229e105fe355810a3d12fe8}} 
+\index{ArithmeticExpression@{ArithmeticExpression}!isSimpleArithmeticExpression@{isSimpleArithmeticExpression}}
+\index{isSimpleArithmeticExpression@{isSimpleArithmeticExpression}!ArithmeticExpression@{ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{isSimpleArithmeticExpression()}{isSimpleArithmeticExpression()}}
+{\footnotesize\ttfamily is\+Simple\+Arithmetic\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_aac0d81d2fd96d9b3bd49f7c346345734}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_arithmetic_expression_aac0d81d2fd96d9b3bd49f7c346345734}} 
+\index{ArithmeticExpression@{ArithmeticExpression}!isSubselect@{isSubselect}}
+\index{isSubselect@{isSubselect}!ArithmeticExpression@{ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{isSubselect()}{isSubselect()}}
+{\footnotesize\ttfamily is\+Subselect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Arithmetic\+Expression.\+php\end{DoxyCompactItemize}

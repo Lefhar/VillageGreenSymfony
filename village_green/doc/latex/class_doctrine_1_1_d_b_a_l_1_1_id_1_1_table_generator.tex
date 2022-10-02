@@ -1,0 +1,87 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator}{}\doxysection{Table\+Generator Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator}\index{TableGenerator@{TableGenerator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_aecef3b12dc82b16c33d5767d26054c03}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$conn, \$generator\+Table\+Name=\textquotesingle{}sequences\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_ab446ffc52d78e30899b1466ae254cc45}{next\+Value}} (\$sequence)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Table ID Generator for those poor languages that are missing sequences.
+
+WARNING\+: The Table Id Generator clones a second independent database connection to work correctly. This means using the generator requests that generate IDs will have two open database connections. This is necessary to be safe from transaction failures in the main connection. Make sure to only ever use one \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator}{Table\+Generator}} otherwise you end up with many connections.
+
+Table\+ID Generator does not work with SQLite.
+
+The \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator}{Table\+Generator}} does not take care of creating the SQL Table itself. You should look at the {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_schema_visitor}{Table\+Generator\+Schema\+Visitor}}} to do this for you. Otherwise the schema for a table looks like\+:
+
+CREATE sequences ( sequence\+\_\+name VARCHAR(255) NOT NULL, sequence\+\_\+value INT NOT NULL DEFAULT 1, sequence\+\_\+increment\+\_\+by INT NOT NULL DEFAULT 1, PRIMARY KEY (sequence\+\_\+name) );
+
+Technically this generator works as follows\+:
+
+
+\begin{DoxyEnumerate}
+\item Use a robust transaction serialization level.
+\item Open transaction
+\item Acquire a read lock on the table row (SELECT .. FOR UPDATE)
+\item Increment current value by one and write back to database
+\item Commit transaction
+\end{DoxyEnumerate}
+
+If you are using a sequence\+\_\+increment\+\_\+by value that is larger than one the ID Generator will keep incrementing values until it hits the incrementation gap before issuing another query.
+
+If no row is present for a given sequence a new one will be created with the default values \textquotesingle{}value\textquotesingle{} = 1 and \textquotesingle{}increment\+\_\+by\textquotesingle{} = 1
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000059}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_aecef3b12dc82b16c33d5767d26054c03}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_aecef3b12dc82b16c33d5767d26054c03}} 
+\index{TableGenerator@{TableGenerator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TableGenerator@{TableGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}}]{\$conn,  }\item[{}]{\$generator\+Table\+Name = {\ttfamily \textquotesingle{}sequences\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$generator\+Table\+Name} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_ab446ffc52d78e30899b1466ae254cc45}\label{class_doctrine_1_1_d_b_a_l_1_1_id_1_1_table_generator_ab446ffc52d78e30899b1466ae254cc45}} 
+\index{TableGenerator@{TableGenerator}!nextValue@{nextValue}}
+\index{nextValue@{nextValue}!TableGenerator@{TableGenerator}}
+\doxysubsubsection{\texorpdfstring{nextValue()}{nextValue()}}
+{\footnotesize\ttfamily next\+Value (\begin{DoxyParamCaption}\item[{}]{\$sequence }\end{DoxyParamCaption})}
+
+Generates the next unused value for the given sequence name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sequence} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Id/Table\+Generator.\+php\end{DoxyCompactItemize}

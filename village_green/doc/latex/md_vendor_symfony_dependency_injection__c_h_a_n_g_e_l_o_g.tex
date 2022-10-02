@@ -1,0 +1,279 @@
+\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1415}{}\doxysection{5.\+4}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1415}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily \$default\+Index\+Method} and {\ttfamily \$default\+Priority\+Method} to {\ttfamily Tagged\+Iterator} and {\ttfamily Tagged\+Locator} attributes
+\item Add {\ttfamily service\+\_\+closure()} to the PHP-\/\+DSL
+\item Add support for autoconfigurable attributes on methods, properties and parameters
+\item Make auto-\/aliases private by default
+\item Add support for autowiring union and intersection types
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1416}{}\doxysection{5.\+3}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1416}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Services\+Configurator\+::remove()} in the PHP-\/\+DSL
+\item Add {\ttfamily env(not\+:...)\%} processor to negate boolean values
+\item Add support for loading autoconfiguration rules via the {\ttfamily \#\mbox{[}Autoconfigure\mbox{]}} and {\ttfamily \#\mbox{[}Autoconfigure\+Tag\mbox{]}} attributes on PHP 8
+\item Add {\ttfamily \#\mbox{[}As\+Tagged\+Item\mbox{]}} attribute for defining the index and priority of classes found in tagged iterators/locators
+\item Add autoconfigurable attributes
+\item Add support for autowiring tagged iterators and locators via attributes on PHP 8
+\item Add support for per-\/env configuration in XML and Yaml loaders
+\item Add {\ttfamily Container\+Builder\+::will\+Be\+Available()} to help with conditional configuration
+\item Add support an integer return value for default\+\_\+index\+\_\+method
+\item Add `\#\mbox{[}When(env\+: \textquotesingle{}foo')\mbox{]}{\ttfamily to skip autoregistering a class when the env doesn\textquotesingle{}t match}
+\item {\ttfamily Add}env(){\ttfamily and}Env\+Configurator{\ttfamily in the PHP-\/\+DSL}
+\item {\ttfamily Add support for}Config\+Builder{\ttfamily in the}Php\+File\+Loader{\ttfamily }
+\item {\ttfamily Add}Container\+Configurator\+::env(){\ttfamily to get the current environment}
+\item {\ttfamily Add}\#\mbox{[}Target\mbox{]}\`{} to tell how a dependency is used and hint named autowiring aliases
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1417}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1417}
+
+\begin{DoxyItemize}
+\item added {\ttfamily param()} and {\ttfamily abstract\+\_\+arg()} in the PHP-\/\+DSL
+\item deprecated {\ttfamily Definition\+::set\+Private()} and {\ttfamily Alias\+::set\+Private()}, use {\ttfamily set\+Public()} instead
+\item added support for the {\ttfamily \#\mbox{[}Required\mbox{]}} attribute
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1418}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1418}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily inline()} in favor of {\ttfamily inline\+\_\+service()} and {\ttfamily ref()} in favor of {\ttfamily service()} when using the PHP-\/\+DSL
+\item allow decorators to reference their decorated service using the special {\ttfamily .inner} id
+\item added support to autowire public typed properties in php 7.\+4
+\item added support for defining method calls, a configurator, and property setters in {\ttfamily Inline\+Service\+Configurator}
+\item added possibility to define abstract service arguments
+\item allowed mixing \char`\"{}parent\char`\"{} and instanceof-\/conditionals/defaults/bindings
+\item updated the signature of method {\ttfamily Definition\+::set\+Deprecated()} to {\ttfamily Definition\+::set\+Deprecation(string \$package, string \$version, string \$message)}
+\item updated the signature of method {\ttfamily Alias\+::set\+Deprecated()} to {\ttfamily Alias\+::set\+Deprecation(string \$package, string \$version, string \$message)}
+\item updated the signature of method {\ttfamily Deprecate\+Trait\+::deprecate()} to {\ttfamily Deprecate\+Trait\+::deprecation(string \$package, string \$version, string \$message)}
+\item deprecated the {\ttfamily Psr\textbackslash{}Container\textbackslash{}Container\+Interface} and {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Dependency\+Injection\textbackslash{}Container\+Interface} aliases of the {\ttfamily service\+\_\+container} service, configure them explicitly instead
+\item added class {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Dependency\+Injection\textbackslash{}Dumper\textbackslash{}Preloader} to help with preloading on PHP 7.\+4+
+\item added tags {\ttfamily container.\+preload}/{\ttfamily .no\+\_\+preload} to declare extra classes to preload/services to not preload
+\item allowed loading and dumping tags with an attribute named \char`\"{}name\char`\"{}
+\item deprecated {\ttfamily Definition\+::get\+Deprecation\+Message()}, use {\ttfamily Definition\+::get\+Deprecation()} instead
+\item deprecated {\ttfamily Alias\+::get\+Deprecation\+Message()}, use {\ttfamily Alias\+::get\+Deprecation()} instead
+\item added support of PHP8 static return type for withers
+\item added {\ttfamily Alias\+Deprecated\+Public\+Services\+Pass} to deprecate public services to private
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1419}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1419}
+
+\begin{DoxyItemize}
+\item removed support for auto-\/discovered extension configuration class which does not implement {\ttfamily Configuration\+Interface}
+\item removed support for non-\/string default env() parameters
+\item moved {\ttfamily Service\+Subscriber\+Interface} to the {\ttfamily Symfony\textbackslash{}Contracts\textbackslash{}Service} namespace
+\item removed {\ttfamily Repeated\+Pass} and {\ttfamily Repeatable\+Pass\+Interface}
+\item removed support for short factory/configurator syntax from {\ttfamily Yaml\+File\+Loader}
+\item removed {\ttfamily Resettable\+Container\+Interface}, use {\ttfamily Reset\+Interface} instead
+\item added argument {\ttfamily \$returns\+Clone} to {\ttfamily Definition\+::add\+Method\+Call()}
+\item removed {\ttfamily tagged}, use {\ttfamily tagged\+\_\+iterator} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1420}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1420}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Check\+Type\+Declarations\+Pass} to check injected parameters type during compilation
+\item added support for opcache.\+preload by generating a preloading script in the cache folder
+\item added support for dumping the container in one file instead of many files
+\item deprecated support for short factories and short configurators in Yaml
+\item added {\ttfamily tagged\+\_\+iterator} alias for {\ttfamily tagged} which might be deprecated in a future version
+\item deprecated passing an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Dependency\+Injection\textbackslash{}Parameter} as class name to {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Dependency\+Injection\textbackslash{}Definition}
+\item added support for binding iterable and tagged services
+\item made singly-\/implemented interfaces detection be scoped by file
+\item added ability to define a static priority method for tagged service
+\item added support for improved syntax to define method calls in Yaml
+\item made the {\ttfamily env(base64\+:...)\%} processor able to decode base64url
+\item added ability to choose behavior of decorations on non existent decorated services
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1421}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1421}
+
+\begin{DoxyItemize}
+\item added {\ttfamily env(trim\+:...)\%} processor to trim a string value
+\item added {\ttfamily env(default\+:param\+\_\+name\+:...)\%} processor to fallback to a parameter or to null when using {\ttfamily env(default\+:\+:...)\%}
+\item added {\ttfamily env(url\+:...)\%} processor to convert an URL or DNS into an array of components
+\item added {\ttfamily env(query\+\_\+string\+:...)\%} processor to convert a query string into an array of key values
+\item added support for deprecating aliases
+\item made {\ttfamily Container\+Parameters\+Resource} final and not implement {\ttfamily Serializable} anymore
+\item added {\ttfamily Reverse\+Container}\+: a container that turns services back to their ids
+\item added ability to define an index for a tagged collection
+\item added ability to define an index for services in an injected service locator argument
+\item made {\ttfamily Service\+Locator} implement {\ttfamily Service\+Provider\+Interface}
+\item deprecated support for non-\/string default env() parameters
+\item added {\ttfamily env(require\+:...)\%} processor to {\ttfamily require()} a PHP file and use the value returned from it
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1422}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1422}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Container\+Builder\+::register\+Alias\+For\+Argument()} to support autowiring by type+name
+\item added support for binding by type+name
+\item added {\ttfamily Service\+Subscriber\+Trait} to ease implementing {\ttfamily Service\+Subscriber\+Interface} using methods\textquotesingle{} return types
+\item added {\ttfamily Service\+Locator\+Argument} and {\ttfamily !service\+\_\+locator} config tag for creating optimized service-\/locators
+\item added support for autoconfiguring bindings
+\item added {\ttfamily env(key\+:...)\%} processor to fetch a specific key from an array
+\item deprecated {\ttfamily Service\+Subscriber\+Interface}, use the same interface from the {\ttfamily Symfony\textbackslash{}Contracts\textbackslash{}Service} namespace instead
+\item deprecated {\ttfamily Resettable\+Container\+Interface}, use {\ttfamily Symfony\textbackslash{}Contracts\textbackslash{}Service\textbackslash{}Reset\+Interface} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1423}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1423}
+
+\begin{DoxyItemize}
+\item added support for variadics in named arguments
+\item added PSR-\/11 {\ttfamily Container\+Bag\+Interface} and its {\ttfamily Container\+Bag} implementation to access parameters as-\/a-\/service
+\item added support for service\textquotesingle{}s decorators autowiring
+\item deprecated the {\ttfamily Typed\+Reference\+::can\+Be\+Autoregistered()} and {\ttfamily Typed\+Reference\+::get\+Requiring\+Class()} methods
+\item environment variables are validated when used in extension configuration
+\item deprecated support for auto-\/discovered extension configuration class which does not implement {\ttfamily Configuration\+Interface}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1424}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1424}
+
+\begin{DoxyItemize}
+\item Relying on service auto-\/registration while autowiring is not supported anymore. Explicitly inject your dependencies or create services whose ids are their fully-\/qualified class name.
+
+Before\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{namespace }App\(\backslash\)Controller;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use App\(\backslash\)Mailer;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }DefaultController}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \_\_construct(Mailer \$mailer) \{}
+\DoxyCodeLine{        \textcolor{comment}{// ...}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// ...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{services:}
+\DoxyCodeLine{    App\(\backslash\)Controller\(\backslash\)DefaultController:}
+\DoxyCodeLine{        autowire: true}
+
+\end{DoxyCode}
+
+
+After\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// same PHP code}}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{services:}
+\DoxyCodeLine{    App\(\backslash\)Controller\(\backslash\)DefaultController:}
+\DoxyCodeLine{        autowire: true}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \# or}
+\DoxyCodeLine{    \# App\(\backslash\)Controller\(\backslash\)DefaultController:}
+\DoxyCodeLine{    \#     arguments: \{ \$mailer: "{}@App\(\backslash\)Mailer"{} \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    App\(\backslash\)Mailer:}
+\DoxyCodeLine{        autowire: true}
+
+\end{DoxyCode}
+
+\item removed autowiring services based on the types they implement
+\item added a third {\ttfamily \$method\+Name} argument to the {\ttfamily get\+Proxy\+Factory\+Code()} method of the {\ttfamily Dumper\+Interface}
+\item removed support for autowiring types
+\item removed {\ttfamily Container\+::is\+Frozen}
+\item removed support for dumping an ucompiled container in {\ttfamily Php\+Dumper}
+\item removed support for generating a dumped {\ttfamily Container} without populating the method map
+\item removed support for case insensitive service identifiers
+\item removed the {\ttfamily Definition\+Decorator} class, replaced by {\ttfamily Child\+Definition}
+\item removed the {\ttfamily Autowire\+Service\+Resource} class and related {\ttfamily Autowire\+Pass\+::create\+Resource\+For\+Class()} method
+\item removed {\ttfamily Logging\+Formatter}, {\ttfamily Compiler\+::get\+Logging\+Formatter()} and {\ttfamily add\+Log\+Message()} class and methods, use the {\ttfamily Container\+Builder\+::log()} method instead
+\item removed {\ttfamily Factory\+Return\+Type\+Pass}
+\item removed {\ttfamily Container\+Builder\+::add\+Class\+Resource()}, use the {\ttfamily add\+Object\+Resource()} or the {\ttfamily get\+Reflection\+Class()} method instead.
+\item removed support for top-\/level anonymous services
+\item removed silent behavior for unused attributes and elements
+\item removed support for setting and accessing private services in {\ttfamily Container}
+\item removed support for setting pre-\/defined services in {\ttfamily Container}
+\item removed support for case insensitivity of parameter names
+\item removed {\ttfamily Autowire\+Exception\+Pass} and {\ttfamily Autowire\+Pass\+::get\+Autowiring\+Exceptions()}, use {\ttfamily Definition\+::add\+Error()} and the {\ttfamily Definition\+Error\+Exception\+Pass} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1425}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1425}
+
+\begin{DoxyItemize}
+\item moved the {\ttfamily Extension\+Compiler\+Pass} to before-\/optimization passes with priority -\/1000
+\item deprecated \char`\"{}public-\/by-\/default\char`\"{} definitions and aliases, the new default will be \char`\"{}private\char`\"{} in 4.\+0
+\item added {\ttfamily Env\+Var\+Processor\+Interface} and corresponding \char`\"{}container.\+env\+\_\+var\+\_\+processor\char`\"{} tag for processing env vars
+\item added support for ignore-\/on-\/uninitialized references
+\item deprecated service auto-\/registration while autowiring
+\item deprecated the ability to check for the initialization of a private service with the {\ttfamily Container\+::initialized()} method
+\item deprecated support for top-\/level anonymous services in XML
+\item deprecated case insensitivity of parameter names
+\item deprecated the {\ttfamily Resolve\+Definition\+Templates\+Pass} class in favor of {\ttfamily Resolve\+Child\+Definitions\+Pass}
+\item added {\ttfamily Tagged\+Iterator\+Argument} with YAML ({\ttfamily !tagged foo}) and XML ({\ttfamily \texorpdfstring{$<$}{<}service type=\char`\"{}tagged\char`\"{}/\texorpdfstring{$>$}{>}}) support
+\item deprecated {\ttfamily Autowire\+Exception\+Pass} and {\ttfamily Autowire\+Pass\+::get\+Autowiring\+Exceptions()}, use {\ttfamily Definition\+::add\+Error()} and the {\ttfamily Definition\+Error\+Exception\+Pass} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1426}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1426}
+
+\begin{DoxyItemize}
+\item deprecated autowiring services based on the types they implement; rename (or alias) your services to their FQCN id to make them autowirable
+\item added \char`\"{}\+Service\+Subscriber\+Interface\char`\"{} -\/ to allow for per-\/class explicit service-\/locator definitions
+\item added \char`\"{}container.\+service\+\_\+locator\char`\"{} tag for defining service-\/locator services
+\item added anonymous services support in YAML configuration files using the {\ttfamily !service} tag.
+\item added \char`\"{}\+Typed\+Reference\char`\"{} and \char`\"{}\+Service\+Closure\+Argument\char`\"{} for creating service-\/locator services
+\item added {\ttfamily Service\+Locator} -\/ a PSR-\/11 container holding a set of services to be lazily loaded
+\item added \char`\"{}instanceof\char`\"{} section for local interface-\/defined configs
+\item added prototype services for PSR4-\/based discovery and registration
+\item added {\ttfamily Container\+Builder\+::get\+Reflection\+Class()} for retrieving and tracking reflection class info
+\item deprecated {\ttfamily Container\+Builder\+::get\+Class\+Resource()}, use {\ttfamily Container\+Builder\+::get\+Reflection\+Class()} or {\ttfamily Container\+Builder\+::add\+Object\+Resource()} instead
+\item added {\ttfamily Container\+Builder\+::file\+Exists()} for checking and tracking file or directory existence
+\item deprecated autowiring-\/types, use aliases instead
+\item added support for omitting the factory class name in a service definition if the definition class is set
+\item deprecated case insensitivity of service identifiers
+\item added \char`\"{}iterator\char`\"{} argument type for lazy iteration over a set of values and services
+\item added file-\/wide configurable defaults for service attributes \char`\"{}public\char`\"{}, \char`\"{}tags\char`\"{}, \char`\"{}autowire\char`\"{} and \char`\"{}autoconfigure\char`\"{}
+\item made the \char`\"{}class\char`\"{} attribute optional, using the \char`\"{}id\char`\"{} as fallback
+\item using the {\ttfamily Php\+Dumper} with an uncompiled {\ttfamily Container\+Builder} is deprecated and will not be supported anymore in 4.\+0
+\item deprecated the {\ttfamily Definition\+Decorator} class in favor of {\ttfamily Child\+Definition}
+\item allow config files to be loaded using a glob pattern
+\item \mbox{[}BC BREAK\mbox{]} the {\ttfamily Null\+Dumper} class is now final
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1427}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1427}
+
+\begin{DoxyItemize}
+\item allowed to prioritize compiler passes by introducing a third argument to {\ttfamily Pass\+Config\+::add\+Pass()}, to {\ttfamily Compiler\+::add\+Pass} and to {\ttfamily Container\+Builder\+::add\+Compiler\+Pass()}
+\item added support for PHP constants in YAML configuration files
+\item deprecated the ability to set or unset a private service with the {\ttfamily Container\+::set()} method
+\item deprecated the ability to check for the existence of a private service with the {\ttfamily Container\+::has()} method
+\item deprecated the ability to request a private service with the {\ttfamily Container\+::get()} method
+\item deprecated support for generating a dumped {\ttfamily Container} without populating the method map
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1428}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1428}
+
+\begin{DoxyItemize}
+\item removed all deprecated codes from 2.\+x versions
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1429}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1429}
+
+\begin{DoxyItemize}
+\item deprecated the abstract Container\+Aware class in favor of Container\+Aware\+Trait
+\item deprecated Introspectable\+Container\+Interface, to be merged with Container\+Interface in 3.\+0
+\item allowed specifying a directory to recursively load all configuration files it contains
+\item deprecated the concept of scopes
+\item added {\ttfamily Definition\+::set\+Shared()} and {\ttfamily Definition\+::is\+Shared()}
+\item added Resettable\+Container\+Interface to be able to reset the container to release memory on shutdown
+\item added a way to define the priority of service decoration
+\item added support for service autowiring
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1430}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1430}
+
+\begin{DoxyItemize}
+\item deprecated synchronized services
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1431}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1431}
+
+\begin{DoxyItemize}
+\item added new factory syntax and deprecated the old one
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1432}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1432}
+
+\begin{DoxyItemize}
+\item added Decorator\+Service\+Pass and a way to override a service definition (Definition\+::set\+Decorated\+Service())
+\item deprecated \mbox{\hyperlink{class_simple_x_m_l_element}{Simple\+XMLElement}} class.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1433}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1433}
+
+\begin{DoxyItemize}
+\item added support for expressions in service definitions
+\item added Container\+Aware\+Trait to add default container aware behavior to a class
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1434}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1434}
+
+\begin{DoxyItemize}
+\item added Extension\+::is\+Config\+Enabled() to ease working with enableable configurations
+\item added an Extension base class with sensible defaults to be used in conjunction with the Config component.
+\item added Prepend\+Extension\+Interface (to be able to allow extensions to prepend application configuration settings for any Bundle)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1435}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_dependency_injection__c_h_a_n_g_e_l_o_g_autotoc_md1435}
+
+\begin{DoxyItemize}
+\item added Introspectable\+Container\+Interface (to be able to check if a service has been initialized or not)
+\item added Configuration\+Extension\+Interface
+\item added Definition\+::clear\+Tag()
+\item component exceptions that inherit base SPL classes are now used exclusively (this includes dumped containers)
+\item \mbox{[}BC BREAK\mbox{]} fixed unescaping of class arguments, method Parameter\+Bag\+::unescape\+Value() was made public 
+\end{DoxyItemize}

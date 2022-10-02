@@ -1,0 +1,68 @@
+\hypertarget{classphp_documentor_1_1_reflection_1_1_types_1_1_collection}{}\doxysection{Collection Class Reference}
+\label{classphp_documentor_1_1_reflection_1_1_types_1_1_collection}\index{Collection@{Collection}}
+Inheritance diagram for Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classphp_documentor_1_1_reflection_1_1_types_1_1_collection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a53f4ba17050838f7f7c24230fb63fd75}{\+\_\+\+\_\+construct}} (?\mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_fqsen}{Fqsen}} \$fqsen, \mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}} \$value\+Type, ?\mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}} \$key\+Type=null)
+\item 
+\mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a07132fe536354352c87e6447d512bf3b}{get\+Fqsen}} ()
+\item 
+\mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a collection type as described in the PSR-\/5, the PHPDoc Standard.
+
+A collection can be represented in two forms\+:
+
+
+\begin{DoxyEnumerate}
+\item {\ttfamily ACollection\+Object\texorpdfstring{$<$}{<}a\+Value\+Type\texorpdfstring{$>$}{>}}
+\item {\ttfamily ACollection\+Object\texorpdfstring{$<$}{<}a\+Value\+Type,a\+Key\+Type\texorpdfstring{$>$}{>}}
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item ACollection\+Object can be \textquotesingle{}array\textquotesingle{} or an object that can act as an array
+\item a\+Value\+Type and a\+Key\+Type can be any type expression
+\end{DoxyItemize}
+
+@psalm-\/immutable 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a53f4ba17050838f7f7c24230fb63fd75}\label{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a53f4ba17050838f7f7c24230fb63fd75}} 
+\index{Collection@{Collection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Collection@{Collection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_fqsen}{Fqsen}}}]{\$fqsen,  }\item[{\mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}}}]{\$value\+Type,  }\item[{?\mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}}}]{\$key\+Type = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes this representation of an array with the given \mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}} or \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_fqsen}{Fqsen}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a7516ca30af0db3cdbf9a7739b48ce91d}\label{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{Collection@{Collection}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!Collection@{Collection}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a rendered output of the \mbox{\hyperlink{interfacephp_documentor_1_1_reflection_1_1_type}{Type}} as it would be used in a \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_doc_block}{Doc\+Block}}. 
+
+Reimplemented from \mbox{\hyperlink{classphp_documentor_1_1_reflection_1_1_types_1_1_abstract_list_a7516ca30af0db3cdbf9a7739b48ce91d}{Abstract\+List}}.
+
+\mbox{\Hypertarget{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a07132fe536354352c87e6447d512bf3b}\label{classphp_documentor_1_1_reflection_1_1_types_1_1_collection_a07132fe536354352c87e6447d512bf3b}} 
+\index{Collection@{Collection}!getFqsen@{getFqsen}}
+\index{getFqsen@{getFqsen}!Collection@{Collection}}
+\doxysubsubsection{\texorpdfstring{getFqsen()}{getFqsen()}}
+{\footnotesize\ttfamily get\+Fqsen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the FQSEN associated with this object. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/phpdocumentor/type-\/resolver/src/\+Types/Collection.\+php\end{DoxyCompactItemize}

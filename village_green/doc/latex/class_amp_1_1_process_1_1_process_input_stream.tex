@@ -1,0 +1,53 @@
+\hypertarget{class_amp_1_1_process_1_1_process_input_stream}{}\doxysection{Process\+Input\+Stream Class Reference}
+\label{class_amp_1_1_process_1_1_process_input_stream}\index{ProcessInputStream@{ProcessInputStream}}
+Inheritance diagram for Process\+Input\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_process_1_1_process_input_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_input_stream_aa9ede26a5c721cb0225b52c2c1e448e1}\label{class_amp_1_1_process_1_1_process_input_stream_aa9ede26a5c721cb0225b52c2c1e448e1}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} \$resource\+Stream\+Promise)
+\item 
+\mbox{\hyperlink{class_amp_1_1_process_1_1_process_input_stream_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_input_stream_aa46bdf577fe031bf1287312dfbebb9a6}\label{class_amp_1_1_process_1_1_process_input_stream_aa46bdf577fe031bf1287312dfbebb9a6}} 
+{\bfseries reference} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_input_stream_a8098142e52cdc2bf80db924208412038}\label{class_amp_1_1_process_1_1_process_input_stream_a8098142e52cdc2bf80db924208412038}} 
+{\bfseries unreference} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_input_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_process_1_1_process_input_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+{\bfseries close} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_process_1_1_process_input_stream_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_process_1_1_process_input_stream_a64571309bfb3238c65fd3c2898f92440}} 
+\index{ProcessInputStream@{ProcessInputStream}!read@{read}}
+\index{read@{read}!ProcessInputStream@{ProcessInputStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Pending\+Read\+Error} & Thrown if another read operation is still pending. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/process/lib/Process\+Input\+Stream.\+php\end{DoxyCompactItemize}

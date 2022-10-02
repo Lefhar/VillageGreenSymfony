@@ -1,0 +1,88 @@
+\hypertarget{class_lib_d_n_s_1_1_records_1_1_resource}{}\doxysection{Resource Class Reference}
+\label{class_lib_d_n_s_1_1_records_1_1_resource}\index{Resource@{Resource}}
+Inheritance diagram for Resource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lib_d_n_s_1_1_records_1_1_resource}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_a515d78416a62f2d37d6fb47b7f44437a}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_type_factory}{Type\+Factory}} \$type\+Factory, int \$type, \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_r_data}{RData}} \$data)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_adfc5b11c7ad86a5d6503bee883071f5a}{get\+TTL}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_a3658d49b8cf5231ec22a059136078397}{set\+TTL}} (int \$ttl)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_resource_a515d78416a62f2d37d6fb47b7f44437a}\label{class_lib_d_n_s_1_1_records_1_1_resource_a515d78416a62f2d37d6fb47b7f44437a}} 
+\index{Resource@{Resource}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_type_factory}{Type\+Factory}}}]{\$type\+Factory,  }\item[{int}]{\$type,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_r_data}{RData}}}]{\$data }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Types\textbackslash{}\+Type\+Factory & {\em \$type\+Factory} & \\
+\hline
+int & {\em \$type} & Can be indicated using the \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_types}{Resource\+Types}} enum \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+RData & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_resource_a81a67162a6288d78fc4c55283325f0b4}\label{class_lib_d_n_s_1_1_records_1_1_resource_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{Resource@{Resource}!getData@{getData}}
+\index{getData@{getData}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the value of the resource data field
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+RData 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_resource_adfc5b11c7ad86a5d6503bee883071f5a}\label{class_lib_d_n_s_1_1_records_1_1_resource_adfc5b11c7ad86a5d6503bee883071f5a}} 
+\index{Resource@{Resource}!getTTL@{getTTL}}
+\index{getTTL@{getTTL}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{getTTL()}{getTTL()}}
+{\footnotesize\ttfamily get\+TTL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the value of the record TTL field
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_resource_a3658d49b8cf5231ec22a059136078397}\label{class_lib_d_n_s_1_1_records_1_1_resource_a3658d49b8cf5231ec22a059136078397}} 
+\index{Resource@{Resource}!setTTL@{setTTL}}
+\index{setTTL@{setTTL}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{setTTL()}{setTTL()}}
+{\footnotesize\ttfamily set\+TTL (\begin{DoxyParamCaption}\item[{int}]{\$ttl }\end{DoxyParamCaption})}
+
+Set the value of the record TTL field
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$ttl} & The new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Range\+Exception When the supplied value is outside the valid range 0 -\/ 4294967296 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Records/Resource.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver}{}\doxysection{Container\+Entity\+Listener\+Resolver Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver}\index{ContainerEntityListenerResolver@{ContainerEntityListenerResolver}}
+Inheritance diagram for Container\+Entity\+Listener\+Resolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a485ae35e25eed5f2bd7053b14a12bc78}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_psr_1_1_container_1_1_container_interface}{Container\+Interface}} \$container)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}{clear}} (\$class\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}{register}} (\$object)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a818586cd46fb0c869ef7d207c1e40a76}{register\+Service}} (\$class\+Name, \$service\+Id)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}{resolve}} (\$class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@final 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a485ae35e25eed5f2bd7053b14a12bc78}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a485ae35e25eed5f2bd7053b14a12bc78}} 
+\index{ContainerEntityListenerResolver@{ContainerEntityListenerResolver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ContainerEntityListenerResolver@{ContainerEntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_psr_1_1_container_1_1_container_interface}{Container\+Interface}}}]{\$container }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Container\+Interface & {\em \$container} & a service locator for listeners \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}} 
+\index{ContainerEntityListenerResolver@{ContainerEntityListenerResolver}!clear@{clear}}
+\index{clear@{clear}!ContainerEntityListenerResolver@{ContainerEntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}\item[{}]{\$class\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Clear all instances from the set, or a specific instance when given its identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & May be any arbitrary string. Name kept for BC only.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}{Entity\+Listener\+Resolver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}} 
+\index{ContainerEntityListenerResolver@{ContainerEntityListenerResolver}!register@{register}}
+\index{register@{register}!ContainerEntityListenerResolver@{ContainerEntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+\{Register a entity listener instance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & An entity listener\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}{Entity\+Listener\+Resolver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a818586cd46fb0c869ef7d207c1e40a76}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a818586cd46fb0c869ef7d207c1e40a76}} 
+\index{ContainerEntityListenerResolver@{ContainerEntityListenerResolver}!registerService@{registerService}}
+\index{registerService@{registerService}!ContainerEntityListenerResolver@{ContainerEntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{registerService()}{registerService()}}
+{\footnotesize\ttfamily register\+Service (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$service\+Id }\end{DoxyParamCaption})}
+
+\{
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+string & {\em \$service\+Id} & \\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_entity_listener_service_resolver_a818586cd46fb0c869ef7d207c1e40a76}{Entity\+Listener\+Service\+Resolver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}} 
+\index{ContainerEntityListenerResolver@{ContainerEntityListenerResolver}!resolve@{resolve}}
+\index{resolve@{resolve}!ContainerEntityListenerResolver@{ContainerEntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily resolve (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+\{Returns a entity listener instance for the given identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & May be any arbitrary string. Name kept for BC only.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object An entity listener
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}{Entity\+Listener\+Resolver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Mapping/Container\+Entity\+Listener\+Resolver.\+php\end{DoxyCompactItemize}

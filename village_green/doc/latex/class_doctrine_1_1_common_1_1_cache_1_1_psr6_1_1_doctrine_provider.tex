@@ -1,0 +1,189 @@
+\hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider}{}\doxysection{Doctrine\+Provider Class Reference}
+\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider}\index{DoctrineProvider@{DoctrineProvider}}
+Inheritance diagram for Doctrine\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.200000cm]{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a08c18b7666b7280e290d6c71bb0b4d30}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a08c18b7666b7280e290d6c71bb0b4d30}} 
+{\bfseries get\+Pool} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a3953e015901e83c2ae83bed7314aff57}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a3953e015901e83c2ae83bed7314aff57}} 
+static {\bfseries wrap} (\mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_pool_interface}{Cache\+Item\+Pool\+Interface}} \$pool)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a883b827de7af2a1dd2858651dace589d}{do\+Fetch}} (\$id)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_aa5aa66d6f9def439a1c7af9386e330ae}{do\+Contains}} (\$id)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a67b6b01214e7a550a7c9d17ea7ae172a}{do\+Save}} (\$id, \$data, \$life\+Time=0)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a629b1b814df01b8ceb096713e8793ed6}{do\+Delete}} (\$id)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_aab6d2e9332b0ff05e18c0d8d2df0f2ac}{do\+Flush}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a207389b7265cb413a4f3e2b1c393a201}{do\+Get\+Stats}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class was copied from the Symfony Framework, see the original copyright notice above. The code is distributed subject to the license terms in \href{https://github.com/symfony/symfony/blob/ff0cf61278982539c49e467db9ab13cbd342f76d/LICENSE}{\texttt{ https\+://github.\+com/symfony/symfony/blob/ff0cf61278982539c49e467db9ab13cbd342f76d/\+LICENSE}} \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2orm_2lib_2_doctrine_f8967513678986d5e8c2157d31bb4dfd}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Abstract\+Query.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_aa5aa66d6f9def439a1c7af9386e330ae}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_aa5aa66d6f9def439a1c7af9386e330ae}} 
+\index{DoctrineProvider@{DoctrineProvider}!doContains@{doContains}}
+\index{doContains@{doContains}!DoctrineProvider@{DoctrineProvider}}
+\doxysubsubsection{\texorpdfstring{doContains()}{doContains()}}
+{\footnotesize\ttfamily do\+Contains (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Tests if an entry exists in the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id of the entry to check for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if a cache entry exists for the given cache id, FALSE otherwise.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_aa5aa66d6f9def439a1c7af9386e330ae}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a629b1b814df01b8ceb096713e8793ed6}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a629b1b814df01b8ceb096713e8793ed6}} 
+\index{DoctrineProvider@{DoctrineProvider}!doDelete@{doDelete}}
+\index{doDelete@{doDelete}!DoctrineProvider@{DoctrineProvider}}
+\doxysubsubsection{\texorpdfstring{doDelete()}{doDelete()}}
+{\footnotesize\ttfamily do\+Delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Deletes a cache entry.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the cache entry was successfully deleted, FALSE otherwise.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a629b1b814df01b8ceb096713e8793ed6}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a883b827de7af2a1dd2858651dace589d}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a883b827de7af2a1dd2858651dace589d}} 
+\index{DoctrineProvider@{DoctrineProvider}!doFetch@{doFetch}}
+\index{doFetch@{doFetch}!DoctrineProvider@{DoctrineProvider}}
+\doxysubsubsection{\texorpdfstring{doFetch()}{doFetch()}}
+{\footnotesize\ttfamily do\+Fetch (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Fetches an entry from the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The id of the cache entry to fetch.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed$\vert$false The cached data or FALSE, if no cache entry exists for the given id.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a883b827de7af2a1dd2858651dace589d}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_aab6d2e9332b0ff05e18c0d8d2df0f2ac}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_aab6d2e9332b0ff05e18c0d8d2df0f2ac}} 
+\index{DoctrineProvider@{DoctrineProvider}!doFlush@{doFlush}}
+\index{doFlush@{doFlush}!DoctrineProvider@{DoctrineProvider}}
+\doxysubsubsection{\texorpdfstring{doFlush()}{doFlush()}}
+{\footnotesize\ttfamily do\+Flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Flushes all cache entries.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if the cache entries were successfully flushed, FALSE otherwise.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_aab6d2e9332b0ff05e18c0d8d2df0f2ac}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a207389b7265cb413a4f3e2b1c393a201}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a207389b7265cb413a4f3e2b1c393a201}} 
+\index{DoctrineProvider@{DoctrineProvider}!doGetStats@{doGetStats}}
+\index{doGetStats@{doGetStats}!DoctrineProvider@{DoctrineProvider}}
+\doxysubsubsection{\texorpdfstring{doGetStats()}{doGetStats()}}
+{\footnotesize\ttfamily do\+Get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Retrieves cached information from the data store.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}$\vert$null An associative array with server\textquotesingle{}s statistics if available, NULL otherwise.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+array$\vert$null 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a207389b7265cb413a4f3e2b1c393a201}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a67b6b01214e7a550a7c9d17ea7ae172a}\label{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider_a67b6b01214e7a550a7c9d17ea7ae172a}} 
+\index{DoctrineProvider@{DoctrineProvider}!doSave@{doSave}}
+\index{doSave@{doSave}!DoctrineProvider@{DoctrineProvider}}
+\doxysubsubsection{\texorpdfstring{doSave()}{doSave()}}
+{\footnotesize\ttfamily do\+Save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$life\+Time = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Puts data into the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id. \\
+\hline
+string & {\em \$data} & The cache entry/data. \\
+\hline
+int & {\em \$life\+Time} & The lifetime. If != 0, sets a specific lifetime for this cache entry (0 =\texorpdfstring{$>$}{>} infinite life\+Time).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the entry was successfully stored in the cache, FALSE otherwise.
+\end{DoxyReturn}
+\}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a67b6b01214e7a550a7c9d17ea7ae172a}{Cache\+Provider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/\+Psr6/Doctrine\+Provider.\+php\end{DoxyCompactItemize}

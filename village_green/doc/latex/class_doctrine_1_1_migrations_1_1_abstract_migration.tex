@@ -1,0 +1,198 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration}{}\doxysection{Abstract\+Migration Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_abstract_migration}\index{AbstractMigration@{AbstractMigration}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a363ecfefbf703af52937a87a4d6c064b}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a363ecfefbf703af52937a87a4d6c064b}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$connection, \mbox{\hyperlink{interface_psr_1_1_log_1_1_logger_interface}{Logger\+Interface}} \$logger)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a04ac7e398c281c0adc79206c572de75c}{is\+Transactional}} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a2e7bb35c71bf1824456ceb944cb7a845}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a2e7bb35c71bf1824456ceb944cb7a845}} 
+{\bfseries get\+Description} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a00fc7d525eebc31c5d3b169bfe476f48}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a00fc7d525eebc31c5d3b169bfe476f48}} 
+{\bfseries warn\+If} (bool \$condition, string \$message=\textquotesingle{}Unknown Reason\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_aa3b7719c7e4663317a61ee81f2a4f3d9}{abort\+If}} (bool \$condition, string \$message=\textquotesingle{}Unknown Reason\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a576fa8197bc92a3ffa11876b66cba4c5}{skip\+If}} (bool \$condition, string \$message=\textquotesingle{}Unknown Reason\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a32631affb621273c868475ed4b2a787f}{pre\+Up}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a8eb6e81b9e459fa06f18a2d799553e5c}{post\+Up}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_aa71057cd36b98155d40769c0a5d1f722}{pre\+Down}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_ad0c026f7aac41309937b13752f6a6007}{post\+Down}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a23eb1c1428e8ea2ab2cf798fc06ec421}{up}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_aa8eb70255a46429d4d6165c778c9e5b9}{down}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_ad53d6d06affd7337d46e4efce0f6b2a1}{get\+Sql}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_abad34d1deed9deb2abd87f33d52db0c5}{add\+Sql}} (string \$sql, array \$params=\mbox{[}$\,$\mbox{]}, array \$types=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a28155634a981a19d0f8c805df2b94baa}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a28155634a981a19d0f8c805df2b94baa}} 
+{\bfseries write} (string \$message)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a3e20bd033aafd0aff1e42994eaaa823f}{throw\+Irreversible\+Migration\+Exception}} (?string \$message=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a0d9c79b9b86b3f5891c6d3892f12c6a0}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a0d9c79b9b86b3f5891c6d3892f12c6a0}} 
+{\bfseries \$connection}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a63c3cc2a072df683705d4c1b0a8b86b4}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a63c3cc2a072df683705d4c1b0a8b86b4}} 
+{\bfseries \$sm}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a9cb2b1a2275f65f39415f0366139fb1c}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a9cb2b1a2275f65f39415f0366139fb1c}} 
+{\bfseries \$platform}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration}{Abstract\+Migration}} class is for end users to extend from when creating migrations. Extend this class and implement the required \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_a23eb1c1428e8ea2ab2cf798fc06ec421}{up()}} and \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_abstract_migration_aa8eb70255a46429d4d6165c778c9e5b9}{down()}} methods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_aa3b7719c7e4663317a61ee81f2a4f3d9}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_aa3b7719c7e4663317a61ee81f2a4f3d9}} 
+\index{AbstractMigration@{AbstractMigration}!abortIf@{abortIf}}
+\index{abortIf@{abortIf}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{abortIf()}{abortIf()}}
+{\footnotesize\ttfamily abort\+If (\begin{DoxyParamCaption}\item[{bool}]{\$condition,  }\item[{string}]{\$message = {\ttfamily \textquotesingle{}Unknown~Reason\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Abort\+Migration} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_abad34d1deed9deb2abd87f33d52db0c5}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_abad34d1deed9deb2abd87f33d52db0c5}} 
+\index{AbstractMigration@{AbstractMigration}!addSql@{addSql}}
+\index{addSql@{addSql}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{addSql()}{addSql()}}
+{\footnotesize\ttfamily add\+Sql (\begin{DoxyParamCaption}\item[{string}]{\$sql,  }\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$types = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$params} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$types} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_aa8eb70255a46429d4d6165c778c9e5b9}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_aa8eb70255a46429d4d6165c778c9e5b9}} 
+\index{AbstractMigration@{AbstractMigration}!down@{down}}
+\index{down@{down}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{down()}{down()}}
+{\footnotesize\ttfamily down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception$\vert$\+DBALException} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_ad53d6d06affd7337d46e4efce0f6b2a1}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_ad53d6d06affd7337d46e4efce0f6b2a1}} 
+\index{AbstractMigration@{AbstractMigration}!getSql@{getSql}}
+\index{getSql@{getSql}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{getSql()}{getSql()}}
+{\footnotesize\ttfamily get\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Query\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a04ac7e398c281c0adc79206c572de75c}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a04ac7e398c281c0adc79206c572de75c}} 
+\index{AbstractMigration@{AbstractMigration}!isTransactional@{isTransactional}}
+\index{isTransactional@{isTransactional}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{isTransactional()}{isTransactional()}}
+{\footnotesize\ttfamily is\+Transactional (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Indicates the transactional mode of this migration.
+
+If this function returns true (default) the migration will be executed in one transaction, otherwise non-\/transactional state will be used to execute each of the migration SQLs.
+
+Extending class should override this function to alter the return value. \mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_ad0c026f7aac41309937b13752f6a6007}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_ad0c026f7aac41309937b13752f6a6007}} 
+\index{AbstractMigration@{AbstractMigration}!postDown@{postDown}}
+\index{postDown@{postDown}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{postDown()}{postDown()}}
+{\footnotesize\ttfamily post\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception$\vert$\+DBALException} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a8eb6e81b9e459fa06f18a2d799553e5c}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a8eb6e81b9e459fa06f18a2d799553e5c}} 
+\index{AbstractMigration@{AbstractMigration}!postUp@{postUp}}
+\index{postUp@{postUp}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{postUp()}{postUp()}}
+{\footnotesize\ttfamily post\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception$\vert$\+DBALException} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_aa71057cd36b98155d40769c0a5d1f722}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_aa71057cd36b98155d40769c0a5d1f722}} 
+\index{AbstractMigration@{AbstractMigration}!preDown@{preDown}}
+\index{preDown@{preDown}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{preDown()}{preDown()}}
+{\footnotesize\ttfamily pre\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception$\vert$\+DBALException} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a32631affb621273c868475ed4b2a787f}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a32631affb621273c868475ed4b2a787f}} 
+\index{AbstractMigration@{AbstractMigration}!preUp@{preUp}}
+\index{preUp@{preUp}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{preUp()}{preUp()}}
+{\footnotesize\ttfamily pre\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception$\vert$\+DBALException} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a576fa8197bc92a3ffa11876b66cba4c5}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a576fa8197bc92a3ffa11876b66cba4c5}} 
+\index{AbstractMigration@{AbstractMigration}!skipIf@{skipIf}}
+\index{skipIf@{skipIf}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{skipIf()}{skipIf()}}
+{\footnotesize\ttfamily skip\+If (\begin{DoxyParamCaption}\item[{bool}]{\$condition,  }\item[{string}]{\$message = {\ttfamily \textquotesingle{}Unknown~Reason\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Skip\+Migration} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a3e20bd033aafd0aff1e42994eaaa823f}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a3e20bd033aafd0aff1e42994eaaa823f}} 
+\index{AbstractMigration@{AbstractMigration}!throwIrreversibleMigrationException@{throwIrreversibleMigrationException}}
+\index{throwIrreversibleMigrationException@{throwIrreversibleMigrationException}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{throwIrreversibleMigrationException()}{throwIrreversibleMigrationException()}}
+{\footnotesize\ttfamily throw\+Irreversible\+Migration\+Exception (\begin{DoxyParamCaption}\item[{?string}]{\$message = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Irreversible\+Migration} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_abstract_migration_a23eb1c1428e8ea2ab2cf798fc06ec421}\label{class_doctrine_1_1_migrations_1_1_abstract_migration_a23eb1c1428e8ea2ab2cf798fc06ec421}} 
+\index{AbstractMigration@{AbstractMigration}!up@{up}}
+\index{up@{up}!AbstractMigration@{AbstractMigration}}
+\doxysubsubsection{\texorpdfstring{up()}{up()}}
+{\footnotesize\ttfamily up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Migration\+Exception$\vert$\+DBALException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/Abstract\+Migration.\+php\end{DoxyCompactItemize}

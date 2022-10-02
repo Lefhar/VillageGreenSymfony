@@ -1,0 +1,351 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{}\doxysection{Type Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}\index{Type@{Type}}
+Inheritance diagram for Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a7329c43c0c089d47abc2818fccca545e}{convert\+To\+Database\+Value}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02576e237bf410008f15a806928d2374}{convert\+To\+PHPValue}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a24d8db42c7d978d2989826ad48135c02}{get\+SQLDeclaration}} (array \$column, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_aef753ffa2d91080520c65abe57d8f182}{get\+Binding\+Type}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ad29c3be7c49ec5cf63a8add9f968d50b}{can\+Require\+SQLConversion}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_abcd5327530f0bedfe68d15b73414d0b0}{convert\+To\+Database\+Value\+SQL}} (\$sql\+Expr, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a219fd91c2e0d19da712bd8966463c62b}{convert\+To\+PHPValue\+SQL}} (\$sql\+Expr, \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a4b1205795efc1b9155d5e5dd2710c5cf}{get\+Mapped\+Database\+Types}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac177a0717b2fba31b776d51ad66e211d}{requires\+SQLComment\+Hint}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a765e78adbf966b9904fa8b12fbc3b007}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a765e78adbf966b9904fa8b12fbc3b007}} 
+static {\bfseries get\+Type\+Registry} ()
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a63e4831b0d69ebbb42be31bb118d121c}{get\+Type}} (\$name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac972afedb0837dcf3ba2140f1d795eb2}{add\+Type}} (\$name, \$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02876eaf6a4385e1b2fee29214ac0bec}{has\+Type}} (\$name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ad1430ac6151bd07d0e20b8b3583645ec}{override\+Type}} (\$name, \$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a6f5e56bbab737a6f9d411dbd3e3f4127}{get\+Types\+Map}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for so-\/called Doctrine mapping types.
+
+A \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} object is obtained by calling the static \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a63e4831b0d69ebbb42be31bb118d121c}{get\+Type()}}\} method. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac972afedb0837dcf3ba2140f1d795eb2}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac972afedb0837dcf3ba2140f1d795eb2}} 
+\index{Type@{Type}!addType@{addType}}
+\index{addType@{addType}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{addType()}{addType()}}
+{\footnotesize\ttfamily static add\+Type (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds a custom type to the type map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the type. This should correspond to what \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{get\+Name()}} returns. \\
+\hline
+ & {\em class-\/string$<$\+Type$>$} & \$class\+Name The class name of the custom type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ad29c3be7c49ec5cf63a8add9f968d50b}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ad29c3be7c49ec5cf63a8add9f968d50b}} 
+\index{Type@{Type}!canRequireSQLConversion@{canRequireSQLConversion}}
+\index{canRequireSQLConversion@{canRequireSQLConversion}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{canRequireSQLConversion()}{canRequireSQLConversion()}}
+{\footnotesize\ttfamily can\+Require\+SQLConversion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Does working with this column require SQL conversion functions?
+
+This is a metadata function that is required for example in the ORM. Usage of \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_abcd5327530f0bedfe68d15b73414d0b0}{convert\+To\+Database\+Value\+SQL}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a219fd91c2e0d19da712bd8966463c62b}{convert\+To\+PHPValue\+SQL}}\} works for any type and mostly does nothing. This method can additionally be used for optimization purposes.
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000191}{Deprecated}}]Consumers should call \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_abcd5327530f0bedfe68d15b73414d0b0}{convert\+To\+Database\+Value\+SQL}}\} and \{
+
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a219fd91c2e0d19da712bd8966463c62b}{convert\+To\+PHPValue\+SQL}}\} regardless of the type.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a7329c43c0c089d47abc2818fccca545e}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a7329c43c0c089d47abc2818fccca545e}} 
+\index{Type@{Type}!convertToDatabaseValue@{convertToDatabaseValue}}
+\index{convertToDatabaseValue@{convertToDatabaseValue}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{convertToDatabaseValue()}{convertToDatabaseValue()}}
+{\footnotesize\ttfamily convert\+To\+Database\+Value (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Converts a value from its PHP representation to its database representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The database representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_array_type_a7329c43c0c089d47abc2818fccca545e}{Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_boolean_type_a7329c43c0c089d47abc2818fccca545e}{Boolean\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_immutable_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_interval_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Interval\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_immutable_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_immutable_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Time\+Tz\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Time\+Tz\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_type_a7329c43c0c089d47abc2818fccca545e}{Date\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_json_type_a7329c43c0c089d47abc2818fccca545e}{Json\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a7329c43c0c089d47abc2818fccca545e}{Object\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_simple_array_type_a7329c43c0c089d47abc2818fccca545e}{Simple\+Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_immutable_type_a7329c43c0c089d47abc2818fccca545e}{Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_type_a7329c43c0c089d47abc2818fccca545e}{Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_immutable_type_a7329c43c0c089d47abc2818fccca545e}{Var\+Date\+Time\+Immutable\+Type}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_types_1_1_abstract_uid_type_a7329c43c0c089d47abc2818fccca545e}{Abstract\+Uid\+Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_abcd5327530f0bedfe68d15b73414d0b0}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_abcd5327530f0bedfe68d15b73414d0b0}} 
+\index{Type@{Type}!convertToDatabaseValueSQL@{convertToDatabaseValueSQL}}
+\index{convertToDatabaseValueSQL@{convertToDatabaseValueSQL}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{convertToDatabaseValueSQL()}{convertToDatabaseValueSQL()}}
+{\footnotesize\ttfamily convert\+To\+Database\+Value\+SQL (\begin{DoxyParamCaption}\item[{}]{\$sql\+Expr,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Modifies the SQL expression (identifier, parameter) to convert to a database value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02576e237bf410008f15a806928d2374}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02576e237bf410008f15a806928d2374}} 
+\index{Type@{Type}!convertToPHPValue@{convertToPHPValue}}
+\index{convertToPHPValue@{convertToPHPValue}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValue()}{convertToPHPValue()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Converts a value from its database representation to its PHP representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The PHP representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_array_type_a02576e237bf410008f15a806928d2374}{Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_big_int_type_a02576e237bf410008f15a806928d2374}{Big\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_binary_type_a02576e237bf410008f15a806928d2374}{Binary\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_blob_type_a02576e237bf410008f15a806928d2374}{Blob\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_boolean_type_a02576e237bf410008f15a806928d2374}{Boolean\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_immutable_type_a02576e237bf410008f15a806928d2374}{Date\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_interval_type_a02576e237bf410008f15a806928d2374}{Date\+Interval\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_immutable_type_a02576e237bf410008f15a806928d2374}{Date\+Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_type_a02576e237bf410008f15a806928d2374}{Date\+Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_immutable_type_a02576e237bf410008f15a806928d2374}{Date\+Time\+Tz\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_type_a02576e237bf410008f15a806928d2374}{Date\+Time\+Tz\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_type_a02576e237bf410008f15a806928d2374}{Date\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a02576e237bf410008f15a806928d2374}{Decimal\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_float_type_a02576e237bf410008f15a806928d2374}{Float\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_integer_type_a02576e237bf410008f15a806928d2374}{Integer\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_json_type_a02576e237bf410008f15a806928d2374}{Json\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a02576e237bf410008f15a806928d2374}{Object\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_simple_array_type_a02576e237bf410008f15a806928d2374}{Simple\+Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a02576e237bf410008f15a806928d2374}{Small\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_text_type_a02576e237bf410008f15a806928d2374}{Text\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_immutable_type_a02576e237bf410008f15a806928d2374}{Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_type_a02576e237bf410008f15a806928d2374}{Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_immutable_type_a02576e237bf410008f15a806928d2374}{Var\+Date\+Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type_a02576e237bf410008f15a806928d2374}{Var\+Date\+Time\+Type}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_types_1_1_abstract_uid_type_a02576e237bf410008f15a806928d2374}{Abstract\+Uid\+Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a219fd91c2e0d19da712bd8966463c62b}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a219fd91c2e0d19da712bd8966463c62b}} 
+\index{Type@{Type}!convertToPHPValueSQL@{convertToPHPValueSQL}}
+\index{convertToPHPValueSQL@{convertToPHPValueSQL}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValueSQL()}{convertToPHPValueSQL()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue\+SQL (\begin{DoxyParamCaption}\item[{}]{\$sql\+Expr,  }\item[{}]{\$platform }\end{DoxyParamCaption})}
+
+Modifies the SQL expression (identifier, parameter) to convert to a PHP value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql\+Expr} & \\
+\hline
+Abstract\+Platform & {\em \$platform} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_aef753ffa2d91080520c65abe57d8f182}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_aef753ffa2d91080520c65abe57d8f182}} 
+\index{Type@{Type}!getBindingType@{getBindingType}}
+\index{getBindingType@{getBindingType}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{getBindingType()}{getBindingType()}}
+{\footnotesize\ttfamily get\+Binding\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the (preferred) binding type for values of this type that can be used when binding parameters to prepared statements.
+
+This method should return one of the \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type}{Parameter\+Type}}\} constants.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_ascii_string_type_aef753ffa2d91080520c65abe57d8f182}{Ascii\+String\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_big_int_type_aef753ffa2d91080520c65abe57d8f182}{Big\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_binary_type_aef753ffa2d91080520c65abe57d8f182}{Binary\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_blob_type_aef753ffa2d91080520c65abe57d8f182}{Blob\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_boolean_type_aef753ffa2d91080520c65abe57d8f182}{Boolean\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_integer_type_aef753ffa2d91080520c65abe57d8f182}{Integer\+Type}}, and \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_aef753ffa2d91080520c65abe57d8f182}{Small\+Int\+Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a4b1205795efc1b9155d5e5dd2710c5cf}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a4b1205795efc1b9155d5e5dd2710c5cf}} 
+\index{Type@{Type}!getMappedDatabaseTypes@{getMappedDatabaseTypes}}
+\index{getMappedDatabaseTypes@{getMappedDatabaseTypes}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{getMappedDatabaseTypes()}{getMappedDatabaseTypes()}}
+{\footnotesize\ttfamily get\+Mapped\+Database\+Types (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+Gets an array of database types that map to this Doctrine type.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}} 
+\index{Type@{Type}!getName@{getName}}
+\index{getName@{getName}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Gets the name of this type.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Needed? \end{DoxyRefDesc}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_array_type_a3d0963e68bb313b163a73f2803c64600}{Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_ascii_string_type_a3d0963e68bb313b163a73f2803c64600}{Ascii\+String\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_big_int_type_a3d0963e68bb313b163a73f2803c64600}{Big\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_binary_type_a3d0963e68bb313b163a73f2803c64600}{Binary\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_blob_type_a3d0963e68bb313b163a73f2803c64600}{Blob\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_boolean_type_a3d0963e68bb313b163a73f2803c64600}{Boolean\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_immutable_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_interval_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Interval\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_immutable_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_immutable_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Time\+Tz\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Time\+Tz\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_type_a3d0963e68bb313b163a73f2803c64600}{Date\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a3d0963e68bb313b163a73f2803c64600}{Decimal\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_float_type_a3d0963e68bb313b163a73f2803c64600}{Float\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_guid_type_a3d0963e68bb313b163a73f2803c64600}{Guid\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_integer_type_a3d0963e68bb313b163a73f2803c64600}{Integer\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_json_type_a3d0963e68bb313b163a73f2803c64600}{Json\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a3d0963e68bb313b163a73f2803c64600}{Object\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_simple_array_type_a3d0963e68bb313b163a73f2803c64600}{Simple\+Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a3d0963e68bb313b163a73f2803c64600}{Small\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_string_type_a3d0963e68bb313b163a73f2803c64600}{String\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_text_type_a3d0963e68bb313b163a73f2803c64600}{Text\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_immutable_type_a3d0963e68bb313b163a73f2803c64600}{Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_type_a3d0963e68bb313b163a73f2803c64600}{Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_immutable_type_a3d0963e68bb313b163a73f2803c64600}{Var\+Date\+Time\+Immutable\+Type}}, \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_types_1_1_ulid_type_a3d0963e68bb313b163a73f2803c64600}{Ulid\+Type}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_types_1_1_uuid_type_a3d0963e68bb313b163a73f2803c64600}{Uuid\+Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a24d8db42c7d978d2989826ad48135c02}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a24d8db42c7d978d2989826ad48135c02}} 
+\index{Type@{Type}!getSQLDeclaration@{getSQLDeclaration}}
+\index{getSQLDeclaration@{getSQLDeclaration}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{getSQLDeclaration()}{getSQLDeclaration()}}
+{\footnotesize\ttfamily get\+SQLDeclaration (\begin{DoxyParamCaption}\item[{array}]{\$column,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Gets the SQL declaration snippet for a column of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & The column definition \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_array_type_a24d8db42c7d978d2989826ad48135c02}{Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_ascii_string_type_a24d8db42c7d978d2989826ad48135c02}{Ascii\+String\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_big_int_type_a24d8db42c7d978d2989826ad48135c02}{Big\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_binary_type_a24d8db42c7d978d2989826ad48135c02}{Binary\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_blob_type_a24d8db42c7d978d2989826ad48135c02}{Blob\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_boolean_type_a24d8db42c7d978d2989826ad48135c02}{Boolean\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_interval_type_a24d8db42c7d978d2989826ad48135c02}{Date\+Interval\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_type_a24d8db42c7d978d2989826ad48135c02}{Date\+Time\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_type_a24d8db42c7d978d2989826ad48135c02}{Date\+Time\+Tz\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_type_a24d8db42c7d978d2989826ad48135c02}{Date\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a24d8db42c7d978d2989826ad48135c02}{Decimal\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_float_type_a24d8db42c7d978d2989826ad48135c02}{Float\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_guid_type_a24d8db42c7d978d2989826ad48135c02}{Guid\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_integer_type_a24d8db42c7d978d2989826ad48135c02}{Integer\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_json_type_a24d8db42c7d978d2989826ad48135c02}{Json\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_a24d8db42c7d978d2989826ad48135c02}{Object\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_simple_array_type_a24d8db42c7d978d2989826ad48135c02}{Simple\+Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_small_int_type_a24d8db42c7d978d2989826ad48135c02}{Small\+Int\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_string_type_a24d8db42c7d978d2989826ad48135c02}{String\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_text_type_a24d8db42c7d978d2989826ad48135c02}{Text\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_type_a24d8db42c7d978d2989826ad48135c02}{Time\+Type}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_types_1_1_abstract_uid_type_a24d8db42c7d978d2989826ad48135c02}{Abstract\+Uid\+Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a63e4831b0d69ebbb42be31bb118d121c}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a63e4831b0d69ebbb42be31bb118d121c}} 
+\index{Type@{Type}!getType@{getType}}
+\index{getType@{getType}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily static get\+Type (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Factory method to create type instances. \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} instances are implemented as flyweights.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the type (as returned by \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{get\+Name()}}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a6f5e56bbab737a6f9d411dbd3e3f4127}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a6f5e56bbab737a6f9d411dbd3e3f4127}} 
+\index{Type@{Type}!getTypesMap@{getTypesMap}}
+\index{getTypesMap@{getTypesMap}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{getTypesMap()}{getTypesMap()}}
+{\footnotesize\ttfamily static get\+Types\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the types array map which holds all registered types and the corresponding type class
+
+\begin{DoxyReturn}{Returns}
+array$<$string, string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02876eaf6a4385e1b2fee29214ac0bec}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02876eaf6a4385e1b2fee29214ac0bec}} 
+\index{Type@{Type}!hasType@{hasType}}
+\index{hasType@{hasType}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{hasType()}{hasType()}}
+{\footnotesize\ttfamily static has\+Type (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if exists support for a type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The name of the type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if type is supported; FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ad1430ac6151bd07d0e20b8b3583645ec}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ad1430ac6151bd07d0e20b8b3583645ec}} 
+\index{Type@{Type}!overrideType@{overrideType}}
+\index{overrideType@{overrideType}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{overrideType()}{overrideType()}}
+{\footnotesize\ttfamily static override\+Type (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Overrides an already defined type to use a different implementation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+ & {\em class-\/string$<$\+Type$>$} & \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac177a0717b2fba31b776d51ad66e211d}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_ac177a0717b2fba31b776d51ad66e211d}} 
+\index{Type@{Type}!requiresSQLCommentHint@{requiresSQLCommentHint}}
+\index{requiresSQLCommentHint@{requiresSQLCommentHint}!Type@{Type}}
+\doxysubsubsection{\texorpdfstring{requiresSQLCommentHint()}{requiresSQLCommentHint()}}
+{\footnotesize\ttfamily requires\+SQLComment\+Hint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+If this Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} maps to an already mapped database type, reverse schema engineering can\textquotesingle{}t tell them apart. You need to mark one of those types as commented, which will have Doctrine use an SQL comment to typehint the actual Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}}.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_array_type_ac177a0717b2fba31b776d51ad66e211d}{Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_boolean_type_ac177a0717b2fba31b776d51ad66e211d}{Boolean\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_immutable_type_ac177a0717b2fba31b776d51ad66e211d}{Date\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_interval_type_ac177a0717b2fba31b776d51ad66e211d}{Date\+Interval\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_immutable_type_ac177a0717b2fba31b776d51ad66e211d}{Date\+Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_tz_immutable_type_ac177a0717b2fba31b776d51ad66e211d}{Date\+Time\+Tz\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_guid_type_ac177a0717b2fba31b776d51ad66e211d}{Guid\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_json_type_ac177a0717b2fba31b776d51ad66e211d}{Json\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_object_type_ac177a0717b2fba31b776d51ad66e211d}{Object\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_simple_array_type_ac177a0717b2fba31b776d51ad66e211d}{Simple\+Array\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_time_immutable_type_ac177a0717b2fba31b776d51ad66e211d}{Time\+Immutable\+Type}}, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_immutable_type_ac177a0717b2fba31b776d51ad66e211d}{Var\+Date\+Time\+Immutable\+Type}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_types_1_1_abstract_uid_type_ac177a0717b2fba31b776d51ad66e211d}{Abstract\+Uid\+Type}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Type.\+php\end{DoxyCompactItemize}

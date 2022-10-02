@@ -1,0 +1,109 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_output_buffer}{}\doxysection{Output\+Buffer Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_output_buffer}\index{OutputBuffer@{OutputBuffer}}
+Inheritance diagram for Output\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_output_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_output_buffer_a8c29af408105ba75bc2b973aa4bc1bf7}{write}} (string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_output_buffer_a2c139e2abe8f411b886615bb65729864}{end}} (string \$final\+Data=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_output_buffer_a0dc857ebb174eef4ad89ae0c1201ae0e}{on\+Resolve}} (callable \$on\+Resolved)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_output_buffer_a2c139e2abe8f411b886615bb65729864}\label{class_amp_1_1_byte_stream_1_1_output_buffer_a2c139e2abe8f411b886615bb65729864}} 
+\index{OutputBuffer@{OutputBuffer}!end@{end}}
+\index{end@{end}!OutputBuffer@{OutputBuffer}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily end (\begin{DoxyParamCaption}\item[{string}]{\$final\+Data = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Marks the stream as no longer writable. Optionally writes a final data chunk before. Note that this is not the same as forcefully closing the stream. This method waits for all pending writes to complete before closing the stream. Socket streams implementing this interface should only close the writable side of the stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$final\+Data} & Bytes to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Succeeds once the data has been successfully written to the stream.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_closed_exception}{Closed\+Exception}}} & If the stream has already been closed. \\
+\hline
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_stream_exception}{Stream\+Exception}}} & If writing to the stream fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_output_stream_a2c139e2abe8f411b886615bb65729864}{Output\+Stream}}.
+
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_output_buffer_a0dc857ebb174eef4ad89ae0c1201ae0e}\label{class_amp_1_1_byte_stream_1_1_output_buffer_a0dc857ebb174eef4ad89ae0c1201ae0e}} 
+\index{OutputBuffer@{OutputBuffer}!onResolve@{onResolve}}
+\index{onResolve@{onResolve}!OutputBuffer@{OutputBuffer}}
+\doxysubsubsection{\texorpdfstring{onResolve()}{onResolve()}}
+{\footnotesize\ttfamily on\+Resolve (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Resolved }\end{DoxyParamCaption})}
+
+Registers a callback to be invoked when the promise is resolved.
+
+If this method is called multiple times, additional handlers will be registered instead of replacing any already existing handlers.
+
+If the promise is already resolved, the callback MUST be executed immediately.
+
+Exceptions MUST NOT be thrown from this method. Any exceptions thrown from invoked callbacks MUST be forwarded to the event-\/loop error handler.
+
+Note\+: You shouldn\textquotesingle{}t implement this interface yourself. Instead, provide a method that returns a promise for the operation you\textquotesingle{}re implementing. Objects other than pure placeholders implementing it are a very bad idea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Resolved} & The first argument shall be {\ttfamily null} on success, while the second shall be {\ttfamily null} on failure.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$on\+Resolved
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{Promise}}.
+
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_output_buffer_a8c29af408105ba75bc2b973aa4bc1bf7}\label{class_amp_1_1_byte_stream_1_1_output_buffer_a8c29af408105ba75bc2b973aa4bc1bf7}} 
+\index{OutputBuffer@{OutputBuffer}!write@{write}}
+\index{write@{write}!OutputBuffer@{OutputBuffer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+Writes data to the stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & Bytes to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Succeeds once the data has been successfully written to the stream.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_closed_exception}{Closed\+Exception}}} & If the stream has already been closed. \\
+\hline
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_stream_exception}{Stream\+Exception}}} & If writing to the stream fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_output_stream_a8c29af408105ba75bc2b973aa4bc1bf7}{Output\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/Output\+Buffer.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder}{}\doxysection{Migration\+Finder Interface Reference}
+\label{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder}\index{MigrationFinder@{MigrationFinder}}
+Inheritance diagram for Migration\+Finder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder_afedfb35497601cbeff84968ad5b98894}{find\+Migrations}} (string \$directory, ?string \$namespace=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder}{Migration\+Finder}} interface defines the interface used for finding migrations in a given directory and namespace. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder_afedfb35497601cbeff84968ad5b98894}\label{interface_doctrine_1_1_migrations_1_1_finder_1_1_migration_finder_afedfb35497601cbeff84968ad5b98894}} 
+\index{MigrationFinder@{MigrationFinder}!findMigrations@{findMigrations}}
+\index{findMigrations@{findMigrations}!MigrationFinder@{MigrationFinder}}
+\doxysubsubsection{\texorpdfstring{findMigrations()}{findMigrations()}}
+{\footnotesize\ttfamily find\+Migrations (\begin{DoxyParamCaption}\item[{string}]{\$directory,  }\item[{?string}]{\$namespace = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$directory} & The directory which the finder should search \\
+\hline
+string | null & {\em \$namespace} & If not null only classes in this namespace will be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_finder_1_1_glob_finder_afedfb35497601cbeff84968ad5b98894}{Glob\+Finder}}, and \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_finder_1_1_recursive_regex_finder_afedfb35497601cbeff84968ad5b98894}{Recursive\+Regex\+Finder}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Finder/Migration\+Finder.\+php\end{DoxyCompactItemize}

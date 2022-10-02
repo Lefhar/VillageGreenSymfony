@@ -1,0 +1,75 @@
+\hypertarget{interface_monolog_1_1_handler_1_1_processable_handler_interface}{}\doxysection{Processable\+Handler\+Interface Interface Reference}
+\label{interface_monolog_1_1_handler_1_1_processable_handler_interface}\index{ProcessableHandlerInterface@{ProcessableHandlerInterface}}
+Inheritance diagram for Processable\+Handler\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_monolog_1_1_handler_1_1_processable_handler_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_processable_handler_interface_a14c91c0ddce4f5cb91bc031e68c00453}{push\+Processor}} (callable \$callback)
+\item 
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_processable_handler_interface_aece5018a30e181b7c02b82a8470b5017}{pop\+Processor}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to describe loggers that have processors
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_monolog_1_1_handler_1_1_processable_handler_interface_aece5018a30e181b7c02b82a8470b5017}\label{interface_monolog_1_1_handler_1_1_processable_handler_interface_aece5018a30e181b7c02b82a8470b5017}} 
+\index{ProcessableHandlerInterface@{ProcessableHandlerInterface}!popProcessor@{popProcessor}}
+\index{popProcessor@{popProcessor}!ProcessableHandlerInterface@{ProcessableHandlerInterface}}
+\doxysubsubsection{\texorpdfstring{popProcessor()}{popProcessor()}}
+{\footnotesize\ttfamily pop\+Processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the processor on top of the stack and returns it.
+
+@psalm-\/return Processor\+Interface$\vert$callable(Record)\+: Record \$callback
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Logic\+Exception In case the processor stack is empty \begin{DoxyReturn}{Returns}
+callable$\vert$\+Processor\+Interface 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_wrapper_aece5018a30e181b7c02b82a8470b5017}{Handler\+Wrapper}}.
+
+\mbox{\Hypertarget{interface_monolog_1_1_handler_1_1_processable_handler_interface_a14c91c0ddce4f5cb91bc031e68c00453}\label{interface_monolog_1_1_handler_1_1_processable_handler_interface_a14c91c0ddce4f5cb91bc031e68c00453}} 
+\index{ProcessableHandlerInterface@{ProcessableHandlerInterface}!pushProcessor@{pushProcessor}}
+\index{pushProcessor@{pushProcessor}!ProcessableHandlerInterface@{ProcessableHandlerInterface}}
+\doxysubsubsection{\texorpdfstring{pushProcessor()}{pushProcessor()}}
+{\footnotesize\ttfamily push\+Processor (\begin{DoxyParamCaption}\item[{callable}]{\$callback }\end{DoxyParamCaption})}
+
+Adds a processor in the stack.
+
+@psalm-\/param Processor\+Interface$\vert$callable(Record)\+: Record \$callback
+
+
+\begin{DoxyParams}[1]{Parameters}
+Processor\+Interface | callable & {\em \$callback} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_wrapper_a14c91c0ddce4f5cb91bc031e68c00453}{Handler\+Wrapper}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Processable\+Handler\+Interface.\+php\end{DoxyCompactItemize}

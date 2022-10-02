@@ -1,0 +1,37 @@
+\hypertarget{interface_doctrine_1_1_migrations_1_1_migrator}{}\doxysection{Migrator Interface Reference}
+\label{interface_doctrine_1_1_migrations_1_1_migrator}\index{Migrator@{Migrator}}
+Inheritance diagram for Migrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_migrations_1_1_migrator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_migrator_a255942c1c0a9ed21dbef246507a1e9fd}{migrate}} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_metadata_1_1_migration_plan_list}{Migration\+Plan\+List}} \$migrations\+Plan, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_migrator_configuration}{Migrator\+Configuration}} \$migrator\+Configuration)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_migrator}{Migrator}} interface is responsible for generating and executing the SQL for a migration. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_migrations_1_1_migrator_a255942c1c0a9ed21dbef246507a1e9fd}\label{interface_doctrine_1_1_migrations_1_1_migrator_a255942c1c0a9ed21dbef246507a1e9fd}} 
+\index{Migrator@{Migrator}!migrate@{migrate}}
+\index{migrate@{migrate}!Migrator@{Migrator}}
+\doxysubsubsection{\texorpdfstring{migrate()}{migrate()}}
+{\footnotesize\ttfamily migrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_metadata_1_1_migration_plan_list}{Migration\+Plan\+List}}}]{\$migrations\+Plan,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_migrator_configuration}{Migrator\+Configuration}}}]{\$migrator\+Configuration }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, Query\mbox{[}$\,$\mbox{]}$>$ A list of SQL statements executed, grouped by migration version 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_dbal_migrator_a255942c1c0a9ed21dbef246507a1e9fd}{Dbal\+Migrator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/Migrator.\+php\end{DoxyCompactItemize}

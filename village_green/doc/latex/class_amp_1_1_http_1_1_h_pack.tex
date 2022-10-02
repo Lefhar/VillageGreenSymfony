@@ -1,0 +1,55 @@
+\hypertarget{class_amp_1_1_http_1_1_h_pack}{}\doxysection{HPack Class Reference}
+\label{class_amp_1_1_http_1_1_h_pack}\index{HPack@{HPack}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_h_pack_acc10dba8d2e454e6c46a76e4129a8e1a}\label{class_amp_1_1_http_1_1_h_pack_acc10dba8d2e454e6c46a76e4129a8e1a}} 
+{\bfseries \+\_\+\+\_\+construct} (int \$table\+Size\+Limit=4096)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_h_pack_a69c8f1cebabaff36efdd239c39ac9206}{decode}} (string \$input, int \$max\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_h_pack_a1f972099f224af7cac3bb2176b706b3c}{encode}} (array \$headers)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_h_pack_a69c8f1cebabaff36efdd239c39ac9206}\label{class_amp_1_1_http_1_1_h_pack_a69c8f1cebabaff36efdd239c39ac9206}} 
+\index{HPack@{HPack}!decode@{decode}}
+\index{decode@{decode}!HPack@{HPack}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily decode (\begin{DoxyParamCaption}\item[{string}]{\$input,  }\item[{int}]{\$max\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & Input to decode. \\
+\hline
+int & {\em \$max\+Size} & Maximum deflated size.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$null Decoded headers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_h_pack_a1f972099f224af7cac3bb2176b706b3c}\label{class_amp_1_1_http_1_1_h_pack_a1f972099f224af7cac3bb2176b706b3c}} 
+\index{HPack@{HPack}!encode@{encode}}
+\index{encode@{encode}!HPack@{HPack}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily encode (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$headers} & Headers to encode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Encoded headers.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_h_pack_exception}{HPack\+Exception}}} & If encoding fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/hpack/src/HPack.\+php\end{DoxyCompactItemize}

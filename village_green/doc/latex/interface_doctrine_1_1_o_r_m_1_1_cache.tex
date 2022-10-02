@@ -1,0 +1,368 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache}{}\doxysection{Cache Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache}\index{Cache@{Cache}}
+Inheritance diagram for Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a3038fc06c267d0d4fc36eefa6453aad4}{get\+Entity\+Cache\+Region}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a364aa0aba452479c1faba736b8aa6aa1}{get\+Collection\+Cache\+Region}} (\$class\+Name, \$association)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a657b9b4a6f0d2f2a60d073a6eff2b3d3}{contains\+Entity}} (\$class\+Name, \$identifier)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a7a289f21b6d81e5fbfe900e3e6843a22}{evict\+Entity}} (\$class\+Name, \$identifier)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_acfac1c3bf577d82cec366729d438ec11}{evict\+Entity\+Region}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a2fc56635cf67ae83f2e3cf0c7a377a45}{evict\+Entity\+Regions}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_aa25db68f42fd0fb793a3809a8f3f1985}{contains\+Collection}} (\$class\+Name, \$association, \$owner\+Identifier)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a78ea7cc6033f403d9536c7e227887e01}{evict\+Collection}} (\$class\+Name, \$association, \$owner\+Identifier)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a19cde390368a3aef91905b3cfb959f69}{evict\+Collection\+Region}} (\$class\+Name, \$association)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_ad9b14aa6aa89d2299da9f151db5ba3de}{evict\+Collection\+Regions}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_af687fe660910b6a2f5fb0f01ac1c958c}{contains\+Query}} (\$region\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a5fe4ad92ebbbe5bd3d731099f965c3f1}{evict\+Query\+Region}} (\$region\+Name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a4a94a395c265cefdc22c63e5c96c02af}{evict\+Query\+Regions}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a2fdaf7f0250dc32b954d355491948d59}{get\+Query\+Cache}} (\$region\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a9c31b51e4c7d8cad96a156ec9795fc86}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a9c31b51e4c7d8cad96a156ec9795fc86}} 
+const {\bfseries DEFAULT\+\_\+\+QUERY\+\_\+\+REGION\+\_\+\+NAME} = \textquotesingle{}query\+\_\+cache\+\_\+region\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a2e9c944a098f94f1e64fe0ee06fa8bbf}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a2e9c944a098f94f1e64fe0ee06fa8bbf}} 
+const {\bfseries DEFAULT\+\_\+\+TIMESTAMP\+\_\+\+REGION\+\_\+\+NAME} = \textquotesingle{}timestamp\+\_\+cache\+\_\+region\textquotesingle{}
+\item 
+const \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a286409557495193c77b75ad3fa1c35a3}{MODE\+\_\+\+GET}} = 1
+\item 
+const \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a9ddfd04a6016643a6f8c5968e6d8b408}{MODE\+\_\+\+PUT}} = 2
+\item 
+const \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_a3b0089f427687fd5516bdc7acfaea91c}{MODE\+\_\+\+NORMAL}} = 3
+\item 
+const \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_ad36de531a52c424bc3f3b9f5e77943f1}{MODE\+\_\+\+REFRESH}} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides an API for querying/managing the second level cache regions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_aa25db68f42fd0fb793a3809a8f3f1985}\label{interface_doctrine_1_1_o_r_m_1_1_cache_aa25db68f42fd0fb793a3809a8f3f1985}} 
+\index{Cache@{Cache}!containsCollection@{containsCollection}}
+\index{containsCollection@{containsCollection}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{containsCollection()}{containsCollection()}}
+{\footnotesize\ttfamily contains\+Collection (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$association,  }\item[{}]{\$owner\+Identifier }\end{DoxyParamCaption})}
+
+Determine whether the cache contains data for the given collection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class. \\
+\hline
+string & {\em \$association} & The field name that represents the association. \\
+\hline
+mixed & {\em \$owner\+Identifier} & The identifier of the owning entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the underlying cache contains corresponding data; false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_aa25db68f42fd0fb793a3809a8f3f1985}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a657b9b4a6f0d2f2a60d073a6eff2b3d3}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a657b9b4a6f0d2f2a60d073a6eff2b3d3}} 
+\index{Cache@{Cache}!containsEntity@{containsEntity}}
+\index{containsEntity@{containsEntity}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{containsEntity()}{containsEntity()}}
+{\footnotesize\ttfamily contains\+Entity (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$identifier }\end{DoxyParamCaption})}
+
+Determine whether the cache contains data for the given entity \char`\"{}instance\char`\"{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class. \\
+\hline
+mixed & {\em \$identifier} & The entity identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the underlying cache contains corresponding data; false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a657b9b4a6f0d2f2a60d073a6eff2b3d3}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_af687fe660910b6a2f5fb0f01ac1c958c}\label{interface_doctrine_1_1_o_r_m_1_1_cache_af687fe660910b6a2f5fb0f01ac1c958c}} 
+\index{Cache@{Cache}!containsQuery@{containsQuery}}
+\index{containsQuery@{containsQuery}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{containsQuery()}{containsQuery()}}
+{\footnotesize\ttfamily contains\+Query (\begin{DoxyParamCaption}\item[{}]{\$region\+Name }\end{DoxyParamCaption})}
+
+Determine whether the cache contains data for the given query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$region\+Name} & The cache name given to the query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the underlying cache contains corresponding data; false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_af687fe660910b6a2f5fb0f01ac1c958c}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a78ea7cc6033f403d9536c7e227887e01}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a78ea7cc6033f403d9536c7e227887e01}} 
+\index{Cache@{Cache}!evictCollection@{evictCollection}}
+\index{evictCollection@{evictCollection}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictCollection()}{evictCollection()}}
+{\footnotesize\ttfamily evict\+Collection (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$association,  }\item[{}]{\$owner\+Identifier }\end{DoxyParamCaption})}
+
+Evicts the cache data for the given identified collection instance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class. \\
+\hline
+string & {\em \$association} & The field name that represents the association. \\
+\hline
+mixed & {\em \$owner\+Identifier} & The identifier of the owning entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a78ea7cc6033f403d9536c7e227887e01}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a19cde390368a3aef91905b3cfb959f69}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a19cde390368a3aef91905b3cfb959f69}} 
+\index{Cache@{Cache}!evictCollectionRegion@{evictCollectionRegion}}
+\index{evictCollectionRegion@{evictCollectionRegion}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictCollectionRegion()}{evictCollectionRegion()}}
+{\footnotesize\ttfamily evict\+Collection\+Region (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$association }\end{DoxyParamCaption})}
+
+Evicts all entity data from the given region.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class. \\
+\hline
+string & {\em \$association} & The field name that represents the association.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a19cde390368a3aef91905b3cfb959f69}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_ad9b14aa6aa89d2299da9f151db5ba3de}\label{interface_doctrine_1_1_o_r_m_1_1_cache_ad9b14aa6aa89d2299da9f151db5ba3de}} 
+\index{Cache@{Cache}!evictCollectionRegions@{evictCollectionRegions}}
+\index{evictCollectionRegions@{evictCollectionRegions}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictCollectionRegions()}{evictCollectionRegions()}}
+{\footnotesize\ttfamily evict\+Collection\+Regions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Evict data from all collection regions.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_ad9b14aa6aa89d2299da9f151db5ba3de}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a7a289f21b6d81e5fbfe900e3e6843a22}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a7a289f21b6d81e5fbfe900e3e6843a22}} 
+\index{Cache@{Cache}!evictEntity@{evictEntity}}
+\index{evictEntity@{evictEntity}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictEntity()}{evictEntity()}}
+{\footnotesize\ttfamily evict\+Entity (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$identifier }\end{DoxyParamCaption})}
+
+Evicts the entity data for a particular entity \char`\"{}instance\char`\"{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class. \\
+\hline
+mixed & {\em \$identifier} & The entity identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a7a289f21b6d81e5fbfe900e3e6843a22}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_acfac1c3bf577d82cec366729d438ec11}\label{interface_doctrine_1_1_o_r_m_1_1_cache_acfac1c3bf577d82cec366729d438ec11}} 
+\index{Cache@{Cache}!evictEntityRegion@{evictEntityRegion}}
+\index{evictEntityRegion@{evictEntityRegion}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictEntityRegion()}{evictEntityRegion()}}
+{\footnotesize\ttfamily evict\+Entity\+Region (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Evicts all entity data from the given region.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity metadata.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_acfac1c3bf577d82cec366729d438ec11}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a2fc56635cf67ae83f2e3cf0c7a377a45}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a2fc56635cf67ae83f2e3cf0c7a377a45}} 
+\index{Cache@{Cache}!evictEntityRegions@{evictEntityRegions}}
+\index{evictEntityRegions@{evictEntityRegions}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictEntityRegions()}{evictEntityRegions()}}
+{\footnotesize\ttfamily evict\+Entity\+Regions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Evict data from all entity regions.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a2fc56635cf67ae83f2e3cf0c7a377a45}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a5fe4ad92ebbbe5bd3d731099f965c3f1}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a5fe4ad92ebbbe5bd3d731099f965c3f1}} 
+\index{Cache@{Cache}!evictQueryRegion@{evictQueryRegion}}
+\index{evictQueryRegion@{evictQueryRegion}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictQueryRegion()}{evictQueryRegion()}}
+{\footnotesize\ttfamily evict\+Query\+Region (\begin{DoxyParamCaption}\item[{}]{\$region\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Evicts all cached query results under the given name, or default query cache if the region name is NULL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$region\+Name} & The cache name associated to the queries being cached. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a5fe4ad92ebbbe5bd3d731099f965c3f1}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a4a94a395c265cefdc22c63e5c96c02af}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a4a94a395c265cefdc22c63e5c96c02af}} 
+\index{Cache@{Cache}!evictQueryRegions@{evictQueryRegions}}
+\index{evictQueryRegions@{evictQueryRegions}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{evictQueryRegions()}{evictQueryRegions()}}
+{\footnotesize\ttfamily evict\+Query\+Regions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Evict data from all query regions.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a4a94a395c265cefdc22c63e5c96c02af}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a364aa0aba452479c1faba736b8aa6aa1}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a364aa0aba452479c1faba736b8aa6aa1}} 
+\index{Cache@{Cache}!getCollectionCacheRegion@{getCollectionCacheRegion}}
+\index{getCollectionCacheRegion@{getCollectionCacheRegion}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{getCollectionCacheRegion()}{getCollectionCacheRegion()}}
+{\footnotesize\ttfamily get\+Collection\+Cache\+Region (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$association }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class. \\
+\hline
+string & {\em \$association} & The field name that represents the association.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Region$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a364aa0aba452479c1faba736b8aa6aa1}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a3038fc06c267d0d4fc36eefa6453aad4}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a3038fc06c267d0d4fc36eefa6453aad4}} 
+\index{Cache@{Cache}!getEntityCacheRegion@{getEntityCacheRegion}}
+\index{getEntityCacheRegion@{getEntityCacheRegion}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{getEntityCacheRegion()}{getEntityCacheRegion()}}
+{\footnotesize\ttfamily get\+Entity\+Cache\+Region (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The entity class.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Region$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a3038fc06c267d0d4fc36eefa6453aad4}{Default\+Cache}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a2fdaf7f0250dc32b954d355491948d59}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a2fdaf7f0250dc32b954d355491948d59}} 
+\index{Cache@{Cache}!getQueryCache@{getQueryCache}}
+\index{getQueryCache@{getQueryCache}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{getQueryCache()}{getQueryCache()}}
+{\footnotesize\ttfamily get\+Query\+Cache (\begin{DoxyParamCaption}\item[{}]{\$region\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Get query cache by region name or create a new one if none exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$region\+Name} & \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} cache region name, or default query cache if the region name is NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache}{Query\+Cache}} The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache}{Cache}} associated with the region name. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_cache_a2fdaf7f0250dc32b954d355491948d59}{Default\+Cache}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a286409557495193c77b75ad3fa1c35a3}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a286409557495193c77b75ad3fa1c35a3}} 
+\index{Cache@{Cache}!MODE\_GET@{MODE\_GET}}
+\index{MODE\_GET@{MODE\_GET}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{MODE\_GET}{MODE\_GET}}
+{\footnotesize\ttfamily const MODE\+\_\+\+GET = 1}
+
+May read items from the cache, but will not add items. \mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a3b0089f427687fd5516bdc7acfaea91c}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a3b0089f427687fd5516bdc7acfaea91c}} 
+\index{Cache@{Cache}!MODE\_NORMAL@{MODE\_NORMAL}}
+\index{MODE\_NORMAL@{MODE\_NORMAL}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{MODE\_NORMAL}{MODE\_NORMAL}}
+{\footnotesize\ttfamily const MODE\+\_\+\+NORMAL = 3}
+
+May read items from the cache, and add items to the cache. \mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_a9ddfd04a6016643a6f8c5968e6d8b408}\label{interface_doctrine_1_1_o_r_m_1_1_cache_a9ddfd04a6016643a6f8c5968e6d8b408}} 
+\index{Cache@{Cache}!MODE\_PUT@{MODE\_PUT}}
+\index{MODE\_PUT@{MODE\_PUT}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{MODE\_PUT}{MODE\_PUT}}
+{\footnotesize\ttfamily const MODE\+\_\+\+PUT = 2}
+
+Will never read items from the cache, but will add items to the cache as it reads them from the database. \mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_ad36de531a52c424bc3f3b9f5e77943f1}\label{interface_doctrine_1_1_o_r_m_1_1_cache_ad36de531a52c424bc3f3b9f5e77943f1}} 
+\index{Cache@{Cache}!MODE\_REFRESH@{MODE\_REFRESH}}
+\index{MODE\_REFRESH@{MODE\_REFRESH}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{MODE\_REFRESH}{MODE\_REFRESH}}
+{\footnotesize\ttfamily const MODE\+\_\+\+REFRESH = 4}
+
+The query will never read items from the cache, but will refresh items to the cache as it reads them from the database. 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Cache.\+php\end{DoxyCompactItemize}

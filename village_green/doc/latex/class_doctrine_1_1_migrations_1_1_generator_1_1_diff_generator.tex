@@ -1,0 +1,45 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator}{}\doxysection{Diff\+Generator Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator}\index{DiffGenerator@{DiffGenerator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator_a0ee7c6b505581e937210dedb3e8f4d6c}{\+\_\+\+\_\+construct}} (DBALConfiguration \$dbal\+Configuration, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}{Abstract\+Schema\+Manager}} \$schema\+Manager, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_provider}{Schema\+Provider}} \$schema\+Provider, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_generator}{Generator}} \$migration\+Generator, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_sql_generator}{Sql\+Generator}} \$migration\+Sql\+Generator, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_provider}{Schema\+Provider}} \$empty\+Schema\+Provider)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator_a1657f6e7f36d2784f71ce8b23f931595}{generate}} (string \$fqcn, ?string \$filter\+Expression, bool \$formatted=false, int \$line\+Length=120, bool \$check\+Db\+Platform=true, bool \$from\+Empty\+Schema=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator}{Diff\+Generator}} class is responsible for comparing two Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Schema\textbackslash{}\+Schema instances and generating a migration class with the SQL statements needed to migrate from one schema to the other. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator_a0ee7c6b505581e937210dedb3e8f4d6c}\label{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator_a0ee7c6b505581e937210dedb3e8f4d6c}} 
+\index{DiffGenerator@{DiffGenerator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DiffGenerator@{DiffGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{DBALConfiguration}]{\$dbal\+Configuration,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_abstract_schema_manager}{Abstract\+Schema\+Manager}}}]{\$schema\+Manager,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_provider}{Schema\+Provider}}}]{\$schema\+Provider,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_generator}{Generator}}}]{\$migration\+Generator,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_generator_1_1_sql_generator}{Sql\+Generator}}}]{\$migration\+Sql\+Generator,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_provider}{Schema\+Provider}}}]{\$empty\+Schema\+Provider }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Abstract\+Schema\+Manager$<$\+Abstract\+Platform$>$} & \$schema\+Manager \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator_a1657f6e7f36d2784f71ce8b23f931595}\label{class_doctrine_1_1_migrations_1_1_generator_1_1_diff_generator_a1657f6e7f36d2784f71ce8b23f931595}} 
+\index{DiffGenerator@{DiffGenerator}!generate@{generate}}
+\index{generate@{generate}!DiffGenerator@{DiffGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily generate (\begin{DoxyParamCaption}\item[{string}]{\$fqcn,  }\item[{?string}]{\$filter\+Expression,  }\item[{bool}]{\$formatted = {\ttfamily false},  }\item[{int}]{\$line\+Length = {\ttfamily 120},  }\item[{bool}]{\$check\+Db\+Platform = {\ttfamily true},  }\item[{bool}]{\$from\+Empty\+Schema = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em No\+Changes\+Detected} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Generator/Diff\+Generator.\+php\end{DoxyCompactItemize}

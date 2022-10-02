@@ -1,0 +1,65 @@
+\hypertarget{class_league_1_1_uri_1_1_uri_resolver}{}\doxysection{Uri\+Resolver Class Reference}
+\label{class_league_1_1_uri_1_1_uri_resolver}\index{UriResolver@{UriResolver}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_resolver_a391d35ad5dbbbb94ef0aab5e6bfcb84c}{resolve}} (\$uri, \$base\+\_\+uri)
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_resolver_a8b675fdf919af874fd5bc3f76db85b9b}{relativize}} (\$uri, \$base\+\_\+uri)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_resolver_a9d1d261a4046cc612875408990f99bab}\label{class_league_1_1_uri_1_1_uri_resolver_a9d1d261a4046cc612875408990f99bab}} 
+const {\bfseries DOT\+\_\+\+SEGMENTS} = \mbox{[}\textquotesingle{}.\textquotesingle{} =$>$ 1, \textquotesingle{}..\textquotesingle{} =$>$ 1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_resolver_a8b675fdf919af874fd5bc3f76db85b9b}\label{class_league_1_1_uri_1_1_uri_resolver_a8b675fdf919af874fd5bc3f76db85b9b}} 
+\index{UriResolver@{UriResolver}!relativize@{relativize}}
+\index{relativize@{relativize}!UriResolver@{UriResolver}}
+\doxysubsubsection{\texorpdfstring{relativize()}{relativize()}}
+{\footnotesize\ttfamily static relativize (\begin{DoxyParamCaption}\item[{}]{\$uri,  }\item[{}]{\$base\+\_\+uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Relativize an URI according to a base URI.
+
+This method MUST retain the state of the submitted URI instance, and return an URI instance of the same type that contains the applied modifications.
+
+This method MUST be transparent when dealing with error and exceptions. It MUST not alter of silence them apart from validating its own parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$base\+\_\+uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Psr7\+Uri\+Interface$\vert$\+Uri\+Interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_resolver_a391d35ad5dbbbb94ef0aab5e6bfcb84c}\label{class_league_1_1_uri_1_1_uri_resolver_a391d35ad5dbbbb94ef0aab5e6bfcb84c}} 
+\index{UriResolver@{UriResolver}!resolve@{resolve}}
+\index{resolve@{resolve}!UriResolver@{UriResolver}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily static resolve (\begin{DoxyParamCaption}\item[{}]{\$uri,  }\item[{}]{\$base\+\_\+uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Resolve an URI against a base URI using RFC3986 rules.
+
+If the first argument is a Uri\+Interface the method returns a Uri\+Interface object If the first argument is a Psr7\+Uri\+Interface the method returns a Psr7\+Uri\+Interface object
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$base\+\_\+uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Psr7\+Uri\+Interface$\vert$\+Uri\+Interface 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/league/uri/src/Uri\+Resolver.\+php\end{DoxyCompactItemize}

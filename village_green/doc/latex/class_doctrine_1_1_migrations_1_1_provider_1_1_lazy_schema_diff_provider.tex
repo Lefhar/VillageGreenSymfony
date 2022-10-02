@@ -1,0 +1,70 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider}{}\doxysection{Lazy\+Schema\+Diff\+Provider Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider}\index{LazySchemaDiffProvider@{LazySchemaDiffProvider}}
+Inheritance diagram for Lazy\+Schema\+Diff\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a1f4584b907bdc8af58153a133dd814e6}\label{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a1f4584b907bdc8af58153a133dd814e6}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{class_proxy_manager_1_1_factory_1_1_lazy_loading_value_holder_factory}{Lazy\+Loading\+Value\+Holder\+Factory}} \$proxy\+Factory, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_diff_provider}{Schema\+Diff\+Provider}} \$original\+Schema\+Manipulator)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a583ed2314e2bc8b6da96d9858affdae0}{create\+From\+Schema}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a73f280bdac05be14e705ed710e1ab77c}{create\+To\+Schema}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$from\+Schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_adad6efebb0b8b42797d1e568b35adb72}{get\+Sql\+Diff\+To\+Migrate}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$from\+Schema, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$to\+Schema)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a283c1385185627378ca347fc33b82084}\label{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a283c1385185627378ca347fc33b82084}} 
+static {\bfseries from\+Default\+Proxy\+Factory\+Configuration} (\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_diff_provider}{Schema\+Diff\+Provider}} \$original\+Schema\+Manipulator)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider}{Lazy\+Schema\+Diff\+Provider}} is responsible for lazily generating the from schema when diffing two schemas to produce a migration. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a583ed2314e2bc8b6da96d9858affdae0}\label{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a583ed2314e2bc8b6da96d9858affdae0}} 
+\index{LazySchemaDiffProvider@{LazySchemaDiffProvider}!createFromSchema@{createFromSchema}}
+\index{createFromSchema@{createFromSchema}!LazySchemaDiffProvider@{LazySchemaDiffProvider}}
+\doxysubsubsection{\texorpdfstring{createFromSchema()}{createFromSchema()}}
+{\footnotesize\ttfamily create\+From\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_diff_provider}{Schema\+Diff\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a73f280bdac05be14e705ed710e1ab77c}\label{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_a73f280bdac05be14e705ed710e1ab77c}} 
+\index{LazySchemaDiffProvider@{LazySchemaDiffProvider}!createToSchema@{createToSchema}}
+\index{createToSchema@{createToSchema}!LazySchemaDiffProvider@{LazySchemaDiffProvider}}
+\doxysubsubsection{\texorpdfstring{createToSchema()}{createToSchema()}}
+{\footnotesize\ttfamily create\+To\+Schema (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$from\+Schema }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_diff_provider}{Schema\+Diff\+Provider}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_adad6efebb0b8b42797d1e568b35adb72}\label{class_doctrine_1_1_migrations_1_1_provider_1_1_lazy_schema_diff_provider_adad6efebb0b8b42797d1e568b35adb72}} 
+\index{LazySchemaDiffProvider@{LazySchemaDiffProvider}!getSqlDiffToMigrate@{getSqlDiffToMigrate}}
+\index{getSqlDiffToMigrate@{getSqlDiffToMigrate}!LazySchemaDiffProvider@{LazySchemaDiffProvider}}
+\doxysubsubsection{\texorpdfstring{getSqlDiffToMigrate()}{getSqlDiffToMigrate()}}
+{\footnotesize\ttfamily get\+Sql\+Diff\+To\+Migrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$from\+Schema,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$to\+Schema }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_diff_provider_adad6efebb0b8b42797d1e568b35adb72}{Schema\+Diff\+Provider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Provider/Lazy\+Schema\+Diff\+Provider.\+php\end{DoxyCompactItemize}

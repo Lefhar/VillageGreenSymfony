@@ -1,0 +1,42 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository}{}\doxysection{Service\+Entity\+Repository Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository}\index{ServiceEntityRepository@{ServiceEntityRepository}}
+Inheritance diagram for Service\+Entity\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.837399cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository_a6718437ff92ecafa1e71ebb5af14fe2f}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}} \$registry, string \$entity\+Class)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Optional Entity\+Repository base class with a simplified constructor (for autowiring).
+
+To use in your class, inject the \char`\"{}registry\char`\"{} service and call the parent constructor. For example\+:
+
+class Your\+Entity\+Repository extends \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository}{Service\+Entity\+Repository}} \{ public function \+\_\+\+\_\+construct(Manager\+Registry \$registry) \{ parent\+::\+\_\+\+\_\+construct(\$registry, Your\+Entity\+::class); \} \}
+
+@template T @template-\/extends Entity\+Repository$<$\+T$>$ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository_a6718437ff92ecafa1e71ebb5af14fe2f}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository_a6718437ff92ecafa1e71ebb5af14fe2f}} 
+\index{ServiceEntityRepository@{ServiceEntityRepository}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ServiceEntityRepository@{ServiceEntityRepository}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}}}]{\$registry,  }\item[{string}]{\$entity\+Class }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Class} & The class name of the entity this repository manages @psalm-\/param class-\/string$<$\+T$>$ \$entity\+Class \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Repository/Service\+Entity\+Repository.\+php\end{DoxyCompactItemize}

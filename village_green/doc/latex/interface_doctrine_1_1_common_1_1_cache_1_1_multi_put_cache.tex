@@ -1,0 +1,52 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_multi_put_cache}{}\doxysection{Multi\+Put\+Cache Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_cache_1_1_multi_put_cache}\index{MultiPutCache@{MultiPutCache}}
+Inheritance diagram for Multi\+Put\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_doctrine_1_1_common_1_1_cache_1_1_multi_put_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_multi_put_cache_a53dfa7e3823b25d169a520d1154a3eac}{save\+Multiple}} (array \$keys\+And\+Values, \$lifetime=0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for cache drivers that allows to put many items at once.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000038}{Deprecated}}]\end{DoxyRefDesc}
+
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_multi_put_cache_a53dfa7e3823b25d169a520d1154a3eac}\label{interface_doctrine_1_1_common_1_1_cache_1_1_multi_put_cache_a53dfa7e3823b25d169a520d1154a3eac}} 
+\index{MultiPutCache@{MultiPutCache}!saveMultiple@{saveMultiple}}
+\index{saveMultiple@{saveMultiple}!MultiPutCache@{MultiPutCache}}
+\doxysubsubsection{\texorpdfstring{saveMultiple()}{saveMultiple()}}
+{\footnotesize\ttfamily save\+Multiple (\begin{DoxyParamCaption}\item[{array}]{\$keys\+And\+Values,  }\item[{}]{\$lifetime = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns a boolean value indicating if the operation succeeded.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$keys\+And\+Values} & Array of keys and values to save in cache \\
+\hline
+int & {\em \$lifetime} & The lifetime. If != 0, sets a specific lifetime for these cache entries (0 =\texorpdfstring{$>$}{>} infinite life\+Time).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the operation was successful, FALSE if it wasn\textquotesingle{}t. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a53dfa7e3823b25d169a520d1154a3eac}{Cache\+Provider}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/Multi\+Put\+Cache.\+php\end{DoxyCompactItemize}

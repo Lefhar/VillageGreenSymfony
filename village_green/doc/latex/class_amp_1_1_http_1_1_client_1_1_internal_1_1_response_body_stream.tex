@@ -1,0 +1,46 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream}{}\doxysection{Response\+Body\+Stream Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream}\index{ResponseBodyStream@{ResponseBodyStream}}
+Inheritance diagram for Response\+Body\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream_a046c92f3da0aa30be459485a23774997}\label{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream_a046c92f3da0aa30be459485a23774997}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} \$body, \mbox{\hyperlink{class_amp_1_1_cancellation_token_source}{Cancellation\+Token\+Source}} \$body\+Cancellation)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_http_1_1_client_1_1_internal_1_1_response_body_stream_a64571309bfb3238c65fd3c2898f92440}} 
+\index{ResponseBodyStream@{ResponseBodyStream}!read@{read}}
+\index{read@{read}!ResponseBodyStream@{ResponseBodyStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Pending\+Read\+Error} & Thrown if another read operation is still pending. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Internal/Response\+Body\+Stream.\+php\end{DoxyCompactItemize}

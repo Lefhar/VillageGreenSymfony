@@ -1,0 +1,150 @@
+A small (side-\/effect free by default) layer on top of {\ttfamily trigger\+\_\+error(\+E\+\_\+\+USER\+\_\+\+DEPRECATED)} or PSR-\/3 logging.
+
+
+\begin{DoxyItemize}
+\item no side-\/effects by default, making it a perfect fit for libraries that don\textquotesingle{}t know how the error handler works they operate under
+\item options to avoid having to rely on error handlers global state by using PSR-\/3 logging
+\item deduplicate deprecation messages to avoid excessive triggering and reduce overhead
+\end{DoxyItemize}
+
+We recommend to collect Deprecations using a PSR logger instead of relying on the global error handler.\hypertarget{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md147}{}\doxysection{Usage from consumer perspective\+:}\label{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md147}
+Enable Doctrine deprecations to be sent to a PSR3 logger\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::enableWithPsrLogger(\$logger);}
+
+\end{DoxyCode}
+
+
+Enable Doctrine deprecations to be sent as {\ttfamily @trigger\+\_\+error(\$message, E\+\_\+\+USER\+\_\+\+DEPRECATED)} messages.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::enableWithTriggerError();}
+
+\end{DoxyCode}
+
+
+If you only want to enable deprecation tracking, without logging or calling {\ttfamily trigger\+\_\+error} then call\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::enableTrackingDeprecations();}
+
+\end{DoxyCode}
+
+
+Tracking is enabled with all three modes and provides access to all triggered deprecations and their individual count\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$deprecations = \mbox{\hyperlink{class_doctrine_1_1_deprecations_1_1_deprecation_afc998b295c40d8db5a6a7bfff00048e3}{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::getTriggeredDeprecations}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach} (\$deprecations as \$identifier => \$count) \{}
+\DoxyCodeLine{    echo \$identifier . \textcolor{stringliteral}{"{} was triggered "{}} . \$count . \textcolor{stringliteral}{"{} times\(\backslash\)n"{}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md148}{}\doxysubsection{Suppressing Specific Deprecations}\label{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md148}
+Disable triggering about specific deprecations\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::ignoreDeprecations(\textcolor{stringliteral}{"{}https://link/to/deprecations-\/description-\/identifier"{}});}
+
+\end{DoxyCode}
+
+
+Disable all deprecations from a package
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::ignorePackage(\textcolor{stringliteral}{"{}doctrine/orm"{}});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md149}{}\doxysubsection{Other Operations}\label{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md149}
+When used within PHPUnit or other tools that could collect multiple instances of the same deprecations the deduplication can be disabled\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::withoutDeduplication();}
+
+\end{DoxyCode}
+
+
+Disable deprecation tracking again\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::disable();}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md150}{}\doxysection{Usage from a library/producer perspective\+:}\label{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md150}
+When you want to unconditionally trigger a deprecation even when called from the library itself then the {\ttfamily trigger} method is the way to go\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_doctrine_1_1_deprecations_1_1_deprecation_a1f761f43956fd80d86129ca1a86ed897}{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::trigger}}(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}doctrine/orm"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}https://link/to/deprecations-\/description"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}message"{}}}
+\DoxyCodeLine{);}
+
+\end{DoxyCode}
+
+
+If variable arguments are provided at the end, they are used with {\ttfamily sprintf} on the message.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_doctrine_1_1_deprecations_1_1_deprecation_a1f761f43956fd80d86129ca1a86ed897}{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::trigger}}(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}doctrine/orm"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}https://github.com/doctrine/orm/issue/1234"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}message \%s \%d"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}foo"{}},}
+\DoxyCodeLine{    1234}
+\DoxyCodeLine{);}
+
+\end{DoxyCode}
+
+
+When you want to trigger a deprecation only when it is called by a function outside of the current package, but not trigger when the package itself is the cause, then use\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_doctrine_1_1_deprecations_1_1_deprecation_a213bd7ec4e6e5468b9b39eeafab493b4}{\(\backslash\)Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation::triggerIfCalledFromOutside}}(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}doctrine/orm"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}https://link/to/deprecations-\/description"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}message"{}}}
+\DoxyCodeLine{);}
+
+\end{DoxyCode}
+
+
+Based on the issue link each deprecation message is only triggered once per request.
+
+A limited stacktrace is included in the deprecation message to find the offending location.
+
+Note\+: A producer/library should never call {\ttfamily Deprecation\+::enable\+With} methods and leave the decision how to handle deprecations to application and frameworks.\hypertarget{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md151}{}\doxysection{Usage in PHPUnit tests}\label{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md151}
+There is a {\ttfamily Verify\+Deprecations} trait that you can use to make assertions on the occurrence of deprecations within a test.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use Doctrine\(\backslash\)Deprecations\(\backslash\)PHPUnit\(\backslash\)VerifyDeprecations;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }MyTest \textcolor{keyword}{extends} TestCase}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    use VerifyDeprecations;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} testSomethingDeprecation()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>expectDeprecationWithIdentifier(\textcolor{stringliteral}{'https://github.com/doctrine/orm/issue/1234'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        triggerTheCodeWithDeprecation();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md152}{}\doxysection{What is a deprecation identifier?}\label{md_vendor_doctrine_deprecations__r_e_a_d_m_e_autotoc_md152}
+An identifier for deprecations is just a link to any resource, most often a Github Issue or Pull Request explaining the deprecation and potentially its alternative. 

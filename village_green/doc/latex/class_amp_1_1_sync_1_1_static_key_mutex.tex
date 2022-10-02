@@ -1,0 +1,39 @@
+\hypertarget{class_amp_1_1_sync_1_1_static_key_mutex}{}\doxysection{Static\+Key\+Mutex Class Reference}
+\label{class_amp_1_1_sync_1_1_static_key_mutex}\index{StaticKeyMutex@{StaticKeyMutex}}
+Inheritance diagram for Static\+Key\+Mutex\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_amp_1_1_sync_1_1_static_key_mutex}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_static_key_mutex_a997ff6dadb80f31eec0cce1cbacbef24}\label{class_amp_1_1_sync_1_1_static_key_mutex_a997ff6dadb80f31eec0cce1cbacbef24}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_sync_1_1_keyed_mutex}{Keyed\+Mutex}} \$mutex, string \$key)
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_static_key_mutex_afb36e5d94e5d65b937c6eec4830313e7}{acquire}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_static_key_mutex_afb36e5d94e5d65b937c6eec4830313e7}\label{class_amp_1_1_sync_1_1_static_key_mutex_afb36e5d94e5d65b937c6eec4830313e7}} 
+\index{StaticKeyMutex@{StaticKeyMutex}!acquire@{acquire}}
+\index{acquire@{acquire}!StaticKeyMutex@{StaticKeyMutex}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acquires a lock on the mutex.
+
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Lock$>$ Resolves with a lock object with an ID of 0. May fail with a \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}} if an error occurs when attempting to obtain the lock (e.\+g. a shared memory segment closed). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_sync_1_1_mutex_afb36e5d94e5d65b937c6eec4830313e7}{Mutex}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/Static\+Key\+Mutex.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{interface_knp_1_1_snappy_1_1_generator_interface}{}\doxysection{Generator\+Interface Interface Reference}
+\label{interface_knp_1_1_snappy_1_1_generator_interface}\index{GeneratorInterface@{GeneratorInterface}}
+Inheritance diagram for Generator\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.909091cm]{interface_knp_1_1_snappy_1_1_generator_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_knp_1_1_snappy_1_1_generator_interface_a14bb78ed786ed75dfa1ac0f37d6e23e7}{generate}} (\$input, \$output, array \$options=\mbox{[}$\,$\mbox{]}, \$overwrite=false)
+\item 
+\mbox{\hyperlink{interface_knp_1_1_snappy_1_1_generator_interface_a6532b9b6724327f36f29be9f05ef01c3}{generate\+From\+Html}} (\$html, \$output, array \$options=\mbox{[}$\,$\mbox{]}, \$overwrite=false)
+\item 
+\mbox{\hyperlink{interface_knp_1_1_snappy_1_1_generator_interface_aace01f730f703d92d891c4b9c2162e8c}{get\+Output}} (\$input, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{interface_knp_1_1_snappy_1_1_generator_interface_a61a9a1334c8ee945deec791689a83609}{get\+Output\+From\+Html}} (\$html, array \$options=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for the media generators.
+
+\begin{DoxyAuthor}{Author}
+Matthieu Bontemps \href{mailto:matthieu.bontemps@knplabs.com}{\texttt{ matthieu.\+bontemps@knplabs.\+com}} 
+
+Antoine Hérault \href{mailto:antoine.herault@knplabs.com}{\texttt{ antoine.\+herault@knplabs.\+com}}$\ast$ 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_knp_1_1_snappy_1_1_generator_interface_a14bb78ed786ed75dfa1ac0f37d6e23e7}\label{interface_knp_1_1_snappy_1_1_generator_interface_a14bb78ed786ed75dfa1ac0f37d6e23e7}} 
+\index{GeneratorInterface@{GeneratorInterface}!generate@{generate}}
+\index{generate@{generate}!GeneratorInterface@{GeneratorInterface}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily generate (\begin{DoxyParamCaption}\item[{}]{\$input,  }\item[{}]{\$output,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Generates the output media file from the specified input HTML file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$input} & The input HTML filename or URL \\
+\hline
+string & {\em \$output} & The output media filename \\
+\hline
+array & {\em \$options} & An array of options for this generation only \\
+\hline
+bool & {\em \$overwrite} & Overwrite the file if it exists. If not, throw a File\+Already\+Exists\+Exception\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_generator_1_1_loggable_generator_a14bb78ed786ed75dfa1ac0f37d6e23e7}{Loggable\+Generator}}, \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a14bb78ed786ed75dfa1ac0f37d6e23e7}{Abstract\+Generator}}, and \mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_a14bb78ed786ed75dfa1ac0f37d6e23e7}{Pdf}}.
+
+\mbox{\Hypertarget{interface_knp_1_1_snappy_1_1_generator_interface_a6532b9b6724327f36f29be9f05ef01c3}\label{interface_knp_1_1_snappy_1_1_generator_interface_a6532b9b6724327f36f29be9f05ef01c3}} 
+\index{GeneratorInterface@{GeneratorInterface}!generateFromHtml@{generateFromHtml}}
+\index{generateFromHtml@{generateFromHtml}!GeneratorInterface@{GeneratorInterface}}
+\doxysubsubsection{\texorpdfstring{generateFromHtml()}{generateFromHtml()}}
+{\footnotesize\ttfamily generate\+From\+Html (\begin{DoxyParamCaption}\item[{}]{\$html,  }\item[{}]{\$output,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Generates the output media file from the given HTML.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$html} & The HTML to be converted \\
+\hline
+string & {\em \$output} & The output media filename \\
+\hline
+array & {\em \$options} & An array of options for this generation only \\
+\hline
+bool & {\em \$overwrite} & Overwrite the file if it exists. If not, throw a File\+Already\+Exists\+Exception\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_generator_1_1_loggable_generator_a6532b9b6724327f36f29be9f05ef01c3}{Loggable\+Generator}}, and \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a6532b9b6724327f36f29be9f05ef01c3}{Abstract\+Generator}}.
+
+\mbox{\Hypertarget{interface_knp_1_1_snappy_1_1_generator_interface_aace01f730f703d92d891c4b9c2162e8c}\label{interface_knp_1_1_snappy_1_1_generator_interface_aace01f730f703d92d891c4b9c2162e8c}} 
+\index{GeneratorInterface@{GeneratorInterface}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!GeneratorInterface@{GeneratorInterface}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily get\+Output (\begin{DoxyParamCaption}\item[{}]{\$input,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Returns the output of the media generated from the specified input HTML file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$input} & The input HTML filename or URL \\
+\hline
+array & {\em \$options} & An array of options for this output only\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_generator_1_1_loggable_generator_aace01f730f703d92d891c4b9c2162e8c}{Loggable\+Generator}}, and \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_aace01f730f703d92d891c4b9c2162e8c}{Abstract\+Generator}}.
+
+\mbox{\Hypertarget{interface_knp_1_1_snappy_1_1_generator_interface_a61a9a1334c8ee945deec791689a83609}\label{interface_knp_1_1_snappy_1_1_generator_interface_a61a9a1334c8ee945deec791689a83609}} 
+\index{GeneratorInterface@{GeneratorInterface}!getOutputFromHtml@{getOutputFromHtml}}
+\index{getOutputFromHtml@{getOutputFromHtml}!GeneratorInterface@{GeneratorInterface}}
+\doxysubsubsection{\texorpdfstring{getOutputFromHtml()}{getOutputFromHtml()}}
+{\footnotesize\ttfamily get\+Output\+From\+Html (\begin{DoxyParamCaption}\item[{}]{\$html,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Returns the output of the media generated from the given HTML.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$html} & The HTML to be converted \\
+\hline
+array & {\em \$options} & An array of options for this output only\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_knp_1_1_bundle_1_1_snappy_bundle_1_1_snappy_1_1_generator_1_1_loggable_generator_a61a9a1334c8ee945deec791689a83609}{Loggable\+Generator}}, and \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a61a9a1334c8ee945deec791689a83609}{Abstract\+Generator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/knplabs/knp-\/snappy/src/\+Knp/\+Snappy/Generator\+Interface.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+{% extends 'base.admin.html.twig' %}
+
+{% block title %}Products index{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <div class="row">
+
+                <div class="col-12">
+                    <h1>Liste des produits</h1>
+                    <a href="{{ path('admin_new') }}" class="btn-block btn btn-primary">Ajouter un produit</a>
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Nom</th>
+                            <th>Description</th>
+                            <th>Label</th>
+                            <th>Ref</th>
+                            <th>Prix</th>
+                            <th>Status</th>
+                            <th>Stock</th>
+                            <th>actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for product in products %}
+                            <tr>
+                                <td><img src="/assets/src/{{ product.photo }}" class="img-fluid" width="120px"></td>
+                                <td>{{ product.name }}</td>
+                                <td>{{ product.description|raw  }}</td>
+                                <td>{{ product.label }}</td>
+                                <td>{{ product.ref }}</td>
+                                <td>{{ product.price }}</td>
+                                <td>{% if product.status ==1 %} <span class="text-success">Disponible</span>{% else %}<span class="text-danger">Bloqué</span>{% endif %}</td>
+                                <td>{{ product.stock }}</td>
+                                <td>
+                                    <a href="{{ path('admin_show', {'id': product.id}) }}">Voir</a>
+                                    <a href="{{ path('admin_edit', {'id': product.id}) }}">Editer</a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="10">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

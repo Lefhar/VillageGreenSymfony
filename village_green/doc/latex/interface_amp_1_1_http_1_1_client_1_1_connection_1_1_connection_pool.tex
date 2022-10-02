@@ -1,0 +1,43 @@
+\hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool}{}\doxysection{Connection\+Pool Interface Reference}
+\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool}\index{ConnectionPool@{ConnectionPool}}
+Inheritance diagram for Connection\+Pool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool_a7d7a295d5808712cbcba8423e837940e}{get\+Stream}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool_a7d7a295d5808712cbcba8423e837940e}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool_a7d7a295d5808712cbcba8423e837940e}} 
+\index{ConnectionPool@{ConnectionPool}!getStream@{getStream}}
+\index{getStream@{getStream}!ConnectionPool@{ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{getStream()}{getStream()}}
+{\footnotesize\ttfamily get\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation }\end{DoxyParamCaption})}
+
+Reserve a stream for a particular request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Stream$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a7d7a295d5808712cbcba8423e837940e}{Unlimited\+Connection\+Pool}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/Connection\+Pool.\+php\end{DoxyCompactItemize}

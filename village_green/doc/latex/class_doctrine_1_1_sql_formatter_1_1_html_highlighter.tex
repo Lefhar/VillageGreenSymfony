@@ -1,0 +1,102 @@
+\hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter}{}\doxysection{Html\+Highlighter Class Reference}
+\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter}\index{HtmlHighlighter@{HtmlHighlighter}}
+Inheritance diagram for Html\+Highlighter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_sql_formatter_1_1_html_highlighter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a4ab433420d7bad7e137e9016da6ce202}{\+\_\+\+\_\+construct}} (array \$html\+Attributes=\mbox{[}$\,$\mbox{]}, bool \$use\+Pre=true)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a9c030ccc55e0c310490823e28bbecfa0}{highlight\+Token}} (int \$type, string \$value)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a93e12428cebda5105b0c9afbe9234a92}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a93e12428cebda5105b0c9afbe9234a92}} 
+{\bfseries attributes} (int \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}{highlight\+Error}} (string \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}{highlight\+Error\+Message}} (string \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}{output}} (string \$string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a9189c12d8e96c8014a2dc316c0f27f65}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a9189c12d8e96c8014a2dc316c0f27f65}} 
+const {\bfseries HIGHLIGHT\+\_\+\+PRE} = \textquotesingle{}pre\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a4ab433420d7bad7e137e9016da6ce202}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a4ab433420d7bad7e137e9016da6ce202}} 
+\index{HtmlHighlighter@{HtmlHighlighter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HtmlHighlighter@{HtmlHighlighter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$html\+Attributes = {\ttfamily \mbox{[}\mbox{]}},  }\item[{bool}]{\$use\+Pre = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,string$>$} & \$html\+Attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}} 
+\index{HtmlHighlighter@{HtmlHighlighter}!highlightError@{highlightError}}
+\index{highlightError@{highlightError}!HtmlHighlighter@{HtmlHighlighter}}
+\doxysubsubsection{\texorpdfstring{highlightError()}{highlightError()}}
+{\footnotesize\ttfamily highlight\+Error (\begin{DoxyParamCaption}\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Highlights a token which causes an issue 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_a866bbfc2acba961d2f2cfcd3839ccd42}{Highlighter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}} 
+\index{HtmlHighlighter@{HtmlHighlighter}!highlightErrorMessage@{highlightErrorMessage}}
+\index{highlightErrorMessage@{highlightErrorMessage}!HtmlHighlighter@{HtmlHighlighter}}
+\doxysubsubsection{\texorpdfstring{highlightErrorMessage()}{highlightErrorMessage()}}
+{\footnotesize\ttfamily highlight\+Error\+Message (\begin{DoxyParamCaption}\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Highlights an error message 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_a7750eb50ad1cc5611d85c59d5ebbf62f}{Highlighter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a9c030ccc55e0c310490823e28bbecfa0}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_a9c030ccc55e0c310490823e28bbecfa0}} 
+\index{HtmlHighlighter@{HtmlHighlighter}!highlightToken@{highlightToken}}
+\index{highlightToken@{highlightToken}!HtmlHighlighter@{HtmlHighlighter}}
+\doxysubsubsection{\texorpdfstring{highlightToken()}{highlightToken()}}
+{\footnotesize\ttfamily highlight\+Token (\begin{DoxyParamCaption}\item[{int}]{\$type,  }\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Highlights a token depending on its type. 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_a9c030ccc55e0c310490823e28bbecfa0}{Highlighter}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}\label{class_doctrine_1_1_sql_formatter_1_1_html_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}} 
+\index{HtmlHighlighter@{HtmlHighlighter}!output@{output}}
+\index{output@{output}!HtmlHighlighter@{HtmlHighlighter}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily output (\begin{DoxyParamCaption}\item[{string}]{\$string }\end{DoxyParamCaption})}
+
+Helper function for building string output
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The string to be quoted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The quoted string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter_af4988d6c5cc97cf580415312f9f5f0e8}{Highlighter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/sql-\/formatter/src/Html\+Highlighter.\+php\end{DoxyCompactItemize}

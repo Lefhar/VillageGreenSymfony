@@ -1,0 +1,90 @@
+\hypertarget{class_amp_1_1_cache_1_1_serialized_cache}{}\doxysection{Serialized\+Cache Class Reference}
+\label{class_amp_1_1_cache_1_1_serialized_cache}\index{SerializedCache@{SerializedCache}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_serialized_cache_a56dee60c490dc328dc0b86bf381b4cdd}\label{class_amp_1_1_cache_1_1_serialized_cache_a56dee60c490dc328dc0b86bf381b4cdd}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} \$cache, \mbox{\hyperlink{interface_amp_1_1_serialization_1_1_serializer}{Serializer}} \$serializer)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache_ac009cde80e71e456bac8af41d5d021c6}{get}} (string \$key)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache_aaca1a6d3cb4e65def1552d4705c9854d}{set}} (string \$key, \$value, int \$ttl=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache_ac03d0331371567f0a97a6782746abd55}{delete}} (string \$key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@template TValue 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_serialized_cache_ac03d0331371567f0a97a6782746abd55}\label{class_amp_1_1_cache_1_1_serialized_cache_ac03d0331371567f0a97a6782746abd55}} 
+\index{SerializedCache@{SerializedCache}!delete@{delete}}
+\index{delete@{delete}!SerializedCache@{SerializedCache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Deletes a value associated with the given key if it exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}bool$\vert$null\texorpdfstring{$>$}{>} Resolves to {\ttfamily true} / {\ttfamily false} to indicate whether the key existed or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure. May also resolve with {\ttfamily null} if that information is not available.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ac03d0331371567f0a97a6782746abd55}{Cache\+::delete()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_serialized_cache_ac009cde80e71e456bac8af41d5d021c6}\label{class_amp_1_1_cache_1_1_serialized_cache_ac009cde80e71e456bac8af41d5d021c6}} 
+\index{SerializedCache@{SerializedCache}!get@{get}}
+\index{get@{get}!SerializedCache@{SerializedCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Fetch a value from the cache and unserialize it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}mixed$\vert$null\texorpdfstring{$>$}{>} Resolves to the cached value or {\ttfamily null} if it doesn\textquotesingle{}t exist. Fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} or Serialization\+Exception on failure.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}TValue$\vert$null\texorpdfstring{$>$}{>}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ac009cde80e71e456bac8af41d5d021c6}{Cache\+::get()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_serialized_cache_aaca1a6d3cb4e65def1552d4705c9854d}\label{class_amp_1_1_cache_1_1_serialized_cache_aaca1a6d3cb4e65def1552d4705c9854d}} 
+\index{SerializedCache@{SerializedCache}!set@{set}}
+\index{set@{set}!SerializedCache@{SerializedCache}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{}]{\$value,  }\item[{int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Serializes a value and stores its serialization to the cache.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+{\em \$value} & mixed Value to cache. \\
+\hline
+{\em \$ttl} & int Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout. Values less than 0 MUST throw an \textbackslash{}\+Error.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param TValue \$value
+
+\begin{DoxyReturn}{Returns}
+Promise$<$void$>$ Resolves either successfully or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} or Serialization\+Exception.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}{Cache\+::set()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/cache/lib/Serialized\+Cache.\+php\end{DoxyCompactItemize}

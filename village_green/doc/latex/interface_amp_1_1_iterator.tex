@@ -1,0 +1,78 @@
+\hypertarget{interface_amp_1_1_iterator}{}\doxysection{Iterator Interface Reference}
+\label{interface_amp_1_1_iterator}\index{Iterator@{Iterator}}
+Inheritance diagram for Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}{advance}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_iterator_ad926899d7cac34a3f1a90e552d8eb27d}{get\+Current}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines an asynchronous iterator over a set of values that is designed to be used within a coroutine.
+
+@template-\/covariant TValue 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}\label{interface_amp_1_1_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}} 
+\index{Iterator@{Iterator}!advance@{advance}}
+\index{advance@{advance}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily advance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Succeeds with true if an emitted value is available by calling \mbox{\hyperlink{interface_amp_1_1_iterator_ad926899d7cac34a3f1a90e552d8eb27d}{get\+Current()}} or false if the iterator has resolved. If the iterator fails, the returned promise will fail with the same exception.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} @psalm-\/return Promise$<$bool$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the prior promise returned from this method has not resolved. 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Throwable The exception used to fail the iterator. 
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_internal_1_1_private_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}{Private\+Iterator}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_iterator_ad926899d7cac34a3f1a90e552d8eb27d}\label{interface_amp_1_1_iterator_ad926899d7cac34a3f1a90e552d8eb27d}} 
+\index{Iterator@{Iterator}!getCurrent@{getCurrent}}
+\index{getCurrent@{getCurrent}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{getCurrent()}{getCurrent()}}
+{\footnotesize\ttfamily get\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the last emitted value or throws an exception if the iterator has completed.
+
+\begin{DoxyReturn}{Returns}
+mixed Value emitted from the iterator. @psalm-\/return TValue
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the iterator has resolved or \mbox{\hyperlink{interface_amp_1_1_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}{advance()}} was not called before calling this method. 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Throwable The exception used to fail the iterator. 
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_internal_1_1_private_iterator_ad926899d7cac34a3f1a90e552d8eb27d}{Private\+Iterator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Iterator.\+php\end{DoxyCompactItemize}

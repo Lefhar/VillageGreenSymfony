@@ -1,0 +1,182 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister}{}\doxysection{Single\+Table\+Persister Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister}\index{SingleTablePersister@{SingleTablePersister}}
+Inheritance diagram for Single\+Table\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a1121f57ab48416b629dd88fa345f0514}{get\+Discriminator\+Column\+Table\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a27c760021df403d2b9fe9f5779a0ba30}{get\+Select\+Columns\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a2807fc97083de42584f365df7ddb683c}{get\+Insert\+Column\+List}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a6576418787ff9311ac6b02d23b51f2d7}{get\+SQLTable\+Alias}} (\$class\+Name, \$assoc\+Name=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a0f47af0ccd7c9eff67e983426d2b4eed}{get\+Select\+Condition\+SQL}} (array \$criteria, \$assoc=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a88fd0d312aa149fa0d910e0011a4d42a}{get\+Select\+Condition\+Criteria\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} \$criteria)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_abe0af0fd276f434778392d2291be9240}{get\+Select\+Condition\+Discriminator\+Value\+SQL}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_aeb73aeb10ef1ecbffaa706139f57ad5e}{generate\+Filter\+Condition\+SQL}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$target\+Entity, \$target\+Table\+Alias)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Persister for entities that participate in a hierarchy mapped with the SINGLE\+\_\+\+TABLE strategy.
+
+\mbox{\hyperlink{}{https\+://martinfowler.\+com/eaa\+Catalog/single\+Table\+Inheritance.\+html}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_aeb73aeb10ef1ecbffaa706139f57ad5e}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_aeb73aeb10ef1ecbffaa706139f57ad5e}} 
+\index{SingleTablePersister@{SingleTablePersister}!generateFilterConditionSQL@{generateFilterConditionSQL}}
+\index{generateFilterConditionSQL@{generateFilterConditionSQL}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{generateFilterConditionSQL()}{generateFilterConditionSQL()}}
+{\footnotesize\ttfamily generate\+Filter\+Condition\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$target\+Entity,  }\item[{}]{\$target\+Table\+Alias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Generates the filter SQL for a given entity and table alias.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$target\+Entity} & Metadata of the target entity. \\
+\hline
+string & {\em \$target\+Table\+Alias} & The table alias of the joined/selected table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL query part to add to a query.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_aeb73aeb10ef1ecbffaa706139f57ad5e}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a1121f57ab48416b629dd88fa345f0514}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a1121f57ab48416b629dd88fa345f0514}} 
+\index{SingleTablePersister@{SingleTablePersister}!getDiscriminatorColumnTableName@{getDiscriminatorColumnTableName}}
+\index{getDiscriminatorColumnTableName@{getDiscriminatorColumnTableName}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getDiscriminatorColumnTableName()}{getDiscriminatorColumnTableName()}}
+{\footnotesize\ttfamily get\+Discriminator\+Column\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the name of the table that contains the discriminator column.
+
+\begin{DoxyReturn}{Returns}
+string The table name.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_abstract_entity_inheritance_persister_a1121f57ab48416b629dd88fa345f0514}{Abstract\+Entity\+Inheritance\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a2807fc97083de42584f365df7ddb683c}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a2807fc97083de42584f365df7ddb683c}} 
+\index{SingleTablePersister@{SingleTablePersister}!getInsertColumnList@{getInsertColumnList}}
+\index{getInsertColumnList@{getInsertColumnList}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getInsertColumnList()}{getInsertColumnList()}}
+{\footnotesize\ttfamily get\+Insert\+Column\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the list of columns to put in the INSERT SQL statement.
+
+Subclasses should override this method to alter or change the list of columns placed in the INSERT statements used by the persister.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The list of columns. @psalm-\/return list$<$string$>$
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a2807fc97083de42584f365df7ddb683c}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a27c760021df403d2b9fe9f5779a0ba30}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a27c760021df403d2b9fe9f5779a0ba30}} 
+\index{SingleTablePersister@{SingleTablePersister}!getSelectColumnsSQL@{getSelectColumnsSQL}}
+\index{getSelectColumnsSQL@{getSelectColumnsSQL}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getSelectColumnsSQL()}{getSelectColumnsSQL()}}
+{\footnotesize\ttfamily get\+Select\+Columns\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the SQL fragment with the list of columns to select when querying for an entity in this persister.
+
+Subclasses should override this method to alter or change the select column list SQL fragment. Note that in the implementation of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister}{Basic\+Entity\+Persister}} the resulting SQL fragment is generated only once and cached in \mbox{\hyperlink{}{select\+Column\+List\+Sql}}. Subclasses may or may not do the same.
+
+\begin{DoxyReturn}{Returns}
+string The SQL fragment.
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a27c760021df403d2b9fe9f5779a0ba30}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a88fd0d312aa149fa0d910e0011a4d42a}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a88fd0d312aa149fa0d910e0011a4d42a}} 
+\index{SingleTablePersister@{SingleTablePersister}!getSelectConditionCriteriaSQL@{getSelectConditionCriteriaSQL}}
+\index{getSelectConditionCriteriaSQL@{getSelectConditionCriteriaSQL}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getSelectConditionCriteriaSQL()}{getSelectConditionCriteriaSQL()}}
+{\footnotesize\ttfamily get\+Select\+Condition\+Criteria\+SQL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}}]{\$criteria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the Select Where Condition from a Criteria object.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a88fd0d312aa149fa0d910e0011a4d42a}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_abe0af0fd276f434778392d2291be9240}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_abe0af0fd276f434778392d2291be9240}} 
+\index{SingleTablePersister@{SingleTablePersister}!getSelectConditionDiscriminatorValueSQL@{getSelectConditionDiscriminatorValueSQL}}
+\index{getSelectConditionDiscriminatorValueSQL@{getSelectConditionDiscriminatorValueSQL}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getSelectConditionDiscriminatorValueSQL()}{getSelectConditionDiscriminatorValueSQL()}}
+{\footnotesize\ttfamily get\+Select\+Condition\+Discriminator\+Value\+SQL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a0f47af0ccd7c9eff67e983426d2b4eed}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a0f47af0ccd7c9eff67e983426d2b4eed}} 
+\index{SingleTablePersister@{SingleTablePersister}!getSelectConditionSQL@{getSelectConditionSQL}}
+\index{getSelectConditionSQL@{getSelectConditionSQL}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getSelectConditionSQL()}{getSelectConditionSQL()}}
+{\footnotesize\ttfamily get\+Select\+Condition\+SQL (\begin{DoxyParamCaption}\item[{array}]{\$criteria,  }\item[{}]{\$assoc = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the conditional SQL fragment used in the WHERE clause when selecting entities in this persister.
+
+Subclasses are supposed to override this method if they intend to change or alter the criteria by which entities are selected.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$assoc} & @psalm-\/param array$<$string, mixed$>$ \$criteria @psalm-\/param array$<$string, mixed$>$$\vert$null \$assoc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a0f47af0ccd7c9eff67e983426d2b4eed}{Basic\+Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a6576418787ff9311ac6b02d23b51f2d7}\label{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_single_table_persister_a6576418787ff9311ac6b02d23b51f2d7}} 
+\index{SingleTablePersister@{SingleTablePersister}!getSQLTableAlias@{getSQLTableAlias}}
+\index{getSQLTableAlias@{getSQLTableAlias}!SingleTablePersister@{SingleTablePersister}}
+\doxysubsubsection{\texorpdfstring{getSQLTableAlias()}{getSQLTableAlias()}}
+{\footnotesize\ttfamily get\+SQLTable\+Alias (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$assoc\+Name = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Gets the SQL table alias for the given class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+string & {\em \$assoc\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL table alias.
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000020}{Todo}}]Reconsider. Binding table aliases to class names is not such a good idea. \end{DoxyRefDesc}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_basic_entity_persister_a6576418787ff9311ac6b02d23b51f2d7}{Basic\+Entity\+Persister}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Persisters/\+Entity/Single\+Table\+Persister.\+php\end{DoxyCompactItemize}

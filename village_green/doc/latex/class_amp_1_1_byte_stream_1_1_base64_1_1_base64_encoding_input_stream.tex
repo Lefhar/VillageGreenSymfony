@@ -1,0 +1,46 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream}{}\doxysection{Base64\+Encoding\+Input\+Stream Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream}\index{Base64EncodingInputStream@{Base64EncodingInputStream}}
+Inheritance diagram for Base64\+Encoding\+Input\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream_a0c106514293f57eceeedafe9aef6d6ad}\label{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream_a0c106514293f57eceeedafe9aef6d6ad}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream}{Input\+Stream}} \$source)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_byte_stream_1_1_base64_1_1_base64_encoding_input_stream_a64571309bfb3238c65fd3c2898f92440}} 
+\index{Base64EncodingInputStream@{Base64EncodingInputStream}!read@{read}}
+\index{read@{read}!Base64EncodingInputStream@{Base64EncodingInputStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Resolves with a string when new data is available or {\ttfamily null} if the stream has closed.
+\end{DoxyReturn}
+@psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_pending_read_error}{Pending\+Read\+Error}}} & Thrown if another read operation is still pending. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/\+Base64/Base64\+Encoding\+Input\+Stream.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+{\ttfamily amphp/socket} is a socket library for establishing and encrypting non-\/blocking sockets PHP based on \href{https://github.com/amphp/amp}{\texttt{ Amp}}.\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md86}{}\doxysection{Installation}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md86}
+This package can be installed as a \href{https://getcomposer.org/}{\texttt{ Composer}} dependency.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require amphp/socket}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md87}{}\doxysection{Documentation}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md87}
+Documentation can be found on \href{https://amphp.org/socket}{\texttt{ amphp.\+org}} as well as in the \href{./docs}{\texttt{ {\ttfamily ./docs}}} directory.\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md88}{}\doxysection{Examples}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md88}
+You can find more examples in the \href{./examples}{\texttt{ {\ttfamily ./examples}}} directory.\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md89}{}\doxysubsubsection{Client Example}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md89}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php \textcolor{comment}{// basic (and dumb) HTTP client}}
+\DoxyCodeLine{}
+\DoxyCodeLine{require \_\_DIR\_\_ . \textcolor{stringliteral}{'/../vendor/autoload.php'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// This is a very simple HTTP client that just prints the response without parsing.}}
+\DoxyCodeLine{\textcolor{comment}{// league/uri-\/schemes required for this example.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{use Amp\(\backslash\)ByteStream;}
+\DoxyCodeLine{use \mbox{\hyperlink{namespace_amp_1_1_loop}{Amp\(\backslash\)Loop}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_amp_1_1_socket_1_1_client_tls_context}{Amp\(\backslash\)Socket\(\backslash\)ClientTlsContext}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Amp\(\backslash\)Socket\(\backslash\)ConnectContext}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Amp\(\backslash\)Socket\(\backslash\)EncryptableSocket}};}
+\DoxyCodeLine{use League\(\backslash\)Uri;}
+\DoxyCodeLine{use \textcolor{keyword}{function} Amp\(\backslash\)Socket\(\backslash\)connect;}
+\DoxyCodeLine{}
+\DoxyCodeLine{Loop::run(\textcolor{keyword}{static} \textcolor{keyword}{function} () use (\$argv) \{}
+\DoxyCodeLine{    \$stdout = ByteStream\(\backslash\)getStdout();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\(\backslash\)count(\$argv) !== 2) \{}
+\DoxyCodeLine{        yield \$stdout-\/>write(\textcolor{stringliteral}{'Usage: examples/simple-\/http-\/client.php <url>'} . PHP\_EOL);}
+\DoxyCodeLine{        exit(1);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$uri = Uri\(\backslash\)Http::createFromString(\$argv[1]);}
+\DoxyCodeLine{    \$host = \$uri-\/>getHost();}
+\DoxyCodeLine{    \$port = \$uri-\/>getPort() ?? (\$uri-\/>getScheme() === \textcolor{stringliteral}{'https'} ? 443 : 80);}
+\DoxyCodeLine{    \$path = \$uri-\/>getPath() ?: \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$connectContext = (\textcolor{keyword}{new} ConnectContext)}
+\DoxyCodeLine{        -\/>withTlsContext(\textcolor{keyword}{new} ClientTlsContext(\$host));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$socket = yield connect(\$host . \textcolor{charliteral}{':'} . \$port, \$connectContext);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\$uri-\/>getScheme() === \textcolor{stringliteral}{'https'}) \{}
+\DoxyCodeLine{        yield \$socket-\/>setupTls();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    yield \$socket-\/>write(\textcolor{stringliteral}{"{}GET \{\$path\} HTTP/1.1\(\backslash\)r\(\backslash\)nHost: \$host\(\backslash\)r\(\backslash\)nConnection: close\(\backslash\)r\(\backslash\)n\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} (\textcolor{keyword}{null} !== \$chunk = yield \$socket-\/>read()) \{}
+\DoxyCodeLine{        yield \$stdout-\/>write(\$chunk);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// If the promise returned from `read()` resolves to `null`, the socket closed and we're done.}}
+\DoxyCodeLine{    \textcolor{comment}{// In this case you can also use `yield Amp\(\backslash\)ByteStream\(\backslash\)pipe(\$socket, \$stdout)` instead,}}
+\DoxyCodeLine{    \textcolor{comment}{// but we want to demonstrate the `read()` method here.}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md90}{}\doxysubsubsection{Server Example}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md90}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php \textcolor{comment}{// basic (and dumb) HTTP server}}
+\DoxyCodeLine{}
+\DoxyCodeLine{require \_\_DIR\_\_ . \textcolor{stringliteral}{'/../vendor/autoload.php'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// This is a very simple HTTP server that just prints a message to each client that connects.}}
+\DoxyCodeLine{\textcolor{comment}{// It doesn't check whether the client sent an HTTP request.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// You might notice that your browser opens several connections instead of just one,}}
+\DoxyCodeLine{\textcolor{comment}{// even when only making one request.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{namespace_amp_1_1_loop}{Amp\(\backslash\)Loop}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket}{Amp\(\backslash\)Socket\(\backslash\)ResourceSocket}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_amp_1_1_socket_1_1_server}{Amp\(\backslash\)Socket\(\backslash\)Server}};}
+\DoxyCodeLine{use \textcolor{keyword}{function} Amp\(\backslash\)asyncCoroutine;}
+\DoxyCodeLine{}
+\DoxyCodeLine{Loop::run(\textcolor{keyword}{static} \textcolor{keyword}{function} () \{}
+\DoxyCodeLine{    \$clientHandler = asyncCoroutine(\textcolor{keyword}{static} \textcolor{keyword}{function} (ResourceSocket \$socket) \{}
+\DoxyCodeLine{        \$address = \$socket-\/>getRemoteAddress();}
+\DoxyCodeLine{        \$ip = \$address-\/>getHost();}
+\DoxyCodeLine{        \$port = \$address-\/>getPort();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        echo \textcolor{stringliteral}{"{}Accepted connection from \{\$address\}."{}} . PHP\_EOL;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$body = \textcolor{stringliteral}{"{}Hey, your IP is \{\$ip\} and your local port used is \{\$port\}."{}};}
+\DoxyCodeLine{        \$bodyLength = \(\backslash\)strlen(\$body);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$req = \textcolor{stringliteral}{"{}HTTP/1.1 200 OK\(\backslash\)r\(\backslash\)nConnection: close\(\backslash\)r\(\backslash\)nContent-\/Length: \{\$bodyLength\}\(\backslash\)r\(\backslash\)n\(\backslash\)r\(\backslash\)n\{\$body\}"{}};}
+\DoxyCodeLine{        yield \$socket-\/>end(\$req);}
+\DoxyCodeLine{    \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$server = Server::listen(\textcolor{stringliteral}{'127.0.0.1:0'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    echo \textcolor{stringliteral}{'Listening for new connections on '} . \$server-\/>getAddress() . \textcolor{stringliteral}{' ...'} . PHP\_EOL;}
+\DoxyCodeLine{    echo \textcolor{stringliteral}{'Open your browser and visit http://'} . \$server-\/>getAddress() . \textcolor{charliteral}{'/'} . PHP\_EOL;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} (\$socket = yield \$server-\/>accept()) \{}
+\DoxyCodeLine{        \$clientHandler(\$socket);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md91}{}\doxysection{Security}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md91}
+If you discover any security related issues, please email \href{mailto:me@kelunik.com}{\texttt{ {\ttfamily me@kelunik.\+com}}} instead of using the issue tracker.\hypertarget{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md92}{}\doxysection{License}\label{md_vendor_amphp_socket__r_e_a_d_m_e_autotoc_md92}
+The MIT License (MIT). Please see \href{./LICENSE}{\texttt{ {\ttfamily LICENSE}}} for more information. 

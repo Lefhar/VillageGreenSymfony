@@ -1,0 +1,68 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator}{}\doxysection{Table\+Generator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator}\index{TableGenerator@{TableGenerator}}
+Inheritance diagram for Table\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_a0377e868aa60d0473592189b52c5d944}{\+\_\+\+\_\+construct}} (\$table\+Name, \$sequence\+Name=\textquotesingle{}default\textquotesingle{}, \$allocation\+Size=10)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{generate\+Id}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \$entity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Id generator that uses a single-\/row database table and a hi/lo algorithm.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000226}{Deprecated}}]no replacement planned \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_a0377e868aa60d0473592189b52c5d944}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_a0377e868aa60d0473592189b52c5d944}} 
+\index{TableGenerator@{TableGenerator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TableGenerator@{TableGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$table\+Name,  }\item[{}]{\$sequence\+Name = {\ttfamily \textquotesingle{}default\textquotesingle{}},  }\item[{}]{\$allocation\+Size = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$table\+Name} & \\
+\hline
+string & {\em \$sequence\+Name} & \\
+\hline
+int & {\em \$allocation\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_aedf4d3ef1fbd187d6777ca599a16d39f}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_aedf4d3ef1fbd187d6777ca599a16d39f}} 
+\index{TableGenerator@{TableGenerator}!generateId@{generateId}}
+\index{generateId@{generateId}!TableGenerator@{TableGenerator}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily generate\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Generates an identifier for an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object | null & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Abstract\+Id\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Id/Table\+Generator.\+php\end{DoxyCompactItemize}

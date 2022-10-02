@@ -1,0 +1,93 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator}{}\doxysection{Abstract\+Id\+Generator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator}\index{AbstractIdGenerator@{AbstractIdGenerator}}
+Inheritance diagram for Abstract\+Id\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a6e1f884a7073798f178bd0c7e0921711}{generate}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} \$em, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{generate\+Id}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a73b0299e640aa8f9e6da511f81830510}{is\+Post\+Insert\+Generator}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a6e1f884a7073798f178bd0c7e0921711}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a6e1f884a7073798f178bd0c7e0921711}} 
+\index{AbstractIdGenerator@{AbstractIdGenerator}!generate@{generate}}
+\index{generate@{generate}!AbstractIdGenerator@{AbstractIdGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily generate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}}]{\$em,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Generates an identifier for an entity.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000225}{Deprecated}}]Call \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{generate\+Id()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+object | null & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_id_generator_1_1_ulid_generator_a6e1f884a7073798f178bd0c7e0921711}{Ulid\+Generator}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_id_generator_1_1_uuid_generator_a6e1f884a7073798f178bd0c7e0921711}{Uuid\+Generator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}} 
+\index{AbstractIdGenerator@{AbstractIdGenerator}!generateId@{generateId}}
+\index{generateId@{generateId}!AbstractIdGenerator@{AbstractIdGenerator}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily generate\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Generates an identifier for an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object | null & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_assigned_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Assigned\+Generator}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Big\+Integer\+Identity\+Generator}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_identity_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Identity\+Generator}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_sequence_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Sequence\+Generator}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_table_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Table\+Generator}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_uuid_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Uuid\+Generator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a73b0299e640aa8f9e6da511f81830510}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a73b0299e640aa8f9e6da511f81830510}} 
+\index{AbstractIdGenerator@{AbstractIdGenerator}!isPostInsertGenerator@{isPostInsertGenerator}}
+\index{isPostInsertGenerator@{isPostInsertGenerator}!AbstractIdGenerator@{AbstractIdGenerator}}
+\doxysubsubsection{\texorpdfstring{isPostInsertGenerator()}{isPostInsertGenerator()}}
+{\footnotesize\ttfamily is\+Post\+Insert\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets whether this generator is a post-\/insert generator which means that \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{generate\+Id()}} must be called after the entity has been inserted into the database.
+
+By default, this method returns FALSE. Generators that have this requirement must override this method and return TRUE.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a73b0299e640aa8f9e6da511f81830510}{Big\+Integer\+Identity\+Generator}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_identity_generator_a73b0299e640aa8f9e6da511f81830510}{Identity\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Id/Abstract\+Id\+Generator.\+php\end{DoxyCompactItemize}

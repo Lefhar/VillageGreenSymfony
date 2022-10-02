@@ -1,0 +1,117 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args}{}\doxysection{Schema\+Create\+Table\+Event\+Args Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args}\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+Inheritance diagram for Schema\+Create\+Table\+Event\+Args\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_aa29d878ff1d674d39587d91dc3577167}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table, array \$columns, array \$options, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_aa0dd4bf57d57bc2a3697e40c9f6bddce}{get\+Table}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a6287262cb9628d7a89d8fc16dcb51177}{get\+Columns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_accec9beff2ce6cd137d37f5f902a42b1}{get\+Platform}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a16e93a1f04fdc5ebed520956f2679b84}{add\+Sql}} (\$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_ad53d6d06affd7337d46e4efce0f6b2a1}{get\+Sql}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Event Arguments used when SQL queries for creating tables are generated inside \{\begin{DoxySeeAlso}{See also}
+Abstract\+Platform\}. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_aa29d878ff1d674d39587d91dc3577167}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_aa29d878ff1d674d39587d91dc3577167}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table,  }\item[{array}]{\$columns,  }\item[{array}]{\$options,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$columns} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a16e93a1f04fdc5ebed520956f2679b84}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a16e93a1f04fdc5ebed520956f2679b84}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!addSql@{addSql}}
+\index{addSql@{addSql}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{addSql()}{addSql()}}
+{\footnotesize\ttfamily add\+Sql (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+Passing multiple SQL statements as an array is deprecated. Pass each statement as an individual argument instead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$sql} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args}{Schema\+Create\+Table\+Event\+Args}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a6287262cb9628d7a89d8fc16dcb51177}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a6287262cb9628d7a89d8fc16dcb51177}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!getColumns@{getColumns}}
+\index{getColumns@{getColumns}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{getColumns()}{getColumns()}}
+{\footnotesize\ttfamily get\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a1a49b8dded6e91a52e2fd07195d334da}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_accec9beff2ce6cd137d37f5f902a42b1}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_accec9beff2ce6cd137d37f5f902a42b1}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!getPlatform@{getPlatform}}
+\index{getPlatform@{getPlatform}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{getPlatform()}{getPlatform()}}
+{\footnotesize\ttfamily get\+Platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Abstract\+Platform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_ad53d6d06affd7337d46e4efce0f6b2a1}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_ad53d6d06affd7337d46e4efce0f6b2a1}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!getSql@{getSql}}
+\index{getSql@{getSql}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{getSql()}{getSql()}}
+{\footnotesize\ttfamily get\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_aa0dd4bf57d57bc2a3697e40c9f6bddce}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_schema_create_table_event_args_aa0dd4bf57d57bc2a3697e40c9f6bddce}} 
+\index{SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}!getTable@{getTable}}
+\index{getTable@{getTable}!SchemaCreateTableEventArgs@{SchemaCreateTableEventArgs}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}}
+{\footnotesize\ttfamily get\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Table 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Event/Schema\+Create\+Table\+Event\+Args.\+php\end{DoxyCompactItemize}

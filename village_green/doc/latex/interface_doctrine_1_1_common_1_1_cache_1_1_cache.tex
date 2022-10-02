@@ -1,0 +1,179 @@
+\hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{}\doxysection{Cache Interface Reference}
+\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache}\index{Cache@{Cache}}
+Inheritance diagram for Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_doctrine_1_1_common_1_1_cache_1_1_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache_aca60d7c39a5e48edd6ff6ee153a803a2}{fetch}} (\$id)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a280600e357b80f3c40421ad37140ce1b}{contains}} (\$id)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a1c6d33aecca9e4ae3d0f04c7e118e96b}{save}} (\$id, \$data, \$life\+Time=0)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a2f8258add505482d7f00ea26493a5723}{delete}} (\$id)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache_acf0272219b2977c1dc461ed86e995947}{get\+Stats}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a6b46c18f70128794481df83c22c72366}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a6b46c18f70128794481df83c22c72366}} 
+const {\bfseries STATS\+\_\+\+HITS} = \textquotesingle{}hits\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a9f9c4e8e83279349c2fd5b056fe47bae}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a9f9c4e8e83279349c2fd5b056fe47bae}} 
+const {\bfseries STATS\+\_\+\+MISSES} = \textquotesingle{}misses\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a45c365a788af2b48755ea198647484d2}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a45c365a788af2b48755ea198647484d2}} 
+const {\bfseries STATS\+\_\+\+UPTIME} = \textquotesingle{}uptime\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a45b4d749184c079439d1285a4397336c}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a45b4d749184c079439d1285a4397336c}} 
+const {\bfseries STATS\+\_\+\+MEMORY\+\_\+\+USAGE} = \textquotesingle{}memory\+\_\+usage\textquotesingle{}
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_ae81ff30217c1ce7222977a21e017d5fb}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_ae81ff30217c1ce7222977a21e017d5fb}} 
+const {\bfseries STATS\+\_\+\+MEMORY\+\_\+\+AVAILABLE} = \textquotesingle{}memory\+\_\+available\textquotesingle{}
+\item 
+const \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a4d095a5172c2fd824f66510646e5dfb2}{STATS\+\_\+\+MEMORY\+\_\+\+AVAILIABLE}} = \textquotesingle{}memory\+\_\+available\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for cache drivers.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a280600e357b80f3c40421ad37140ce1b}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a280600e357b80f3c40421ad37140ce1b}} 
+\index{Cache@{Cache}!contains@{contains}}
+\index{contains@{contains}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Tests if an entry exists in the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id of the entry to check for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if a cache entry exists for the given cache id, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a280600e357b80f3c40421ad37140ce1b}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a2f8258add505482d7f00ea26493a5723}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a2f8258add505482d7f00ea26493a5723}} 
+\index{Cache@{Cache}!delete@{delete}}
+\index{delete@{delete}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Deletes a cache entry.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the cache entry was successfully deleted, FALSE otherwise. Deleting a non-\/existing entry is considered successful. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a2f8258add505482d7f00ea26493a5723}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_aca60d7c39a5e48edd6ff6ee153a803a2}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_aca60d7c39a5e48edd6ff6ee153a803a2}} 
+\index{Cache@{Cache}!fetch@{fetch}}
+\index{fetch@{fetch}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Fetches an entry from the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The id of the cache entry to fetch.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The cached data or FALSE, if no cache entry exists for the given id. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_aca60d7c39a5e48edd6ff6ee153a803a2}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_acf0272219b2977c1dc461ed86e995947}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_acf0272219b2977c1dc461ed86e995947}} 
+\index{Cache@{Cache}!getStats@{getStats}}
+\index{getStats@{getStats}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{getStats()}{getStats()}}
+{\footnotesize\ttfamily get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves cached information from the data store.
+
+The server\textquotesingle{}s statistics array has the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{hits}} Number of keys that have been requested and found present.
+\item {\bfseries{misses}} Number of items that have been requested and not found.
+\item {\bfseries{uptime}} Time that the server is running.
+\item {\bfseries{memory\+\_\+usage}} Memory used by this server to store items.
+\item {\bfseries{memory\+\_\+available}} Memory allowed to use for storage.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}$\vert$null An associative array with server\textquotesingle{}s statistics if available, NULL otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_acf0272219b2977c1dc461ed86e995947}{Cache\+Provider}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a1c6d33aecca9e4ae3d0f04c7e118e96b}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a1c6d33aecca9e4ae3d0f04c7e118e96b}} 
+\index{Cache@{Cache}!save@{save}}
+\index{save@{save}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$life\+Time = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Puts data into the cache.
+
+If a cache entry with the given id already exists, its data will be replaced.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id. \\
+\hline
+mixed & {\em \$data} & The cache entry/data. \\
+\hline
+int & {\em \$life\+Time} & The lifetime in number of seconds for this cache entry. If zero (the default), the entry never expires (although it may be deleted from the cache to make place for other entries).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the entry was successfully stored in the cache, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_cache_provider_a1c6d33aecca9e4ae3d0f04c7e118e96b}{Cache\+Provider}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a4d095a5172c2fd824f66510646e5dfb2}\label{interface_doctrine_1_1_common_1_1_cache_1_1_cache_a4d095a5172c2fd824f66510646e5dfb2}} 
+\index{Cache@{Cache}!STATS\_MEMORY\_AVAILIABLE@{STATS\_MEMORY\_AVAILIABLE}}
+\index{STATS\_MEMORY\_AVAILIABLE@{STATS\_MEMORY\_AVAILIABLE}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{STATS\_MEMORY\_AVAILIABLE}{STATS\_MEMORY\_AVAILIABLE}}
+{\footnotesize\ttfamily const STATS\+\_\+\+MEMORY\+\_\+\+AVAILIABLE = \textquotesingle{}memory\+\_\+available\textquotesingle{}}
+
+Only for backward compatibility (may be removed in next major release)
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000035}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/cache/lib/\+Doctrine/\+Common/\+Cache/Cache.\+php\end{DoxyCompactItemize}

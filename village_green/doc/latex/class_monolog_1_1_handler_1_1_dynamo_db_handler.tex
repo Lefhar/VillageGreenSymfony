@@ -1,0 +1,97 @@
+\hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler}{}\doxysection{Dynamo\+Db\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_dynamo_db_handler}\index{DynamoDbHandler@{DynamoDbHandler}}
+Inheritance diagram for Dynamo\+Db\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_dynamo_db_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_dynamo_db_handler_a12de43df1e804e481d26467a6a4a1321}{\+\_\+\+\_\+construct}} (Dynamo\+Db\+Client \$client, string \$table, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_a97a87ae294a108ebd7ff4db7c0d0ae4d}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_a97a87ae294a108ebd7ff4db7c0d0ae4d}} 
+const {\bfseries DATE\+\_\+\+FORMAT} = \textquotesingle{}Y-\/m-\/d\textbackslash{}\+TH\+:i\+:s.\+uO\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_dynamo_db_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_dynamo_db_handler_acc49209dd3a2c216e0e56ccb6ed663ec}{filter\+Empty\+Fields}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_dynamo_db_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_ad1405dc1ba2e288764378e79bff7a87d}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_ad1405dc1ba2e288764378e79bff7a87d}} 
+{\bfseries \$client}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_ae8876a14058f368335baccf35af4a22b}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_ae8876a14058f368335baccf35af4a22b}} 
+{\bfseries \$table}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_a17c8948c68aa44fa9961ae169b6a8961}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_a17c8948c68aa44fa9961ae169b6a8961}} 
+{\bfseries \$version}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_a369768c22a043f90317e923af9b64c55}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_a369768c22a043f90317e923af9b64c55}} 
+{\bfseries \$marshaler}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Amazon Dynamo\+DB handler (\href{http://aws.amazon.com/dynamodb/}{\texttt{ http\+://aws.\+amazon.\+com/dynamodb/}})
+
+\mbox{\hyperlink{}{Andrew Lawson \href{mailto:adlawson@gmail.com}{\texttt{ adlawson@gmail.\+com}} }}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_a12de43df1e804e481d26467a6a4a1321}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_a12de43df1e804e481d26467a6a4a1321}} 
+\index{DynamoDbHandler@{DynamoDbHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DynamoDbHandler@{DynamoDbHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Dynamo\+Db\+Client}]{\$client,  }\item[{string}]{\$table,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@phpstan-\/ignore-\/next-\/line
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_acc49209dd3a2c216e0e56ccb6ed663ec}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_acc49209dd3a2c216e0e56ccb6ed663ec}} 
+\index{DynamoDbHandler@{DynamoDbHandler}!filterEmptyFields@{filterEmptyFields}}
+\index{filterEmptyFields@{filterEmptyFields}!DynamoDbHandler@{DynamoDbHandler}}
+\doxysubsubsection{\texorpdfstring{filterEmptyFields()}{filterEmptyFields()}}
+{\footnotesize\ttfamily filter\+Empty\+Fields (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{DynamoDbHandler@{DynamoDbHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!DynamoDbHandler@{DynamoDbHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_dynamo_db_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_dynamo_db_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{DynamoDbHandler@{DynamoDbHandler}!write@{write}}
+\index{write@{write}!DynamoDbHandler@{DynamoDbHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record @phpstan-\/ignore-\/next-\/line
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Dynamo\+Db\+Handler.\+php\end{DoxyCompactItemize}

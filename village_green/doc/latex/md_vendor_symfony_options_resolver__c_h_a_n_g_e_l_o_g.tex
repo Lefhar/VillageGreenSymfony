@@ -1,0 +1,64 @@
+\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1695}{}\doxysection{5.\+3}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1695}
+
+\begin{DoxyItemize}
+\item Add prototype definition for nested options
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1696}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1696}
+
+\begin{DoxyItemize}
+\item added fluent configuration of options using {\ttfamily Option\+Resolver\+::define()}
+\item added {\ttfamily set\+Info()} and {\ttfamily get\+Info()} methods
+\item updated the signature of method {\ttfamily Options\+Resolver\+::set\+Deprecated()} to {\ttfamily Options\+Resolver\+::set\+Deprecation(string \$option, string \$package, string \$version, \$message)}
+\item deprecated {\ttfamily Options\+Resolver\+Introspector\+::get\+Deprecation\+Message()}, use {\ttfamily Options\+Resolver\+Introspector\+::get\+Deprecation()} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1697}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1697}
+
+\begin{DoxyItemize}
+\item added argument {\ttfamily \$trigger\+Deprecation} to {\ttfamily Options\+Resolver\+::offset\+Get()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1698}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1698}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Options\+Resolver\+::add\+Normalizer} method
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1699}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1699}
+
+\begin{DoxyItemize}
+\item added support for nested options definition
+\item added {\ttfamily set\+Deprecated} and {\ttfamily is\+Deprecated} methods
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1700}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1700}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Options\+Resolver\+Introspector} to inspect options definitions inside an {\ttfamily Options\+Resolver} instance
+\item added array of types support in allowed types (e.\+g int\mbox{[}\mbox{]})
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1701}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_options_resolver__c_h_a_n_g_e_l_o_g_autotoc_md1701}
+
+\begin{DoxyItemize}
+\item deprecated Options\+Resolver\+Interface
+\item \mbox{[}BC BREAK\mbox{]} removed \char`\"{}array\char`\"{} type hint from Options\+Resolver\+Interface methods set\+Required(), set\+Allowed\+Values(), add\+Allowed\+Values(), set\+Allowed\+Types() and add\+Allowed\+Types()
+\item added Options\+Resolver\+::set\+Default()
+\item added Options\+Resolver\+::has\+Default()
+\item added Options\+Resolver\+::set\+Normalizer()
+\item added Options\+Resolver\+::is\+Required()
+\item added Options\+Resolver\+::get\+Required\+Options()
+\item added Options\+Resolver\+::is\+Missing()
+\item added Options\+Resolver\+::get\+Missing\+Options()
+\item added Options\+Resolver\+::set\+Defined()
+\item added Options\+Resolver\+::is\+Defined()
+\item added Options\+Resolver\+::get\+Defined\+Options()
+\item added Options\+Resolver\+::remove()
+\item added Options\+Resolver\+::clear()
+\item deprecated Options\+Resolver\+::replace\+Defaults()
+\item deprecated Options\+Resolver\+::set\+Optional() in favor of set\+Defined()
+\item deprecated Options\+Resolver\+::is\+Known() in favor of is\+Defined()
+\item \mbox{[}BC BREAK\mbox{]} Options\+Resolver\+::is\+Required() returns true now if a required option has a default value set
+\item \mbox{[}BC BREAK\mbox{]} merged Options into Options\+Resolver and turned Options into an interface
+\item deprecated Options\+::overload() (now in Options\+Resolver)
+\item deprecated Options\+::set() (now in Options\+Resolver)
+\item deprecated Options\+::get() (now in Options\+Resolver)
+\item deprecated Options\+::has() (now in Options\+Resolver)
+\item deprecated Options\+::replace() (now in Options\+Resolver)
+\item \mbox{[}BC BREAK\mbox{]} Options\+::get() (now in Options\+Resolver) can only be used within lazy option/normalizer closures now
+\item \mbox{[}BC BREAK\mbox{]} removed Traversable interface from Options since using within lazy option/normalizer closures resulted in exceptions
+\item \mbox{[}BC BREAK\mbox{]} removed Options\+::all() since using within lazy option/normalizer closures resulted in exceptions
+\item \mbox{[}BC BREAK\mbox{]} Option\+Definition\+Exception now extends Logic\+Exception instead of Runtime\+Exception
+\item \mbox{[}BC BREAK\mbox{]} normalizers are not executed anymore for unset options
+\item normalizers are executed after validating the options now
+\item \mbox{[}BC BREAK\mbox{]} an Undefined\+Options\+Exception is now thrown instead of an Invalid\+Options\+Exception when non-\/existing options are passed 
+\end{DoxyItemize}

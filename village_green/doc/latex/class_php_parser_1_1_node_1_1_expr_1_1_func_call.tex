@@ -1,0 +1,105 @@
+\hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call}{}\doxysection{Func\+Call Class Reference}
+\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call}\index{FuncCall@{FuncCall}}
+Inheritance diagram for Func\+Call\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_php_parser_1_1_node_1_1_expr_1_1_func_call}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a77d42e549d0ca66de6eeacc2f246a0c5}{\+\_\+\+\_\+construct}} (\$name, array \$args=\mbox{[}$\,$\mbox{]}, array \$attributes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a7e06a91cc526dc52826d18313e64798a}{get\+Sub\+Node\+Names}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a708bac503954c8db0ecc0ed451946b67}{get\+Raw\+Args}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call_ab2fc40d43824ea3e1ce5d86dee0d763b}} 
+{\bfseries \$name}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a67e94494731d99ed23b123e95175bc10}\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a67e94494731d99ed23b123e95175bc10}} 
+{\bfseries \$args}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a77d42e549d0ca66de6eeacc2f246a0c5}\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a77d42e549d0ca66de6eeacc2f246a0c5}} 
+\index{FuncCall@{FuncCall}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FuncCall@{FuncCall}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array}]{\$args = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs a function call node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Node\textbackslash{}\+Name | \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr}{Expr}} & {\em \$name} & Function name \\
+\hline
+ & {\em array$<$\+Node} & \\
+\hline
+\end{DoxyParams}
+Arg$\vert$\+Node\textbackslash{}\+Variadic\+Placeholder\texorpdfstring{$>$}{>} \$args Arguments 
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$attributes} & Additional attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a708bac503954c8db0ecc0ed451946b67}\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a708bac503954c8db0ecc0ed451946b67}} 
+\index{FuncCall@{FuncCall}!getRawArgs@{getRawArgs}}
+\index{getRawArgs@{getRawArgs}!FuncCall@{FuncCall}}
+\doxysubsubsection{\texorpdfstring{getRawArgs()}{getRawArgs()}}
+{\footnotesize\ttfamily get\+Raw\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return raw arguments, which may be actual Args, or Variadic\+Placeholders for first-\/class callables.
+
+\begin{DoxyReturn}{Returns}
+array\texorpdfstring{$<$}{<}Arg$\vert$\+Variadic\+Placeholder\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a708bac503954c8db0ecc0ed451946b67}{Call\+Like}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a7e06a91cc526dc52826d18313e64798a}\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a7e06a91cc526dc52826d18313e64798a}} 
+\index{FuncCall@{FuncCall}!getSubNodeNames@{getSubNodeNames}}
+\index{getSubNodeNames@{getSubNodeNames}!FuncCall@{FuncCall}}
+\doxysubsubsection{\texorpdfstring{getSubNodeNames()}{getSubNodeNames()}}
+{\footnotesize\ttfamily get\+Sub\+Node\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of the sub nodes.
+
+\begin{DoxyReturn}{Returns}
+array Names of sub nodes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a7e06a91cc526dc52826d18313e64798a}{Node}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a830b5c75df72b32396701bc563fbe3c7}\label{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{FuncCall@{FuncCall}!getType@{getType}}
+\index{getType@{getType}!FuncCall@{FuncCall}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the type of the node.
+
+\begin{DoxyReturn}{Returns}
+string Type of the node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a830b5c75df72b32396701bc563fbe3c7}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Expr/Func\+Call.\+php\end{DoxyCompactItemize}

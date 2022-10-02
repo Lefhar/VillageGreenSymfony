@@ -1,0 +1,100 @@
+\hypertarget{class_monolog_1_1_handler_1_1_cube_handler}{}\doxysection{Cube\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_cube_handler}\index{CubeHandler@{CubeHandler}}
+Inheritance diagram for Cube\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_cube_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_cube_handler_a45823f223a9df0676093d52600e256cf}{\+\_\+\+\_\+construct}} (string \$url, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_cube_handler_afad3a938e1e04688d96840c5d5e2e8a4}{connect\+Udp}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_cube_handler_ab4f37ac53c020c74f6b780d826f829c4}{connect\+Http}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_cube_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Logs to Cube.
+
+\mbox{\hyperlink{}{Wan Chen \href{mailto:kami@kamisama.me}{\texttt{ kami@kamisama.\+me}} }}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_cube_handler_a45823f223a9df0676093d52600e256cf}\label{class_monolog_1_1_handler_1_1_cube_handler_a45823f223a9df0676093d52600e256cf}} 
+\index{CubeHandler@{CubeHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CubeHandler@{CubeHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$url,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Create a Cube handler
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception when given url is not a valid url. A valid url must consist of three parts \+: protocol\+://host\+:port Only valid protocols used by Cube are http and udp 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_cube_handler_ab4f37ac53c020c74f6b780d826f829c4}\label{class_monolog_1_1_handler_1_1_cube_handler_ab4f37ac53c020c74f6b780d826f829c4}} 
+\index{CubeHandler@{CubeHandler}!connectHttp@{connectHttp}}
+\index{connectHttp@{connectHttp}!CubeHandler@{CubeHandler}}
+\doxysubsubsection{\texorpdfstring{connectHttp()}{connectHttp()}}
+{\footnotesize\ttfamily connect\+Http (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Establish a connection to an http server
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Logic\+Exception when unable to connect to the socket 
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & when no curl extension \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_cube_handler_afad3a938e1e04688d96840c5d5e2e8a4}\label{class_monolog_1_1_handler_1_1_cube_handler_afad3a938e1e04688d96840c5d5e2e8a4}} 
+\index{CubeHandler@{CubeHandler}!connectUdp@{connectUdp}}
+\index{connectUdp@{connectUdp}!CubeHandler@{CubeHandler}}
+\doxysubsubsection{\texorpdfstring{connectUdp()}{connectUdp()}}
+{\footnotesize\ttfamily connect\+Udp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Establish a connection to an UDP socket
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Logic\+Exception when unable to connect to the socket 
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & when there is no socket extension \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_cube_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_cube_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{CubeHandler@{CubeHandler}!write@{write}}
+\index{write@{write}!CubeHandler@{CubeHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Cube\+Handler.\+php\end{DoxyCompactItemize}

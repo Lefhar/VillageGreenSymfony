@@ -1,0 +1,98 @@
+\hypertarget{interface_amp_1_1_socket_1_1_socket}{}\doxysection{Socket Interface Reference}
+\label{interface_amp_1_1_socket_1_1_socket}\index{Socket@{Socket}}
+Inheritance diagram for Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_socket_1_1_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_aa46bdf577fe031bf1287312dfbebb9a6}{reference}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_a8098142e52cdc2bf80db924208412038}{unreference}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_a80d6b5b35631ea18a4316608bbbc8aea}{is\+Closed}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_a7a15334d1688d75af2bf16436f26f15d}{get\+Local\+Address}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_ac9df36d4099edaa6a9a9a1b344d1bded}{get\+Remote\+Address}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{interface_amp_1_1_socket_1_1_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{Socket@{Socket}!close@{close}}
+\index{close@{close}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Force closes the socket, failing any pending reads or writes. \mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_a7a15334d1688d75af2bf16436f26f15d}\label{interface_amp_1_1_socket_1_1_socket_a7a15334d1688d75af2bf16436f26f15d}} 
+\index{Socket@{Socket}!getLocalAddress@{getLocalAddress}}
+\index{getLocalAddress@{getLocalAddress}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getLocalAddress()}{getLocalAddress()}}
+{\footnotesize\ttfamily get\+Local\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_ac9df36d4099edaa6a9a9a1b344d1bded}\label{interface_amp_1_1_socket_1_1_socket_ac9df36d4099edaa6a9a9a1b344d1bded}} 
+\index{Socket@{Socket}!getRemoteAddress@{getRemoteAddress}}
+\index{getRemoteAddress@{getRemoteAddress}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getRemoteAddress()}{getRemoteAddress()}}
+{\footnotesize\ttfamily get\+Remote\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_a80d6b5b35631ea18a4316608bbbc8aea}\label{interface_amp_1_1_socket_1_1_socket_a80d6b5b35631ea18a4316608bbbc8aea}} 
+\index{Socket@{Socket}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether the socket has been closed.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{true} }
+
+\end{DoxyCode}
+ if closed, otherwise 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{false} }
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_aa46bdf577fe031bf1287312dfbebb9a6}\label{interface_amp_1_1_socket_1_1_socket_aa46bdf577fe031bf1287312dfbebb9a6}} 
+\index{Socket@{Socket}!reference@{reference}}
+\index{reference@{reference}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+References the read watcher, so the loop keeps running in case there\textquotesingle{}s an active read.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}{Loop\+::reference()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_a8098142e52cdc2bf80db924208412038}\label{interface_amp_1_1_socket_1_1_socket_a8098142e52cdc2bf80db924208412038}} 
+\index{Socket@{Socket}!unreference@{unreference}}
+\index{unreference@{unreference}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Unreferences the read watcher, so the loop doesn\textquotesingle{}t keep running even if there are active reads.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}{Loop\+::unreference()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Socket.\+php\end{DoxyCompactItemize}

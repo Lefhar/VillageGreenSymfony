@@ -1,0 +1,47 @@
+Security provides an infrastructure for sophisticated authorization systems, which makes it possible to easily separate the actual authorization logic from so called user providers that hold the users credentials.\hypertarget{md_vendor_symfony_security_core__r_e_a_d_m_e_autotoc_md1808}{}\doxysection{Getting Started}\label{md_vendor_symfony_security_core__r_e_a_d_m_e_autotoc_md1808}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ composer require symfony/security-\/core}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_authentication_1_1_authentication_trust_resolver}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Authentication\(\backslash\)AuthenticationTrustResolver}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_authentication_1_1_token_1_1_username_password_token}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Authentication\(\backslash\)Token\(\backslash\)UsernamePasswordToken}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_authorization_1_1_access_decision_manager}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Authorization\(\backslash\)AccessDecisionManager}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_authorization_1_1_voter_1_1_authenticated_voter}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Authorization\(\backslash\)Voter\(\backslash\)AuthenticatedVoter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_authorization_1_1_voter_1_1_role_voter}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Authorization\(\backslash\)Voter\(\backslash\)RoleVoter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_authorization_1_1_voter_1_1_role_hierarchy_voter}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Authorization\(\backslash\)Voter\(\backslash\)RoleHierarchyVoter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_exception_1_1_access_denied_exception}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Exception\(\backslash\)AccessDeniedException}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_security_1_1_core_1_1_role_1_1_role_hierarchy}{Symfony\(\backslash\)Component\(\backslash\)Security\(\backslash\)Core\(\backslash\)Role\(\backslash\)RoleHierarchy}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$accessDecisionManager = \textcolor{keyword}{new} AccessDecisionManager([}
+\DoxyCodeLine{    \textcolor{keyword}{new} AuthenticatedVoter(\textcolor{keyword}{new} AuthenticationTrustResolver()),}
+\DoxyCodeLine{    \textcolor{keyword}{new} RoleVoter(),}
+\DoxyCodeLine{    \textcolor{keyword}{new} RoleHierarchyVoter(\textcolor{keyword}{new} RoleHierarchy([}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ROLE\_ADMIN'} => [\textcolor{stringliteral}{'ROLE\_USER'}],}
+\DoxyCodeLine{    ]))}
+\DoxyCodeLine{]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$user = new \(\backslash\)App\(\backslash\)Entity\(\backslash\)User(...);}
+\DoxyCodeLine{\$token = \textcolor{keyword}{new} UsernamePasswordToken(\$user, \textcolor{stringliteral}{'main'}, \$user-\/>getRoles());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (!\$accessDecisionManager-\/>decide(\$token, [\textcolor{stringliteral}{'ROLE\_ADMIN'}])) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{throw} \textcolor{keyword}{new} AccessDeniedException();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfony_security_core__r_e_a_d_m_e_autotoc_md1809}{}\doxysection{Sponsor}\label{md_vendor_symfony_security_core__r_e_a_d_m_e_autotoc_md1809}
+The Security component for Symfony 5.\+4/6.0 is \href{https://symfony.com/backers}{\texttt{ backed}} by \href{https://symfonycasts.com}{\texttt{ Symfony\+Casts}}.
+
+Learn Symfony faster by watching real projects being built and actively coding along with them. Symfony\+Casts bridges that learning gap, bringing you video tutorials and coding challenges. Code on!
+
+Help Symfony by \href{https://symfony.com/sponsor}{\texttt{ sponsoring}} its development!\hypertarget{md_vendor_symfony_security_core__r_e_a_d_m_e_autotoc_md1810}{}\doxysection{Resources}\label{md_vendor_symfony_security_core__r_e_a_d_m_e_autotoc_md1810}
+
+\begin{DoxyItemize}
+\item \href{https://symfony.com/doc/current/components/security.html}{\texttt{ Documentation}}
+\item \href{https://symfony.com/doc/current/contributing/index.html}{\texttt{ Contributing}}
+\item \href{https://github.com/symfony/symfony/issues}{\texttt{ Report issues}} and \href{https://github.com/symfony/symfony/pulls}{\texttt{ send Pull Requests}} in the \href{https://github.com/symfony/symfony}{\texttt{ main Symfony repository}} 
+\end{DoxyItemize}

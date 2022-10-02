@@ -1,0 +1,45 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener}{}\doxysection{Identifier\+Flattener Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener}\index{IdentifierFlattener@{IdentifierFlattener}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener_ad0dcc2d09c053469c272e1d2b6d7931e}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} \$unit\+Of\+Work, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}{Class\+Metadata\+Factory}} \$metadata\+Factory)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener_ae0f2b289a0e990752e2095116787d240}{flatten\+Identifier}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, array \$id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener}{Identifier\+Flattener}} utility now houses some of the identifier manipulation logic from unit of work, so that it can be re-\/used elsewhere. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener_ad0dcc2d09c053469c272e1d2b6d7931e}\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener_ad0dcc2d09c053469c272e1d2b6d7931e}} 
+\index{IdentifierFlattener@{IdentifierFlattener}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!IdentifierFlattener@{IdentifierFlattener}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}}]{\$unit\+Of\+Work,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_factory}{Class\+Metadata\+Factory}}}]{\$metadata\+Factory }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener}{Identifier\+Flattener}} instance, bound to the given \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener_ae0f2b289a0e990752e2095116787d240}\label{class_doctrine_1_1_o_r_m_1_1_utility_1_1_identifier_flattener_ae0f2b289a0e990752e2095116787d240}} 
+\index{IdentifierFlattener@{IdentifierFlattener}!flattenIdentifier@{flattenIdentifier}}
+\index{flattenIdentifier@{flattenIdentifier}!IdentifierFlattener@{IdentifierFlattener}}
+\doxysubsubsection{\texorpdfstring{flattenIdentifier()}{flattenIdentifier()}}
+{\footnotesize\ttfamily flatten\+Identifier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{array}]{\$id }\end{DoxyParamCaption})}
+
+convert foreign identifiers into scalar foreign key values to avoid object to string conversion failures.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} @psalm-\/return array$<$string, mixed$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Utility/Identifier\+Flattener.\+php\end{DoxyCompactItemize}

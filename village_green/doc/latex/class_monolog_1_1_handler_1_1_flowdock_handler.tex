@@ -1,0 +1,133 @@
+\hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler}{}\doxysection{Flowdock\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_flowdock_handler}\index{FlowdockHandler@{FlowdockHandler}}
+Inheritance diagram for Flowdock\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_flowdock_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_a84f34f49676120fce26f80806fba9c61}{\+\_\+\+\_\+construct}} (string \$api\+Token, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler_a596e4a74be871d4d1c620d33e4079b3f}\label{class_monolog_1_1_handler_1_1_flowdock_handler_a596e4a74be871d4d1c620d33e4079b3f}} 
+{\bfseries \$api\+Token}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sends notifications through the Flowdock push API
+
+This must be configured with a Flowdock\+Formatter instance via \mbox{\hyperlink{class_monolog_1_1_handler_1_1_flowdock_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter()}}
+
+Notes\+: API token -\/ Flowdock API token
+
+\begin{DoxyAuthor}{Author}
+Dominik Liebler \href{mailto:liebler.dominik@gmail.com}{\texttt{ liebler.\+dominik@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.flowdock.com/api/push}{\texttt{ https\+://www.\+flowdock.\+com/api/push}}
+\end{DoxySeeAlso}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler_a84f34f49676120fce26f80806fba9c61}\label{class_monolog_1_1_handler_1_1_flowdock_handler_a84f34f49676120fce26f80806fba9c61}} 
+\index{FlowdockHandler@{FlowdockHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FlowdockHandler@{FlowdockHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$api\+Token,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & if Open\+SSL is missing \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_a682038de5493ba733e8294793057e834}{Socket\+Handler}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_flowdock_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{FlowdockHandler@{FlowdockHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!FlowdockHandler@{FlowdockHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_flowdock_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{FlowdockHandler@{FlowdockHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!FlowdockHandler@{FlowdockHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the default formatter. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_flowdock_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{FlowdockHandler@{FlowdockHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!FlowdockHandler@{FlowdockHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_flowdock_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_flowdock_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{FlowdockHandler@{FlowdockHandler}!write@{write}}
+\index{write@{write}!FlowdockHandler@{FlowdockHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Connect (if necessary) and write to the socket
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_afa17604fd899fffdc1ee326afe177cb5}{Socket\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Flowdock\+Handler.\+php\end{DoxyCompactItemize}

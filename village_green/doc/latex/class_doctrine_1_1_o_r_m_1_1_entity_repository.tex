@@ -1,0 +1,335 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository}{}\doxysection{Entity\+Repository Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_entity_repository}\index{EntityRepository@{EntityRepository}}
+Inheritance diagram for Entity\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doctrine_1_1_o_r_m_1_1_entity_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a7a287f84760f28e7a99f2bc19a44a7ee}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Mapping\textbackslash{}\+Class\+Metadata}} \$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a815deb6f432e39d6fe90253940646945}{create\+Query\+Builder}} (\$alias, \$index\+By=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a8cc3dd5177f6bb7529ad19aa7a10044d}{create\+Result\+Set\+Mapping\+Builder}} (\$alias)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_aa65f2dc54fba2b5309f49193c8da2f09}{create\+Named\+Query}} (\$query\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_aedb47fcab37a1cdbce99decf9e7877d7}{create\+Native\+Named\+Query}} (\$query\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a80d0f04714507008ba27ddd444debb09}{find}} (\$id, \$lock\+Mode=null, \$lock\+Version=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a73a1b0348919b6755e4f69dcc70eba64}{find\+All}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a1f9675c79cf0a214a9de751a1d632669}{find\+By}} (array \$criteria, ?array \$order\+By=null, \$limit=null, \$offset=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_ad38fcff61d5b7940cf9b4911e16b1e39}{find\+One\+By}} (array \$criteria, ?array \$order\+By=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_aac0f9c88ca5e1bacd5816e9039290610}{count}} (array \$criteria)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_acfa40ec504c3c792c3b84cf2f1af511d}{\+\_\+\+\_\+call}} (\$method, \$arguments)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}{get\+Class\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_acb78394bf2d5e907c3286db303595970}{matching}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} \$criteria)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_a21ab394d853033baf8446dd7175e3589}{get\+Entity\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_ae2b0e1dbe7640aefaf7d54c6a94d08fe}{get\+Entity\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository_acee8d67449cfa0e90caae422b541e6d0}{get\+Class\+Metadata}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_ac596fad47bf5f76a886eba924ec35485}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_ac596fad47bf5f76a886eba924ec35485}} 
+{\bfseries \$\+\_\+entity\+Name}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_afab6dedfbe4f168ed4f4786c838092fd}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_afab6dedfbe4f168ed4f4786c838092fd}} 
+{\bfseries \$\+\_\+em}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a5f1220d251c517b8035d671cc55d7e68}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a5f1220d251c517b8035d671cc55d7e68}} 
+{\bfseries \$\+\_\+class}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository}{Entity\+Repository}} serves as a repository for entities with generic as well as business specific methods for retrieving entities.
+
+This class is designed for inheritance and users can subclass this class to write their own repositories with business-\/specific methods to locate entities.
+
+@template T @template-\/implements Selectable$<$int,\+T$>$ @template-\/implements Object\+Repository$<$\+T$>$ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a7a287f84760f28e7a99f2bc19a44a7ee}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a7a287f84760f28e7a99f2bc19a44a7ee}} 
+\index{EntityRepository@{EntityRepository}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Mapping\textbackslash{}\+Class\+Metadata}}}]{\$class }\end{DoxyParamCaption})}
+
+Initializes a new {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_repository}{Entity\+Repository}}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_acfa40ec504c3c792c3b84cf2f1af511d}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_acfa40ec504c3c792c3b84cf2f1af511d}} 
+\index{EntityRepository@{EntityRepository}!\_\_call@{\_\_call}}
+\index{\_\_call@{\_\_call}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{\_\_call()}{\_\_call()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+call (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$arguments }\end{DoxyParamCaption})}
+
+Adds support for magic method calls.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$arguments} & @psalm-\/param list$<$mixed$>$ \$arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The returned value from the resolved method.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Method\+Call\+Exception} & If the method called is invalid. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_aa821bec12eaa7e0f649397c9675ff505}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{EntityRepository@{EntityRepository}!clear@{clear}}
+\index{clear@{clear}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears the repository, causing all managed entities to become detached.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000224}{Deprecated}}]2.\+8 This method is being removed from the ORM and won\textquotesingle{}t have any replacement\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_aac0f9c88ca5e1bacd5816e9039290610}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_aac0f9c88ca5e1bacd5816e9039290610}} 
+\index{EntityRepository@{EntityRepository}!count@{count}}
+\index{count@{count}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}\item[{array}]{\$criteria }\end{DoxyParamCaption})}
+
+Counts entities by a set of criteria.
+
+@psalm-\/param array$<$string, mixed$>$ \$criteria
+
+\begin{DoxyReturn}{Returns}
+int The cardinality of the objects that match the given criteria.
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Add this method to {\ttfamily Object\+Repository} interface in the next major release \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_aa65f2dc54fba2b5309f49193c8da2f09}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_aa65f2dc54fba2b5309f49193c8da2f09}} 
+\index{EntityRepository@{EntityRepository}!createNamedQuery@{createNamedQuery}}
+\index{createNamedQuery@{createNamedQuery}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{createNamedQuery()}{createNamedQuery()}}
+{\footnotesize\ttfamily create\+Named\+Query (\begin{DoxyParamCaption}\item[{}]{\$query\+Name }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} instance based on a predefined metadata named query.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000222}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_aedb47fcab37a1cdbce99decf9e7877d7}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_aedb47fcab37a1cdbce99decf9e7877d7}} 
+\index{EntityRepository@{EntityRepository}!createNativeNamedQuery@{createNativeNamedQuery}}
+\index{createNativeNamedQuery@{createNativeNamedQuery}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{createNativeNamedQuery()}{createNativeNamedQuery()}}
+{\footnotesize\ttfamily create\+Native\+Named\+Query (\begin{DoxyParamCaption}\item[{}]{\$query\+Name }\end{DoxyParamCaption})}
+
+Creates a native SQL query.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000223}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$query\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query}{Native\+Query}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a815deb6f432e39d6fe90253940646945}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a815deb6f432e39d6fe90253940646945}} 
+\index{EntityRepository@{EntityRepository}!createQueryBuilder@{createQueryBuilder}}
+\index{createQueryBuilder@{createQueryBuilder}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{createQueryBuilder()}{createQueryBuilder()}}
+{\footnotesize\ttfamily create\+Query\+Builder (\begin{DoxyParamCaption}\item[{}]{\$alias,  }\item[{}]{\$index\+By = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_builder}{Query\+Builder}} instance that is prepopulated for this entity name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alias} & \\
+\hline
+string & {\em \$index\+By} & The index for the from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_builder}{Query\+Builder}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a8cc3dd5177f6bb7529ad19aa7a10044d}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a8cc3dd5177f6bb7529ad19aa7a10044d}} 
+\index{EntityRepository@{EntityRepository}!createResultSetMappingBuilder@{createResultSetMappingBuilder}}
+\index{createResultSetMappingBuilder@{createResultSetMappingBuilder}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{createResultSetMappingBuilder()}{createResultSetMappingBuilder()}}
+{\footnotesize\ttfamily create\+Result\+Set\+Mapping\+Builder (\begin{DoxyParamCaption}\item[{}]{\$alias }\end{DoxyParamCaption})}
+
+Creates a new result set mapping builder for this entity.
+
+The column naming strategy is \char`\"{}\+INCREMENT\char`\"{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result\+Set\+Mapping\+Builder 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a80d0f04714507008ba27ddd444debb09}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a80d0f04714507008ba27ddd444debb09}} 
+\index{EntityRepository@{EntityRepository}!find@{find}}
+\index{find@{find}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily find (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$lock\+Mode = {\ttfamily null},  }\item[{}]{\$lock\+Version = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Finds an entity by its primary key / identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$id} & The identifier. \\
+\hline
+int | null & {\em \$lock\+Mode} & One of the \textbackslash{}\+Doctrine\textbackslash{}\+DBAL\textbackslash{}\+Lock\+Mode\+::$\ast$ constants or NULL if no specific lock mode should be used during the search. \\
+\hline
+int | null & {\em \$lock\+Version} & The lock version. @psalm-\/param Lock\+Mode\+:\+:$\ast$$\vert$null \$lock\+Mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null The entity instance or NULL if the entity can not be found. @psalm-\/return ?T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a73a1b0348919b6755e4f69dcc70eba64}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a73a1b0348919b6755e4f69dcc70eba64}} 
+\index{EntityRepository@{EntityRepository}!findAll@{findAll}}
+\index{findAll@{findAll}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{findAll()}{findAll()}}
+{\footnotesize\ttfamily find\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Finds all entities in the repository.
+
+@psalm-\/return list$<$\+T$>$ The entities. 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_a73a1b0348919b6755e4f69dcc70eba64}{Object\+Repository}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a1f9675c79cf0a214a9de751a1d632669}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a1f9675c79cf0a214a9de751a1d632669}} 
+\index{EntityRepository@{EntityRepository}!findBy@{findBy}}
+\index{findBy@{findBy}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{findBy()}{findBy()}}
+{\footnotesize\ttfamily find\+By (\begin{DoxyParamCaption}\item[{array}]{\$criteria,  }\item[{?array}]{\$order\+By = {\ttfamily null},  }\item[{}]{\$limit = {\ttfamily null},  }\item[{}]{\$offset = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Finds entities by a set of criteria.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | null & {\em \$limit} & \\
+\hline
+int | null & {\em \$offset} & @psalm-\/param array$<$string, mixed$>$ \$criteria @psalm-\/param array$<$string, string$>$$\vert$null \$order\+By\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object\mbox{[}\mbox{]} The objects. @psalm-\/return list$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_a1f9675c79cf0a214a9de751a1d632669}{Object\+Repository}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_ad38fcff61d5b7940cf9b4911e16b1e39}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_ad38fcff61d5b7940cf9b4911e16b1e39}} 
+\index{EntityRepository@{EntityRepository}!findOneBy@{findOneBy}}
+\index{findOneBy@{findOneBy}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{findOneBy()}{findOneBy()}}
+{\footnotesize\ttfamily find\+One\+By (\begin{DoxyParamCaption}\item[{array}]{\$criteria,  }\item[{?array}]{\$order\+By = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Finds a single entity by a set of criteria.
+
+@psalm-\/param array$<$string, mixed$>$ \$criteria @psalm-\/param array$<$string, string$>$$\vert$null \$order\+By
+
+\begin{DoxyReturn}{Returns}
+object$\vert$null The entity instance or NULL if the entity can not be found. @psalm-\/return ?T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_acee8d67449cfa0e90caae422b541e6d0}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_acee8d67449cfa0e90caae422b541e6d0}} 
+\index{EntityRepository@{EntityRepository}!getClassMetadata@{getClassMetadata}}
+\index{getClassMetadata@{getClassMetadata}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{getClassMetadata()}{getClassMetadata()}}
+{\footnotesize\ttfamily get\+Class\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Mapping\textbackslash{}\+Class\+Metadata 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}} 
+\index{EntityRepository@{EntityRepository}!getClassName@{getClassName}}
+\index{getClassName@{getClassName}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{getClassName()}{getClassName()}}
+{\footnotesize\ttfamily get\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository_ab8f8ee56588ebf5091c288e44ebdfaf4}{Object\+Repository}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_ae2b0e1dbe7640aefaf7d54c6a94d08fe}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_ae2b0e1dbe7640aefaf7d54c6a94d08fe}} 
+\index{EntityRepository@{EntityRepository}!getEntityManager@{getEntityManager}}
+\index{getEntityManager@{getEntityManager}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{getEntityManager()}{getEntityManager()}}
+{\footnotesize\ttfamily get\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_a21ab394d853033baf8446dd7175e3589}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_a21ab394d853033baf8446dd7175e3589}} 
+\index{EntityRepository@{EntityRepository}!getEntityName@{getEntityName}}
+\index{getEntityName@{getEntityName}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{getEntityName()}{getEntityName()}}
+{\footnotesize\ttfamily get\+Entity\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_entity_repository_acb78394bf2d5e907c3286db303595970}\label{class_doctrine_1_1_o_r_m_1_1_entity_repository_acb78394bf2d5e907c3286db303595970}} 
+\index{EntityRepository@{EntityRepository}!matching@{matching}}
+\index{matching@{matching}!EntityRepository@{EntityRepository}}
+\doxysubsubsection{\texorpdfstring{matching()}{matching()}}
+{\footnotesize\ttfamily matching (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}}]{\$criteria }\end{DoxyParamCaption})}
+
+Select all elements from a selectable that match the expression and return a new collection containing these elements.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_lazy_criteria_collection}{Lazy\+Criteria\+Collection}} @psalm-\/return Collection$<$int, T$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_selectable_acb78394bf2d5e907c3286db303595970}{Selectable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Entity\+Repository.\+php\end{DoxyCompactItemize}

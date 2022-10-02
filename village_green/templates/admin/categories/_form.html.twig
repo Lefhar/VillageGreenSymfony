@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+<div class="form-group">
+    <a class="btn btn-dark" href="{{ path('categories_admin_index') }}">Retour</a>
+    <button class="btn btn-success">{{ button_label|default('Valider') }}</button>
+</div>{{ form_end(form) }}

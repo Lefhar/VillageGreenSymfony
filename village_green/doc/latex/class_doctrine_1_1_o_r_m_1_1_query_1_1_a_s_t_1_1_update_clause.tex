@@ -1,0 +1,83 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause}{}\doxysection{Update\+Clause Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause}\index{UpdateClause@{UpdateClause}}
+Inheritance diagram for Update\+Clause\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a873af37d1e9f14954aa73d74bc0f8a5b}{\+\_\+\+\_\+construct}} (\$abstract\+Schema\+Name, array \$update\+Items)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a7edf7553fc6f66a5db3b7cc4ebf8d5ac}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a7edf7553fc6f66a5db3b7cc4ebf8d5ac}} 
+{\bfseries \$abstract\+Schema\+Name}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a3feff9a438168aec80cb44a7381aeef3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a3feff9a438168aec80cb44a7381aeef3}} 
+{\bfseries \$alias\+Identification\+Variable}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a13cdeeb78867a8b3107dc81739a2445c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a13cdeeb78867a8b3107dc81739a2445c}} 
+{\bfseries \$update\+Items} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause}{Update\+Clause}} \+::= \char`\"{}\+UPDATE\char`\"{} Abstract\+Schema\+Name \mbox{[}\mbox{[}\char`\"{}\+AS\char`\"{}\mbox{]} Alias\+Identification\+Variable\mbox{]} \char`\"{}\+SET\char`\"{} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}{Update\+Item}} \{\char`\"{},\char`\"{} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_item}{Update\+Item}}\}$\ast$
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a873af37d1e9f14954aa73d74bc0f8a5b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a873af37d1e9f14954aa73d74bc0f8a5b}} 
+\index{UpdateClause@{UpdateClause}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UpdateClause@{UpdateClause}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$abstract\+Schema\+Name,  }\item[{array}]{\$update\+Items }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$abstract\+Schema\+Name} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$update\+Items} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_update_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{UpdateClause@{UpdateClause}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!UpdateClause@{UpdateClause}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Update\+Clause.\+php\end{DoxyCompactItemize}

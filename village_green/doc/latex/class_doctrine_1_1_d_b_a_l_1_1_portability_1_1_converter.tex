@@ -1,0 +1,134 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter}{}\doxysection{Converter Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter}\index{Converter@{Converter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_ab90bcc301c2dabaa401e1718dceaace7}{\+\_\+\+\_\+construct}} (bool \$convert\+Empty\+String\+To\+Null, bool \$right\+Trim\+String, ?int \$case)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a78c50160d430e1cb93d88d3a4d487101}{convert\+Numeric}} (\$row)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a88ef54a356f6194e164c6764dcf772b2}{convert\+Associative}} (\$row)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a132a3f6b51a814b0cb3c4ca5665bc779}{convert\+One}} (\$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a0c26475f2fcd36e23b63df5d247e6559}{convert\+All\+Numeric}} (array \$data)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_aeaf4cf3789c776c3fba07a083cbb6856}{convert\+All\+Associative}} (array \$data)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_ab9048d9dc62dec549879e789fcaff871}{convert\+First\+Column}} (array \$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_ab90bcc301c2dabaa401e1718dceaace7}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_ab90bcc301c2dabaa401e1718dceaace7}} 
+\index{Converter@{Converter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{bool}]{\$convert\+Empty\+String\+To\+Null,  }\item[{bool}]{\$right\+Trim\+String,  }\item[{?int}]{\$case }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$convert\+Empty\+String\+To\+Null} & Whether each empty string should be converted to NULL \\
+\hline
+bool & {\em \$right\+Trim\+String} & Whether each string should right-\/trimmed \\
+\hline
+int | null & {\em \$case} & Convert the case of the column names (one of \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+CASE\+\_\+\+LOWER\} and \{
+
+CASE\+\_\+\+UPPER\}) 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_aeaf4cf3789c776c3fba07a083cbb6856}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_aeaf4cf3789c776c3fba07a083cbb6856}} 
+\index{Converter@{Converter}!convertAllAssociative@{convertAllAssociative}}
+\index{convertAllAssociative@{convertAllAssociative}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertAllAssociative()}{convertAllAssociative()}}
+{\footnotesize\ttfamily convert\+All\+Associative (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list$<$array$<$string,mixed$>$$>$} & \$data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$array$<$string,mixed$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a0c26475f2fcd36e23b63df5d247e6559}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a0c26475f2fcd36e23b63df5d247e6559}} 
+\index{Converter@{Converter}!convertAllNumeric@{convertAllNumeric}}
+\index{convertAllNumeric@{convertAllNumeric}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertAllNumeric()}{convertAllNumeric()}}
+{\footnotesize\ttfamily convert\+All\+Numeric (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list$<$list$<$mixed$>$$>$} & \$data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$list$<$mixed$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a88ef54a356f6194e164c6764dcf772b2}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a88ef54a356f6194e164c6764dcf772b2}} 
+\index{Converter@{Converter}!convertAssociative@{convertAssociative}}
+\index{convertAssociative@{convertAssociative}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertAssociative()}{convertAssociative()}}
+{\footnotesize\ttfamily convert\+Associative (\begin{DoxyParamCaption}\item[{}]{\$row }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,mixed$>$$\vert$false} & \$row\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$string,mixed$>$$\vert$false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_ab9048d9dc62dec549879e789fcaff871}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_ab9048d9dc62dec549879e789fcaff871}} 
+\index{Converter@{Converter}!convertFirstColumn@{convertFirstColumn}}
+\index{convertFirstColumn@{convertFirstColumn}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertFirstColumn()}{convertFirstColumn()}}
+{\footnotesize\ttfamily convert\+First\+Column (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list$<$mixed$>$} & \$data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$mixed$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a78c50160d430e1cb93d88d3a4d487101}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a78c50160d430e1cb93d88d3a4d487101}} 
+\index{Converter@{Converter}!convertNumeric@{convertNumeric}}
+\index{convertNumeric@{convertNumeric}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertNumeric()}{convertNumeric()}}
+{\footnotesize\ttfamily convert\+Numeric (\begin{DoxyParamCaption}\item[{}]{\$row }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$int,mixed$>$$\vert$false} & \$row\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$mixed$>$$\vert$false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a132a3f6b51a814b0cb3c4ca5665bc779}\label{class_doctrine_1_1_d_b_a_l_1_1_portability_1_1_converter_a132a3f6b51a814b0cb3c4ca5665bc779}} 
+\index{Converter@{Converter}!convertOne@{convertOne}}
+\index{convertOne@{convertOne}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convertOne()}{convertOne()}}
+{\footnotesize\ttfamily convert\+One (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed | false & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed$\vert$false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Portability/Converter.\+php\end{DoxyCompactItemize}

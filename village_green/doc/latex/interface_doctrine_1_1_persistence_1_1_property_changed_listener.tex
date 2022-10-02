@@ -1,0 +1,53 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_property_changed_listener}{}\doxysection{Property\+Changed\+Listener Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_property_changed_listener}\index{PropertyChangedListener@{PropertyChangedListener}}
+Inheritance diagram for Property\+Changed\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_persistence_1_1_property_changed_listener}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_property_changed_listener_a99c9884d4dbb8cf5273ac941a71dfd7e}{property\+Changed}} (\$sender, \$property\+Name, \$old\+Value, \$new\+Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract for classes that are potential listeners of a \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_notify_property_changed}{Notify\+Property\+Changed}}\} implementor. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_property_changed_listener_a99c9884d4dbb8cf5273ac941a71dfd7e}\label{interface_doctrine_1_1_persistence_1_1_property_changed_listener_a99c9884d4dbb8cf5273ac941a71dfd7e}} 
+\index{PropertyChangedListener@{PropertyChangedListener}!propertyChanged@{propertyChanged}}
+\index{propertyChanged@{propertyChanged}!PropertyChangedListener@{PropertyChangedListener}}
+\doxysubsubsection{\texorpdfstring{propertyChanged()}{propertyChanged()}}
+{\footnotesize\ttfamily property\+Changed (\begin{DoxyParamCaption}\item[{}]{\$sender,  }\item[{}]{\$property\+Name,  }\item[{}]{\$old\+Value,  }\item[{}]{\$new\+Value }\end{DoxyParamCaption})}
+
+Collect information about a property change.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$sender} & The object on which the property changed. \\
+\hline
+string & {\em \$property\+Name} & The name of the property that changed. \\
+\hline
+mixed & {\em \$old\+Value} & The old value of the property that changed. \\
+\hline
+mixed & {\em \$new\+Value} & The new value of the property that changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99c9884d4dbb8cf5273ac941a71dfd7e}{Unit\+Of\+Work}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Property\+Changed\+Listener.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver}{}\doxysection{Entity\+Listener\+Resolver Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver}\index{EntityListenerResolver@{EntityListenerResolver}}
+Inheritance diagram for Entity\+Listener\+Resolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}{clear}} (\$class\+Name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}{resolve}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}{register}} (\$object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A resolver is used to instantiate an entity listener. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}\label{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}} 
+\index{EntityListenerResolver@{EntityListenerResolver}!clear@{clear}}
+\index{clear@{clear}!EntityListenerResolver@{EntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}\item[{}]{\$class\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Clear all instances from the set, or a specific instance when given its identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & May be any arbitrary string. Name kept for BC only.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}{Container\+Entity\+Listener\+Resolver}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_entity_listener_resolver_afbcc13dbbee53989c67a827610850161}{Default\+Entity\+Listener\+Resolver}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}\label{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}} 
+\index{EntityListenerResolver@{EntityListenerResolver}!register@{register}}
+\index{register@{register}!EntityListenerResolver@{EntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Register a entity listener instance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & An entity listener \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}{Container\+Entity\+Listener\+Resolver}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_entity_listener_resolver_a8fd75c9a1e7482b0f4c31dde252528fe}{Default\+Entity\+Listener\+Resolver}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}\label{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}} 
+\index{EntityListenerResolver@{EntityListenerResolver}!resolve@{resolve}}
+\index{resolve@{resolve}!EntityListenerResolver@{EntityListenerResolver}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily resolve (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Returns a entity listener instance for the given identifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & May be any arbitrary string. Name kept for BC only.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object An entity listener 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_container_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}{Container\+Entity\+Listener\+Resolver}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_entity_listener_resolver_a9330dc3691588f2ce7308d8277e59c7d}{Default\+Entity\+Listener\+Resolver}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/Entity\+Listener\+Resolver.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator}{}\doxysection{Commit\+Order\+Calculator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator}\index{CommitOrderCalculator@{CommitOrderCalculator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a3b6861c9571e2ccfa8c9b49565c0d981}{has\+Node}} (\$hash)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a290d9ba17d60945e27c884bd9dbf33cb}{add\+Node}} (\$hash, \$node)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a253b37d5f11134d695e1f573d04b42ef}{add\+Dependency}} (\$from\+Hash, \$to\+Hash, \$weight)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a4bd31bcedb7b4943aac2da78d0d84afe}{sort}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a6b561657a3d78960402239ce43e5d7d0}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a6b561657a3d78960402239ce43e5d7d0}} 
+const {\bfseries NOT\+\_\+\+VISITED} = 0
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_abef49d1f4dc2d9871ef0b5891734314f}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_abef49d1f4dc2d9871ef0b5891734314f}} 
+const {\bfseries IN\+\_\+\+PROGRESS} = 1
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_af722bcb6c3415d871ac907c09d6840a8}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_af722bcb6c3415d871ac907c09d6840a8}} 
+const {\bfseries VISITED} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator}{Commit\+Order\+Calculator}} implements topological sorting, which is an ordering algorithm for directed graphs (DG) and/or directed acyclic graphs (DAG) by using a depth-\/first searching (DFS) to traverse the graph built in memory. This algorithm have a linear running time based on nodes (V) and dependency between the nodes (E), resulting in a computational complexity of O(V + E). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a253b37d5f11134d695e1f573d04b42ef}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a253b37d5f11134d695e1f573d04b42ef}} 
+\index{CommitOrderCalculator@{CommitOrderCalculator}!addDependency@{addDependency}}
+\index{addDependency@{addDependency}!CommitOrderCalculator@{CommitOrderCalculator}}
+\doxysubsubsection{\texorpdfstring{addDependency()}{addDependency()}}
+{\footnotesize\ttfamily add\+Dependency (\begin{DoxyParamCaption}\item[{}]{\$from\+Hash,  }\item[{}]{\$to\+Hash,  }\item[{}]{\$weight }\end{DoxyParamCaption})}
+
+Adds a new dependency (edge) to the graph using their hashes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$from\+Hash} & \\
+\hline
+string & {\em \$to\+Hash} & \\
+\hline
+int & {\em \$weight} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a290d9ba17d60945e27c884bd9dbf33cb}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a290d9ba17d60945e27c884bd9dbf33cb}} 
+\index{CommitOrderCalculator@{CommitOrderCalculator}!addNode@{addNode}}
+\index{addNode@{addNode}!CommitOrderCalculator@{CommitOrderCalculator}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily add\+Node (\begin{DoxyParamCaption}\item[{}]{\$hash,  }\item[{}]{\$node }\end{DoxyParamCaption})}
+
+Adds a new node (vertex) to the graph, assigning its hash and value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$hash} & \\
+\hline
+object & {\em \$node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a3b6861c9571e2ccfa8c9b49565c0d981}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a3b6861c9571e2ccfa8c9b49565c0d981}} 
+\index{CommitOrderCalculator@{CommitOrderCalculator}!hasNode@{hasNode}}
+\index{hasNode@{hasNode}!CommitOrderCalculator@{CommitOrderCalculator}}
+\doxysubsubsection{\texorpdfstring{hasNode()}{hasNode()}}
+{\footnotesize\ttfamily has\+Node (\begin{DoxyParamCaption}\item[{}]{\$hash }\end{DoxyParamCaption})}
+
+Checks for node (vertex) existence in graph.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$hash} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a4bd31bcedb7b4943aac2da78d0d84afe}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_commit_order_calculator_a4bd31bcedb7b4943aac2da78d0d84afe}} 
+\index{CommitOrderCalculator@{CommitOrderCalculator}!sort@{sort}}
+\index{sort@{sort}!CommitOrderCalculator@{CommitOrderCalculator}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return a valid order list of all current nodes. The desired topological sorting is the reverse post order of these searches.
+
+\{ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Internal/Commit\+Order\+Calculator.\+php\end{DoxyCompactItemize}

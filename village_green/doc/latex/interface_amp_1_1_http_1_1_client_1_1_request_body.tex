@@ -1,0 +1,77 @@
+\hypertarget{interface_amp_1_1_http_1_1_client_1_1_request_body}{}\doxysection{Request\+Body Interface Reference}
+\label{interface_amp_1_1_http_1_1_client_1_1_request_body}\index{RequestBody@{RequestBody}}
+Inheritance diagram for Request\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_http_1_1_client_1_1_request_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a157e0005d82edaa21cbea07fdc5c62da}{get\+Headers}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a79fd9be53b1ab8783733113e557a1c7d}{create\+Body\+Stream}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a67da67f6676fbfc2a87e7c2567a5b260}{get\+Body\+Length}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for generating HTTP message bodies + headers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_request_body_a79fd9be53b1ab8783733113e557a1c7d}\label{interface_amp_1_1_http_1_1_client_1_1_request_body_a79fd9be53b1ab8783733113e557a1c7d}} 
+\index{RequestBody@{RequestBody}!createBodyStream@{createBodyStream}}
+\index{createBodyStream@{createBodyStream}!RequestBody@{RequestBody}}
+\doxysubsubsection{\texorpdfstring{createBodyStream()}{createBodyStream()}}
+{\footnotesize\ttfamily create\+Body\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create the HTTP message body to be sent.
+
+Further calls MUST return a new stream to make it possible to resend bodies on redirects.
+
+\begin{DoxyReturn}{Returns}
+Input\+Stream 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a79fd9be53b1ab8783733113e557a1c7d}{Form\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a79fd9be53b1ab8783733113e557a1c7d}{Json\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a79fd9be53b1ab8783733113e557a1c7d}{String\+Body}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_client_1_1_internal_1_1_amp_body_a79fd9be53b1ab8783733113e557a1c7d}{Amp\+Body}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_request_body_a67da67f6676fbfc2a87e7c2567a5b260}\label{interface_amp_1_1_http_1_1_client_1_1_request_body_a67da67f6676fbfc2a87e7c2567a5b260}} 
+\index{RequestBody@{RequestBody}!getBodyLength@{getBodyLength}}
+\index{getBodyLength@{getBodyLength}!RequestBody@{RequestBody}}
+\doxysubsubsection{\texorpdfstring{getBodyLength()}{getBodyLength()}}
+{\footnotesize\ttfamily get\+Body\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the HTTP message body length. If not available, return -\/1.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_file_body_a67da67f6676fbfc2a87e7c2567a5b260}{File\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a67da67f6676fbfc2a87e7c2567a5b260}{Json\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a67da67f6676fbfc2a87e7c2567a5b260}{String\+Body}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_client_1_1_internal_1_1_amp_body_a67da67f6676fbfc2a87e7c2567a5b260}{Amp\+Body}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_request_body_a157e0005d82edaa21cbea07fdc5c62da}\label{interface_amp_1_1_http_1_1_client_1_1_request_body_a157e0005d82edaa21cbea07fdc5c62da}} 
+\index{RequestBody@{RequestBody}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!RequestBody@{RequestBody}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve a key-\/value array of headers to add to the outbound request.
+
+The resolved promise value must be a key-\/value array mapping header fields to values.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_file_body_a157e0005d82edaa21cbea07fdc5c62da}{File\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_form_body_a157e0005d82edaa21cbea07fdc5c62da}{Form\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a157e0005d82edaa21cbea07fdc5c62da}{Json\+Body}}, \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_string_body_a157e0005d82edaa21cbea07fdc5c62da}{String\+Body}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_client_1_1_internal_1_1_amp_body_a157e0005d82edaa21cbea07fdc5c62da}{Amp\+Body}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/Request\+Body.\+php\end{DoxyCompactItemize}

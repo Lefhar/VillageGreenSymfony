@@ -1,0 +1,115 @@
+\hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler}{}\doxysection{Fleep\+Hook\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_fleep_hook_handler}\index{FleepHookHandler@{FleepHookHandler}}
+Inheritance diagram for Fleep\+Hook\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_fleep_hook_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fleep_hook_handler_a3e9b2a6b0f610fa5d0bf5487ddd47ed4}{\+\_\+\+\_\+construct}} (string \$token, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fleep_hook_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fleep_hook_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fleep_hook_handler_ab9ad130a7a5c9231037475c701a1e0fb}{generate\+Data\+Stream}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_aacc390d39bf8f83048987abd832dbae0}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_aacc390d39bf8f83048987abd832dbae0}} 
+const {\bfseries FLEEP\+\_\+\+HOST} = \textquotesingle{}fleep.\+io\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_aa97399df51352638e3439073a93a1619}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_aa97399df51352638e3439073a93a1619}} 
+const {\bfseries FLEEP\+\_\+\+HOOK\+\_\+\+URI} = \textquotesingle{}/hook/\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_a00ae4fcafb1145f5e968bdf920f83e2e}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_a00ae4fcafb1145f5e968bdf920f83e2e}} 
+{\bfseries \$token}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sends logs to Fleep.\+io using Webhook integrations
+
+You\textquotesingle{}ll need a Fleep.\+io account to use this handler.
+
+\begin{DoxySeeAlso}{See also}
+\href{https://fleep.io/integrations/webhooks/}{\texttt{ https\+://fleep.\+io/integrations/webhooks/}} Fleep Webhooks Documentation 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Ando Roots \href{mailto:ando@sqroot.eu}{\texttt{ ando@sqroot.\+eu}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_a3e9b2a6b0f610fa5d0bf5487ddd47ed4}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_a3e9b2a6b0f610fa5d0bf5487ddd47ed4}} 
+\index{FleepHookHandler@{FleepHookHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FleepHookHandler@{FleepHookHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Construct a new Fleep.\+io \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}}.
+
+For instructions on how to create a new web hook in your conversations see \href{https://fleep.io/integrations/webhooks/}{\texttt{ https\+://fleep.\+io/integrations/webhooks/}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & Webhook token \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_a682038de5493ba733e8294793057e834}{Socket\+Handler}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_ab9ad130a7a5c9231037475c701a1e0fb}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_ab9ad130a7a5c9231037475c701a1e0fb}} 
+\index{FleepHookHandler@{FleepHookHandler}!generateDataStream@{generateDataStream}}
+\index{generateDataStream@{generateDataStream}!FleepHookHandler@{FleepHookHandler}}
+\doxysubsubsection{\texorpdfstring{generateDataStream()}{generateDataStream()}}
+{\footnotesize\ttfamily generate\+Data\+Stream (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_ab9ad130a7a5c9231037475c701a1e0fb}{Socket\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{FleepHookHandler@{FleepHookHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!FleepHookHandler@{FleepHookHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the default formatter to use with this handler
+
+Overloaded to remove empty context and extra arrays from the end of the log message.
+
+\begin{DoxyReturn}{Returns}
+Line\+Formatter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fleep_hook_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_fleep_hook_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{FleepHookHandler@{FleepHookHandler}!write@{write}}
+\index{write@{write}!FleepHookHandler@{FleepHookHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Handles a log record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_socket_handler_afa17604fd899fffdc1ee326afe177cb5}{Socket\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Fleep\+Hook\+Handler.\+php\end{DoxyCompactItemize}

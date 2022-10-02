@@ -1,0 +1,58 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool}{}\doxysection{Unlimited\+Connection\+Pool Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool}\index{UnlimitedConnectionPool@{UnlimitedConnectionPool}}
+Inheritance diagram for Unlimited\+Connection\+Pool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a83cd8d108f0996ac1086cc31beb9337a}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a83cd8d108f0996ac1086cc31beb9337a}} 
+{\bfseries \+\_\+\+\_\+construct} (?\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_factory}{Connection\+Factory}} \$connection\+Factory=null)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_ad0cb87b388bc74d63dc884accdca8713}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_ad0cb87b388bc74d63dc884accdca8713}} 
+{\bfseries \+\_\+\+\_\+clone} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a63c88dcb04b926179d767e03265bc727}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a63c88dcb04b926179d767e03265bc727}} 
+{\bfseries get\+Total\+Connection\+Attempts} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a055998d8592d0112d5554030ec62e763}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a055998d8592d0112d5554030ec62e763}} 
+{\bfseries get\+Total\+Stream\+Requests} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a599ee510e8d02999214e1c6893ca1d3a}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a599ee510e8d02999214e1c6893ca1d3a}} 
+{\bfseries get\+Open\+Connection\+Count} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a7d7a295d5808712cbcba8423e837940e}{get\+Stream}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a7d7a295d5808712cbcba8423e837940e}\label{class_amp_1_1_http_1_1_client_1_1_connection_1_1_unlimited_connection_pool_a7d7a295d5808712cbcba8423e837940e}} 
+\index{UnlimitedConnectionPool@{UnlimitedConnectionPool}!getStream@{getStream}}
+\index{getStream@{getStream}!UnlimitedConnectionPool@{UnlimitedConnectionPool}}
+\doxysubsubsection{\texorpdfstring{getStream()}{getStream()}}
+{\footnotesize\ttfamily get\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation }\end{DoxyParamCaption})}
+
+Reserve a stream for a particular request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Stream$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_connection_pool_a7d7a295d5808712cbcba8423e837940e}{Connection\+Pool}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/Unlimited\+Connection\+Pool.\+php\end{DoxyCompactItemize}

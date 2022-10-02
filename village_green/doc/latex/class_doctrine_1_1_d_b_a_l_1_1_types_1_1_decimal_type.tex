@@ -1,0 +1,95 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type}{}\doxysection{Decimal\+Type Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type}\index{DecimalType@{DecimalType}}
+Inheritance diagram for Decimal\+Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a24d8db42c7d978d2989826ad48135c02}{get\+SQLDeclaration}} (array \$column, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a02576e237bf410008f15a806928d2374}{convert\+To\+PHPValue}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} that maps an SQL DECIMAL to a PHP string. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a02576e237bf410008f15a806928d2374}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a02576e237bf410008f15a806928d2374}} 
+\index{DecimalType@{DecimalType}!convertToPHPValue@{convertToPHPValue}}
+\index{convertToPHPValue@{convertToPHPValue}!DecimalType@{DecimalType}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValue()}{convertToPHPValue()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Converts a value from its database representation to its PHP representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The PHP representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a02576e237bf410008f15a806928d2374}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a3d0963e68bb313b163a73f2803c64600}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a3d0963e68bb313b163a73f2803c64600}} 
+\index{DecimalType@{DecimalType}!getName@{getName}}
+\index{getName@{getName}!DecimalType@{DecimalType}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the name of this type.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Needed? \end{DoxyRefDesc}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a3d0963e68bb313b163a73f2803c64600}{Type}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a24d8db42c7d978d2989826ad48135c02}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_decimal_type_a24d8db42c7d978d2989826ad48135c02}} 
+\index{DecimalType@{DecimalType}!getSQLDeclaration@{getSQLDeclaration}}
+\index{getSQLDeclaration@{getSQLDeclaration}!DecimalType@{DecimalType}}
+\doxysubsubsection{\texorpdfstring{getSQLDeclaration()}{getSQLDeclaration()}}
+{\footnotesize\ttfamily get\+SQLDeclaration (\begin{DoxyParamCaption}\item[{array}]{\$column,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{Gets the SQL declaration snippet for a column of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$column} & The column definition \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_a24d8db42c7d978d2989826ad48135c02}{Type}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Decimal\+Type.\+php\end{DoxyCompactItemize}

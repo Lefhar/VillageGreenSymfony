@@ -1,0 +1,552 @@
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md225}{}\doxysection{Rename $<$tt$>$\+Abstract\+Id\+Generator\+::generate()$<$/tt$>$ to $<$tt$>$generate\+Id()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md225}
+Implementations of {\ttfamily Abstract\+Id\+Generator} have to override the method {\ttfamily generate\+Id()} without calling the parent implementation. Not doing so is deprecated. Calling {\ttfamily generate()} on any {\ttfamily Abstract\+Id\+Generator} implementation is deprecated.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md226}{}\doxysection{PSR-\/6-\/based second level cache}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md226}
+The second level cache has been reworked to consume a PSR-\/6 cache. Using a Doctrine Cache instance is deprecated.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Default\+Cache\+Factory}\+: The constructor expects a PSR-\/6 cache item pool as second argument now.
+\item {\ttfamily Default\+Multi\+Get\+Region}\+: This class is deprecated in favor of {\ttfamily Default\+Region}.
+\item {\ttfamily Default\+Region}\+:
+\begin{DoxyItemize}
+\item The constructor expects a PSR-\/6 cache item pool as second argument now.
+\item The protected {\ttfamily \$cache} property is deprecated.
+\item The properties {\ttfamily \$name} and {\ttfamily \$lifetime} as well as the constant {\ttfamily REGION\+\_\+\+KEY\+\_\+\+SEPARATOR} and the method {\ttfamily get\+Cache\+Entry\+Key()} are flagged as {\ttfamily @internal} now. They all will become {\ttfamily private} in 3.\+0.
+\item The method {\ttfamily get\+Cache()} is deprecated without replacement.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md227}{}\doxysection{Deprecated\+: $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Mapping\textbackslash{}\+Driver\textbackslash{}\+PHPDriver$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md227}
+Use {\ttfamily Static\+PHPDriver} instead when you want to programmatically configure entity metadata.
+
+You can convert mappings with the {\ttfamily orm\+:convert-\/mapping} command or more simply in this case, {\ttfamily include} the metadata file from the {\ttfamily load\+Metadata} static method used by the {\ttfamily Static\+PHPDriver}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md228}{}\doxysection{Deprecated\+: $<$tt$>$\+Setup\+::register\+Autoload\+Directory()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md228}
+Use Composer\textquotesingle{}s autoloader instead.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md229}{}\doxysection{Deprecated\+: $<$tt$>$\+Abstract\+Hydrator\+::hydrate\+Row()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md229}
+Following the deprecation of the method {\ttfamily Abstract\+Hydrator\+::iterate()}, the method {\ttfamily hydrate\+Row()} has been deprecated as well.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md230}{}\doxysection{Deprecate cache settings inspection}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md230}
+Doctrine does not provide its own cache implementation anymore and relies on the PSR-\/6 standard instead. As a consequence, we cannot determine anymore whether a given cache adapter is suitable for a production environment. Because of that, functionality that aims to do so has been deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Configuration\+::ensure\+Production\+Settings()}
+\item the {\ttfamily orm\+:ensure-\/production-\/settings} console command
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md231}{}\doxysection{Upgrade to 2.\+10}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md231}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md232}{}\doxysubsection{BC Break\+: $<$tt$>$\+Unit\+Of\+Work$<$/tt$>$ now relies on SPL object IDs, not hashes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md232}
+When calling the following methods, you are now supposed to use the result of {\ttfamily spl\+\_\+object\+\_\+id()}, and not {\ttfamily spl\+\_\+object\+\_\+hash()}\+:
+\begin{DoxyItemize}
+\item {\ttfamily Unit\+Of\+Work\+::clear\+Entity\+Change\+Set()}
+\item {\ttfamily Unit\+Of\+Work\+::set\+Original\+Entity\+Property()}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md233}{}\doxysubsection{BC Break\+: Removed $<$tt$>$\+TABLE$<$/tt$>$ id generator strategy}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md233}
+The implementation was unfinished for 14 years. It is now deprecated to rely on\+:
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Id\textbackslash{}Table\+Generator};
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Class\+Metadata\+::\+GENERATOR\+\_\+\+TYPE\+\_\+\+TABLE};
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Class\+Metadata\+::\$table\+Generator\+Definition};
+\item or {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Class\+Metadata\+::is\+Id\+Generator\+Table()}.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md234}{}\doxysubsection{New method $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Entity\+Manager\+Interface\#wrap\+In\+Transaction(\$func)$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md234}
+Works the same as {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Manager\+Interface\#transactional()} but returns any value returned from {\ttfamily \$func} closure rather than just {\itshape non-\/empty value returned from the closure or true}.
+
+Because of BC policy, the method does not exist on the interface yet. This is the example of safe usage\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{function} foo(EntityManagerInterface \$entityManager, callable \$func) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (method\_exists(\$entityManager, \textcolor{stringliteral}{'wrapInTransaction'})) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$entityManager-\/>wrapInTransaction(\$func);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \$entityManager-\/>transactional(\$func);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Manager\+Interface\#transactional()} has been deprecated.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md235}{}\doxysubsection{Minor BC BREAK\+: some exception methods have been removed}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md235}
+The following methods were not in use and are very unlikely to be used by downstream packages or applications, and were consequently removed\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily ORMException\+::entity\+Missing\+Foreign\+Assigned\+Id}
+\item {\ttfamily ORMException\+::entity\+Missing\+Assigned\+Id\+For\+Field}
+\item {\ttfamily ORMException\+::invalid\+Flush\+Mode}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md236}{}\doxysubsection{Deprecated\+: database-\/side UUID generation}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md236}
+\href{https://github.com/doctrine/dbal/pull/3212}{\texttt{ DB-\/generated UUIDs are deprecated as of {\ttfamily doctrine/dbal} 2.\+8}}. As a consequence, using the {\ttfamily UUID} strategy for generating identifiers is deprecated as well. Furthermore, relying on the following classes and methods is deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Id\textbackslash{}Uuid\+Generator}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Class\+Metadata\+Info\+::is\+Identifier\+Uuid()}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md237}{}\doxysubsection{Minor BC BREAK\+: Custom hydrators and $<$tt$>$to\+Iterable()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md237}
+The type declaration of the {\ttfamily \$stmt} parameter of {\ttfamily Abstract\+Hydrator\+::to\+Iterable()} has been removed. This change might break custom hydrator implementations that override this very method.
+
+Overriding this method is not recommended, which is why the method is documented as {\ttfamily @final} now.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/ public function toIterable(ResultStatement \$stmt, ResultSetMapping \$resultSetMapping, array \$hints = []): iterable}
+\DoxyCodeLine{+ public function toIterable(\$stmt, ResultSetMapping \$resultSetMapping, array \$hints = []): iterable}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md238}{}\doxysubsection{Deprecated\+: Entity Namespace Aliases}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md238}
+Entity namespace aliases are deprecated, use the magic \+::class constant to abbreviate full class names in Entity\+Manager, Entity\+Repository and DQL.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/  \$entityManager-\/>find('MyBundle:User', \$id);}
+\DoxyCodeLine{+  \$entityManager-\/>find(User::class, \$id);}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md239}{}\doxysection{Upgrade to 2.\+9}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md239}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md240}{}\doxysubsection{Minor BC BREAK\+: Setup tool needs cache implementation}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md240}
+With the deprecation of doctrine/cache, the setup tool might no longer work as expected without a different cache implementation. To work around this\+:
+\begin{DoxyItemize}
+\item Install symfony/cache\+: {\ttfamily composer require symfony/cache}. This will keep previous behaviour without any changes
+\item Instantiate caches yourself\+: to use a different cache implementation, pass a cache instance when calling any configuration factory in the setup tool\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/ \$config = Setup::createAnnotationMetadataConfiguration(\$paths, \$isDevMode, \$proxyDir);}
+\DoxyCodeLine{+ \$cache = \(\backslash\)Doctrine\(\backslash\)Common\(\backslash\)Cache\(\backslash\)Psr6\(\backslash\)DoctrineProvider::wrap(\$anyPsr6Implementation);}
+\DoxyCodeLine{+ \$config = Setup::createAnnotationMetadataConfiguration(\$paths, \$isDevMode, \$proxyDir, \$cache);}
+
+\end{DoxyCode}
+
+\item As a quick workaround, you can lock the doctrine/cache dependency to work around this\+: {\ttfamily composer require doctrine/cache $^\wedge$1.11}. Note that this is only recommended as a bandaid fix, as future versions of ORM will no longer work with doctrine/cache 1.\+11.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md241}{}\doxysubsection{Deprecated\+: doctrine/cache for metadata caching}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md241}
+The {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Configuration\#set\+Metadata\+Cache\+Impl()} method is deprecated and should no longer be used. Please use {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Configuration\#set\+Metadata\+Cache()} with any PSR-\/6 cache adapter instead.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md242}{}\doxysubsection{Removed\+: flushing metadata cache}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md242}
+To support PSR-\/6 caches, the {\ttfamily -\/-\/flush} option for the {\ttfamily orm\+:clear-\/cache\+:metadata} command is ignored. Metadata cache is now always cleared regardless of the cache adapter being used.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md243}{}\doxysection{Upgrade to 2.\+8}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md243}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md244}{}\doxysubsection{Minor BC BREAK\+: Failed commit now throw Optimistic\+Lock\+Exception}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md244}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Unit\+Of\+Work\#commit()} can throw an Optimistic\+Lock\+Exception when a commit silently fails and returns false since {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Connection\#commit()} signature changed from returning void to boolean\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md245}{}\doxysubsection{Deprecated\+: $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Abstract\+Query\#iterate()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md245}
+The method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Abstract\+Query\#iterate()} is deprecated in favor of {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Abstract\+Query\#to\+Iterable()}. Note that {\ttfamily to\+Iterable()} yields results of the query, unlike {\ttfamily iterate()} which yielded each result wrapped into an array.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md246}{}\doxysection{Upgrade to 2.\+7}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md246}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md247}{}\doxysubsection{Added $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Abstract\+Query\#enable\+Result\+Cache()$<$/tt$>$ and $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Abstract\+Query\#disable\+Result\+Cache()$<$/tt$>$ methods}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md247}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Abstract\+Query\#use\+Result\+Cache()} which could be used for both enabling and disabling the cache (depending on passed flag) was split into two. ~\newline
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md248}{}\doxysubsection{Minor BC BREAK\+: paginator output walkers aren\textquotesingle{}t be called anymore on sub-\/queries for queries without max results}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md248}
+To optimize DB interaction, {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Pagination\textbackslash{}Paginator} no longer fetches identifiers to be able to perform the pagination with join collections when max results isn\textquotesingle{}t set in the query.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md249}{}\doxysubsection{Minor BC BREAK\+: tables filtered with $<$tt$>$schema\+\_\+filter$<$/tt$>$ are no longer created}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md249}
+When generating schema diffs, if a source table is filtered out by a {\ttfamily schema\+\_\+filter} expression, then a {\ttfamily CREATE TABLE} was always generated, even if the table already existed. This has been changed in this release and the table will no longer be created.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md250}{}\doxysubsection{Deprecated number unaware $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Mapping\textbackslash{}\+Underscore\+Naming\+Strategy$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md250}
+In the last patch of the {\ttfamily v2.\+6.\+x} series, we fixed a bug that was not converting names properly when they had numbers (e.\+g.\+: {\ttfamily base64\+Encoded} was wrongly converted to {\ttfamily base64encoded} instead of {\ttfamily base64\+\_\+encoded}).
+
+In order to not break BC we\textquotesingle{}ve introduced a way to enable the fixed behavior using a boolean constructor argument. This argument will be removed in 3.\+0 and the default behavior will be the fixed one.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md251}{}\doxysubsection{Deprecated\+: $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Abstract\+Query\#use\+Result\+Cache()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md251}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Abstract\+Query\#use\+Result\+Cache()} is deprecated because it is split into {\ttfamily enable\+Result\+Cache()} and {\ttfamily disable\+Result\+Cache()}. It will be removed in 3.\+0.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md252}{}\doxysubsection{Deprecated code generators and related console commands}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md252}
+These console commands have been deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily orm\+:convert-\/mapping}
+\item {\ttfamily orm\+:generate\+:entities}
+\item {\ttfamily orm\+:generate-\/repositories}
+\end{DoxyItemize}
+
+These classes have been deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Entity\+Generator}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Entity\+Repository\+Generator}
+\end{DoxyItemize}
+
+Whole Doctrine\textbackslash{}\+ORM\textbackslash{}\+Tools\textbackslash{}\+Export namespace with all its members have been deprecated as well.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md253}{}\doxysubsection{Deprecated $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Proxy\textbackslash{}\+Proxy$<$/tt$>$ marker interface}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md253}
+Proxy objects in Doctrine ORM 3.\+0 will no longer implement {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Proxy\textbackslash{}Proxy} nor {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Proxy}\+: instead, they implement {\ttfamily Proxy\+Manager\textbackslash{}Proxy\textbackslash{}Ghost\+Object\+Interface}.
+
+These related classes have been deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Proxy\textbackslash{}Proxy\+Factory}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Proxy\textbackslash{}Autoloader} -\/ we suggest using the composer autoloader instead
+\end{DoxyItemize}
+
+These methods have been deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Configuration\#get\+Auto\+Generate\+Proxy\+Classes()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Configuration\#get\+Proxy\+Dir()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Configuration\#get\+Proxy\+Namespace()}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md254}{}\doxysubsection{Deprecated $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Version$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md254}
+The {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Version} class is now deprecated and will be removed in Doctrine ORM 3.\+0\+: please refrain from checking the ORM version at runtime or use Composer\textquotesingle{}s \href{https://getcomposer.org/doc/07-runtime.md\#knowing-whether-package-x-is-installed-in-version-y}{\texttt{ runtime API}}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md255}{}\doxysubsection{Deprecated $<$tt$>$\+Entity\+Manager\#merge()$<$/tt$>$ method}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md255}
+Merge semantics was a poor fit for the PHP \char`\"{}share-\/nothing\char`\"{} architecture. In addition to that, merging caused multiple issues with data integrity in the managed entity graph, which was constantly spawning more edge-\/case bugs/scenarios.
+
+The following API methods were therefore deprecated\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Entity\+Manager\#merge()}
+\item {\ttfamily Unit\+Of\+Work\#merge()}
+\end{DoxyItemize}
+
+An alternative to {\ttfamily Entity\+Manager\#merge()} will not be provided by ORM 3.\+0, since the merging semantics should be part of the business domain rather than the persistence domain of an application. If your application relies heavily on CRUD-\/alike interactions and/or {\ttfamily PATCH} restful operations, you should look at alternatives such as \href{https://github.com/schmittjoh/serializer}{\texttt{ JMSSerializer}}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md256}{}\doxysubsection{Extending $<$tt$>$\+Entity\+Manager$<$/tt$>$ is deprecated}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md256}
+Final keyword will be added to the {\ttfamily Entity\+Manager\+::class} in Doctrine ORM 3.\+0 in order to ensure that Entity\+Manager is not used as valid extension point. Valid extension point should be Entity\+Manager\+Interface.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md257}{}\doxysubsection{Deprecated $<$tt$>$\+Entity\+Manager\#clear(\$entity\+Name)$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md257}
+If your code relies on clearing a single entity type via {\ttfamily Entity\+Manager\#clear(\$entity\+Name)}, the signature has been changed to {\ttfamily Entity\+Manager\#clear()}.
+
+The main reason is that partial clears caused multiple issues with data integrity in the managed entity graph, which was constantly spawning more edge-\/case bugs/scenarios.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md258}{}\doxysubsection{Deprecated $<$tt$>$\+Entity\+Manager\#flush(\$entity)$<$/tt$>$ and $<$tt$>$\+Entity\+Manager\#flush(\$entities)$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md258}
+If your code relies on single entity flushing optimisations via {\ttfamily Entity\+Manager\#flush(\$entity)}, the signature has been changed to {\ttfamily Entity\+Manager\#flush()}.
+
+Said API was affected by multiple data integrity bugs due to the fact that change tracking was being restricted upon a subset of the managed entities. The ORM cannot support committing subsets of the managed entities while also guaranteeing data integrity, therefore this utility was removed.
+
+The {\ttfamily flush()} semantics will remain the same, but the change tracking will be performed on all entities managed by the unit of work, and not just on the provided {\ttfamily \$entity} or {\ttfamily \$entities}, as the parameter is now completely ignored.
+
+The same applies to {\ttfamily Unit\+Of\+Work\#commit(\$entity)}, which will simply be {\ttfamily Unit\+Of\+Work\#commit()}.
+
+If you would still like to perform batching operations over small {\ttfamily Unit\+Of\+Work} instances, it is suggested to follow these paths instead\+:
+
+
+\begin{DoxyItemize}
+\item eagerly use {\ttfamily Entity\+Manager\#clear()} in conjunction with a specific second level cache configuration (see \href{http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/second-level-cache.html}{\texttt{ http\+://docs.\+doctrine-\/project.\+org/projects/doctrine-\/orm/en/latest/reference/second-\/level-\/cache.\+html}})
+\item use an explicit change tracking policy (see \href{http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/change-tracking-policies.html}{\texttt{ http\+://docs.\+doctrine-\/project.\+org/projects/doctrine-\/orm/en/latest/reference/change-\/tracking-\/policies.\+html}})
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md259}{}\doxysubsection{Deprecated $<$tt$>$\+YAML$<$/tt$>$ mapping drivers.}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md259}
+If your code relies on {\ttfamily Yaml\+Driver} or {\ttfamily Simple\+Yaml\+Driver}, you {\bfseries{MUST}} change to annotation or XML drivers instead.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md260}{}\doxysubsection{Deprecated\+: $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Entity\+Manager\+Interface\#copy()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md260}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Manager\+Interface\#copy()} never got its implementation and is deprecated. It will be removed in 3.\+0.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md261}{}\doxysection{Upgrade to 2.\+6}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md261}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md262}{}\doxysubsection{Added $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Entity\+Repository\+::count()$<$/tt$>$ method}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md262}
+{\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Repository\+::count()} has been added. This new method has different signature than {\ttfamily Countable\+::count()} (required parameter) and therefore are not compatible. If your repository implemented the {\ttfamily Countable} interface, you will have to use {\ttfamily \$repository-\/\texorpdfstring{$>$}{>}count(\mbox{[}$\,$\mbox{]})} instead and not implement {\ttfamily Countable} interface anymore.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md263}{}\doxysubsection{Minor BC BREAK\+: $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Tools\textbackslash{}\+Console\textbackslash{}\+Console\+Runner$<$/tt$>$ is now final}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md263}
+Since it\textquotesingle{}s just an utilitarian class and should not be inherited.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md264}{}\doxysubsection{Minor BC BREAK\+: removed $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Query\textbackslash{}\+Query\+Exception\+::association\+Path\+Inverse\+Side\+Not\+Supported()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md264}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Query\textbackslash{}Query\+Exception\+::association\+Path\+Inverse\+Side\+Not\+Supported()} now has a required parameter {\ttfamily \$path\+Expr}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md265}{}\doxysubsection{Minor BC BREAK\+: removed $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Query\textbackslash{}\+Parser\#is\+Internal\+Function()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md265}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Query\textbackslash{}Parser\#is\+Internal\+Function()} was removed because the distinction between internal function and user defined DQL was removed. \href{https://github.com/doctrine/orm/pull/6500}{\texttt{ \#6500}}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md266}{}\doxysubsection{Minor BC BREAK\+: removed $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+ORMException\#overwrite\+Internal\+DQLFunction\+Not\+Allowed()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md266}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Query\textbackslash{}Parser\#overwrite\+Internal\+DQLFunction\+Not\+Allowed()} was removed because of the choice to allow users to overwrite internal functions, ie {\ttfamily AVG}, {\ttfamily SUM}, {\ttfamily COUNT}, {\ttfamily MIN} and {\ttfamily MAX}. \href{https://github.com/doctrine/orm/pull/6500}{\texttt{ \#6500}}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md267}{}\doxysubsection{PHP 7.\+1 is now required}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md267}
+Doctrine 2.\+6 now requires PHP 7.\+1 or newer.
+
+As a consequence, automatic cache setup in Doctrine\textbackslash{}\+ORM\textbackslash{}\+Tools\textbackslash{}\+Setup\+::create$\ast$\+Configuration() was changed\+:
+\begin{DoxyItemize}
+\item APCu extension (ext-\/apcu) will now be used instead of abandoned APC (ext-\/apc).
+\item Memcached extension (ext-\/memcached) will be used instead of obsolete Memcache (ext-\/memcache).
+\item XCache support was dropped as it doesn\textquotesingle{}t work with PHP 7.
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md268}{}\doxysection{Upgrade to 2.\+5}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md268}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md269}{}\doxysubsection{Minor BC BREAK\+: removed $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Query\textbackslash{}\+Sql\+Walker\#walk\+Case\+Expression()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md269}
+Method {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Query\textbackslash{}Sql\+Walker\#walk\+Case\+Expression()} was unused and part of the internal API of the ORM, so it was removed. \href{https://github.com/doctrine/orm/pull/5600}{\texttt{ \#5600}}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md270}{}\doxysubsection{Minor BC BREAK\+: removed \$class\+Name parameter on $<$tt$>$\+Abstract\+Entity\+Inheritance\+Persister\#get\+Select\+Join\+Column\+SQL()$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md270}
+As {\ttfamily \$class\+Name} parameter was not used in the method, it was safely removed.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md271}{}\doxysubsection{Minor BC BREAK\+: query cache key time is now a float}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md271}
+As of 2.\+5.\+5, the {\ttfamily Query\+Cache\+Entry\#time} property will contain a float value instead of an integer in order to have more precision and also to be consistent with the {\ttfamily Timestamp\+Cache\+Entry\#time}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md272}{}\doxysubsection{Minor BC BREAK\+: discriminator map must now include all non-\/transient classes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md272}
+It is now required that you declare the root of an inheritance in the discriminator map.
+
+When declaring an inheritance map, it was previously possible to skip the root of the inheritance in the discriminator map. This was actually a validation mistake by Doctrine2 and led to problems when trying to persist instances of that class.
+
+If you don\textquotesingle{}t plan to persist instances some classes in your inheritance, then either\+:
+
+
+\begin{DoxyItemize}
+\item make those classes {\ttfamily abstract}
+\item map those classes as {\ttfamily Mapped\+Superclass}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md273}{}\doxysubsection{Minor BC BREAK\+: $<$tt$>$\+Entity\+Manager\+Interface$<$/tt$>$ instead of $<$tt$>$\+Entity\+Manager$<$/tt$>$ in type-\/hints}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md273}
+As of 2.\+5, classes requiring the {\ttfamily Entity\+Manager} in any method signature will now require an {\ttfamily Entity\+Manager\+Interface} instead. If you are extending any of the following classes, then you need to check following signatures\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}\mbox{\hyperlink{namespace_tools}{Tools}}\textbackslash{}Debug\+Unit\+Of\+Work\+Listener\#dump\+Identity\+Map(Entity\+Manager\+Interface \$em)}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Class\+Metadata\+Factory\#set\+Entity\+Manager(Entity\+Manager\+Interface \$em)}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md274}{}\doxysubsection{Minor BC BREAK\+: Custom Hydrators API change}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md274}
+As of 2.\+5, {\ttfamily Abstract\+Hydrator} does not enforce the usage of cache as part of API, and now provides you a clean API for column information through the method {\ttfamily hydrate\+Column\+Info(\$column)}. Cache variable being passed around by reference is no longer needed since Hydrators are per query instantiated since Doctrine 2.\+4.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md275}{}\doxysubsection{Minor BC BREAK\+: Entity based $<$tt$>$\+Entity\+Manager\#clear()$<$/tt$>$ calls follow cascade detach}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md275}
+Whenever {\ttfamily Entity\+Manager\#clear()} method gets called with a given entity class name, until 2.\+4, it was only detaching the specific requested entity. As of 2.\+5, {\ttfamily Entity\+Manager} will follow configured cascades, providing a better memory management since associations will be garbage collected, optimizing resources consumption on long running jobs.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md276}{}\doxysubsection{BC BREAK\+: Naming\+Strategy interface changes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md276}
+
+\begin{DoxyEnumerate}
+\item A new method {\ttfamily embedded\+Field\+To\+Column\+Name(\$property\+Name, \$embedded\+Column\+Name)}
+\end{DoxyEnumerate}
+
+This method generates the column name for fields of embedded objects. If you implement your custom Naming\+Strategy, you now also need to implement this new method.
+
+
+\begin{DoxyEnumerate}
+\item A change to method {\ttfamily join\+Column\+Name()} to include the \$class\+Name
+\end{DoxyEnumerate}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md277}{}\doxysubsection{Updates on entities scheduled for deletion are no longer processed}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md277}
+In Doctrine 2.\+4, if you modified properties of an entity scheduled for deletion, Unit\+Of\+Work would produce an UPDATE statement to be executed right before the DELETE statement. The entity in question was therefore present in {\ttfamily Unit\+Of\+Work\#entity\+Updates}, which means that {\ttfamily pre\+Update} and {\ttfamily post\+Update} listeners were (quite pointlessly) called. In {\ttfamily pre\+Flush} listeners, it used to be possible to undo the scheduled deletion for updated entities (by calling {\ttfamily persist()} if the entity was found in both {\ttfamily entity\+Updates} and {\ttfamily entity\+Deletions}). This does not work any longer, because the entire changeset calculation logic is optimized away.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md278}{}\doxysubsection{Minor BC BREAK\+: Default lock mode changed from Lock\+Mode\+::\+NONE to null in method signatures}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md278}
+A misconception concerning default lock mode values in method signatures lead to unexpected behaviour in SQL statements on SQL Server. With a default lock mode of {\ttfamily Lock\+Mode\+::\+NONE} throughout the method signatures in ORM, the table lock hint {\ttfamily WITH (NOLOCK)} was appended to all locking related queries by default. This could result in unpredictable results because an explicit {\ttfamily WITH (NOLOCK)} table hint tells SQL Server to run a specific query in transaction isolation level READ UNCOMMITTED instead of the default READ COMMITTED transaction isolation level. Therefore there now is a distinction between {\ttfamily Lock\+Mode\+::\+NONE} and {\ttfamily null} to be able to tell Doctrine whether to add table lock hints to queries by intention or not. To achieve this, the following method signatures have been changed to declare {\ttfamily \$lock\+Mode = null} instead of {\ttfamily \$lock\+Mode = Lock\+Mode\+::\+NONE}\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Cache\textbackslash{}Persister\textbackslash{}Abstract\+Entity\+Persister\#get\+Select\+SQL()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Cache\textbackslash{}Persister\textbackslash{}Abstract\+Entity\+Persister\#load()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Cache\textbackslash{}Persister\textbackslash{}Abstract\+Entity\+Persister\#refresh()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Decorator\textbackslash{}Entity\+Manager\+Decorator\#find()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Manager\#find()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Entity\+Repository\#find()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Basic\+Entity\+Persister\#get\+Select\+SQL()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Basic\+Entity\+Persister\#load()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Basic\+Entity\+Persister\#refresh()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Entity\+Persister\#get\+Select\+SQL()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Entity\+Persister\#load()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Entity\+Persister\#refresh()}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Persisters\textbackslash{}Joined\+Subclass\+Persister\#get\+Select\+SQL()}
+\end{DoxyItemize}
+
+You should update signatures for these methods if you have subclassed one of the above classes. Please also check the calling code of these methods in your application and update if necessary.
+
+{\bfseries{Note\+:}} This in fact is really a minor BC BREAK and should not have any affect on database vendors other than SQL Server because it is the only one that supports and therefore cares about {\ttfamily Lock\+Mode\+::\+NONE}. It\textquotesingle{}s really just a FIX for SQL Server environments using ORM.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md279}{}\doxysubsection{Minor BC BREAK\+: $<$tt$>$\+\_\+\+\_\+clone$<$/tt$>$ method not called anymore when entities are instantiated via metadata API}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md279}
+As of PHP 5.\+6, instantiation of new entities is deferred to the \href{https://github.com/doctrine/instantiator}{\texttt{ {\ttfamily doctrine/instantiator}}} library, which will avoid calling {\ttfamily \+\_\+\+\_\+clone} or any public API on instantiated objects.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md280}{}\doxysubsection{BC BREAK\+: $<$tt$>$\+Doctrine\textbackslash{}\+ORM\textbackslash{}\+Repository\textbackslash{}\+Default\+Repository\+Factory$<$/tt$>$ is now $<$tt$>$final$<$/tt$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md280}
+Please implement the {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Repository\textbackslash{}Repository\+Factory} interface instead of extending the {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Repository\textbackslash{}Default\+Repository\+Factory}.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md281}{}\doxysubsection{BC BREAK\+: New object expression DQL queries now respects user provided aliasing and not return consumed fields}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md281}
+When executing DQL queries with new object expressions, instead of returning DTOs numerically indexes, it will now respect user provided aliases. Consider the following query\+: \begin{DoxyVerb}SELECT new UserDTO(u.id,u.name) as user,new AddressDTO(a.street,a.postalCode) as address, a.id as addressId FROM User u INNER JOIN u.addresses a WITH a.isPrimary = true
+\end{DoxyVerb}
+ Previously, your result would be similar to this\+: \begin{DoxyVerb}array(
+    0=>array(
+        0=>{UserDTO object},
+        1=>{AddressDTO object},
+        2=>{u.id scalar},
+        3=>{u.name scalar},
+        4=>{a.street scalar},
+        5=>{a.postalCode scalar},
+        'addressId'=>{a.id scalar},
+    ),
+    ...
+)
+\end{DoxyVerb}
+ From now on, the resultset will look like this\+: \begin{DoxyVerb}array(
+    0=>array(
+        'user'=>{UserDTO object},
+        'address'=>{AddressDTO object},
+        'addressId'=>{a.id scalar}
+    ),
+    ...
+)
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md282}{}\doxysubsection{Minor BC BREAK\+: added second parameter \$index\+By in Entity\+Repository\#create\+Query\+Builder method signature}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md282}
+Added way to access the underlying Query\+Builder\+::from() method\textquotesingle{}s \textquotesingle{}index\+By\textquotesingle{} parameter when using Entity\+Repository\+::create\+Query\+Builder()\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md283}{}\doxysection{Upgrade to 2.\+4}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md283}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md284}{}\doxysubsection{BC BREAK\+: Compatibility Bugfix in Persistent\+Collection\#matching()}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md284}
+In Doctrine 2.\+3 it was possible to use the new {\ttfamily matching(\$criteria)} functionality by adding constraints for assocations based on ID\+: \begin{DoxyVerb}Criteria::expr()->eq('association', $assocation->getId());
+\end{DoxyVerb}
+ This functionality does not work on In\+Memory collections however, because in memory criteria compares object values based on reference. As of 2.\+4 the above code will throw an exception. You need to change offending code to pass the {\ttfamily \$assocation} reference directly\+: \begin{DoxyVerb}Criteria::expr()->eq('association', $assocation);
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md285}{}\doxysubsection{Composer is now the default autoloader}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md285}
+The test suite now runs with composer autoloading. Support for PEAR, and tarball autoloading is deprecated. Support for GIT submodules is removed.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md286}{}\doxysubsection{On\+Flush and Post\+Flush event always called}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md286}
+Before 2.\+4 the post\+Flush and on\+Flush events were only called when there were actually entities that changed. Now these events are called no matter if there are entities in the UoW or changes are found.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md287}{}\doxysubsection{Parenthesis are now considered in arithmetic expression}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md287}
+Before 2.\+4 parenthesis are not considered in arithmetic primary expression. That\textquotesingle{}s conceptually wrong, since it might result in wrong values. For example\+:
+
+The DQL\+: \begin{DoxyVerb}SELECT 100 / ( 2 * 2 ) FROM MyEntity
+\end{DoxyVerb}
+ Before 2.\+4 it generates the SQL\+: \begin{DoxyVerb}SELECT 100 / 2 * 2 FROM my_entity
+\end{DoxyVerb}
+ Now parenthesis are considered, the previous DQL will generate\+: \begin{DoxyVerb}SELECT 100 / (2 * 2) FROM my_entity
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md288}{}\doxysection{Upgrade to 2.\+3}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md288}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md289}{}\doxysubsection{Auto Discriminator Map breaks userland implementations with Listener}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md289}
+The new feature to detect discriminator maps automatically when none are provided breaks userland implementations doing this with a listener in {\ttfamily load\+Class\+Metadata} event.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md290}{}\doxysubsection{Entity\+Manager\#find() not calls Entity\+Repository\#find() anymore}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md290}
+Previous to 2.\+3, calling {\ttfamily Entity\+Manager\#find()} would be delegated to {\ttfamily Entity\+Repository\#find()}. This has lead to some unexpected behavior in the core of Doctrine when people have overwritten the find method in their repositories. That is why this behavior has been reversed in 2.\+3, and {\ttfamily Entity\+Repository\#find()} calls {\ttfamily Entity\+Manager\#find()} instead.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md291}{}\doxysubsection{Entity\+Generator add$\ast$() method generation}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md291}
+When generating an add$\ast$() method for a collection the Entity\+Generator will now not use the Type-\/\+Hint to get the singular for the collection name, but use the field-\/name and strip a trailing \char`\"{}s\char`\"{} character if there is one.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md292}{}\doxysubsection{Merge copies non persisted properties too}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md292}
+When merging an entity in UoW not only mapped properties are copied, but also others.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md293}{}\doxysubsection{Query, Query\+Builder and Native\+Query parameters $<$em$>$\+BC break$<$/em$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md293}
+From now on, parameters in queries is an Array\+Collection instead of a simple array. This affects heavily the usage of set\+Parameters(), because it will not append anymore parameters to query, but will actually override the already defined ones. Whenever you are retrieving a parameter (ie. \$query-\/\texorpdfstring{$>$}{>}get\+Parameter(1)), you will receive an instance of Query\textbackslash{}\+Parameter, which contains the methods \char`\"{}get\+Name\char`\"{}, \char`\"{}get\+Value\char`\"{} and \char`\"{}get\+Type\char`\"{}. Parameters are also only converted to when necessary, and not when they are set.
+
+Also, related functions were affected\+:
+
+
+\begin{DoxyItemize}
+\item execute(\$parameters, \$hydration\+Mode) the argument \$parameters can be either an key=\texorpdfstring{$>$}{>}value array or an Array\+Collection instance
+\item iterate(\$parameters, \$hydration\+Mode) the argument \$parameters can be either an key=\texorpdfstring{$>$}{>}value array or an Array\+Collection instance
+\item set\+Parameters(\$parameters) the argument \$parameters can be either an key=\texorpdfstring{$>$}{>}value array or an Array\+Collection instance
+\item get\+Parameters() now returns Array\+Collection instead of array
+\item get\+Parameter(\$key) now returns Parameter instance instead of parameter value
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md294}{}\doxysubsection{Query Tree\+Walker method renamed}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md294}
+Internal changes were made to DQL and SQL generation. If you have implemented your own Tree\+Walker, you probably need to update it. The method walk\+Join\+Variable\+Declaration is now named walk\+Join.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md295}{}\doxysubsection{New methods in Tree\+Walker interface $<$em$>$\+BC break$<$/em$>$}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md295}
+Two methods get\+Query\+Components() and set\+Query\+Component() were added to the Tree\+Walker interface and all its implementations including Tree\+Walker\+Adapter, Tree\+Walker\+Chain and Sql\+Walker. If you have your own implementation not inheriting from one of the above you must implement these new methods.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md296}{}\doxysubsection{Metadata Drivers}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md296}
+Metadata drivers have been rewritten to reuse code from {\ttfamily Doctrine\textbackslash{}Persistence}. Anyone who is using the {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Driver} interface should instead refer to {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Mapping\+Driver}. Same applies to {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Abstract\+File\+Driver}\+: you should now refer to {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}File\+Driver}.
+
+Also, following mapping drivers have been deprecated, please use their replacements in Doctrine\textbackslash{}\+Common as listed\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Driver\+Chain} =\texorpdfstring{$>$}{>} {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Mapping\+Driver\+Chain}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}PHPDriver} =\texorpdfstring{$>$}{>} {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}PHPDriver}
+\item {\ttfamily Doctrine\textbackslash{}ORM\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Static\+PHPDriver} =\texorpdfstring{$>$}{>} {\ttfamily Doctrine\textbackslash{}Persistence\textbackslash{}Mapping\textbackslash{}Driver\textbackslash{}Static\+PHPDriver}
+\end{DoxyItemize}\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md297}{}\doxysection{Upgrade to 2.\+2}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md297}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md298}{}\doxysubsection{Result\+Cache implementation rewritten}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md298}
+The result cache is completely rewritten and now works on the database result level, not inside the ORM Abstract\+Query anymore. This means that for result cached queries the hydration will now always be performed again, regardless of the hydration mode. Affected areas are\+:
+
+
+\begin{DoxyEnumerate}
+\item Fixes the problem that entities coming from the result cache were not registered in the Unit\+Of\+Work leading to problems during Entity\+Manager\+::flush. Calls to Entity\+Manager\+::merge are not necessary anymore.
+\item Affects the array hydrator which now includes the overhead of hydration compared to caching the final result.
+\end{DoxyEnumerate}
+
+The API is backwards compatible however most of the getter methods on the {\ttfamily Abstract\+Query} object are now deprecated in favor of calling Abstract\+Query\+::get\+Query\+Cache\+Profile(). This method returns a {\ttfamily Doctrine\textbackslash{}DBAL\textbackslash{}Cache\textbackslash{}Query\+Cache\+Profile} instance with access to result cache driver, lifetime and cache key.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md299}{}\doxysubsection{Entity\+Manager\#get\+Partial\+Reference() creates read-\/only entity}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md299}
+Entities returned from Entity\+Manager\+::get\+Partial\+Reference() are now marked as read-\/only if they haven\textquotesingle{}t been in the identity map before. This means objects of this kind never lead to changes in the Unit\+Of\+Work.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md300}{}\doxysubsection{Fields omitted in a partial DQL query or a native query are never updated}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md300}
+Fields of an entity that are not returned from a partial DQL Query or native SQL query will never be updated through an UPDATE statement.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md301}{}\doxysubsection{Removed support for on\+Update in @\+Join\+Column}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md301}
+The on\+Update foreign key handling makes absolutely no sense in an ORM. Additionally Oracle doesn\textquotesingle{}t even support it. Support for it is removed.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md302}{}\doxysubsection{Changes in Annotation Handling}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md302}
+There have been some changes to the annotation handling in Common 2.\+2 again, that affect how people with old configurations from 2.\+0 have to configure the annotation driver if they don\textquotesingle{}t use {\ttfamily Configuration\+::new\+Default\+Annotation\+Driver()}\+: \begin{DoxyVerb}// Register the ORM Annotations in the AnnotationRegistry
+AnnotationRegistry::registerFile('path/to/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php');
+
+$reader = new \Doctrine\Common\Annotations\SimpleAnnotationReader();
+$reader->addNamespace('Doctrine\ORM\Mapping');
+$reader = new \Doctrine\Common\Annotations\CachedReader($reader, new ArrayCache());
+
+$driver = new AnnotationDriver($reader, (array)$paths);
+
+$config->setMetadataDriverImpl($driver);
+\end{DoxyVerb}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md303}{}\doxysubsection{Scalar mappings can now be omitted from DQL result}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md303}
+You are now allowed to mark scalar SELECT expressions as HIDDEN an they are not hydrated anymore. Example\+:
+
+SELECT u, SUM(a.\+id) AS HIDDEN num\+Articles FROM User u LEFT JOIN u.\+Articles a ORDER BY num\+Articles DESC HAVING num\+Articles \texorpdfstring{$>$}{>} 10
+
+Your result will be a collection of Users, and not an array with key 0 as User object instance and \char`\"{}num\+Articles\char`\"{} as the number of articles per user\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md304}{}\doxysubsection{Map entities as scalars in DQL result}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md304}
+When hydrating to array or even a mixed result in object hydrator, previously you had the 0 index holding you entity instance. You are now allowed to alias this, providing more flexibility for you code. Example\+:
+
+SELECT u AS user FROM User u
+
+Will now return a collection of arrays with index \char`\"{}user\char`\"{} pointing to the User object instance.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md305}{}\doxysubsection{Performance optimizations}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md305}
+Thousands of lines were completely reviewed and optimized for best performance. Removed redundancy and improved code readability made now internal Doctrine code easier to understand. Also, Doctrine 2.\+2 now is around 10-\/15\% faster than 2.\+1.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md306}{}\doxysubsection{Entity\+Manager\#find(null)}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md306}
+Previously Entity\+Manager\+::find(null) returned null. It now throws an exception.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md307}{}\doxysection{Upgrade to 2.\+1}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md307}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md308}{}\doxysubsection{Interface for Entity\+Repository}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md308}
+The Entity\+Repository now has an interface Doctrine\textbackslash{}\+Persistence\textbackslash{}\+Object\+Repository. This means that your classes that override Entity\+Repository and extend find(), find\+One\+By() or find\+By() must be adjusted to follow this interface.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md309}{}\doxysubsection{Annotation\+Reader changes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md309}
+The annotation reader was heavily refactored between 2.\+0 and 2.\+1-\/RC1. In theory the operation of the new reader should be backwards compatible, but it has to be setup differently to work that way\+: \begin{DoxyVerb}// new call to the AnnotationRegistry
+\Doctrine\Common\Annotations\AnnotationRegistry::registerFile('/doctrine-src/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php');
+
+$reader = new \Doctrine\Common\Annotations\AnnotationReader();
+$reader->setDefaultAnnotationNamespace('Doctrine\ORM\Mapping\\');
+// new code necessary starting here
+$reader->setIgnoreNotImportedAnnotations(true);
+$reader->setEnableParsePhpImports(false);
+$reader = new \Doctrine\Common\Annotations\CachedReader(
+    new \Doctrine\Common\Annotations\IndexedReader($reader), new ArrayCache()
+);
+\end{DoxyVerb}
+ This is already done inside the {\ttfamily \$config-\/\texorpdfstring{$>$}{>}new\+Default\+Annotation\+Driver}, so everything should automatically work if you are using this method. You can verify if everything still works by executing a console command such as schema-\/validate that loads all metadata into memory.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md310}{}\doxysection{Update from 2.\+0-\/\+BETA3 to 2.\+0-\/\+BETA4}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md310}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md311}{}\doxysubsection{XML Driver $<$change-\/tracking-\/policy /$>$ element demoted to attribute}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md311}
+We changed how the XML Driver allows to define the change-\/tracking-\/policy. The working case is now\+: \begin{DoxyVerb}<entity change-tracking-policy="DEFERRED_IMPLICT" />
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md312}{}\doxysection{Update from 2.\+0-\/\+BETA2 to 2.\+0-\/\+BETA3}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md312}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md313}{}\doxysubsection{Serialization of Uninitialized Proxies}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md313}
+As of Beta3 you can now serialize uninitialized proxies, an exception will only be thrown when trying to access methods on the unserialized proxy as long as it has not been re-\/attached to the Entity\+Manager using {\ttfamily Entity\+Manager\#merge()}. See this example\+: \begin{DoxyVerb}$proxy = $em->getReference('User', 1);
+
+$serializedProxy = serialize($proxy);
+$detachedProxy = unserialized($serializedProxy);
+
+echo $em->contains($detachedProxy); // FALSE
+
+try {
+    $detachedProxy->getId(); // uninitialized detached proxy
+} catch(Exception $e) {
+
+}
+$attachedProxy = $em->merge($detachedProxy);
+echo $attackedProxy->getId(); // works!
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md314}{}\doxysubsection{Changed SQL implementation of Postgres and Oracle Date\+Time types}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md314}
+The DBAL Type \char`\"{}datetime\char`\"{} included the Timezone Offset in both Postgres and Oracle. As of this version they are now generated without Timezone (TIMESTAMP WITHOUT TIME ZONE instead of TIMESTAMP WITH TIME ZONE). See \href{http://www.doctrine-project.org/jira/browse/DBAL-22?focusedCommentId=13396&page=com.atlassian.jira.plugin.system.issuetabpanels\%3Acomment-tabpanel\#action_13396}{\texttt{ this comment to Ticket DBAL-\/22}} for more details as well as migration issues for Postgre\+SQL and Oracle.
+
+Both Postgres and Oracle will throw Exceptions during hydration of Objects with \char`\"{}\+Date\+Time\char`\"{} fields unless migration steps are taken!\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md315}{}\doxysubsection{Removed multi-\/dot/deep-\/path expressions in DQL}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md315}
+The support for implicit joins in DQL through the multi-\/dot/\+Deep Path Expressions was dropped. For example\+: \begin{DoxyVerb}SELECT u FROM User u WHERE u.group.name = ?1
+\end{DoxyVerb}
+ See the \char`\"{}u.\+group.\+id\char`\"{} here is using multi dots (deep expression) to walk through the graph of objects and properties. Internally the DQL parser would rewrite these queries to\+: \begin{DoxyVerb}SELECT u FROM User u JOIN u.group g WHERE g.name = ?1
+\end{DoxyVerb}
+ This explicit notation will be the only supported notation as of now. The internal handling of multi-\/dots in the DQL Parser was very complex, error prone in edge cases and required special treatment for several features we added. Additionally it had edge cases that could not be solved without making the DQL Parser even much more complex. For this reason we will drop the support for the deep path expressions to increase maintainability and overall performance of the DQL parsing process. This will benefit any DQL query being parsed, even those not using deep path expressions.
+
+Note that the generated SQL of both notations is exactly the same! You don\textquotesingle{}t loose anything through this.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md316}{}\doxysubsection{Default Allocation Size for Sequences}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md316}
+The default allocation size for sequences has been changed from 10 to 1. This step was made to not cause confusion with users and also because it is partly some kind of premature optimization.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md317}{}\doxysection{Update from 2.\+0-\/\+BETA1 to 2.\+0-\/\+BETA2}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md317}
+There are no backwards incompatible changes in this release.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md318}{}\doxysection{Upgrade from 2.\+0-\/\+ALPHA4 to 2.\+0-\/\+BETA1}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md318}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md319}{}\doxysubsection{Entity\+Repository deprecates access to protected variables}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md319}
+Instead of accessing protected variables for the Entity\+Manager in a custom Entity\+Repository it is now required to use the getter methods for all the three instance variables\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \$this-\/\texorpdfstring{$>$}{>}\+\_\+em} now accessible through {\ttfamily \$this-\/\texorpdfstring{$>$}{>}get\+Entity\+Manager()}
+\item {\ttfamily \$this-\/\texorpdfstring{$>$}{>}\+\_\+class} now accessible through {\ttfamily \$this-\/\texorpdfstring{$>$}{>}get\+Class\+Metadata()}
+\item {\ttfamily \$this-\/\texorpdfstring{$>$}{>}\+\_\+entity\+Name} now accessible through {\ttfamily \$this-\/\texorpdfstring{$>$}{>}get\+Entity\+Name()}
+\end{DoxyItemize}
+
+Important\+: For Beta 2 the protected visibility of these three properties will be changed to private!\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md320}{}\doxysubsection{Console migrated to Symfony Console}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md320}
+The Doctrine CLI has been replaced by Symfony Console Configuration
+
+Instead of having to specify\+: \begin{DoxyVerb}[php]
+$cliConfig = new CliConfiguration();
+$cliConfig->setAttribute('em', $entityManager);
+\end{DoxyVerb}
+ You now have to configure the script like\+: \begin{DoxyVerb}[php]
+$helperSet = new \Symfony\Components\Console\Helper\HelperSet(array(
+    'db' => new \Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper($em->getConnection()),
+    'em' => new \Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper($em)
+));
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md321}{}\doxysubsection{Console\+: No need for Mapping Paths anymore}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md321}
+In previous versions you had to specify the --from and --from-\/path options to show where your mapping paths are from the console. However this information is already known from the Mapping Driver configuration, so the requirement for this options were dropped.
+
+Instead for each console command all the entities are loaded and to restrict the operation to one or more sub-\/groups you can use the --filter flag.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md322}{}\doxysubsection{Annotation\+Driver is not a default mapping driver anymore}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md322}
+In conjunction with the recent changes to Console we realized that the annotations driver being a default metadata driver lead to lots of glue code in the console components to detect where entities lie and how to load them for batch updates like Schema\+Tool and other commands. However the annotations driver being a default driver does not really help that much anyways.
+
+Therefore we decided to break backwards compatibility in this issue and drop the support for Annotations as Default Driver and require our users to specify the driver explicitly (which allows us to ask for the path to all entities).
+
+If you are using the annotations metadata driver as default driver, you have to add the following lines to your bootstrap code\+: \begin{DoxyVerb}$driverImpl = $config->newDefaultAnnotationDriver(array(__DIR__."/Entities"));
+$config->setMetadataDriverImpl($driverImpl);
+\end{DoxyVerb}
+ You have to specify the path to your entities as either string of a single path or array of multiple paths to your entities. This information will be used by all console commands to access all entities.
+
+Xml and Yaml Drivers work as before!\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md323}{}\doxysubsection{New inversed\+By attribute}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md323}
+It is now {\itshape mandatory} that the owning side of a bidirectional association specifies the \textquotesingle{}inversed\+By\textquotesingle{} attribute that points to the name of the field on the inverse side that completes the association. Example\+: \begin{DoxyVerb}[php]
+// BEFORE (ALPHA4 AND EARLIER)
+class User
+{
+    //...
+    /** @OneToOne(targetEntity="Address", mappedBy="user") */
+    private $address;
+    //...
+}
+class Address
+{
+    //...
+    /** @OneToOne(targetEntity="User") */
+    private $user;
+    //...
+}
+
+// SINCE BETA1
+// User class DOES NOT CHANGE
+class Address
+{
+    //...
+    /** @OneToOne(targetEntity="User", inversedBy="address") */
+    private $user;
+    //...
+}
+\end{DoxyVerb}
+ Thus, the inversed\+By attribute is the counterpart to the mapped\+By attribute. This change was necessary to enable some simplifications and further performance improvements. We apologize for the inconvenience.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md324}{}\doxysubsection{Default Property for Field Mappings}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md324}
+The \char`\"{}default\char`\"{} option for database column defaults has been removed. If desired, database column defaults can be implemented by using the column\+Definition attribute of the @\+Column annotation (or the appropriate XML and YAML equivalents). Prefer PHP default values, if possible.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md325}{}\doxysubsection{Selecting Partial Objects}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md325}
+Querying for partial objects now has a new syntax. The old syntax to query for partial objects now has a different meaning. This is best illustrated by an example. If you previously had a DQL query like this\+: \begin{DoxyVerb}[sql]
+SELECT u.id, u.name FROM User u
+\end{DoxyVerb}
+ Since BETA1, simple state field path expressions in the select clause are used to select object fields as plain scalar values (something that was not possible before). To achieve the same result as previously (that is, a partial object with only id and name populated) you need to use the following, explicit syntax\+: \begin{DoxyVerb}[sql]
+SELECT PARTIAL u.{id,name} FROM User u
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md326}{}\doxysubsection{XML Mapping Driver}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md326}
+The \textquotesingle{}inheritance-\/type\textquotesingle{} attribute changed to take last bit of Class\+Metadata constant names, i.\+e. NONE, SINGLE\+\_\+\+TABLE, INHERITANCE\+\_\+\+TYPE\+\_\+\+JOINED\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md327}{}\doxysubsection{YAML Mapping Driver}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md327}
+The way to specify lifecycle callbacks in YAML Mapping driver was changed to allow for multiple callbacks per event. The Old syntax ways\+: \begin{DoxyVerb}[yaml]
+lifecycleCallbacks:
+  doStuffOnPrePersist: prePersist
+  doStuffOnPostPersist: postPersist
+\end{DoxyVerb}
+ The new syntax is\+: \begin{DoxyVerb}[yaml]
+lifecycleCallbacks:
+  prePersist: [ doStuffOnPrePersist, doOtherStuffOnPrePersistToo ]
+  postPersist: [ doStuffOnPostPersist ]
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md328}{}\doxysubsection{Pre\+Update Event Listeners}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md328}
+Event Listeners listening to the \textquotesingle{}pre\+Update\textquotesingle{} event can only affect the primitive values of entity changesets by using the API on the {\ttfamily Pre\+Update\+Event\+Args} instance passed to the pre\+Update listener method. Any changes to the state of the entitys properties won\textquotesingle{}t affect the database UPDATE statement anymore. This gives drastic performance benefits for the pre\+Update event.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md329}{}\doxysubsection{Collection API}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md329}
+The Collection interface in the Common package has been updated with some missing methods that were present only on the default implementation, Array\+Collection. Custom collection implementations need to be updated to adhere to the updated interface.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md330}{}\doxysection{Upgrade from 2.\+0-\/\+ALPHA3 to 2.\+0-\/\+ALPHA4}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md330}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md331}{}\doxysubsection{CLI Controller changes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md331}
+CLI main object changed its name and namespace. Renamed from Doctrine\textbackslash{}\+ORM\textbackslash{}\+Tools\textbackslash{}\+Cli to Doctrine\textbackslash{}\+Common\textbackslash{}\+Cli\textbackslash{}\+Cli\+Controller. Doctrine\textbackslash{}\+Common\textbackslash{}\+Cli\textbackslash{}\+Cli\+Controller now only deals with namespaces. Ready to go, Core, Dbal and Orm are available and you can subscribe new tasks by retrieving the namespace and including new task. Example\+: \begin{DoxyVerb}[php]
+$cli->getNamespace('Core')->addTask('my-example', '\MyProject\Tools\Cli\Tasks\MyExampleTask');
+\end{DoxyVerb}
+\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md332}{}\doxysubsection{CLI Tasks documentation}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md332}
+Tasks have implemented a new way to build documentation. Although it is still possible to define the help manually by extending the basic\+Help and extended\+Help, they are now optional. With new required method Abstract\+Task\+::build\+Documentation, its implementation defines the Task\+Documentation instance (accessible through Abstract\+Task\+::get\+Documentation()), basic\+Help and extended\+Help are now not necessary to be implemented.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md333}{}\doxysubsection{Changes in Method Signatures}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md333}
+\begin{DoxyVerb}* A bunch of Methods on both Doctrine\DBAL\Platforms\AbstractPlatform and Doctrine\DBAL\Schema\AbstractSchemaManager
+  have changed quite significantly by adopting the new Schema instance objects.
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md334}{}\doxysubsection{Renamed Methods}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md334}
+\begin{DoxyVerb}* Doctrine\ORM\AbstractQuery::setExpireResultCache() -> expireResultCache()
+* Doctrine\ORM\Query::setExpireQueryCache() -> expireQueryCache()
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md335}{}\doxysubsection{Schema\+Tool Changes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md335}
+\begin{DoxyVerb}* "doctrine schema-tool --drop" now always drops the complete database instead of
+only those tables defined by the current database model. The previous method had
+problems when foreign keys of orphaned tables pointed to tables that were scheduled
+for deletion.
+* Use "doctrine schema-tool --update" to get a save incremental update for your
+database schema without deleting any unused tables, sequences or foreign keys.
+* Use "doctrine schema-tool --complete-update" to do a full incremental update of
+your schema.
+\end{DoxyVerb}
+ \hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md336}{}\doxysection{Upgrade from 2.\+0-\/\+ALPHA2 to 2.\+0-\/\+ALPHA3}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md336}
+This section details the changes made to Doctrine 2.\+0-\/ALPHA3 to make it easier for you to upgrade your projects to use this version.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md337}{}\doxysubsection{CLI Changes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md337}
+The \$args variable used in the cli-\/config.\+php for configuring the Doctrine CLI has been renamed to \$global\+Arguments.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md338}{}\doxysubsection{Proxy class changes}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md338}
+You are now required to make supply some minimalist configuration with regards to proxy objects. That involves 2 new configuration options. First, the directory where generated proxy classes should be placed needs to be specified. Secondly, you need to configure the namespace used for proxy classes. The following snippet shows an example\+: \begin{DoxyVerb}[php]
+// step 1: configure directory for proxy classes
+// $config instanceof Doctrine\ORM\Configuration
+$config->setProxyDir('/path/to/myproject/lib/MyProject/Generated/Proxies');
+$config->setProxyNamespace('MyProject\Generated\Proxies');
+\end{DoxyVerb}
+ Note that proxy classes behave exactly like any other classes when it comes to class loading. Therefore you need to make sure the proxy classes can be loaded by some class loader. If you place the generated proxy classes in a namespace and directory under your projects class files, like in the example above, it would be sufficient to register the My\+Project namespace on a class loader. Since the proxy classes are contained in that namespace and adhere to the standards for class loading, no additional work is required. Generating the proxy classes into a namespace within your class library is the recommended setup.
+
+Entities with initialized proxy objects can now be serialized and unserialized properly from within the same application.
+
+For more details refer to the Configuration section of the manual.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md339}{}\doxysubsection{Removed allow\+Partial\+Objects configuration option}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md339}
+The allow\+Partial\+Objects configuration option together with the {\ttfamily Configuration\#get\+Allow\+Partial\+Objects} and {\ttfamily Configuration\#set\+Allow\+Partial\+Objects} methods have been removed. The new behavior is as if the option were set to FALSE all the time, basically disallowing partial objects globally. However, you can still use the {\ttfamily Query\+::\+HINT\+\_\+\+FORCE\+\_\+\+PARTIAL\+\_\+\+LOAD} query hint to force a query to return partial objects for optimization purposes.\hypertarget{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md340}{}\doxysubsection{Renamed Methods}\label{md_vendor_doctrine_orm__u_p_g_r_a_d_e_autotoc_md340}
+
+\begin{DoxyItemize}
+\item Doctrine\textbackslash{}\+ORM\textbackslash{}\+Configuration\#get\+Cache\+Dir() to get\+Proxy\+Dir()
+\item Doctrine\textbackslash{}\+ORM\textbackslash{}\+Configuration\#set\+Cache\+Dir(\$dir) to set\+Proxy\+Dir(\$dir) 
+\end{DoxyItemize}

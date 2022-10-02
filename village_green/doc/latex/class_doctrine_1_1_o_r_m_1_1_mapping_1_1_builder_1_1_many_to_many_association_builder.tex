@@ -1,0 +1,84 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder}{}\doxysection{Many\+To\+Many\+Association\+Builder Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder}\index{ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}}
+Inheritance diagram for Many\+To\+Many\+Association\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_a6251f99c956d1348c1990faf6260bb86}{set\+Join\+Table}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_aa52f437de3effdf46626454d09247748}{add\+Inverse\+Join\+Column}} (\$column\+Name, \$referenced\+Column\+Name, \$nullable=true, \$unique=false, \$on\+Delete=null, \$column\+Def=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_a3928875ef0ceb18a51c1061be3eb3a00}{build}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_many_to_many}{Many\+To\+Many}} Association Builder
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+com}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_aa52f437de3effdf46626454d09247748}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_aa52f437de3effdf46626454d09247748}} 
+\index{ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}!addInverseJoinColumn@{addInverseJoinColumn}}
+\index{addInverseJoinColumn@{addInverseJoinColumn}!ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}}
+\doxysubsubsection{\texorpdfstring{addInverseJoinColumn()}{addInverseJoinColumn()}}
+{\footnotesize\ttfamily add\+Inverse\+Join\+Column (\begin{DoxyParamCaption}\item[{}]{\$column\+Name,  }\item[{}]{\$referenced\+Column\+Name,  }\item[{}]{\$nullable = {\ttfamily true},  }\item[{}]{\$unique = {\ttfamily false},  }\item[{}]{\$on\+Delete = {\ttfamily null},  }\item[{}]{\$column\+Def = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Adds Inverse Join Columns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$column\+Name} & \\
+\hline
+string & {\em \$referenced\+Column\+Name} & \\
+\hline
+bool & {\em \$nullable} & \\
+\hline
+bool & {\em \$unique} & \\
+\hline
+string | null & {\em \$on\+Delete} & \\
+\hline
+string | null & {\em \$column\+Def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_a3928875ef0ceb18a51c1061be3eb3a00}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_a3928875ef0ceb18a51c1061be3eb3a00}} 
+\index{ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}!build@{build}}
+\index{build@{build}!ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_class_metadata_builder}{Class\+Metadata\+Builder}} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_one_to_many_association_builder_a3928875ef0ceb18a51c1061be3eb3a00}{One\+To\+Many\+Association\+Builder}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_a6251f99c956d1348c1990faf6260bb86}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_builder_1_1_many_to_many_association_builder_a6251f99c956d1348c1990faf6260bb86}} 
+\index{ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}!setJoinTable@{setJoinTable}}
+\index{setJoinTable@{setJoinTable}!ManyToManyAssociationBuilder@{ManyToManyAssociationBuilder}}
+\doxysubsubsection{\texorpdfstring{setJoinTable()}{setJoinTable()}}
+{\footnotesize\ttfamily set\+Join\+Table (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/\+Builder/Many\+To\+Many\+Association\+Builder.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader}{}\doxysection{Autoloader Class Reference}
+\label{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader}\index{Autoloader@{Autoloader}}
+Inheritance diagram for Autoloader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader_aaaee777ad0294683f85c9b583a3f0b88}{resolve\+File}} (\$proxy\+Dir, \$proxy\+Namespace, \$class\+Name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader_a2b2109de95254631a6747032d859e3cd}{register}} (\$proxy\+Dir, \$proxy\+Namespace, \$not\+Found\+Callback=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Special \mbox{\hyperlink{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader}{Autoloader}} for \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{Proxy}} classes, which are not PSR-\/0 compliant. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader_a2b2109de95254631a6747032d859e3cd}\label{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader_a2b2109de95254631a6747032d859e3cd}} 
+\index{Autoloader@{Autoloader}!register@{register}}
+\index{register@{register}!Autoloader@{Autoloader}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily static register (\begin{DoxyParamCaption}\item[{}]{\$proxy\+Dir,  }\item[{}]{\$proxy\+Namespace,  }\item[{}]{\$not\+Found\+Callback = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers and returns autoloader callback for the given proxy dir and namespace.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$proxy\+Dir} & \\
+\hline
+string & {\em \$proxy\+Namespace} & \\
+\hline
+callable | null & {\em \$not\+Found\+Callback} & Invoked when the proxy file is not found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Closure
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader_aaaee777ad0294683f85c9b583a3f0b88}\label{class_doctrine_1_1_common_1_1_proxy_1_1_autoloader_aaaee777ad0294683f85c9b583a3f0b88}} 
+\index{Autoloader@{Autoloader}!resolveFile@{resolveFile}}
+\index{resolveFile@{resolveFile}!Autoloader@{Autoloader}}
+\doxysubsubsection{\texorpdfstring{resolveFile()}{resolveFile()}}
+{\footnotesize\ttfamily static resolve\+File (\begin{DoxyParamCaption}\item[{}]{\$proxy\+Dir,  }\item[{}]{\$proxy\+Namespace,  }\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Resolves proxy class name to a filename based on the following pattern.
+
+
+\begin{DoxyEnumerate}
+\item Remove \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_proxy_1_1_proxy}{Proxy}} namespace from class name.
+\item Remove namespace separators from remaining class name.
+\item Return PHP filename from proxy-\/dir with the result from 2.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$proxy\+Dir} & \\
+\hline
+string & {\em \$proxy\+Namespace} & \\
+\hline
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/common/lib/\+Doctrine/\+Common/\+Proxy/Autoloader.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_notify_property_changed}{}\doxysection{Notify\+Property\+Changed Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_notify_property_changed}\index{NotifyPropertyChanged@{NotifyPropertyChanged}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_notify_property_changed_a75ccf74aa996d189428a8856e8a4bbfd}{add\+Property\+Changed\+Listener}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_property_changed_listener}{Property\+Changed\+Listener}} \$listener)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for classes that notify event listeners of changes to their managed properties.
+
+This interface is implemented by objects that manually want to notify their object manager or other listeners when properties change, instead of relying on the object manager to compute property changes itself when changes are to be persisted. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_notify_property_changed_a75ccf74aa996d189428a8856e8a4bbfd}\label{interface_doctrine_1_1_persistence_1_1_notify_property_changed_a75ccf74aa996d189428a8856e8a4bbfd}} 
+\index{NotifyPropertyChanged@{NotifyPropertyChanged}!addPropertyChangedListener@{addPropertyChangedListener}}
+\index{addPropertyChangedListener@{addPropertyChangedListener}!NotifyPropertyChanged@{NotifyPropertyChanged}}
+\doxysubsubsection{\texorpdfstring{addPropertyChangedListener()}{addPropertyChangedListener()}}
+{\footnotesize\ttfamily add\+Property\+Changed\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_property_changed_listener}{Property\+Changed\+Listener}}}]{\$listener }\end{DoxyParamCaption})}
+
+Adds a listener that wants to be notified about property changes.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Notify\+Property\+Changed.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,876 @@
+\hypertarget{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2orm_2lib_2_doctrine_f8967513678986d5e8c2157d31bb4dfd}{}\doxysection{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Abstract\+Query.\+php}
+Set a cache profile for hydration caching.
+
+If no result cache driver is set in the Query\+Cache\+Profile, the default result cache driver is used from the configuration.
+
+Important\+: Hydration caching does NOT register entities in the Unit\+Of\+Work when retrieved from the cache. Never use result cached entities for requests that also flush the Entity\+Manager. If you want some form of caching with Unit\+Of\+Work registration you should use \{\begin{DoxySeeAlso}{See also}
+Abstract\+Query\+::set\+Result\+Cache\+Profile()\}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+\$this
+\end{DoxyReturn}
+\$lifetime = 100; \$result\+Key = \char`\"{}abc\char`\"{}; \$query-\/\texorpdfstring{$>$}{>}set\+Hydration\+Cache\+Profile(new Query\+Cache\+Profile()); \$query-\/\texorpdfstring{$>$}{>}set\+Hydration\+Cache\+Profile(new Query\+Cache\+Profile(\$lifetime, \$result\+Key));
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{declare(strict\_types=1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }Doctrine\(\backslash\)ORM;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use Countable;}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_cache_adapter}{Doctrine\(\backslash\)Common\(\backslash\)Cache\(\backslash\)Psr6\(\backslash\)CacheAdapter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_common_1_1_cache_1_1_psr6_1_1_doctrine_provider}{Doctrine\(\backslash\)Common\(\backslash\)Cache\(\backslash\)Psr6\(\backslash\)DoctrineProvider}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_array_collection}{Doctrine\(\backslash\)Common\(\backslash\)Collections\(\backslash\)ArrayCollection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_collection}{Doctrine\(\backslash\)Common\(\backslash\)Collections\(\backslash\)Collection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Doctrine\(\backslash\)DBAL\(\backslash\)Cache\(\backslash\)QueryCacheProfile}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_result}{Doctrine\(\backslash\)DBAL\(\backslash\)Result}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_deprecations_1_1_deprecation}{Doctrine\(\backslash\)Deprecations\(\backslash\)Deprecation}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_exception_1_1_invalid_result_cache_driver}{Doctrine\(\backslash\)ORM\(\backslash\)Cache\(\backslash\)Exception\(\backslash\)InvalidResultCacheDriver}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_logging_1_1_cache_logger}{Doctrine\(\backslash\)ORM\(\backslash\)Cache\(\backslash\)Logging\(\backslash\)CacheLogger}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_query_cache_key}{Doctrine\(\backslash\)ORM\(\backslash\)Cache\(\backslash\)QueryCacheKey}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_timestamp_cache_key}{Doctrine\(\backslash\)ORM\(\backslash\)Cache\(\backslash\)TimestampCacheKey}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_iterable_result}{Doctrine\(\backslash\)ORM\(\backslash\)Internal\(\backslash\)Hydration\(\backslash\)IterableResult}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_mapping_exception}{Doctrine\(\backslash\)ORM\(\backslash\)Mapping\(\backslash\)MappingException}} as ORMMappingException;}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parameter}{Doctrine\(\backslash\)ORM\(\backslash\)Query\(\backslash\)Parameter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_exception}{Doctrine\(\backslash\)ORM\(\backslash\)Query\(\backslash\)QueryException}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Doctrine\(\backslash\)ORM\(\backslash\)Query\(\backslash\)ResultSetMapping}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_mapping_exception}{Doctrine\(\backslash\)Persistence\(\backslash\)Mapping\(\backslash\)MappingException}};}
+\DoxyCodeLine{use LogicException;}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_pool_interface}{Psr\(\backslash\)Cache\(\backslash\)CacheItemPoolInterface}};}
+\DoxyCodeLine{use Traversable;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \textcolor{keyword}{function} array\_map;}
+\DoxyCodeLine{use \textcolor{keyword}{function} array\_shift;}
+\DoxyCodeLine{use \textcolor{keyword}{function} assert;}
+\DoxyCodeLine{use \textcolor{keyword}{function} count;}
+\DoxyCodeLine{use \textcolor{keyword}{function} is\_array;}
+\DoxyCodeLine{use \textcolor{keyword}{function} is\_numeric;}
+\DoxyCodeLine{use \textcolor{keyword}{function} is\_object;}
+\DoxyCodeLine{use \textcolor{keyword}{function} is\_scalar;}
+\DoxyCodeLine{use \textcolor{keyword}{function} iterator\_count;}
+\DoxyCodeLine{use \textcolor{keyword}{function} iterator\_to\_array;}
+\DoxyCodeLine{use \textcolor{keyword}{function} ksort;}
+\DoxyCodeLine{use \textcolor{keyword}{function} method\_exists;}
+\DoxyCodeLine{use \textcolor{keyword}{function} reset;}
+\DoxyCodeLine{use \textcolor{keyword}{function} serialize;}
+\DoxyCodeLine{use \textcolor{keyword}{function} sha1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{abstract} \textcolor{keyword}{class }AbstractQuery}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{/* Hydration mode constants */}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{const} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0668869e9905d3e2a40b6abf21df9f20}{HYDRATE\_OBJECT}} = 1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{const} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a3db5adddfd3c6c59e27adfcd031c395b}{HYDRATE\_ARRAY}} = 2;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{const} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab2e339f697e48216683e8a55fabd2333}{HYDRATE\_SCALAR}} = 3;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{const} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a8c1ce800e4d71e8772a8ebae86e5e489}{HYDRATE\_SINGLE\_SCALAR}} = 4;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{const} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a60059644fe0f70ac3f8a4acbb4abf7a6}{HYDRATE\_SIMPLEOBJECT}} = 5;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{const} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a06bbe0a5beb0b2581f6c2cac6b0e7b67}{HYDRATE\_SCALAR\_COLUMN}} = 6;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$parameters;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$\_resultSetMapping;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$\_em;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_af8e177ef9f1d72b84cb7cf26c769e049}{\$\_hints}} = [];}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$\_hydrationMode = \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0668869e9905d3e2a40b6abf21df9f20}{self::HYDRATE\_OBJECT}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$\_queryCacheProfile;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$\_expireResultCache = \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$\_hydrationCacheProfile;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$cacheable = \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$hasCache = \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$cacheRegion;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$cacheMode;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$cacheLogger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \$lifetime = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a25f4258aeb5ce2a61a2504cb7c058485}{\_\_construct}}(EntityManagerInterface \$em)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\_em        = \$em;}
+\DoxyCodeLine{        \$this-\/>parameters = \textcolor{keyword}{new} ArrayCollection();}
+\DoxyCodeLine{        \$this-\/>\_hints     = \$em-\/>getConfiguration()-\/>getDefaultQueryHints();}
+\DoxyCodeLine{        \$this-\/>hasCache   = \$this-\/>\_em-\/>getConfiguration()-\/>isSecondLevelCacheEnabled();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>hasCache) \{}
+\DoxyCodeLine{            \$this-\/>cacheLogger = \$em-\/>getConfiguration()}
+\DoxyCodeLine{                -\/>getSecondLevelCacheConfiguration()}
+\DoxyCodeLine{                -\/>getCacheLogger();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a7fbc815cd243933f2ccf73f639bcbef1}{setCacheable}}(\$cacheable)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>cacheable = (bool) \$cacheable;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a8dc10087cfbf077529664dd5a920b7c7}{isCacheable}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>cacheable;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac3d8e7d593064414f61e15b4864f3b8e}{setCacheRegion}}(\$cacheRegion)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>cacheRegion = (string) \$cacheRegion;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a8e79364c6045908971ae729b0807dd5e}{getCacheRegion}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>cacheRegion;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a7766ee0d6714c62177235a609f4d40be}{isCacheEnabled}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>cacheable \&\& \$this-\/>hasCache;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a930357223406998831db9912ebbd04f5}{getLifetime}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>lifetime;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_af807236665cf678248cccf7e8543ed91}{setLifetime}}(\$lifetime)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>lifetime = (int) \$lifetime;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a89fd2cad130275c069f22256e12dfb18}{getCacheMode}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>cacheMode;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a3188fe1dc6f4bc2ac133fab18ebba2ec}{setCacheMode}}(\$cacheMode)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>cacheMode = (int) \$cacheMode;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{abstract} \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a67e8cb12dd05cee2a73454f8fa79efdc}{getSQL}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ae2b0e1dbe7640aefaf7d54c6a94d08fe}{getEntityManager}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_em;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a5ad8044ee4b8a2c8bdb8b5c3dc786424}{free}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>parameters = \textcolor{keyword}{new} ArrayCollection();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_hints = \$this-\/>\_em-\/>getConfiguration()-\/>getDefaultQueryHints();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a015cb52e5774a1972d296c9694d2a3c3}{getParameters}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>parameters;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aea629f418ec62673c9d7b1563741e48a}{getParameter}}(\$key)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$key = \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_parameter_a36360043a5c1569edf12693bb7672073}{Query\(\backslash\)Parameter::normalizeName}}(\$key);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$filteredParameters = \$this-\/>parameters-\/>filter(}
+\DoxyCodeLine{            \textcolor{keyword}{static} \textcolor{keyword}{function} (Query\(\backslash\)Parameter \$parameter) use (\$key): \textcolor{keywordtype}{bool} \{}
+\DoxyCodeLine{                \$parameterName = \$parameter-\/>getName();}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \textcolor{keywordflow}{return} \$key === \$parameterName;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} ! \$filteredParameters-\/>isEmpty() ? \$filteredParameters-\/>first() : \textcolor{keyword}{null};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a1c783809a74b71213ef7137d292fd628}{setParameters}}(\$parameters)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// BC compatibility with 2.3-\/}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (is\_array(\$parameters)) \{}
+\DoxyCodeLine{            \$parameterCollection = \textcolor{keyword}{new} ArrayCollection();}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$parameters as \$key => \$value) \{}
+\DoxyCodeLine{                \$parameterCollection-\/>add(\textcolor{keyword}{new} Parameter(\$key, \$value));}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$parameters = \$parameterCollection;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>parameters = \$parameters;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0bfa9d58139fc87957d15ed260b296fb}{setParameter}}(\$key, \$value, \$type = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$existingParameter = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aea629f418ec62673c9d7b1563741e48a}{getParameter}}(\$key);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$existingParameter !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \$existingParameter-\/>setValue(\$value, \$type);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>parameters-\/>add(\textcolor{keyword}{new} Parameter(\$key, \$value, \$type));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0d86edb6de880541d54550cc927aca28}{processParameterValue}}(\$value)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (is\_scalar(\$value)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$value instanceof Collection) \{}
+\DoxyCodeLine{            \$value = iterator\_to\_array(\$value);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (is\_array(\$value)) \{}
+\DoxyCodeLine{            \$value = \$this-\/>processArrayParameterValue(\$value);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$value instanceof Mapping\(\backslash\)ClassMetadata) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$value-\/>name;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! is\_object(\$value)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{            \$value = \$this-\/>\_em-\/>getUnitOfWork()-\/>getSingleIdentifierValue(\$value);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$value === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception_ade3e50a9fa58822ad74ce96bc30bda61}{ORMInvalidArgumentException::invalidIdentifierBindingEntity}}();}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (MappingException | ORMMappingException \$e) \{}
+\DoxyCodeLine{            \textcolor{comment}{/* Silence any mapping exceptions. These can occur if the object in}}
+\DoxyCodeLine{\textcolor{comment}{               question is not a mapped entity, in which case we just don't do}}
+\DoxyCodeLine{\textcolor{comment}{               any preparation on the value.}}
+\DoxyCodeLine{\textcolor{comment}{               Depending on MappingDriver, either MappingException or}}
+\DoxyCodeLine{\textcolor{comment}{               ORMMappingException is thrown. */}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$value = \$this-\/>potentiallyProcessIterable(\$value);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} potentiallyProcessIterable(\$value)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$value instanceof Traversable) \{}
+\DoxyCodeLine{            \$value = iterator\_to\_array(\$value);}
+\DoxyCodeLine{            \$value = \$this-\/>processArrayParameterValue(\$value);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} processArrayParameterValue(array \$value): array}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$value as \$key => \$paramValue) \{}
+\DoxyCodeLine{            \$paramValue  = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0d86edb6de880541d54550cc927aca28}{processParameterValue}}(\$paramValue);}
+\DoxyCodeLine{            \$value[\$key] = is\_array(\$paramValue) ? reset(\$paramValue) : \$paramValue;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aec0ae9e57f3911919f116ee71a1906c3}{setResultSetMapping}}(Query\(\backslash\)ResultSetMapping \$rsm)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>translateNamespaces(\$rsm);}
+\DoxyCodeLine{        \$this-\/>\_resultSetMapping = \$rsm;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac5cd7f0e30351154812bb92721eae657}{getResultSetMapping}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_resultSetMapping;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} translateNamespaces(Query\(\backslash\)ResultSetMapping \$rsm): void}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$translate = \textcolor{keyword}{function} (\$alias): \textcolor{keywordtype}{string} \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\_em-\/>getClassMetadata(\$alias)-\/>getName();}
+\DoxyCodeLine{        \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$rsm-\/>aliasMap         = array\_map(\$translate, \$rsm-\/>aliasMap);}
+\DoxyCodeLine{        \$rsm-\/>declaringClasses = array\_map(\$translate, \$rsm-\/>declaringClasses);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} setHydrationCacheProfile(?QueryCacheProfile \$profile = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$profile === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \$this-\/>\_hydrationCacheProfile = \textcolor{keyword}{null};}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// DBAL 2}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! method\_exists(QueryCacheProfile::class, \textcolor{stringliteral}{'setResultCache'})) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! \$profile-\/>getResultCacheDriver()) \{}
+\DoxyCodeLine{                \$defaultHydrationCacheImpl = \$this-\/>\_em-\/>getConfiguration()-\/>getHydrationCache();}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\$defaultHydrationCacheImpl) \{}
+\DoxyCodeLine{                    \$profile = \$profile-\/>setResultCacheDriver(DoctrineProvider::wrap(\$defaultHydrationCacheImpl));}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \} elseif (! \$profile-\/>getResultCache()) \{}
+\DoxyCodeLine{            \$defaultHydrationCacheImpl = \$this-\/>\_em-\/>getConfiguration()-\/>getHydrationCache();}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$defaultHydrationCacheImpl) \{}
+\DoxyCodeLine{                \$profile = \$profile-\/>setResultCache(\$defaultHydrationCacheImpl);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_hydrationCacheProfile = \$profile;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a681ef9b83b84cb91595fc02373f368ff}{getHydrationCacheProfile}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_hydrationCacheProfile;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_acac92f9ef0417b52686e9048198c5a39}{setResultCacheProfile}}(?QueryCacheProfile \$profile = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$profile === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \$this-\/>\_queryCacheProfile = \textcolor{keyword}{null};}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// DBAL 2}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! method\_exists(QueryCacheProfile::class, \textcolor{stringliteral}{'setResultCache'})) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! \$profile-\/>getResultCacheDriver()) \{}
+\DoxyCodeLine{                \$defaultResultCacheDriver = \$this-\/>\_em-\/>getConfiguration()-\/>getResultCache();}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\$defaultResultCacheDriver) \{}
+\DoxyCodeLine{                    \$profile = \$profile-\/>setResultCacheDriver(DoctrineProvider::wrap(\$defaultResultCacheDriver));}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \} elseif (! \$profile-\/>getResultCache()) \{}
+\DoxyCodeLine{            \$defaultResultCache = \$this-\/>\_em-\/>getConfiguration()-\/>getResultCache();}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$defaultResultCache) \{}
+\DoxyCodeLine{                \$profile = \$profile-\/>setResultCache(\$defaultResultCache);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_queryCacheProfile = \$profile;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ae6cc0cccbc4b12915218698732ffa4d6}{setResultCacheDriver}}(\$resultCacheDriver = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$resultCacheDriver !== \textcolor{keyword}{null} \&\& ! (\$resultCacheDriver instanceof \(\backslash\)Doctrine\(\backslash\)Common\(\backslash\)Cache\(\backslash\)Cache)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} InvalidResultCacheDriver::create();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a73ae30242cbc96ffdacab44f162f858f}{setResultCache}}(\$resultCacheDriver ? CacheAdapter::wrap(\$resultCacheDriver) : \textcolor{keyword}{null});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a73ae30242cbc96ffdacab44f162f858f}{setResultCache}}(?CacheItemPoolInterface \$resultCache = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$resultCache === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$this-\/>\_queryCacheProfile) \{}
+\DoxyCodeLine{                \$this-\/>\_queryCacheProfile = \textcolor{keyword}{new} QueryCacheProfile(\$this-\/>\_queryCacheProfile-\/>getLifetime(), \$this-\/>\_queryCacheProfile-\/>getCacheKey());}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// DBAL 2}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! method\_exists(QueryCacheProfile::class, \textcolor{stringliteral}{'setResultCache'})) \{}
+\DoxyCodeLine{            \$resultCacheDriver = DoctrineProvider::wrap(\$resultCache);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$this-\/>\_queryCacheProfile = \$this-\/>\_queryCacheProfile}
+\DoxyCodeLine{                ? \$this-\/>\_queryCacheProfile-\/>setResultCacheDriver(\$resultCacheDriver)}
+\DoxyCodeLine{                : \textcolor{keyword}{new} QueryCacheProfile(0, \textcolor{keyword}{null}, \$resultCacheDriver);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_queryCacheProfile = \$this-\/>\_queryCacheProfile}
+\DoxyCodeLine{            ? \$this-\/>\_queryCacheProfile-\/>setResultCache(\$resultCache)}
+\DoxyCodeLine{            : \textcolor{keyword}{new} QueryCacheProfile(0, \textcolor{keyword}{null}, \$resultCache);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a14f43017a52875d18e24046b8dd05a5e}{getResultCacheDriver}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_queryCacheProfile \&\& \$this-\/>\_queryCacheProfile-\/>getResultCacheDriver()) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\_queryCacheProfile-\/>getResultCacheDriver();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_em-\/>getConfiguration()-\/>getResultCacheImpl();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0f45667742faf42adaed213c12e85141}{useResultCache}}(\$useCache, \$lifetime = \textcolor{keyword}{null}, \$resultCacheId = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$useCache}
+\DoxyCodeLine{            ? \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_afeffe83012328894c4fd0277c5316896}{enableResultCache}}(\$lifetime, \$resultCacheId)}
+\DoxyCodeLine{            : \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a5f1cfef7bcd9b0506eec3e8e1a45fe96}{disableResultCache}}();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_afeffe83012328894c4fd0277c5316896}{enableResultCache}}(?\textcolor{keywordtype}{int} \$lifetime = \textcolor{keyword}{null}, ?\textcolor{keywordtype}{string} \$resultCacheId = \textcolor{keyword}{null}): self}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a130ba0fc9c2406d606a77b57a28748b6}{setResultCacheLifetime}}(\$lifetime);}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac6031be208b44b3e23cf1953306b4de9}{setResultCacheId}}(\$resultCacheId);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a5f1cfef7bcd9b0506eec3e8e1a45fe96}{disableResultCache}}(): self}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\_queryCacheProfile = \textcolor{keyword}{null};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a130ba0fc9c2406d606a77b57a28748b6}{setResultCacheLifetime}}(\$lifetime)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$lifetime = (int) \$lifetime;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_queryCacheProfile) \{}
+\DoxyCodeLine{            \$this-\/>\_queryCacheProfile = \$this-\/>\_queryCacheProfile-\/>setLifetime(\$lifetime);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_queryCacheProfile = \textcolor{keyword}{new} QueryCacheProfile(\$lifetime);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$cache = \$this-\/>\_em-\/>getConfiguration()-\/>getResultCache();}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! \$cache) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Compatibility for DBAL 2}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! method\_exists(\$this-\/>\_queryCacheProfile, \textcolor{stringliteral}{'setResultCache'})) \{}
+\DoxyCodeLine{            \$this-\/>\_queryCacheProfile = \$this-\/>\_queryCacheProfile-\/>setResultCacheDriver(DoctrineProvider::wrap(\$cache));}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_queryCacheProfile = \$this-\/>\_queryCacheProfile-\/>setResultCache(\$cache);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a280487ebc81d4a6d14734fab2e4c8c38}{getResultCacheLifetime}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_queryCacheProfile ? \$this-\/>\_queryCacheProfile-\/>getLifetime() : 0;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a187eb22e0c11a38fbca52acbfbdc6af0}{expireResultCache}}(\$expire = \textcolor{keyword}{true})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\_expireResultCache = \$expire;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a010eac30d5329506da5172bfa673dd32}{getExpireResultCache}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_expireResultCache;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a765a1026fb1a73b5d74e46e4c58a6c40}{getQueryCacheProfile}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_queryCacheProfile;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a5d87c9b9d96ec1ee3abc182dd55b1b1c}{setFetchMode}}(\$class, \$assocName, \$fetchMode)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$fetchMode !== Mapping\(\backslash\)\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a11ec39857b9658dd00423264af25fdf1}{ClassMetadata::FETCH\_EAGER}}) \{}
+\DoxyCodeLine{            \$fetchMode = \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a24d2edf2400c4e98ad15fc6e2033ee3d}{Mapping\(\backslash\)ClassMetadata::FETCH\_LAZY}};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_hints[\textcolor{stringliteral}{'fetchMode'}][\$class][\$assocName] = \$fetchMode;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab617a801463e08eddf36ea0710616e63}{setHydrationMode}}(\$hydrationMode)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\_hydrationMode = \$hydrationMode;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0e697480cb707feb53922d18df7f2e05}{getHydrationMode}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_hydrationMode;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ad5dfcfd1e8b8ca0253cf68fdbbd16d9a}{getResult}}(\$hydrationMode = self::HYDRATE\_OBJECT)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\textcolor{keyword}{null}, \$hydrationMode);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a4d8c2238fdb2e4450b64afff91644fa8}{getArrayResult}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\textcolor{keyword}{null}, self::HYDRATE\_ARRAY);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aa03ceef14431b2a1bc8338af3ee2af5b}{getSingleColumnResult}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\textcolor{keyword}{null}, self::HYDRATE\_SCALAR\_COLUMN);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_acf0d0467579e47e7797d1abb30d3dc04}{getScalarResult}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\textcolor{keyword}{null}, self::HYDRATE\_SCALAR);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aaf467ed71dfe067c8e895354383c2309}{getOneOrNullResult}}(\$hydrationMode = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{            \$result = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\textcolor{keyword}{null}, \$hydrationMode);}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (NoResultException \$e) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_hydrationMode !== self::HYDRATE\_SINGLE\_SCALAR \&\& ! \$result) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! is\_array(\$result)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$result;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (count(\$result) > 1) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NonUniqueResultException();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} array\_shift(\$result);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aa774417c50d50e598b9e9ef82030247a}{getSingleResult}}(\$hydrationMode = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$result = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\textcolor{keyword}{null}, \$hydrationMode);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_hydrationMode !== self::HYDRATE\_SINGLE\_SCALAR \&\& ! \$result) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NoResultException();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! is\_array(\$result)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$result;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (count(\$result) > 1) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NonUniqueResultException();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} array\_shift(\$result);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a4b5658e8467f2550b46f3c1de1a0c37c}{getSingleScalarResult}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_aa774417c50d50e598b9e9ef82030247a}{getSingleResult}}(self::HYDRATE\_SINGLE\_SCALAR);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0b92ea1d339758754b5d8c6ac6a64b91}{setHint}}(\$name, \$value)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\_hints[\$name] = \$value;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0e05303598c12916968ec73434892c34}{getHint}}(\$name)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_hints[\$name] ?? \textcolor{keyword}{false};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_acd5b14be21ccbbfcfbea335bcc64b979}{hasHint}}(\$name)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} isset(\$this-\/>\_hints[\$name]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a4fbb9905c57cffe13c5f4e24aa54081d}{getHints}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_af8e177ef9f1d72b84cb7cf26c769e049}{\$this-\/>\_hints}};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab82fb52d830324e9bbb791c53c982bbe}{iterate}}(\$parameters = \textcolor{keyword}{null}, \$hydrationMode = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \mbox{\hyperlink{class_doctrine_1_1_deprecations_1_1_deprecation_a1f761f43956fd80d86129ca1a86ed897}{Deprecation::trigger}}(}
+\DoxyCodeLine{            \textcolor{stringliteral}{'doctrine/orm'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'https://github.com/doctrine/orm/issues/8463'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'Method \%s() is deprecated and will be removed in Doctrine ORM 3.0. Use toIterable() instead.'},}
+\DoxyCodeLine{            \_\_METHOD\_\_}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$hydrationMode !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab617a801463e08eddf36ea0710616e63}{setHydrationMode}}(\$hydrationMode);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$parameters)) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a1c783809a74b71213ef7137d292fd628}{setParameters}}(\$parameters);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$rsm = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac5cd7f0e30351154812bb92721eae657}{getResultSetMapping}}();}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$rsm === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} LogicException(\textcolor{stringliteral}{'Uninitialized result set mapping.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$stmt = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ade2ed37511dd34c302ea255881abfc7f}{\_doExecute}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_em-\/>newHydrator(\$this-\/>\_hydrationMode)-\/>iterate(\$stmt, \$rsm, \$this-\/>\_hints);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a9666cf3553356b027aa2b609229a238f}{toIterable}}(iterable \$parameters = [], \$hydrationMode = \textcolor{keyword}{null}): iterable}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$hydrationMode !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab617a801463e08eddf36ea0710616e63}{setHydrationMode}}(\$hydrationMode);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (}
+\DoxyCodeLine{            (\$this-\/>isCountable(\$parameters) \&\& count(\$parameters) !== 0)}
+\DoxyCodeLine{            || (\$parameters instanceof Traversable \&\& iterator\_count(\$parameters) !== 0)}
+\DoxyCodeLine{        ) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a1c783809a74b71213ef7137d292fd628}{setParameters}}(\$parameters);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$rsm = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac5cd7f0e30351154812bb92721eae657}{getResultSetMapping}}();}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$rsm === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} LogicException(\textcolor{stringliteral}{'Uninitialized result set mapping.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$rsm-\/>isMixed \&\& count(\$rsm-\/>scalarMappings) > 0) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} QueryException::iterateWithMixedResultNotAllowed();}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$stmt = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ade2ed37511dd34c302ea255881abfc7f}{\_doExecute}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_em-\/>newHydrator(\$this-\/>\_hydrationMode)-\/>toIterable(\$stmt, \$rsm, \$this-\/>\_hints);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a82d4d7c3b4d84f771efb4794541f2ed6}{execute}}(\$parameters = \textcolor{keyword}{null}, \$hydrationMode = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>cacheable \&\& \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a7766ee0d6714c62177235a609f4d40be}{isCacheEnabled}}()) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>executeUsingQueryCache(\$parameters, \$hydrationMode);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>executeIgnoreQueryCache(\$parameters, \$hydrationMode);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} executeIgnoreQueryCache(\$parameters = \textcolor{keyword}{null}, \$hydrationMode = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$hydrationMode !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab617a801463e08eddf36ea0710616e63}{setHydrationMode}}(\$hydrationMode);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$parameters)) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a1c783809a74b71213ef7137d292fd628}{setParameters}}(\$parameters);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$setCacheEntry = \textcolor{keyword}{static} \textcolor{keyword}{function} (\$data): \textcolor{keywordtype}{void} \{}
+\DoxyCodeLine{        \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>\_hydrationCacheProfile !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            [\$cacheKey, \$realCacheKey] = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a7a962d7a551d8f835aeb6ede252633c4}{getHydrationCacheId}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$cache     = \$this-\/>getHydrationCache();}
+\DoxyCodeLine{            \$cacheItem = \$cache-\/>getItem(\$cacheKey);}
+\DoxyCodeLine{            \$result    = \$cacheItem-\/>isHit() ? \$cacheItem-\/>get() : [];}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (isset(\$result[\$realCacheKey])) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{return} \$result[\$realCacheKey];}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! \$result) \{}
+\DoxyCodeLine{                \$result = [];}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$setCacheEntry = \textcolor{keyword}{static} \textcolor{keyword}{function} (\$data) use (\$cache, \$result, \$cacheItem, \$realCacheKey): \textcolor{keywordtype}{void} \{}
+\DoxyCodeLine{                \$cache-\/>save(\$cacheItem-\/>set(\$result + [\$realCacheKey => \$data]));}
+\DoxyCodeLine{            \};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$stmt = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ade2ed37511dd34c302ea255881abfc7f}{\_doExecute}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (is\_numeric(\$stmt)) \{}
+\DoxyCodeLine{            \$setCacheEntry(\$stmt);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$stmt;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$rsm = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac5cd7f0e30351154812bb92721eae657}{getResultSetMapping}}();}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$rsm === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} LogicException(\textcolor{stringliteral}{'Uninitialized result set mapping.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$data = \$this-\/>\_em-\/>newHydrator(\$this-\/>\_hydrationMode)-\/>hydrateAll(\$stmt, \$rsm, \$this-\/>\_hints);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$setCacheEntry(\$data);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$data;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} getHydrationCache(): CacheItemPoolInterface}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        assert(\$this-\/>\_hydrationCacheProfile !== \textcolor{keyword}{null});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Support for DBAL 2}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! method\_exists(\$this-\/>\_hydrationCacheProfile, \textcolor{stringliteral}{'getResultCache'})) \{}
+\DoxyCodeLine{            \$cacheDriver = \$this-\/>\_hydrationCacheProfile-\/>getResultCacheDriver();}
+\DoxyCodeLine{            assert(\$cacheDriver !== \textcolor{keyword}{null});}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} CacheAdapter::wrap(\$cacheDriver);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$cache = \$this-\/>\_hydrationCacheProfile-\/>getResultCache();}
+\DoxyCodeLine{        assert(\$cache !== \textcolor{keyword}{null});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$cache;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} executeUsingQueryCache(\$parameters = \textcolor{keyword}{null}, \$hydrationMode = \textcolor{keyword}{null})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$rsm = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac5cd7f0e30351154812bb92721eae657}{getResultSetMapping}}();}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$rsm === \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} LogicException(\textcolor{stringliteral}{'Uninitialized result set mapping.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$queryCache = \$this-\/>\_em-\/>getCache()-\/>getQueryCache(\$this-\/>cacheRegion);}
+\DoxyCodeLine{        \$queryKey   = \textcolor{keyword}{new} QueryCacheKey(}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a10220afb27800deb78f48b4698a74742}{getHash}}(),}
+\DoxyCodeLine{            \$this-\/>lifetime,}
+\DoxyCodeLine{            \$this-\/>cacheMode ?: Cache::MODE\_NORMAL,}
+\DoxyCodeLine{            \$this-\/>getTimestampKey()}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$result = \$queryCache-\/>get(\$queryKey, \$rsm, \$this-\/>\_hints);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$result !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$this-\/>cacheLogger) \{}
+\DoxyCodeLine{                \$this-\/>cacheLogger-\/>queryCacheHit(\$queryCache-\/>getRegion()-\/>getName(), \$queryKey);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$result;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$result = \$this-\/>executeIgnoreQueryCache(\$parameters, \$hydrationMode);}
+\DoxyCodeLine{        \$cached = \$queryCache-\/>put(\$queryKey, \$rsm, \$result, \$this-\/>\_hints);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$this-\/>cacheLogger) \{}
+\DoxyCodeLine{            \$this-\/>cacheLogger-\/>queryCacheMiss(\$queryCache-\/>getRegion()-\/>getName(), \$queryKey);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$cached) \{}
+\DoxyCodeLine{                \$this-\/>cacheLogger-\/>queryCachePut(\$queryCache-\/>getRegion()-\/>getName(), \$queryKey);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$result;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} getTimestampKey(): ?TimestampCacheKey}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        assert(\$this-\/>\_resultSetMapping !== \textcolor{keyword}{null});}
+\DoxyCodeLine{        \$entityName = reset(\$this-\/>\_resultSetMapping-\/>aliasMap);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (empty(\$entityName)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$metadata = \$this-\/>\_em-\/>getClassMetadata(\$entityName);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} Cache\(\backslash\)TimestampCacheKey(\$metadata-\/>rootEntityName);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a7a962d7a551d8f835aeb6ede252633c4}{getHydrationCacheId}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$parameters = [];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a015cb52e5774a1972d296c9694d2a3c3}{getParameters}}() as \$parameter) \{}
+\DoxyCodeLine{            \$parameters[\$parameter-\/>getName()] = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0d86edb6de880541d54550cc927aca28}{processParameterValue}}(\$parameter-\/>getValue());}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$sql                    = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a67e8cb12dd05cee2a73454f8fa79efdc}{getSQL}}();}
+\DoxyCodeLine{        \$queryCacheProfile      = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a681ef9b83b84cb91595fc02373f368ff}{getHydrationCacheProfile}}();}
+\DoxyCodeLine{        \$hints                  = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a4fbb9905c57cffe13c5f4e24aa54081d}{getHints}}();}
+\DoxyCodeLine{        \$hints[\textcolor{stringliteral}{'hydrationMode'}] = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0e697480cb707feb53922d18df7f2e05}{getHydrationMode}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ksort(\$hints);}
+\DoxyCodeLine{        assert(\$queryCacheProfile !== \textcolor{keyword}{null});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$queryCacheProfile-\/>generateCacheKeys(\$sql, \$parameters, \$hints);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ac6031be208b44b3e23cf1953306b4de9}{setResultCacheId}}(\$id)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! \$this-\/>\_queryCacheProfile) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_acac92f9ef0417b52686e9048198c5a39}{setResultCacheProfile}}(\textcolor{keyword}{new} QueryCacheProfile(0, \$id));}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_queryCacheProfile = \$this-\/>\_queryCacheProfile-\/>setCacheKey(\$id);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ab9076bfbf149b0e15c3221f7d301ff8c}{getResultCacheId}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$this-\/>\_queryCacheProfile ? \$this-\/>\_queryCacheProfile-\/>getCacheKey() : \textcolor{keyword}{null};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{abstract} \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ade2ed37511dd34c302ea255881abfc7f}{\_doExecute}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_ad0cb87b388bc74d63dc884accdca8713}{\_\_clone}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>parameters = \textcolor{keyword}{new} ArrayCollection();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\_hints = [];}
+\DoxyCodeLine{        \$this-\/>\_hints = \$this-\/>\_em-\/>getConfiguration()-\/>getDefaultQueryHints();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a10220afb27800deb78f48b4698a74742}{getHash}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$query  = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a67e8cb12dd05cee2a73454f8fa79efdc}{getSQL}}();}
+\DoxyCodeLine{        \$hints  = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a4fbb9905c57cffe13c5f4e24aa54081d}{getHints}}();}
+\DoxyCodeLine{        \$params = array\_map(\textcolor{keyword}{function} (Parameter \$parameter) \{}
+\DoxyCodeLine{            \$value = \$parameter-\/>getValue();}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{comment}{// Small optimization}}
+\DoxyCodeLine{            \textcolor{comment}{// Does not invoke processParameterValue for scalar value}}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (is\_scalar(\$value)) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{return} \$value;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_abstract_query_a0d86edb6de880541d54550cc927aca28}{processParameterValue}}(\$value);}
+\DoxyCodeLine{        \}, \$this-\/>parameters-\/>getValues());}
+\DoxyCodeLine{}
+\DoxyCodeLine{        ksort(\$hints);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} sha1(\$query . \textcolor{charliteral}{'-\/'} . serialize(\$params) . \textcolor{charliteral}{'-\/'} . serialize(\$hints));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} isCountable(iterable \$subject): bool}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$subject instanceof Countable || is\_array(\$subject);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,219 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver}{}\doxysection{File\+Driver Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver}\index{FileDriver@{FileDriver}}
+Inheritance diagram for File\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a025d0625e21a8737ce7f40f77b4e1054}{\+\_\+\+\_\+construct}} (\$locator, \$file\+Extension=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0aa50bf35e58e6e23547da759a889e0c}{set\+Global\+Basename}} (\$file)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a38df10382ee6037a91e9961d3414ac8e}{get\+Global\+Basename}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a20a41c94059d774afa47da69ef0c260e}{get\+Element}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a03d93fdac535730e6895bf73dcfab09d}{is\+Transient}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a1079716efc88aab78c6f1d0d44d6354e}{get\+All\+Class\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a3d24456e880ed72e950f4256349d7a4c}{get\+Locator}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_aa6d8ddf1ef7b9f6e8359421bda394474}{set\+Locator}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}{File\+Locator}} \$locator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0fea6c7dc8a111015611eb75a92b8c63}{load\+Mapping\+File}} (\$file)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a91098fa7d1917ce4833f284bbef12627}{initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a419ed0241456843e2a5cfb383bfa7bdd}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a419ed0241456843e2a5cfb383bfa7bdd}} 
+{\bfseries \$locator}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_aee531ee854afd83b018bdef753d411ed}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_aee531ee854afd83b018bdef753d411ed}} 
+{\bfseries \$class\+Cache}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a6ae616f5447401478a7e06099202325b}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a6ae616f5447401478a7e06099202325b}} 
+{\bfseries \$global\+Basename}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base driver for file-\/based metadata drivers.
+
+A file driver operates in a mode where it loads the mapping files of individual classes on demand. This requires the user to adhere to the convention of 1 mapping file per class and the file names of the mapping files must correspond to the full class name, including namespace, with the namespace delimiters \textquotesingle{}\textbackslash{}\textquotesingle{}, replaced by dots \textquotesingle{}.\textquotesingle{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a025d0625e21a8737ce7f40f77b4e1054}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a025d0625e21a8737ce7f40f77b4e1054}} 
+\index{FileDriver@{FileDriver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$locator,  }\item[{}]{\$file\+Extension = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver}{File\+Driver}} that looks in the given path(s) for mapping documents and operates in the specified operating mode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} | \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}{File\+Locator}} & {\em \$locator} & A \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}{File\+Locator}} or one/multiple paths where mapping documents can be found. \\
+\hline
+string | null & {\em \$file\+Extension} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_xml_driver_a292ead2d745f85ac8c6fdfa3e8f508ed}{Xml\+Driver}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_yaml_driver_a292ead2d745f85ac8c6fdfa3e8f508ed}{Yaml\+Driver}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_simplified_xml_driver_a932eb15be691644ea953a0da432383d1}{Simplified\+Xml\+Driver}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_simplified_yaml_driver_a932eb15be691644ea953a0da432383d1}{Simplified\+Yaml\+Driver}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a1079716efc88aab78c6f1d0d44d6354e}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a1079716efc88aab78c6f1d0d44d6354e}} 
+\index{FileDriver@{FileDriver}!getAllClassNames@{getAllClassNames}}
+\index{getAllClassNames@{getAllClassNames}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{getAllClassNames()}{getAllClassNames()}}
+{\footnotesize\ttfamily get\+All\+Class\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of all mapped classes known to this driver.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The names of all mapped classes known to this driver. @psalm-\/return list\texorpdfstring{$<$}{<}class-\/string\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a1079716efc88aab78c6f1d0d44d6354e}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a20a41c94059d774afa47da69ef0c260e}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a20a41c94059d774afa47da69ef0c260e}} 
+\index{FileDriver@{FileDriver}!getElement@{getElement}}
+\index{getElement@{getElement}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily get\+Element (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Gets the element of schema meta data for the class from the mapping file. This will lazily load the mapping file if it is not loaded yet.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} The element of schema meta data. @psalm-\/return Class\+Metadata$<$object$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_mapping_exception}{Mapping\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a38df10382ee6037a91e9961d3414ac8e}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a38df10382ee6037a91e9961d3414ac8e}} 
+\index{FileDriver@{FileDriver}!getGlobalBasename@{getGlobalBasename}}
+\index{getGlobalBasename@{getGlobalBasename}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{getGlobalBasename()}{getGlobalBasename()}}
+{\footnotesize\ttfamily get\+Global\+Basename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the global basename.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a3d24456e880ed72e950f4256349d7a4c}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a3d24456e880ed72e950f4256349d7a4c}} 
+\index{FileDriver@{FileDriver}!getLocator@{getLocator}}
+\index{getLocator@{getLocator}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{getLocator()}{getLocator()}}
+{\footnotesize\ttfamily get\+Locator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the locator used to discover mapping files by class\+Name.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}{File\+Locator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a91098fa7d1917ce4833f284bbef12627}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a91098fa7d1917ce4833f284bbef12627}} 
+\index{FileDriver@{FileDriver}!initialize@{initialize}}
+\index{initialize@{initialize}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initializes the class cache from all the global files.
+
+Using this feature adds a substantial performance hit to file drivers as more metadata has to be loaded into memory than might actually be necessary. This may not be relevant to scenarios where caching of metadata is in place, however hits very hard in scenarios where no caching is used.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a03d93fdac535730e6895bf73dcfab09d}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a03d93fdac535730e6895bf73dcfab09d}} 
+\index{FileDriver@{FileDriver}!isTransient@{isTransient}}
+\index{isTransient@{isTransient}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{isTransient()}{isTransient()}}
+{\footnotesize\ttfamily is\+Transient (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Returns whether the class with the specified name should have its metadata loaded. This is only the case if it is either mapped as an Entity or a Mapped\+Superclass.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a03d93fdac535730e6895bf73dcfab09d}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0fea6c7dc8a111015611eb75a92b8c63}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0fea6c7dc8a111015611eb75a92b8c63}} 
+\index{FileDriver@{FileDriver}!loadMappingFile@{loadMappingFile}}
+\index{loadMappingFile@{loadMappingFile}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{loadMappingFile()}{loadMappingFile()}}
+{\footnotesize\ttfamily load\+Mapping\+File (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Loads a mapping file with the given name and returns a map from class/entity names to their corresponding file driver elements.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & The mapping file to load.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}\mbox{[}\mbox{]} @psalm-\/return array\texorpdfstring{$<$}{<}class-\/string, Class\+Metadata$<$object$>$\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_xml_driver_a0fea6c7dc8a111015611eb75a92b8c63}{Xml\+Driver}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_driver_1_1_yaml_driver_a0fea6c7dc8a111015611eb75a92b8c63}{Yaml\+Driver}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_p_h_p_driver_a0fea6c7dc8a111015611eb75a92b8c63}{PHPDriver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0aa50bf35e58e6e23547da759a889e0c}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_a0aa50bf35e58e6e23547da759a889e0c}} 
+\index{FileDriver@{FileDriver}!setGlobalBasename@{setGlobalBasename}}
+\index{setGlobalBasename@{setGlobalBasename}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{setGlobalBasename()}{setGlobalBasename()}}
+{\footnotesize\ttfamily set\+Global\+Basename (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})}
+
+Sets the global basename.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_aa6d8ddf1ef7b9f6e8359421bda394474}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver_aa6d8ddf1ef7b9f6e8359421bda394474}} 
+\index{FileDriver@{FileDriver}!setLocator@{setLocator}}
+\index{setLocator@{setLocator}!FileDriver@{FileDriver}}
+\doxysubsubsection{\texorpdfstring{setLocator()}{setLocator()}}
+{\footnotesize\ttfamily set\+Locator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator}{File\+Locator}}}]{\$locator }\end{DoxyParamCaption})}
+
+Sets the locator used to discover mapping files by class\+Name.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/\+Driver/File\+Driver.\+php\end{DoxyCompactItemize}

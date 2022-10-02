@@ -1,0 +1,53 @@
+\hypertarget{class_amp_1_1_loop_1_1_invalid_watcher_error}{}\doxysection{Invalid\+Watcher\+Error Class Reference}
+\label{class_amp_1_1_loop_1_1_invalid_watcher_error}\index{InvalidWatcherError@{InvalidWatcherError}}
+Inheritance diagram for Invalid\+Watcher\+Error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_loop_1_1_invalid_watcher_error}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_invalid_watcher_error_aa74f45b98f606436365762f05854da6b}{\+\_\+\+\_\+construct}} (string \$watcher\+Id, string \$message)
+\item 
+\mbox{\hyperlink{class_amp_1_1_loop_1_1_invalid_watcher_error_a90935ed69125b118b6fab8f32c1010d5}{get\+Watcher\+Id}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+MUST be thrown if any operation (except \mbox{\hyperlink{class_amp_1_1_loop_ae14f859352356574fc168da4f791a4c1}{disable()}} and \mbox{\hyperlink{class_amp_1_1_loop_aafb9917ec3d532e2ef42546f72aca27f}{cancel()}}) is attempted with an invalid watcher identifier.
+
+An invalid watcher identifier is any identifier that is not yet emitted by the driver or cancelled by the user. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_invalid_watcher_error_aa74f45b98f606436365762f05854da6b}\label{class_amp_1_1_loop_1_1_invalid_watcher_error_aa74f45b98f606436365762f05854da6b}} 
+\index{InvalidWatcherError@{InvalidWatcherError}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!InvalidWatcherError@{InvalidWatcherError}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$watcher\+Id,  }\item[{string}]{\$message }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$watcher\+Id} & The watcher identifier. \\
+\hline
+string & {\em \$message} & The exception message. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_loop_1_1_invalid_watcher_error_a90935ed69125b118b6fab8f32c1010d5}\label{class_amp_1_1_loop_1_1_invalid_watcher_error_a90935ed69125b118b6fab8f32c1010d5}} 
+\index{InvalidWatcherError@{InvalidWatcherError}!getWatcherId@{getWatcherId}}
+\index{getWatcherId@{getWatcherId}!InvalidWatcherError@{InvalidWatcherError}}
+\doxysubsubsection{\texorpdfstring{getWatcherId()}{getWatcherId()}}
+{\footnotesize\ttfamily get\+Watcher\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string The watcher identifier. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Loop/Invalid\+Watcher\+Error.\+php\end{DoxyCompactItemize}

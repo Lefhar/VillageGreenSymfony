@@ -1,0 +1,46 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory}{}\doxysection{Repository\+Factory Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory}\index{RepositoryFactory@{RepositoryFactory}}
+Inheritance diagram for Repository\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory_a40466ad6a4e0420051608ba107d7650b}{get\+Repository}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$entity\+Manager, \$entity\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for entity repository factory. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory_a40466ad6a4e0420051608ba107d7650b}\label{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory_a40466ad6a4e0420051608ba107d7650b}} 
+\index{RepositoryFactory@{RepositoryFactory}!getRepository@{getRepository}}
+\index{getRepository@{getRepository}!RepositoryFactory@{RepositoryFactory}}
+\doxysubsubsection{\texorpdfstring{getRepository()}{getRepository()}}
+{\footnotesize\ttfamily get\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$entity\+Manager,  }\item[{}]{\$entity\+Name }\end{DoxyParamCaption})}
+
+Gets the repository for an entity class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} & {\em \$entity\+Manager} & The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} instance. \\
+\hline
+string & {\em \$entity\+Name} & The name of the entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object\+Repository 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a40466ad6a4e0420051608ba107d7650b}{Container\+Repository\+Factory}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_repository_1_1_default_repository_factory_a40466ad6a4e0420051608ba107d7650b}{Default\+Repository\+Factory}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_test_1_1_test_repository_factory_a40466ad6a4e0420051608ba107d7650b}{Test\+Repository\+Factory}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Repository/Repository\+Factory.\+php\end{DoxyCompactItemize}

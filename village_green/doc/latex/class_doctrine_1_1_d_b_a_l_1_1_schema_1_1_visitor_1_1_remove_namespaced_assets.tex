@@ -1,0 +1,96 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets}{}\doxysection{Remove\+Namespaced\+Assets Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets}\index{RemoveNamespacedAssets@{RemoveNamespacedAssets}}
+Inheritance diagram for Remove\+Namespaced\+Assets\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_a44934a45140355aab7a1658f7578c1ea}{accept\+Schema}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}} \$schema)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ac5742f5275487d8398673f968dd309f5}{accept\+Table}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$table)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ad5446680d542ed76e79b84b7d3641d8f}{accept\+Sequence}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}} \$sequence)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ae58b895c39722cee749b419c428c81a4}{accept\+Foreign\+Key}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}} \$local\+Table, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}} \$fk\+Constraint)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Removes assets from a schema that are not in the default namespace.
+
+Some databases such as My\+SQL support cross databases joins, but don\textquotesingle{}t allow to call DDLs to a database from another connected database. Before a schema is serialized into SQL this visitor can cleanup schemas with non default namespaces.
+
+This visitor filters all these non-\/default namespaced tables and sequences and removes them from the SChema instance. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ae58b895c39722cee749b419c428c81a4}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ae58b895c39722cee749b419c428c81a4}} 
+\index{RemoveNamespacedAssets@{RemoveNamespacedAssets}!acceptForeignKey@{acceptForeignKey}}
+\index{acceptForeignKey@{acceptForeignKey}!RemoveNamespacedAssets@{RemoveNamespacedAssets}}
+\doxysubsubsection{\texorpdfstring{acceptForeignKey()}{acceptForeignKey()}}
+{\footnotesize\ttfamily accept\+Foreign\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$local\+Table,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_foreign_key_constraint}{Foreign\+Key\+Constraint}}}]{\$fk\+Constraint }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_ae58b895c39722cee749b419c428c81a4}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_a44934a45140355aab7a1658f7578c1ea}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_a44934a45140355aab7a1658f7578c1ea}} 
+\index{RemoveNamespacedAssets@{RemoveNamespacedAssets}!acceptSchema@{acceptSchema}}
+\index{acceptSchema@{acceptSchema}!RemoveNamespacedAssets@{RemoveNamespacedAssets}}
+\doxysubsubsection{\texorpdfstring{acceptSchema()}{acceptSchema()}}
+{\footnotesize\ttfamily accept\+Schema (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema}{Schema}}}]{\$schema }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_schema_exception}{Schema\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_a44934a45140355aab7a1658f7578c1ea}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ad5446680d542ed76e79b84b7d3641d8f}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ad5446680d542ed76e79b84b7d3641d8f}} 
+\index{RemoveNamespacedAssets@{RemoveNamespacedAssets}!acceptSequence@{acceptSequence}}
+\index{acceptSequence@{acceptSequence}!RemoveNamespacedAssets@{RemoveNamespacedAssets}}
+\doxysubsubsection{\texorpdfstring{acceptSequence()}{acceptSequence()}}
+{\footnotesize\ttfamily accept\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_sequence}{Sequence}}}]{\$sequence }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_ad5446680d542ed76e79b84b7d3641d8f}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ac5742f5275487d8398673f968dd309f5}\label{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_remove_namespaced_assets_ac5742f5275487d8398673f968dd309f5}} 
+\index{RemoveNamespacedAssets@{RemoveNamespacedAssets}!acceptTable@{acceptTable}}
+\index{acceptTable@{acceptTable}!RemoveNamespacedAssets@{RemoveNamespacedAssets}}
+\doxysubsubsection{\texorpdfstring{acceptTable()}{acceptTable()}}
+{\footnotesize\ttfamily accept\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_table}{Table}}}]{\$table }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_schema_1_1_visitor_1_1_abstract_visitor_ac5742f5275487d8398673f968dd309f5}{Abstract\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Schema/\+Visitor/Remove\+Namespaced\+Assets.\+php\end{DoxyCompactItemize}

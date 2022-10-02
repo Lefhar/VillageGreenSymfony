@@ -1,0 +1,79 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator}{}\doxysection{Big\+Integer\+Identity\+Generator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator}\index{BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}}
+Inheritance diagram for Big\+Integer\+Identity\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a3bd1066163f5fb07ac28afbb2f18cebe}{\+\_\+\+\_\+construct}} (\$sequence\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{generate\+Id}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a73b0299e640aa8f9e6da511f81830510}{is\+Post\+Insert\+Generator}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Id generator that obtains IDs from special \char`\"{}identity\char`\"{} columns. These are columns that automatically get a database-\/generated, auto-\/incremented identifier on INSERT. This generator obtains the last insert id after such an insert. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a3bd1066163f5fb07ac28afbb2f18cebe}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a3bd1066163f5fb07ac28afbb2f18cebe}} 
+\index{BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$sequence\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$sequence\+Name} & The name of the sequence to pass to last\+Insert\+Id() to obtain the last generated identifier within the current database session/connection, if any. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_aedf4d3ef1fbd187d6777ca599a16d39f}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_aedf4d3ef1fbd187d6777ca599a16d39f}} 
+\index{BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}!generateId@{generateId}}
+\index{generateId@{generateId}!BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily generate\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Generates an identifier for an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object | null & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{Abstract\+Id\+Generator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a73b0299e640aa8f9e6da511f81830510}\label{class_doctrine_1_1_o_r_m_1_1_id_1_1_big_integer_identity_generator_a73b0299e640aa8f9e6da511f81830510}} 
+\index{BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}!isPostInsertGenerator@{isPostInsertGenerator}}
+\index{isPostInsertGenerator@{isPostInsertGenerator}!BigIntegerIdentityGenerator@{BigIntegerIdentityGenerator}}
+\doxysubsubsection{\texorpdfstring{isPostInsertGenerator()}{isPostInsertGenerator()}}
+{\footnotesize\ttfamily is\+Post\+Insert\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets whether this generator is a post-\/insert generator which means that \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_aedf4d3ef1fbd187d6777ca599a16d39f}{generate\+Id()}} must be called after the entity has been inserted into the database.
+
+By default, this method returns FALSE. Generators that have this requirement must override this method and return TRUE.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator_a73b0299e640aa8f9e6da511f81830510}{Abstract\+Id\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Id/Big\+Integer\+Identity\+Generator.\+php\end{DoxyCompactItemize}

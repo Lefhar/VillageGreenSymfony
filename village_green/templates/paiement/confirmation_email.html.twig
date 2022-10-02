@@ -1,0 +1,58 @@
+<style>
+    .container {
+        display: table;
+        width: 100%;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .container div {
+        display: table-cell;
+    }
+
+    .bgcaddie {
+        color: #011D7A !important;
+    }
+
+    .textLogo {
+        font-family: Candara;
+        font-weight: bold;
+        font-size: 2.8rem;
+    }
+
+    .LinkLogo, .LinkLogo:hover, .LinkLogo:focus {
+        text-decoration: none;
+    }
+
+    .text-dark {
+        color: #343a40 !important;
+    }
+
+    .text-success {
+        color: #62d462;
+    }
+</style>
+<div class="container"><a class="LinkLogo" href="/">
+        <span class="textLogo bgcaddie">Village</span><i class="fa fa-solid fa-guitar"></i><span
+                class="textLogo text-dark">Green</span>
+    </a>
+    <h1>
+        Bonjour {{ order.customer.gender|capitalize }} {{ order.customer.firstname|capitalize }} {{ order.customer.lastname|capitalize }}, </h1>
+
+    <p> Nous vous remercions de votre commande. </p> <p>Nous vous tiendrons informé par e-mail lorsque les articles de votre
+        commande auront été expédiés. </p>
+    <p>  Vous pouvez suivre l’état de votre commande ou modifier celle-ci dans Vos commandes sur village green.
+
+    </p>
+    <strong> Montant Total de la commande : </strong> <span class="text-success">{{ total }} €</span></p>
+    <p><strong>Moyen de paiement sélectionné :  </strong> Mastercard</p>
+    <hr>
+    Veuillez trouver votre facture:
+    <a href="{{ app.request.getSchemeAndHttpHost() }}{{ path('facturePdf',{order:order.id}) }}">ici</a>.
+    </p>
+
+    <p>
+        Cordialement!
+        Village green
+    </p>
+</div>

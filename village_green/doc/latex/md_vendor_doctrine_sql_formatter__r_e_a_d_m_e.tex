@@ -1,0 +1,129 @@
+A lightweight php package for formatting sql statements.
+
+It can automatically indent and add line breaks in addition to syntax highlighting.\hypertarget{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md348}{}\doxysection{History}\label{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md348}
+This package is a fork from \href{https://github.com/jdorn/sql-formatter}{\texttt{ https\+://github.\+com/jdorn/sql-\/formatter}} Here is what the original History section says\+:
+
+\begin{quote}
+I found myself having to debug auto-\/generated SQL statements all the time and wanted some way to easily output formatted HTML without having to include a huge library or copy and paste into online formatters. \end{quote}
+\begin{quote}
+I was originally planning to extract the formatting code from Php\+My\+Admin, but that was 10,000+ lines of code and used global variables. \end{quote}
+\begin{quote}
+I saw that other people had the same problem and used Stack Overflow user losif\textquotesingle{}s answer as a starting point. \href{http://stackoverflow.com/a/3924147}{\texttt{ http\+://stackoverflow.\+com/a/3924147}} \end{quote}
+― @jdorn\hypertarget{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md349}{}\doxysection{Usage}\label{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md349}
+The {\ttfamily Sql\+Formatter} class has a method {\ttfamily format} which takes an SQL string as input and returns a formatted block.
+
+Sample usage\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{require\_once \textcolor{stringliteral}{'vendor/autoload.php'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter}{Doctrine\(\backslash\)SqlFormatter\(\backslash\)SqlFormatter}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$query = \textcolor{stringliteral}{"{}SELECT count(*),`Column1`,`Testing`, `Testing Three` FROM `Table1`}}
+\DoxyCodeLine{\textcolor{stringliteral}{    WHERE Column1 = 'testing' AND ( (`Column2` = `Column3` OR Column4 >= NOW()) )}}
+\DoxyCodeLine{\textcolor{stringliteral}{    GROUP BY Column1 ORDER BY Column3 DESC LIMIT 5,10"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo (\textcolor{keyword}{new} SqlFormatter())-\/>\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a616775bdd1f163e77e56c7bfd9dccd0e}{format}}(\$query);}
+
+\end{DoxyCode}
+
+
+Output\+:
+
+
+
+When you run php under cli and instantiated {\ttfamily Sql\+Formatter} without argument, highlighted with {\ttfamily Cli\+Highlighter}.
+
+Sql\+Formatter constructor takes {\ttfamily Highlighter} implementations. {\ttfamily Html\+Highlighter} etc.\hypertarget{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md350}{}\doxysubsection{Formatting Only}\label{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md350}
+If you don\textquotesingle{}t want syntax highlighting and only want the indentations and line breaks, pass in a {\ttfamily Null\+Highlighter} instance as the second parameter.
+
+This is useful for outputting to error logs or other non-\/html formats.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_null_highlighter}{Doctrine\(\backslash\)SqlFormatter\(\backslash\)NullHighlighter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter}{Doctrine\(\backslash\)SqlFormatter\(\backslash\)SqlFormatter}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo (\textcolor{keyword}{new} SqlFormatter(\textcolor{keyword}{new} NullHighlighter()))-\/>\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a616775bdd1f163e77e56c7bfd9dccd0e}{format}}(\$query);}
+
+\end{DoxyCode}
+
+
+Output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT}
+\DoxyCodeLine{  count(*),}
+\DoxyCodeLine{  `Column1`,}
+\DoxyCodeLine{  `Testing`,}
+\DoxyCodeLine{  `Testing Three`}
+\DoxyCodeLine{FROM}
+\DoxyCodeLine{  `Table1`}
+\DoxyCodeLine{WHERE}
+\DoxyCodeLine{  Column1 = 'testing'}
+\DoxyCodeLine{  AND (}
+\DoxyCodeLine{    (}
+\DoxyCodeLine{      `Column2` = `Column3`}
+\DoxyCodeLine{      OR Column4 >= NOW()}
+\DoxyCodeLine{    )}
+\DoxyCodeLine{  )}
+\DoxyCodeLine{GROUP BY}
+\DoxyCodeLine{  Column1}
+\DoxyCodeLine{ORDER BY}
+\DoxyCodeLine{  Column3 DESC}
+\DoxyCodeLine{LIMIT}
+\DoxyCodeLine{  5, 10}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md351}{}\doxysubsection{Syntax Highlighting Only}\label{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md351}
+There is a separate method {\ttfamily highlight} that preserves all original whitespace and just adds syntax highlighting.
+
+This is useful for sql that is already well formatted and just needs to be a little easier to read.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{echo (\textcolor{keyword}{new} SqlFormatter())-\/>highlight(\$query);}
+
+\end{DoxyCode}
+
+
+Output\+:
+
+\hypertarget{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md352}{}\doxysubsection{Compress Query}\label{md_vendor_doctrine_sql_formatter__r_e_a_d_m_e_autotoc_md352}
+The {\ttfamily compress} method removes all comments and compresses whitespace.
+
+This is useful for outputting queries that can be copy pasted to the command line easily.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{-\/-\/ This is a comment}}
+\DoxyCodeLine{    \textcolor{keyword}{SELECT}}
+\DoxyCodeLine{    \textcolor{comment}{/* This is another comment}}
+\DoxyCodeLine{\textcolor{comment}{    On more than one line */}}
+\DoxyCodeLine{    Id \#This \textcolor{keyword}{is} one final comment}
+\DoxyCodeLine{    \textcolor{keyword}{as} temp, DateCreated \textcolor{keyword}{as} Created \textcolor{keyword}{FROM} MyTable;}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{echo (\textcolor{keyword}{new} SqlFormatter())-\/>compress(\$query);}
+
+\end{DoxyCode}
+
+
+Output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{SELECT} Id \textcolor{keyword}{as} temp, DateCreated \textcolor{keyword}{as} Created \textcolor{keyword}{FROM} MyTable;}
+
+\end{DoxyCode}
+ 

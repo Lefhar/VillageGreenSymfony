@@ -1,0 +1,71 @@
+\hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface}{}\doxysection{Ip\+Host\+Interface Interface Reference}
+\label{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface}\index{IpHostInterface@{IpHostInterface}}
+Inheritance diagram for Ip\+Host\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ac91a5ca0c0d414d70f2d152f38cf4383}{is\+Ipv4}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ab30d0de18e3f80ccd4accb0fd1491ca7}{is\+Ipv6}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ada0136b6406fa167e68edfaaa902d1ea}{is\+Ip\+Future}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_a3de898a609b6544ea19a9450cb8ea99c}{has\+Zone\+Identifier}} ()
+\item 
+\mbox{\hyperlink{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ae332b2c8e3e9a5a5bbf1f38a3450648d}{without\+Zone\+Identifier}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_a3de898a609b6544ea19a9450cb8ea99c}\label{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_a3de898a609b6544ea19a9450cb8ea99c}} 
+\index{IpHostInterface@{IpHostInterface}!hasZoneIdentifier@{hasZoneIdentifier}}
+\index{hasZoneIdentifier@{hasZoneIdentifier}!IpHostInterface@{IpHostInterface}}
+\doxysubsubsection{\texorpdfstring{hasZoneIdentifier()}{hasZoneIdentifier()}}
+{\footnotesize\ttfamily has\+Zone\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the host has a Zone\+Identifier.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc6874\#section-4}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc6874\#section-\/4}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ada0136b6406fa167e68edfaaa902d1ea}\label{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ada0136b6406fa167e68edfaaa902d1ea}} 
+\index{IpHostInterface@{IpHostInterface}!isIpFuture@{isIpFuture}}
+\index{isIpFuture@{isIpFuture}!IpHostInterface@{IpHostInterface}}
+\doxysubsubsection{\texorpdfstring{isIpFuture()}{isIpFuture()}}
+{\footnotesize\ttfamily is\+Ip\+Future (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the host is an IPv6 address. \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ac91a5ca0c0d414d70f2d152f38cf4383}\label{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ac91a5ca0c0d414d70f2d152f38cf4383}} 
+\index{IpHostInterface@{IpHostInterface}!isIpv4@{isIpv4}}
+\index{isIpv4@{isIpv4}!IpHostInterface@{IpHostInterface}}
+\doxysubsubsection{\texorpdfstring{isIpv4()}{isIpv4()}}
+{\footnotesize\ttfamily is\+Ipv4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the host is an IPv4 address. \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ab30d0de18e3f80ccd4accb0fd1491ca7}\label{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ab30d0de18e3f80ccd4accb0fd1491ca7}} 
+\index{IpHostInterface@{IpHostInterface}!isIpv6@{isIpv6}}
+\index{isIpv6@{isIpv6}!IpHostInterface@{IpHostInterface}}
+\doxysubsubsection{\texorpdfstring{isIpv6()}{isIpv6()}}
+{\footnotesize\ttfamily is\+Ipv6 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether or not the host is an IPv6 address. \mbox{\Hypertarget{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ae332b2c8e3e9a5a5bbf1f38a3450648d}\label{interface_league_1_1_uri_1_1_contracts_1_1_ip_host_interface_ae332b2c8e3e9a5a5bbf1f38a3450648d}} 
+\index{IpHostInterface@{IpHostInterface}!withoutZoneIdentifier@{withoutZoneIdentifier}}
+\index{withoutZoneIdentifier@{withoutZoneIdentifier}!IpHostInterface@{IpHostInterface}}
+\doxysubsubsection{\texorpdfstring{withoutZoneIdentifier()}{withoutZoneIdentifier()}}
+{\footnotesize\ttfamily without\+Zone\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an host without its zone identifier according to RFC6874.
+
+This method MUST retain the state of the current instance, and return an instance without the host zone identifier according to RFC6874
+
+\begin{DoxySeeAlso}{See also}
+\href{http://tools.ietf.org/html/rfc6874\#section-4}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc6874\#section-\/4}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/league/uri-\/interfaces/src/\+Contracts/Ip\+Host\+Interface.\+php\end{DoxyCompactItemize}

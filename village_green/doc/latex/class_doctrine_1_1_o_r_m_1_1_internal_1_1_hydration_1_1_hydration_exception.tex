@@ -1,0 +1,122 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{}\doxysection{Hydration\+Exception Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}\index{HydrationException@{HydrationException}}
+Inheritance diagram for Hydration\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a26a24290d5066f10b812594dd12d8524}{non\+Unique\+Result}} ()
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_acf3b10615ef031fcb70efb6f664264b8}{parent\+Object\+Of\+Relation\+Not\+Found}} (\$alias, \$parent\+Alias)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a75726e5266805714c1cab0f2eec27deb}{empty\+Discriminator\+Value}} (\$dql\+Alias)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_ab63e2b0400eee3d84bbbd7e2ba577d7d}{missing\+Discriminator\+Column}} (\$entity\+Name, \$discr\+Column\+Name, \$dql\+Alias)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a37a8deab0d6674276265f00ba8b09a4f}{missing\+Discriminator\+Meta\+Mapping\+Column}} (\$entity\+Name, \$discr\+Column\+Name, \$dql\+Alias)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a2bf66991e17164c5a290eb45ef31dc27}{invalid\+Discriminator\+Value}} (\$discr\+Value, \$discr\+Map)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a75726e5266805714c1cab0f2eec27deb}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a75726e5266805714c1cab0f2eec27deb}} 
+\index{HydrationException@{HydrationException}!emptyDiscriminatorValue@{emptyDiscriminatorValue}}
+\index{emptyDiscriminatorValue@{emptyDiscriminatorValue}!HydrationException@{HydrationException}}
+\doxysubsubsection{\texorpdfstring{emptyDiscriminatorValue()}{emptyDiscriminatorValue()}}
+{\footnotesize\ttfamily static empty\+Discriminator\+Value (\begin{DoxyParamCaption}\item[{}]{\$dql\+Alias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$dql\+Alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{Hydration\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a2bf66991e17164c5a290eb45ef31dc27}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a2bf66991e17164c5a290eb45ef31dc27}} 
+\index{HydrationException@{HydrationException}!invalidDiscriminatorValue@{invalidDiscriminatorValue}}
+\index{invalidDiscriminatorValue@{invalidDiscriminatorValue}!HydrationException@{HydrationException}}
+\doxysubsubsection{\texorpdfstring{invalidDiscriminatorValue()}{invalidDiscriminatorValue()}}
+{\footnotesize\ttfamily static invalid\+Discriminator\+Value (\begin{DoxyParamCaption}\item[{}]{\$discr\+Value,  }\item[{}]{\$discr\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$discr\+Value} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$discr\+Map} & @psalm-\/param array$<$string, string$>$ \$discr\+Map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{Hydration\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_ab63e2b0400eee3d84bbbd7e2ba577d7d}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_ab63e2b0400eee3d84bbbd7e2ba577d7d}} 
+\index{HydrationException@{HydrationException}!missingDiscriminatorColumn@{missingDiscriminatorColumn}}
+\index{missingDiscriminatorColumn@{missingDiscriminatorColumn}!HydrationException@{HydrationException}}
+\doxysubsubsection{\texorpdfstring{missingDiscriminatorColumn()}{missingDiscriminatorColumn()}}
+{\footnotesize\ttfamily static missing\+Discriminator\+Column (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name,  }\item[{}]{\$discr\+Column\+Name,  }\item[{}]{\$dql\+Alias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & \\
+\hline
+string & {\em \$discr\+Column\+Name} & \\
+\hline
+string & {\em \$dql\+Alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{Hydration\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a37a8deab0d6674276265f00ba8b09a4f}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a37a8deab0d6674276265f00ba8b09a4f}} 
+\index{HydrationException@{HydrationException}!missingDiscriminatorMetaMappingColumn@{missingDiscriminatorMetaMappingColumn}}
+\index{missingDiscriminatorMetaMappingColumn@{missingDiscriminatorMetaMappingColumn}!HydrationException@{HydrationException}}
+\doxysubsubsection{\texorpdfstring{missingDiscriminatorMetaMappingColumn()}{missingDiscriminatorMetaMappingColumn()}}
+{\footnotesize\ttfamily static missing\+Discriminator\+Meta\+Mapping\+Column (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name,  }\item[{}]{\$discr\+Column\+Name,  }\item[{}]{\$dql\+Alias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & \\
+\hline
+string & {\em \$discr\+Column\+Name} & \\
+\hline
+string & {\em \$dql\+Alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{Hydration\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a26a24290d5066f10b812594dd12d8524}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_a26a24290d5066f10b812594dd12d8524}} 
+\index{HydrationException@{HydrationException}!nonUniqueResult@{nonUniqueResult}}
+\index{nonUniqueResult@{nonUniqueResult}!HydrationException@{HydrationException}}
+\doxysubsubsection{\texorpdfstring{nonUniqueResult()}{nonUniqueResult()}}
+{\footnotesize\ttfamily static non\+Unique\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{Hydration\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_acf3b10615ef031fcb70efb6f664264b8}\label{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception_acf3b10615ef031fcb70efb6f664264b8}} 
+\index{HydrationException@{HydrationException}!parentObjectOfRelationNotFound@{parentObjectOfRelationNotFound}}
+\index{parentObjectOfRelationNotFound@{parentObjectOfRelationNotFound}!HydrationException@{HydrationException}}
+\doxysubsubsection{\texorpdfstring{parentObjectOfRelationNotFound()}{parentObjectOfRelationNotFound()}}
+{\footnotesize\ttfamily static parent\+Object\+Of\+Relation\+Not\+Found (\begin{DoxyParamCaption}\item[{}]{\$alias,  }\item[{}]{\$parent\+Alias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alias} & \\
+\hline
+string & {\em \$parent\+Alias} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_internal_1_1_hydration_1_1_hydration_exception}{Hydration\+Exception}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Internal/\+Hydration/Hydration\+Exception.\+php\end{DoxyCompactItemize}

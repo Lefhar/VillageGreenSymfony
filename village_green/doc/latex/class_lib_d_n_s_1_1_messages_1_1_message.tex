@@ -1,0 +1,294 @@
+\hypertarget{class_lib_d_n_s_1_1_messages_1_1_message}{}\doxysection{Message Class Reference}
+\label{class_lib_d_n_s_1_1_messages_1_1_message}\index{Message@{Message}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a6e2cad27c55a66c43f4216e9d6a1fd9b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_factory}{Record\+Collection\+Factory}} \$record\+Collection\+Factory, int \$type=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a30dd7fff4fec7a39f9be9d27d4b22a59}{get\+ID}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_ac3d78e960194832b4c0aa980d6ca98dd}{set\+ID}} (int \$id)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a99708ebd5d2c42b9c6c759943ad78448}{set\+Type}} (int \$type)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a7b5b1230c0007b55df8c16749a915b7e}{get\+Op\+Code}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_af2d7313a91825638914101c47d576eb4}{set\+Op\+Code}} (int \$op\+Code)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a2a76a6aafee30eee02f28be61d3dfb78}{is\+Authoritative}} (bool \$new\+Value=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_aaf4265745e260b970db3512df4480f35}{is\+Truncated}} (bool \$new\+Value=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a389dc8d5939b067aedf3c3069e6484a5}{is\+Recursion\+Desired}} (bool \$new\+Value=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a4fb732b7f3829164c226adb8c830cfb3}{is\+Recursion\+Available}} (bool \$new\+Value=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a3716603c81e7656f46476ca4eeb09135}{get\+Response\+Code}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a64b670070bde2f2550c51b7ca88bb9cb}{set\+Response\+Code}} (int \$response\+Code)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_afda60e3daae7f37d6d7ecf1d547f0b95}{get\+Question\+Records}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a3a904ba98dabe7b2fd63009be598995d}{get\+Answer\+Records}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_a9a10fa5e0a4be2c147ff7a1b398aa857}{get\+Authority\+Records}} ()
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_messages_1_1_message_acad4738210e96330094900b75a7e256a}{get\+Additional\+Records}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a6e2cad27c55a66c43f4216e9d6a1fd9b}\label{class_lib_d_n_s_1_1_messages_1_1_message_a6e2cad27c55a66c43f4216e9d6a1fd9b}} 
+\index{Message@{Message}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_record_collection_factory}{Record\+Collection\+Factory}}}]{\$record\+Collection\+Factory,  }\item[{int}]{\$type = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record\+Collection\+Factory & {\em \$record\+Collection\+Factory} & Factory which makes Record\+Collection objects \\
+\hline
+int & {\em \$type} & Value of the message type field \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Range\+Exception When the supplied message type is outside the valid range 0 -\/ 1 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_acad4738210e96330094900b75a7e256a}\label{class_lib_d_n_s_1_1_messages_1_1_message_acad4738210e96330094900b75a7e256a}} 
+\index{Message@{Message}!getAdditionalRecords@{getAdditionalRecords}}
+\index{getAdditionalRecords@{getAdditionalRecords}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getAdditionalRecords()}{getAdditionalRecords()}}
+{\footnotesize\ttfamily get\+Additional\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the additional records collection
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record\+Collection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a3a904ba98dabe7b2fd63009be598995d}\label{class_lib_d_n_s_1_1_messages_1_1_message_a3a904ba98dabe7b2fd63009be598995d}} 
+\index{Message@{Message}!getAnswerRecords@{getAnswerRecords}}
+\index{getAnswerRecords@{getAnswerRecords}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getAnswerRecords()}{getAnswerRecords()}}
+{\footnotesize\ttfamily get\+Answer\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the answer records collection
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record\+Collection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a9a10fa5e0a4be2c147ff7a1b398aa857}\label{class_lib_d_n_s_1_1_messages_1_1_message_a9a10fa5e0a4be2c147ff7a1b398aa857}} 
+\index{Message@{Message}!getAuthorityRecords@{getAuthorityRecords}}
+\index{getAuthorityRecords@{getAuthorityRecords}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getAuthorityRecords()}{getAuthorityRecords()}}
+{\footnotesize\ttfamily get\+Authority\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the authority records collection
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record\+Collection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a30dd7fff4fec7a39f9be9d27d4b22a59}\label{class_lib_d_n_s_1_1_messages_1_1_message_a30dd7fff4fec7a39f9be9d27d4b22a59}} 
+\index{Message@{Message}!getID@{getID}}
+\index{getID@{getID}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the value of the message ID field
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a7b5b1230c0007b55df8c16749a915b7e}\label{class_lib_d_n_s_1_1_messages_1_1_message_a7b5b1230c0007b55df8c16749a915b7e}} 
+\index{Message@{Message}!getOpCode@{getOpCode}}
+\index{getOpCode@{getOpCode}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getOpCode()}{getOpCode()}}
+{\footnotesize\ttfamily get\+Op\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the value of the message opcode field
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_afda60e3daae7f37d6d7ecf1d547f0b95}\label{class_lib_d_n_s_1_1_messages_1_1_message_afda60e3daae7f37d6d7ecf1d547f0b95}} 
+\index{Message@{Message}!getQuestionRecords@{getQuestionRecords}}
+\index{getQuestionRecords@{getQuestionRecords}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getQuestionRecords()}{getQuestionRecords()}}
+{\footnotesize\ttfamily get\+Question\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the question records collection
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Record\+Collection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a3716603c81e7656f46476ca4eeb09135}\label{class_lib_d_n_s_1_1_messages_1_1_message_a3716603c81e7656f46476ca4eeb09135}} 
+\index{Message@{Message}!getResponseCode@{getResponseCode}}
+\index{getResponseCode@{getResponseCode}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getResponseCode()}{getResponseCode()}}
+{\footnotesize\ttfamily get\+Response\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the value of the message response code field
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a830b5c75df72b32396701bc563fbe3c7}\label{class_lib_d_n_s_1_1_messages_1_1_message_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{Message@{Message}!getType@{getType}}
+\index{getType@{getType}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the value of the message type field
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a2a76a6aafee30eee02f28be61d3dfb78}\label{class_lib_d_n_s_1_1_messages_1_1_message_a2a76a6aafee30eee02f28be61d3dfb78}} 
+\index{Message@{Message}!isAuthoritative@{isAuthoritative}}
+\index{isAuthoritative@{isAuthoritative}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{isAuthoritative()}{isAuthoritative()}}
+{\footnotesize\ttfamily is\+Authoritative (\begin{DoxyParamCaption}\item[{bool}]{\$new\+Value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Inspect the value of the authoritative field and optionally set a new value
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$new\+Value} & The new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool The old value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a4fb732b7f3829164c226adb8c830cfb3}\label{class_lib_d_n_s_1_1_messages_1_1_message_a4fb732b7f3829164c226adb8c830cfb3}} 
+\index{Message@{Message}!isRecursionAvailable@{isRecursionAvailable}}
+\index{isRecursionAvailable@{isRecursionAvailable}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{isRecursionAvailable()}{isRecursionAvailable()}}
+{\footnotesize\ttfamily is\+Recursion\+Available (\begin{DoxyParamCaption}\item[{bool}]{\$new\+Value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Inspect the value of the recursion available field and optionally set a new value
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$new\+Value} & The new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool The old value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a389dc8d5939b067aedf3c3069e6484a5}\label{class_lib_d_n_s_1_1_messages_1_1_message_a389dc8d5939b067aedf3c3069e6484a5}} 
+\index{Message@{Message}!isRecursionDesired@{isRecursionDesired}}
+\index{isRecursionDesired@{isRecursionDesired}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{isRecursionDesired()}{isRecursionDesired()}}
+{\footnotesize\ttfamily is\+Recursion\+Desired (\begin{DoxyParamCaption}\item[{bool}]{\$new\+Value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Inspect the value of the recusion desired field and optionally set a new value
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$new\+Value} & The new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool The old value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_aaf4265745e260b970db3512df4480f35}\label{class_lib_d_n_s_1_1_messages_1_1_message_aaf4265745e260b970db3512df4480f35}} 
+\index{Message@{Message}!isTruncated@{isTruncated}}
+\index{isTruncated@{isTruncated}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{isTruncated()}{isTruncated()}}
+{\footnotesize\ttfamily is\+Truncated (\begin{DoxyParamCaption}\item[{bool}]{\$new\+Value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Inspect the value of the truncated field and optionally set a new value
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$new\+Value} & The new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool The old value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_ac3d78e960194832b4c0aa980d6ca98dd}\label{class_lib_d_n_s_1_1_messages_1_1_message_ac3d78e960194832b4c0aa980d6ca98dd}} 
+\index{Message@{Message}!setID@{setID}}
+\index{setID@{setID}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setID()}{setID()}}
+{\footnotesize\ttfamily set\+ID (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})}
+
+Set the value of the message ID field
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & The new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Range\+Exception When the supplied value is outside the valid range 0 -\/ 65535 \mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_af2d7313a91825638914101c47d576eb4}\label{class_lib_d_n_s_1_1_messages_1_1_message_af2d7313a91825638914101c47d576eb4}} 
+\index{Message@{Message}!setOpCode@{setOpCode}}
+\index{setOpCode@{setOpCode}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setOpCode()}{setOpCode()}}
+{\footnotesize\ttfamily set\+Op\+Code (\begin{DoxyParamCaption}\item[{int}]{\$op\+Code }\end{DoxyParamCaption})}
+
+Set the value of the message opcode field
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$op\+Code} & The new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Range\+Exception When the supplied value is outside the valid range 0 -\/ 15 \mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a64b670070bde2f2550c51b7ca88bb9cb}\label{class_lib_d_n_s_1_1_messages_1_1_message_a64b670070bde2f2550c51b7ca88bb9cb}} 
+\index{Message@{Message}!setResponseCode@{setResponseCode}}
+\index{setResponseCode@{setResponseCode}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setResponseCode()}{setResponseCode()}}
+{\footnotesize\ttfamily set\+Response\+Code (\begin{DoxyParamCaption}\item[{int}]{\$response\+Code }\end{DoxyParamCaption})}
+
+Set the value of the message response code field
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$response\+Code} & The new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Range\+Exception When the supplied value is outside the valid range 0 -\/ 15 \mbox{\Hypertarget{class_lib_d_n_s_1_1_messages_1_1_message_a99708ebd5d2c42b9c6c759943ad78448}\label{class_lib_d_n_s_1_1_messages_1_1_message_a99708ebd5d2c42b9c6c759943ad78448}} 
+\index{Message@{Message}!setType@{setType}}
+\index{setType@{setType}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily set\+Type (\begin{DoxyParamCaption}\item[{int}]{\$type }\end{DoxyParamCaption})}
+
+Set the value of the message type field
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$type} & The new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Range\+Exception When the supplied value is outside the valid range 0 -\/ 1 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Messages/Message.\+php\end{DoxyCompactItemize}

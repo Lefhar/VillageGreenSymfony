@@ -1,0 +1,56 @@
+\hypertarget{interface_amp_1_1_promise}{}\doxysection{Promise Interface Reference}
+\label{interface_amp_1_1_promise}\index{Promise@{Promise}}
+Inheritance diagram for Promise\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{interface_amp_1_1_promise}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{on\+Resolve}} (callable \$on\+Resolved)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representation of the future value of an asynchronous operation.
+
+@template-\/covariant TValue @psalm-\/yield TValue 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}\label{interface_amp_1_1_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}} 
+\index{Promise@{Promise}!onResolve@{onResolve}}
+\index{onResolve@{onResolve}!Promise@{Promise}}
+\doxysubsubsection{\texorpdfstring{onResolve()}{onResolve()}}
+{\footnotesize\ttfamily on\+Resolve (\begin{DoxyParamCaption}\item[{callable}]{\$on\+Resolved }\end{DoxyParamCaption})}
+
+Registers a callback to be invoked when the promise is resolved.
+
+If this method is called multiple times, additional handlers will be registered instead of replacing any already existing handlers.
+
+If the promise is already resolved, the callback MUST be executed immediately.
+
+Exceptions MUST NOT be thrown from this method. Any exceptions thrown from invoked callbacks MUST be forwarded to the event-\/loop error handler.
+
+Note\+: You shouldn\textquotesingle{}t implement this interface yourself. Instead, provide a method that returns a promise for the operation you\textquotesingle{}re implementing. Objects other than pure placeholders implementing it are a very bad idea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$on\+Resolved} & The first argument shall be {\ttfamily null} on success, while the second shall be {\ttfamily null} on failure.\\
+\hline
+\end{DoxyParams}
+@psalm-\/param callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: (Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface$\vert$array\texorpdfstring{$<$}{<}array-\/key, Promise$\vert$\textbackslash{}\+React\textbackslash{}\+Promise\textbackslash{}\+Promise\+Interface\texorpdfstring{$>$}{>}, mixed, mixed\texorpdfstring{$>$}{>}$\vert$null) $\vert$ callable(\textbackslash{}\+Throwable$\vert$null, mixed)\+: void \$on\+Resolved
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_internal_1_1_private_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{Private\+Promise}}, \mbox{\hyperlink{class_amp_1_1_lazy_promise_a0dc857ebb174eef4ad89ae0c1201ae0e}{Lazy\+Promise}}, \mbox{\hyperlink{class_amp_1_1_success_a0dc857ebb174eef4ad89ae0c1201ae0e}{Success}}, \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_message_a40dffd1b8c8d65b3c86af44f4d1f228d}{Message}}, and \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_output_buffer_a0dc857ebb174eef4ad89ae0c1201ae0e}{Output\+Buffer}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Promise.\+php\end{DoxyCompactItemize}

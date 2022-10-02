@@ -1,0 +1,93 @@
+\hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression}{}\doxysection{Composite\+Expression Class Reference}
+\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression}\index{CompositeExpression@{CompositeExpression}}
+Inheritance diagram for Composite\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a8f1334321c4b72f009f5f087d3495f2d}{\+\_\+\+\_\+construct}} (\$type, array \$expressions)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a719d0b400bc9da352845bca69e891783}{get\+Expression\+List}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_ab62b04bee3c0437b38b6680a8a4af53f}{visit}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression_visitor}{Expression\+Visitor}} \$visitor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_aa4bdf303f0ad0b07184ff88b25674b50}\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_aa4bdf303f0ad0b07184ff88b25674b50}} 
+const {\bfseries TYPE\+\_\+\+AND} = \textquotesingle{}AND\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a4bb76be821b9ede7ffb928644a3c01e3}\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a4bb76be821b9ede7ffb928644a3c01e3}} 
+const {\bfseries TYPE\+\_\+\+OR} = \textquotesingle{}OR\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}} of Expressions combined by AND or OR operation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a8f1334321c4b72f009f5f087d3495f2d}\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a8f1334321c4b72f009f5f087d3495f2d}} 
+\index{CompositeExpression@{CompositeExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$type,  }\item[{array}]{\$expressions }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$expressions} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a719d0b400bc9da352845bca69e891783}\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a719d0b400bc9da352845bca69e891783}} 
+\index{CompositeExpression@{CompositeExpression}!getExpressionList@{getExpressionList}}
+\index{getExpressionList@{getExpressionList}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{getExpressionList()}{getExpressionList()}}
+{\footnotesize\ttfamily get\+Expression\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the list of expressions nested in this composite.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a830b5c75df72b32396701bc563fbe3c7}\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{CompositeExpression@{CompositeExpression}!getType@{getType}}
+\index{getType@{getType}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_ab62b04bee3c0437b38b6680a8a4af53f}\label{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression_ab62b04bee3c0437b38b6680a8a4af53f}} 
+\index{CompositeExpression@{CompositeExpression}!visit@{visit}}
+\index{visit@{visit}!CompositeExpression@{CompositeExpression}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression_visitor}{Expression\+Visitor}}}]{\$visitor }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression_ab62b04bee3c0437b38b6680a8a4af53f}{Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/collections/lib/\+Doctrine/\+Common/\+Collections/\+Expr/Composite\+Expression.\+php\end{DoxyCompactItemize}

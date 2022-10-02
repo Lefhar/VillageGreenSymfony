@@ -1,0 +1,62 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener}{}\doxysection{Debug\+Unit\+Of\+Work\+Listener Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener}\index{DebugUnitOfWorkListener@{DebugUnitOfWorkListener}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_af7344ec2741528954223d94daa102be0}{\+\_\+\+\_\+construct}} (\$file=\textquotesingle{}php\+://output\textquotesingle{}, \$context=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_a72a4359e82d0c9c7a6c6632ab8efce40}{on\+Flush}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_flush_event_args}{On\+Flush\+Event\+Args}} \$args)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_a189d91a5e3908ef48a7a0f500250bbd4}{dump\+Identity\+Map}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this logger to dump the identity map during the on\+Flush event. This is useful for debugging weird \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} behavior with complex operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_af7344ec2741528954223d94daa102be0}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_af7344ec2741528954223d94daa102be0}} 
+\index{DebugUnitOfWorkListener@{DebugUnitOfWorkListener}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DebugUnitOfWorkListener@{DebugUnitOfWorkListener}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$file = {\ttfamily \textquotesingle{}php\+://output\textquotesingle{}},  }\item[{}]{\$context = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Pass a stream and context information for the debugging session.
+
+The stream can be php\+://output to print to the screen.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file} & \\
+\hline
+string & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_a189d91a5e3908ef48a7a0f500250bbd4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_a189d91a5e3908ef48a7a0f500250bbd4}} 
+\index{DebugUnitOfWorkListener@{DebugUnitOfWorkListener}!dumpIdentityMap@{dumpIdentityMap}}
+\index{dumpIdentityMap@{dumpIdentityMap}!DebugUnitOfWorkListener@{DebugUnitOfWorkListener}}
+\doxysubsubsection{\texorpdfstring{dumpIdentityMap()}{dumpIdentityMap()}}
+{\footnotesize\ttfamily dump\+Identity\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+Dumps the contents of the identity map into a stream.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_a72a4359e82d0c9c7a6c6632ab8efce40}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_debug_unit_of_work_listener_a72a4359e82d0c9c7a6c6632ab8efce40}} 
+\index{DebugUnitOfWorkListener@{DebugUnitOfWorkListener}!onFlush@{onFlush}}
+\index{onFlush@{onFlush}!DebugUnitOfWorkListener@{DebugUnitOfWorkListener}}
+\doxysubsubsection{\texorpdfstring{onFlush()}{onFlush()}}
+{\footnotesize\ttfamily on\+Flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_flush_event_args}{On\+Flush\+Event\+Args}}}]{\$args }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Debug\+Unit\+Of\+Work\+Listener.\+php\end{DoxyCompactItemize}

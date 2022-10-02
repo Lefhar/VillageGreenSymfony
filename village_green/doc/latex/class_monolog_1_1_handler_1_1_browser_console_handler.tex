@@ -1,0 +1,156 @@
+\hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler}{}\doxysection{Browser\+Console\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_browser_console_handler}\index{BrowserConsoleHandler@{BrowserConsoleHandler}}
+Inheritance diagram for Browser\+Console\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_browser_console_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_a616f8dfcbc306100058159d1e0459bcd}{send}} ()
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_a3be66a7f975f669a295dc51d29d7d163}{reset\+Static}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_ad17c19f6af20c5bd9250b06fa8b57f44}{register\+Shutdown\+Function}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_aed1fa1fd7ec0cff4272778e216ab181a}{write\+Output}} (string \$str)
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_handler_1_1_browser_console_handler_ae59c6357109bf48a86ea7da174b78a30}{get\+Response\+Format}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_a533c66c9995bd9f022b5f5b325c12ad4}\label{class_monolog_1_1_handler_1_1_browser_console_handler_a533c66c9995bd9f022b5f5b325c12ad4}} 
+static {\bfseries \$initialized} = false
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_a6cb1988642ff4f03fdfb3658cdd14fa0}\label{class_monolog_1_1_handler_1_1_browser_console_handler_a6cb1988642ff4f03fdfb3658cdd14fa0}} 
+static {\bfseries \$records} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} sending logs to browser\textquotesingle{}s javascript console with no browser extension required
+
+\begin{DoxyAuthor}{Author}
+Olivier Poitrey \href{mailto:rs@dailymotion.com}{\texttt{ rs@dailymotion.\+com}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Formatted\+Record from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler}{Abstract\+Processing\+Handler}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_browser_console_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!close@{close}}
+\index{close@{close}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_browser_console_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatted output may contain some formatting markers to be transferred to {\ttfamily console.\+log} using the c format.
+
+Example of formatted string\+: \begin{DoxyVerb}You can do [[blue text]]{color: blue} or [[green background]]{background-color: green; color: white}
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_ae59c6357109bf48a86ea7da174b78a30}\label{class_monolog_1_1_handler_1_1_browser_console_handler_ae59c6357109bf48a86ea7da174b78a30}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!getResponseFormat@{getResponseFormat}}
+\index{getResponseFormat@{getResponseFormat}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{getResponseFormat()}{getResponseFormat()}}
+{\footnotesize\ttfamily static get\+Response\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checks the format of the response
+
+If Content-\/\+Type is set to application/javascript or text/javascript -\/\texorpdfstring{$>$}{>} js If Content-\/\+Type is set to text/html, or is unset -\/\texorpdfstring{$>$}{>} html If Content-\/\+Type is anything else -\/\texorpdfstring{$>$}{>} unknown
+
+\begin{DoxyReturn}{Returns}
+string One of \textquotesingle{}js\textquotesingle{}, \textquotesingle{}html\textquotesingle{} or \textquotesingle{}unknown\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_ad17c19f6af20c5bd9250b06fa8b57f44}\label{class_monolog_1_1_handler_1_1_browser_console_handler_ad17c19f6af20c5bd9250b06fa8b57f44}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!registerShutdownFunction@{registerShutdownFunction}}
+\index{registerShutdownFunction@{registerShutdownFunction}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{registerShutdownFunction()}{registerShutdownFunction()}}
+{\footnotesize\ttfamily register\+Shutdown\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Wrapper for register\+\_\+shutdown\+\_\+function to allow overriding \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_browser_console_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!reset@{reset}}
+\index{reset@{reset}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Processing\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_a3be66a7f975f669a295dc51d29d7d163}\label{class_monolog_1_1_handler_1_1_browser_console_handler_a3be66a7f975f669a295dc51d29d7d163}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!resetStatic@{resetStatic}}
+\index{resetStatic@{resetStatic}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{resetStatic()}{resetStatic()}}
+{\footnotesize\ttfamily static reset\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Forget all logged records \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_a616f8dfcbc306100058159d1e0459bcd}\label{class_monolog_1_1_handler_1_1_browser_console_handler_a616f8dfcbc306100058159d1e0459bcd}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!send@{send}}
+\index{send@{send}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily static send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Convert records to javascript console commands and send it to the browser. This method is automatically called on PHP shutdown if output is HTML or Javascript. \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_browser_console_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!write@{write}}
+\index{write@{write}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_browser_console_handler_aed1fa1fd7ec0cff4272778e216ab181a}\label{class_monolog_1_1_handler_1_1_browser_console_handler_aed1fa1fd7ec0cff4272778e216ab181a}} 
+\index{BrowserConsoleHandler@{BrowserConsoleHandler}!writeOutput@{writeOutput}}
+\index{writeOutput@{writeOutput}!BrowserConsoleHandler@{BrowserConsoleHandler}}
+\doxysubsubsection{\texorpdfstring{writeOutput()}{writeOutput()}}
+{\footnotesize\ttfamily static write\+Output (\begin{DoxyParamCaption}\item[{string}]{\$str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Wrapper for echo to allow overriding 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Browser\+Console\+Handler.\+php\end{DoxyCompactItemize}

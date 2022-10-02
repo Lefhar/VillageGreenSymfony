@@ -1,0 +1,189 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator}{}\doxysection{Default\+File\+Locator Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator}\index{DefaultFileLocator@{DefaultFileLocator}}
+Inheritance diagram for Default\+File\+Locator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_ab1a24501b55795b72c5ffd65d3f877fc}{\+\_\+\+\_\+construct}} (\$paths, \$file\+Extension=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a890c50a29d55a9e83e340282ce206d87}{add\+Paths}} (array \$paths)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a3872a8fe71c89ed326681ef568e5498a}{get\+Paths}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}{get\+File\+Extension}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a6b89955dbf06f8bed09b81df9460a4d2}{set\+File\+Extension}} (\$file\+Extension)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a4b00ba178190dd08cade939786a68cbe}{find\+Mapping\+File}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}{get\+All\+Class\+Names}} (\$global\+Basename)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}{file\+Exists}} (\$class\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a20dd412769e0754189f5ce036e857a37}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a20dd412769e0754189f5ce036e857a37}} 
+{\bfseries \$paths} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a345045be388474a13776c59c7aa8aead}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a345045be388474a13776c59c7aa8aead}} 
+{\bfseries \$file\+Extension}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Locates the file that contains the metadata information for a given class name.
+
+This behavior is independent of the actual content of the file. It just detects the file which is responsible for the given class name. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_ab1a24501b55795b72c5ffd65d3f877fc}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_ab1a24501b55795b72c5ffd65d3f877fc}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$paths,  }\item[{}]{\$file\+Extension = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_driver}{File\+Driver}} that looks in the given path(s) for mapping documents and operates in the specified operating mode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$paths} & One or multiple paths where mapping documents can be found. \\
+\hline
+string | null & {\em \$file\+Extension} & The file extension of mapping documents, usually prefixed with a dot. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a890c50a29d55a9e83e340282ce206d87}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a890c50a29d55a9e83e340282ce206d87}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!addPaths@{addPaths}}
+\index{addPaths@{addPaths}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{addPaths()}{addPaths()}}
+{\footnotesize\ttfamily add\+Paths (\begin{DoxyParamCaption}\item[{array}]{\$paths }\end{DoxyParamCaption})}
+
+Appends lookup paths to metadata driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$paths} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!fileExists@{fileExists}}
+\index{fileExists@{fileExists}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{fileExists()}{fileExists()}}
+{\footnotesize\ttfamily file\+Exists (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Checks if a file can be found for this class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a815ba7f3a3364615fe81adb2f7d73b79}{File\+Locator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a4b00ba178190dd08cade939786a68cbe}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a4b00ba178190dd08cade939786a68cbe}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!findMappingFile@{findMappingFile}}
+\index{findMappingFile@{findMappingFile}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{findMappingFile()}{findMappingFile()}}
+{\footnotesize\ttfamily find\+Mapping\+File (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Locates mapping file for the given class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a4b00ba178190dd08cade939786a68cbe}{File\+Locator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!getAllClassNames@{getAllClassNames}}
+\index{getAllClassNames@{getAllClassNames}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{getAllClassNames()}{getAllClassNames()}}
+{\footnotesize\ttfamily get\+All\+Class\+Names (\begin{DoxyParamCaption}\item[{}]{\$global\+Basename }\end{DoxyParamCaption})}
+
+Gets all class names that are found with this file locator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$global\+Basename} & Passed to allow excluding the basename.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} @psalm-\/return list\texorpdfstring{$<$}{<}class-\/string\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+ @psalm-\/var class-\/string
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a39f7d1babc13e4f9c17e962e4f1ec52d}{File\+Locator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!getFileExtension@{getFileExtension}}
+\index{getFileExtension@{getFileExtension}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{getFileExtension()}{getFileExtension()}}
+{\footnotesize\ttfamily get\+File\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the file extension used to look for mapping files under.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a18b33fa498e8c8ffcb5b5c760b1a9b09}{File\+Locator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a3872a8fe71c89ed326681ef568e5498a}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a3872a8fe71c89ed326681ef568e5498a}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!getPaths@{getPaths}}
+\index{getPaths@{getPaths}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{getPaths()}{getPaths()}}
+{\footnotesize\ttfamily get\+Paths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the defined metadata lookup paths.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_file_locator_a3872a8fe71c89ed326681ef568e5498a}{File\+Locator}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a6b89955dbf06f8bed09b81df9460a4d2}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_default_file_locator_a6b89955dbf06f8bed09b81df9460a4d2}} 
+\index{DefaultFileLocator@{DefaultFileLocator}!setFileExtension@{setFileExtension}}
+\index{setFileExtension@{setFileExtension}!DefaultFileLocator@{DefaultFileLocator}}
+\doxysubsubsection{\texorpdfstring{setFileExtension()}{setFileExtension()}}
+{\footnotesize\ttfamily set\+File\+Extension (\begin{DoxyParamCaption}\item[{}]{\$file\+Extension }\end{DoxyParamCaption})}
+
+Sets the file extension used to look for mapping files under.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$file\+Extension} & The file extension to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/\+Driver/Default\+File\+Locator.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+The Web\+Link component manages links between resources. It is particularly useful to advise clients to preload and prefetch documents through HTTP and HTTP/2 pushes.
+
+This component implements the \href{https://www.w3.org/TR/html5/links.html}{\texttt{ HTML5\textquotesingle{}s Links}}, \href{https://www.w3.org/TR/preload/}{\texttt{ Preload}} and \href{https://www.w3.org/TR/resource-hints/}{\texttt{ Resource Hints}} W3C\textquotesingle{}s specifications. It can also be used with extensions defined in the \href{http://microformats.org/wiki/existing-rel-values\#HTML5_link_type_extensions}{\texttt{ HTML5 link type extensions wiki}}.\hypertarget{md_vendor_symfony_web_link__r_e_a_d_m_e_autotoc_md1953}{}\doxysection{Getting Started}\label{md_vendor_symfony_web_link__r_e_a_d_m_e_autotoc_md1953}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ composer require symfony/web-\/link}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_web_link_1_1_generic_link_provider}{Symfony\(\backslash\)Component\(\backslash\)WebLink\(\backslash\)GenericLinkProvider}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_web_link_1_1_http_header_serializer}{Symfony\(\backslash\)Component\(\backslash\)WebLink\(\backslash\)HttpHeaderSerializer}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_web_link_1_1_link}{Symfony\(\backslash\)Component\(\backslash\)WebLink\(\backslash\)Link}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$linkProvider = (\textcolor{keyword}{new} GenericLinkProvider())}
+\DoxyCodeLine{    -\/>withLink(\textcolor{keyword}{new} Link(\textcolor{stringliteral}{'preload'}, \textcolor{stringliteral}{'/bootstrap.min.css'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{header(\textcolor{stringliteral}{'Link: '}.(\textcolor{keyword}{new} HttpHeaderSerializer())-\/>serialize(\$linkProvider-\/>getLinks()));}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \textcolor{stringliteral}{'Hello'};}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_symfony_web_link__r_e_a_d_m_e_autotoc_md1954}{}\doxysection{Resources}\label{md_vendor_symfony_web_link__r_e_a_d_m_e_autotoc_md1954}
+
+\begin{DoxyItemize}
+\item \href{https://symfony.com/doc/current/web_link.html}{\texttt{ Documentation}}
+\item \href{https://symfony.com/doc/current/contributing/index.html}{\texttt{ Contributing}}
+\item \href{https://github.com/symfony/symfony/issues}{\texttt{ Report issues}} and \href{https://github.com/symfony/symfony/pulls}{\texttt{ send Pull Requests}} in the \href{https://github.com/symfony/symfony}{\texttt{ main Symfony repository}} 
+\end{DoxyItemize}

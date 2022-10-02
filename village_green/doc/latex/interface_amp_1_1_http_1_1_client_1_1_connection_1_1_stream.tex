@@ -1,0 +1,74 @@
+\hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream}{}\doxysection{Stream Interface Reference}
+\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream}\index{Stream@{Stream}}
+Inheritance diagram for Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_ae92be99a598a3a6249217209a9263c38}{request}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation)
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_a7a15334d1688d75af2bf16436f26f15d}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_a7a15334d1688d75af2bf16436f26f15d}} 
+{\bfseries get\+Local\+Address} ()
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_ac9df36d4099edaa6a9a9a1b344d1bded}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_ac9df36d4099edaa6a9a9a1b344d1bded}} 
+{\bfseries get\+Remote\+Address} ()
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_a6dbdbfe84a7d269d29c6a767d80d9d58}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_a6dbdbfe84a7d269d29c6a767d80d9d58}} 
+{\bfseries get\+Tls\+Info} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_ae92be99a598a3a6249217209a9263c38}\label{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_ae92be99a598a3a6249217209a9263c38}} 
+\index{Stream@{Stream}!request@{request}}
+\index{request@{request}!Stream@{Stream}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation }\end{DoxyParamCaption})}
+
+Executes the request.
+
+This method may only be invoked once per instance.
+
+The stream must call \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_event_listener_ac9b98722e084e2e7f26700943c0175f8}{Event\+Listener\+::start\+Sending\+Request()}}\}, \{
+
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_event_listener_a26d2f8076d9f3622c41e6f925d945939}{Event\+Listener\+::complete\+Sending\+Request()}}\}, \{
+
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_event_listener_a2fbc57074b3fa04c7241df474f7cf9d4}{Event\+Listener\+::start\+Receiving\+Response()}}\}, and \{
+
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_event_listener_a5429cf88b9e2b970f2996b6923e69796}{Event\+Listener\+::complete\+Receiving\+Response()}}\} event listener methods on all event listeners registered on the given \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream_ae92be99a598a3a6249217209a9263c38}{request}} in the order defined by \{
+
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request_a6fcfc6d55c33b7665002e6245ca4f465}{Request\+::get\+Event\+Listeners()}}\}. Before calling the next listener, the promise returned from the previous one must resolve successfully.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Response$>$
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error Thrown if this method is called more than once. 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_delegate_http_client_ae92be99a598a3a6249217209a9263c38}{Delegate\+Http\+Client}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_http_stream_ae92be99a598a3a6249217209a9263c38}{Http\+Stream}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_intercepted_stream_ae92be99a598a3a6249217209a9263c38}{Intercepted\+Stream}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Connection/Stream.\+php\end{DoxyCompactItemize}

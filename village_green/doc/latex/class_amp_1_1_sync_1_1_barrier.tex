@@ -1,0 +1,47 @@
+\hypertarget{class_amp_1_1_sync_1_1_barrier}{}\doxysection{Barrier Class Reference}
+\label{class_amp_1_1_sync_1_1_barrier}\index{Barrier@{Barrier}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_barrier_a7e9b7d23a618abeb51735d4e070a3e0f}\label{class_amp_1_1_sync_1_1_barrier_a7e9b7d23a618abeb51735d4e070a3e0f}} 
+{\bfseries \+\_\+\+\_\+construct} (int \$count)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_barrier_a24d4dbc71552d9387256a3cc426e3898}\label{class_amp_1_1_sync_1_1_barrier_a24d4dbc71552d9387256a3cc426e3898}} 
+{\bfseries get\+Count} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_barrier_a2b6327b0e77c6a7211801a785cc1dc61}\label{class_amp_1_1_sync_1_1_barrier_a2b6327b0e77c6a7211801a785cc1dc61}} 
+{\bfseries arrive} (int \$count=1)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_barrier_a83b0377db8f3751afa805a5ad661f9f9}\label{class_amp_1_1_sync_1_1_barrier_a83b0377db8f3751afa805a5ad661f9f9}} 
+{\bfseries register} (int \$count=1)
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_barrier_a3a90238a876207c3786a8c4bf0d24b15}\label{class_amp_1_1_sync_1_1_barrier_a3a90238a876207c3786a8c4bf0d24b15}} 
+{\bfseries await} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A barrier is a synchronization primitive.
+
+The barrier is initialized with a certain count, which can be increased and decreased until it reaches zero.
+
+A count of one can be used to block multiple coroutines until a certain condition is met.
+
+A count of N can be used to await multiple coroutines doing an action to complete.
+
+{\bfseries{Example}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$barrier = \textcolor{keyword}{new} \mbox{\hyperlink{class_amp_1_1_sync_1_1_barrier}{Amp\(\backslash\)Sync\(\backslash\)Barrier}}(2);}
+\DoxyCodeLine{\$barrier-\/>arrive();}
+\DoxyCodeLine{\$barrier-\/>arrive(); \textcolor{comment}{// promise returned from Barrier::await() is now resolved}}
+\DoxyCodeLine{}
+\DoxyCodeLine{yield \$barrier-\/>await();}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/Barrier.\+php\end{DoxyCompactItemize}

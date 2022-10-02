@@ -1,0 +1,50 @@
+\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1741}{}\doxysection{5.\+3.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1741}
+
+\begin{DoxyItemize}
+\item deprecate passing a boolean as the second argument of {\ttfamily Property\+Accessor\+::\+\_\+\+\_\+construct()}, expecting a combination of bitwise flags instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1742}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1742}
+
+\begin{DoxyItemize}
+\item deprecated passing a boolean as the first argument of {\ttfamily Property\+Accessor\+::\+\_\+\+\_\+construct()}, expecting a combination of bitwise flags instead
+\item added the ability to disable usage of the magic {\ttfamily \+\_\+\+\_\+get} \& {\ttfamily \+\_\+\+\_\+set} methods
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1743}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1743}
+
+\begin{DoxyItemize}
+\item Added an {\ttfamily Uninitialized\+Property\+Exception}
+\item Linking to Property\+Info extractor to remove a lot of duplicate code
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1744}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1744}
+
+\begin{DoxyItemize}
+\item deprecated passing {\ttfamily null} as {\ttfamily \$default\+Lifetime} 2nd argument of {\ttfamily Property\+Accessor\+::create\+Cache()} method, pass {\ttfamily 0} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1745}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1745}
+
+\begin{DoxyItemize}
+\item added a {\ttfamily \$throw\+Exception\+On\+Invalid\+Property\+Path} argument to the Property\+Accessor constructor.
+\item added {\ttfamily enable\+Exception\+On\+Invalid\+Property\+Path()}, {\ttfamily disable\+Exception\+On\+Invalid\+Property\+Path()} and {\ttfamily is\+Exception\+On\+Invalid\+Property\+Path()} methods to {\ttfamily Property\+Accessor\+Builder}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1746}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1746}
+
+\begin{DoxyItemize}
+\item removed the {\ttfamily String\+Util} class, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Inflector\textbackslash{}Inflector}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1747}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1747}
+
+\begin{DoxyItemize}
+\item deprecated the {\ttfamily String\+Util} class, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Inflector\textbackslash{}Inflector} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1748}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1748}
+
+\begin{DoxyItemize}
+\item {\ttfamily Unexpected\+Type\+Exception} now expects three constructor arguments\+: The invalid property value, the {\ttfamily Property\+Path\+Interface} object and the current index of the property path.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1749}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1749}
+
+\begin{DoxyItemize}
+\item allowed non alpha numeric characters in second level and deeper object properties names
+\item \mbox{[}BC BREAK\mbox{]} when accessing an index on an object that does not implement Array\+Access, a No\+Such\+Index\+Exception is now thrown instead of the semantically wrong No\+Such\+Property\+Exception
+\item \mbox{[}BC BREAK\mbox{]} added is\+Readable() and is\+Writable() to Property\+Accessor\+Interface
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1750}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_property_access__c_h_a_n_g_e_l_o_g_autotoc_md1750}
+
+\begin{DoxyItemize}
+\item added Property\+Accessor\+Builder, to enable or disable the support of \char`\"{}\+\_\+\+\_\+call\char`\"{}
+\item added support for \char`\"{}\+\_\+\+\_\+call\char`\"{} in the Property\+Accessor (disabled by default)
+\item \mbox{[}BC BREAK\mbox{]} changed Property\+Accessor to continue its search for a property or method even if a non-\/public match was found. Before, a Property\+Access\+Denied\+Exception was thrown in this case. Class Property\+Access\+Denied\+Exception was removed now.
+\item deprecated Property\+Access\+::get\+Property\+Accessor
+\item added Property\+Access\+::create\+Property\+Accessor and Property\+Access\+::create\+Property\+Accessor\+Builder 
+\end{DoxyItemize}

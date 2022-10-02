@@ -1,0 +1,195 @@
+\hypertarget{class_amp_1_1_http_1_1_message}{}\doxysection{Message Class Reference}
+\label{class_amp_1_1_http_1_1_message}\index{Message@{Message}}
+Inheritance diagram for Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_message}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_a157e0005d82edaa21cbea07fdc5c62da}{get\+Headers}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_a7457a37a1633a369602f8919c71f7216}{get\+Raw\+Headers}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_adc899525bc46eeb393c998d07fa4a907}{get\+Header\+Array}} (string \$name)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_acb98664b303c189cc4bca69025ab598c}{get\+Header}} (string \$name)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_adab88ffd7ef2e5dae162ab869470b5ad}{has\+Header}} (string \$name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_ad62c7c9cad0e3ccfdbff9144c914090b}{set\+Headers}} (array \$headers)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_a1b393ab5237dc8fbcafa9e35bcdab54a}{set\+Header}} (string \$name, \$value)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_acbb69f9b3215914de824c10b97b3d787}{add\+Header}} (string \$name, \$value)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_message_a2253d802ee1fbf8d9a8beaffa2301d67}{remove\+Header}} (string \$name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for HTTP request and response messages. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_acbb69f9b3215914de824c10b97b3d787}\label{class_amp_1_1_http_1_1_message_acbb69f9b3215914de824c10b97b3d787}} 
+\index{Message@{Message}!addHeader@{addHeader}}
+\index{addHeader@{addHeader}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{addHeader()}{addHeader()}}
+{\footnotesize\ttfamily add\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds the value to the named header, or creates the header with the given value if it did not exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string | string\mbox{[}$\,$\mbox{]} & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the header name or value is invalid. 
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request_acbb69f9b3215914de824c10b97b3d787}{Request}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_acbb69f9b3215914de824c10b97b3d787}{Response}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_acb98664b303c189cc4bca69025ab598c}\label{class_amp_1_1_http_1_1_message_acb98664b303c189cc4bca69025ab598c}} 
+\index{Message@{Message}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getHeader()}{getHeader()}}
+{\footnotesize\ttfamily get\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Returns the value of the given header. If multiple headers are present for the named header, only the first header value will be returned. Use \mbox{\hyperlink{class_amp_1_1_http_1_1_message_adc899525bc46eeb393c998d07fa4a907}{get\+Header\+Array()}} to return an array of all values for the particular header. Returns null if the header does not exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_adc899525bc46eeb393c998d07fa4a907}\label{class_amp_1_1_http_1_1_message_adc899525bc46eeb393c998d07fa4a907}} 
+\index{Message@{Message}!getHeaderArray@{getHeaderArray}}
+\index{getHeaderArray@{getHeaderArray}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getHeaderArray()}{getHeaderArray()}}
+{\footnotesize\ttfamily get\+Header\+Array (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Returns the array of values for the given header or an empty array if the header does not exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_a157e0005d82edaa21cbea07fdc5c62da}\label{class_amp_1_1_http_1_1_message_a157e0005d82edaa21cbea07fdc5c62da}} 
+\index{Message@{Message}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the headers as a string-\/indexed array of arrays of strings or an empty array if no headers have been set.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_a7457a37a1633a369602f8919c71f7216}\label{class_amp_1_1_http_1_1_message_a7457a37a1633a369602f8919c71f7216}} 
+\index{Message@{Message}!getRawHeaders@{getRawHeaders}}
+\index{getRawHeaders@{getRawHeaders}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getRawHeaders()}{getRawHeaders()}}
+{\footnotesize\ttfamily get\+Raw\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Returns the headers as list of \mbox{[}field, name\mbox{]} pairs in the original casing provided by the application or server.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_adab88ffd7ef2e5dae162ab869470b5ad}\label{class_amp_1_1_http_1_1_message_adab88ffd7ef2e5dae162ab869470b5ad}} 
+\index{Message@{Message}!hasHeader@{hasHeader}}
+\index{hasHeader@{hasHeader}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{hasHeader()}{hasHeader()}}
+{\footnotesize\ttfamily has\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Checks if given header exists.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_a2253d802ee1fbf8d9a8beaffa2301d67}\label{class_amp_1_1_http_1_1_message_a2253d802ee1fbf8d9a8beaffa2301d67}} 
+\index{Message@{Message}!removeHeader@{removeHeader}}
+\index{removeHeader@{removeHeader}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{removeHeader()}{removeHeader()}}
+{\footnotesize\ttfamily remove\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Removes the given header if it exists.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request_a2253d802ee1fbf8d9a8beaffa2301d67}{Request}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a2253d802ee1fbf8d9a8beaffa2301d67}{Response}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_a1b393ab5237dc8fbcafa9e35bcdab54a}\label{class_amp_1_1_http_1_1_message_a1b393ab5237dc8fbcafa9e35bcdab54a}} 
+\index{Message@{Message}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setHeader()}{setHeader()}}
+{\footnotesize\ttfamily set\+Header (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets the named header to the given value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+string | string\mbox{[}$\,$\mbox{]} & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the header name or value is invalid. 
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request_a1b393ab5237dc8fbcafa9e35bcdab54a}{Request}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_a1b393ab5237dc8fbcafa9e35bcdab54a}{Response}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_message_ad62c7c9cad0e3ccfdbff9144c914090b}\label{class_amp_1_1_http_1_1_message_ad62c7c9cad0e3ccfdbff9144c914090b}} 
+\index{Message@{Message}!setHeaders@{setHeaders}}
+\index{setHeaders@{setHeaders}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setHeaders()}{setHeaders()}}
+{\footnotesize\ttfamily set\+Headers (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets the headers from the given array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$headers} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request_ad62c7c9cad0e3ccfdbff9144c914090b}{Request}}, and \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_response_ad62c7c9cad0e3ccfdbff9144c914090b}{Response}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http/src/Message.\+php\end{DoxyCompactItemize}

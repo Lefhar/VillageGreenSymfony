@@ -1,0 +1,69 @@
+\hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2}{}\doxysection{HPack\+Nghttp2 Class Reference}
+\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2}\index{HPackNghttp2@{HPackNghttp2}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a121066aa1177a4ff733ecc8b177d042e}{\+\_\+\+\_\+construct}} (int \$max\+Size=4096)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a69c8f1cebabaff36efdd239c39ac9206}{decode}} (string \$input, int \$max\+Size)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a1f972099f224af7cac3bb2176b706b3c}{encode}} (array \$headers)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_adc36dedf4b7b9d79eed5296b94001311}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_adc36dedf4b7b9d79eed5296b94001311}} 
+static {\bfseries is\+Supported} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a121066aa1177a4ff733ecc8b177d042e}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a121066aa1177a4ff733ecc8b177d042e}} 
+\index{HPackNghttp2@{HPackNghttp2}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HPackNghttp2@{HPackNghttp2}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$max\+Size = {\ttfamily 4096} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$max\+Size} & Upper limit on table size. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a69c8f1cebabaff36efdd239c39ac9206}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a69c8f1cebabaff36efdd239c39ac9206}} 
+\index{HPackNghttp2@{HPackNghttp2}!decode@{decode}}
+\index{decode@{decode}!HPackNghttp2@{HPackNghttp2}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily decode (\begin{DoxyParamCaption}\item[{string}]{\$input,  }\item[{int}]{\$max\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & Encoded headers. \\
+\hline
+int & {\em \$max\+Size} & Maximum length of the decoded header string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}\mbox{[}\mbox{]}$\vert$null Returns null if decoding fails or if \$max\+Size is exceeded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a1f972099f224af7cac3bb2176b706b3c}\label{class_amp_1_1_http_1_1_internal_1_1_h_pack_nghttp2_a1f972099f224af7cac3bb2176b706b3c}} 
+\index{HPackNghttp2@{HPackNghttp2}!encode@{encode}}
+\index{encode@{encode}!HPackNghttp2@{HPackNghttp2}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily encode (\begin{DoxyParamCaption}\item[{array}]{\$headers }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$headers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Encoded headers. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/hpack/src/\+Internal/HPack\+Nghttp2.\+php\end{DoxyCompactItemize}

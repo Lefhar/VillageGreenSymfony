@@ -1,0 +1,44 @@
+\hypertarget{class_amp_1_1_sync_1_1_prefixed_keyed_mutex}{}\doxysection{Prefixed\+Keyed\+Mutex Class Reference}
+\label{class_amp_1_1_sync_1_1_prefixed_keyed_mutex}\index{PrefixedKeyedMutex@{PrefixedKeyedMutex}}
+Inheritance diagram for Prefixed\+Keyed\+Mutex\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_amp_1_1_sync_1_1_prefixed_keyed_mutex}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_prefixed_keyed_mutex_adf3e8b5d8871f8a0f29d3d3e315689b2}\label{class_amp_1_1_sync_1_1_prefixed_keyed_mutex_adf3e8b5d8871f8a0f29d3d3e315689b2}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_amp_1_1_sync_1_1_keyed_mutex}{Keyed\+Mutex}} \$mutex, string \$prefix)
+\item 
+\mbox{\hyperlink{class_amp_1_1_sync_1_1_prefixed_keyed_mutex_a601f1e36626517b37f2e1d00c6e4a3c2}{acquire}} (string \$key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_sync_1_1_prefixed_keyed_mutex_a601f1e36626517b37f2e1d00c6e4a3c2}\label{class_amp_1_1_sync_1_1_prefixed_keyed_mutex_a601f1e36626517b37f2e1d00c6e4a3c2}} 
+\index{PrefixedKeyedMutex@{PrefixedKeyedMutex}!acquire@{acquire}}
+\index{acquire@{acquire}!PrefixedKeyedMutex@{PrefixedKeyedMutex}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily acquire (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Acquires a lock on the mutex.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \mbox{\hyperlink{class_amp_1_1_sync_1_1_lock}{Lock}} key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Lock$>$ Resolves with a lock object with an ID of 0. May fail with a \mbox{\hyperlink{class_amp_1_1_sync_1_1_sync_exception}{Sync\+Exception}} if an error occurs when attempting to obtain the lock (e.\+g. a shared memory segment closed). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_sync_1_1_keyed_mutex_a601f1e36626517b37f2e1d00c6e4a3c2}{Keyed\+Mutex}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/sync/src/Prefixed\+Keyed\+Mutex.\+php\end{DoxyCompactItemize}

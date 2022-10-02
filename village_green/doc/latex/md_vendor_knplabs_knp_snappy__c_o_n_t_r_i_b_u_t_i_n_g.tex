@@ -1,0 +1,64 @@
+\+:+1\+: First of all, thanks for contributing! The team is happy to help if you have any questions. Have a look to this contributing guide and also to the \href{https://github.com/KnpLabs/snappy/blob/master/doc/faq.md}{\texttt{ FAQ section}}. \+:feet\+: The following is a set of guidelines for contributing to Snappy, which is hosted by the \href{https://github.com/KnpLabs}{\texttt{ KNP Labs Organization}} on Git\+Hub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document opening a pull request. \+:shipit\+:\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md412}{}\doxysection{Code of Conduct}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md412}
+This project and everyone participating in it is governed by the following \href{https://github.com/KnpLabs/snappy/blob/master/CODE_OF_CONDUCT.md}{\texttt{ Code of Conduct}}. By participating, you are expected to uphold this code.\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md413}{}\doxysection{Reporting a bug}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md413}
+\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md414}{}\doxysubsubsection{Before submitting a bug}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md414}
+
+\begin{DoxyItemize}
+\item Verify that you are using the latest Snappy version;
+\item Double-\/check the \href{https://github.com/KnpLabs/snappy/blob/master/README.md}{\texttt{ documentation}} and the \href{https://github.com/KnpLabs/snappy/blob/master/doc/faq.md}{\texttt{ FAQ section}} to see if you\textquotesingle{}re not misusing the library;
+\item Check if the issue is a Snappy issue and not a wkhtmltopdf issue (see \href{\#how-to-verify-if-the-issue-is-a-snappy-issue}{\texttt{ how to}});
+\item Check if the issue has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one.
+\end{DoxyItemize}\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md415}{}\doxyparagraph{How to verify if the issue is a Snappy issue}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md415}
+In order to verify that the issue is a Snappy issue and not a wkhtmltopdf issue, simply copy paste the command displayed in the error message in your command prompt. If the same error appears on the command line, then it\textquotesingle{}s a wkhtmltopdf issue and you\textquotesingle{}ll have more chance to resolve your issue \href{https://github.com/wkhtmltopdf/wkhtmltopdf/issues}{\texttt{ there}}.\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md416}{}\doxysubsubsection{How to submit a (good) bug report}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md416}
+To report a Snappy bug please open a \href{https://github.com/KnpLabs/snappy/issues}{\texttt{ Git\+Hub issue}} following the rules below.
+
+
+\begin{DoxyItemize}
+\item Use a clear and descriptive title for the issue to identify the problem;
+\item Describe the steps needed to reproduce the bug including a code example when possible;
+\item Give as much detail as possible about your environment (OS, PHP version, Snappy configuration, ...);
+\end{DoxyItemize}\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md417}{}\doxysection{Suggesting enhancements}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md417}
+To suggest Snappy enhancements please open a \href{https://github.com/KnpLabs/snappy/issues}{\texttt{ Git\+Hub issue}} following the rules below.
+
+
+\begin{DoxyItemize}
+\item Use a clear and descriptive title for the issue to identify the problem;
+\item Provide a step-\/by-\/step description of the suggested enhancement in as many details as possible;
+\item Explain why this enhancement would be useful with one or more use cases;
+\end{DoxyItemize}\hypertarget{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md418}{}\doxysection{Contributing to the code}\label{md_vendor_knplabs_knp_snappy__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md418}
+A pull request, is the best way to provide a bug fix or to propose enhancements to Snappy.
+
+When submitting a pull request please be sure to follow the same rules described above in \href{\#reporting-a-bug}{\texttt{ Reporting a bug}} and \mbox{[}Suggesting enhancements\mbox{]}(suggesting-\/enhancements) sections depending on the nature of your change.
+
+\begin{quote}
+Before starting to work on a large change please open an issue to ask the \end{quote}
+maintainers if they are fine with it (no one likes to work for nothing!).
+
+
+\begin{DoxyEnumerate}
+\item Fork the repository
+\item Once the repository has been forked clone it locally 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone git@github.com:USERNAME/snappy.git}
+
+\end{DoxyCode}
+
+\item Create a new branch 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git checkout -\/b BRANCH\_NAME master}
+
+\end{DoxyCode}
+
+\item Code!!!
+\item Add/\+Update tests (if needed)
+\item Update documentation (if needed)
+\item Run the tests and make sure that they are passing 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer unit-\/tests}
+\DoxyCodeLine{composer static-\/analysis}
+
+\end{DoxyCode}
+
+\item Squash your commits
+\item Rebase your branch on master and fix merge conflicts
+\item Open the pull request 
+\end{DoxyEnumerate}

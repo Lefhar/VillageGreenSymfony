@@ -1,0 +1,66 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator}{}\doxysection{Schema\+Validator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator}\index{SchemaValidator@{SchemaValidator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_a25f4258aeb5ce2a61a2504cb7c058485}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_a25f4258aeb5ce2a61a2504cb7c058485}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_ab68e6fd07e60007534df308fa5f5231f}{validate\+Mapping}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_a4658880358321c85f8bd91459c724cff}{validate\+Class}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}} \$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_ac01b7bd43acf0dc4fed93e2e966d69c4}{schema\+In\+Sync\+With\+Metadata}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs strict validation of the mapping schema
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+com}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_ac01b7bd43acf0dc4fed93e2e966d69c4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_ac01b7bd43acf0dc4fed93e2e966d69c4}} 
+\index{SchemaValidator@{SchemaValidator}!schemaInSyncWithMetadata@{schemaInSyncWithMetadata}}
+\index{schemaInSyncWithMetadata@{schemaInSyncWithMetadata}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{schemaInSyncWithMetadata()}{schemaInSyncWithMetadata()}}
+{\footnotesize\ttfamily schema\+In\+Sync\+With\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the Database Schema is in sync with the current metadata state.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_a4658880358321c85f8bd91459c724cff}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_a4658880358321c85f8bd91459c724cff}} 
+\index{SchemaValidator@{SchemaValidator}!validateClass@{validateClass}}
+\index{validateClass@{validateClass}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{validateClass()}{validateClass()}}
+{\footnotesize\ttfamily validate\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info}{Class\+Metadata\+Info}}}]{\$class }\end{DoxyParamCaption})}
+
+Validates a single class of the current.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} @psalm-\/return list$<$string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_ab68e6fd07e60007534df308fa5f5231f}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_validator_ab68e6fd07e60007534df308fa5f5231f}} 
+\index{SchemaValidator@{SchemaValidator}!validateMapping@{validateMapping}}
+\index{validateMapping@{validateMapping}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{validateMapping()}{validateMapping()}}
+{\footnotesize\ttfamily validate\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks the internal consistency of all mapping files.
+
+There are several checks that can\textquotesingle{}t be done at runtime or are too expensive, which can be verified with this command. For example\+:
+
+
+\begin{DoxyEnumerate}
+\item Check if a relation with \char`\"{}mapped\+By\char`\"{} is actually connected to that specified field.
+\item Check if \char`\"{}mapped\+By\char`\"{} and \char`\"{}inversed\+By\char`\"{} are consistent to each other.
+\item Check if \char`\"{}referenced\+Column\+Name\char`\"{} attributes are really pointing to primary key columns.
+\end{DoxyEnumerate}
+
+@psalm-\/return array$<$string, list$<$string$>$$>$ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Schema\+Validator.\+php\end{DoxyCompactItemize}

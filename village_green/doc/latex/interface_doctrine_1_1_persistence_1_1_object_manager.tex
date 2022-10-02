@@ -1,0 +1,319 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager}{}\doxysection{Object\+Manager Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_object_manager}\index{ObjectManager@{ObjectManager}}
+Inheritance diagram for Object\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.393939cm]{interface_doctrine_1_1_persistence_1_1_object_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a91a48ac9ca78d9ca4bf8823805cb3ecd}{find}} (\$class\+Name, \$id)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_aa111b92ba07931bfa94a47cc153a3613}{persist}} (\$object)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a89d48b0123089b0388a3a51f43d31b6e}{remove}} (\$object)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a0a554bb6fd0ea37c358fef99c542d3ac}{merge}} (\$object)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a841e25b7c1518109766513626f6d8f32}{clear}} (\$object\+Name=null)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a3a4c002e0cba40017f00c317180d9e5a}{detach}} (\$object)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a9c91dab5941ded9108452fbe5c45a987}{refresh}} (\$object)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{flush}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a22302681d3b3d57c35995ff7d41a2b1a}{get\+Repository}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_abc8d2a5b5db7d7d2719b322cb5d512ab}{get\+Class\+Metadata}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a6e54ed5b5bd5e0d322404783aa7dc43b}{get\+Metadata\+Factory}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a0ea48918c8cc2a87fa520732d7488fd1}{initialize\+Object}} (\$obj)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_adf837891cba2ca9c2d167478db6d0ed5}{contains}} (\$object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract for a Doctrine persistence layer \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} class to implement. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a841e25b7c1518109766513626f6d8f32}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a841e25b7c1518109766513626f6d8f32}} 
+\index{ObjectManager@{ObjectManager}!clear@{clear}}
+\index{clear@{clear}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}\item[{}]{\$object\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Clears the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}. All objects that are currently managed by this \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} become detached.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$object\+Name} & if given, only objects of this type will get detached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_ac0f04085ded836b20df8eee42bf81222}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_ac0f04085ded836b20df8eee42bf81222}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_ac0f04085ded836b20df8eee42bf81222}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a841e25b7c1518109766513626f6d8f32}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_adf837891cba2ca9c2d167478db6d0ed5}\label{interface_doctrine_1_1_persistence_1_1_object_manager_adf837891cba2ca9c2d167478db6d0ed5}} 
+\index{ObjectManager@{ObjectManager}!contains@{contains}}
+\index{contains@{contains}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Checks if the object is part of the current Unit\+Of\+Work and therefore managed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a5edab4843a0bb3410e34a0e99abc07ea}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a5edab4843a0bb3410e34a0e99abc07ea}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a5edab4843a0bb3410e34a0e99abc07ea}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_adf837891cba2ca9c2d167478db6d0ed5}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a3a4c002e0cba40017f00c317180d9e5a}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a3a4c002e0cba40017f00c317180d9e5a}} 
+\index{ObjectManager@{ObjectManager}!detach@{detach}}
+\index{detach@{detach}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily detach (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Detaches an object from the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}, causing a managed object to become detached. Unflushed changes made to the object if any (including removal of the object), will not be synchronized to the database. Objects which previously referenced the detached object will continue to reference it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & The object to detach.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_aca8a125d5fa0f62b99600ebc7d7c0b71}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_aca8a125d5fa0f62b99600ebc7d7c0b71}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_aca8a125d5fa0f62b99600ebc7d7c0b71}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a3a4c002e0cba40017f00c317180d9e5a}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a91a48ac9ca78d9ca4bf8823805cb3ecd}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a91a48ac9ca78d9ca4bf8823805cb3ecd}} 
+\index{ObjectManager@{ObjectManager}!find@{find}}
+\index{find@{find}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily find (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Finds an object by its identifier.
+
+This is just a convenient shortcut for get\+Repository(\$class\+Name)-\/\texorpdfstring{$>$}{>}find(\$id).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The class name of the object to find. \\
+\hline
+mixed & {\em \$id} & The identity of the object to find. @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null The found object. @psalm-\/return T$\vert$null
+\end{DoxyReturn}
+@template T of object 
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a91a48ac9ca78d9ca4bf8823805cb3ecd}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}} 
+\index{ObjectManager@{ObjectManager}!flush@{flush}}
+\index{flush@{flush}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flushes all changes to objects that have been queued up to now to the database. This effectively synchronizes the in-\/memory state of managed objects with the database.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a7751f77b5263bcf940ece6e824a05b38}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_abc8d2a5b5db7d7d2719b322cb5d512ab}\label{interface_doctrine_1_1_persistence_1_1_object_manager_abc8d2a5b5db7d7d2719b322cb5d512ab}} 
+\index{ObjectManager@{ObjectManager}!getClassMetadata@{getClassMetadata}}
+\index{getClassMetadata@{getClassMetadata}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{getClassMetadata()}{getClassMetadata()}}
+{\footnotesize\ttfamily get\+Class\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Returns the Class\+Metadata descriptor for a class.
+
+The class name must be the fully-\/qualified class name without a leading backslash (as it is returned by get\+\_\+class(\$obj)).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Metadata @psalm-\/return Class\+Metadata$<$\+T$>$
+\end{DoxyReturn}
+@template T of object 
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_abc8d2a5b5db7d7d2719b322cb5d512ab}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_abc8d2a5b5db7d7d2719b322cb5d512ab}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_abc8d2a5b5db7d7d2719b322cb5d512ab}{Entity\+Manager}}, \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_abc8d2a5b5db7d7d2719b322cb5d512ab}{Entity\+Manager\+Interface}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_abc8d2a5b5db7d7d2719b322cb5d512ab}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a6e54ed5b5bd5e0d322404783aa7dc43b}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a6e54ed5b5bd5e0d322404783aa7dc43b}} 
+\index{ObjectManager@{ObjectManager}!getMetadataFactory@{getMetadataFactory}}
+\index{getMetadataFactory@{getMetadataFactory}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{getMetadataFactory()}{getMetadataFactory()}}
+{\footnotesize\ttfamily get\+Metadata\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the metadata factory used to gather the metadata of classes.
+
+\begin{DoxyReturn}{Returns}
+Class\+Metadata\+Factory @psalm-\/return Class\+Metadata\+Factory$<$\+Class\+Metadata$<$object$>$$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a6e54ed5b5bd5e0d322404783aa7dc43b}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a6e54ed5b5bd5e0d322404783aa7dc43b}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a6e54ed5b5bd5e0d322404783aa7dc43b}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a6e54ed5b5bd5e0d322404783aa7dc43b}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a22302681d3b3d57c35995ff7d41a2b1a}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a22302681d3b3d57c35995ff7d41a2b1a}} 
+\index{ObjectManager@{ObjectManager}!getRepository@{getRepository}}
+\index{getRepository@{getRepository}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{getRepository()}{getRepository()}}
+{\footnotesize\ttfamily get\+Repository (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Gets the repository for a class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_repository}{Object\+Repository}} @psalm-\/return Object\+Repository$<$\+T$>$
+\end{DoxyReturn}
+@template T 
+
+Implemented in \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a22302681d3b3d57c35995ff7d41a2b1a}{Entity\+Manager\+Interface}}, \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a22302681d3b3d57c35995ff7d41a2b1a}{Object\+Manager\+Decorator}}, \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a795ed40a700c07638666ef80c3572787}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a795ed40a700c07638666ef80c3572787}{Entity\+Manager\+\_\+9a5be93}}, and \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a795ed40a700c07638666ef80c3572787}{Entity\+Manager}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a0ea48918c8cc2a87fa520732d7488fd1}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a0ea48918c8cc2a87fa520732d7488fd1}} 
+\index{ObjectManager@{ObjectManager}!initializeObject@{initializeObject}}
+\index{initializeObject@{initializeObject}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{initializeObject()}{initializeObject()}}
+{\footnotesize\ttfamily initialize\+Object (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Helper method to initialize a lazy loading proxy or persistent collection.
+
+This method is a no-\/op for other objects.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a0ea48918c8cc2a87fa520732d7488fd1}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a0ea48918c8cc2a87fa520732d7488fd1}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a0ea48918c8cc2a87fa520732d7488fd1}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a0ea48918c8cc2a87fa520732d7488fd1}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a0a554bb6fd0ea37c358fef99c542d3ac}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a0a554bb6fd0ea37c358fef99c542d3ac}} 
+\index{ObjectManager@{ObjectManager}!merge@{merge}}
+\index{merge@{merge}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily merge (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Merges the state of a detached object into the persistence context of this \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} and returns the managed copy of the object. The object passed to merge will not become associated/managed with this \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000310}{Deprecated}}]Merge operation is deprecated and will be removed in Persistence 2.\+0. Merging should be part of the business domain of an application rather than a generic operation of \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a9cc56a581aa4e17c4660097c768d07d4}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a9cc56a581aa4e17c4660097c768d07d4}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a9cc56a581aa4e17c4660097c768d07d4}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a0a554bb6fd0ea37c358fef99c542d3ac}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_aa111b92ba07931bfa94a47cc153a3613}\label{interface_doctrine_1_1_persistence_1_1_object_manager_aa111b92ba07931bfa94a47cc153a3613}} 
+\index{ObjectManager@{ObjectManager}!persist@{persist}}
+\index{persist@{persist}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{persist()}{persist()}}
+{\footnotesize\ttfamily persist (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Tells the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} to make an instance managed and persistent.
+
+The object will be entered into the database as a result of the flush operation.
+
+NOTE\+: The persist operation always considers objects that are not yet known to this \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} as NEW. Do not pass detached objects to the persist operation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & The instance to make managed and persistent.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a4544f6dec3a9b84735810574a59fc50c}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a4544f6dec3a9b84735810574a59fc50c}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a4544f6dec3a9b84735810574a59fc50c}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_aa111b92ba07931bfa94a47cc153a3613}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a9c91dab5941ded9108452fbe5c45a987}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a9c91dab5941ded9108452fbe5c45a987}} 
+\index{ObjectManager@{ObjectManager}!refresh@{refresh}}
+\index{refresh@{refresh}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily refresh (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Refreshes the persistent state of an object from the database, overriding any local changes that have not yet been persisted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & The object to refresh.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a8fcb2b1d00763257b45f62f043562150}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a8fcb2b1d00763257b45f62f043562150}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a8fcb2b1d00763257b45f62f043562150}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a9c91dab5941ded9108452fbe5c45a987}{Object\+Manager\+Decorator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_object_manager_a89d48b0123089b0388a3a51f43d31b6e}\label{interface_doctrine_1_1_persistence_1_1_object_manager_a89d48b0123089b0388a3a51f43d31b6e}} 
+\index{ObjectManager@{ObjectManager}!remove@{remove}}
+\index{remove@{remove}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily remove (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Removes an object instance.
+
+A removed object will be removed from the database as a result of the flush operation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & The object instance to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_container_cdfn_k02_1_1_entity_manager__9a5be93_a9ba1bf42939522398e98e21b528ad72b}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_container_v_g55u_ch_1_1_entity_manager__9a5be93_a9ba1bf42939522398e98e21b528ad72b}{Entity\+Manager\+\_\+9a5be93}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_a9ba1bf42939522398e98e21b528ad72b}{Entity\+Manager}}, and \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_object_manager_decorator_a89d48b0123089b0388a3a51f43d31b6e}{Object\+Manager\+Decorator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/Object\+Manager.\+php\end{DoxyCompactItemize}

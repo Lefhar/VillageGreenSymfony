@@ -1,0 +1,125 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory}{}\doxysection{Disconnected\+Metadata\+Factory Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory}\index{DisconnectedMetadataFactory@{DisconnectedMetadataFactory}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a38ea33dde11163765f358f5f10a3bc03}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}} \$registry)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a961eb03ecdbc5b3b85ba5c8f101f4913}{get\+Bundle\+Metadata}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_kernel_1_1_bundle_1_1_bundle_interface}{Bundle\+Interface}} \$bundle)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_ad17da9634d77b2e24ac31f4385fc9c7d}{get\+Class\+Metadata}} (\$class, \$path=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a2b9ad11ed756ddce0743b070e019ef71}{get\+Namespace\+Metadata}} (\$namespace, \$path=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_af85dcbab9dc662b938d029bdeeb4b7ba}{find\+Namespace\+And\+Path\+For\+Metadata}} (\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} \$metadata, \$path=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides methods to access Doctrine entity class metadata for a given bundle, namespace or entity class, for generation purposes 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a38ea33dde11163765f358f5f10a3bc03}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a38ea33dde11163765f358f5f10a3bc03}} 
+\index{DisconnectedMetadataFactory@{DisconnectedMetadataFactory}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DisconnectedMetadataFactory@{DisconnectedMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}}}]{\$registry }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Manager\+Registry & {\em \$registry} & A Manager\+Registry instance \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_af85dcbab9dc662b938d029bdeeb4b7ba}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_af85dcbab9dc662b938d029bdeeb4b7ba}} 
+\index{DisconnectedMetadataFactory@{DisconnectedMetadataFactory}!findNamespaceAndPathForMetadata@{findNamespaceAndPathForMetadata}}
+\index{findNamespaceAndPathForMetadata@{findNamespaceAndPathForMetadata}!DisconnectedMetadataFactory@{DisconnectedMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{findNamespaceAndPathForMetadata()}{findNamespaceAndPathForMetadata()}}
+{\footnotesize\ttfamily find\+Namespace\+And\+Path\+For\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}}}]{\$metadata,  }\item[{}]{\$path = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Find and configure path and namespace for the metadata collection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$path} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & When unable to determine the path. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a961eb03ecdbc5b3b85ba5c8f101f4913}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a961eb03ecdbc5b3b85ba5c8f101f4913}} 
+\index{DisconnectedMetadataFactory@{DisconnectedMetadataFactory}!getBundleMetadata@{getBundleMetadata}}
+\index{getBundleMetadata@{getBundleMetadata}!DisconnectedMetadataFactory@{DisconnectedMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getBundleMetadata()}{getBundleMetadata()}}
+{\footnotesize\ttfamily get\+Bundle\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_kernel_1_1_bundle_1_1_bundle_interface}{Bundle\+Interface}}}]{\$bundle }\end{DoxyParamCaption})}
+
+Gets the metadata of all classes of a bundle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Bundle\+Interface & {\em \$bundle} & A Bundle\+Interface instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} A \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} instance
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & When bundle does not contain mapped entities. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_ad17da9634d77b2e24ac31f4385fc9c7d}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_ad17da9634d77b2e24ac31f4385fc9c7d}} 
+\index{DisconnectedMetadataFactory@{DisconnectedMetadataFactory}!getClassMetadata@{getClassMetadata}}
+\index{getClassMetadata@{getClassMetadata}!DisconnectedMetadataFactory@{DisconnectedMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getClassMetadata()}{getClassMetadata()}}
+{\footnotesize\ttfamily get\+Class\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$path = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets the metadata of a class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & A class name \\
+\hline
+string & {\em \$path} & The path where the class is stored (if known)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} A \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} instance
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Mapping\+Exception} & When class is not valid entity or mapped superclass. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a2b9ad11ed756ddce0743b070e019ef71}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_disconnected_metadata_factory_a2b9ad11ed756ddce0743b070e019ef71}} 
+\index{DisconnectedMetadataFactory@{DisconnectedMetadataFactory}!getNamespaceMetadata@{getNamespaceMetadata}}
+\index{getNamespaceMetadata@{getNamespaceMetadata}!DisconnectedMetadataFactory@{DisconnectedMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getNamespaceMetadata()}{getNamespaceMetadata()}}
+{\footnotesize\ttfamily get\+Namespace\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$namespace,  }\item[{}]{\$path = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets the metadata of all classes of a namespace.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$namespace} & A namespace name \\
+\hline
+string & {\em \$path} & The path where the class is stored (if known)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} A \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_collection}{Class\+Metadata\+Collection}} instance
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & When namespace not contain mapped entities. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Mapping/Disconnected\+Metadata\+Factory.\+php\end{DoxyCompactItemize}

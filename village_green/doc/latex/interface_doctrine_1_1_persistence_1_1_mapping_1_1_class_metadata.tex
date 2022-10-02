@@ -1,0 +1,289 @@
+\hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{}\doxysection{Class\+Metadata Interface Reference}
+\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}\index{ClassMetadata@{ClassMetadata}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a6da3f4f9718ce7343730b457b255b477}{get\+Identifier}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_ac4db91c2eed199072ca9b1f18f70d9f0}{get\+Reflection\+Class}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a445585ef208fc32a156efd6d874a609d}{is\+Identifier}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aeb56cae73edd9c93ec83feb4d0e91e80}{has\+Field}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a57b7c5fc1d10ae833d64ddf9e0ce43d3}{has\+Association}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a8126d19544ab9c7af460024e77572af4}{is\+Single\+Valued\+Association}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a6f7fe4420c909171e8fa8600955fb112}{is\+Collection\+Valued\+Association}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a08bac5379f5bd14fd3028d6f827765e6}{get\+Field\+Names}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a4f59d5b1f2ec6f39a4b326304aa10a10}{get\+Identifier\+Field\+Names}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aa6d4a912f8974b19f63a0402dfa1924c}{get\+Association\+Names}} ()
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a9275e42d578aefabb6d796c6af740237}{get\+Type\+Of\+Field}} (\$field\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_abff1052bb18abf3613da8d78bad0bcb6}{get\+Association\+Target\+Class}} (\$assoc\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aa9287492ded58db0e9c972dd2b649f08}{is\+Association\+Inverse\+Side}} (\$assoc\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a2edf71e7a687007f7c3a61d93e22a895}{get\+Association\+Mapped\+By\+Target\+Field}} (\$assoc\+Name)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a12b469862800889ee41779ae07d3642b}{get\+Identifier\+Values}} (\$object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contract for a Doctrine persistence layer \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} class to implement.
+
+@template-\/covariant T of object \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2persistence_2lib_2_d4d2cf37f89b45d6d3034e685ad2d9e4d}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/persistence/lib/\+Doctrine/\+Common/\+Persistence/\+Persistent\+Object.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a2edf71e7a687007f7c3a61d93e22a895}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a2edf71e7a687007f7c3a61d93e22a895}} 
+\index{ClassMetadata@{ClassMetadata}!getAssociationMappedByTargetField@{getAssociationMappedByTargetField}}
+\index{getAssociationMappedByTargetField@{getAssociationMappedByTargetField}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getAssociationMappedByTargetField()}{getAssociationMappedByTargetField()}}
+{\footnotesize\ttfamily get\+Association\+Mapped\+By\+Target\+Field (\begin{DoxyParamCaption}\item[{}]{\$assoc\+Name }\end{DoxyParamCaption})}
+
+Returns the target field of the owning side of the association.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$assoc\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aa6d4a912f8974b19f63a0402dfa1924c}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aa6d4a912f8974b19f63a0402dfa1924c}} 
+\index{ClassMetadata@{ClassMetadata}!getAssociationNames@{getAssociationNames}}
+\index{getAssociationNames@{getAssociationNames}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getAssociationNames()}{getAssociationNames()}}
+{\footnotesize\ttfamily get\+Association\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a numerically indexed list of association names of this persistent class.
+
+This array includes identifier associations if present on this class.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_abff1052bb18abf3613da8d78bad0bcb6}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_abff1052bb18abf3613da8d78bad0bcb6}} 
+\index{ClassMetadata@{ClassMetadata}!getAssociationTargetClass@{getAssociationTargetClass}}
+\index{getAssociationTargetClass@{getAssociationTargetClass}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getAssociationTargetClass()}{getAssociationTargetClass()}}
+{\footnotesize\ttfamily get\+Association\+Target\+Class (\begin{DoxyParamCaption}\item[{}]{\$assoc\+Name }\end{DoxyParamCaption})}
+
+Returns the target class name of the given association.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$assoc\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null @psalm-\/return class-\/string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a08bac5379f5bd14fd3028d6f827765e6}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a08bac5379f5bd14fd3028d6f827765e6}} 
+\index{ClassMetadata@{ClassMetadata}!getFieldNames@{getFieldNames}}
+\index{getFieldNames@{getFieldNames}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getFieldNames()}{getFieldNames()}}
+{\footnotesize\ttfamily get\+Field\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A numerically indexed list of field names of this persistent class.
+
+This array includes identifier fields if present on this class.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a6da3f4f9718ce7343730b457b255b477}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a6da3f4f9718ce7343730b457b255b477}} 
+\index{ClassMetadata@{ClassMetadata}!getIdentifier@{getIdentifier}}
+\index{getIdentifier@{getIdentifier}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getIdentifier()}{getIdentifier()}}
+{\footnotesize\ttfamily get\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the mapped identifier field name.
+
+The returned structure is an array of the identifier field names.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a4f59d5b1f2ec6f39a4b326304aa10a10}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a4f59d5b1f2ec6f39a4b326304aa10a10}} 
+\index{ClassMetadata@{ClassMetadata}!getIdentifierFieldNames@{getIdentifierFieldNames}}
+\index{getIdentifierFieldNames@{getIdentifierFieldNames}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getIdentifierFieldNames()}{getIdentifierFieldNames()}}
+{\footnotesize\ttfamily get\+Identifier\+Field\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an array of identifier field names numerically indexed.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a12b469862800889ee41779ae07d3642b}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a12b469862800889ee41779ae07d3642b}} 
+\index{ClassMetadata@{ClassMetadata}!getIdentifierValues@{getIdentifierValues}}
+\index{getIdentifierValues@{getIdentifierValues}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getIdentifierValues()}{getIdentifierValues()}}
+{\footnotesize\ttfamily get\+Identifier\+Values (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Returns the identifier of this object as an array with field name as key.
+
+Has to return an empty array if no identifier isset.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a3d0963e68bb313b163a73f2803c64600}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a3d0963e68bb313b163a73f2803c64600}} 
+\index{ClassMetadata@{ClassMetadata}!getName@{getName}}
+\index{getName@{getName}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the fully-\/qualified class name of this persistent class.
+
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_ac4db91c2eed199072ca9b1f18f70d9f0}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_ac4db91c2eed199072ca9b1f18f70d9f0}} 
+\index{ClassMetadata@{ClassMetadata}!getReflectionClass@{getReflectionClass}}
+\index{getReflectionClass@{getReflectionClass}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getReflectionClass()}{getReflectionClass()}}
+{\footnotesize\ttfamily get\+Reflection\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Reflection\+Class instance for this mapped class.
+
+\begin{DoxyReturn}{Returns}
+Reflection\+Class$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a9275e42d578aefabb6d796c6af740237}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a9275e42d578aefabb6d796c6af740237}} 
+\index{ClassMetadata@{ClassMetadata}!getTypeOfField@{getTypeOfField}}
+\index{getTypeOfField@{getTypeOfField}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{getTypeOfField()}{getTypeOfField()}}
+{\footnotesize\ttfamily get\+Type\+Of\+Field (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Returns a type name of this field.
+
+This type names can be implementation specific but should at least include the php types\+: integer, string, boolean, float/double, datetime.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a57b7c5fc1d10ae833d64ddf9e0ce43d3}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a57b7c5fc1d10ae833d64ddf9e0ce43d3}} 
+\index{ClassMetadata@{ClassMetadata}!hasAssociation@{hasAssociation}}
+\index{hasAssociation@{hasAssociation}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{hasAssociation()}{hasAssociation()}}
+{\footnotesize\ttfamily has\+Association (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Checks if the given field is a mapped association for this class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aeb56cae73edd9c93ec83feb4d0e91e80}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aeb56cae73edd9c93ec83feb4d0e91e80}} 
+\index{ClassMetadata@{ClassMetadata}!hasField@{hasField}}
+\index{hasField@{hasField}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{hasField()}{hasField()}}
+{\footnotesize\ttfamily has\+Field (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Checks if the given field is a mapped property for this class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aa9287492ded58db0e9c972dd2b649f08}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_aa9287492ded58db0e9c972dd2b649f08}} 
+\index{ClassMetadata@{ClassMetadata}!isAssociationInverseSide@{isAssociationInverseSide}}
+\index{isAssociationInverseSide@{isAssociationInverseSide}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{isAssociationInverseSide()}{isAssociationInverseSide()}}
+{\footnotesize\ttfamily is\+Association\+Inverse\+Side (\begin{DoxyParamCaption}\item[{}]{\$assoc\+Name }\end{DoxyParamCaption})}
+
+Checks if the association is the inverse side of a bidirectional association.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$assoc\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a6f7fe4420c909171e8fa8600955fb112}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a6f7fe4420c909171e8fa8600955fb112}} 
+\index{ClassMetadata@{ClassMetadata}!isCollectionValuedAssociation@{isCollectionValuedAssociation}}
+\index{isCollectionValuedAssociation@{isCollectionValuedAssociation}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{isCollectionValuedAssociation()}{isCollectionValuedAssociation()}}
+{\footnotesize\ttfamily is\+Collection\+Valued\+Association (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Checks if the given field is a mapped collection valued association for this class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a445585ef208fc32a156efd6d874a609d}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a445585ef208fc32a156efd6d874a609d}} 
+\index{ClassMetadata@{ClassMetadata}!isIdentifier@{isIdentifier}}
+\index{isIdentifier@{isIdentifier}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{isIdentifier()}{isIdentifier()}}
+{\footnotesize\ttfamily is\+Identifier (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Checks if the given field name is a mapped identifier for this class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a8126d19544ab9c7af460024e77572af4}\label{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata_a8126d19544ab9c7af460024e77572af4}} 
+\index{ClassMetadata@{ClassMetadata}!isSingleValuedAssociation@{isSingleValuedAssociation}}
+\index{isSingleValuedAssociation@{isSingleValuedAssociation}!ClassMetadata@{ClassMetadata}}
+\doxysubsubsection{\texorpdfstring{isSingleValuedAssociation()}{isSingleValuedAssociation()}}
+{\footnotesize\ttfamily is\+Single\+Valued\+Association (\begin{DoxyParamCaption}\item[{}]{\$field\+Name }\end{DoxyParamCaption})}
+
+Checks if the given field is a mapped single valued association for this class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/Class\+Metadata.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{class_knp_1_1_snappy_1_1_pdf}{}\doxysection{Pdf Class Reference}
+\label{class_knp_1_1_snappy_1_1_pdf}\index{Pdf@{Pdf}}
+Inheritance diagram for Pdf\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_knp_1_1_snappy_1_1_pdf}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_a71fa40c250d375ec9d257e1a66b696c9}{\+\_\+\+\_\+construct}} (\$binary=null, array \$options=\mbox{[}$\,$\mbox{]}, array \$env=null)
+\item 
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_a14bb78ed786ed75dfa1ac0f37d6e23e7}{generate}} (\$input, \$output, array \$options=\mbox{[}$\,$\mbox{]}, \$overwrite=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_a32ca23531f2928a994fc64f75da5e8bd}{handle\+Options}} (array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_ab81ed4ea2af338bbeb79cc0b6dd55020}{is\+Option\+Url}} (\$option)
+\item 
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_a9be5e0bdb5720efed6ddb6426c5c16ee}{configure}} ()
+\item 
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_pdf_ab02ea2c84c8fe7e55c3e276b689c3ed7}{set\+Options\+With\+Content\+Check}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_a68950017b109672441bff2f35e0300b3}\label{class_knp_1_1_snappy_1_1_pdf_a68950017b109672441bff2f35e0300b3}} 
+{\bfseries \$options\+With\+Content\+Check} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Use this class to transform a html/a url to a pdf.
+
+\begin{DoxyAuthor}{Author}
+Matthieu Bontemps \href{mailto:matthieu.bontemps@knplabs.com}{\texttt{ matthieu.\+bontemps@knplabs.\+com}} 
+
+Antoine Hérault \href{mailto:antoine.herault@knplabs.com}{\texttt{ antoine.\+herault@knplabs.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_a71fa40c250d375ec9d257e1a66b696c9}\label{class_knp_1_1_snappy_1_1_pdf_a71fa40c250d375ec9d257e1a66b696c9}} 
+\index{Pdf@{Pdf}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Pdf@{Pdf}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$binary = {\ttfamily null},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$env = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{
+\begin{DoxyParams}[1]{Parameters}
+null | string & {\em \$binary} & \\
+\hline
+array & {\em \$options} & \\
+\hline
+null | array & {\em \$env} & \\
+\hline
+\end{DoxyParams}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a8cf64de9a6fed2111c48f7421eb81fbf}{Abstract\+Generator}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_a9be5e0bdb5720efed6ddb6426c5c16ee}\label{class_knp_1_1_snappy_1_1_pdf_a9be5e0bdb5720efed6ddb6426c5c16ee}} 
+\index{Pdf@{Pdf}!configure@{configure}}
+\index{configure@{configure}!Pdf@{Pdf}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{This method must configure the media options.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a8b9858cd6ce5ecdbb134d660b9bc4146}{Abstract\+Generator\+::add\+Option()}}
+\end{DoxySeeAlso}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a9be5e0bdb5720efed6ddb6426c5c16ee}{Abstract\+Generator}}.
+
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_a14bb78ed786ed75dfa1ac0f37d6e23e7}\label{class_knp_1_1_snappy_1_1_pdf_a14bb78ed786ed75dfa1ac0f37d6e23e7}} 
+\index{Pdf@{Pdf}!generate@{generate}}
+\index{generate@{generate}!Pdf@{Pdf}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily generate (\begin{DoxyParamCaption}\item[{}]{\$input,  }\item[{}]{\$output,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\{\{Generates the output media file from the specified input HTML file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$input} & The input HTML filename or URL \\
+\hline
+string & {\em \$output} & The output media filename \\
+\hline
+array & {\em \$options} & An array of options for this generation only \\
+\hline
+bool & {\em \$overwrite} & Overwrite the file if it exists. If not, throw a File\+Already\+Exists\+Exception\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_knp_1_1_snappy_1_1_abstract_generator_a14bb78ed786ed75dfa1ac0f37d6e23e7}{Abstract\+Generator}}.
+
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_a32ca23531f2928a994fc64f75da5e8bd}\label{class_knp_1_1_snappy_1_1_pdf_a32ca23531f2928a994fc64f75da5e8bd}} 
+\index{Pdf@{Pdf}!handleOptions@{handleOptions}}
+\index{handleOptions@{handleOptions}!Pdf@{Pdf}}
+\doxysubsubsection{\texorpdfstring{handleOptions()}{handleOptions()}}
+{\footnotesize\ttfamily handle\+Options (\begin{DoxyParamCaption}\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Handle options to transform HTML strings into temporary files containing HTML.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array \$options Transformed options 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_ab81ed4ea2af338bbeb79cc0b6dd55020}\label{class_knp_1_1_snappy_1_1_pdf_ab81ed4ea2af338bbeb79cc0b6dd55020}} 
+\index{Pdf@{Pdf}!isOptionUrl@{isOptionUrl}}
+\index{isOptionUrl@{isOptionUrl}!Pdf@{Pdf}}
+\doxysubsubsection{\texorpdfstring{isOptionUrl()}{isOptionUrl()}}
+{\footnotesize\ttfamily is\+Option\+Url (\begin{DoxyParamCaption}\item[{}]{\$option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert option content or url to file if it is needed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$option} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_knp_1_1_snappy_1_1_pdf_ab02ea2c84c8fe7e55c3e276b689c3ed7}\label{class_knp_1_1_snappy_1_1_pdf_ab02ea2c84c8fe7e55c3e276b689c3ed7}} 
+\index{Pdf@{Pdf}!setOptionsWithContentCheck@{setOptionsWithContentCheck}}
+\index{setOptionsWithContentCheck@{setOptionsWithContentCheck}!Pdf@{Pdf}}
+\doxysubsubsection{\texorpdfstring{setOptionsWithContentCheck()}{setOptionsWithContentCheck()}}
+{\footnotesize\ttfamily set\+Options\+With\+Content\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Array with options which require to store the content of the option before passing it to wkhtmltopdf.
+
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/knplabs/knp-\/snappy/src/\+Knp/\+Snappy/Pdf.\+php\end{DoxyCompactItemize}

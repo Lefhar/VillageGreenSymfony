@@ -1,0 +1,117 @@
+\hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like}{}\doxysection{Class\+Like Class Reference}
+\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like}\index{ClassLike@{ClassLike}}
+Inheritance diagram for Class\+Like\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_php_parser_1_1_node_1_1_stmt_1_1_class_like}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a7e996e67bffb301c798ef1ab0009e33c}{get\+Trait\+Uses}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a37357ff7fe8d1c1ea764fa1465637543}{get\+Constants}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ad92c14b6c86304d3f1fb86b2936d3408}{get\+Properties}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a22f3453fc843f7acc55d6567c464617c}{get\+Property}} (string \$name)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ab8fcebfba8c498f2190941f7ebf62da8}{get\+Methods}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a6a9a7d681053abf13ba7c973218972ed}{get\+Method}} (string \$name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ab2fc40d43824ea3e1ce5d86dee0d763b}} 
+{\bfseries \$name}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a2c2c15e99eca72b05beb20ae91729fda}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a2c2c15e99eca72b05beb20ae91729fda}} 
+{\bfseries \$stmts}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a68b22277a61a41a786be5be18177f514}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a68b22277a61a41a786be5be18177f514}} 
+{\bfseries \$attr\+Groups}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a3e7558f3b67c20378c464fde6a718580}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a3e7558f3b67c20378c464fde6a718580}} 
+{\bfseries \$namespaced\+Name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a37357ff7fe8d1c1ea764fa1465637543}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a37357ff7fe8d1c1ea764fa1465637543}} 
+\index{ClassLike@{ClassLike}!getConstants@{getConstants}}
+\index{getConstants@{getConstants}!ClassLike@{ClassLike}}
+\doxysubsubsection{\texorpdfstring{getConstants()}{getConstants()}}
+{\footnotesize\ttfamily get\+Constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_const}{Class\+Const}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a6a9a7d681053abf13ba7c973218972ed}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a6a9a7d681053abf13ba7c973218972ed}} 
+\index{ClassLike@{ClassLike}!getMethod@{getMethod}}
+\index{getMethod@{getMethod}!ClassLike@{ClassLike}}
+\doxysubsubsection{\texorpdfstring{getMethod()}{getMethod()}}
+{\footnotesize\ttfamily get\+Method (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Gets method with the given name defined directly in this class/interface/trait.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} of the method (compared case-\/insensitively)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Method$\vert$null Method node or null if the method does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ab8fcebfba8c498f2190941f7ebf62da8}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ab8fcebfba8c498f2190941f7ebf62da8}} 
+\index{ClassLike@{ClassLike}!getMethods@{getMethods}}
+\index{getMethods@{getMethods}!ClassLike@{ClassLike}}
+\doxysubsubsection{\texorpdfstring{getMethods()}{getMethods()}}
+{\footnotesize\ttfamily get\+Methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all methods defined directly in this class/interface/trait
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_class_method}{Class\+Method}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ad92c14b6c86304d3f1fb86b2936d3408}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_ad92c14b6c86304d3f1fb86b2936d3408}} 
+\index{ClassLike@{ClassLike}!getProperties@{getProperties}}
+\index{getProperties@{getProperties}!ClassLike@{ClassLike}}
+\doxysubsubsection{\texorpdfstring{getProperties()}{getProperties()}}
+{\footnotesize\ttfamily get\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_property}{Property}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a22f3453fc843f7acc55d6567c464617c}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a22f3453fc843f7acc55d6567c464617c}} 
+\index{ClassLike@{ClassLike}!getProperty@{getProperty}}
+\index{getProperty@{getProperty}!ClassLike@{ClassLike}}
+\doxysubsubsection{\texorpdfstring{getProperty()}{getProperty()}}
+{\footnotesize\ttfamily get\+Property (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Gets property with the given name defined directly in this class/interface/trait.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} of the property\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Property$\vert$null \mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_property}{Property}} node or null if the property does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a7e996e67bffb301c798ef1ab0009e33c}\label{class_php_parser_1_1_node_1_1_stmt_1_1_class_like_a7e996e67bffb301c798ef1ab0009e33c}} 
+\index{ClassLike@{ClassLike}!getTraitUses@{getTraitUses}}
+\index{getTraitUses@{getTraitUses}!ClassLike@{ClassLike}}
+\doxysubsubsection{\texorpdfstring{getTraitUses()}{getTraitUses()}}
+{\footnotesize\ttfamily get\+Trait\+Uses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_trait_use}{Trait\+Use}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Stmt/Class\+Like.\+php\end{DoxyCompactItemize}

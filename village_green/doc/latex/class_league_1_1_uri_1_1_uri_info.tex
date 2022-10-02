@@ -1,0 +1,110 @@
+\hypertarget{class_league_1_1_uri_1_1_uri_info}{}\doxysection{Uri\+Info Class Reference}
+\label{class_league_1_1_uri_1_1_uri_info}\index{UriInfo@{UriInfo}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_info_a08346db4c13b7e91beef653bbd51b5db}{is\+Absolute}} (\$uri)
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_info_a24a08b8c2da1c40987af8f63f41280b4}{is\+Network\+Path}} (\$uri)
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_info_a9253c536a2dd2cee527b788dfad1b654}{is\+Absolute\+Path}} (\$uri)
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_info_a00f54875be04cf2bd837e467a698d271}{is\+Relative\+Path}} (\$uri)
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_info_a861febeb4b6dd8c09dc67591ffd15c22}{is\+Same\+Document}} (\$uri, \$base\+\_\+uri)
+\item 
+static \mbox{\hyperlink{class_league_1_1_uri_1_1_uri_info_ac3f43d187d04b1a510b924376a73606a}{get\+Origin}} (\$uri)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_info_ac3f43d187d04b1a510b924376a73606a}\label{class_league_1_1_uri_1_1_uri_info_ac3f43d187d04b1a510b924376a73606a}} 
+\index{UriInfo@{UriInfo}!getOrigin@{getOrigin}}
+\index{getOrigin@{getOrigin}!UriInfo@{UriInfo}}
+\doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
+{\footnotesize\ttfamily static get\+Origin (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the URI origin property as defined by WHATWG URL living standard.
+
+\{\begin{DoxySeeAlso}{See also}
+\href{https://url.spec.whatwg.org/\#origin}{\texttt{ https\+://url.\+spec.\+whatwg.\+org/\#origin}}\}
+\end{DoxySeeAlso}
+For URI without a special scheme the method returns null For URI with the file scheme the method will return null (as this is left to the implementation decision) For URI with a special scheme the method returns the scheme followed by its authority (without the userinfo part)
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_info_a08346db4c13b7e91beef653bbd51b5db}\label{class_league_1_1_uri_1_1_uri_info_a08346db4c13b7e91beef653bbd51b5db}} 
+\index{UriInfo@{UriInfo}!isAbsolute@{isAbsolute}}
+\index{isAbsolute@{isAbsolute}!UriInfo@{UriInfo}}
+\doxysubsubsection{\texorpdfstring{isAbsolute()}{isAbsolute()}}
+{\footnotesize\ttfamily static is\+Absolute (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Tell whether the URI represents an absolute URI.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_info_a9253c536a2dd2cee527b788dfad1b654}\label{class_league_1_1_uri_1_1_uri_info_a9253c536a2dd2cee527b788dfad1b654}} 
+\index{UriInfo@{UriInfo}!isAbsolutePath@{isAbsolutePath}}
+\index{isAbsolutePath@{isAbsolutePath}!UriInfo@{UriInfo}}
+\doxysubsubsection{\texorpdfstring{isAbsolutePath()}{isAbsolutePath()}}
+{\footnotesize\ttfamily static is\+Absolute\+Path (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Tell whether the URI represents an absolute path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_info_a24a08b8c2da1c40987af8f63f41280b4}\label{class_league_1_1_uri_1_1_uri_info_a24a08b8c2da1c40987af8f63f41280b4}} 
+\index{UriInfo@{UriInfo}!isNetworkPath@{isNetworkPath}}
+\index{isNetworkPath@{isNetworkPath}!UriInfo@{UriInfo}}
+\doxysubsubsection{\texorpdfstring{isNetworkPath()}{isNetworkPath()}}
+{\footnotesize\ttfamily static is\+Network\+Path (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Tell whether the URI represents a network path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_info_a00f54875be04cf2bd837e467a698d271}\label{class_league_1_1_uri_1_1_uri_info_a00f54875be04cf2bd837e467a698d271}} 
+\index{UriInfo@{UriInfo}!isRelativePath@{isRelativePath}}
+\index{isRelativePath@{isRelativePath}!UriInfo@{UriInfo}}
+\doxysubsubsection{\texorpdfstring{isRelativePath()}{isRelativePath()}}
+{\footnotesize\ttfamily static is\+Relative\+Path (\begin{DoxyParamCaption}\item[{}]{\$uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Tell whether the URI represents a relative path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_league_1_1_uri_1_1_uri_info_a861febeb4b6dd8c09dc67591ffd15c22}\label{class_league_1_1_uri_1_1_uri_info_a861febeb4b6dd8c09dc67591ffd15c22}} 
+\index{UriInfo@{UriInfo}!isSameDocument@{isSameDocument}}
+\index{isSameDocument@{isSameDocument}!UriInfo@{UriInfo}}
+\doxysubsubsection{\texorpdfstring{isSameDocument()}{isSameDocument()}}
+{\footnotesize\ttfamily static is\+Same\+Document (\begin{DoxyParamCaption}\item[{}]{\$uri,  }\item[{}]{\$base\+\_\+uri }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Tell whether both URI refers to the same document.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$uri} & \\
+\hline
+Psr7\+Uri\+Interface | Uri\+Interface & {\em \$base\+\_\+uri} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/league/uri/src/Uri\+Info.\+php\end{DoxyCompactItemize}

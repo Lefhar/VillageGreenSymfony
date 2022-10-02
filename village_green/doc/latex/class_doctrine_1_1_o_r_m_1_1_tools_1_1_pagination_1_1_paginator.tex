@@ -1,0 +1,125 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator}{}\doxysection{Paginator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator}\index{Paginator@{Paginator}}
+Inheritance diagram for Paginator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a757cfa2f5a75bc5ea193e1a906278797}{\+\_\+\+\_\+construct}} (\$query, \$fetch\+Join\+Collection=true)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a55f162785567258fe5138af282e588c2}{get\+Query}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a35449bab5a872941f46b32437edf9043}{get\+Fetch\+Join\+Collection}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a08e4eec96d3feefea9a020cc8d13b503}{get\+Use\+Output\+Walkers}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a53567aa180fac993b99b143f3c7b3fbf}{set\+Use\+Output\+Walkers}} (\$use\+Output\+Walkers)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a7a9f937c2958e6f4dd7b030f86fb70b7}{get\+Iterator}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The paginator can handle various complex scenarios with DQL.
+
+@template T 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a757cfa2f5a75bc5ea193e1a906278797}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a757cfa2f5a75bc5ea193e1a906278797}} 
+\index{Paginator@{Paginator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$fetch\+Join\+Collection = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} | \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_builder}{Query\+Builder}} & {\em \$query} & A Doctrine ORM query or query builder. \\
+\hline
+bool & {\em \$fetch\+Join\+Collection} & Whether the query joins a collection (true by default). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{Paginator@{Paginator}!count@{count}}
+\index{count@{count}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a35449bab5a872941f46b32437edf9043}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a35449bab5a872941f46b32437edf9043}} 
+\index{Paginator@{Paginator}!getFetchJoinCollection@{getFetchJoinCollection}}
+\index{getFetchJoinCollection@{getFetchJoinCollection}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{getFetchJoinCollection()}{getFetchJoinCollection()}}
+{\footnotesize\ttfamily get\+Fetch\+Join\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether the query joins a collection.
+
+\begin{DoxyReturn}{Returns}
+bool Whether the query joins a collection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a7a9f937c2958e6f4dd7b030f86fb70b7}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a7a9f937c2958e6f4dd7b030f86fb70b7}} 
+\index{Paginator@{Paginator}!getIterator@{getIterator}}
+\index{getIterator@{getIterator}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{getIterator()}{getIterator()}}
+{\footnotesize\ttfamily get\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\}
+
+\begin{DoxyReturn}{Returns}
+Array\+Iterator @psalm-\/return Array\+Iterator\texorpdfstring{$<$}{<}array-\/key, T\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a55f162785567258fe5138af282e588c2}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a55f162785567258fe5138af282e588c2}} 
+\index{Paginator@{Paginator}!getQuery@{getQuery}}
+\index{getQuery@{getQuery}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{getQuery()}{getQuery()}}
+{\footnotesize\ttfamily get\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the query.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a08e4eec96d3feefea9a020cc8d13b503}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a08e4eec96d3feefea9a020cc8d13b503}} 
+\index{Paginator@{Paginator}!getUseOutputWalkers@{getUseOutputWalkers}}
+\index{getUseOutputWalkers@{getUseOutputWalkers}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{getUseOutputWalkers()}{getUseOutputWalkers()}}
+{\footnotesize\ttfamily get\+Use\+Output\+Walkers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether the paginator will use an output walker.
+
+\begin{DoxyReturn}{Returns}
+bool$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a53567aa180fac993b99b143f3c7b3fbf}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_paginator_a53567aa180fac993b99b143f3c7b3fbf}} 
+\index{Paginator@{Paginator}!setUseOutputWalkers@{setUseOutputWalkers}}
+\index{setUseOutputWalkers@{setUseOutputWalkers}!Paginator@{Paginator}}
+\doxysubsubsection{\texorpdfstring{setUseOutputWalkers()}{setUseOutputWalkers()}}
+{\footnotesize\ttfamily set\+Use\+Output\+Walkers (\begin{DoxyParamCaption}\item[{}]{\$use\+Output\+Walkers }\end{DoxyParamCaption})}
+
+Sets whether the paginator will use an output walker.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool | null & {\em \$use\+Output\+Walkers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this @psalm-\/return static$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Pagination/Paginator.\+php\end{DoxyCompactItemize}

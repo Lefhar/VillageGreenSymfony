@@ -1,0 +1,102 @@
+\hypertarget{class_monolog_1_1_handler_1_1_error_log_handler}{}\doxysection{Error\+Log\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_error_log_handler}\index{ErrorLogHandler@{ErrorLogHandler}}
+Inheritance diagram for Error\+Log\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_error_log_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_error_log_handler_a2865cb1b462fc9d53e0f70f7708c7b7b}{\+\_\+\+\_\+construct}} (int \$message\+Type=self\+::\+OPERATING\+\_\+\+SYSTEM, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, bool \$expand\+Newlines=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_handler_1_1_error_log_handler_a3a3e0de455806b0f6512b4937e99f89b}{get\+Available\+Types}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_a823b1530dc1c1c866d40521d937360e1}\label{class_monolog_1_1_handler_1_1_error_log_handler_a823b1530dc1c1c866d40521d937360e1}} 
+const {\bfseries OPERATING\+\_\+\+SYSTEM} = 0
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_a0e5222ed7a310d2aac620a9a171bd22b}\label{class_monolog_1_1_handler_1_1_error_log_handler_a0e5222ed7a310d2aac620a9a171bd22b}} 
+const {\bfseries SAPI} = 4
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_error_log_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_error_log_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_aa1d20926fdd74e575de6e11581c0404a}\label{class_monolog_1_1_handler_1_1_error_log_handler_aa1d20926fdd74e575de6e11581c0404a}} 
+{\bfseries \$message\+Type}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_a7dcf340c4d089f092ac6bcbe0365f00e}\label{class_monolog_1_1_handler_1_1_error_log_handler_a7dcf340c4d089f092ac6bcbe0365f00e}} 
+{\bfseries \$expand\+Newlines}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores to PHP error\+\_\+log() handler.
+
+\begin{DoxyAuthor}{Author}
+Elan Ruusamäe \href{mailto:glen@delfi.ee}{\texttt{ glen@delfi.\+ee}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_a2865cb1b462fc9d53e0f70f7708c7b7b}\label{class_monolog_1_1_handler_1_1_error_log_handler_a2865cb1b462fc9d53e0f70f7708c7b7b}} 
+\index{ErrorLogHandler@{ErrorLogHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ErrorLogHandler@{ErrorLogHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$message\+Type = {\ttfamily self\+:\+:OPERATING\+\_\+SYSTEM},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{bool}]{\$expand\+Newlines = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$message\+Type} & Says where the error should go. \\
+\hline
+bool & {\em \$expand\+Newlines} & If set to true, newlines in the message will be expanded to be take multiple log entries \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_a3a3e0de455806b0f6512b4937e99f89b}\label{class_monolog_1_1_handler_1_1_error_log_handler_a3a3e0de455806b0f6512b4937e99f89b}} 
+\index{ErrorLogHandler@{ErrorLogHandler}!getAvailableTypes@{getAvailableTypes}}
+\index{getAvailableTypes@{getAvailableTypes}!ErrorLogHandler@{ErrorLogHandler}}
+\doxysubsubsection{\texorpdfstring{getAvailableTypes()}{getAvailableTypes()}}
+{\footnotesize\ttfamily static get\+Available\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} With all available types 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_error_log_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{ErrorLogHandler@{ErrorLogHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!ErrorLogHandler@{ErrorLogHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_error_log_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_error_log_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{ErrorLogHandler@{ErrorLogHandler}!write@{write}}
+\index{write@{write}!ErrorLogHandler@{ErrorLogHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Error\+Log\+Handler.\+php\end{DoxyCompactItemize}

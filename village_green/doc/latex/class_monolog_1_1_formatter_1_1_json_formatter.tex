@@ -1,0 +1,209 @@
+\hypertarget{class_monolog_1_1_formatter_1_1_json_formatter}{}\doxysection{Json\+Formatter Class Reference}
+\label{class_monolog_1_1_formatter_1_1_json_formatter}\index{JsonFormatter@{JsonFormatter}}
+Inheritance diagram for Json\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_monolog_1_1_formatter_1_1_json_formatter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a9e471bc62232661855385724b178872b}{\+\_\+\+\_\+construct}} (int \$batch\+Mode=self\+::\+BATCH\+\_\+\+MODE\+\_\+\+JSON, bool \$append\+Newline=true, bool \$ignore\+Empty\+Context\+And\+Extra=false)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a2759a45ea6bb700b3cfc92fbb05c704f}{get\+Batch\+Mode}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_ac5efb1655118072599b1b67037157b9c}{is\+Appending\+Newlines}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{format}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a11f3cde7544eac9e23b0517d513a362b}{format\+Batch}} (array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a4c674fde9b5b24165af8a4dfe66e2e8e}{include\+Stacktraces}} (bool \$include=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a9b95b6bb273ceef96afb33576da48cef}\label{class_monolog_1_1_formatter_1_1_json_formatter_a9b95b6bb273ceef96afb33576da48cef}} 
+const {\bfseries BATCH\+\_\+\+MODE\+\_\+\+JSON} = 1
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a0b6c5b9b0e730593fb7a943ab8f1afd8}\label{class_monolog_1_1_formatter_1_1_json_formatter_a0b6c5b9b0e730593fb7a943ab8f1afd8}} 
+const {\bfseries BATCH\+\_\+\+MODE\+\_\+\+NEWLINES} = 2
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_aeb10f4e132322833888b31afd3d79e67}{format\+Batch\+Json}} (array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a2d8efb0cabd0a4ff0180260a6e6634c2}{format\+Batch\+Newlines}} (array \$records)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a2d4d3690b559d4e719a6c3cf7b0c3660}{normalize}} (\$data, int \$depth=0)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_formatter_1_1_json_formatter_a5e6a2c0909a65cbc711a38ece36c8190}{normalize\+Exception}} (Throwable \$e, int \$depth=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a38f7a719c74e75d06a45cd5fd6d4e08a}\label{class_monolog_1_1_formatter_1_1_json_formatter_a38f7a719c74e75d06a45cd5fd6d4e08a}} 
+{\bfseries \$batch\+Mode}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a64d4afc37afe28e24c6d1af8837fc0ed}\label{class_monolog_1_1_formatter_1_1_json_formatter_a64d4afc37afe28e24c6d1af8837fc0ed}} 
+{\bfseries \$append\+Newline}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a5df239c10a9b041e63270e59d27c81af}\label{class_monolog_1_1_formatter_1_1_json_formatter_a5df239c10a9b041e63270e59d27c81af}} 
+{\bfseries \$ignore\+Empty\+Context\+And\+Extra}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_accd58096760893ad599b2ec63ca29ecc}\label{class_monolog_1_1_formatter_1_1_json_formatter_accd58096760893ad599b2ec63ca29ecc}} 
+{\bfseries \$include\+Stacktraces} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encodes whatever record data is passed to it as json
+
+This can be useful to log to databases or remote APIs
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a9e471bc62232661855385724b178872b}\label{class_monolog_1_1_formatter_1_1_json_formatter_a9e471bc62232661855385724b178872b}} 
+\index{JsonFormatter@{JsonFormatter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$batch\+Mode = {\ttfamily self\+:\+:BATCH\+\_\+MODE\+\_\+JSON},  }\item[{bool}]{\$append\+Newline = {\ttfamily true},  }\item[{bool}]{\$ignore\+Empty\+Context\+And\+Extra = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em self\+::\+BATCH\+\_\+\+MODE\+\_\+$\ast$} & \$batch\+Mode \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}\label{class_monolog_1_1_formatter_1_1_json_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}} 
+\index{JsonFormatter@{JsonFormatter}!format@{format}}
+\index{format@{format}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Formats a log record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$record} & A record to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted record
+\end{DoxyReturn}
+@phpstan-\/param Record \$record
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$record} & \\
+\hline
+\end{DoxyParams}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Normalizer\+Formatter}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_loggly_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Loggly\+Formatter}}, and \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_logmatic_formatter_a6c29cbcdf76b0e0a692a2c5e73780bcd}{Logmatic\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a11f3cde7544eac9e23b0517d513a362b}\label{class_monolog_1_1_formatter_1_1_json_formatter_a11f3cde7544eac9e23b0517d513a362b}} 
+\index{JsonFormatter@{JsonFormatter}!formatBatch@{formatBatch}}
+\index{formatBatch@{formatBatch}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatch()}{formatBatch()}}
+{\footnotesize\ttfamily format\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Formats a set of log records.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & A set of records to format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The formatted set of records
+\end{DoxyReturn}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a11f3cde7544eac9e23b0517d513a362b}{Normalizer\+Formatter}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_aeb10f4e132322833888b31afd3d79e67}\label{class_monolog_1_1_formatter_1_1_json_formatter_aeb10f4e132322833888b31afd3d79e67}} 
+\index{JsonFormatter@{JsonFormatter}!formatBatchJson@{formatBatchJson}}
+\index{formatBatchJson@{formatBatchJson}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatchJson()}{formatBatchJson()}}
+{\footnotesize\ttfamily format\+Batch\+Json (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Return a JSON-\/encoded array of records.
+
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a2d8efb0cabd0a4ff0180260a6e6634c2}\label{class_monolog_1_1_formatter_1_1_json_formatter_a2d8efb0cabd0a4ff0180260a6e6634c2}} 
+\index{JsonFormatter@{JsonFormatter}!formatBatchNewlines@{formatBatchNewlines}}
+\index{formatBatchNewlines@{formatBatchNewlines}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBatchNewlines()}{formatBatchNewlines()}}
+{\footnotesize\ttfamily format\+Batch\+Newlines (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Use new lines to separate records instead of a JSON-\/encoded array.
+
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a2759a45ea6bb700b3cfc92fbb05c704f}\label{class_monolog_1_1_formatter_1_1_json_formatter_a2759a45ea6bb700b3cfc92fbb05c704f}} 
+\index{JsonFormatter@{JsonFormatter}!getBatchMode@{getBatchMode}}
+\index{getBatchMode@{getBatchMode}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{getBatchMode()}{getBatchMode()}}
+{\footnotesize\ttfamily get\+Batch\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The batch mode option configures the formatting style for multiple records. By default, multiple records will be formatted as a JSON-\/encoded array. However, for compatibility with some API endpoints, alternative styles are available. \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a4c674fde9b5b24165af8a4dfe66e2e8e}\label{class_monolog_1_1_formatter_1_1_json_formatter_a4c674fde9b5b24165af8a4dfe66e2e8e}} 
+\index{JsonFormatter@{JsonFormatter}!includeStacktraces@{includeStacktraces}}
+\index{includeStacktraces@{includeStacktraces}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{includeStacktraces()}{includeStacktraces()}}
+{\footnotesize\ttfamily include\+Stacktraces (\begin{DoxyParamCaption}\item[{bool}]{\$include = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_ac5efb1655118072599b1b67037157b9c}\label{class_monolog_1_1_formatter_1_1_json_formatter_ac5efb1655118072599b1b67037157b9c}} 
+\index{JsonFormatter@{JsonFormatter}!isAppendingNewlines@{isAppendingNewlines}}
+\index{isAppendingNewlines@{isAppendingNewlines}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{isAppendingNewlines()}{isAppendingNewlines()}}
+{\footnotesize\ttfamily is\+Appending\+Newlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+True if newlines are appended to every formatted record \mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a2d4d3690b559d4e719a6c3cf7b0c3660}\label{class_monolog_1_1_formatter_1_1_json_formatter_a2d4d3690b559d4e719a6c3cf7b0c3660}} 
+\index{JsonFormatter@{JsonFormatter}!normalize@{normalize}}
+\index{normalize@{normalize}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily normalize (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{int}]{\$depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normalizes given \$data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_formatter_1_1_json_formatter_a5e6a2c0909a65cbc711a38ece36c8190}\label{class_monolog_1_1_formatter_1_1_json_formatter_a5e6a2c0909a65cbc711a38ece36c8190}} 
+\index{JsonFormatter@{JsonFormatter}!normalizeException@{normalizeException}}
+\index{normalizeException@{normalizeException}!JsonFormatter@{JsonFormatter}}
+\doxysubsubsection{\texorpdfstring{normalizeException()}{normalizeException()}}
+{\footnotesize\ttfamily normalize\+Exception (\begin{DoxyParamCaption}\item[{Throwable}]{\$e,  }\item[{int}]{\$depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normalizes given exception with or without its own stack trace based on {\ttfamily include\+Stacktraces} property.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_formatter_1_1_normalizer_formatter_a5e6a2c0909a65cbc711a38ece36c8190}{Normalizer\+Formatter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Formatter/Json\+Formatter.\+php\end{DoxyCompactItemize}

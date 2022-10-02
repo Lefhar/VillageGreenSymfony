@@ -1,0 +1,112 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{}\doxysection{Conversion\+Exception Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}\index{ConversionException@{ConversionException}}
+Inheritance diagram for Conversion\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a53921e8695bea22cc802c2f251751ed8}{conversion\+Failed}} (\$value, \$to\+Type, ?Throwable \$previous=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_ac5be02397f0419f0854ff59b8fea4c61}{conversion\+Failed\+Format}} (\$value, \$to\+Type, \$expected\+Format, ?Throwable \$previous=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a484eb25971008e879986145bfe216dd6}{conversion\+Failed\+Invalid\+Type}} ( \$value, \$to\+Type, array \$possible\+Types, ?Throwable \$previous=null)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a99f3afca8ae5a3bfd303de3566cb9aee}{conversion\+Failed\+Serialization}} (\$value, \$format, \$error)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a95389fadb5139cead7843ebb6fb68770}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a95389fadb5139cead7843ebb6fb68770}} 
+static {\bfseries conversion\+Failed\+Unserialization} (string \$format, string \$error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Conversion \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}} is thrown when the database to PHP conversion fails.
+
+@psalm-\/immutable 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a53921e8695bea22cc802c2f251751ed8}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a53921e8695bea22cc802c2f251751ed8}} 
+\index{ConversionException@{ConversionException}!conversionFailed@{conversionFailed}}
+\index{conversionFailed@{conversionFailed}!ConversionException@{ConversionException}}
+\doxysubsubsection{\texorpdfstring{conversionFailed()}{conversionFailed()}}
+{\footnotesize\ttfamily static conversion\+Failed (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$to\+Type,  }\item[{?Throwable}]{\$previous = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Thrown when a Database to Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} Conversion fails.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+string & {\em \$to\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_ac5be02397f0419f0854ff59b8fea4c61}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_ac5be02397f0419f0854ff59b8fea4c61}} 
+\index{ConversionException@{ConversionException}!conversionFailedFormat@{conversionFailedFormat}}
+\index{conversionFailedFormat@{conversionFailedFormat}!ConversionException@{ConversionException}}
+\doxysubsubsection{\texorpdfstring{conversionFailedFormat()}{conversionFailedFormat()}}
+{\footnotesize\ttfamily static conversion\+Failed\+Format (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$to\+Type,  }\item[{}]{\$expected\+Format,  }\item[{?Throwable}]{\$previous = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Thrown when a Database to Doctrine \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} Conversion fails and we can make a statement about the expected format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+string & {\em \$to\+Type} & \\
+\hline
+string & {\em \$expected\+Format} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a484eb25971008e879986145bfe216dd6}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a484eb25971008e879986145bfe216dd6}} 
+\index{ConversionException@{ConversionException}!conversionFailedInvalidType@{conversionFailedInvalidType}}
+\index{conversionFailedInvalidType@{conversionFailedInvalidType}!ConversionException@{ConversionException}}
+\doxysubsubsection{\texorpdfstring{conversionFailedInvalidType()}{conversionFailedInvalidType()}}
+{\footnotesize\ttfamily static conversion\+Failed\+Invalid\+Type (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$to\+Type,  }\item[{array}]{\$possible\+Types,  }\item[{?Throwable}]{\$previous = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Thrown when the PHP value passed to the converter was not of the expected type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+string & {\em \$to\+Type} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$possible\+Types} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a99f3afca8ae5a3bfd303de3566cb9aee}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception_a99f3afca8ae5a3bfd303de3566cb9aee}} 
+\index{ConversionException@{ConversionException}!conversionFailedSerialization@{conversionFailedSerialization}}
+\index{conversionFailedSerialization@{conversionFailedSerialization}!ConversionException@{ConversionException}}
+\doxysubsubsection{\texorpdfstring{conversionFailedSerialization()}{conversionFailedSerialization()}}
+{\footnotesize\ttfamily static conversion\+Failed\+Serialization (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$format,  }\item[{}]{\$error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+string & {\em \$format} & \\
+\hline
+string & {\em \$error} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Conversion\+Exception.\+php\end{DoxyCompactItemize}

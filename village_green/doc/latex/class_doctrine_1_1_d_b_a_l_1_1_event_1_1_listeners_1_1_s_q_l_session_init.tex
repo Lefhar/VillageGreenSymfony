@@ -1,0 +1,77 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init}{}\doxysection{SQLSession\+Init Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init}\index{SQLSessionInit@{SQLSessionInit}}
+Inheritance diagram for SQLSession\+Init\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77342b77b0a0687c08d3aa4948529b41}{\+\_\+\+\_\+construct}} (\$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a28e1316a3f88f109f7b8a6ab9988ab45}{post\+Connect}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_connection_event_args}{Connection\+Event\+Args}} \$args)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77d372ed259d7e188f408e350d4f1d66}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a047170d6020a882807665812a27e2525}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a047170d6020a882807665812a27e2525}} 
+{\bfseries \$sql}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Session init listener for executing a single SQL statement right after a connection is opened. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77342b77b0a0687c08d3aa4948529b41}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77342b77b0a0687c08d3aa4948529b41}} 
+\index{SQLSessionInit@{SQLSessionInit}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SQLSessionInit@{SQLSessionInit}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$sql }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77d372ed259d7e188f408e350d4f1d66}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a77d372ed259d7e188f408e350d4f1d66}} 
+\index{SQLSessionInit@{SQLSessionInit}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!SQLSessionInit@{SQLSessionInit}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns an array of events this subscriber wants to listen to.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_event_subscriber_a77d372ed259d7e188f408e350d4f1d66}{Event\+Subscriber}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a28e1316a3f88f109f7b8a6ab9988ab45}\label{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_listeners_1_1_s_q_l_session_init_a28e1316a3f88f109f7b8a6ab9988ab45}} 
+\index{SQLSessionInit@{SQLSessionInit}!postConnect@{postConnect}}
+\index{postConnect@{postConnect}!SQLSessionInit@{SQLSessionInit}}
+\doxysubsubsection{\texorpdfstring{postConnect()}{postConnect()}}
+{\footnotesize\ttfamily post\+Connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_event_1_1_connection_event_args}{Connection\+Event\+Args}}}]{\$args }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Event/\+Listeners/SQLSession\+Init.\+php\end{DoxyCompactItemize}

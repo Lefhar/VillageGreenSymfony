@@ -1,0 +1,159 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service}{}\doxysection{Runtime\+Reflection\+Service Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service}\index{RuntimeReflectionService@{RuntimeReflectionService}}
+Inheritance diagram for Runtime\+Reflection\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a38998d20e9eb1fb7e396dfdd978db382}{get\+Parent\+Classes}} (\$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a354f1db41cd63f7125bfe5891405566d}{get\+Class\+Short\+Name}} (\$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a37585a15c73271ba2ada6158348d5a12}{get\+Class\+Namespace}} (\$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_afc1710c7298ba1482255a02bb0b801be}{get\+Class}} (\$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a9839662d55a9ae32bcc6583cb59c2711}{get\+Accessible\+Property}} (\$class, \$property)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a6fb1793a020df2e085adca1f17139e79}{has\+Public\+Method}} (\$class, \$method)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PHP Runtime Reflection Service. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a9839662d55a9ae32bcc6583cb59c2711}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a9839662d55a9ae32bcc6583cb59c2711}} 
+\index{RuntimeReflectionService@{RuntimeReflectionService}!getAccessibleProperty@{getAccessibleProperty}}
+\index{getAccessibleProperty@{getAccessibleProperty}!RuntimeReflectionService@{RuntimeReflectionService}}
+\doxysubsubsection{\texorpdfstring{getAccessibleProperty()}{getAccessibleProperty()}}
+{\footnotesize\ttfamily get\+Accessible\+Property (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$property }\end{DoxyParamCaption})}
+
+Returns an accessible property (set\+Accessible(true)) or null.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & \\
+\hline
+string & {\em \$property} & @psalm-\/param class-\/string \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reflection\+Property$\vert$null
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service_a9839662d55a9ae32bcc6583cb59c2711}{Reflection\+Service}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_afc1710c7298ba1482255a02bb0b801be}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_afc1710c7298ba1482255a02bb0b801be}} 
+\index{RuntimeReflectionService@{RuntimeReflectionService}!getClass@{getClass}}
+\index{getClass@{getClass}!RuntimeReflectionService@{RuntimeReflectionService}}
+\doxysubsubsection{\texorpdfstring{getClass()}{getClass()}}
+{\footnotesize\ttfamily get\+Class (\begin{DoxyParamCaption}\item[{}]{\$class }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & @psalm-\/param class-\/string$<$\+T$>$ \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reflection\+Class @psalm-\/return Reflection\+Class$<$\+T$>$
+\end{DoxyReturn}
+@template T of object 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service_afc1710c7298ba1482255a02bb0b801be}{Reflection\+Service}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a37585a15c73271ba2ada6158348d5a12}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a37585a15c73271ba2ada6158348d5a12}} 
+\index{RuntimeReflectionService@{RuntimeReflectionService}!getClassNamespace@{getClassNamespace}}
+\index{getClassNamespace@{getClassNamespace}!RuntimeReflectionService@{RuntimeReflectionService}}
+\doxysubsubsection{\texorpdfstring{getClassNamespace()}{getClassNamespace()}}
+{\footnotesize\ttfamily get\+Class\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$class }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & @psalm-\/param class-\/string \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service_a37585a15c73271ba2ada6158348d5a12}{Reflection\+Service}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a354f1db41cd63f7125bfe5891405566d}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a354f1db41cd63f7125bfe5891405566d}} 
+\index{RuntimeReflectionService@{RuntimeReflectionService}!getClassShortName@{getClassShortName}}
+\index{getClassShortName@{getClassShortName}!RuntimeReflectionService@{RuntimeReflectionService}}
+\doxysubsubsection{\texorpdfstring{getClassShortName()}{getClassShortName()}}
+{\footnotesize\ttfamily get\+Class\+Short\+Name (\begin{DoxyParamCaption}\item[{}]{\$class }\end{DoxyParamCaption})}
+
+Returns the shortname of a class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & @psalm-\/param class-\/string \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service_a354f1db41cd63f7125bfe5891405566d}{Reflection\+Service}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a38998d20e9eb1fb7e396dfdd978db382}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a38998d20e9eb1fb7e396dfdd978db382}} 
+\index{RuntimeReflectionService@{RuntimeReflectionService}!getParentClasses@{getParentClasses}}
+\index{getParentClasses@{getParentClasses}!RuntimeReflectionService@{RuntimeReflectionService}}
+\doxysubsubsection{\texorpdfstring{getParentClasses()}{getParentClasses()}}
+{\footnotesize\ttfamily get\+Parent\+Classes (\begin{DoxyParamCaption}\item[{}]{\$class }\end{DoxyParamCaption})}
+
+Returns an array of the parent classes (not interfaces) for the given class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & @psalm-\/param class-\/string \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} @psalm-\/return class-\/string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_mapping_exception}{Mapping\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service_a38998d20e9eb1fb7e396dfdd978db382}{Reflection\+Service}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a6fb1793a020df2e085adca1f17139e79}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_runtime_reflection_service_a6fb1793a020df2e085adca1f17139e79}} 
+\index{RuntimeReflectionService@{RuntimeReflectionService}!hasPublicMethod@{hasPublicMethod}}
+\index{hasPublicMethod@{hasPublicMethod}!RuntimeReflectionService@{RuntimeReflectionService}}
+\doxysubsubsection{\texorpdfstring{hasPublicMethod()}{hasPublicMethod()}}
+{\footnotesize\ttfamily has\+Public\+Method (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$method }\end{DoxyParamCaption})}
+
+Checks if the class have a public method with the given name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$class} & \\
+\hline
+mixed & {\em \$method} & @psalm-\/param class-\/string \$class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service_a6fb1793a020df2e085adca1f17139e79}{Reflection\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/Runtime\+Reflection\+Service.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,228 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory}{}\doxysection{Class\+Metadata\+Factory Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory}\index{ClassMetadataFactory@{ClassMetadataFactory}}
+Inheritance diagram for Class\+Metadata\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_aa0a0190a21d1508eb22f5949f4fdb7eb}{set\+Entity\+Manager}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a91098fa7d1917ce4833f284bbef12627}{initialize}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_af6f99308db7fbd1c125553fca39a42d6}{on\+Not\+Found\+Metadata}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a181da37ac262202a4d6bcb8869706846}{do\+Load\+Metadata}} (\$class, \$parent, \$root\+Entity\+Found, array \$non\+Superclass\+Parents)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_adc67a5d932f06c5d8d538927c2ed9ee8}{validate\+Runtime\+Metadata}} (\$class, \$parent)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a8f01cffe16589ea73ec081c6c1822428}{new\+Class\+Metadata\+Instance}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ad1a6e70151c8e59adc8d3e702dd445ce}{wakeup\+Reflection}} (Class\+Metadata\+Interface \$class, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service}{Reflection\+Service}} \$refl\+Service)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a9d363190f23b8526b59387216cc36b3a}{initialize\+Reflection}} (Class\+Metadata\+Interface \$class, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service}{Reflection\+Service}} \$refl\+Service)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ae78dd21d4ffad804612f276c07772ecb}{get\+Fqcn\+From\+Alias}} (\$namespace\+Alias, \$simple\+Class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ac88d3a4c3a1bf357eda28403a4704995}{get\+Driver}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a940c31d982e008406f24b5bebf47af15}{is\+Entity}} (Class\+Metadata\+Interface \$class)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory}{Class\+Metadata\+Factory}} is used to create \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} objects that contain all the metadata mapping information of a class which describes how a class should be mapped to a relational database.
+
+$<$\+Class\+Metadata$>$ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a181da37ac262202a4d6bcb8869706846}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a181da37ac262202a4d6bcb8869706846}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!doLoadMetadata@{doLoadMetadata}}
+\index{doLoadMetadata@{doLoadMetadata}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{doLoadMetadata()}{doLoadMetadata()}}
+{\footnotesize\ttfamily do\+Load\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$parent,  }\item[{}]{\$root\+Entity\+Found,  }\item[{array}]{\$non\+Superclass\+Parents }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Actually loads the metadata from the underlying metadata.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} & {\em \$class} & \\
+\hline
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} | null & {\em \$parent} & \\
+\hline
+bool & {\em \$root\+Entity\+Found} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$non\+Superclass\+Parents} & All parent class names that are not marked as mapped superclasses. @psalm-\/param CMTemplate \$class @psalm-\/param CMTemplate$\vert$null \$parent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a181da37ac262202a4d6bcb8869706846}{Abstract\+Class\+Metadata\+Factory}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_mapping_1_1_class_metadata_factory_a181da37ac262202a4d6bcb8869706846}{Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ac88d3a4c3a1bf357eda28403a4704995}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ac88d3a4c3a1bf357eda28403a4704995}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!getDriver@{getDriver}}
+\index{getDriver@{getDriver}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getDriver()}{getDriver()}}
+{\footnotesize\ttfamily get\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the mapping driver implementation.
+
+\begin{DoxyReturn}{Returns}
+Mapping\+Driver
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_ac88d3a4c3a1bf357eda28403a4704995}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ae78dd21d4ffad804612f276c07772ecb}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ae78dd21d4ffad804612f276c07772ecb}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!getFqcnFromAlias@{getFqcnFromAlias}}
+\index{getFqcnFromAlias@{getFqcnFromAlias}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{getFqcnFromAlias()}{getFqcnFromAlias()}}
+{\footnotesize\ttfamily get\+Fqcn\+From\+Alias (\begin{DoxyParamCaption}\item[{}]{\$namespace\+Alias,  }\item[{}]{\$simple\+Class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the fully qualified class-\/name from the namespace alias.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000309}{Deprecated}}]This method is deprecated along with short namespace aliases.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$namespace\+Alias} & \\
+\hline
+string & {\em \$simple\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string @psalm-\/return class-\/string
+\end{DoxyReturn}
+ @psalm-\/var class-\/string
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_ae78dd21d4ffad804612f276c07772ecb}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a91098fa7d1917ce4833f284bbef12627}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a91098fa7d1917ce4833f284bbef12627}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!initialize@{initialize}}
+\index{initialize@{initialize}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Lazy initialization of this stuff, especially the metadata driver, since these are not needed at all when a metadata cache is active.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a91098fa7d1917ce4833f284bbef12627}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a9d363190f23b8526b59387216cc36b3a}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a9d363190f23b8526b59387216cc36b3a}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!initializeReflection@{initializeReflection}}
+\index{initializeReflection@{initializeReflection}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{initializeReflection()}{initializeReflection()}}
+{\footnotesize\ttfamily initialize\+Reflection (\begin{DoxyParamCaption}\item[{Class\+Metadata\+Interface}]{\$class,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service}{Reflection\+Service}}}]{\$refl\+Service }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a940c31d982e008406f24b5bebf47af15}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a940c31d982e008406f24b5bebf47af15}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!isEntity@{isEntity}}
+\index{isEntity@{isEntity}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{isEntity()}{isEntity()}}
+{\footnotesize\ttfamily is\+Entity (\begin{DoxyParamCaption}\item[{Class\+Metadata\+Interface}]{\$class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a8f01cffe16589ea73ec081c6c1822428}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_a8f01cffe16589ea73ec081c6c1822428}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!newClassMetadataInstance@{newClassMetadataInstance}}
+\index{newClassMetadataInstance@{newClassMetadataInstance}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{newClassMetadataInstance()}{newClassMetadataInstance()}}
+{\footnotesize\ttfamily new\+Class\+Metadata\+Instance (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates a new \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} instance for the given class name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Metadata$<$\+T$>$ @psalm-\/return CMTemplate
+\end{DoxyReturn}
+@template T of object 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_a8f01cffe16589ea73ec081c6c1822428}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_af6f99308db7fbd1c125553fca39a42d6}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_af6f99308db7fbd1c125553fca39a42d6}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!onNotFoundMetadata@{onNotFoundMetadata}}
+\index{onNotFoundMetadata@{onNotFoundMetadata}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{onNotFoundMetadata()}{onNotFoundMetadata()}}
+{\footnotesize\ttfamily on\+Not\+Found\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Provides a fallback hook for loading metadata when loading failed due to reflection/mapping exceptions
+
+Override this method to implement a fallback strategy for failed metadata loading
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class\+Metadata$\vert$null @psalm-\/return CMTemplate$\vert$null
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_abstract_class_metadata_factory_af6f99308db7fbd1c125553fca39a42d6}{Abstract\+Class\+Metadata\+Factory}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_aa0a0190a21d1508eb22f5949f4fdb7eb}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_aa0a0190a21d1508eb22f5949f4fdb7eb}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!setEntityManager@{setEntityManager}}
+\index{setEntityManager@{setEntityManager}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{setEntityManager()}{setEntityManager()}}
+{\footnotesize\ttfamily set\+Entity\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_adc67a5d932f06c5d8d538927c2ed9ee8}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_adc67a5d932f06c5d8d538927c2ed9ee8}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!validateRuntimeMetadata@{validateRuntimeMetadata}}
+\index{validateRuntimeMetadata@{validateRuntimeMetadata}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{validateRuntimeMetadata()}{validateRuntimeMetadata()}}
+{\footnotesize\ttfamily validate\+Runtime\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{}]{\$parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate runtime metadata is correctly defined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} & {\em \$class} & \\
+\hline
+Class\+Metadata\+Interface | null & {\em \$parent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_mapping_exception}{Mapping\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ad1a6e70151c8e59adc8d3e702dd445ce}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_factory_ad1a6e70151c8e59adc8d3e702dd445ce}} 
+\index{ClassMetadataFactory@{ClassMetadataFactory}!wakeupReflection@{wakeupReflection}}
+\index{wakeupReflection@{wakeupReflection}!ClassMetadataFactory@{ClassMetadataFactory}}
+\doxysubsubsection{\texorpdfstring{wakeupReflection()}{wakeupReflection()}}
+{\footnotesize\ttfamily wakeup\+Reflection (\begin{DoxyParamCaption}\item[{Class\+Metadata\+Interface}]{\$class,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_reflection_service}{Reflection\+Service}}}]{\$refl\+Service }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/Class\+Metadata\+Factory.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{class_app_1_1_controller_1_1_paniers_controller}{}\doxysection{Paniers\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_paniers_controller}\index{PaniersController@{PaniersController}}
+Inheritance diagram for Paniers\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_paniers_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paniers_controller_a9897aa30061ba13071c8e6e5c35bcaa7}{panier\+Add}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$prod, Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paniers_controller_a8202a9e4dadac2e4febd5e9788bbea1e}{panier\+Update}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$prod, Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paniers_controller_a8165991db564edf1cebb69a617b478d2}{panier}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}} \$prod, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$client)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paniers_controller_aa080e78c553911d8b860c6158a88cd73}{Livraison}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$client)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_paniers_controller_a3144ee7f0f5662c68a76f3907c0e86eb}{validation}} (Session\+Interface \$session, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$client)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_paniers_controller_aa080e78c553911d8b860c6158a88cd73}\label{class_app_1_1_controller_1_1_paniers_controller_aa080e78c553911d8b860c6158a88cd73}} 
+\index{PaniersController@{PaniersController}!Livraison@{Livraison}}
+\index{Livraison@{Livraison}!PaniersController@{PaniersController}}
+\doxysubsubsection{\texorpdfstring{Livraison()}{Livraison()}}
+{\footnotesize\ttfamily Livraison (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$client }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paniers/livraison\char`\"{}, name=\char`\"{}livraison\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_paniers_controller_a8165991db564edf1cebb69a617b478d2}\label{class_app_1_1_controller_1_1_paniers_controller_a8165991db564edf1cebb69a617b478d2}} 
+\index{PaniersController@{PaniersController}!panier@{panier}}
+\index{panier@{panier}!PaniersController@{PaniersController}}
+\doxysubsubsection{\texorpdfstring{panier()}{panier()}}
+{\footnotesize\ttfamily panier (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$prod,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$client }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paniers/\char`\"{}, name=\char`\"{}paniers\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_paniers_controller_a9897aa30061ba13071c8e6e5c35bcaa7}\label{class_app_1_1_controller_1_1_paniers_controller_a9897aa30061ba13071c8e6e5c35bcaa7}} 
+\index{PaniersController@{PaniersController}!panierAdd@{panierAdd}}
+\index{panierAdd@{panierAdd}!PaniersController@{PaniersController}}
+\doxysubsubsection{\texorpdfstring{panierAdd()}{panierAdd()}}
+{\footnotesize\ttfamily panier\+Add (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$prod,  }\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paniers/add\char`\"{}, name=\char`\"{}paniers\+\_\+add\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_paniers_controller_a8202a9e4dadac2e4febd5e9788bbea1e}\label{class_app_1_1_controller_1_1_paniers_controller_a8202a9e4dadac2e4febd5e9788bbea1e}} 
+\index{PaniersController@{PaniersController}!panierUpdate@{panierUpdate}}
+\index{panierUpdate@{panierUpdate}!PaniersController@{PaniersController}}
+\doxysubsubsection{\texorpdfstring{panierUpdate()}{panierUpdate()}}
+{\footnotesize\ttfamily panier\+Update (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_products_repository}{Products\+Repository}}}]{\$prod,  }\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paniers/update\char`\"{}, name=\char`\"{}paniers\+\_\+update\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_paniers_controller_a3144ee7f0f5662c68a76f3907c0e86eb}\label{class_app_1_1_controller_1_1_paniers_controller_a3144ee7f0f5662c68a76f3907c0e86eb}} 
+\index{PaniersController@{PaniersController}!validation@{validation}}
+\index{validation@{validation}!PaniersController@{PaniersController}}
+\doxysubsubsection{\texorpdfstring{validation()}{validation()}}
+{\footnotesize\ttfamily validation (\begin{DoxyParamCaption}\item[{Session\+Interface}]{\$session,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$client }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/paniers/livraison/validation\char`\"{}, name=\char`\"{}validation\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Paniers\+Controller.\+php\end{DoxyCompactItemize}

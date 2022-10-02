@@ -1,0 +1,173 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy}{}\doxysection{Default\+Naming\+Strategy Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy}\index{DefaultNamingStrategy@{DefaultNamingStrategy}}
+Inheritance diagram for Default\+Naming\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a27fbd973e7c2151fbf9b6b20e2230bd9}{class\+To\+Table\+Name}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a69d65ed7e48ec56a50fce4075d6f6d1d}{property\+To\+Column\+Name}} (\$property\+Name, \$class\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a6e67dce7a4e8aa6ebb42dde91c3015a2}{embedded\+Field\+To\+Column\+Name}} (\$property\+Name, \$embedded\+Column\+Name, \$class\+Name=null, \$embedded\+Class\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_aa2e58bbc28e83a5edcc54afab7bf81cc}{reference\+Column\+Name}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_aec63ac3865141068ea8dd20aca9fdfee}{join\+Column\+Name}} (\$property\+Name, \$class\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a47341f9d37f4d61ac9a7fda667ddfba8}{join\+Table\+Name}} (\$source\+Entity, \$target\+Entity, \$property\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_ab80c8d7af71c148f30ae4f0a50aeaf37}{join\+Key\+Column\+Name}} (\$entity\+Name, \$referenced\+Column\+Name=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The default \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy}{Naming\+Strategy}}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a27fbd973e7c2151fbf9b6b20e2230bd9}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a27fbd973e7c2151fbf9b6b20e2230bd9}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!classToTableName@{classToTableName}}
+\index{classToTableName@{classToTableName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{classToTableName()}{classToTableName()}}
+{\footnotesize\ttfamily class\+To\+Table\+Name (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+\{Returns a table name for an entity class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The fully-\/qualified class name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A table name.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy_a27fbd973e7c2151fbf9b6b20e2230bd9}{Naming\+Strategy}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a6e67dce7a4e8aa6ebb42dde91c3015a2}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a6e67dce7a4e8aa6ebb42dde91c3015a2}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!embeddedFieldToColumnName@{embeddedFieldToColumnName}}
+\index{embeddedFieldToColumnName@{embeddedFieldToColumnName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{embeddedFieldToColumnName()}{embeddedFieldToColumnName()}}
+{\footnotesize\ttfamily embedded\+Field\+To\+Column\+Name (\begin{DoxyParamCaption}\item[{}]{\$property\+Name,  }\item[{}]{\$embedded\+Column\+Name,  }\item[{}]{\$class\+Name = {\ttfamily null},  }\item[{}]{\$embedded\+Class\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Returns a column name for an embedded property.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$property\+Name} & \\
+\hline
+string & {\em \$embedded\+Column\+Name} & \\
+\hline
+string & {\em \$class\+Name} & \\
+\hline
+string & {\em \$embedded\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy_a6e67dce7a4e8aa6ebb42dde91c3015a2}{Naming\+Strategy}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_aec63ac3865141068ea8dd20aca9fdfee}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_aec63ac3865141068ea8dd20aca9fdfee}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!joinColumnName@{joinColumnName}}
+\index{joinColumnName@{joinColumnName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{joinColumnName()}{joinColumnName()}}
+{\footnotesize\ttfamily join\+Column\+Name (\begin{DoxyParamCaption}\item[{}]{\$property\+Name,  }\item[{}]{\$class\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\} \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_ab80c8d7af71c148f30ae4f0a50aeaf37}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_ab80c8d7af71c148f30ae4f0a50aeaf37}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!joinKeyColumnName@{joinKeyColumnName}}
+\index{joinKeyColumnName@{joinKeyColumnName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{joinKeyColumnName()}{joinKeyColumnName()}}
+{\footnotesize\ttfamily join\+Key\+Column\+Name (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name,  }\item[{}]{\$referenced\+Column\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Returns the foreign key column name for the given parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & An entity. \\
+\hline
+string | null & {\em \$referenced\+Column\+Name} & A property.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A join column name.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy_ab80c8d7af71c148f30ae4f0a50aeaf37}{Naming\+Strategy}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a47341f9d37f4d61ac9a7fda667ddfba8}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a47341f9d37f4d61ac9a7fda667ddfba8}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!joinTableName@{joinTableName}}
+\index{joinTableName@{joinTableName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{joinTableName()}{joinTableName()}}
+{\footnotesize\ttfamily join\+Table\+Name (\begin{DoxyParamCaption}\item[{}]{\$source\+Entity,  }\item[{}]{\$target\+Entity,  }\item[{}]{\$property\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Returns a join table name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$source\+Entity} & The source entity. \\
+\hline
+string & {\em \$target\+Entity} & The target entity. \\
+\hline
+string | null & {\em \$property\+Name} & A property name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A join table name.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy_a47341f9d37f4d61ac9a7fda667ddfba8}{Naming\+Strategy}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a69d65ed7e48ec56a50fce4075d6f6d1d}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_a69d65ed7e48ec56a50fce4075d6f6d1d}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!propertyToColumnName@{propertyToColumnName}}
+\index{propertyToColumnName@{propertyToColumnName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{propertyToColumnName()}{propertyToColumnName()}}
+{\footnotesize\ttfamily property\+To\+Column\+Name (\begin{DoxyParamCaption}\item[{}]{\$property\+Name,  }\item[{}]{\$class\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Returns a column name for a property.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$property\+Name} & A property name. \\
+\hline
+string | null & {\em \$class\+Name} & The fully-\/qualified class name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A column name.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy_a69d65ed7e48ec56a50fce4075d6f6d1d}{Naming\+Strategy}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_aa2e58bbc28e83a5edcc54afab7bf81cc}\label{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_default_naming_strategy_aa2e58bbc28e83a5edcc54afab7bf81cc}} 
+\index{DefaultNamingStrategy@{DefaultNamingStrategy}!referenceColumnName@{referenceColumnName}}
+\index{referenceColumnName@{referenceColumnName}!DefaultNamingStrategy@{DefaultNamingStrategy}}
+\doxysubsubsection{\texorpdfstring{referenceColumnName()}{referenceColumnName()}}
+{\footnotesize\ttfamily reference\+Column\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the default reference column name.
+
+\begin{DoxyReturn}{Returns}
+string A column name.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_mapping_1_1_naming_strategy_aa2e58bbc28e83a5edcc54afab7bf81cc}{Naming\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Mapping/Default\+Naming\+Strategy.\+php\end{DoxyCompactItemize}

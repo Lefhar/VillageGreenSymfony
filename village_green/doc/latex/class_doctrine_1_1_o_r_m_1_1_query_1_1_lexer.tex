@@ -1,0 +1,339 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer}{}\doxysection{Lexer Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer}\index{Lexer@{Lexer}}
+Inheritance diagram for Lexer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ade22206ffe41068eed8c5a35952f7543}{\+\_\+\+\_\+construct}} (\$input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae82e5ac8c0d52ca3137138d47f6da595}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae82e5ac8c0d52ca3137138d47f6da595}} 
+const {\bfseries T\+\_\+\+NONE} = 1
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5ab1ac8a549331f57e82ba03e804c7ed}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5ab1ac8a549331f57e82ba03e804c7ed}} 
+const {\bfseries T\+\_\+\+INTEGER} = 2
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a301319d23bde4e1cb03a0ece6ba3429d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a301319d23bde4e1cb03a0ece6ba3429d}} 
+const {\bfseries T\+\_\+\+STRING} = 3
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af84423e900775a31ef67ccde045e1543}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af84423e900775a31ef67ccde045e1543}} 
+const {\bfseries T\+\_\+\+INPUT\+\_\+\+PARAMETER} = 4
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad8ab61245308e189fd8689b5aeec4aae}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad8ab61245308e189fd8689b5aeec4aae}} 
+const {\bfseries T\+\_\+\+FLOAT} = 5
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af458109fba7e5ed0ab46683c016ffb95}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af458109fba7e5ed0ab46683c016ffb95}} 
+const {\bfseries T\+\_\+\+CLOSE\+\_\+\+PARENTHESIS} = 6
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6726369910f141d58c504b00479eb1b6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6726369910f141d58c504b00479eb1b6}} 
+const {\bfseries T\+\_\+\+OPEN\+\_\+\+PARENTHESIS} = 7
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab5701cb7709649c1ae9f95083c6470db}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab5701cb7709649c1ae9f95083c6470db}} 
+const {\bfseries T\+\_\+\+COMMA} = 8
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a84ec8d9d22ecd4ec129c56ab611f5d97}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a84ec8d9d22ecd4ec129c56ab611f5d97}} 
+const {\bfseries T\+\_\+\+DIVIDE} = 9
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a4a4b5674aba23fe094662d7f4df852bd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a4a4b5674aba23fe094662d7f4df852bd}} 
+const {\bfseries T\+\_\+\+DOT} = 10
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab534f639c4c4f7978d9283cab8e05908}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab534f639c4c4f7978d9283cab8e05908}} 
+const {\bfseries T\+\_\+\+EQUALS} = 11
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ac062fd8c32af06b1bb08475be1812e0e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ac062fd8c32af06b1bb08475be1812e0e}} 
+const {\bfseries T\+\_\+\+GREATER\+\_\+\+THAN} = 12
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a094676b2ff28832d6f6ffab4357feb36}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a094676b2ff28832d6f6ffab4357feb36}} 
+const {\bfseries T\+\_\+\+LOWER\+\_\+\+THAN} = 13
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a973b70b64e0b2216bffd9199f13ef3ee}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a973b70b64e0b2216bffd9199f13ef3ee}} 
+const {\bfseries T\+\_\+\+MINUS} = 14
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab3c65e10e7ecc0aeb011dacf6212b1d5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab3c65e10e7ecc0aeb011dacf6212b1d5}} 
+const {\bfseries T\+\_\+\+MULTIPLY} = 15
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aadc1d9d919311740f34c25855a49a1d6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aadc1d9d919311740f34c25855a49a1d6}} 
+const {\bfseries T\+\_\+\+NEGATE} = 16
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_abeb3452058a50e9f788fffdaf2308c3a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_abeb3452058a50e9f788fffdaf2308c3a}} 
+const {\bfseries T\+\_\+\+PLUS} = 17
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af98c6c9de8c8887d01b38b2ff991e94b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af98c6c9de8c8887d01b38b2ff991e94b}} 
+const {\bfseries T\+\_\+\+OPEN\+\_\+\+CURLY\+\_\+\+BRACE} = 18
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a276974493770221cffe52e6c56e661cd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a276974493770221cffe52e6c56e661cd}} 
+const {\bfseries T\+\_\+\+CLOSE\+\_\+\+CURLY\+\_\+\+BRACE} = 19
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aaf9c8dfab55f110b81e28e4a8dc874a9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aaf9c8dfab55f110b81e28e4a8dc874a9}} 
+const {\bfseries T\+\_\+\+ALIASED\+\_\+\+NAME} = 100
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6d8b511f2d8fb82d3a30cb4003ab678b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6d8b511f2d8fb82d3a30cb4003ab678b}} 
+const {\bfseries T\+\_\+\+FULLY\+\_\+\+QUALIFIED\+\_\+\+NAME} = 101
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a1e42b7422a68029a1313350405465dd6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a1e42b7422a68029a1313350405465dd6}} 
+const {\bfseries T\+\_\+\+IDENTIFIER} = 102
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a3eec9cf1d3271ed23710b9faaeffea64}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a3eec9cf1d3271ed23710b9faaeffea64}} 
+const {\bfseries T\+\_\+\+ALL} = 200
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab8963a883fd1885d71a40d923c52a672}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab8963a883fd1885d71a40d923c52a672}} 
+const {\bfseries T\+\_\+\+AND} = 201
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af0f14d808ef243b2150ee731e8ba4641}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af0f14d808ef243b2150ee731e8ba4641}} 
+const {\bfseries T\+\_\+\+ANY} = 202
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_adccab278127d17fcf65bb286c49858e0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_adccab278127d17fcf65bb286c49858e0}} 
+const {\bfseries T\+\_\+\+AS} = 203
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a254e6ec7a5538d80969b5c5a1dcb6ad3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a254e6ec7a5538d80969b5c5a1dcb6ad3}} 
+const {\bfseries T\+\_\+\+ASC} = 204
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a71a5630841d3ea3cc060893fd59e9a95}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a71a5630841d3ea3cc060893fd59e9a95}} 
+const {\bfseries T\+\_\+\+AVG} = 205
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad9d8037f2fd034e9161a4950fd8be4da}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad9d8037f2fd034e9161a4950fd8be4da}} 
+const {\bfseries T\+\_\+\+BETWEEN} = 206
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aa2ebb80511ac1dc1190f716d328165bf}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aa2ebb80511ac1dc1190f716d328165bf}} 
+const {\bfseries T\+\_\+\+BOTH} = 207
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5ef6041daf2b4e485c39fe030413a980}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5ef6041daf2b4e485c39fe030413a980}} 
+const {\bfseries T\+\_\+\+BY} = 208
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad381a8a32d2e9cc91c7604de048cc24f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad381a8a32d2e9cc91c7604de048cc24f}} 
+const {\bfseries T\+\_\+\+CASE} = 209
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aeffaea23ff300f04d073f9063191c042}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aeffaea23ff300f04d073f9063191c042}} 
+const {\bfseries T\+\_\+\+COALESCE} = 210
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae145dd39af7bc161a335026bd7a33466}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae145dd39af7bc161a335026bd7a33466}} 
+const {\bfseries T\+\_\+\+COUNT} = 211
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae9e7de199db563e5ea2ba052e96e14fc}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae9e7de199db563e5ea2ba052e96e14fc}} 
+const {\bfseries T\+\_\+\+DELETE} = 212
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a4c7b30a2b20b4a70bc260f21606bd3c8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a4c7b30a2b20b4a70bc260f21606bd3c8}} 
+const {\bfseries T\+\_\+\+DESC} = 213
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a72e2554476d02d1cbe76952a6effd2a9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a72e2554476d02d1cbe76952a6effd2a9}} 
+const {\bfseries T\+\_\+\+DISTINCT} = 214
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5fb5ba85ecbeec7d396be17756884a40}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5fb5ba85ecbeec7d396be17756884a40}} 
+const {\bfseries T\+\_\+\+ELSE} = 215
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a60834b7dd2391b9a38fabef82e068e74}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a60834b7dd2391b9a38fabef82e068e74}} 
+const {\bfseries T\+\_\+\+EMPTY} = 216
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_acff3be6099492f14745af4adf02356c6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_acff3be6099492f14745af4adf02356c6}} 
+const {\bfseries T\+\_\+\+END} = 217
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a590d9d0f913ec6a2392649fe100c078a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a590d9d0f913ec6a2392649fe100c078a}} 
+const {\bfseries T\+\_\+\+ESCAPE} = 218
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a7d86e5d02e551f66351fc650f6f04f03}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a7d86e5d02e551f66351fc650f6f04f03}} 
+const {\bfseries T\+\_\+\+EXISTS} = 219
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a1afd9495e87b9b0bd9f449609f7cd470}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a1afd9495e87b9b0bd9f449609f7cd470}} 
+const {\bfseries T\+\_\+\+FALSE} = 220
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae984a84f8f58524bb0fcb9a25e43f2ae}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae984a84f8f58524bb0fcb9a25e43f2ae}} 
+const {\bfseries T\+\_\+\+FROM} = 221
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab8c402bb8ce1d1a2da1ccc87c0a21fd9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab8c402bb8ce1d1a2da1ccc87c0a21fd9}} 
+const {\bfseries T\+\_\+\+GROUP} = 222
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a75485e94ae9a539ca64a40b2e9a7bd3f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a75485e94ae9a539ca64a40b2e9a7bd3f}} 
+const {\bfseries T\+\_\+\+HAVING} = 223
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a36bcf7e3d5de854e9bdd92f208839c4d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a36bcf7e3d5de854e9bdd92f208839c4d}} 
+const {\bfseries T\+\_\+\+HIDDEN} = 224
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a2bd3e0d20f01b6747ccf1f902455d962}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a2bd3e0d20f01b6747ccf1f902455d962}} 
+const {\bfseries T\+\_\+\+IN} = 225
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a0214fc87bbc5e0a66ea59b225499da64}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a0214fc87bbc5e0a66ea59b225499da64}} 
+const {\bfseries T\+\_\+\+INDEX} = 226
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a4a6fd273e019be65f25af2e829cec6ab}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a4a6fd273e019be65f25af2e829cec6ab}} 
+const {\bfseries T\+\_\+\+INNER} = 227
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_afd6a949139f6dea97cbe4a308b590567}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_afd6a949139f6dea97cbe4a308b590567}} 
+const {\bfseries T\+\_\+\+INSTANCE} = 228
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af598267840346cc603e3864c20ea917f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af598267840346cc603e3864c20ea917f}} 
+const {\bfseries T\+\_\+\+IS} = 229
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a8f20f6f63dced274a9699ea53887c0fa}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a8f20f6f63dced274a9699ea53887c0fa}} 
+const {\bfseries T\+\_\+\+JOIN} = 230
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aa406e306c4350c5567cff95735f32fd6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aa406e306c4350c5567cff95735f32fd6}} 
+const {\bfseries T\+\_\+\+LEADING} = 231
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae5c74989bc364258f0fd109a65233b41}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae5c74989bc364258f0fd109a65233b41}} 
+const {\bfseries T\+\_\+\+LEFT} = 232
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad32e7047f94da63564a60aba1e9ba1ce}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad32e7047f94da63564a60aba1e9ba1ce}} 
+const {\bfseries T\+\_\+\+LIKE} = 233
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a44df3efbc37fbe1bc16092d17e2dfc2a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a44df3efbc37fbe1bc16092d17e2dfc2a}} 
+const {\bfseries T\+\_\+\+MAX} = 234
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_afa49e563a9d04867de6537c8f780f369}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_afa49e563a9d04867de6537c8f780f369}} 
+const {\bfseries T\+\_\+\+MEMBER} = 235
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad4ec42451f35f379944a5ed49857f863}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad4ec42451f35f379944a5ed49857f863}} 
+const {\bfseries T\+\_\+\+MIN} = 236
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad305c48565a48c5a7782a10f45cc73e5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ad305c48565a48c5a7782a10f45cc73e5}} 
+const {\bfseries T\+\_\+\+NEW} = 237
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6d7015266532914b6342a0f1640aeb97}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6d7015266532914b6342a0f1640aeb97}} 
+const {\bfseries T\+\_\+\+NOT} = 238
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af66fc1017894fd55506d7e97b394a1b2}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af66fc1017894fd55506d7e97b394a1b2}} 
+const {\bfseries T\+\_\+\+NULL} = 239
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aeefeecfe55bed11f8e6b59a7761e570f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aeefeecfe55bed11f8e6b59a7761e570f}} 
+const {\bfseries T\+\_\+\+NULLIF} = 240
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a646ea6a3e896069215e79cbaacb3afc0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a646ea6a3e896069215e79cbaacb3afc0}} 
+const {\bfseries T\+\_\+\+OF} = 241
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a9563149c90bc3a6779c472ca1980bb22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a9563149c90bc3a6779c472ca1980bb22}} 
+const {\bfseries T\+\_\+\+OR} = 242
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a496422320d195c734e192998da988232}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a496422320d195c734e192998da988232}} 
+const {\bfseries T\+\_\+\+ORDER} = 243
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a1aefd9acc3cd4fd4720d7163ace5580c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a1aefd9acc3cd4fd4720d7163ace5580c}} 
+const {\bfseries T\+\_\+\+OUTER} = 244
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aea54a5b195db151d662b83f688416f09}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aea54a5b195db151d662b83f688416f09}} 
+const {\bfseries T\+\_\+\+PARTIAL} = 245
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_abc37674f66550dabe45e6189bc462b67}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_abc37674f66550dabe45e6189bc462b67}} 
+const {\bfseries T\+\_\+\+SELECT} = 246
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aa7d3aa299ed930b620285fd6ca5e6899}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_aa7d3aa299ed930b620285fd6ca5e6899}} 
+const {\bfseries T\+\_\+\+SET} = 247
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6993c6e1ee9a538dba539c6fe5bd0cf5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6993c6e1ee9a538dba539c6fe5bd0cf5}} 
+const {\bfseries T\+\_\+\+SOME} = 248
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6238f1e54e308d3c73f9303a45c056a3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6238f1e54e308d3c73f9303a45c056a3}} 
+const {\bfseries T\+\_\+\+SUM} = 249
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af1ea831e45878202eaf9ebb87b9a6f7d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af1ea831e45878202eaf9ebb87b9a6f7d}} 
+const {\bfseries T\+\_\+\+THEN} = 250
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a057cb19b5554f767d3fda1550a3a18bc}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a057cb19b5554f767d3fda1550a3a18bc}} 
+const {\bfseries T\+\_\+\+TRAILING} = 251
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a0a0b0fc443d2e0a667bdb65a18856041}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a0a0b0fc443d2e0a667bdb65a18856041}} 
+const {\bfseries T\+\_\+\+TRUE} = 252
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5b9895d46643a51038dce06c336f41e9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a5b9895d46643a51038dce06c336f41e9}} 
+const {\bfseries T\+\_\+\+UPDATE} = 253
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae04394d760957a2648c9b2722ee23c0c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ae04394d760957a2648c9b2722ee23c0c}} 
+const {\bfseries T\+\_\+\+WHEN} = 254
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af27502871be32c30a2b1113585f72f01}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_af27502871be32c30a2b1113585f72f01}} 
+const {\bfseries T\+\_\+\+WHERE} = 255
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab41664f9a675e889c35c35afd4c18a0f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ab41664f9a675e889c35c35afd4c18a0f}} 
+const {\bfseries T\+\_\+\+WITH} = 256
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{get\+Catchable\+Patterns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6bb3a12156350eef1fd452d13d059eb7}{get\+Non\+Catchable\+Patterns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a95469fa51da1c43b32e7678225452daf}{get\+Type}} (\&\$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scans a DQL query for tokens. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ade22206ffe41068eed8c5a35952f7543}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_ade22206ffe41068eed8c5a35952f7543}} 
+\index{Lexer@{Lexer}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$input }\end{DoxyParamCaption})}
+
+Creates a new query scanner object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & A query string. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_addb2dbe6fac3115b8b4bad070f0beb43}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_addb2dbe6fac3115b8b4bad070f0beb43}} 
+\index{Lexer@{Lexer}!getCatchablePatterns@{getCatchablePatterns}}
+\index{getCatchablePatterns@{getCatchablePatterns}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{getCatchablePatterns()}{getCatchablePatterns()}}
+{\footnotesize\ttfamily get\+Catchable\+Patterns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Lexical catchable patterns.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6bb3a12156350eef1fd452d13d059eb7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6bb3a12156350eef1fd452d13d059eb7}} 
+\index{Lexer@{Lexer}!getNonCatchablePatterns@{getNonCatchablePatterns}}
+\index{getNonCatchablePatterns@{getNonCatchablePatterns}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{getNonCatchablePatterns()}{getNonCatchablePatterns()}}
+{\footnotesize\ttfamily get\+Non\+Catchable\+Patterns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Lexical non-\/catchable patterns.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a6bb3a12156350eef1fd452d13d059eb7}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a95469fa51da1c43b32e7678225452daf}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a95469fa51da1c43b32e7678225452daf}} 
+\index{Lexer@{Lexer}!getType@{getType}}
+\index{getType@{getType}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}\item[{\&}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{Retrieve token type. Also processes the token value if necessary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\vert$string$\vert$null
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a95469fa51da1c43b32e7678225452daf}{Abstract\+Lexer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Lexer.\+php\end{DoxyCompactItemize}

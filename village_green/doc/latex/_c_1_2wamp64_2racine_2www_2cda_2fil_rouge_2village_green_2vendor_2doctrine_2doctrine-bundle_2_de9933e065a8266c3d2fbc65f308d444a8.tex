@@ -1,0 +1,961 @@
+\hypertarget{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{}\doxysection{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}
+Loads an ORM entity managers bundle mapping information.
+
+There are two distinct configuration possibilities for mapping information\+:
+
+
+\begin{DoxyEnumerate}
+\item Specify a bundle and optionally details where the entity and mapping information reside.
+\item Specify an arbitrary mapping location.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em array$<$string,mixed$>$} & \$entity\+Manager A configured ORM entity manager \\
+\hline
+Definition & {\em \$orm\+Config\+Def} & A Definition instance \\
+\hline
+Container\+Builder & {\em \$container} & A Container\+Builder instance\\
+\hline
+\end{DoxyParams}
+doctrine.\+orm\+: mappings\+: My\+Bundle1\+: $\sim$ My\+Bundle2\+: yml My\+Bundle3\+: \{ type\+: annotation, dir\+: Entities/ \} My\+Bundle4\+: \{ type\+: xml, dir\+: Resources/config/doctrine/mapping \} My\+Bundle5\+: \{ type\+: attribute, dir\+: Entities/ \} My\+Bundle6\+: type\+: yml dir\+: bundle-\/mappings/ alias\+: Bundle\+Alias arbitrary\+\_\+key\+: type\+: xml dir\+: kernel.\+project\+\_\+dir\%/src/vendor/\+Doctrine\+Extensions/lib/\+Doctrine\+Extensions/\+Entities prefix\+: Doctrine\+Extensions\textbackslash{}\+Entities\textbackslash{} alias\+: DExt
+
+In the case of bundles everything is really optional (which leads to autodetection for this bundle) but in the mappings key everything except alias is a required argument.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)DependencyInjection;}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_attribute_1_1_as_entity_listener}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)Attribute\(\backslash\)AsEntityListener}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_cache_warmer_1_1_doctrine_metadata_cache_warmer}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)CacheWarmer\(\backslash\)DoctrineMetadataCacheWarmer}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_proxy_1_1_import_doctrine_command}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)Command\(\backslash\)Proxy\(\backslash\)ImportDoctrineCommand}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dbal_1_1_manager_registry_aware_connection_provider}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)Dbal\(\backslash\)ManagerRegistryAwareConnectionProvider}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dbal_1_1_regex_schema_asset_filter}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)Dbal\(\backslash\)RegexSchemaAssetFilter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_id_generator_pass}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)DependencyInjection\(\backslash\)Compiler\(\backslash\)IdGeneratorPass}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_compiler_1_1_service_repository_compiler_pass}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)DependencyInjection\(\backslash\)Compiler\(\backslash\)ServiceRepositoryCompilerPass}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_event_subscriber_1_1_event_subscriber_interface}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)EventSubscriber\(\backslash\)EventSubscriberInterface}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_service_entity_repository_interface}{Doctrine\(\backslash\)Bundle\(\backslash\)DoctrineBundle\(\backslash\)Repository\(\backslash\)ServiceEntityRepositoryInterface}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Doctrine\(\backslash\)DBAL\(\backslash\)Connection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connections_1_1_primary_read_replica_connection}{Doctrine\(\backslash\)DBAL\(\backslash\)Connections\(\backslash\)PrimaryReadReplicaConnection}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_logger_chain}{Doctrine\(\backslash\)DBAL\(\backslash\)Logging\(\backslash\)LoggerChain}};}
+\DoxyCodeLine{use Doctrine\(\backslash\)DBAL\(\backslash\)Tools\(\backslash\)Console\(\backslash\)Command\(\backslash\)ImportCommand;}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_tools_1_1_console_1_1_connection_provider}{Doctrine\(\backslash\)DBAL\(\backslash\)Tools\(\backslash\)Console\(\backslash\)ConnectionProvider}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Doctrine\(\backslash\)ORM\(\backslash\)EntityManagerInterface}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_id_1_1_abstract_id_generator}{Doctrine\(\backslash\)ORM\(\backslash\)Id\(\backslash\)AbstractIdGenerator}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_proxy_1_1_autoloader}{Doctrine\(\backslash\)ORM\(\backslash\)Proxy\(\backslash\)Autoloader}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_command_1_1_convert_mapping_command}{Doctrine\(\backslash\)ORM\(\backslash\)Tools\(\backslash\)Console\(\backslash\)Command\(\backslash\)ConvertMappingCommand}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_console_1_1_command_1_1_ensure_production_settings_command}{Doctrine\(\backslash\)ORM\(\backslash\)Tools\(\backslash\)Console\(\backslash\)Command\(\backslash\)EnsureProductionSettingsCommand}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_export_1_1_class_metadata_exporter}{Doctrine\(\backslash\)ORM\(\backslash\)Tools\(\backslash\)Export\(\backslash\)ClassMetadataExporter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Doctrine\(\backslash\)ORM\(\backslash\)UnitOfWork}};}
+\DoxyCodeLine{use LogicException;}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_dependency_injection_1_1_abstract_doctrine_extension}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)DependencyInjection\(\backslash\)AbstractDoctrineExtension}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_id_generator_1_1_ulid_generator}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)IdGenerator\(\backslash\)UlidGenerator}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_id_generator_1_1_uuid_generator}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)IdGenerator\(\backslash\)UuidGenerator}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_messenger_1_1_doctrine_clear_entity_manager_worker_subscriber}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)Messenger\(\backslash\)DoctrineClearEntityManagerWorkerSubscriber}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_messenger_1_1_doctrine_transaction_middleware}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)Messenger\(\backslash\)DoctrineTransactionMiddleware}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_property_info_1_1_doctrine_extractor}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)PropertyInfo\(\backslash\)DoctrineExtractor}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_doctrine_dbal_cache_adapter_schema_subscriber}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)SchemaListener\(\backslash\)DoctrineDbalCacheAdapterSchemaSubscriber}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_messenger_transport_doctrine_schema_subscriber}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)SchemaListener\(\backslash\)MessengerTransportDoctrineSchemaSubscriber}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_pdo_cache_adapter_doctrine_schema_subscriber}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)SchemaListener\(\backslash\)PdoCacheAdapterDoctrineSchemaSubscriber}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_schema_listener_1_1_remember_me_token_provider_doctrine_schema_subscriber}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)SchemaListener\(\backslash\)RememberMeTokenProviderDoctrineSchemaSubscriber}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_validator_1_1_doctrine_loader}{Symfony\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)Validator\(\backslash\)DoctrineLoader}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_cache_1_1_adapter_1_1_array_adapter}{Symfony\(\backslash\)Component\(\backslash\)Cache\(\backslash\)Adapter\(\backslash\)ArrayAdapter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_cache_1_1_adapter_1_1_php_array_adapter}{Symfony\(\backslash\)Component\(\backslash\)Cache\(\backslash\)Adapter\(\backslash\)PhpArrayAdapter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_config_1_1_file_locator}{Symfony\(\backslash\)Component\(\backslash\)Config\(\backslash\)FileLocator}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_alias}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Alias}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_child_definition}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)ChildDefinition}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_container_builder}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)ContainerBuilder}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_definition}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Definition}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_exception_1_1_invalid_argument_exception}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Exception\(\backslash\)InvalidArgumentException}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_loader_1_1_xml_file_loader}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Loader\(\backslash\)XmlFileLoader}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_reference}{Symfony\(\backslash\)Component\(\backslash\)DependencyInjection\(\backslash\)Reference}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_symfony_1_1_component_1_1_form_1_1_abstract_type}{Symfony\(\backslash\)Component\(\backslash\)Form\(\backslash\)AbstractType}};}
+\DoxyCodeLine{use Symfony\(\backslash\)Component\(\backslash\)Messenger\(\backslash\)Bridge\(\backslash\)Doctrine\(\backslash\)Transport\(\backslash\)DoctrineTransportFactory;}
+\DoxyCodeLine{use Symfony\(\backslash\)Component\(\backslash\)Messenger\(\backslash\)MessageBusInterface;}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_symfony_1_1_component_1_1_property_info_1_1_property_info_extractor_interface}{Symfony\(\backslash\)Component\(\backslash\)PropertyInfo\(\backslash\)PropertyInfoExtractorInterface}};}
+\DoxyCodeLine{use \mbox{\hyperlink{interface_symfony_1_1_component_1_1_validator_1_1_mapping_1_1_loader_1_1_loader_interface}{Symfony\(\backslash\)Component\(\backslash\)Validator\(\backslash\)Mapping\(\backslash\)Loader\(\backslash\)LoaderInterface}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{use \textcolor{keyword}{function} array\_intersect\_key;}
+\DoxyCodeLine{use \textcolor{keyword}{function} array\_keys;}
+\DoxyCodeLine{use \textcolor{keyword}{function} class\_exists;}
+\DoxyCodeLine{use \textcolor{keyword}{function} interface\_exists;}
+\DoxyCodeLine{use \textcolor{keyword}{function} is\_dir;}
+\DoxyCodeLine{use \textcolor{keyword}{function} method\_exists;}
+\DoxyCodeLine{use \textcolor{keyword}{function} reset;}
+\DoxyCodeLine{use \textcolor{keyword}{function} sprintf;}
+\DoxyCodeLine{use \textcolor{keyword}{function} str\_replace;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }DoctrineExtension \textcolor{keyword}{extends} AbstractDoctrineExtension}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \$defaultConnection;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9e89ba4c9793088dc3050305084f79a2}{load}}(array \$configs, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$configuration = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_ae13f5a126c0be3a65f24338b6e9fbeb6}{getConfiguration}}(\$configs, \$container);}
+\DoxyCodeLine{        \$config        = \$this-\/>processConfiguration(\$configuration, \$configs);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$config[\textcolor{stringliteral}{'dbal'}])) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a02a3d37c531bf33f6c9b12319d5b12e1}{dbalLoad}}(\$config[\textcolor{stringliteral}{'dbal'}], \$container);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$this-\/>loadMessengerServices(\$container);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (empty(\$config[\textcolor{stringliteral}{'orm'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (empty(\$config[\textcolor{stringliteral}{'dbal'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} LogicException(\textcolor{stringliteral}{'Configuring the ORM layer requires to configure the DBAL layer as well.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a703927f9bd7d67693d8ad2e742080a4a}{ormLoad}}(\$config[\textcolor{stringliteral}{'orm'}], \$container);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a02a3d37c531bf33f6c9b12319d5b12e1}{dbalLoad}}(array \$config, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$loader = \textcolor{keyword}{new} XmlFileLoader(\$container, \textcolor{keyword}{new} FileLocator(\_\_DIR\_\_ . \textcolor{stringliteral}{'/../Resources/config'}));}
+\DoxyCodeLine{        \$loader-\/>load(\textcolor{stringliteral}{'dbal.xml'});}
+\DoxyCodeLine{        \$chainLogger = \$container-\/>getDefinition(\textcolor{stringliteral}{'doctrine.dbal.logger.chain'});}
+\DoxyCodeLine{        \$logger      = \textcolor{keyword}{new} Reference(\textcolor{stringliteral}{'doctrine.dbal.logger'});}
+\DoxyCodeLine{        \$chainLogger-\/>addArgument([\$logger]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (class\_exists(ImportCommand::class)) \{}
+\DoxyCodeLine{            \$container-\/>register(\textcolor{stringliteral}{'doctrine.database\_import\_command'}, ImportDoctrineCommand::class)}
+\DoxyCodeLine{                -\/>addTag(\textcolor{stringliteral}{'console.command'}, [\textcolor{stringliteral}{'command'} => \textcolor{stringliteral}{'doctrine:database:import'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (empty(\$config[\textcolor{stringliteral}{'default\_connection'}])) \{}
+\DoxyCodeLine{            \$keys                         = array\_keys(\$config[\textcolor{stringliteral}{'connections'}]);}
+\DoxyCodeLine{            \$config[\textcolor{stringliteral}{'default\_connection'}] = reset(\$keys);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>defaultConnection = \$config[\textcolor{stringliteral}{'default\_connection'}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setAlias(\textcolor{stringliteral}{'database\_connection'}, sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection'}, \$this-\/>defaultConnection));}
+\DoxyCodeLine{        \$container-\/>getAlias(\textcolor{stringliteral}{'database\_connection'})-\/>setPublic(\textcolor{keyword}{true});}
+\DoxyCodeLine{        \$container-\/>setAlias(\textcolor{stringliteral}{'doctrine.dbal.event\_manager'}, \textcolor{keyword}{new} Alias(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection.event\_manager'}, \$this-\/>defaultConnection), \textcolor{keyword}{false}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setParameter(\textcolor{stringliteral}{'doctrine.dbal.connection\_factory.types'}, \$config[\textcolor{stringliteral}{'types'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$connections = [];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (array\_keys(\$config[\textcolor{stringliteral}{'connections'}]) as \$name) \{}
+\DoxyCodeLine{            \$connections[\$name] = sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection'}, \$name);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setParameter(\textcolor{stringliteral}{'doctrine.connections'}, \$connections);}
+\DoxyCodeLine{        \$container-\/>setParameter(\textcolor{stringliteral}{'doctrine.default\_connection'}, \$this-\/>defaultConnection);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$config[\textcolor{stringliteral}{'connections'}] as \$name => \$connection) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_af062019f707fa7e80fc71aa39cf512a9}{loadDbalConnection}}(\$name, \$connection, \$container);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_af062019f707fa7e80fc71aa39cf512a9}{loadDbalConnection}}(\$name, array \$connection, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$configuration = \$container-\/>setDefinition(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection.configuration'}, \$name), \textcolor{keyword}{new} ChildDefinition(\textcolor{stringliteral}{'doctrine.dbal.connection.configuration'}));}
+\DoxyCodeLine{        \$logger        = \textcolor{keyword}{null};}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$connection[\textcolor{stringliteral}{'logging'}]) \{}
+\DoxyCodeLine{            \$logger = \textcolor{keyword}{new} Reference(\textcolor{stringliteral}{'doctrine.dbal.logger'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        unset(\$connection[\textcolor{stringliteral}{'logging'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$dataCollectorDefinition = \$container-\/>getDefinition(\textcolor{stringliteral}{'data\_collector.doctrine'});}
+\DoxyCodeLine{        \$dataCollectorDefinition-\/>replaceArgument(1, \$connection[\textcolor{stringliteral}{'profiling\_collect\_schema\_errors'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$connection[\textcolor{stringliteral}{'profiling'}]) \{}
+\DoxyCodeLine{            \$profilingAbstractId = \$connection[\textcolor{stringliteral}{'profiling\_collect\_backtrace'}] ?}
+\DoxyCodeLine{                \textcolor{stringliteral}{'doctrine.dbal.logger.backtrace'} :}
+\DoxyCodeLine{                \textcolor{stringliteral}{'doctrine.dbal.logger.profiling'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$profilingLoggerId = \$profilingAbstractId . \textcolor{charliteral}{'.'} . \$name;}
+\DoxyCodeLine{            \$container-\/>setDefinition(\$profilingLoggerId, \textcolor{keyword}{new} ChildDefinition(\$profilingAbstractId));}
+\DoxyCodeLine{            \$profilingLogger = \textcolor{keyword}{new} Reference(\$profilingLoggerId);}
+\DoxyCodeLine{            \$dataCollectorDefinition-\/>addMethodCall(\textcolor{stringliteral}{'addLogger'}, [\$name, \$profilingLogger]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$logger !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{                \$chainLogger = \$container-\/>register(}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'doctrine.dbal.logger.chain'},}
+\DoxyCodeLine{                    LoggerChain::class}
+\DoxyCodeLine{                );}
+\DoxyCodeLine{                \$chainLogger-\/>addArgument([\$logger, \$profilingLogger]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \$loggerId = \textcolor{stringliteral}{'doctrine.dbal.logger.chain.'} . \$name;}
+\DoxyCodeLine{                \$container-\/>setDefinition(\$loggerId, \$chainLogger);}
+\DoxyCodeLine{                \$logger = \textcolor{keyword}{new} Reference(\$loggerId);}
+\DoxyCodeLine{            \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{                \$logger = \$profilingLogger;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        unset(}
+\DoxyCodeLine{            \$connection[\textcolor{stringliteral}{'profiling'}],}
+\DoxyCodeLine{            \$connection[\textcolor{stringliteral}{'profiling\_collect\_backtrace'}],}
+\DoxyCodeLine{            \$connection[\textcolor{stringliteral}{'profiling\_collect\_schema\_errors'}]}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$connection[\textcolor{stringliteral}{'auto\_commit'}])) \{}
+\DoxyCodeLine{            \$configuration-\/>addMethodCall(\textcolor{stringliteral}{'setAutoCommit'}, [\$connection[\textcolor{stringliteral}{'auto\_commit'}]]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        unset(\$connection[\textcolor{stringliteral}{'auto\_commit'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$connection[\textcolor{stringliteral}{'schema\_filter'}]) \&\& \$connection[\textcolor{stringliteral}{'schema\_filter'}]) \{}
+\DoxyCodeLine{            \$definition = \textcolor{keyword}{new} Definition(RegexSchemaAssetFilter::class, [\$connection[\textcolor{stringliteral}{'schema\_filter'}]]);}
+\DoxyCodeLine{            \$definition-\/>addTag(\textcolor{stringliteral}{'doctrine.dbal.schema\_filter'}, [\textcolor{stringliteral}{'connection'} => \$name]);}
+\DoxyCodeLine{            \$container-\/>setDefinition(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_regex\_schema\_filter'}, \$name), \$definition);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        unset(\$connection[\textcolor{stringliteral}{'schema\_filter'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$logger) \{}
+\DoxyCodeLine{            \$configuration-\/>addMethodCall(\textcolor{stringliteral}{'setSQLLogger'}, [\$logger]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// event manager}}
+\DoxyCodeLine{        \$container-\/>setDefinition(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection.event\_manager'}, \$name), \textcolor{keyword}{new} ChildDefinition(\textcolor{stringliteral}{'doctrine.dbal.connection.event\_manager'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// connection}}
+\DoxyCodeLine{        \$options = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_aadeaa3816f45e6d04b120e560aa7c753}{getConnectionOptions}}(\$connection);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$connectionId = sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection'}, \$name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$def = \$container}
+\DoxyCodeLine{            -\/>setDefinition(\$connectionId, \textcolor{keyword}{new} ChildDefinition(\textcolor{stringliteral}{'doctrine.dbal.connection'}))}
+\DoxyCodeLine{            -\/>setPublic(\textcolor{keyword}{true})}
+\DoxyCodeLine{            -\/>setArguments([}
+\DoxyCodeLine{                \$options,}
+\DoxyCodeLine{                \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection.configuration'}, \$name)),}
+\DoxyCodeLine{                \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection.event\_manager'}, \$name)),}
+\DoxyCodeLine{                \$connection[\textcolor{stringliteral}{'mapping\_types'}],}
+\DoxyCodeLine{            ]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container}
+\DoxyCodeLine{            -\/>registerAliasForArgument(\$connectionId, Connection::class, sprintf(\textcolor{stringliteral}{'\%sConnection'}, \$name))}
+\DoxyCodeLine{            -\/>setPublic(\textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Set class in case "{}wrapper\_class"{} option was used to assist IDEs}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$options[\textcolor{stringliteral}{'wrapperClass'}])) \{}
+\DoxyCodeLine{            \$def-\/>setClass(\$options[\textcolor{stringliteral}{'wrapperClass'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$connection[\textcolor{stringliteral}{'use\_savepoints'}])) \{}
+\DoxyCodeLine{            \$def-\/>addMethodCall(\textcolor{stringliteral}{'setNestTransactionsWithSavepoints'}, [\$connection[\textcolor{stringliteral}{'use\_savepoints'}]]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// Create a shard\_manager for this connection}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$options[\textcolor{stringliteral}{'shards'}])) \{}
+\DoxyCodeLine{            \$shardManagerDefinition = \textcolor{keyword}{new} Definition(\$options[\textcolor{stringliteral}{'shardManagerClass'}], [\textcolor{keyword}{new} Reference(\$connectionId)]);}
+\DoxyCodeLine{            \$container-\/>setDefinition(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_shard\_manager'}, \$name), \$shardManagerDefinition);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// dbal < 2.11 BC layer}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! interface\_exists(ConnectionProvider::class)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setDefinition(}
+\DoxyCodeLine{            ManagerRegistryAwareConnectionProvider::class,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Definition(ManagerRegistryAwareConnectionProvider::class, [\$container-\/>getDefinition(\textcolor{stringliteral}{'doctrine'})])}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_aadeaa3816f45e6d04b120e560aa7c753}{getConnectionOptions}}(array \$connection): array}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$options = \$connection;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$connectionDefaults = [}
+\DoxyCodeLine{            \textcolor{stringliteral}{'host'} => \textcolor{stringliteral}{'localhost'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'port'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'user'} => \textcolor{stringliteral}{'root'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'password'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        ];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$options[\textcolor{stringliteral}{'override\_url'}] ?? \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{            \$options[\textcolor{stringliteral}{'connection\_override\_options'}] = array\_intersect\_key(\$options, [\textcolor{stringliteral}{'dbname'} => \textcolor{keyword}{null}] + \$connectionDefaults);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        unset(\$options[\textcolor{stringliteral}{'override\_url'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$options += \$connectionDefaults;}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} ([\textcolor{stringliteral}{'shards'}, \textcolor{stringliteral}{'replicas'}, \textcolor{stringliteral}{'slaves'}] as \$connectionKey) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (array\_keys(\$options[\$connectionKey]) as \$name) \{}
+\DoxyCodeLine{                \$options[\$connectionKey][\$name] += \$connectionDefaults;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$options[\textcolor{stringliteral}{'platform\_service'}])) \{}
+\DoxyCodeLine{            \$options[\textcolor{stringliteral}{'platform'}] = \textcolor{keyword}{new} Reference(\$options[\textcolor{stringliteral}{'platform\_service'}]);}
+\DoxyCodeLine{            unset(\$options[\textcolor{stringliteral}{'platform\_service'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        unset(\$options[\textcolor{stringliteral}{'mapping\_types'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$options[\textcolor{stringliteral}{'shard\_choser\_service'}])) \{}
+\DoxyCodeLine{            \$options[\textcolor{stringliteral}{'shard\_choser'}] = \textcolor{keyword}{new} Reference(\$options[\textcolor{stringliteral}{'shard\_choser\_service'}]);}
+\DoxyCodeLine{            unset(\$options[\textcolor{stringliteral}{'shard\_choser\_service'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (}
+\DoxyCodeLine{            [}
+\DoxyCodeLine{                \textcolor{stringliteral}{'options'} => \textcolor{stringliteral}{'driverOptions'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driver\_class'} => \textcolor{stringliteral}{'driverClass'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'wrapper\_class'} => \textcolor{stringliteral}{'wrapperClass'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'keep\_slave'} => \textcolor{stringliteral}{'keepReplica'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'keep\_replica'} => \textcolor{stringliteral}{'keepReplica'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'replicas'} => \textcolor{stringliteral}{'replica'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shard\_choser'} => \textcolor{stringliteral}{'shardChoser'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shard\_manager\_class'} => \textcolor{stringliteral}{'shardManagerClass'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'server\_version'} => \textcolor{stringliteral}{'serverVersion'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'default\_table\_options'} => \textcolor{stringliteral}{'defaultTableOptions'},}
+\DoxyCodeLine{            ] as \$old => \$new}
+\DoxyCodeLine{        ) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! isset(\$options[\$old])) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$options[\$new] = \$options[\$old];}
+\DoxyCodeLine{            unset(\$options[\$old]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$options[\textcolor{stringliteral}{'slaves'}]) \&\& ! empty(\$options[\textcolor{stringliteral}{'replica'}]) \&\& ! empty(\$options[\textcolor{stringliteral}{'shards'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} InvalidArgumentException(\textcolor{stringliteral}{'Sharding and master-\/slave connection cannot be used together'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$options[\textcolor{stringliteral}{'slaves'}]) || ! empty(\$options[\textcolor{stringliteral}{'replica'}])) \{}
+\DoxyCodeLine{            \$nonRewrittenKeys = [}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driver'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driverOptions'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driverClass'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'wrapperClass'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'keepSlave'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'keepReplica'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shardChoser'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'platform'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'slaves'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'master'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'primary'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'replica'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shards'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'serverVersion'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'defaultTableOptions'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{comment}{// included by safety but should have been unset already}}
+\DoxyCodeLine{                \textcolor{stringliteral}{'logging'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'profiling'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'mapping\_types'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'platform\_service'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{            ];}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$options as \$key => \$value) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (isset(\$nonRewrittenKeys[\$key])) \{}
+\DoxyCodeLine{                    \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \$options[\textcolor{stringliteral}{'primary'}][\$key] = \$value;}
+\DoxyCodeLine{                unset(\$options[\$key]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (empty(\$options[\textcolor{stringliteral}{'wrapperClass'}])) \{}
+\DoxyCodeLine{                \textcolor{comment}{// Change the wrapper class only if user did not configure custom one.}}
+\DoxyCodeLine{                \$options[\textcolor{stringliteral}{'wrapperClass'}] = PrimaryReadReplicaConnection::class;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            unset(\$options[\textcolor{stringliteral}{'slaves'}], \$options[\textcolor{stringliteral}{'replica'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$options[\textcolor{stringliteral}{'shards'}])) \{}
+\DoxyCodeLine{            \$nonRewrittenKeys = [}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driver'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driverOptions'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'driverClass'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'wrapperClass'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'keepSlave'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'keepReplica'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shardChoser'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'platform'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'slaves'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'replica'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'global'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shards'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'serverVersion'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'defaultTableOptions'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{comment}{// included by safety but should have been unset already}}
+\DoxyCodeLine{                \textcolor{stringliteral}{'logging'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'profiling'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'mapping\_types'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'platform\_service'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'shardManagerClass'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{            ];}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$options as \$key => \$value) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (isset(\$nonRewrittenKeys[\$key])) \{}
+\DoxyCodeLine{                    \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \$options[\textcolor{stringliteral}{'global'}][\$key] = \$value;}
+\DoxyCodeLine{                unset(\$options[\$key]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (empty(\$options[\textcolor{stringliteral}{'wrapperClass'}])) \{}
+\DoxyCodeLine{                \textcolor{comment}{// Change the wrapper class only if the user does not already forced using a custom one.}}
+\DoxyCodeLine{                \$options[\textcolor{stringliteral}{'wrapperClass'}] = \textcolor{stringliteral}{'Doctrine\(\backslash\)\(\backslash\)DBAL\(\backslash\)\(\backslash\)Sharding\(\backslash\)\(\backslash\)PoolingShardConnection'};}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (empty(\$options[\textcolor{stringliteral}{'shardManagerClass'}])) \{}
+\DoxyCodeLine{                \textcolor{comment}{// Change the shard manager class only if the user does not already forced using a custom one.}}
+\DoxyCodeLine{                \$options[\textcolor{stringliteral}{'shardManagerClass'}] = \textcolor{stringliteral}{'Doctrine\(\backslash\)\(\backslash\)DBAL\(\backslash\)\(\backslash\)Sharding\(\backslash\)\(\backslash\)PoolingShardManager'};}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            unset(\$options[\textcolor{stringliteral}{'shards'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$options;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a703927f9bd7d67693d8ad2e742080a4a}{ormLoad}}(array \$config, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(UnitOfWork::class)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{throw} \textcolor{keyword}{new} LogicException(\textcolor{stringliteral}{'To configure the ORM layer, you must first install the doctrine/orm package.'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$loader = \textcolor{keyword}{new} XmlFileLoader(\$container, \textcolor{keyword}{new} FileLocator(\_\_DIR\_\_ . \textcolor{stringliteral}{'/../Resources/config'}));}
+\DoxyCodeLine{        \$loader-\/>load(\textcolor{stringliteral}{'orm.xml'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (class\_exists(AbstractType::class)) \{}
+\DoxyCodeLine{            \$container-\/>getDefinition(\textcolor{stringliteral}{'form.type.entity'})-\/>addTag(\textcolor{stringliteral}{'kernel.reset'}, [\textcolor{stringliteral}{'method'} => \textcolor{stringliteral}{'reset'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// available in Symfony 5.4 and higher}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(DoctrineDbalCacheAdapterSchemaSubscriber::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.orm.listeners.doctrine\_dbal\_cache\_adapter\_schema\_subscriber'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// available in Symfony 5.1 and up to Symfony 5.4 (deprecated)}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(PdoCacheAdapterDoctrineSchemaSubscriber::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.orm.listeners.pdo\_cache\_adapter\_doctrine\_schema\_subscriber'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// available in Symfony 5.3 and higher}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(RememberMeTokenProviderDoctrineSchemaSubscriber::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.orm.listeners.doctrine\_token\_provider\_schema\_subscriber'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(UlidGenerator::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.ulid\_generator'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(UuidGenerator::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.uuid\_generator'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// not available in Doctrine ORM 3.0 and higher}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(ConvertMappingCommand::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.mapping\_convert\_command'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(EnsureProductionSettingsCommand::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.ensure\_production\_settings\_command'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(ClassMetadataExporter::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.mapping\_import\_command'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$entityManagers = [];}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (array\_keys(\$config[\textcolor{stringliteral}{'entity\_managers'}]) as \$name) \{}
+\DoxyCodeLine{            \$entityManagers[\$name] = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager'}, \$name);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setParameter(\textcolor{stringliteral}{'doctrine.entity\_managers'}, \$entityManagers);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (empty(\$config[\textcolor{stringliteral}{'default\_entity\_manager'}])) \{}
+\DoxyCodeLine{            \$tmp                              = array\_keys(\$entityManagers);}
+\DoxyCodeLine{            \$config[\textcolor{stringliteral}{'default\_entity\_manager'}] = reset(\$tmp);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setParameter(\textcolor{stringliteral}{'doctrine.default\_entity\_manager'}, \$config[\textcolor{stringliteral}{'default\_entity\_manager'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$options = [\textcolor{stringliteral}{'auto\_generate\_proxy\_classes'}, \textcolor{stringliteral}{'proxy\_dir'}, \textcolor{stringliteral}{'proxy\_namespace'}];}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$options as \$key) \{}
+\DoxyCodeLine{            \$container-\/>setParameter(\textcolor{stringliteral}{'doctrine.orm.'} . \$key, \$config[\$key]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setAlias(\textcolor{stringliteral}{'doctrine.orm.entity\_manager'}, \$defaultEntityManagerDefinitionId = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager'}, \$config[\textcolor{stringliteral}{'default\_entity\_manager'}]));}
+\DoxyCodeLine{        \$container-\/>getAlias(\textcolor{stringliteral}{'doctrine.orm.entity\_manager'})-\/>setPublic(\textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$config[\textcolor{stringliteral}{'entity\_managers'}] = \$this-\/>\mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_dependency_injection_1_1_abstract_doctrine_extension_af2c2ba53aea1e0072d5c79d8a2630341}{fixManagersAutoMappings}}(\$config[\textcolor{stringliteral}{'entity\_managers'}], \$container-\/>getParameter(\textcolor{stringliteral}{'kernel.bundles'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$config[\textcolor{stringliteral}{'entity\_managers'}] as \$name => \$entityManager) \{}
+\DoxyCodeLine{            \$entityManager[\textcolor{stringliteral}{'name'}] = \$name;}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_adca6bd4aba862b1103f8f983f8911976}{loadOrmEntityManager}}(\$entityManager, \$container);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (interface\_exists(PropertyInfoExtractorInterface::class)) \{}
+\DoxyCodeLine{                \$this-\/>loadPropertyInfoExtractor(\$name, \$container);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! interface\_exists(LoaderInterface::class)) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$this-\/>loadValidatorLoader(\$name, \$container);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$config[\textcolor{stringliteral}{'resolve\_target\_entities'}]) \{}
+\DoxyCodeLine{            \$def = \$container-\/>findDefinition(\textcolor{stringliteral}{'doctrine.orm.listeners.resolve\_target\_entity'});}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$config[\textcolor{stringliteral}{'resolve\_target\_entities'}] as \$name => \$implementation) \{}
+\DoxyCodeLine{                \$def-\/>addMethodCall(\textcolor{stringliteral}{'addResolveTargetEntity'}, [}
+\DoxyCodeLine{                    \$name,}
+\DoxyCodeLine{                    \$implementation,}
+\DoxyCodeLine{                    [],}
+\DoxyCodeLine{                ]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$def-\/>addTag(\textcolor{stringliteral}{'doctrine.event\_subscriber'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>registerForAutoconfiguration(ServiceEntityRepositoryInterface::class)}
+\DoxyCodeLine{            -\/>addTag(ServiceRepositoryCompilerPass::REPOSITORY\_SERVICE\_TAG);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>registerForAutoconfiguration(EventSubscriberInterface::class)}
+\DoxyCodeLine{            -\/>addTag(\textcolor{stringliteral}{'doctrine.event\_subscriber'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>registerForAutoconfiguration(AbstractIdGenerator::class)}
+\DoxyCodeLine{            -\/>addTag(IdGeneratorPass::ID\_GENERATOR\_TAG);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (method\_exists(\$container, \textcolor{stringliteral}{'registerAttributeForAutoconfiguration'})) \{}
+\DoxyCodeLine{            \$container-\/>registerAttributeForAutoconfiguration(AsEntityListener::class, \textcolor{keyword}{static} \textcolor{keyword}{function} (ChildDefinition \$definition, AsEntityListener \$attribute) \{}
+\DoxyCodeLine{                \$definition-\/>addTag(\textcolor{stringliteral}{'doctrine.orm.entity\_listener'}, [}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'event'}          => \$attribute-\/>event,}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'method'}         => \$attribute-\/>method,}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'lazy'}           => \$attribute-\/>lazy,}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'entity\_manager'} => \$attribute-\/>entityManager,}
+\DoxyCodeLine{                ]);}
+\DoxyCodeLine{            \});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>getDefinition(\$defaultEntityManagerDefinitionId)}
+\DoxyCodeLine{            -\/>addTag(\textcolor{stringliteral}{'container.preload'}, [}
+\DoxyCodeLine{                \textcolor{stringliteral}{'class'} => Autoloader::class,}
+\DoxyCodeLine{            ]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_adca6bd4aba862b1103f8f983f8911976}{loadOrmEntityManager}}(array \$entityManager, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$ormConfigDef = \$container-\/>setDefinition(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_configuration'}, \$entityManager[\textcolor{stringliteral}{'name'}]), \textcolor{keyword}{new} ChildDefinition(\textcolor{stringliteral}{'doctrine.orm.configuration'}));}
+\DoxyCodeLine{        \$ormConfigDef-\/>addTag(IdGeneratorPass::CONFIGURATION\_TAG);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>loadOrmEntityManagerMappingInformation(\$entityManager, \$ormConfigDef, \$container);}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afc12838352daf7e134527f7a1118d262}{loadOrmCacheDrivers}}(\$entityManager, \$container);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$entityManager[\textcolor{stringliteral}{'entity\_listener\_resolver'}]) \&\& \$entityManager[\textcolor{stringliteral}{'entity\_listener\_resolver'}]) \{}
+\DoxyCodeLine{            \$container-\/>setAlias(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_listener\_resolver'}, \$entityManager[\textcolor{stringliteral}{'name'}]), \$entityManager[\textcolor{stringliteral}{'entity\_listener\_resolver'}]);}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            \$definition = \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.entity\_listener\_resolver.class\%'});}
+\DoxyCodeLine{            \$definition-\/>addArgument(\textcolor{keyword}{new} Reference(\textcolor{stringliteral}{'service\_container'}));}
+\DoxyCodeLine{            \$container-\/>setDefinition(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_listener\_resolver'}, \$entityManager[\textcolor{stringliteral}{'name'}]), \$definition);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$methods = [}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setMetadataCache'} => \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_metadata\_cache'}, \$entityManager[\textcolor{stringliteral}{'name'}])),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setQueryCacheImpl'} => \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_query\_cache'}, \$entityManager[\textcolor{stringliteral}{'name'}])),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setResultCacheImpl'} => \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_result\_cache'}, \$entityManager[\textcolor{stringliteral}{'name'}])),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setMetadataDriverImpl'} => \textcolor{keyword}{new} Reference(\textcolor{stringliteral}{'doctrine.orm.'} . \$entityManager[\textcolor{stringliteral}{'name'}] . \textcolor{stringliteral}{'\_metadata\_driver'}),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setProxyDir'} => \textcolor{stringliteral}{'\%doctrine.orm.proxy\_dir\%'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setProxyNamespace'} => \textcolor{stringliteral}{'\%doctrine.orm.proxy\_namespace\%'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setAutoGenerateProxyClasses'} => \textcolor{stringliteral}{'\%doctrine.orm.auto\_generate\_proxy\_classes\%'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setClassMetadataFactoryName'} => \$entityManager[\textcolor{stringliteral}{'class\_metadata\_factory\_name'}],}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setDefaultRepositoryClassName'} => \$entityManager[\textcolor{stringliteral}{'default\_repository\_class'}],}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setNamingStrategy'} => \textcolor{keyword}{new} Reference(\$entityManager[\textcolor{stringliteral}{'naming\_strategy'}]),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setQuoteStrategy'} => \textcolor{keyword}{new} Reference(\$entityManager[\textcolor{stringliteral}{'quote\_strategy'}]),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'setEntityListenerResolver'} => \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_listener\_resolver'}, \$entityManager[\textcolor{stringliteral}{'name'}])),}
+\DoxyCodeLine{        ];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$listenerId        = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_listeners.attach\_entity\_listeners'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{        \$listenerDef       = \$container-\/>setDefinition(\$listenerId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.listeners.attach\_entity\_listeners.class\%'}));}
+\DoxyCodeLine{        \$listenerTagParams = [\textcolor{stringliteral}{'event'} => \textcolor{stringliteral}{'loadClassMetadata'}];}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$entityManager[\textcolor{stringliteral}{'connection'}])) \{}
+\DoxyCodeLine{            \$listenerTagParams[\textcolor{stringliteral}{'connection'}] = \$entityManager[\textcolor{stringliteral}{'connection'}];}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$listenerDef-\/>addTag(\textcolor{stringliteral}{'doctrine.event\_listener'}, \$listenerTagParams);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}])) \{}
+\DoxyCodeLine{            \$this-\/>loadOrmSecondLevelCache(\$entityManager, \$ormConfigDef, \$container);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$entityManager[\textcolor{stringliteral}{'repository\_factory'}]) \{}
+\DoxyCodeLine{            \$methods[\textcolor{stringliteral}{'setRepositoryFactory'}] = \textcolor{keyword}{new} Reference(\$entityManager[\textcolor{stringliteral}{'repository\_factory'}]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$methods as \$method => \$arg) \{}
+\DoxyCodeLine{            \$ormConfigDef-\/>addMethodCall(\$method, [\$arg]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'hydrators'}] as \$name => \$class) \{}
+\DoxyCodeLine{            \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'addCustomHydrationMode'}, [\$name, \$class]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! empty(\$entityManager[\textcolor{stringliteral}{'dql'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'dql'}][\textcolor{stringliteral}{'string\_functions'}] as \$name => \$function) \{}
+\DoxyCodeLine{                \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'addCustomStringFunction'}, [\$name, \$function]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'dql'}][\textcolor{stringliteral}{'numeric\_functions'}] as \$name => \$function) \{}
+\DoxyCodeLine{                \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'addCustomNumericFunction'}, [\$name, \$function]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'dql'}][\textcolor{stringliteral}{'datetime\_functions'}] as \$name => \$function) \{}
+\DoxyCodeLine{                \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'addCustomDatetimeFunction'}, [\$name, \$function]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$enabledFilters    = [];}
+\DoxyCodeLine{        \$filtersParameters = [];}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'filters'}] as \$name => \$filter) \{}
+\DoxyCodeLine{            \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'addFilter'}, [\$name, \$filter[\textcolor{stringliteral}{'class'}]]);}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\$filter[\textcolor{stringliteral}{'enabled'}]) \{}
+\DoxyCodeLine{                \$enabledFilters[] = \$name;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! \$filter[\textcolor{stringliteral}{'parameters'}]) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$filtersParameters[\$name] = \$filter[\textcolor{stringliteral}{'parameters'}];}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$managerConfiguratorName = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_manager\_configurator'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{        \$container}
+\DoxyCodeLine{            -\/>setDefinition(\$managerConfiguratorName, \textcolor{keyword}{new} ChildDefinition(\textcolor{stringliteral}{'doctrine.orm.manager\_configurator.abstract'}))}
+\DoxyCodeLine{            -\/>replaceArgument(0, \$enabledFilters)}
+\DoxyCodeLine{            -\/>replaceArgument(1, \$filtersParameters);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! isset(\$entityManager[\textcolor{stringliteral}{'connection'}])) \{}
+\DoxyCodeLine{            \$entityManager[\textcolor{stringliteral}{'connection'}] = \$this-\/>defaultConnection;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$entityManagerId = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container}
+\DoxyCodeLine{            -\/>setDefinition(\$entityManagerId, \textcolor{keyword}{new} ChildDefinition(\textcolor{stringliteral}{'doctrine.orm.entity\_manager.abstract'}))}
+\DoxyCodeLine{            -\/>setPublic(\textcolor{keyword}{true})}
+\DoxyCodeLine{            -\/>setArguments([}
+\DoxyCodeLine{                \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection'}, \$entityManager[\textcolor{stringliteral}{'connection'}])),}
+\DoxyCodeLine{                \textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_configuration'}, \$entityManager[\textcolor{stringliteral}{'name'}])),}
+\DoxyCodeLine{            ])}
+\DoxyCodeLine{            -\/>setConfigurator([\textcolor{keyword}{new} Reference(\$managerConfiguratorName), \textcolor{stringliteral}{'configure'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container}
+\DoxyCodeLine{            -\/>registerAliasForArgument(\$entityManagerId, EntityManagerInterface::class, sprintf(\textcolor{stringliteral}{'\%sEntityManager'}, \$entityManager[\textcolor{stringliteral}{'name'}]))}
+\DoxyCodeLine{            -\/>setPublic(\textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setAlias(}
+\DoxyCodeLine{            sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager.event\_manager'}, \$entityManager[\textcolor{stringliteral}{'name'}]),}
+\DoxyCodeLine{            \textcolor{keyword}{new} Alias(sprintf(\textcolor{stringliteral}{'doctrine.dbal.\%s\_connection.event\_manager'}, \$entityManager[\textcolor{stringliteral}{'connection'}]), \textcolor{keyword}{false})}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! isset(\$entityManager[\textcolor{stringliteral}{'entity\_listeners'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$entities = \$entityManager[\textcolor{stringliteral}{'entity\_listeners'}][\textcolor{stringliteral}{'entities'}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{foreach} (\$entities as \$entityListenerClass => \$entity) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$entity[\textcolor{stringliteral}{'listeners'}] as \$listenerClass => \$listener) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{foreach} (\$listener[\textcolor{stringliteral}{'events'}] as \$listenerEvent) \{}
+\DoxyCodeLine{                    \$listenerEventName = \$listenerEvent[\textcolor{stringliteral}{'type'}];}
+\DoxyCodeLine{                    \$listenerMethod    = \$listenerEvent[\textcolor{stringliteral}{'method'}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{                    \$listenerDef-\/>addMethodCall(\textcolor{stringliteral}{'addEntityListener'}, [}
+\DoxyCodeLine{                        \$entityListenerClass,}
+\DoxyCodeLine{                        \$listenerClass,}
+\DoxyCodeLine{                        \$listenerEventName,}
+\DoxyCodeLine{                        \$listenerMethod,}
+\DoxyCodeLine{                    ]);}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} loadOrmEntityManagerMappingInformation(array \$entityManager, Definition \$ormConfigDef, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// reset state of drivers and alias map. They are only used by this methods and children.}}
+\DoxyCodeLine{        \$this-\/>drivers  = [];}
+\DoxyCodeLine{        \$this-\/>aliasMap = [];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_dependency_injection_1_1_abstract_doctrine_extension_aadc43bf3af846be9ecda7eedd0511ab6}{loadMappingInformation}}(\$entityManager, \$container);}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_dependency_injection_1_1_abstract_doctrine_extension_a0fa51baff8c77b7985843afba0cb30c5}{registerMappingDrivers}}(\$entityManager, \$container);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'setEntityNamespaces'}, [\$this-\/>aliasMap]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} loadOrmSecondLevelCache(array \$entityManager, Definition \$ormConfigDef, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$driverId = \textcolor{keyword}{null};}
+\DoxyCodeLine{        \$enabled  = \$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'enabled'}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'region\_cache\_driver'}])) \{}
+\DoxyCodeLine{            \$driverName = \textcolor{stringliteral}{'second\_level\_cache.region\_cache\_driver'};}
+\DoxyCodeLine{            \$driverMap  = \$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'region\_cache\_driver'}];}
+\DoxyCodeLine{            \$driverId   = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\$driverName, \$entityManager[\textcolor{stringliteral}{'name'}], \$driverMap, \$container);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$configId   = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.cache\_configuration'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{        \$regionsId  = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.regions\_configuration'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{        \$driverId   = \$driverId ?: sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.region\_cache\_driver'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{        \$configDef  = \$container-\/>setDefinition(\$configId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.cache\_configuration.class\%'}));}
+\DoxyCodeLine{        \$regionsDef = \$container}
+\DoxyCodeLine{            -\/>setDefinition(\$regionsId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.regions\_configuration.class\%'}))}
+\DoxyCodeLine{            -\/>setArguments([\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'region\_lifetime'}], \$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'region\_lock\_lifetime'}]]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$slcFactoryId = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.default\_cache\_factory'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{        \$factoryClass = \$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'factory'}] ?? \textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.default\_cache\_factory.class\%'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$definition = \textcolor{keyword}{new} Definition(\$factoryClass, [\textcolor{keyword}{new} Reference(\$regionsId), \textcolor{keyword}{new} Reference(\$driverId)]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$slcFactoryDef = \$container}
+\DoxyCodeLine{            -\/>setDefinition(\$slcFactoryId, \$definition);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'regions'}])) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'regions'}] as \$name => \$region) \{}
+\DoxyCodeLine{                \$regionRef  = \textcolor{keyword}{null};}
+\DoxyCodeLine{                \$regionType = \$region[\textcolor{stringliteral}{'type'}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\$regionType === \textcolor{stringliteral}{'service'}) \{}
+\DoxyCodeLine{                    \$regionId  = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.region.\%s'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$name);}
+\DoxyCodeLine{                    \$regionRef = \textcolor{keyword}{new} Reference(\$region[\textcolor{stringliteral}{'service'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{                    \$container-\/>setAlias(\$regionId, \textcolor{keyword}{new} Alias(\$region[\textcolor{stringliteral}{'service'}], \textcolor{keyword}{false}));}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\$regionType === \textcolor{stringliteral}{'default'} || \$regionType === \textcolor{stringliteral}{'filelock'}) \{}
+\DoxyCodeLine{                    \$regionId   = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.region.\%s'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$name);}
+\DoxyCodeLine{                    \$driverName = sprintf(\textcolor{stringliteral}{'second\_level\_cache.region.\%s\_driver'}, \$name);}
+\DoxyCodeLine{                    \$driverMap  = \$region[\textcolor{stringliteral}{'cache\_driver'}];}
+\DoxyCodeLine{                    \$driverId   = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\$driverName, \$entityManager[\textcolor{stringliteral}{'name'}], \$driverMap, \$container);}
+\DoxyCodeLine{                    \$regionRef  = \textcolor{keyword}{new} Reference(\$regionId);}
+\DoxyCodeLine{}
+\DoxyCodeLine{                    \$container}
+\DoxyCodeLine{                        -\/>setDefinition(\$regionId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.default\_region.class\%'}))}
+\DoxyCodeLine{                        -\/>setArguments([\$name, \textcolor{keyword}{new} Reference(\$driverId), \$region[\textcolor{stringliteral}{'lifetime'}]]);}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\$regionType === \textcolor{stringliteral}{'filelock'}) \{}
+\DoxyCodeLine{                    \$regionId = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.region.\%s\_filelock'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{                    \$container}
+\DoxyCodeLine{                        -\/>setDefinition(\$regionId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.filelock\_region.class\%'}))}
+\DoxyCodeLine{                        -\/>setArguments([\$regionRef, \$region[\textcolor{stringliteral}{'lock\_path'}], \$region[\textcolor{stringliteral}{'lock\_lifetime'}]]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{                    \$regionRef = \textcolor{keyword}{new} Reference(\$regionId);}
+\DoxyCodeLine{                    \$regionsDef-\/>addMethodCall(\textcolor{stringliteral}{'getLockLifetime'}, [\$name, \$region[\textcolor{stringliteral}{'lock\_lifetime'}]]);}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \$regionsDef-\/>addMethodCall(\textcolor{stringliteral}{'setLifetime'}, [\$name, \$region[\textcolor{stringliteral}{'lifetime'}]]);}
+\DoxyCodeLine{                \$slcFactoryDef-\/>addMethodCall(\textcolor{stringliteral}{'setRegion'}, [\$regionRef]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'log\_enabled'}]) \{}
+\DoxyCodeLine{            \$loggerChainId   = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.logger\_chain'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{            \$loggerStatsId   = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.logger\_statistics'}, \$entityManager[\textcolor{stringliteral}{'name'}]);}
+\DoxyCodeLine{            \$loggerChaingDef = \$container-\/>setDefinition(\$loggerChainId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.logger\_chain.class\%'}));}
+\DoxyCodeLine{            \$loggerStatsDef  = \$container-\/>setDefinition(\$loggerStatsId, \textcolor{keyword}{new} Definition(\textcolor{stringliteral}{'\%doctrine.orm.second\_level\_cache.logger\_statistics.class\%'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$loggerChaingDef-\/>addMethodCall(\textcolor{stringliteral}{'setLogger'}, [\textcolor{stringliteral}{'statistics'}, \$loggerStatsDef]);}
+\DoxyCodeLine{            \$configDef-\/>addMethodCall(\textcolor{stringliteral}{'setCacheLogger'}, [\$loggerChaingDef]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{foreach} (\$entityManager[\textcolor{stringliteral}{'second\_level\_cache'}][\textcolor{stringliteral}{'loggers'}] as \$name => \$logger) \{}
+\DoxyCodeLine{                \$loggerId  = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_second\_level\_cache.logger.\%s'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$name);}
+\DoxyCodeLine{                \$loggerRef = \textcolor{keyword}{new} Reference(\$logger[\textcolor{stringliteral}{'service'}]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{                \$container-\/>setAlias(\$loggerId, \textcolor{keyword}{new} Alias(\$logger[\textcolor{stringliteral}{'service'}], \textcolor{keyword}{false}));}
+\DoxyCodeLine{                \$loggerChaingDef-\/>addMethodCall(\textcolor{stringliteral}{'setLogger'}, [\$name, \$loggerRef]);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$configDef-\/>addMethodCall(\textcolor{stringliteral}{'setCacheFactory'}, [\$slcFactoryDef]);}
+\DoxyCodeLine{        \$configDef-\/>addMethodCall(\textcolor{stringliteral}{'setRegionsConfiguration'}, [\$regionsDef]);}
+\DoxyCodeLine{        \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'setSecondLevelCacheEnabled'}, [\$enabled]);}
+\DoxyCodeLine{        \$ormConfigDef-\/>addMethodCall(\textcolor{stringliteral}{'setSecondLevelCacheConfiguration'}, [\$configDef]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9ff671c47dda0677970fe6a31a027734}{getObjectManagerElementName}}(\$name): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{'doctrine.orm.'} . \$name;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a0724eae1d16e92d0eb0e6a5758aac4c9}{getMappingObjectDefaultName}}(): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Entity'};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_doctrine_1_1_dependency_injection_1_1_abstract_doctrine_extension_a4110f650eb717469c56e795ee8584203}{getMappingResourceConfigDirectory}}(?\textcolor{keywordtype}{string} \$bundleDir = \textcolor{keyword}{null}): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (\$bundleDir !== \textcolor{keyword}{null} \&\& is\_dir(\$bundleDir . \textcolor{stringliteral}{'/config/doctrine'})) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \textcolor{stringliteral}{'config/doctrine'};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{'Resources/config/doctrine'};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a7b0377fb18afa90d6af42b0838ed5d8d}{getMappingResourceExtension}}(): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{'orm'};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\$cacheName, \$objectManagerName, array \$cacheDriver, ContainerBuilder \$container): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$aliasId = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9ff671c47dda0677970fe6a31a027734}{getObjectManagerElementName}}(sprintf(\textcolor{stringliteral}{'\%s\_\%s'}, \$objectManagerName, \$cacheName));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{switch} (\$cacheDriver[\textcolor{stringliteral}{'type'}] ?? \textcolor{stringliteral}{'pool'}) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{case} \textcolor{stringliteral}{'service'}:}
+\DoxyCodeLine{                \$serviceId = \$cacheDriver[\textcolor{stringliteral}{'id'}];}
+\DoxyCodeLine{                \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{case} \textcolor{stringliteral}{'pool'}:}
+\DoxyCodeLine{                \$serviceId = \$cacheDriver[\textcolor{stringliteral}{'pool'}] ?? \$this-\/>createArrayAdapterCachePool(\$container, \$objectManagerName, \$cacheName);}
+\DoxyCodeLine{                \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{                \textcolor{keywordflow}{throw} new \(\backslash\)InvalidArgumentException(sprintf(}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'Unknown cache of type "{}\%s"{} configured for cache "{}\%s"{} in entity manager "{}\%s"{}.'},}
+\DoxyCodeLine{                    \$cacheDriver[\textcolor{stringliteral}{'type'}],}
+\DoxyCodeLine{                    \$cacheName,}
+\DoxyCodeLine{                    \$objectManagerName}
+\DoxyCodeLine{                ));}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setAlias(\$aliasId, \textcolor{keyword}{new} Alias(\$serviceId, \textcolor{keyword}{false}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$aliasId;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afc12838352daf7e134527f7a1118d262}{loadOrmCacheDrivers}}(array \$entityManager, ContainerBuilder \$container)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (isset(\$entityManager[\textcolor{stringliteral}{'metadata\_cache\_driver'}])) \{}
+\DoxyCodeLine{            \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\textcolor{stringliteral}{'metadata\_cache'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$entityManager[\textcolor{stringliteral}{'metadata\_cache\_driver'}], \$container);}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            \$this-\/>createMetadataCache(\$entityManager[\textcolor{stringliteral}{'name'}], \$container);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\textcolor{stringliteral}{'result\_cache'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$entityManager[\textcolor{stringliteral}{'result\_cache\_driver'}], \$container);}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\textcolor{stringliteral}{'query\_cache'}, \$entityManager[\textcolor{stringliteral}{'name'}], \$entityManager[\textcolor{stringliteral}{'query\_cache\_driver'}], \$container);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} createMetadataCache(\textcolor{keywordtype}{string} \$objectManagerName, ContainerBuilder \$container): void}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$aliasId = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9ff671c47dda0677970fe6a31a027734}{getObjectManagerElementName}}(sprintf(\textcolor{stringliteral}{'\%s\_\%s'}, \$objectManagerName, \textcolor{stringliteral}{'metadata\_cache'}));}
+\DoxyCodeLine{        \$cacheId = sprintf(\textcolor{stringliteral}{'cache.doctrine.orm.\%s.\%s'}, \$objectManagerName, \textcolor{stringliteral}{'metadata'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$cache = \textcolor{keyword}{new} Definition(ArrayAdapter::class);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! \$container-\/>getParameter(\textcolor{stringliteral}{'kernel.debug'})) \{}
+\DoxyCodeLine{            \$phpArrayFile         = \textcolor{stringliteral}{'\%kernel.cache\_dir\%'} . sprintf(\textcolor{stringliteral}{'/doctrine/orm/\%s\_metadata.php'}, \$objectManagerName);}
+\DoxyCodeLine{            \$cacheWarmerServiceId = \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9ff671c47dda0677970fe6a31a027734}{getObjectManagerElementName}}(sprintf(\textcolor{stringliteral}{'\%s\_\%s'}, \$objectManagerName, \textcolor{stringliteral}{'metadata\_cache\_warmer'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$container-\/>register(\$cacheWarmerServiceId, DoctrineMetadataCacheWarmer::class)}
+\DoxyCodeLine{                -\/>setArguments([\textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager'}, \$objectManagerName)), \$phpArrayFile])}
+\DoxyCodeLine{                -\/>addTag(\textcolor{stringliteral}{'kernel.cache\_warmer'}, [\textcolor{stringliteral}{'priority'} => 1000]); \textcolor{comment}{// priority should be higher than ProxyCacheWarmer}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$cache = \textcolor{keyword}{new} Definition(PhpArrayAdapter::class, [\$phpArrayFile, \$cache]);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$container-\/>setDefinition(\$cacheId, \$cache);}
+\DoxyCodeLine{        \$container-\/>setAlias(\$aliasId, \$cacheId);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} loadPropertyInfoExtractor(\textcolor{keywordtype}{string} \$entityManagerName, ContainerBuilder \$container): void}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$propertyExtractorDefinition = \$container-\/>register(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager.property\_info\_extractor'}, \$entityManagerName), DoctrineExtractor::class);}
+\DoxyCodeLine{        \$argumentId                  = sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager'}, \$entityManagerName);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$propertyExtractorDefinition-\/>addArgument(\textcolor{keyword}{new} Reference(\$argumentId));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$propertyExtractorDefinition-\/>addTag(\textcolor{stringliteral}{'property\_info.list\_extractor'}, [\textcolor{stringliteral}{'priority'} => -\/1001]);}
+\DoxyCodeLine{        \$propertyExtractorDefinition-\/>addTag(\textcolor{stringliteral}{'property\_info.type\_extractor'}, [\textcolor{stringliteral}{'priority'} => -\/999]);}
+\DoxyCodeLine{        \$propertyExtractorDefinition-\/>addTag(\textcolor{stringliteral}{'property\_info.access\_extractor'}, [\textcolor{stringliteral}{'priority'} => -\/999]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} loadValidatorLoader(\textcolor{keywordtype}{string} \$entityManagerName, ContainerBuilder \$container): void}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$validatorLoaderDefinition = \$container-\/>register(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager.validator\_loader'}, \$entityManagerName), DoctrineLoader::class);}
+\DoxyCodeLine{        \$validatorLoaderDefinition-\/>addArgument(\textcolor{keyword}{new} Reference(sprintf(\textcolor{stringliteral}{'doctrine.orm.\%s\_entity\_manager'}, \$entityManagerName)));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$validatorLoaderDefinition-\/>addTag(\textcolor{stringliteral}{'validator.auto\_mapper'}, [\textcolor{stringliteral}{'priority'} => -\/100]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_addbcea32ca31c326c3dff28d3403aa72}{loadObjectManagerCacheDriver}}(array \$objectManager, ContainerBuilder \$container, \$cacheName)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_afda63d845cbff93076b35aa5c8a4bfbb}{loadCacheDriver}}(\$cacheName, \$objectManager[\textcolor{stringliteral}{'name'}], \$objectManager[\$cacheName . \textcolor{stringliteral}{'\_driver'}], \$container);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9857a460fb71e15c8b92aa8c483e3684}{getXsdValidationBasePath}}(): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \_\_DIR\_\_ . \textcolor{stringliteral}{'/../Resources/config/schema'};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a2614df64646ac71b70b1e1074258052b}{getNamespace}}(): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{stringliteral}{'http://symfony.com/schema/dic/doctrine'};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_ae13f5a126c0be3a65f24338b6e9fbeb6}{getConfiguration}}(array \$config, ContainerBuilder \$container): Configuration}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{new} Configuration((\textcolor{keywordtype}{bool}) \$container-\/>getParameter(\textcolor{stringliteral}{'kernel.debug'}));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a5be5556a9a0b6fdb413f7765ebf462a0}{getMetadataDriverClass}}(\textcolor{keywordtype}{string} \$driverType): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{charliteral}{'\%'} . \$this-\/>\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_dependency_injection_1_1_doctrine_extension_a9ff671c47dda0677970fe6a31a027734}{getObjectManagerElementName}}(\textcolor{stringliteral}{'metadata.'} . \$driverType . \textcolor{stringliteral}{'.class'}) . \textcolor{charliteral}{'\%'};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} loadMessengerServices(ContainerBuilder \$container): void}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// If the Messenger component is installed and the doctrine transaction middleware is available, wire it:}}
+\DoxyCodeLine{\textcolor{comment}{}        \textcolor{keywordflow}{if} (! interface\_exists(MessageBusInterface::class) || ! class\_exists(DoctrineTransactionMiddleware::class)) \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{return};}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$loader = \textcolor{keyword}{new} XmlFileLoader(\$container, \textcolor{keyword}{new} FileLocator(\_\_DIR\_\_ . \textcolor{stringliteral}{'/../Resources/config'}));}
+\DoxyCodeLine{        \$loader-\/>load(\textcolor{stringliteral}{'messenger.xml'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(DoctrineClearEntityManagerWorkerSubscriber::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.orm.messenger.event\_subscriber.doctrine\_clear\_entity\_manager'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{// available in Symfony 5.1 and higher}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(MessengerTransportDoctrineSchemaSubscriber::class)) \{}
+\DoxyCodeLine{            \$container-\/>removeDefinition(\textcolor{stringliteral}{'doctrine.orm.messenger.doctrine\_schema\_subscriber'});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$transportFactoryDefinition = \$container-\/>getDefinition(\textcolor{stringliteral}{'messenger.transport.doctrine.factory'});}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (! class\_exists(DoctrineTransportFactory::class)) \{}
+\DoxyCodeLine{            \textcolor{comment}{// If symfony/messenger < 5.1}}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (! class\_exists(\(\backslash\)Symfony\(\backslash\)Component\(\backslash\)Messenger\(\backslash\)Transport\(\backslash\)Doctrine\(\backslash\)DoctrineTransportFactory::class)) \{}
+\DoxyCodeLine{                \textcolor{comment}{// Dont add the tag}}
+\DoxyCodeLine{                \textcolor{keywordflow}{return};}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{            \$transportFactoryDefinition-\/>setClass(\(\backslash\)Symfony\(\backslash\)Component\(\backslash\)Messenger\(\backslash\)Transport\(\backslash\)Doctrine\(\backslash\)DoctrineTransportFactory::class);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$transportFactoryDefinition-\/>addTag(\textcolor{stringliteral}{'messenger.transport\_factory'});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{private} \textcolor{keyword}{function} createArrayAdapterCachePool(ContainerBuilder \$container, \textcolor{keywordtype}{string} \$objectManagerName, \textcolor{keywordtype}{string} \$cacheName): string}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$id = sprintf(\textcolor{stringliteral}{'cache.doctrine.orm.\%s.\%s'}, \$objectManagerName, str\_replace(\textcolor{stringliteral}{'\_cache'}, \textcolor{stringliteral}{''}, \$cacheName));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$poolDefinition = \$container-\/>register(\$id, ArrayAdapter::class);}
+\DoxyCodeLine{        \$poolDefinition-\/>addTag(\textcolor{stringliteral}{'cache.pool'});}
+\DoxyCodeLine{        \$container-\/>setDefinition(\$id, \$poolDefinition);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$id;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

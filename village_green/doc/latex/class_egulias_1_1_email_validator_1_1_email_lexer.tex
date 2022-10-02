@@ -1,0 +1,377 @@
+\hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer}{}\doxysection{Email\+Lexer Class Reference}
+\label{class_egulias_1_1_email_validator_1_1_email_lexer}\index{EmailLexer@{EmailLexer}}
+Inheritance diagram for Email\+Lexer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_egulias_1_1_email_validator_1_1_email_lexer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a67252716dcc042efe6eb70e8765286b3}{has\+Invalid\+Tokens}} ()
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_add032c7c395acda972507895c6a1099a}{find}} (\$type)
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a89f43707bf7b4c874f41d612c75ae649}{get\+Previous}} ()
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a48fd19b25f0dcaf817c9702abeb66a81}{move\+Next}} ()
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_afbd481f9b9caaf784ac130c7e788578b}\label{class_egulias_1_1_email_validator_1_1_email_lexer_afbd481f9b9caaf784ac130c7e788578b}} 
+{\bfseries get\+Accumulated\+Values} ()
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a3b732fbd1b502c2ab8364fa3482a419d}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a3b732fbd1b502c2ab8364fa3482a419d}} 
+{\bfseries start\+Recording} ()
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a11a0db04f8da5384c33b46ad801dce51}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a11a0db04f8da5384c33b46ad801dce51}} 
+{\bfseries stop\+Recording} ()
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a6ffc8667435346f9eec13b1cc98dff94}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a6ffc8667435346f9eec13b1cc98dff94}} 
+{\bfseries clear\+Recorded} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a274dfcb35f51fc0c4698f2a1eda98049}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a274dfcb35f51fc0c4698f2a1eda98049}} 
+const {\bfseries S\+\_\+\+EMPTY} = null
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a0286b3731de44e7252d89f8b6592d6b2}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a0286b3731de44e7252d89f8b6592d6b2}} 
+const {\bfseries C\+\_\+\+NUL} = 0
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a814af3165d775c8e4ad89a41a81d2d6f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a814af3165d775c8e4ad89a41a81d2d6f}} 
+const {\bfseries S\+\_\+\+HTAB} = 9
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a9e823e34524da922f61823bb17485977}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a9e823e34524da922f61823bb17485977}} 
+const {\bfseries S\+\_\+\+LF} = 10
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a968ec40037e3552aeaa74cac699089ef}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a968ec40037e3552aeaa74cac699089ef}} 
+const {\bfseries S\+\_\+\+CR} = 13
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a40bd1a8bb8111d5a1ee60214591994b8}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a40bd1a8bb8111d5a1ee60214591994b8}} 
+const {\bfseries S\+\_\+\+SP} = 32
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a24cf5c4bb15559c5db6fc9730f76e4f5}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a24cf5c4bb15559c5db6fc9730f76e4f5}} 
+const {\bfseries EXCLAMATION} = 33
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a3bfc360bbc383d373f825a332fc1b8e9}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a3bfc360bbc383d373f825a332fc1b8e9}} 
+const {\bfseries S\+\_\+\+DQUOTE} = 34
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_aa91516d24355f61e1ab0ebcbf4858b62}\label{class_egulias_1_1_email_validator_1_1_email_lexer_aa91516d24355f61e1ab0ebcbf4858b62}} 
+const {\bfseries NUMBER\+\_\+\+SIGN} = 35
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a1de6732695fe9ea9e4678c884d1c120d}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a1de6732695fe9ea9e4678c884d1c120d}} 
+const {\bfseries DOLLAR} = 36
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ac5862626afed3f5f3aa6de09a35a2baa}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ac5862626afed3f5f3aa6de09a35a2baa}} 
+const {\bfseries PERCENTAGE} = 37
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_af82ef832749aa47421ea71b72a172d3e}\label{class_egulias_1_1_email_validator_1_1_email_lexer_af82ef832749aa47421ea71b72a172d3e}} 
+const {\bfseries AMPERSAND} = 38
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a76224c58a20e3aa592a25164ffcf250f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a76224c58a20e3aa592a25164ffcf250f}} 
+const {\bfseries S\+\_\+\+SQUOTE} = 39
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ace291444d505add4b384610a7672da9f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ace291444d505add4b384610a7672da9f}} 
+const {\bfseries S\+\_\+\+OPENPARENTHESIS} = 40
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a1d4f15b74a617949746946e0139c517c}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a1d4f15b74a617949746946e0139c517c}} 
+const {\bfseries S\+\_\+\+CLOSEPARENTHESIS} = 41
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_abfc10f4924253cbedf81895b658f2f73}\label{class_egulias_1_1_email_validator_1_1_email_lexer_abfc10f4924253cbedf81895b658f2f73}} 
+const {\bfseries ASTERISK} = 42
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a6a19fc9b81a48ad5a627f000deb24b48}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a6a19fc9b81a48ad5a627f000deb24b48}} 
+const {\bfseries S\+\_\+\+PLUS} = 43
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a9c23dec8e3028ddd70580e41cd41075a}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a9c23dec8e3028ddd70580e41cd41075a}} 
+const {\bfseries S\+\_\+\+COMMA} = 44
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a8bad934077c86e023500ecd356992d61}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a8bad934077c86e023500ecd356992d61}} 
+const {\bfseries S\+\_\+\+HYPHEN} = 45
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_aa020230b64df7ec5d5ce4a36d8cd77e5}\label{class_egulias_1_1_email_validator_1_1_email_lexer_aa020230b64df7ec5d5ce4a36d8cd77e5}} 
+const {\bfseries S\+\_\+\+DOT} = 46
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_acc81cdced9fa179c8413edd28546f470}\label{class_egulias_1_1_email_validator_1_1_email_lexer_acc81cdced9fa179c8413edd28546f470}} 
+const {\bfseries S\+\_\+\+SLASH} = 47
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a5c142d8b74090f16fe8d9167cca1195e}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a5c142d8b74090f16fe8d9167cca1195e}} 
+const {\bfseries S\+\_\+\+COLON} = 58
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_af92772607f21c37254763882fb7cdfd7}\label{class_egulias_1_1_email_validator_1_1_email_lexer_af92772607f21c37254763882fb7cdfd7}} 
+const {\bfseries S\+\_\+\+SEMICOLON} = 59
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a80892f00dafb7a731108f6cf8a671847}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a80892f00dafb7a731108f6cf8a671847}} 
+const {\bfseries S\+\_\+\+LOWERTHAN} = 60
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a847d49c18f6310dd32009b4f1eb42a36}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a847d49c18f6310dd32009b4f1eb42a36}} 
+const {\bfseries S\+\_\+\+EQUAL} = 61
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a29ed922d6be5f2b0bc1b1174e57c296f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a29ed922d6be5f2b0bc1b1174e57c296f}} 
+const {\bfseries S\+\_\+\+GREATERTHAN} = 62
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a55165cec77aa37ecc4f7b1274a3dfa03}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a55165cec77aa37ecc4f7b1274a3dfa03}} 
+const {\bfseries QUESTIONMARK} = 63
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_abdc18e802518a83defb22fede2f18a0f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_abdc18e802518a83defb22fede2f18a0f}} 
+const {\bfseries S\+\_\+\+AT} = 64
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_abd69ab230d411ee89aefe9618cdf3153}\label{class_egulias_1_1_email_validator_1_1_email_lexer_abd69ab230d411ee89aefe9618cdf3153}} 
+const {\bfseries S\+\_\+\+OPENBRACKET} = 91
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_aeb4cd7bd894fbd7494a32253c334c92d}\label{class_egulias_1_1_email_validator_1_1_email_lexer_aeb4cd7bd894fbd7494a32253c334c92d}} 
+const {\bfseries S\+\_\+\+BACKSLASH} = 92
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a10cb547d440ee3cb167a6a424c6314a4}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a10cb547d440ee3cb167a6a424c6314a4}} 
+const {\bfseries S\+\_\+\+CLOSEBRACKET} = 93
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_abe5930134d85f90cff928986c62501c8}\label{class_egulias_1_1_email_validator_1_1_email_lexer_abe5930134d85f90cff928986c62501c8}} 
+const {\bfseries CARET} = 94
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ae9dd911415f2d6f3c8457018ebb8c1ad}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ae9dd911415f2d6f3c8457018ebb8c1ad}} 
+const {\bfseries S\+\_\+\+UNDERSCORE} = 95
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a943efb9d679bb79f5b503e7922e83b8f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a943efb9d679bb79f5b503e7922e83b8f}} 
+const {\bfseries S\+\_\+\+BACKTICK} = 96
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ab0d642c6615237892d8ffc623a0285bf}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ab0d642c6615237892d8ffc623a0285bf}} 
+const {\bfseries S\+\_\+\+OPENCURLYBRACES} = 123
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ab7035671c89c67b832fafd0753dadb8d}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ab7035671c89c67b832fafd0753dadb8d}} 
+const {\bfseries S\+\_\+\+PIPE} = 124
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_af208427c0e2567b9e10437ba179ad0ba}\label{class_egulias_1_1_email_validator_1_1_email_lexer_af208427c0e2567b9e10437ba179ad0ba}} 
+const {\bfseries S\+\_\+\+CLOSECURLYBRACES} = 125
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_af6fc7809e1302562d47576c2ca1a0fdb}\label{class_egulias_1_1_email_validator_1_1_email_lexer_af6fc7809e1302562d47576c2ca1a0fdb}} 
+const {\bfseries S\+\_\+\+TILDE} = 126
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ae60c944d2535348cc1c1e679fa9578a0}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ae60c944d2535348cc1c1e679fa9578a0}} 
+const {\bfseries C\+\_\+\+DEL} = 127
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a1a172f8d2e159cc60cef6b6399f393d9}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a1a172f8d2e159cc60cef6b6399f393d9}} 
+const {\bfseries INVERT\+\_\+\+QUESTIONMARK} = 168
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a6a2c40ee06b46e52469cba5a8ecd4e62}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a6a2c40ee06b46e52469cba5a8ecd4e62}} 
+const {\bfseries INVERT\+\_\+\+EXCLAMATION} = 173
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a20ca52c31142cac5cfdcf7ee545888bf}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a20ca52c31142cac5cfdcf7ee545888bf}} 
+const {\bfseries GENERIC} = 300
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_aad4b0f2d5bb175497cfb57f8c726bd2f}\label{class_egulias_1_1_email_validator_1_1_email_lexer_aad4b0f2d5bb175497cfb57f8c726bd2f}} 
+const {\bfseries S\+\_\+\+IPV6\+TAG} = 301
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a51c222026c95d22d182a70dffb1274d8}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a51c222026c95d22d182a70dffb1274d8}} 
+const {\bfseries INVALID} = 302
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_aa8bdd4d85e1ba0db8c09f92688c27ca6}\label{class_egulias_1_1_email_validator_1_1_email_lexer_aa8bdd4d85e1ba0db8c09f92688c27ca6}} 
+const {\bfseries CRLF} = 1310
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_abde8a62b962ae16ddda700416664ea0e}\label{class_egulias_1_1_email_validator_1_1_email_lexer_abde8a62b962ae16ddda700416664ea0e}} 
+const {\bfseries S\+\_\+\+DOUBLECOLON} = 5858
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a183395a36ff4c2b0e641d86bbc7f40e0}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a183395a36ff4c2b0e641d86bbc7f40e0}} 
+const {\bfseries ASCII\+\_\+\+INVALID\+\_\+\+FROM} = 127
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a49fcf9223f68d3d11cdac2f60671692b}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a49fcf9223f68d3d11cdac2f60671692b}} 
+const {\bfseries ASCII\+\_\+\+INVALID\+\_\+\+TO} = 199
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a00ae4fcafb1145f5e968bdf920f83e2e}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a00ae4fcafb1145f5e968bdf920f83e2e}} 
+{\bfseries \$token}
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ac7a2f8ba99c504f2ec1beca2114a5980}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ac7a2f8ba99c504f2ec1beca2114a5980}} 
+{\bfseries \$lookahead}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{get\+Catchable\+Patterns}} ()
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a6bb3a12156350eef1fd452d13d059eb7}{get\+Non\+Catchable\+Patterns}} ()
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a95469fa51da1c43b32e7678225452daf}{get\+Type}} (\&\$value)
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ab035b358f69087208de1d19973691817}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ab035b358f69087208de1d19973691817}} 
+{\bfseries is\+Invalid\+Char} (string \$value)
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a8374a98fe23626c28a9bbabd74a5227c}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a8374a98fe23626c28a9bbabd74a5227c}} 
+{\bfseries is\+Valid} (string \$value)
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_ad678e9d445dfb1bfebf3f48165801294}{is\+Null\+Type}} (\$value)
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a3d3eded642d6ecf9215dedf868b71e64}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a3d3eded642d6ecf9215dedf868b71e64}} 
+{\bfseries is\+UTF8\+Invalid} (string \$value)
+\item 
+\mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a781d75979d7792ce3e5e4dcf79a623c9}{get\+Modifiers}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ae8501bb86c144c1158278bd14a3f5afd}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ae8501bb86c144c1158278bd14a3f5afd}} 
+{\bfseries \$char\+Value}
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a2cc5db0c282a8a29c38f566045efb2e8}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a2cc5db0c282a8a29c38f566045efb2e8}} 
+{\bfseries \$has\+Invalid\+Tokens} = false
+\item 
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a4774a105bfb14b9d24aa2357408f32f8}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a4774a105bfb14b9d24aa2357408f32f8}} 
+{\bfseries \$previous} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_add032c7c395acda972507895c6a1099a}\label{class_egulias_1_1_email_validator_1_1_email_lexer_add032c7c395acda972507895c6a1099a}} 
+\index{EmailLexer@{EmailLexer}!find@{find}}
+\index{find@{find}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily find (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception \begin{DoxyReturn}{Returns}
+boolean
+\end{DoxyReturn}
+@psalm-\/suppress Invalid\+Scalar\+Argument \mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_addb2dbe6fac3115b8b4bad070f0beb43}\label{class_egulias_1_1_email_validator_1_1_email_lexer_addb2dbe6fac3115b8b4bad070f0beb43}} 
+\index{EmailLexer@{EmailLexer}!getCatchablePatterns@{getCatchablePatterns}}
+\index{getCatchablePatterns@{getCatchablePatterns}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{getCatchablePatterns()}{getCatchablePatterns()}}
+{\footnotesize\ttfamily get\+Catchable\+Patterns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Lexical catchable patterns.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a781d75979d7792ce3e5e4dcf79a623c9}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a781d75979d7792ce3e5e4dcf79a623c9}} 
+\index{EmailLexer@{EmailLexer}!getModifiers@{getModifiers}}
+\index{getModifiers@{getModifiers}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{getModifiers()}{getModifiers()}}
+{\footnotesize\ttfamily get\+Modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a781d75979d7792ce3e5e4dcf79a623c9}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a6bb3a12156350eef1fd452d13d059eb7}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a6bb3a12156350eef1fd452d13d059eb7}} 
+\index{EmailLexer@{EmailLexer}!getNonCatchablePatterns@{getNonCatchablePatterns}}
+\index{getNonCatchablePatterns@{getNonCatchablePatterns}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{getNonCatchablePatterns()}{getNonCatchablePatterns()}}
+{\footnotesize\ttfamily get\+Non\+Catchable\+Patterns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Lexical non-\/catchable patterns.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a6bb3a12156350eef1fd452d13d059eb7}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a89f43707bf7b4c874f41d612c75ae649}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a89f43707bf7b4c874f41d612c75ae649}} 
+\index{EmailLexer@{EmailLexer}!getPrevious@{getPrevious}}
+\index{getPrevious@{getPrevious}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{getPrevious()}{getPrevious()}}
+{\footnotesize\ttfamily get\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get\+Previous
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a95469fa51da1c43b32e7678225452daf}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a95469fa51da1c43b32e7678225452daf}} 
+\index{EmailLexer@{EmailLexer}!getType@{getType}}
+\index{getType@{getType}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}\item[{\&}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Retrieve token type. Also processes the token value if necessary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception \begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a95469fa51da1c43b32e7678225452daf}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a67252716dcc042efe6eb70e8765286b3}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a67252716dcc042efe6eb70e8765286b3}} 
+\index{EmailLexer@{EmailLexer}!hasInvalidTokens@{hasInvalidTokens}}
+\index{hasInvalidTokens@{hasInvalidTokens}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{hasInvalidTokens()}{hasInvalidTokens()}}
+{\footnotesize\ttfamily has\+Invalid\+Tokens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_ad678e9d445dfb1bfebf3f48165801294}\label{class_egulias_1_1_email_validator_1_1_email_lexer_ad678e9d445dfb1bfebf3f48165801294}} 
+\index{EmailLexer@{EmailLexer}!isNullType@{isNullType}}
+\index{isNullType@{isNullType}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{isNullType()}{isNullType()}}
+{\footnotesize\ttfamily is\+Null\+Type (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a48fd19b25f0dcaf817c9702abeb66a81}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a48fd19b25f0dcaf817c9702abeb66a81}} 
+\index{EmailLexer@{EmailLexer}!moveNext@{moveNext}}
+\index{moveNext@{moveNext}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{moveNext()}{moveNext()}}
+{\footnotesize\ttfamily move\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+move\+Next
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a48fd19b25f0dcaf817c9702abeb66a81}{Abstract\+Lexer}}.
+
+\mbox{\Hypertarget{class_egulias_1_1_email_validator_1_1_email_lexer_a4a20559544fdf4dcb457e258dc976cf8}\label{class_egulias_1_1_email_validator_1_1_email_lexer_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{EmailLexer@{EmailLexer}!reset@{reset}}
+\index{reset@{reset}!EmailLexer@{EmailLexer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Lexer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/egulias/email-\/validator/src/Email\+Lexer.\+php\end{DoxyCompactItemize}

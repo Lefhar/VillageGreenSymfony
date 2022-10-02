@@ -1,0 +1,50 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker}{}\doxysection{Limit\+Subquery\+Walker Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker}\index{LimitSubqueryWalker@{LimitSubqueryWalker}}
+Inheritance diagram for Limit\+Subquery\+Walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a3610174d13cc7a5b18cf1196be4c76e4}{walk\+Select\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a6843790f40f176ee7f16d7b0316982d0}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a6843790f40f176ee7f16d7b0316982d0}} 
+const {\bfseries IDENTIFIER\+\_\+\+TYPE} = \textquotesingle{}doctrine\+\_\+paginator.\+id.\+type\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a362053a0185b7b662ff44a73410f66cb}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a362053a0185b7b662ff44a73410f66cb}} 
+const {\bfseries FORCE\+\_\+\+DBAL\+\_\+\+TYPE\+\_\+\+CONVERSION} = \textquotesingle{}doctrine\+\_\+paginator.\+scalar\+\_\+result.\+force\+\_\+dbal\+\_\+type\+\_\+conversion\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Replaces the select\+Clause of the AST with a SELECT DISTINCT root.\+id equivalent. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a3610174d13cc7a5b18cf1196be4c76e4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_walker_a3610174d13cc7a5b18cf1196be4c76e4}} 
+\index{LimitSubqueryWalker@{LimitSubqueryWalker}!walkSelectStatement@{walkSelectStatement}}
+\index{walkSelectStatement@{walkSelectStatement}!LimitSubqueryWalker@{LimitSubqueryWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatement()}{walkSelectStatement()}}
+{\footnotesize\ttfamily walk\+Select\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+Walks down a Select\+Statement AST node, modifying it to retrieve DISTINCT ids of the root Entity.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Pagination/Limit\+Subquery\+Walker.\+php\end{DoxyCompactItemize}

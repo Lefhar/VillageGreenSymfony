@@ -1,0 +1,64 @@
+\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1657}{}\doxysection{5.\+4}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1657}
+
+\begin{DoxyItemize}
+\item Deprecate {\ttfamily Reset\+Loggers\+Worker\+Subscriber} to reset buffered logs in messenger workers, use \char`\"{}reset\+\_\+on\+\_\+message\char`\"{} option in messenger configuration instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1658}{}\doxysection{5.\+3}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1658}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Reset\+Loggers\+Worker\+Subscriber} to reset buffered logs in messenger workers
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1659}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1659}
+
+\begin{DoxyItemize}
+\item The {\ttfamily \$action\+Level} constructor argument of {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Monolog\textbackslash{}Handler\textbackslash{}Fingers\+Crossed\textbackslash{}Not\+Found\+Activation\+Strategy} has been deprecated and replaced by the {\ttfamily \$inner} one which expects an Activation\+Strategy\+Interface to decorate instead. {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Monolog\textbackslash{}Handler\textbackslash{}Fingers\+Crossed\textbackslash{}Not\+Found\+Activation\+Strategy} will become final in 6.\+0.
+\item The {\ttfamily \$action\+Level} constructor argument of {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Monolog\textbackslash{}Handler\textbackslash{}Fingers\+Crossed\textbackslash{}Http\+Code\+Activation\+Strategy} has been deprecated and replaced by the {\ttfamily \$inner} one which expects an Activation\+Strategy\+Interface to decorate instead. {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Monolog\textbackslash{}Handler\textbackslash{}Fingers\+Crossed\textbackslash{}Http\+Code\+Activation\+Strategy} will become final in 6.\+0
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1660}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1660}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Mailer\+Handler}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1661}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1661}
+
+\begin{DoxyItemize}
+\item The methods {\ttfamily Debug\+Processor\+::get\+Logs()}, {\ttfamily Debug\+Processor\+::count\+Errors()}, {\ttfamily Logger\+::get\+Logs()} and {\ttfamily Logger\+::count\+Errors()} have a new {\ttfamily \$request} argument.
+\item Added support for Monolog 2.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1662}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1662}
+
+\begin{DoxyItemize}
+\item The {\ttfamily Route\+Processor} class has been made final
+\item Added {\ttfamily Elasticsearch\+Logstash\+Handler}
+\item Added the {\ttfamily Server\+Log\+Command}. Backport from the deprecated Web\+Server\+Bundle
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1663}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1663}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Console\+Command\+Processor}\+: monolog processor that adds command name and arguments
+\item added {\ttfamily Route\+Processor}\+: monolog processor that adds route name, controller\+::action and route params
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1664}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1664}
+
+\begin{DoxyItemize}
+\item The methods {\ttfamily Debug\+Processor\+::get\+Logs()}, {\ttfamily Debug\+Processor\+::count\+Errors()}, {\ttfamily Logger\+::get\+Logs()} and {\ttfamily Logger\+::count\+Errors()} will have a new {\ttfamily \$request} argument in version 5.\+0, not defining it is deprecated
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1665}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1665}
+
+\begin{DoxyItemize}
+\item {\ttfamily Web\+Processor} now implements {\ttfamily Event\+Subscriber\+Interface} in order to be easily autoconfigured
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1666}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1666}
+
+\begin{DoxyItemize}
+\item the {\ttfamily \$format}, {\ttfamily \$date\+Format}, {\ttfamily \$allow\+Inline\+Line\+Breaks}, and {\ttfamily \$ignore\+Empty\+Context\+And\+Extra} constructor arguments of the {\ttfamily Console\+Formatter} class have been removed, use {\ttfamily \$options} instead
+\item the {\ttfamily Debug\+Handler} class has been removed
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1667}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1667}
+
+\begin{DoxyItemize}
+\item Improved the console handler output formatting by adding var-\/dumper support
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1668}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1668}
+
+\begin{DoxyItemize}
+\item deprecated interface {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Log\textbackslash{}Logger\+Interface} has been removed
+\item deprecated methods {\ttfamily Logger\+::crit()}, {\ttfamily Logger\+::emerg()}, {\ttfamily Logger\+::err()} and {\ttfamily Logger\+::warn()} have been removed
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1669}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1669}
+
+\begin{DoxyItemize}
+\item added Console\+Handler and Console\+Formatter which can be used to show log messages in the console output depending on the verbosity settings
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1670}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_monolog_bridge__c_h_a_n_g_e_l_o_g_autotoc_md1670}
+
+\begin{DoxyItemize}
+\item added Chrome\+Php\+Handler 
+\end{DoxyItemize}

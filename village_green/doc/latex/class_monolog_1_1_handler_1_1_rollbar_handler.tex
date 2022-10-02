@@ -1,0 +1,146 @@
+\hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler}{}\doxysection{Rollbar\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_rollbar_handler}\index{RollbarHandler@{RollbarHandler}}
+Inheritance diagram for Rollbar\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_rollbar_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_a09afd40c399f6c73c40060dff6c622b0}{\+\_\+\+\_\+construct}} (Rollbar\+Logger \$rollbar\+Logger, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_a7751f77b5263bcf940ece6e824a05b38}\label{class_monolog_1_1_handler_1_1_rollbar_handler_a7751f77b5263bcf940ece6e824a05b38}} 
+{\bfseries flush} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_afd10a48eb82021884b22ebfb2dc6dd57}\label{class_monolog_1_1_handler_1_1_rollbar_handler_afd10a48eb82021884b22ebfb2dc6dd57}} 
+{\bfseries \$rollbar\+Logger}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_rollbar_handler_a53dc578a8a0c9b051841f25315043dec}{\$level\+Map}}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_a533c66c9995bd9f022b5f5b325c12ad4}\label{class_monolog_1_1_handler_1_1_rollbar_handler_a533c66c9995bd9f022b5f5b325c12ad4}} 
+{\bfseries \$initialized} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sends errors to Rollbar
+
+If the context data contains a {\ttfamily payload} key, that is used as an array of payload options to Rollbar\+Logger\textquotesingle{}s log method.
+
+Rollbar\textquotesingle{}s context info will contain the context + extra keys from the log record merged, and then on top of that a few keys\+:
+
+
+\begin{DoxyItemize}
+\item level (rollbar level name)
+\item monolog\+\_\+level (monolog level name, raw level, as rollbar only has 5 but monolog 8)
+\item channel
+\item datetime (unix timestamp)
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Paul Statezny \href{mailto:paulstatezny@gmail.com}{\texttt{ paulstatezny@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_a09afd40c399f6c73c40060dff6c622b0}\label{class_monolog_1_1_handler_1_1_rollbar_handler_a09afd40c399f6c73c40060dff6c622b0}} 
+\index{RollbarHandler@{RollbarHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RollbarHandler@{RollbarHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Rollbar\+Logger}]{\$rollbar\+Logger,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Rollbar\+Logger & {\em \$rollbar\+Logger} & Rollbar\+Logger object constructed with valid token \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_rollbar_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{RollbarHandler@{RollbarHandler}!close@{close}}
+\index{close@{close}!RollbarHandler@{RollbarHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_rollbar_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{RollbarHandler@{RollbarHandler}!reset@{reset}}
+\index{reset@{reset}!RollbarHandler@{RollbarHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Processing\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_rollbar_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{RollbarHandler@{RollbarHandler}!write@{write}}
+\index{write@{write}!RollbarHandler@{RollbarHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_rollbar_handler_a53dc578a8a0c9b051841f25315043dec}\label{class_monolog_1_1_handler_1_1_rollbar_handler_a53dc578a8a0c9b051841f25315043dec}} 
+\index{RollbarHandler@{RollbarHandler}!\$levelMap@{\$levelMap}}
+\index{\$levelMap@{\$levelMap}!RollbarHandler@{RollbarHandler}}
+\doxysubsubsection{\texorpdfstring{\$levelMap}{$levelMap}}
+{\footnotesize\ttfamily \$level\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger::DEBUG}}     => \textcolor{stringliteral}{'debug'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_af2d1bd27ecbe33ecaadb558404e9c669}{Logger::INFO}}      => \textcolor{stringliteral}{'info'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a0b32ca69140ca26e6614dddf004ae3d9}{Logger::NOTICE}}    => \textcolor{stringliteral}{'info'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_ad0c7ccd2f8b92a760391d21d0ec7b339}{Logger::WARNING}}   => \textcolor{stringliteral}{'warning'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger::ERROR}}     => \textcolor{stringliteral}{'error'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a5e924d1434e5b36fdc72dd03b1a8f744}{Logger::CRITICAL}}  => \textcolor{stringliteral}{'critical'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_a037a7f6e892e6adb07c2aa099fbaf69d}{Logger::ALERT}}     => \textcolor{stringliteral}{'critical'},}
+\DoxyCodeLine{        \mbox{\hyperlink{class_monolog_1_1_logger_ad93131122361f85c70dab2636fe863a5}{Logger::EMERGENCY}} => \textcolor{stringliteral}{'critical'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Rollbar\+Handler.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,644 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator}{}\doxysection{Entity\+Manager\+Decorator Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator}\index{EntityManagerDecorator@{EntityManagerDecorator}}
+Inheritance diagram for Entity\+Manager\+Decorator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a746a08cc2e0e6f846fca384f9254cbde}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a746a08cc2e0e6f846fca384f9254cbde}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$wrapped)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ab7a0a080d0e721c656eef11cd641638b}{get\+Connection}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ab09661fe78400540f64378a7fe8d6e07}{get\+Expression\+Builder}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af3380f3b13931d581fa973a382946b32}{begin\+Transaction}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a52367c3e33aea79753a657fada61d7c1}{transactional}} (\$func)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a149748586f5641a91a291a9b7325e3de}{wrap\+In\+Transaction}} (callable \$func)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af5674c27d4a92f6228565010eacbb9cb}{commit}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_afa549adf79e3f8c09fe8f903dd5fbfa7}{rollback}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af3812af2aa09531cb39ad72e183ec06b}{create\+Query}} (\$dql=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a4153c955c8880fc96498f277948a377d}{create\+Named\+Query}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a42d18945d006ca1db913b89516240766}{create\+Native\+Query}} (\$sql, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}} \$rsm)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a23e1d94120b184c369c30dce94fb7a04}{create\+Named\+Native\+Query}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad0251d2b59b54d92521c94cf7cf3a567}{create\+Query\+Builder}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a58161e194014319bd65e6340c58d0117}{get\+Reference}} (\$entity\+Name, \$id)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a2b8429f8684d83bd563a9f5db0196c3d}{get\+Partial\+Reference}} (\$entity\+Name, \$identifier)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad26277a12d6d212503d093d36c5e2c8b}{copy}} (\$entity, \$deep=false)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af8cbaa218c3c17fa6cb43e0c6258bc41}{lock}} (\$entity, \$lock\+Mode, \$lock\+Version=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_afa03439b73c8791c5d523bb67ec714c6}{find}} (\$class\+Name, \$id, \$lock\+Mode=null, \$lock\+Version=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad9f7964d2ea3ec421dd166a41e4ff17d}{flush}} (\$entity=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a9be27bf6385362344ed5e6c026d9cd40}{get\+Event\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad6a7980e832ca964872fe29113ab1642}{get\+Configuration}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ac21d0b99fadc55cd5e0b06aeecc73d26}{is\+Open}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a1be8a16d16ad5dfd0cba728a08748dd6}{get\+Unit\+Of\+Work}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a4f1f2f8bff122de423f32e541b380690}{get\+Hydrator}} (\$hydration\+Mode)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0d5c9c6ecc44d88fa406250087942950}{new\+Hydrator}} (\$hydration\+Mode)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a538f11e670d214213641dc895efe6d4f}{get\+Proxy\+Factory}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a428d91319fc73d3038784cf5436936b6}{get\+Filters}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0769ab84c4011f1225aeb500d02de7f3}{is\+Filters\+State\+Clean}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0f7ee5fdb34e24db6f37cd8646bf39eb}{has\+Filters}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ac4d56a528ec8b416428a2c3c86672dc8}{get\+Cache}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} decorators
+
+$<$\+Entity\+Manager\+Interface$>$ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af3380f3b13931d581fa973a382946b32}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af3380f3b13931d581fa973a382946b32}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Starts a transaction on the underlying database connection.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_af3380f3b13931d581fa973a382946b32}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!close@{close}}
+\index{close@{close}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Closes the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}. All entities that are currently managed by this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} become detached. The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} may no longer be used after it is closed.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af5674c27d4a92f6228565010eacbb9cb}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af5674c27d4a92f6228565010eacbb9cb}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!commit@{commit}}
+\index{commit@{commit}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Executes a function in a transaction.
+
+The function gets passed this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} instance as an (optional) parameter.
+
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{flush}} is invoked prior to transaction commit.
+
+If an exception occurs during execution of the function or flushing or transaction commit, the transaction is rolled back, the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} closed and the exception re-\/thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em callable(self)} & T \$func The function to execute transactionally.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T The value returned from the closure.
+\end{DoxyReturn}
+@template T Commits a transaction on the underlying database connection.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_af5674c27d4a92f6228565010eacbb9cb}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad26277a12d6d212503d093d36c5e2c8b}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad26277a12d6d212503d093d36c5e2c8b}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!copy@{copy}}
+\index{copy@{copy}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{}]{\$deep = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\{Creates a copy of the given entity. Can create a shallow or a deep copy.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000220}{Deprecated}}]2.\+7 This method is being removed from the ORM and won\textquotesingle{}t have any replacement\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to copy. \\
+\hline
+bool & {\em \$deep} & FALSE for a shallow copy, TRUE for a deep copy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The new entity.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Method\+Call\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ad26277a12d6d212503d093d36c5e2c8b}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a23e1d94120b184c369c30dce94fb7a04}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a23e1d94120b184c369c30dce94fb7a04}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!createNamedNativeQuery@{createNamedNativeQuery}}
+\index{createNamedNativeQuery@{createNamedNativeQuery}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{createNamedNativeQuery()}{createNamedNativeQuery()}}
+{\footnotesize\ttfamily create\+Named\+Native\+Query (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+\{Creates a \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query}{Native\+Query}} from a named native query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query}{Native\+Query}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a23e1d94120b184c369c30dce94fb7a04}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a4153c955c8880fc96498f277948a377d}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a4153c955c8880fc96498f277948a377d}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!createNamedQuery@{createNamedQuery}}
+\index{createNamedQuery@{createNamedQuery}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{createNamedQuery()}{createNamedQuery()}}
+{\footnotesize\ttfamily create\+Named\+Query (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+\{Creates a \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} from a named query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a4153c955c8880fc96498f277948a377d}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a42d18945d006ca1db913b89516240766}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a42d18945d006ca1db913b89516240766}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!createNativeQuery@{createNativeQuery}}
+\index{createNativeQuery@{createNativeQuery}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{createNativeQuery()}{createNativeQuery()}}
+{\footnotesize\ttfamily create\+Native\+Query (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_result_set_mapping}{Result\+Set\+Mapping}}}]{\$rsm }\end{DoxyParamCaption})}
+
+\{Creates a native SQL query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+Result\+Set\+Mapping & {\em \$rsm} & The Result\+Set\+Mapping to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_native_query}{Native\+Query}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a42d18945d006ca1db913b89516240766}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af3812af2aa09531cb39ad72e183ec06b}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af3812af2aa09531cb39ad72e183ec06b}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!createQuery@{createQuery}}
+\index{createQuery@{createQuery}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{createQuery()}{createQuery()}}
+{\footnotesize\ttfamily create\+Query (\begin{DoxyParamCaption}\item[{}]{\$dql = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\{Creates a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$dql} & The DQL string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_af3812af2aa09531cb39ad72e183ec06b}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad0251d2b59b54d92521c94cf7cf3a567}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad0251d2b59b54d92521c94cf7cf3a567}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!createQueryBuilder@{createQueryBuilder}}
+\index{createQueryBuilder@{createQueryBuilder}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{createQueryBuilder()}{createQueryBuilder()}}
+{\footnotesize\ttfamily create\+Query\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Create a \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_builder}{Query\+Builder}} instance
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_builder}{Query\+Builder}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ad0251d2b59b54d92521c94cf7cf3a567}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_afa03439b73c8791c5d523bb67ec714c6}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_afa03439b73c8791c5d523bb67ec714c6}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!find@{find}}
+\index{find@{find}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily find (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{}]{\$id,  }\item[{}]{\$lock\+Mode = {\ttfamily null},  }\item[{}]{\$lock\+Version = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\} \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad9f7964d2ea3ec421dd166a41e4ff17d}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad9f7964d2ea3ec421dd166a41e4ff17d}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!flush@{flush}}
+\index{flush@{flush}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}\item[{}]{\$entity = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\} \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ac4d56a528ec8b416428a2c3c86672dc8}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ac4d56a528ec8b416428a2c3c86672dc8}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getCache@{getCache}}
+\index{getCache@{getCache}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getCache()}{getCache()}}
+{\footnotesize\ttfamily get\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Returns the cache API for managing the second level cache regions or NULL if the cache is not enabled.
+
+\begin{DoxyReturn}{Returns}
+Cache$\vert$null
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ac4d56a528ec8b416428a2c3c86672dc8}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad6a7980e832ca964872fe29113ab1642}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ad6a7980e832ca964872fe29113ab1642}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getConfiguration@{getConfiguration}}
+\index{getConfiguration@{getConfiguration}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getConfiguration()}{getConfiguration()}}
+{\footnotesize\ttfamily get\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration}{Configuration}} used by the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_configuration}{Configuration}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ad6a7980e832ca964872fe29113ab1642}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ab7a0a080d0e721c656eef11cd641638b}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ab7a0a080d0e721c656eef11cd641638b}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getConnection()}{getConnection()}}
+{\footnotesize\ttfamily get\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the database connection object used by the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}.
+
+\begin{DoxyReturn}{Returns}
+Connection
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ab7a0a080d0e721c656eef11cd641638b}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a9be27bf6385362344ed5e6c026d9cd40}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a9be27bf6385362344ed5e6c026d9cd40}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getEventManager@{getEventManager}}
+\index{getEventManager@{getEventManager}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getEventManager()}{getEventManager()}}
+{\footnotesize\ttfamily get\+Event\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the Event\+Manager used by the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}.
+
+\begin{DoxyReturn}{Returns}
+Event\+Manager
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a9be27bf6385362344ed5e6c026d9cd40}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ab09661fe78400540f64378a7fe8d6e07}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ab09661fe78400540f64378a7fe8d6e07}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getExpressionBuilder@{getExpressionBuilder}}
+\index{getExpressionBuilder@{getExpressionBuilder}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getExpressionBuilder()}{getExpressionBuilder()}}
+{\footnotesize\ttfamily get\+Expression\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets an Expression\+Builder used for object-\/oriented construction of query expressions.
+
+Example\+:
+
+{\ttfamily  \$qb = \$em-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ad0251d2b59b54d92521c94cf7cf3a567}{create\+Query\+Builder()}}; \$expr = \$em-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ab09661fe78400540f64378a7fe8d6e07}{get\+Expression\+Builder()}}; \$qb-\/\texorpdfstring{$>$}{>}select(\textquotesingle{}u\textquotesingle{})-\/\texorpdfstring{$>$}{>}from(\textquotesingle{}User\textquotesingle{}, \textquotesingle{}u\textquotesingle{}) -\/\texorpdfstring{$>$}{>}where(\$expr-\/\texorpdfstring{$>$}{>}orX(\$expr-\/\texorpdfstring{$>$}{>}eq(\textquotesingle{}u.\+id\textquotesingle{}, 1), \$expr-\/\texorpdfstring{$>$}{>}eq(\textquotesingle{}u.\+id\textquotesingle{}, 2))); }
+
+\begin{DoxyReturn}{Returns}
+Expr
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ab09661fe78400540f64378a7fe8d6e07}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a428d91319fc73d3038784cf5436936b6}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a428d91319fc73d3038784cf5436936b6}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getFilters@{getFilters}}
+\index{getFilters@{getFilters}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getFilters()}{getFilters()}}
+{\footnotesize\ttfamily get\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the enabled filters.
+
+\begin{DoxyReturn}{Returns}
+Filter\+Collection The active filter collection.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a428d91319fc73d3038784cf5436936b6}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a4f1f2f8bff122de423f32e541b380690}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a4f1f2f8bff122de423f32e541b380690}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getHydrator@{getHydrator}}
+\index{getHydrator@{getHydrator}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getHydrator()}{getHydrator()}}
+{\footnotesize\ttfamily get\+Hydrator (\begin{DoxyParamCaption}\item[{}]{\$hydration\+Mode }\end{DoxyParamCaption})}
+
+\{Gets a hydrator for the given hydration mode.
+
+This method caches the hydrator instances which is used for all queries that don\textquotesingle{}t selectively iterate over the result.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000221}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$hydration\+Mode} & @psalm-\/param string$\vert$\+Abstract\+Query\+::\+HYDRATE\+\_\+$\ast$ \$hydration\+Mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Abstract\+Hydrator
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a4f1f2f8bff122de423f32e541b380690}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a2b8429f8684d83bd563a9f5db0196c3d}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a2b8429f8684d83bd563a9f5db0196c3d}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getPartialReference@{getPartialReference}}
+\index{getPartialReference@{getPartialReference}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getPartialReference()}{getPartialReference()}}
+{\footnotesize\ttfamily get\+Partial\+Reference (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name,  }\item[{}]{\$identifier }\end{DoxyParamCaption})}
+
+\{Gets a partial reference to the entity identified by the given type and identifier without actually loading it, if the entity is not yet loaded.
+
+The returned reference may be a partial object if the entity is not yet loaded/managed. If it is a partial object it will not initialize the rest of the entity state on access. Thus you can only ever safely access the identifier of an entity obtained through this method.
+
+The use-\/cases for partial references involve maintaining bidirectional associations without loading one side of the association or to update an entity without loading it. Note, however, that in the latter case the original (persistent) entity data will never be visible to the application (especially not event listeners) as it will never be loaded in the first place.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & The name of the entity type. \\
+\hline
+mixed & {\em \$identifier} & The entity identifier. @psalm-\/param class-\/string$<$\+T$>$ \$entity\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null The (partial) entity reference @psalm-\/return T$\vert$null
+\end{DoxyReturn}
+@template T\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a2b8429f8684d83bd563a9f5db0196c3d}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a538f11e670d214213641dc895efe6d4f}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a538f11e670d214213641dc895efe6d4f}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getProxyFactory@{getProxyFactory}}
+\index{getProxyFactory@{getProxyFactory}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getProxyFactory()}{getProxyFactory()}}
+{\footnotesize\ttfamily get\+Proxy\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the proxy factory used by the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} to create entity proxies.
+
+\begin{DoxyReturn}{Returns}
+Proxy\+Factory
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a538f11e670d214213641dc895efe6d4f}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a58161e194014319bd65e6340c58d0117}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a58161e194014319bd65e6340c58d0117}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getReference@{getReference}}
+\index{getReference@{getReference}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily get\+Reference (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+\{Gets a reference to the entity identified by the given type and identifier without actually loading it, if the entity is not yet loaded.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & The name of the entity type. \\
+\hline
+mixed & {\em \$id} & The entity identifier. @psalm-\/param class-\/string$<$\+T$>$ \$entity\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null The entity reference. @psalm-\/return T$\vert$null
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_exception}{ORMException}}} & \\
+\hline
+\end{DoxyExceptions}
+@template T\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a58161e194014319bd65e6340c58d0117}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a1be8a16d16ad5dfd0cba728a08748dd6}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a1be8a16d16ad5dfd0cba728a08748dd6}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!getUnitOfWork@{getUnitOfWork}}
+\index{getUnitOfWork@{getUnitOfWork}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{getUnitOfWork()}{getUnitOfWork()}}
+{\footnotesize\ttfamily get\+Unit\+Of\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} used by the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} to coordinate operations.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a1be8a16d16ad5dfd0cba728a08748dd6}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0f7ee5fdb34e24db6f37cd8646bf39eb}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0f7ee5fdb34e24db6f37cd8646bf39eb}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!hasFilters@{hasFilters}}
+\index{hasFilters@{hasFilters}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{hasFilters()}{hasFilters()}}
+{\footnotesize\ttfamily has\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Checks whether the Entity Manager has filters.
+
+\begin{DoxyReturn}{Returns}
+bool True, if the EM has a filter collection.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a0f7ee5fdb34e24db6f37cd8646bf39eb}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0769ab84c4011f1225aeb500d02de7f3}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0769ab84c4011f1225aeb500d02de7f3}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!isFiltersStateClean@{isFiltersStateClean}}
+\index{isFiltersStateClean@{isFiltersStateClean}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{isFiltersStateClean()}{isFiltersStateClean()}}
+{\footnotesize\ttfamily is\+Filters\+State\+Clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Checks whether the state of the filter collection is clean.
+
+\begin{DoxyReturn}{Returns}
+bool True, if the filter collection is clean.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a0769ab84c4011f1225aeb500d02de7f3}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ac21d0b99fadc55cd5e0b06aeecc73d26}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_ac21d0b99fadc55cd5e0b06aeecc73d26}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Check if the Entity manager is open or closed.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_ac21d0b99fadc55cd5e0b06aeecc73d26}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af8cbaa218c3c17fa6cb43e0c6258bc41}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_af8cbaa218c3c17fa6cb43e0c6258bc41}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!lock@{lock}}
+\index{lock@{lock}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily lock (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{}]{\$lock\+Mode,  }\item[{}]{\$lock\+Version = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Acquire a lock on the given entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+int & {\em \$lock\+Mode} & \\
+\hline
+int | Date\+Time\+Interface | null & {\em \$lock\+Version} & @psalm-\/param Lock\+Mode\+:\+:$\ast$ \$lock\+Mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}}} & \\
+\hline
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_pessimistic_lock_exception}{Pessimistic\+Lock\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_af8cbaa218c3c17fa6cb43e0c6258bc41}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0d5c9c6ecc44d88fa406250087942950}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a0d5c9c6ecc44d88fa406250087942950}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!newHydrator@{newHydrator}}
+\index{newHydrator@{newHydrator}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{newHydrator()}{newHydrator()}}
+{\footnotesize\ttfamily new\+Hydrator (\begin{DoxyParamCaption}\item[{}]{\$hydration\+Mode }\end{DoxyParamCaption})}
+
+\{Create a new instance for the given hydration mode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$hydration\+Mode} & @psalm-\/param string$\vert$\+Abstract\+Query\+::\+HYDRATE\+\_\+$\ast$ \$hydration\+Mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Abstract\+Hydrator
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_exception}{ORMException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a0d5c9c6ecc44d88fa406250087942950}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_afa549adf79e3f8c09fe8f903dd5fbfa7}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_afa549adf79e3f8c09fe8f903dd5fbfa7}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!rollback@{rollback}}
+\index{rollback@{rollback}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Performs a rollback on the underlying database connection.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_afa549adf79e3f8c09fe8f903dd5fbfa7}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a52367c3e33aea79753a657fada61d7c1}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a52367c3e33aea79753a657fada61d7c1}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!transactional@{transactional}}
+\index{transactional@{transactional}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{transactional()}{transactional()}}
+{\footnotesize\ttfamily transactional (\begin{DoxyParamCaption}\item[{}]{\$func }\end{DoxyParamCaption})}
+
+\{Executes a function in a transaction.
+
+The function gets passed this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} instance as an (optional) parameter.
+
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{flush}} is invoked prior to transaction commit.
+
+If an exception occurs during execution of the function or flushing or transaction commit, the transaction is rolled back, the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} closed and the exception re-\/thrown.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000219}{Deprecated}}]2.\+10 Use \mbox{\hyperlink{}{wrap\+In\+Transaction}} instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+callable & {\em \$func} & The function to execute transactionally.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The non-\/empty value returned from the closure or true instead.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface_a52367c3e33aea79753a657fada61d7c1}{Entity\+Manager\+Interface}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a149748586f5641a91a291a9b7325e3de}\label{class_doctrine_1_1_o_r_m_1_1_decorator_1_1_entity_manager_decorator_a149748586f5641a91a291a9b7325e3de}} 
+\index{EntityManagerDecorator@{EntityManagerDecorator}!wrapInTransaction@{wrapInTransaction}}
+\index{wrapInTransaction@{wrapInTransaction}!EntityManagerDecorator@{EntityManagerDecorator}}
+\doxysubsubsection{\texorpdfstring{wrapInTransaction()}{wrapInTransaction()}}
+{\footnotesize\ttfamily wrap\+In\+Transaction (\begin{DoxyParamCaption}\item[{callable}]{\$func }\end{DoxyParamCaption})}
+
+\{\} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Decorator/Entity\+Manager\+Decorator.\+php\end{DoxyCompactItemize}

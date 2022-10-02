@@ -1,0 +1,1215 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{}\doxysection{Unit\+Of\+Work Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work}\index{UnitOfWork@{UnitOfWork}}
+Inheritance diagram for Unit\+Of\+Work\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_unit_of_work}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a25f4258aeb5ce2a61a2504cb7c058485}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7fdaf6f7fbce77a8e7fc6a47cd3bdce1}{commit}} (\$entity=null)
+\item 
+\& \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a466d652ec4f5f5b1e55a9cc20941bd34}{get\+Entity\+Change\+Set}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a17152b71ab2fccf60c4808c5813a885d}{compute\+Change\+Set}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4a11f5ad81a00e3712f70664f345c3e0}{compute\+Change\+Sets}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a843ebbdcb5b14fc8103771a1ed96614c}{recompute\+Single\+Entity\+Change\+Set}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class, \$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae4466e86e9850d833d994d1c8d33f322}{schedule\+For\+Insert}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ade0c141b1c1556697b97a38cb726d735}{is\+Scheduled\+For\+Insert}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae9d8eb718070a53cf6e5db1cc48ec459}{schedule\+For\+Update}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_aaf5fe6052d32982943192cef62e734f2}{schedule\+Extra\+Update}} (\$entity, array \$changeset)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab90f9e61ff363a00d732a8f5fecf6528}{is\+Scheduled\+For\+Update}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a21e25fd0b0bd774d2bd4f4569260e467}{is\+Scheduled\+For\+Dirty\+Check}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a88a5b56ce2b72edd22c5b9f51c1983fd}{schedule\+For\+Delete}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac339bbd62982ff45691c8a21c19d135c}{is\+Scheduled\+For\+Delete}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab8b2807f959d2d6659d8411053d859e1}{is\+Entity\+Scheduled}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_abfd53b79463c184770268b8e74ea8d7b}{add\+To\+Identity\+Map}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a2348923e9806c0d6248427fcd44b58ee}{get\+Entity\+State}} (\$entity, \$assume=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_acba34ed5ef8818edabce139c8753951f}{remove\+From\+Identity\+Map}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae558609fdd9e0d18f4ee9986bd2b129f}{get\+By\+Id\+Hash}} (\$id\+Hash, \$root\+Class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a247a8c8e1e1991d1c424cf4eda08f88a}{try\+Get\+By\+Id\+Hash}} (\$id\+Hash, \$root\+Class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a014707582f3682722cd2bab10eeb5add}{is\+In\+Identity\+Map}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a267269cab066573cebef884d22736981}{contains\+Id\+Hash}} (\$id\+Hash, \$root\+Class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4544f6dec3a9b84735810574a59fc50c}{persist}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9ba1bf42939522398e98e21b528ad72b}{remove}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9cc56a581aa4e17c4660097c768d07d4}{merge}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_aca8a125d5fa0f62b99600ebc7d7c0b71}{detach}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a8fcb2b1d00763257b45f62f043562150}{refresh}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7ccdf0b2da815c046b64d6298d21bc8d}{lock}} (\$entity, int \$lock\+Mode, \$lock\+Version=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a33eae62d060db091280ac17971ec87d5}{get\+Commit\+Order\+Calculator}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac0f04085ded836b20df8eee42bf81222}{clear}} (\$entity\+Name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a61daf5851f4bfb916c27cc9504f21d7f}{schedule\+Orphan\+Removal}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae69f4331db1dd77be569937fc4416944}{cancel\+Orphan\+Removal}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a0d4550fa71a3b7a8f7f7df4e17881953}{schedule\+Collection\+Deletion}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$coll)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af7506ca8d212358c9d0c8e61c890dbf9}{is\+Collection\+Scheduled\+For\+Deletion}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$coll)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9466c36d0a529a0efe43065f1a8d845c}{create\+Entity}} (\$class\+Name, array \$data, \&\$hints=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a98042927f5f237b856be72317e061c8c}{trigger\+Eager\+Loads}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab83faee8c6f41441df1587d00cf2e48e}{load\+Collection}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} \$collection)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a5031bf24273689f221bccec2ab0a9c36}{get\+Identity\+Map}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac75b47c105de639d45fbe2369e87aa82}{get\+Original\+Entity\+Data}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a3a041fd642fa43681f466c8e25240292}{set\+Original\+Entity\+Data}} (\$entity, array \$data)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a12478d1c637be33161d470da4e0f1688}{set\+Original\+Entity\+Property}} (\$oid, \$property, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a833f1e5d1c24385f1fe447a78f08b313}{get\+Entity\+Identifier}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac871ea2ca992b703e05182e4039f797e}{get\+Single\+Identifier\+Value}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a044d0f9f8be2524e9958b7aedc1878bb}{try\+Get\+By\+Id}} (\$id, \$root\+Class\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4fbd4b082458adad1d3e2e8286fb0b9a}{schedule\+For\+Dirty\+Check}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_adfb2231c8ffd0d80db5acfc2ae40002b}{has\+Pending\+Insertions}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a775bfb88c1bb7975d67f277eade2a1b7}{size}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a463f385e840dff11c2ba395bc1275e63}{get\+Entity\+Persister}} (\$entity\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae73f8973f17d4502a450319b4e1b78f9}{get\+Collection\+Persister}} (array \$association)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_afe8c75dc85c359b62f4aa1fba4c9aa4c}{register\+Managed}} (\$entity, array \$id, array \$data)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a8b4eb9c3d70b37ad93fdb8dbb4cbfc9f}{clear\+Entity\+Change\+Set}} (\$oid)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99c9884d4dbb8cf5273ac941a71dfd7e}{property\+Changed}} (\$sender, \$property\+Name, \$old\+Value, \$new\+Value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ad3c81cc8446559f9084e91803fccfd3f}{get\+Scheduled\+Entity\+Insertions}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ada5dbcacc39888675f1da1dab11ba14e}{get\+Scheduled\+Entity\+Updates}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_afda873a8fea5db460aea3c56e676a68c}{get\+Scheduled\+Entity\+Deletions}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a064e0836d977fd89019baf1fb53babf3}{get\+Scheduled\+Collection\+Deletions}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99a7ffabb02b24c73308d0c7142ffe18}{get\+Scheduled\+Collection\+Updates}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a0ea48918c8cc2a87fa520732d7488fd1}{initialize\+Object}} (\$obj)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a3ee22f5c81ec804c908607bebf33527a}{mark\+Read\+Only}} (\$object)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4ed5710a645d2e947f145a94bad6043f}{is\+Read\+Only}} (\$object)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ace93b16fb5c4785a501182ab08b6f13b}{hydration\+Complete}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a53f7287bb5a02f5b4299082d7b3af848}{STATE\+\_\+\+MANAGED}} = 1
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af47c6a5b8aefd132e8709b8aa2a4edfc}{STATE\+\_\+\+NEW}} = 2
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a714b7b6f065aff86077531d576ad3743}{STATE\+\_\+\+DETACHED}} = 3
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9830e971171f17791c7f9459ae06781c}{STATE\+\_\+\+REMOVED}} = 4
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af36f599448f2411de2a9b98fe438900d}{HINT\+\_\+\+DEFEREAGERLOAD}} = \textquotesingle{}defer\+Eager\+Load\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af2eb593acaa04fb8dcadbfc7480dca78}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af2eb593acaa04fb8dcadbfc7480dca78}} 
+{\bfseries \$has\+Cache} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} is responsible for tracking changes to objects during an \char`\"{}object-\/level\char`\"{} transaction and for writing out changes to the database in the correct order.
+
+Internal note\+: This class contains highly performance-\/sensitive code. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2doctrine-bundle_2_de9933e065a8266c3d2fbc65f308d444a8}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/doctrine-\/bundle/\+Dependency\+Injection/\+Doctrine\+Extension.\+php}}.\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a25f4258aeb5ce2a61a2504cb7c058485}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a25f4258aeb5ce2a61a2504cb7c058485}} 
+\index{UnitOfWork@{UnitOfWork}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} instance, bound to the given \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_abfd53b79463c184770268b8e74ea8d7b}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_abfd53b79463c184770268b8e74ea8d7b}} 
+\index{UnitOfWork@{UnitOfWork}!addToIdentityMap@{addToIdentityMap}}
+\index{addToIdentityMap@{addToIdentityMap}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{addToIdentityMap()}{addToIdentityMap()}}
+{\footnotesize\ttfamily add\+To\+Identity\+Map (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+INTERNAL\+: Registers an entity in the identity map. Note that entities in a hierarchy are registered with the class name of the root entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the registration was successful, FALSE if the identity of the entity in question is already managed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae69f4331db1dd77be569937fc4416944}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae69f4331db1dd77be569937fc4416944}} 
+\index{UnitOfWork@{UnitOfWork}!cancelOrphanRemoval@{cancelOrphanRemoval}}
+\index{cancelOrphanRemoval@{cancelOrphanRemoval}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{cancelOrphanRemoval()}{cancelOrphanRemoval()}}
+{\footnotesize\ttfamily cancel\+Orphan\+Removal (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+INTERNAL\+: Cancels a previously scheduled orphan removal.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac0f04085ded836b20df8eee42bf81222}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac0f04085ded836b20df8eee42bf81222}} 
+\index{UnitOfWork@{UnitOfWork}!clear@{clear}}
+\index{clear@{clear}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Clears the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$entity\+Name} & if given, only entities of this type will get detached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & if an invalid entity name is given. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a8b4eb9c3d70b37ad93fdb8dbb4cbfc9f}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a8b4eb9c3d70b37ad93fdb8dbb4cbfc9f}} 
+\index{UnitOfWork@{UnitOfWork}!clearEntityChangeSet@{clearEntityChangeSet}}
+\index{clearEntityChangeSet@{clearEntityChangeSet}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{clearEntityChangeSet()}{clearEntityChangeSet()}}
+{\footnotesize\ttfamily clear\+Entity\+Change\+Set (\begin{DoxyParamCaption}\item[{}]{\$oid }\end{DoxyParamCaption})}
+
+INTERNAL\+: Clears the property changeset of the entity with the given OID.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$oid} & The entity\textquotesingle{}s OID.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7fdaf6f7fbce77a8e7fc6a47cd3bdce1}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7fdaf6f7fbce77a8e7fc6a47cd3bdce1}} 
+\index{UnitOfWork@{UnitOfWork}!commit@{commit}}
+\index{commit@{commit}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily commit (\begin{DoxyParamCaption}\item[{}]{\$entity = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Commits the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}, executing all operations that have been postponed up to this point. The state of all managed entities will be synchronized with the database.
+
+The operations are executed in the following order\+:
+
+1) All entity insertions 2) All entity updates 3) All collection deletions 4) All collection updates 5) All entity deletions
+
+
+\begin{DoxyParams}[1]{Parameters}
+object | mixed\mbox{[}$\,$\mbox{]} | null & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a17152b71ab2fccf60c4808c5813a885d}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a17152b71ab2fccf60c4808c5813a885d}} 
+\index{UnitOfWork@{UnitOfWork}!computeChangeSet@{computeChangeSet}}
+\index{computeChangeSet@{computeChangeSet}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{computeChangeSet()}{computeChangeSet()}}
+{\footnotesize\ttfamily compute\+Change\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Computes the changes that happened to a single entity.
+
+Modifies/populates the following properties\+:
+
+\mbox{\hyperlink{}{\+\_\+original\+Entity\+Data}} If the entity is NEW or MANAGED but not yet fully persisted (only has an id) then it was not fetched from the database and therefore we have no original entity data yet. All of the current entity data is stored as the original entity data.
+
+\mbox{\hyperlink{}{\+\_\+entity\+Change\+Sets}} The changes detected on all properties of the entity are stored there. A change is a tuple array where the first entry is the old value and the second entry is the new value of the property. Changesets are used by persisters to INSERT/\+UPDATE the persistent entity state.
+
+\mbox{\hyperlink{}{\+\_\+entity\+Updates}} If the entity is already fully MANAGED (has been fetched from the database before) and any changes to its properties are detected, then a reference to the entity is stored there to mark it for an update.
+
+\mbox{\hyperlink{}{\+\_\+collection\+Deletions}} If a \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} has been de-\/referenced in a fully MANAGED entity, then this collection is marked for deletion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$class} & The class descriptor of the entity. \\
+\hline
+object & {\em \$entity} & The entity for which to compute the changes. @psalm-\/param Class\+Metadata$<$\+T$>$ \$class @psalm-\/param T \$entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@template T of object
+
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4a11f5ad81a00e3712f70664f345c3e0}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4a11f5ad81a00e3712f70664f345c3e0}} 
+\index{UnitOfWork@{UnitOfWork}!computeChangeSets@{computeChangeSets}}
+\index{computeChangeSets@{computeChangeSets}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{computeChangeSets()}{computeChangeSets()}}
+{\footnotesize\ttfamily compute\+Change\+Sets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes all the changes that have been done to entities and collections since the last commit and stores these changes in the \+\_\+entity\+Change\+Set map temporarily for access by the persisters, until the UoW commit is finished.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a267269cab066573cebef884d22736981}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a267269cab066573cebef884d22736981}} 
+\index{UnitOfWork@{UnitOfWork}!containsIdHash@{containsIdHash}}
+\index{containsIdHash@{containsIdHash}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{containsIdHash()}{containsIdHash()}}
+{\footnotesize\ttfamily contains\+Id\+Hash (\begin{DoxyParamCaption}\item[{}]{\$id\+Hash,  }\item[{}]{\$root\+Class\+Name }\end{DoxyParamCaption})}
+
+INTERNAL\+: Checks whether an identifier hash exists in the identity map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id\+Hash} & \\
+\hline
+string & {\em \$root\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9466c36d0a529a0efe43065f1a8d845c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9466c36d0a529a0efe43065f1a8d845c}} 
+\index{UnitOfWork@{UnitOfWork}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}}
+{\footnotesize\ttfamily create\+Entity (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{array}]{\$data,  }\item[{\&}]{\$hints = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+INTERNAL\+: Creates an entity. Used for reconstitution of persistent entities.
+
+Internal note\+: Highly performance-\/sensitive method.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & The name of the entity class. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$data} & The data for the entity. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$hints} & Any hints to account for during reconstitution/lookup of the entity. @psalm-\/param class-\/string \$class\+Name @psalm-\/param array$<$string, mixed$>$ \$hints\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The managed entity instance.
+\end{DoxyReturn}
+@ignore \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000039}{Todo}}]Rename\+: get\+Or\+Create\+Entity \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_aca8a125d5fa0f62b99600ebc7d7c0b71}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_aca8a125d5fa0f62b99600ebc7d7c0b71}} 
+\index{UnitOfWork@{UnitOfWork}!detach@{detach}}
+\index{detach@{detach}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily detach (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Detaches an entity from the persistence management. It\textquotesingle{}s persistence will no longer be managed by Doctrine.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to detach.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae558609fdd9e0d18f4ee9986bd2b129f}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae558609fdd9e0d18f4ee9986bd2b129f}} 
+\index{UnitOfWork@{UnitOfWork}!getByIdHash@{getByIdHash}}
+\index{getByIdHash@{getByIdHash}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getByIdHash()}{getByIdHash()}}
+{\footnotesize\ttfamily get\+By\+Id\+Hash (\begin{DoxyParamCaption}\item[{}]{\$id\+Hash,  }\item[{}]{\$root\+Class\+Name }\end{DoxyParamCaption})}
+
+INTERNAL\+: Gets an entity in the identity map by its identifier hash.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id\+Hash} & \\
+\hline
+string & {\em \$root\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae73f8973f17d4502a450319b4e1b78f9}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae73f8973f17d4502a450319b4e1b78f9}} 
+\index{UnitOfWork@{UnitOfWork}!getCollectionPersister@{getCollectionPersister}}
+\index{getCollectionPersister@{getCollectionPersister}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getCollectionPersister()}{getCollectionPersister()}}
+{\footnotesize\ttfamily get\+Collection\+Persister (\begin{DoxyParamCaption}\item[{array}]{\$association }\end{DoxyParamCaption})}
+
+Gets a collection persister for a collection-\/valued association.
+
+@psalm-\/param array$<$string, mixed$>$ \$association
+
+\begin{DoxyReturn}{Returns}
+Collection\+Persister 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a33eae62d060db091280ac17971ec87d5}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a33eae62d060db091280ac17971ec87d5}} 
+\index{UnitOfWork@{UnitOfWork}!getCommitOrderCalculator@{getCommitOrderCalculator}}
+\index{getCommitOrderCalculator@{getCommitOrderCalculator}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getCommitOrderCalculator()}{getCommitOrderCalculator()}}
+{\footnotesize\ttfamily get\+Commit\+Order\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the Commit\+Order\+Calculator used by the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} to order commits.
+
+\begin{DoxyReturn}{Returns}
+Commit\+Order\+Calculator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a466d652ec4f5f5b1e55a9cc20941bd34}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a466d652ec4f5f5b1e55a9cc20941bd34}} 
+\index{UnitOfWork@{UnitOfWork}!getEntityChangeSet@{getEntityChangeSet}}
+\index{getEntityChangeSet@{getEntityChangeSet}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getEntityChangeSet()}{getEntityChangeSet()}}
+{\footnotesize\ttfamily \& get\+Entity\+Change\+Set (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Gets the changeset for an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}\mbox{[}\mbox{]} @psalm-\/return array\texorpdfstring{$<$}{<}string, array\{mixed, mixed\}$\vert$\+Persistent\+Collection\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a833f1e5d1c24385f1fe447a78f08b313}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a833f1e5d1c24385f1fe447a78f08b313}} 
+\index{UnitOfWork@{UnitOfWork}!getEntityIdentifier@{getEntityIdentifier}}
+\index{getEntityIdentifier@{getEntityIdentifier}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getEntityIdentifier()}{getEntityIdentifier()}}
+{\footnotesize\ttfamily get\+Entity\+Identifier (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Gets the identifier of an entity. The returned value is always an array of identifier values. If the entity has a composite identifier then the identifier values are in the same order as the identifier field names as returned by \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata_info_a4f59d5b1f2ec6f39a4b326304aa10a10}{Class\+Metadata\+::get\+Identifier\+Field\+Names()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} The identifier values. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a463f385e840dff11c2ba395bc1275e63}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a463f385e840dff11c2ba395bc1275e63}} 
+\index{UnitOfWork@{UnitOfWork}!getEntityPersister@{getEntityPersister}}
+\index{getEntityPersister@{getEntityPersister}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getEntityPersister()}{getEntityPersister()}}
+{\footnotesize\ttfamily get\+Entity\+Persister (\begin{DoxyParamCaption}\item[{}]{\$entity\+Name }\end{DoxyParamCaption})}
+
+Gets the Entity\+Persister for an Entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entity\+Name} & The name of the Entity. @psalm-\/param class-\/string \$entity\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity\+Persister 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a2348923e9806c0d6248427fcd44b58ee}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a2348923e9806c0d6248427fcd44b58ee}} 
+\index{UnitOfWork@{UnitOfWork}!getEntityState@{getEntityState}}
+\index{getEntityState@{getEntityState}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getEntityState()}{getEntityState()}}
+{\footnotesize\ttfamily get\+Entity\+State (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{}]{\$assume = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Gets the state of an entity with regard to the current unit of work.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+int | null & {\em \$assume} & The state to assume if the state is not yet known (not MANAGED or REMOVED). This parameter can be set to improve performance of entity state detection by potentially avoiding a database lookup if the distinction between NEW and DETACHED is either known or does not matter for the caller of the method. @psalm-\/param self\+::\+STATE\+\_\+$\ast$$\vert$null \$assume\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The entity state. @psalm-\/return self\+::\+STATE\+\_\+$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a5031bf24273689f221bccec2ab0a9c36}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a5031bf24273689f221bccec2ab0a9c36}} 
+\index{UnitOfWork@{UnitOfWork}!getIdentityMap@{getIdentityMap}}
+\index{getIdentityMap@{getIdentityMap}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getIdentityMap()}{getIdentityMap()}}
+{\footnotesize\ttfamily get\+Identity\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the identity map of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+@psalm-\/return array\texorpdfstring{$<$}{<}class-\/string, array\texorpdfstring{$<$}{<}string, object$\vert$null\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac75b47c105de639d45fbe2369e87aa82}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac75b47c105de639d45fbe2369e87aa82}} 
+\index{UnitOfWork@{UnitOfWork}!getOriginalEntityData@{getOriginalEntityData}}
+\index{getOriginalEntityData@{getOriginalEntityData}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getOriginalEntityData()}{getOriginalEntityData()}}
+{\footnotesize\ttfamily get\+Original\+Entity\+Data (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Gets the original data of an entity. The original data is the data that was present at the time the entity was reconstituted from the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} @psalm-\/return array$<$string, mixed$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a064e0836d977fd89019baf1fb53babf3}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a064e0836d977fd89019baf1fb53babf3}} 
+\index{UnitOfWork@{UnitOfWork}!getScheduledCollectionDeletions@{getScheduledCollectionDeletions}}
+\index{getScheduledCollectionDeletions@{getScheduledCollectionDeletions}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getScheduledCollectionDeletions()}{getScheduledCollectionDeletions()}}
+{\footnotesize\ttfamily get\+Scheduled\+Collection\+Deletions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the currently scheduled complete collection deletions
+
+@psalm-\/return array\texorpdfstring{$<$}{<}int, Collection\texorpdfstring{$<$}{<}array-\/key, object\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99a7ffabb02b24c73308d0c7142ffe18}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99a7ffabb02b24c73308d0c7142ffe18}} 
+\index{UnitOfWork@{UnitOfWork}!getScheduledCollectionUpdates@{getScheduledCollectionUpdates}}
+\index{getScheduledCollectionUpdates@{getScheduledCollectionUpdates}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getScheduledCollectionUpdates()}{getScheduledCollectionUpdates()}}
+{\footnotesize\ttfamily get\+Scheduled\+Collection\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the currently scheduled collection inserts, updates and deletes.
+
+@psalm-\/return array\texorpdfstring{$<$}{<}int, Collection\texorpdfstring{$<$}{<}array-\/key, object\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_afda873a8fea5db460aea3c56e676a68c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_afda873a8fea5db460aea3c56e676a68c}} 
+\index{UnitOfWork@{UnitOfWork}!getScheduledEntityDeletions@{getScheduledEntityDeletions}}
+\index{getScheduledEntityDeletions@{getScheduledEntityDeletions}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getScheduledEntityDeletions()}{getScheduledEntityDeletions()}}
+{\footnotesize\ttfamily get\+Scheduled\+Entity\+Deletions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the currently scheduled entity deletions in this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+@psalm-\/return array$<$int, object$>$ \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ad3c81cc8446559f9084e91803fccfd3f}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ad3c81cc8446559f9084e91803fccfd3f}} 
+\index{UnitOfWork@{UnitOfWork}!getScheduledEntityInsertions@{getScheduledEntityInsertions}}
+\index{getScheduledEntityInsertions@{getScheduledEntityInsertions}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getScheduledEntityInsertions()}{getScheduledEntityInsertions()}}
+{\footnotesize\ttfamily get\+Scheduled\+Entity\+Insertions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the currently scheduled entity insertions in this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+@psalm-\/return array$<$int, object$>$ \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ada5dbcacc39888675f1da1dab11ba14e}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ada5dbcacc39888675f1da1dab11ba14e}} 
+\index{UnitOfWork@{UnitOfWork}!getScheduledEntityUpdates@{getScheduledEntityUpdates}}
+\index{getScheduledEntityUpdates@{getScheduledEntityUpdates}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getScheduledEntityUpdates()}{getScheduledEntityUpdates()}}
+{\footnotesize\ttfamily get\+Scheduled\+Entity\+Updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the currently scheduled entity updates in this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+@psalm-\/return array$<$int, object$>$ \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac871ea2ca992b703e05182e4039f797e}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac871ea2ca992b703e05182e4039f797e}} 
+\index{UnitOfWork@{UnitOfWork}!getSingleIdentifierValue@{getSingleIdentifierValue}}
+\index{getSingleIdentifierValue@{getSingleIdentifierValue}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{getSingleIdentifierValue()}{getSingleIdentifierValue()}}
+{\footnotesize\ttfamily get\+Single\+Identifier\+Value (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Processes an entity instance to extract their identifier values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity instance.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed A scalar value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_adfb2231c8ffd0d80db5acfc2ae40002b}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_adfb2231c8ffd0d80db5acfc2ae40002b}} 
+\index{UnitOfWork@{UnitOfWork}!hasPendingInsertions@{hasPendingInsertions}}
+\index{hasPendingInsertions@{hasPendingInsertions}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{hasPendingInsertions()}{hasPendingInsertions()}}
+{\footnotesize\ttfamily has\+Pending\+Insertions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} has any pending insertions.
+
+\begin{DoxyReturn}{Returns}
+bool TRUE if this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} has pending insertions, FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ace93b16fb5c4785a501182ab08b6f13b}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ace93b16fb5c4785a501182ab08b6f13b}} 
+\index{UnitOfWork@{UnitOfWork}!hydrationComplete@{hydrationComplete}}
+\index{hydrationComplete@{hydrationComplete}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{hydrationComplete()}{hydrationComplete()}}
+{\footnotesize\ttfamily hydration\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method called by hydrators, and indicates that hydrator totally completed current hydration cycle. Unit of work able to fire deferred events, related to loading events here. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a0ea48918c8cc2a87fa520732d7488fd1}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a0ea48918c8cc2a87fa520732d7488fd1}} 
+\index{UnitOfWork@{UnitOfWork}!initializeObject@{initializeObject}}
+\index{initializeObject@{initializeObject}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{initializeObject()}{initializeObject()}}
+{\footnotesize\ttfamily initialize\+Object (\begin{DoxyParamCaption}\item[{}]{\$obj }\end{DoxyParamCaption})}
+
+Helper method to initialize a lazy loading proxy or persistent collection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af7506ca8d212358c9d0c8e61c890dbf9}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af7506ca8d212358c9d0c8e61c890dbf9}} 
+\index{UnitOfWork@{UnitOfWork}!isCollectionScheduledForDeletion@{isCollectionScheduledForDeletion}}
+\index{isCollectionScheduledForDeletion@{isCollectionScheduledForDeletion}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isCollectionScheduledForDeletion()}{isCollectionScheduledForDeletion()}}
+{\footnotesize\ttfamily is\+Collection\+Scheduled\+For\+Deletion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$coll }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab8b2807f959d2d6659d8411053d859e1}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab8b2807f959d2d6659d8411053d859e1}} 
+\index{UnitOfWork@{UnitOfWork}!isEntityScheduled@{isEntityScheduled}}
+\index{isEntityScheduled@{isEntityScheduled}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isEntityScheduled()}{isEntityScheduled()}}
+{\footnotesize\ttfamily is\+Entity\+Scheduled (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Checks whether an entity is scheduled for insertion, update or deletion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a014707582f3682722cd2bab10eeb5add}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a014707582f3682722cd2bab10eeb5add}} 
+\index{UnitOfWork@{UnitOfWork}!isInIdentityMap@{isInIdentityMap}}
+\index{isInIdentityMap@{isInIdentityMap}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isInIdentityMap()}{isInIdentityMap()}}
+{\footnotesize\ttfamily is\+In\+Identity\+Map (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Checks whether an entity is registered in the identity map of this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4ed5710a645d2e947f145a94bad6043f}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4ed5710a645d2e947f145a94bad6043f}} 
+\index{UnitOfWork@{UnitOfWork}!isReadOnly@{isReadOnly}}
+\index{isReadOnly@{isReadOnly}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isReadOnly()}{isReadOnly()}}
+{\footnotesize\ttfamily is\+Read\+Only (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Is this entity read only?
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac339bbd62982ff45691c8a21c19d135c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ac339bbd62982ff45691c8a21c19d135c}} 
+\index{UnitOfWork@{UnitOfWork}!isScheduledForDelete@{isScheduledForDelete}}
+\index{isScheduledForDelete@{isScheduledForDelete}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isScheduledForDelete()}{isScheduledForDelete()}}
+{\footnotesize\ttfamily is\+Scheduled\+For\+Delete (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Checks whether an entity is registered as removed/deleted with the unit of work.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a21e25fd0b0bd774d2bd4f4569260e467}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a21e25fd0b0bd774d2bd4f4569260e467}} 
+\index{UnitOfWork@{UnitOfWork}!isScheduledForDirtyCheck@{isScheduledForDirtyCheck}}
+\index{isScheduledForDirtyCheck@{isScheduledForDirtyCheck}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isScheduledForDirtyCheck()}{isScheduledForDirtyCheck()}}
+{\footnotesize\ttfamily is\+Scheduled\+For\+Dirty\+Check (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Checks whether an entity is registered to be checked in the unit of work.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ade0c141b1c1556697b97a38cb726d735}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ade0c141b1c1556697b97a38cb726d735}} 
+\index{UnitOfWork@{UnitOfWork}!isScheduledForInsert@{isScheduledForInsert}}
+\index{isScheduledForInsert@{isScheduledForInsert}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isScheduledForInsert()}{isScheduledForInsert()}}
+{\footnotesize\ttfamily is\+Scheduled\+For\+Insert (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Checks whether an entity is scheduled for insertion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab90f9e61ff363a00d732a8f5fecf6528}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab90f9e61ff363a00d732a8f5fecf6528}} 
+\index{UnitOfWork@{UnitOfWork}!isScheduledForUpdate@{isScheduledForUpdate}}
+\index{isScheduledForUpdate@{isScheduledForUpdate}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{isScheduledForUpdate()}{isScheduledForUpdate()}}
+{\footnotesize\ttfamily is\+Scheduled\+For\+Update (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Checks whether an entity is registered as dirty in the unit of work. Note\+: Is not very useful currently as dirty entities are only registered at commit time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab83faee8c6f41441df1587d00cf2e48e}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ab83faee8c6f41441df1587d00cf2e48e}} 
+\index{UnitOfWork@{UnitOfWork}!loadCollection@{loadCollection}}
+\index{loadCollection@{loadCollection}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{loadCollection()}{loadCollection()}}
+{\footnotesize\ttfamily load\+Collection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$collection }\end{DoxyParamCaption})}
+
+Initializes (loads) an uninitialized persistent collection of an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}} & {\em \$collection} & The collection to initialize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000040}{Todo}}]Maybe later move to Entity\+Manager\+::initialize(\$proxy\+Or\+Collection). See DDC-\/733. \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7ccdf0b2da815c046b64d6298d21bc8d}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7ccdf0b2da815c046b64d6298d21bc8d}} 
+\index{UnitOfWork@{UnitOfWork}!lock@{lock}}
+\index{lock@{lock}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily lock (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{int}]{\$lock\+Mode,  }\item[{}]{\$lock\+Version = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Acquire a lock on the given entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+int | Date\+Time\+Interface | null & {\em \$lock\+Version} & @psalm-\/param Lock\+Mode\+:\+:$\ast$ \$lock\+Mode\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_transaction_required_exception}{Transaction\+Required\+Exception}}} & \\
+\hline
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a3ee22f5c81ec804c908607bebf33527a}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a3ee22f5c81ec804c908607bebf33527a}} 
+\index{UnitOfWork@{UnitOfWork}!markReadOnly@{markReadOnly}}
+\index{markReadOnly@{markReadOnly}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{markReadOnly()}{markReadOnly()}}
+{\footnotesize\ttfamily mark\+Read\+Only (\begin{DoxyParamCaption}\item[{}]{\$object }\end{DoxyParamCaption})}
+
+Marks an entity as read-\/only so that it will not be considered for updates during \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7fdaf6f7fbce77a8e7fc6a47cd3bdce1}{Unit\+Of\+Work\+::commit()}}.
+
+This operation cannot be undone as some parts of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} now keep gathering information on this object that might be necessary to perform a correct update.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9cc56a581aa4e17c4660097c768d07d4}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9cc56a581aa4e17c4660097c768d07d4}} 
+\index{UnitOfWork@{UnitOfWork}!merge@{merge}}
+\index{merge@{merge}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily merge (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Merges the state of the given detached entity into this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000302}{Deprecated}}]2.\+7 This method is being removed from the ORM and won\textquotesingle{}t have any replacement\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object The managed copy of the entity.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_optimistic_lock_exception}{Optimistic\+Lock\+Exception}}} & If the entity uses optimistic locking through a version attribute and the version check against the managed copy fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4544f6dec3a9b84735810574a59fc50c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4544f6dec3a9b84735810574a59fc50c}} 
+\index{UnitOfWork@{UnitOfWork}!persist@{persist}}
+\index{persist@{persist}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{persist()}{persist()}}
+{\footnotesize\ttfamily persist (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Persists an entity as part of the current unit of work.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to persist.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99c9884d4dbb8cf5273ac941a71dfd7e}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a99c9884d4dbb8cf5273ac941a71dfd7e}} 
+\index{UnitOfWork@{UnitOfWork}!propertyChanged@{propertyChanged}}
+\index{propertyChanged@{propertyChanged}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{propertyChanged()}{propertyChanged()}}
+{\footnotesize\ttfamily property\+Changed (\begin{DoxyParamCaption}\item[{}]{\$sender,  }\item[{}]{\$property\+Name,  }\item[{}]{\$old\+Value,  }\item[{}]{\$new\+Value }\end{DoxyParamCaption})}
+
+Notifies this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} of a property change in an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$sender} & The entity that owns the property. \\
+\hline
+string & {\em \$property\+Name} & The name of the property that changed. \\
+\hline
+mixed & {\em \$old\+Value} & The old value of the property. \\
+\hline
+mixed & {\em \$new\+Value} & The new value of the property.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_property_changed_listener_a99c9884d4dbb8cf5273ac941a71dfd7e}{Property\+Changed\+Listener}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a843ebbdcb5b14fc8103771a1ed96614c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a843ebbdcb5b14fc8103771a1ed96614c}} 
+\index{UnitOfWork@{UnitOfWork}!recomputeSingleEntityChangeSet@{recomputeSingleEntityChangeSet}}
+\index{recomputeSingleEntityChangeSet@{recomputeSingleEntityChangeSet}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{recomputeSingleEntityChangeSet()}{recomputeSingleEntityChangeSet()}}
+{\footnotesize\ttfamily recompute\+Single\+Entity\+Change\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+INTERNAL\+: Computes the changeset of an individual entity, independently of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4a11f5ad81a00e3712f70664f345c3e0}{compute\+Change\+Sets()}} routine that is used at the beginning of a \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a7fdaf6f7fbce77a8e7fc6a47cd3bdce1}{Unit\+Of\+Work\+::commit()}}.
+
+The passed entity must be a managed entity. If the entity already has a change set because this method is invoked during a commit cycle then the change sets are added. whereby changes detected in this method prevail.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$class} & The class descriptor of the entity. \\
+\hline
+object & {\em \$entity} & The entity for which to (re)calculate the change set. @psalm-\/param Class\+Metadata$<$\+T$>$ \$class @psalm-\/param T \$entity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & If the passed entity is not MANAGED.\\
+\hline
+\end{DoxyExceptions}
+@template T of object @ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a8fcb2b1d00763257b45f62f043562150}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a8fcb2b1d00763257b45f62f043562150}} 
+\index{UnitOfWork@{UnitOfWork}!refresh@{refresh}}
+\index{refresh@{refresh}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily refresh (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Refreshes the state of the given entity from the database, overwriting any local, unpersisted changes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to refresh.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & If the entity is not MANAGED. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_afe8c75dc85c359b62f4aa1fba4c9aa4c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_afe8c75dc85c359b62f4aa1fba4c9aa4c}} 
+\index{UnitOfWork@{UnitOfWork}!registerManaged@{registerManaged}}
+\index{registerManaged@{registerManaged}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{registerManaged()}{registerManaged()}}
+{\footnotesize\ttfamily register\+Managed (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{array}]{\$id,  }\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+INTERNAL\+: Registers an entity as managed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$id} & The identifier values. \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$data} & The original entity data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9ba1bf42939522398e98e21b528ad72b}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9ba1bf42939522398e98e21b528ad72b}} 
+\index{UnitOfWork@{UnitOfWork}!remove@{remove}}
+\index{remove@{remove}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily remove (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Deletes an entity as part of the current unit of work.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_acba34ed5ef8818edabce139c8753951f}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_acba34ed5ef8818edabce139c8753951f}} 
+\index{UnitOfWork@{UnitOfWork}!removeFromIdentityMap@{removeFromIdentityMap}}
+\index{removeFromIdentityMap@{removeFromIdentityMap}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{removeFromIdentityMap()}{removeFromIdentityMap()}}
+{\footnotesize\ttfamily remove\+From\+Identity\+Map (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+INTERNAL\+: Removes an entity from the identity map. This effectively detaches the entity from the persistence management of Doctrine.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a0d4550fa71a3b7a8f7f7df4e17881953}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a0d4550fa71a3b7a8f7f7df4e17881953}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleCollectionDeletion@{scheduleCollectionDeletion}}
+\index{scheduleCollectionDeletion@{scheduleCollectionDeletion}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleCollectionDeletion()}{scheduleCollectionDeletion()}}
+{\footnotesize\ttfamily schedule\+Collection\+Deletion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_persistent_collection}{Persistent\+Collection}}}]{\$coll }\end{DoxyParamCaption})}
+
+INTERNAL\+: Schedules a complete collection for removal when this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} commits.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_aaf5fe6052d32982943192cef62e734f2}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_aaf5fe6052d32982943192cef62e734f2}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleExtraUpdate@{scheduleExtraUpdate}}
+\index{scheduleExtraUpdate@{scheduleExtraUpdate}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleExtraUpdate()}{scheduleExtraUpdate()}}
+{\footnotesize\ttfamily schedule\+Extra\+Update (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{array}]{\$changeset }\end{DoxyParamCaption})}
+
+INTERNAL\+: Schedules an extra update that will be executed immediately after the regular entity updates within the currently running commit cycle.
+
+Extra updates for entities are stored as (entity, changeset) tuples.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity for which to schedule an extra update. @psalm-\/param array\texorpdfstring{$<$}{<}string, array\{mixed, mixed\}\texorpdfstring{$>$}{>} \$changeset The changeset of the entity (what to update).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a88a5b56ce2b72edd22c5b9f51c1983fd}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a88a5b56ce2b72edd22c5b9f51c1983fd}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleForDelete@{scheduleForDelete}}
+\index{scheduleForDelete@{scheduleForDelete}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleForDelete()}{scheduleForDelete()}}
+{\footnotesize\ttfamily schedule\+For\+Delete (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+INTERNAL\+: Schedules an entity for deletion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4fbd4b082458adad1d3e2e8286fb0b9a}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a4fbd4b082458adad1d3e2e8286fb0b9a}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleForDirtyCheck@{scheduleForDirtyCheck}}
+\index{scheduleForDirtyCheck@{scheduleForDirtyCheck}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleForDirtyCheck()}{scheduleForDirtyCheck()}}
+{\footnotesize\ttfamily schedule\+For\+Dirty\+Check (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Schedules an entity for dirty-\/checking at commit-\/time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to schedule for dirty-\/checking.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000041}{Todo}}]Rename\+: schedule\+For\+Synchronization \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae4466e86e9850d833d994d1c8d33f322}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae4466e86e9850d833d994d1c8d33f322}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleForInsert@{scheduleForInsert}}
+\index{scheduleForInsert@{scheduleForInsert}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleForInsert()}{scheduleForInsert()}}
+{\footnotesize\ttfamily schedule\+For\+Insert (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Schedules an entity for insertion into the database. If the entity already has an identifier, it will be added to the identity map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to schedule for insertion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae9d8eb718070a53cf6e5db1cc48ec459}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_ae9d8eb718070a53cf6e5db1cc48ec459}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleForUpdate@{scheduleForUpdate}}
+\index{scheduleForUpdate@{scheduleForUpdate}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleForUpdate()}{scheduleForUpdate()}}
+{\footnotesize\ttfamily schedule\+For\+Update (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+Schedules an entity for being updated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to schedule for being updated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_o_r_m_invalid_argument_exception}{ORMInvalid\+Argument\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a61daf5851f4bfb916c27cc9504f21d7f}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a61daf5851f4bfb916c27cc9504f21d7f}} 
+\index{UnitOfWork@{UnitOfWork}!scheduleOrphanRemoval@{scheduleOrphanRemoval}}
+\index{scheduleOrphanRemoval@{scheduleOrphanRemoval}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{scheduleOrphanRemoval()}{scheduleOrphanRemoval()}}
+{\footnotesize\ttfamily schedule\+Orphan\+Removal (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+INTERNAL\+: Schedules an orphaned entity for removal. The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9ba1bf42939522398e98e21b528ad72b}{remove()}} operation will be invoked on that entity at the beginning of the next commit of this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a3a041fd642fa43681f466c8e25240292}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a3a041fd642fa43681f466c8e25240292}} 
+\index{UnitOfWork@{UnitOfWork}!setOriginalEntityData@{setOriginalEntityData}}
+\index{setOriginalEntityData@{setOriginalEntityData}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{setOriginalEntityData()}{setOriginalEntityData()}}
+{\footnotesize\ttfamily set\+Original\+Entity\+Data (\begin{DoxyParamCaption}\item[{}]{\$entity,  }\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a12478d1c637be33161d470da4e0f1688}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a12478d1c637be33161d470da4e0f1688}} 
+\index{UnitOfWork@{UnitOfWork}!setOriginalEntityProperty@{setOriginalEntityProperty}}
+\index{setOriginalEntityProperty@{setOriginalEntityProperty}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{setOriginalEntityProperty()}{setOriginalEntityProperty()}}
+{\footnotesize\ttfamily set\+Original\+Entity\+Property (\begin{DoxyParamCaption}\item[{}]{\$oid,  }\item[{}]{\$property,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+INTERNAL\+: Sets a property value of the original data array of an entity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$oid} & \\
+\hline
+string & {\em \$property} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@ignore \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a775bfb88c1bb7975d67f277eade2a1b7}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a775bfb88c1bb7975d67f277eade2a1b7}} 
+\index{UnitOfWork@{UnitOfWork}!size@{size}}
+\index{size@{size}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates the size of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}. The size of the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}} is the number of entities in the identity map.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a98042927f5f237b856be72317e061c8c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a98042927f5f237b856be72317e061c8c}} 
+\index{UnitOfWork@{UnitOfWork}!triggerEagerLoads@{triggerEagerLoads}}
+\index{triggerEagerLoads@{triggerEagerLoads}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{triggerEagerLoads()}{triggerEagerLoads()}}
+{\footnotesize\ttfamily trigger\+Eager\+Loads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a044d0f9f8be2524e9958b7aedc1878bb}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a044d0f9f8be2524e9958b7aedc1878bb}} 
+\index{UnitOfWork@{UnitOfWork}!tryGetById@{tryGetById}}
+\index{tryGetById@{tryGetById}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{tryGetById()}{tryGetById()}}
+{\footnotesize\ttfamily try\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$root\+Class\+Name }\end{DoxyParamCaption})}
+
+Tries to find an entity with the given identifier in the identity map of this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$id} & The entity identifier to look for. \\
+\hline
+string & {\em \$root\+Class\+Name} & The name of the root class of the mapped entity hierarchy. @psalm-\/param class-\/string \$root\+Class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$false Returns the entity with the specified identifier if it exists in this \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}, FALSE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a247a8c8e1e1991d1c424cf4eda08f88a}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a247a8c8e1e1991d1c424cf4eda08f88a}} 
+\index{UnitOfWork@{UnitOfWork}!tryGetByIdHash@{tryGetByIdHash}}
+\index{tryGetByIdHash@{tryGetByIdHash}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{tryGetByIdHash()}{tryGetByIdHash()}}
+{\footnotesize\ttfamily try\+Get\+By\+Id\+Hash (\begin{DoxyParamCaption}\item[{}]{\$id\+Hash,  }\item[{}]{\$root\+Class\+Name }\end{DoxyParamCaption})}
+
+INTERNAL\+: Tries to get an entity by its identifier hash. If no entity is found for the given hash, FALSE is returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$id\+Hash} & (must be possible to cast it to string) \\
+\hline
+string & {\em \$root\+Class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false$\vert$object The found entity or FALSE.
+\end{DoxyReturn}
+@ignore 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af36f599448f2411de2a9b98fe438900d}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af36f599448f2411de2a9b98fe438900d}} 
+\index{UnitOfWork@{UnitOfWork}!HINT\_DEFEREAGERLOAD@{HINT\_DEFEREAGERLOAD}}
+\index{HINT\_DEFEREAGERLOAD@{HINT\_DEFEREAGERLOAD}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{HINT\_DEFEREAGERLOAD}{HINT\_DEFEREAGERLOAD}}
+{\footnotesize\ttfamily const HINT\+\_\+\+DEFEREAGERLOAD = \textquotesingle{}defer\+Eager\+Load\textquotesingle{}}
+
+Hint used to collect all primary keys of associated entities during hydration and execute it in a dedicated query afterwards
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/dql-doctrine-query-language.html\#temporarily-change-fetch-mode-in-dql}{\texttt{ https\+://www.\+doctrine-\/project.\+org/projects/doctrine-\/orm/en/latest/reference/dql-\/doctrine-\/query-\/language.\+html\#temporarily-\/change-\/fetch-\/mode-\/in-\/dql}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a714b7b6f065aff86077531d576ad3743}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a714b7b6f065aff86077531d576ad3743}} 
+\index{UnitOfWork@{UnitOfWork}!STATE\_DETACHED@{STATE\_DETACHED}}
+\index{STATE\_DETACHED@{STATE\_DETACHED}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{STATE\_DETACHED}{STATE\_DETACHED}}
+{\footnotesize\ttfamily const STATE\+\_\+\+DETACHED = 3}
+
+A detached entity is an instance with persistent state and identity that is not (or no longer) associated with an \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} (and a \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}). \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a53f7287bb5a02f5b4299082d7b3af848}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a53f7287bb5a02f5b4299082d7b3af848}} 
+\index{UnitOfWork@{UnitOfWork}!STATE\_MANAGED@{STATE\_MANAGED}}
+\index{STATE\_MANAGED@{STATE\_MANAGED}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{STATE\_MANAGED}{STATE\_MANAGED}}
+{\footnotesize\ttfamily const STATE\+\_\+\+MANAGED = 1}
+
+An entity is in MANAGED state when its persistence is managed by an \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af47c6a5b8aefd132e8709b8aa2a4edfc}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_af47c6a5b8aefd132e8709b8aa2a4edfc}} 
+\index{UnitOfWork@{UnitOfWork}!STATE\_NEW@{STATE\_NEW}}
+\index{STATE\_NEW@{STATE\_NEW}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{STATE\_NEW}{STATE\_NEW}}
+{\footnotesize\ttfamily const STATE\+\_\+\+NEW = 2}
+
+An entity is new if it has just been instantiated (i.\+e. using the \char`\"{}new\char`\"{} operator) and is not (yet) managed by an \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9830e971171f17791c7f9459ae06781c}\label{class_doctrine_1_1_o_r_m_1_1_unit_of_work_a9830e971171f17791c7f9459ae06781c}} 
+\index{UnitOfWork@{UnitOfWork}!STATE\_REMOVED@{STATE\_REMOVED}}
+\index{STATE\_REMOVED@{STATE\_REMOVED}!UnitOfWork@{UnitOfWork}}
+\doxysubsubsection{\texorpdfstring{STATE\_REMOVED}{STATE\_REMOVED}}
+{\footnotesize\ttfamily const STATE\+\_\+\+REMOVED = 4}
+
+A removed entity instance is an instance with a persistent identity, associated with an \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}, whose persistent state will be deleted on commit. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Unit\+Of\+Work.\+php\end{DoxyCompactItemize}

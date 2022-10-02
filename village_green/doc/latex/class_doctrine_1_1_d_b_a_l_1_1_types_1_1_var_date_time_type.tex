@@ -1,0 +1,61 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type}{}\doxysection{Var\+Date\+Time\+Type Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type}\index{VarDateTimeType@{VarDateTimeType}}
+Inheritance diagram for Var\+Date\+Time\+Type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type_a02576e237bf410008f15a806928d2374}{convert\+To\+PHPValue}} (\$value, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}} \$platform)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Variable Date\+Time \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} using date\+\_\+create() instead of Date\+Time\+::create\+From\+Format().
+
+This type has performance implications as it runs twice as long as the regular \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_type}{Date\+Time\+Type}}\}, however in certain Postgre\+SQL configurations with TIMESTAMP(n) columns where n \texorpdfstring{$>$}{>} 0 it is necessary to use this type. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type_a02576e237bf410008f15a806928d2374}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_type_a02576e237bf410008f15a806928d2374}} 
+\index{VarDateTimeType@{VarDateTimeType}!convertToPHPValue@{convertToPHPValue}}
+\index{convertToPHPValue@{convertToPHPValue}!VarDateTimeType@{VarDateTimeType}}
+\doxysubsubsection{\texorpdfstring{convertToPHPValue()}{convertToPHPValue()}}
+{\footnotesize\ttfamily convert\+To\+PHPValue (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform}{Abstract\+Platform}}}]{\$platform }\end{DoxyParamCaption})}
+
+\{\{Converts a value from its database representation to its PHP representation of this type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & The value to convert. \\
+\hline
+Abstract\+Platform & {\em \$platform} & The currently used database platform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed The PHP representation of the value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_conversion_exception}{Conversion\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_date_time_type_a02576e237bf410008f15a806928d2374}{Date\+Time\+Type}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_var_date_time_immutable_type_a02576e237bf410008f15a806928d2374}{Var\+Date\+Time\+Immutable\+Type}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Var\+Date\+Time\+Type.\+php\end{DoxyCompactItemize}

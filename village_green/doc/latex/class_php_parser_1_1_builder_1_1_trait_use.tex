@@ -1,0 +1,99 @@
+\hypertarget{class_php_parser_1_1_builder_1_1_trait_use}{}\doxysection{Trait\+Use Class Reference}
+\label{class_php_parser_1_1_builder_1_1_trait_use}\index{TraitUse@{TraitUse}}
+Inheritance diagram for Trait\+Use\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_php_parser_1_1_builder_1_1_trait_use}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_trait_use_a8d9bccddf062cb5b9b4eb3ea0a7b8f46}{\+\_\+\+\_\+construct}} (... \$traits)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_trait_use_a3642daaddfd9fb16ea7d80ba16ca7c9c}{and}} (\$trait)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_trait_use_ad89cc2aec38dcf6fffe14cec76ae1225}{with}} (\$adaptation)
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_builder_1_1_trait_use_a3a0d17930cbcc57bef84064afcc1a837}{get\+Node}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_trait_use_a00d691d7d5290df7d075c00deb62dd1b}\label{class_php_parser_1_1_builder_1_1_trait_use_a00d691d7d5290df7d075c00deb62dd1b}} 
+{\bfseries \$traits} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_trait_use_a1f5a20fc19bd8e652fde385a3bc305ec}\label{class_php_parser_1_1_builder_1_1_trait_use_a1f5a20fc19bd8e652fde385a3bc305ec}} 
+{\bfseries \$adaptations} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_trait_use_a8d9bccddf062cb5b9b4eb3ea0a7b8f46}\label{class_php_parser_1_1_builder_1_1_trait_use_a8d9bccddf062cb5b9b4eb3ea0a7b8f46}} 
+\index{TraitUse@{TraitUse}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TraitUse@{TraitUse}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$traits }\end{DoxyParamCaption})}
+
+Creates a trait use builder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{interface_php_parser_1_1_node}{Node}}} & \\
+\hline
+\end{DoxyParams}
+Name$\vert$string ...\$traits Names of used traits 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_trait_use_a3642daaddfd9fb16ea7d80ba16ca7c9c}\label{class_php_parser_1_1_builder_1_1_trait_use_a3642daaddfd9fb16ea7d80ba16ca7c9c}} 
+\index{TraitUse@{TraitUse}!and@{and}}
+\index{and@{and}!TraitUse@{TraitUse}}
+\doxysubsubsection{\texorpdfstring{and()}{and()}}
+{\footnotesize\ttfamily and (\begin{DoxyParamCaption}\item[{}]{\$trait }\end{DoxyParamCaption})}
+
+Adds used trait.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Node\textbackslash{}\+Name | string & {\em \$trait} & Trait name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_trait_use_a3a0d17930cbcc57bef84064afcc1a837}\label{class_php_parser_1_1_builder_1_1_trait_use_a3a0d17930cbcc57bef84064afcc1a837}} 
+\index{TraitUse@{TraitUse}!getNode@{getNode}}
+\index{getNode@{getNode}!TraitUse@{TraitUse}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily get\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the built node.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_php_parser_1_1_node}{Node}} The built node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_builder_a3a0d17930cbcc57bef84064afcc1a837}{Builder}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_builder_1_1_trait_use_ad89cc2aec38dcf6fffe14cec76ae1225}\label{class_php_parser_1_1_builder_1_1_trait_use_ad89cc2aec38dcf6fffe14cec76ae1225}} 
+\index{TraitUse@{TraitUse}!with@{with}}
+\index{with@{with}!TraitUse@{TraitUse}}
+\doxysubsubsection{\texorpdfstring{with()}{with()}}
+{\footnotesize\ttfamily with (\begin{DoxyParamCaption}\item[{}]{\$adaptation }\end{DoxyParamCaption})}
+
+Adds trait adaptation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Stmt\textbackslash{}\+Trait\+Use\+Adaptation | Builder\textbackslash{}\+Trait\+Use\+Adaptation & {\em \$adaptation} & Trait adaptation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this The builder instance (for fluid interface) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Builder/Trait\+Use.\+php\end{DoxyCompactItemize}

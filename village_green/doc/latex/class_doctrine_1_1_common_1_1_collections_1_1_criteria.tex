@@ -1,0 +1,230 @@
+\hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{}\doxysection{Criteria Class Reference}
+\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria}\index{Criteria@{Criteria}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a8d64f56c93b62fcb40f04d4219c14861}{\+\_\+\+\_\+construct}} (?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}} \$expression=null, ?array \$orderings=null, \$first\+Result=null, \$max\+Results=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a0fd7de291208c1868a2e751ec3bbd015}{where}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}} \$expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a9f07e1e7236f24f1ceab0d31a1c359c6}{and\+Where}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}} \$expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a899206a948f4e1c30d41995316a4374a}{or\+Where}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}} \$expression)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aa499d9bb8433e02515acc7d71b925bcd}{get\+Where\+Expression}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_acee13a9f917b4e136dd3a0ae4e778dc3}{get\+Orderings}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a4db85104c6fe3ef2ab132449977c82a0}{order\+By}} (array \$orderings)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a3fcd2be9a24cb63bf35a88a0e32a8e8d}{get\+First\+Result}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a617f7fbdc1fd01b1425d418e835d976a}{set\+First\+Result}} (\$first\+Result)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aa5da5a83db4ee44db086bb09c3058c5b}{get\+Max\+Results}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_ad0ec8e2116046874b8886f5b0cc0711d}{set\+Max\+Results}} (\$max\+Results)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a239b1c70258014a86569483c2d009de6}{create}} ()
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aea921621f9154ad83839b9c20c5f564b}{expr}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a32bea9cb6a1769ec537f6acdfe4618a8}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a32bea9cb6a1769ec537f6acdfe4618a8}} 
+const {\bfseries ASC} = \textquotesingle{}ASC\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a34abf23cff3df464425b7cedf58e2939}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a34abf23cff3df464425b7cedf58e2939}} 
+const {\bfseries DESC} = \textquotesingle{}DESC\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} for filtering \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_selectable}{Selectable}} collections.
+
+@psalm-\/consistent-\/constructor 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a8d64f56c93b62fcb40f04d4219c14861}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a8d64f56c93b62fcb40f04d4219c14861}} 
+\index{Criteria@{Criteria}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}}}]{\$expression = {\ttfamily null},  }\item[{?array}]{\$orderings = {\ttfamily null},  }\item[{}]{\$first\+Result = {\ttfamily null},  }\item[{}]{\$max\+Results = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | null & {\em \$orderings} & \\
+\hline
+int | null & {\em \$first\+Result} & \\
+\hline
+int | null & {\em \$max\+Results} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a9f07e1e7236f24f1ceab0d31a1c359c6}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a9f07e1e7236f24f1ceab0d31a1c359c6}} 
+\index{Criteria@{Criteria}!andWhere@{andWhere}}
+\index{andWhere@{andWhere}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{andWhere()}{andWhere()}}
+{\footnotesize\ttfamily and\+Where (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}}}]{\$expression }\end{DoxyParamCaption})}
+
+Appends the where expression to evaluate when this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} is searched for using an AND with previous expression.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a239b1c70258014a86569483c2d009de6}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a239b1c70258014a86569483c2d009de6}} 
+\index{Criteria@{Criteria}!create@{create}}
+\index{create@{create}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates an instance of the class.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aea921621f9154ad83839b9c20c5f564b}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aea921621f9154ad83839b9c20c5f564b}} 
+\index{Criteria@{Criteria}!expr@{expr}}
+\index{expr@{expr}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{expr()}{expr()}}
+{\footnotesize\ttfamily static expr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the expression builder.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder}{Expression\+Builder}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a3fcd2be9a24cb63bf35a88a0e32a8e8d}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a3fcd2be9a24cb63bf35a88a0e32a8e8d}} 
+\index{Criteria@{Criteria}!getFirstResult@{getFirstResult}}
+\index{getFirstResult@{getFirstResult}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{getFirstResult()}{getFirstResult()}}
+{\footnotesize\ttfamily get\+First\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the current first result option of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}.
+
+\begin{DoxyReturn}{Returns}
+int$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aa5da5a83db4ee44db086bb09c3058c5b}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aa5da5a83db4ee44db086bb09c3058c5b}} 
+\index{Criteria@{Criteria}!getMaxResults@{getMaxResults}}
+\index{getMaxResults@{getMaxResults}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{getMaxResults()}{getMaxResults()}}
+{\footnotesize\ttfamily get\+Max\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets max\+Results.
+
+\begin{DoxyReturn}{Returns}
+int$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_acee13a9f917b4e136dd3a0ae4e778dc3}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_acee13a9f917b4e136dd3a0ae4e778dc3}} 
+\index{Criteria@{Criteria}!getOrderings@{getOrderings}}
+\index{getOrderings@{getOrderings}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{getOrderings()}{getOrderings()}}
+{\footnotesize\ttfamily get\+Orderings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the current orderings of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aa499d9bb8433e02515acc7d71b925bcd}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_aa499d9bb8433e02515acc7d71b925bcd}} 
+\index{Criteria@{Criteria}!getWhereExpression@{getWhereExpression}}
+\index{getWhereExpression@{getWhereExpression}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{getWhereExpression()}{getWhereExpression()}}
+{\footnotesize\ttfamily get\+Where\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the expression attached to this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}.
+
+\begin{DoxyReturn}{Returns}
+Expression$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a4db85104c6fe3ef2ab132449977c82a0}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a4db85104c6fe3ef2ab132449977c82a0}} 
+\index{Criteria@{Criteria}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{orderBy()}{orderBy()}}
+{\footnotesize\ttfamily order\+By (\begin{DoxyParamCaption}\item[{array}]{\$orderings }\end{DoxyParamCaption})}
+
+Sets the ordering of the result of this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}}.
+
+Keys are field and values are the order, being either ASC or DESC.
+
+\begin{DoxySeeAlso}{See also}
+Criteria\+::\+ASC 
+
+Criteria\+::\+DESC
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$orderings} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a899206a948f4e1c30d41995316a4374a}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a899206a948f4e1c30d41995316a4374a}} 
+\index{Criteria@{Criteria}!orWhere@{orWhere}}
+\index{orWhere@{orWhere}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{orWhere()}{orWhere()}}
+{\footnotesize\ttfamily or\+Where (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}}}]{\$expression }\end{DoxyParamCaption})}
+
+Appends the where expression to evaluate when this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} is searched for using an OR with previous expression.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a617f7fbdc1fd01b1425d418e835d976a}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a617f7fbdc1fd01b1425d418e835d976a}} 
+\index{Criteria@{Criteria}!setFirstResult@{setFirstResult}}
+\index{setFirstResult@{setFirstResult}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{setFirstResult()}{setFirstResult()}}
+{\footnotesize\ttfamily set\+First\+Result (\begin{DoxyParamCaption}\item[{}]{\$first\+Result }\end{DoxyParamCaption})}
+
+Set the number of first result that this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} should return.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | null & {\em \$first\+Result} & The value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_ad0ec8e2116046874b8886f5b0cc0711d}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_ad0ec8e2116046874b8886f5b0cc0711d}} 
+\index{Criteria@{Criteria}!setMaxResults@{setMaxResults}}
+\index{setMaxResults@{setMaxResults}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{setMaxResults()}{setMaxResults()}}
+{\footnotesize\ttfamily set\+Max\+Results (\begin{DoxyParamCaption}\item[{}]{\$max\+Results }\end{DoxyParamCaption})}
+
+Sets max\+Results.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | null & {\em \$max\+Results} & The value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a0fd7de291208c1868a2e751ec3bbd015}\label{class_doctrine_1_1_common_1_1_collections_1_1_criteria_a0fd7de291208c1868a2e751ec3bbd015}} 
+\index{Criteria@{Criteria}!where@{where}}
+\index{where@{where}!Criteria@{Criteria}}
+\doxysubsubsection{\texorpdfstring{where()}{where()}}
+{\footnotesize\ttfamily where (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression}{Expression}}}]{\$expression }\end{DoxyParamCaption})}
+
+Sets the where expression to evaluate when this \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} is searched for.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_criteria}{Criteria}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/collections/lib/\+Doctrine/\+Common/\+Collections/Criteria.\+php\end{DoxyCompactItemize}

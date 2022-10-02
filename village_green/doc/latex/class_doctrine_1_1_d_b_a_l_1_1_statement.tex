@@ -1,0 +1,185 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement}{}\doxysection{Statement Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_statement}\index{Statement@{Statement}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_aa75548c5ac705455d1dc93830785ec4d}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$conn, \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_statement}{Driver\textbackslash{}\+Statement}} \$statement, string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}{bind\+Value}} (\$param, \$value, \$type=\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_a96968444927e79aa3b3de64f133886e6}{bind\+Param}} (\$param, \&\$variable, \$type=\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}, \$length=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_abf65f493280888db7095b3b820131181}{execute}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_ad4a94d10b15639220a3bbd668f506074}{execute\+Query}} (array \$params=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_af1fca159086f183fb5205e90a69ce45e}{execute\+Statement}} (array \$params=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement_ac1e65cafe1ab0fbf16c0bb925164e4b1}{get\+Wrapped\+Statement}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_a047170d6020a882807665812a27e2525}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_a047170d6020a882807665812a27e2525}} 
+{\bfseries \$sql}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_afe68e6fbe7acfbffc0af0c84a1996466}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_afe68e6fbe7acfbffc0af0c84a1996466}} 
+{\bfseries \$params} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_a92d70a97331cc6fc0a79d9da50895be8}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_a92d70a97331cc6fc0a79d9da50895be8}} 
+{\bfseries \$types} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_af27a9140d5f2658693e7fd107f716449}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_af27a9140d5f2658693e7fd107f716449}} 
+{\bfseries \$stmt}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_a9cb2b1a2275f65f39415f0366139fb1c}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_a9cb2b1a2275f65f39415f0366139fb1c}} 
+{\bfseries \$platform}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_aa8a5a87b9c1a6a0819b88447cbe41877}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+{\bfseries \$conn}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A database abstraction-\/level statement that implements support for logging, DBAL mapping types, etc. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_aa75548c5ac705455d1dc93830785ec4d}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_aa75548c5ac705455d1dc93830785ec4d}} 
+\index{Statement@{Statement}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}}]{\$conn,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_statement}{Driver\textbackslash{}\+Statement}}}]{\$statement,  }\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+Creates a new {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_statement}{Statement}}} for the given SQL and {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_a96968444927e79aa3b3de64f133886e6}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_a96968444927e79aa3b3de64f133886e6}} 
+\index{Statement@{Statement}!bindParam@{bindParam}}
+\index{bindParam@{bindParam}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{bindParam()}{bindParam()}}
+{\footnotesize\ttfamily bind\+Param (\begin{DoxyParamCaption}\item[{}]{\$param,  }\item[{\&}]{\$variable,  }\item[{}]{\$type = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}},  }\item[{}]{\$length = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Binds a parameter to a value by reference.
+
+Binding a parameter by reference does not support DBAL mapping types.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$param} & The name or position of the parameter. \\
+\hline
+mixed & {\em \$variable} & The reference to the variable to bind. \\
+\hline
+int & {\em \$type} & The binding type. \\
+\hline
+int | null & {\em \$length} & Must be specified when using an OUT bind so that PHP allocates enough memory to hold the returned value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}} 
+\index{Statement@{Statement}!bindValue@{bindValue}}
+\index{bindValue@{bindValue}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{bindValue()}{bindValue()}}
+{\footnotesize\ttfamily bind\+Value (\begin{DoxyParamCaption}\item[{}]{\$param,  }\item[{}]{\$value,  }\item[{}]{\$type = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}} }\end{DoxyParamCaption})}
+
+Binds a parameter value to the statement.
+
+The value can optionally be bound with a DBAL mapping type. If bound with a DBAL mapping type, the binding type is derived from the mapping type and the value undergoes the conversion routines of the mapping type before being bound.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$param} & The name or position of the parameter. \\
+\hline
+mixed & {\em \$value} & The value of the parameter. \\
+\hline
+mixed & {\em \$type} & Either a PDO binding type or a DBAL mapping type name or instance.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE on success, FALSE on failure.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_abf65f493280888db7095b3b820131181}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_abf65f493280888db7095b3b820131181}} 
+\index{Statement@{Statement}!execute@{execute}}
+\index{execute@{execute}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Executes the statement with the currently bound parameters.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000189}{Deprecated}}]\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_i_b_m_d_b2_1_1_statement_abf65f493280888db7095b3b820131181}{Statement\+::execute()}} is deprecated, use Statement\+::execute\+Query() or execute\+Statement() instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_ad4a94d10b15639220a3bbd668f506074}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_ad4a94d10b15639220a3bbd668f506074}} 
+\index{Statement@{Statement}!executeQuery@{executeQuery}}
+\index{executeQuery@{executeQuery}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{executeQuery()}{executeQuery()}}
+{\footnotesize\ttfamily execute\+Query (\begin{DoxyParamCaption}\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Executes the statement with the currently bound parameters and return result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_af1fca159086f183fb5205e90a69ce45e}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_af1fca159086f183fb5205e90a69ce45e}} 
+\index{Statement@{Statement}!executeStatement@{executeStatement}}
+\index{executeStatement@{executeStatement}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{executeStatement()}{executeStatement()}}
+{\footnotesize\ttfamily execute\+Statement (\begin{DoxyParamCaption}\item[{array}]{\$params = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Executes the statement with the currently bound parameters and return affected rows.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_statement_ac1e65cafe1ab0fbf16c0bb925164e4b1}\label{class_doctrine_1_1_d_b_a_l_1_1_statement_ac1e65cafe1ab0fbf16c0bb925164e4b1}} 
+\index{Statement@{Statement}!getWrappedStatement@{getWrappedStatement}}
+\index{getWrappedStatement@{getWrappedStatement}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{getWrappedStatement()}{getWrappedStatement()}}
+{\footnotesize\ttfamily get\+Wrapped\+Statement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the wrapped driver statement.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver}{Driver}}\textbackslash{}\+Statement 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/Statement.\+php\end{DoxyCompactItemize}

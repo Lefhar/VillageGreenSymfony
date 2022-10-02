@@ -1,0 +1,162 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{}\doxysection{Query\+Cache\+Profile Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}\index{QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a689306e1936a9bc7b7af12bb8575227f}{\+\_\+\+\_\+construct}} (\$lifetime=0, \$cache\+Key=null, ?object \$result\+Cache=null)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ab105ef977ea2f2443da189e6d8d19bf8}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ab105ef977ea2f2443da189e6d8d19bf8}} 
+{\bfseries get\+Result\+Cache} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a14f43017a52875d18e24046b8dd05a5e}{get\+Result\+Cache\+Driver}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a930357223406998831db9912ebbd04f5}{get\+Lifetime}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ae1b0574fe288b69c16ab66b0f4fa3747}{get\+Cache\+Key}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ab66c97ffa7f4c6b1096fe1b2b46de7a2}{generate\+Cache\+Keys}} (\$sql, \$params, \$types, array \$connection\+Params=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ae271e9894cef65cd2b7e5ab6e041eac6}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ae271e9894cef65cd2b7e5ab6e041eac6}} 
+{\bfseries set\+Result\+Cache} (\mbox{\hyperlink{interface_psr_1_1_cache_1_1_cache_item_pool_interface}{Cache\+Item\+Pool\+Interface}} \$cache)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_afdbebbc6ebc45f4caa6f5748ffb35d3e}{set\+Result\+Cache\+Driver}} (\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}} \$cache)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a44d1eab92fd0a6655dfd267a8952f314}{set\+Cache\+Key}} (\$cache\+Key)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_af807236665cf678248cccf7e8543ed91}{set\+Lifetime}} (\$lifetime)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_query}{Query}} Cache Profile handles the data relevant for query caching.
+
+It is a value object, setter methods return NEW instances. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2orm_2lib_2_doctrine_f8967513678986d5e8c2157d31bb4dfd}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Abstract\+Query.\+php}}.\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a689306e1936a9bc7b7af12bb8575227f}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a689306e1936a9bc7b7af12bb8575227f}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$lifetime = {\ttfamily 0},  }\item[{}]{\$cache\+Key = {\ttfamily null},  }\item[{?object}]{\$result\+Cache = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$lifetime} & \\
+\hline
+string | null & {\em \$cache\+Key} & \\
+\hline
+Cache\+Item\+Pool\+Interface | Cache | null & {\em \$result\+Cache} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ab66c97ffa7f4c6b1096fe1b2b46de7a2}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ab66c97ffa7f4c6b1096fe1b2b46de7a2}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!generateCacheKeys@{generateCacheKeys}}
+\index{generateCacheKeys@{generateCacheKeys}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{generateCacheKeys()}{generateCacheKeys()}}
+{\footnotesize\ttfamily generate\+Cache\+Keys (\begin{DoxyParamCaption}\item[{}]{\$sql,  }\item[{}]{\$params,  }\item[{}]{\$types,  }\item[{array}]{\$connection\+Params = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Generates the real cache key from query, params, types and connection parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & \\
+\hline
+ & {\em list$<$mixed$>$$\vert$array$<$string,mixed$>$} & \$params \\
+\hline
+ & {\em array$<$int,Type$\vert$int$\vert$string$\vert$null$>$$\vert$array$<$string,Type$\vert$int$\vert$string$\vert$null$>$} & \$types \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$connection\+Params\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ae1b0574fe288b69c16ab66b0f4fa3747}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_ae1b0574fe288b69c16ab66b0f4fa3747}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!getCacheKey@{getCacheKey}}
+\index{getCacheKey@{getCacheKey}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{getCacheKey()}{getCacheKey()}}
+{\footnotesize\ttfamily get\+Cache\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a930357223406998831db9912ebbd04f5}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a930357223406998831db9912ebbd04f5}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!getLifetime@{getLifetime}}
+\index{getLifetime@{getLifetime}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{getLifetime()}{getLifetime()}}
+{\footnotesize\ttfamily get\+Lifetime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a14f43017a52875d18e24046b8dd05a5e}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a14f43017a52875d18e24046b8dd05a5e}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!getResultCacheDriver@{getResultCacheDriver}}
+\index{getResultCacheDriver@{getResultCacheDriver}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{getResultCacheDriver()}{getResultCacheDriver()}}
+{\footnotesize\ttfamily get\+Result\+Cache\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000042}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+get\+Result\+Cache()\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Cache$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a44d1eab92fd0a6655dfd267a8952f314}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_a44d1eab92fd0a6655dfd267a8952f314}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!setCacheKey@{setCacheKey}}
+\index{setCacheKey@{setCacheKey}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{setCacheKey()}{setCacheKey()}}
+{\footnotesize\ttfamily set\+Cache\+Key (\begin{DoxyParamCaption}\item[{}]{\$cache\+Key }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$cache\+Key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_af807236665cf678248cccf7e8543ed91}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_af807236665cf678248cccf7e8543ed91}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!setLifetime@{setLifetime}}
+\index{setLifetime@{setLifetime}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{setLifetime()}{setLifetime()}}
+{\footnotesize\ttfamily set\+Lifetime (\begin{DoxyParamCaption}\item[{}]{\$lifetime }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$lifetime} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_afdbebbc6ebc45f4caa6f5748ffb35d3e}\label{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile_afdbebbc6ebc45f4caa6f5748ffb35d3e}} 
+\index{QueryCacheProfile@{QueryCacheProfile}!setResultCacheDriver@{setResultCacheDriver}}
+\index{setResultCacheDriver@{setResultCacheDriver}!QueryCacheProfile@{QueryCacheProfile}}
+\doxysubsubsection{\texorpdfstring{setResultCacheDriver()}{setResultCacheDriver()}}
+{\footnotesize\ttfamily set\+Result\+Cache\+Driver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_common_1_1_cache_1_1_cache}{Cache}}}]{\$cache }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000043}{Deprecated}}]Use \{\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See also}
+set\+Result\+Cache()\} instead.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_cache_1_1_query_cache_profile}{Query\+Cache\+Profile}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Cache/Query\+Cache\+Profile.\+php\end{DoxyCompactItemize}

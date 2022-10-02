@@ -1,0 +1,14 @@
+\hypertarget{md_vendor_symfony_security_http__c_h_a_n_g_e_l_o_g_autotoc_md1817}{}\doxysection{5.\+4}\label{md_vendor_symfony_security_http__c_h_a_n_g_e_l_o_g_autotoc_md1817}
+
+\begin{DoxyItemize}
+\item Deprecate the {\ttfamily \$authentication\+Entry\+Point} argument of {\ttfamily Channel\+Listener}, and add {\ttfamily \$http\+Port} and {\ttfamily \$https\+Port} arguments
+\item Deprecate {\ttfamily Retry\+Authentication\+Entry\+Point}, this code is now inlined in the {\ttfamily Channel\+Listener}
+\item Deprecate {\ttfamily Form\+Authentication\+Entry\+Point} and {\ttfamily Basic\+Authentication\+Entry\+Point}, in the new system the {\ttfamily Form\+Login\+Authenticator} and {\ttfamily Http\+Basic\+Authenticator} should be used instead
+\item Deprecate {\ttfamily Abstract\+Remember\+Me\+Services}, {\ttfamily Persistent\+Token\+Based\+Remember\+Me\+Services}, {\ttfamily Remember\+Me\+Services\+Interface}, {\ttfamily Token\+Based\+Remember\+Me\+Services}, use the remember me handler alternatives instead
+\item Deprecate the {\ttfamily \$auth\+Manager} argument of {\ttfamily Access\+Listener}
+\item Deprecate not setting the {\ttfamily \$exception\+On\+No\+Token} argument of {\ttfamily Access\+Listener} to {\ttfamily false}
+\item Deprecate {\ttfamily Deauthenticated\+Event}, use {\ttfamily Token\+Deauthenticated\+Event} instead
+\item Deprecate {\ttfamily Cookie\+Clearing\+Logout\+Handler}, {\ttfamily Session\+Logout\+Handler} and {\ttfamily Csrf\+Token\+Clearing\+Logout\+Handler}. Use {\ttfamily Cookie\+Clearing\+Logout\+Listener}, {\ttfamily Session\+Logout\+Listener} and {\ttfamily Csrf\+Token\+Clearing\+Logout\+Listener} instead
+\item Deprecate {\ttfamily Passport\+Interface}, {\ttfamily User\+Passport\+Interface} and {\ttfamily Passport\+Trait}, use {\ttfamily Passport} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_security_http__c_h_a_n_g_e_l_o_g_autotoc_md1818}{}\doxysection{5.\+3}\label{md_vendor_symfony_security_http__c_h_a_n_g_e_l_o_g_autotoc_md1818}
+The CHANGELOG for version 5.\+3 and earlier can be found at \href{https://github.com/symfony/symfony/blob/5.3/src/Symfony/Component/Security/CHANGELOG.md}{\texttt{ https\+://github.\+com/symfony/symfony/blob/5.\+3/src/\+Symfony/\+Component/\+Security/\+CHANGELOG.\+md}} 

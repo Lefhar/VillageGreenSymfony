@@ -1,0 +1,105 @@
+\hypertarget{interface_amp_1_1_socket_1_1_socket_pool}{}\doxysection{Socket\+Pool Interface Reference}
+\label{interface_amp_1_1_socket_1_1_socket_pool}\index{SocketPool@{SocketPool}}
+Inheritance diagram for Socket\+Pool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_socket_1_1_socket_pool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_pool_ae1c2cd6b3c15f22e6b94c305209b604c}{checkout}} (string \$uri, \mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}} \$context=null, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$token=null)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_pool_a63e2e5ab53c42f724e3a5ff8a52fd8b8}{checkin}} (\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}} \$socket)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_pool_ab913c5d905ae9921a3e1569f51b5a9b3}{clear}} (\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}} \$socket)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows pooling of connections for stateless protocols. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_pool_a63e2e5ab53c42f724e3a5ff8a52fd8b8}\label{interface_amp_1_1_socket_1_1_socket_pool_a63e2e5ab53c42f724e3a5ff8a52fd8b8}} 
+\index{SocketPool@{SocketPool}!checkin@{checkin}}
+\index{checkin@{checkin}!SocketPool@{SocketPool}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}}
+{\footnotesize\ttfamily checkin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}}}]{\$socket }\end{DoxyParamCaption})}
+
+Return a previously checked-\/out socket to the pool so it can be reused.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}} & {\em \$socket} & \mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket}{Socket}} instance.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the provided resource is unknown to the pool. 
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_unlimited_socket_pool_a63e2e5ab53c42f724e3a5ff8a52fd8b8}{Unlimited\+Socket\+Pool}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_pool_ae1c2cd6b3c15f22e6b94c305209b604c}\label{interface_amp_1_1_socket_1_1_socket_pool_ae1c2cd6b3c15f22e6b94c305209b604c}} 
+\index{SocketPool@{SocketPool}!checkout@{checkout}}
+\index{checkout@{checkout}!SocketPool@{SocketPool}}
+\doxysubsubsection{\texorpdfstring{checkout()}{checkout()}}
+{\footnotesize\ttfamily checkout (\begin{DoxyParamCaption}\item[{string}]{\$uri,  }\item[{\mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}}}]{\$context = {\ttfamily null},  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Checkout a socket from the specified URI authority.
+
+The resulting socket resource should be checked back in via {\ttfamily \mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket_pool_a63e2e5ab53c42f724e3a5ff8a52fd8b8}{Socket\+Pool\+::checkin()}}} once the calling code is finished with the stream (even if the socket has been closed). \mbox{\hyperlink{class_amp_1_1_failure}{Failure}} to checkin sockets will result in memory leaks and socket queue blockage. Instead of checking the socket in again, it can also be cleared to prevent re-\/use.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$uri} & URI in scheme\+://host\+:port format. TCP is assumed if no scheme is present. An optional fragment component can be used to differentiate different socket groups connected to the same URI. Connections to the same host with a different \mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}} must use separate socket groups internally to prevent TLS negotiation with the wrong peer name or other TLS settings. \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_connect_context}{Connect\+Context}} & {\em \$context} & \mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket}{Socket}} connect context to use when connecting. \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} | null & {\em \$token} & Optional cancellation token to cancel the checkout request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Encryptable\+Socket$>$ Resolves to an \mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}} instance once a connection is available.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & \\
+\hline
+{\em \mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_unlimited_socket_pool_ae1c2cd6b3c15f22e6b94c305209b604c}{Unlimited\+Socket\+Pool}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_socket_pool_ab913c5d905ae9921a3e1569f51b5a9b3}\label{interface_amp_1_1_socket_1_1_socket_pool_ab913c5d905ae9921a3e1569f51b5a9b3}} 
+\index{SocketPool@{SocketPool}!clear@{clear}}
+\index{clear@{clear}!SocketPool@{SocketPool}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}}}]{\$socket }\end{DoxyParamCaption})}
+
+Remove the specified socket from the pool.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket}{Encryptable\+Socket}} & {\em \$socket} & \mbox{\hyperlink{interface_amp_1_1_socket_1_1_socket}{Socket}} instance.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If the provided resource is unknown to the pool. 
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_socket_1_1_unlimited_socket_pool_ab913c5d905ae9921a3e1569f51b5a9b3}{Unlimited\+Socket\+Pool}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Socket\+Pool.\+php\end{DoxyCompactItemize}

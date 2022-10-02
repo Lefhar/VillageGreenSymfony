@@ -1,0 +1,87 @@
+\hypertarget{class_amp_1_1_parser_1_1_parser}{}\doxysection{Parser Class Reference}
+\label{class_amp_1_1_parser_1_1_parser}\index{Parser@{Parser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_parser_1_1_parser_ae7823e0362459ced164f653796d7649b}{\+\_\+\+\_\+construct}} (\textbackslash{}Generator \$generator)
+\item 
+\mbox{\hyperlink{class_amp_1_1_parser_1_1_parser_a649b2b3005c687ae78c9d1d65e973493}{cancel}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_parser_1_1_parser_a7b37efab7473a1effc29f8be2421f6e3}{is\+Valid}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_parser_1_1_parser_ac175bec28402c3842430348e5daab632}{push}} (string \$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_parser_1_1_parser_ae7823e0362459ced164f653796d7649b}\label{class_amp_1_1_parser_1_1_parser_ae7823e0362459ced164f653796d7649b}} 
+\index{Parser@{Parser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\textbackslash{}Generator}]{\$generator }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Generator & {\em \$generator} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_parser_1_1_invalid_delimiter_error}{Invalid\+Delimiter\+Error}}} & If the generator yields an invalid delimiter. \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Throwable If the generator throws. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_parser_1_1_parser_a649b2b3005c687ae78c9d1d65e973493}\label{class_amp_1_1_parser_1_1_parser_a649b2b3005c687ae78c9d1d65e973493}} 
+\index{Parser@{Parser}!cancel@{cancel}}
+\index{cancel@{cancel}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Cancels the generator parser and returns any remaining data in the internal buffer. Writing data after calling this method will result in an error.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_parser_1_1_parser_a7b37efab7473a1effc29f8be2421f6e3}\label{class_amp_1_1_parser_1_1_parser_a7b37efab7473a1effc29f8be2421f6e3}} 
+\index{Parser@{Parser}!isValid@{isValid}}
+\index{isValid@{isValid}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+\begin{DoxyReturn}{Returns}
+bool True if the parser can still receive more data to parse, false if it has ended and calling push will throw an exception. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_parser_1_1_parser_ac175bec28402c3842430348e5daab632}\label{class_amp_1_1_parser_1_1_parser_ac175bec28402c3842430348e5daab632}} 
+\index{Parser@{Parser}!push@{push}}
+\index{push@{push}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily push (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Adds data to the internal buffer and tries to continue parsing.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & Data to append to the internal buffer.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_parser_1_1_invalid_delimiter_error}{Invalid\+Delimiter\+Error}}} & If the generator yields an invalid delimiter. \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If parsing has already been cancelled. 
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Throwable If the generator throws. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/parser/lib/Parser.\+php\end{DoxyCompactItemize}

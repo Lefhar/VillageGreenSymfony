@@ -1,0 +1,99 @@
+\hypertarget{class_monolog_1_1_handler_1_1_syslog_handler}{}\doxysection{Syslog\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_syslog_handler}\index{SyslogHandler@{SyslogHandler}}
+Inheritance diagram for Syslog\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_syslog_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_handler_aea22c3dd4efbe4559675d1212486b82a}{\+\_\+\+\_\+construct}} (string \$ident, \$facility=LOG\+\_\+\+USER, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, int \$logopts=LOG\+\_\+\+PID)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_handler_a318d2aba48e6dcefe727b360aca98c75}\label{class_monolog_1_1_handler_1_1_syslog_handler_a318d2aba48e6dcefe727b360aca98c75}} 
+{\bfseries \$ident}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_handler_a6139d60a33484eee4bd8611813eef921}\label{class_monolog_1_1_handler_1_1_syslog_handler_a6139d60a33484eee4bd8611813eef921}} 
+{\bfseries \$logopts}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logs to syslog service.
+
+usage example\+:
+
+\$log = new \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}}(\textquotesingle{}application\textquotesingle{}); \$syslog = new \mbox{\hyperlink{class_monolog_1_1_handler_1_1_syslog_handler}{Syslog\+Handler}}(\textquotesingle{}myfacility\textquotesingle{}, \textquotesingle{}local6\textquotesingle{}); \$formatter = new Line\+Formatter(\char`\"{}\%channel\%.\%level\+\_\+name\%\+: \%message\% \%extra\%\char`\"{}); \$syslog-\/\texorpdfstring{$>$}{>}set\+Formatter(\$formatter); \$log-\/\texorpdfstring{$>$}{>}push\+Handler(\$syslog);
+
+\begin{DoxyAuthor}{Author}
+Sven Paulus \href{mailto:sven@karlsruhe.org}{\texttt{ sven@karlsruhe.\+org}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_handler_aea22c3dd4efbe4559675d1212486b82a}\label{class_monolog_1_1_handler_1_1_syslog_handler_aea22c3dd4efbe4559675d1212486b82a}} 
+\index{SyslogHandler@{SyslogHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SyslogHandler@{SyslogHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$ident,  }\item[{}]{\$facility = {\ttfamily LOG\+\_\+USER},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{int}]{\$logopts = {\ttfamily LOG\+\_\+PID} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ident} & \\
+\hline
+string | int & {\em \$facility} & Either one of the names of the keys in \$this-\/\texorpdfstring{$>$}{>}facilities, or a LOG\+\_\+$\ast$ facility constant \\
+\hline
+int & {\em \$logopts} & Option flags for the openlog() call, defaults to LOG\+\_\+\+PID \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_monolog_1_1_handler_1_1_syslog_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{SyslogHandler@{SyslogHandler}!close@{close}}
+\index{close@{close}!SyslogHandler@{SyslogHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the handler.
+
+Ends a log cycle and frees all resources used by the handler.
+
+Closing a \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} means flushing all buffers and freeing any open resources/handles.
+
+Implementations have to be idempotent (i.\+e. it should be possible to call close several times without breakage) and ideally handlers should be able to reopen themselves on \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface_ad54b568c673b7b4fc724268a54313603}{handle()}} after they have been closed.
+
+This is useful at the end of a request and will be called automatically when the object is destroyed if you extend Monolog\textbackslash{}\+Handler\textbackslash{}\+Handler.
+
+If you are thinking of calling this method yourself, most likely you should be calling \mbox{\hyperlink{interface_monolog_1_1_resettable_interface_a4a20559544fdf4dcb457e258dc976cf8}{Resettable\+Interface\+::reset}} instead. Have a look. 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_syslog_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_syslog_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{SyslogHandler@{SyslogHandler}!write@{write}}
+\index{write@{write}!SyslogHandler@{SyslogHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Syslog\+Handler.\+php\end{DoxyCompactItemize}

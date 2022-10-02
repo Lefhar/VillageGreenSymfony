@@ -1,0 +1,78 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command}{}\doxysection{Doctrine\+Command Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command}\index{DoctrineCommand@{DoctrineCommand}}
+Inheritance diagram for Doctrine\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a9fa86747b1382ea2886fbf5b45da0a2c}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a9fa86747b1382ea2886fbf5b45da0a2c}} 
+{\bfseries \+\_\+\+\_\+construct} (?\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_dependency_factory}{Dependency\+Factory}} \$dependency\+Factory=null, ?string \$name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{configure}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_ae80be888d728ab1ac1618e14bb342820}{initialize}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}} \$input, \mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_output_1_1_output_interface}{Output\+Interface}} \$output)
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a7b6921daebd61a5158a2657bf5f7366c}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a7b6921daebd61a5158a2657bf5f7366c}} 
+{\bfseries get\+Dependency\+Factory} ()
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_ab22372d5a1011cd81cbaa2a954913944}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_ab22372d5a1011cd81cbaa2a954913944}} 
+{\bfseries can\+Execute} (string \$question, \mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}} \$input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_addece22c5fac57d7824787dff6e830c2}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_addece22c5fac57d7824787dff6e830c2}} 
+{\bfseries \$io}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command}{Doctrine\+Command}} class provides base functionality for the other migrations commands to extend from. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}} 
+\index{DoctrineCommand@{DoctrineCommand}!configure@{configure}}
+\index{configure@{configure}!DoctrineCommand@{DoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Configures the current command. 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Command}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_current_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Current\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_diff_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Diff\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_dump_schema_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Dump\+Schema\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_execute_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Execute\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_generate_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Generate\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_latest_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Latest\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_list_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{List\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_migrate_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Migrate\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_rollup_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Rollup\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_status_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Status\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_sync_metadata_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Sync\+Metadata\+Command}}, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Up\+To\+Date\+Command}}, and \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_version_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Version\+Command}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_ae80be888d728ab1ac1618e14bb342820}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_ae80be888d728ab1ac1618e14bb342820}} 
+\index{DoctrineCommand@{DoctrineCommand}!initialize@{initialize}}
+\index{initialize@{initialize}!DoctrineCommand@{DoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}}}]{\$input,  }\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_output_1_1_output_interface}{Output\+Interface}}}]{\$output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initializes the command after the input has been bound and before the input is validated.
+
+This is mainly useful when a lot of commands extends one main command where some things need to be initialized based on the input arguments and options.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface_adeccafc40674c113fca92360646172e7}{Input\+Interface\+::bind()}} 
+
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface_a184909dab34698899937d810a9f5d393}{Input\+Interface\+::validate()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_ae80be888d728ab1ac1618e14bb342820}{Command}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Tools/\+Console/\+Command/Doctrine\+Command.\+php\end{DoxyCompactItemize}

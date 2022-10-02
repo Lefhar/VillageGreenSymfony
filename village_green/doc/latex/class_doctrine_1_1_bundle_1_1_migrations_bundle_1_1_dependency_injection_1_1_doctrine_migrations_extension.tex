@@ -1,0 +1,76 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension}{}\doxysection{Doctrine\+Migrations\+Extension Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension}\index{DoctrineMigrationsExtension@{DoctrineMigrationsExtension}}
+Inheritance diagram for Doctrine\+Migrations\+Extension\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a9e89ba4c9793088dc3050305084f79a2}{load}} (array \$configs, \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_container_builder}{Container\+Builder}} \$container)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a9857a460fb71e15c8b92aa8c483e3684}{get\+Xsd\+Validation\+Base\+Path}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a2614df64646ac71b70b1e1074258052b}{get\+Namespace}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension}{Doctrine\+Migrations\+Extension}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a2614df64646ac71b70b1e1074258052b}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a2614df64646ac71b70b1e1074258052b}} 
+\index{DoctrineMigrationsExtension@{DoctrineMigrationsExtension}!getNamespace@{getNamespace}}
+\index{getNamespace@{getNamespace}!DoctrineMigrationsExtension@{DoctrineMigrationsExtension}}
+\doxysubsubsection{\texorpdfstring{getNamespace()}{getNamespace()}}
+{\footnotesize\ttfamily get\+Namespace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\{Returns the namespace to be used for this extension (XML namespace).
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_extension_1_1_extension_a2614df64646ac71b70b1e1074258052b}{Extension}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a9857a460fb71e15c8b92aa8c483e3684}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a9857a460fb71e15c8b92aa8c483e3684}} 
+\index{DoctrineMigrationsExtension@{DoctrineMigrationsExtension}!getXsdValidationBasePath@{getXsdValidationBasePath}}
+\index{getXsdValidationBasePath@{getXsdValidationBasePath}!DoctrineMigrationsExtension@{DoctrineMigrationsExtension}}
+\doxysubsubsection{\texorpdfstring{getXsdValidationBasePath()}{getXsdValidationBasePath()}}
+{\footnotesize\ttfamily get\+Xsd\+Validation\+Base\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the base path for the XSD files.
+
+\begin{DoxyReturn}{Returns}
+string The XSD base path 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_extension_1_1_extension_a9857a460fb71e15c8b92aa8c483e3684}{Extension}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a9e89ba4c9793088dc3050305084f79a2}\label{class_doctrine_1_1_bundle_1_1_migrations_bundle_1_1_dependency_injection_1_1_doctrine_migrations_extension_a9e89ba4c9793088dc3050305084f79a2}} 
+\index{DoctrineMigrationsExtension@{DoctrineMigrationsExtension}!load@{load}}
+\index{load@{load}!DoctrineMigrationsExtension@{DoctrineMigrationsExtension}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{array}]{\$configs,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_dependency_injection_1_1_container_builder}{Container\+Builder}}}]{\$container }\end{DoxyParamCaption})}
+
+Responds to the migrations configuration parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} & {\em \$configs} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param array\texorpdfstring{$<$}{<}string, array\texorpdfstring{$<$}{<}string, array\texorpdfstring{$<$}{<}string, array$<$string, string$>$$\vert$string\texorpdfstring{$>$}{>}$\vert$string\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} \$configs 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_dependency_injection_1_1_extension_1_1_extension_interface_a9e89ba4c9793088dc3050305084f79a2}{Extension\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/migrations-\/bundle/\+Dependency\+Injection/Doctrine\+Migrations\+Extension.\+php\end{DoxyCompactItemize}

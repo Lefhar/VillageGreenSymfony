@@ -1,0 +1,68 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command}{}\doxysection{Up\+To\+Date\+Command Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command}\index{UpToDateCommand@{UpToDateCommand}}
+Inheritance diagram for Up\+To\+Date\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{configure}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_ab31c72b72ddaf7116db5d84c055d3c0b}{execute}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}} \$input, \mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_output_1_1_output_interface}{Output\+Interface}} \$output)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_a8f95e09946a819ad70ca9e71e8c0d153}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_a8f95e09946a819ad70ca9e71e8c0d153}} 
+static {\bfseries \$default\+Name} = \textquotesingle{}migrations\+:up-\/to-\/date\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command}{Up\+To\+Date\+Command}} class outputs if your database is up to date or if there are new migrations that need to be executed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_a9be5e0bdb5720efed6ddb6426c5c16ee}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_a9be5e0bdb5720efed6ddb6426c5c16ee}} 
+\index{UpToDateCommand@{UpToDateCommand}!configure@{configure}}
+\index{configure@{configure}!UpToDateCommand@{UpToDateCommand}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Configures the current command. 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_doctrine_command_a9be5e0bdb5720efed6ddb6426c5c16ee}{Doctrine\+Command}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_ab31c72b72ddaf7116db5d84c055d3c0b}\label{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_ab31c72b72ddaf7116db5d84c055d3c0b}} 
+\index{UpToDateCommand@{UpToDateCommand}!execute@{execute}}
+\index{execute@{execute}!UpToDateCommand@{UpToDateCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_input_1_1_input_interface}{Input\+Interface}}}]{\$input,  }\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_console_1_1_output_1_1_output_interface}{Output\+Interface}}}]{\$output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Executes the current command.
+
+This method is not abstract because you can use this class as a concrete class. In this case, instead of defining the \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_tools_1_1_console_1_1_command_1_1_up_to_date_command_ab31c72b72ddaf7116db5d84c055d3c0b}{execute()}} method, you set the code to execute by passing a Closure to the \mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_a4181163392cba2c6e81d8e3532a093a7}{set\+Code()}} method.
+
+\begin{DoxyReturn}{Returns}
+int 0 if everything went fine, or an exit code
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Logic\+Exception} & When this abstract method is not implemented\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_a4181163392cba2c6e81d8e3532a093a7}{set\+Code()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_console_1_1_command_1_1_command_ab31c72b72ddaf7116db5d84c055d3c0b}{Command}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Tools/\+Console/\+Command/Up\+To\+Date\+Command.\+php\end{DoxyCompactItemize}

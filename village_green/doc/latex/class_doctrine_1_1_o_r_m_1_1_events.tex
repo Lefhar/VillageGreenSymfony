@@ -1,0 +1,138 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_events}{}\doxysection{Events Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_events}\index{Events@{Events}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_acfdf64869a8cdd7b7675259e30978f06}{pre\+Remove}} = \textquotesingle{}pre\+Remove\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_aa7eba06faa0ef4d2a69d41fe7e7fe2f6}{post\+Remove}} = \textquotesingle{}post\+Remove\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a637ca114b18878100bbafd80d33411c7}{pre\+Persist}} = \textquotesingle{}pre\+Persist\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a0d1ffddb44cade6acaf9e8c8aebf9cfc}{post\+Persist}} = \textquotesingle{}post\+Persist\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a6d2d5be0c04a2337d6e22868527500e7}{pre\+Update}} = \textquotesingle{}pre\+Update\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a0bb0dae1a3a19f13b938fae3b3002eb4}{post\+Update}} = \textquotesingle{}post\+Update\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a0cd4af29c14abf6d170432309df5fed7}{post\+Load}} = \textquotesingle{}post\+Load\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a47fe89f136898e645ab848b48f497559}{load\+Class\+Metadata}} = \textquotesingle{}load\+Class\+Metadata\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a517c5048a6621128192bbe75d7590267}{on\+Class\+Metadata\+Not\+Found}} = \textquotesingle{}on\+Class\+Metadata\+Not\+Found\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_ad9f28ffc3aaa8cee06300cc344f28f87}{pre\+Flush}} = \textquotesingle{}pre\+Flush\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_ad9f9b3528030440e4dccdf525d1d1f64}{on\+Flush}} = \textquotesingle{}on\+Flush\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_aa832e95a27b815f27d5756c1d9b5c8a0}{post\+Flush}} = \textquotesingle{}post\+Flush\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_events_a590b6d79a1e901a7773b64ac9fbc30b2}{on\+Clear}} = \textquotesingle{}on\+Clear\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container for all ORM events.
+
+This class cannot be instantiated. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a47fe89f136898e645ab848b48f497559}\label{class_doctrine_1_1_o_r_m_1_1_events_a47fe89f136898e645ab848b48f497559}} 
+\index{Events@{Events}!loadClassMetadata@{loadClassMetadata}}
+\index{loadClassMetadata@{loadClassMetadata}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{loadClassMetadata}{loadClassMetadata}}
+{\footnotesize\ttfamily const load\+Class\+Metadata = \textquotesingle{}load\+Class\+Metadata\textquotesingle{}}
+
+The load\+Class\+Metadata event occurs after the mapping metadata for a class has been loaded from a mapping source (annotations/xml/yaml). \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a517c5048a6621128192bbe75d7590267}\label{class_doctrine_1_1_o_r_m_1_1_events_a517c5048a6621128192bbe75d7590267}} 
+\index{Events@{Events}!onClassMetadataNotFound@{onClassMetadataNotFound}}
+\index{onClassMetadataNotFound@{onClassMetadataNotFound}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{onClassMetadataNotFound}{onClassMetadataNotFound}}
+{\footnotesize\ttfamily const on\+Class\+Metadata\+Not\+Found = \textquotesingle{}on\+Class\+Metadata\+Not\+Found\textquotesingle{}}
+
+The on\+Class\+Metadata\+Not\+Found event occurs whenever loading metadata for a class failed. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a590b6d79a1e901a7773b64ac9fbc30b2}\label{class_doctrine_1_1_o_r_m_1_1_events_a590b6d79a1e901a7773b64ac9fbc30b2}} 
+\index{Events@{Events}!onClear@{onClear}}
+\index{onClear@{onClear}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{onClear}{onClear}}
+{\footnotesize\ttfamily const on\+Clear = \textquotesingle{}on\+Clear\textquotesingle{}}
+
+The on\+Clear event occurs when the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager_ac0f04085ded836b20df8eee42bf81222}{Entity\+Manager\+::clear()}} operation is invoked, after all references to entities have been removed from the unit of work. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_ad9f9b3528030440e4dccdf525d1d1f64}\label{class_doctrine_1_1_o_r_m_1_1_events_ad9f9b3528030440e4dccdf525d1d1f64}} 
+\index{Events@{Events}!onFlush@{onFlush}}
+\index{onFlush@{onFlush}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{onFlush}{onFlush}}
+{\footnotesize\ttfamily const on\+Flush = \textquotesingle{}on\+Flush\textquotesingle{}}
+
+The on\+Flush event occurs when the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{Entity\+Manager\+::flush()}} operation is invoked, after any changes to managed entities have been determined but before any actual database operations are executed. The event is only raised if there is actually something to do for the underlying \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}. If nothing needs to be done, the on\+Flush event is not raised. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_aa832e95a27b815f27d5756c1d9b5c8a0}\label{class_doctrine_1_1_o_r_m_1_1_events_aa832e95a27b815f27d5756c1d9b5c8a0}} 
+\index{Events@{Events}!postFlush@{postFlush}}
+\index{postFlush@{postFlush}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{postFlush}{postFlush}}
+{\footnotesize\ttfamily const post\+Flush = \textquotesingle{}post\+Flush\textquotesingle{}}
+
+The post\+Flush event occurs when the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{Entity\+Manager\+::flush()}} operation is invoked and after all actual database operations are executed successfully. The event is only raised if there is actually something to do for the underlying \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}. If nothing needs to be done, the post\+Flush event is not raised. The event won\textquotesingle{}t be raised if an error occurs during the flush operation. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a0cd4af29c14abf6d170432309df5fed7}\label{class_doctrine_1_1_o_r_m_1_1_events_a0cd4af29c14abf6d170432309df5fed7}} 
+\index{Events@{Events}!postLoad@{postLoad}}
+\index{postLoad@{postLoad}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{postLoad}{postLoad}}
+{\footnotesize\ttfamily const post\+Load = \textquotesingle{}post\+Load\textquotesingle{}}
+
+The post\+Load event occurs for an entity after the entity has been loaded into the current \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} from the database or after the refresh operation has been applied to it.
+
+Note that the post\+Load event occurs for an entity before any associations have been initialized. Therefore it is not safe to access associations in a post\+Load callback or event handler.
+
+This is an entity lifecycle event. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a0d1ffddb44cade6acaf9e8c8aebf9cfc}\label{class_doctrine_1_1_o_r_m_1_1_events_a0d1ffddb44cade6acaf9e8c8aebf9cfc}} 
+\index{Events@{Events}!postPersist@{postPersist}}
+\index{postPersist@{postPersist}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{postPersist}{postPersist}}
+{\footnotesize\ttfamily const post\+Persist = \textquotesingle{}post\+Persist\textquotesingle{}}
+
+The post\+Persist event occurs for an entity after the entity has been made persistent. It will be invoked after the database insert operations. Generated primary key values are available in the post\+Persist event.
+
+This is an entity lifecycle event. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_aa7eba06faa0ef4d2a69d41fe7e7fe2f6}\label{class_doctrine_1_1_o_r_m_1_1_events_aa7eba06faa0ef4d2a69d41fe7e7fe2f6}} 
+\index{Events@{Events}!postRemove@{postRemove}}
+\index{postRemove@{postRemove}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{postRemove}{postRemove}}
+{\footnotesize\ttfamily const post\+Remove = \textquotesingle{}post\+Remove\textquotesingle{}}
+
+The post\+Remove event occurs for an entity after the entity has been deleted. It will be invoked after the database delete operations.
+
+This is an entity lifecycle event. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a0bb0dae1a3a19f13b938fae3b3002eb4}\label{class_doctrine_1_1_o_r_m_1_1_events_a0bb0dae1a3a19f13b938fae3b3002eb4}} 
+\index{Events@{Events}!postUpdate@{postUpdate}}
+\index{postUpdate@{postUpdate}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{postUpdate}{postUpdate}}
+{\footnotesize\ttfamily const post\+Update = \textquotesingle{}post\+Update\textquotesingle{}}
+
+The post\+Update event occurs after the database update operations to entity data.
+
+This is an entity lifecycle event. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_ad9f28ffc3aaa8cee06300cc344f28f87}\label{class_doctrine_1_1_o_r_m_1_1_events_ad9f28ffc3aaa8cee06300cc344f28f87}} 
+\index{Events@{Events}!preFlush@{preFlush}}
+\index{preFlush@{preFlush}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{preFlush}{preFlush}}
+{\footnotesize\ttfamily const pre\+Flush = \textquotesingle{}pre\+Flush\textquotesingle{}}
+
+The pre\+Flush event occurs when the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{Entity\+Manager\+::flush()}} operation is invoked, but before any changes to managed entities have been calculated. This event is always raised right after \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager_a7751f77b5263bcf940ece6e824a05b38}{Entity\+Manager\+::flush()}} call. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a637ca114b18878100bbafd80d33411c7}\label{class_doctrine_1_1_o_r_m_1_1_events_a637ca114b18878100bbafd80d33411c7}} 
+\index{Events@{Events}!prePersist@{prePersist}}
+\index{prePersist@{prePersist}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{prePersist}{prePersist}}
+{\footnotesize\ttfamily const pre\+Persist = \textquotesingle{}pre\+Persist\textquotesingle{}}
+
+The pre\+Persist event occurs for a given entity before the respective \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} persist operation for that entity is executed.
+
+This is an entity lifecycle event. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_acfdf64869a8cdd7b7675259e30978f06}\label{class_doctrine_1_1_o_r_m_1_1_events_acfdf64869a8cdd7b7675259e30978f06}} 
+\index{Events@{Events}!preRemove@{preRemove}}
+\index{preRemove@{preRemove}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{preRemove}{preRemove}}
+{\footnotesize\ttfamily const pre\+Remove = \textquotesingle{}pre\+Remove\textquotesingle{}}
+
+The pre\+Remove event occurs for a given entity before the respective \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} remove operation for that entity is executed.
+
+This is an entity lifecycle event. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_events_a6d2d5be0c04a2337d6e22868527500e7}\label{class_doctrine_1_1_o_r_m_1_1_events_a6d2d5be0c04a2337d6e22868527500e7}} 
+\index{Events@{Events}!preUpdate@{preUpdate}}
+\index{preUpdate@{preUpdate}!Events@{Events}}
+\doxysubsubsection{\texorpdfstring{preUpdate}{preUpdate}}
+{\footnotesize\ttfamily const pre\+Update = \textquotesingle{}pre\+Update\textquotesingle{}}
+
+The pre\+Update event occurs before the database update operations to entity data.
+
+This is an entity lifecycle event. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/Events.\+php\end{DoxyCompactItemize}

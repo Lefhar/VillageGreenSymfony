@@ -1,0 +1,234 @@
+\hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader}{}\doxysection{Annotation\+Reader Class Reference}
+\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader}\index{AnnotationReader@{AnnotationReader}}
+Inheritance diagram for Annotation\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a3826bab08fe913e22971805568705618}{\+\_\+\+\_\+construct}} (?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser}{Doc\+Parser}} \$parser=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a89ddf90e2b24041392edcb3441be8ea2}{get\+Class\+Annotations}} (Reflection\+Class \$class)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_acd636e6443bf054516efe263b49b1b83}{get\+Class\+Annotation}} (Reflection\+Class \$class, \$annotation\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a8fc9a2e58c3526e4e838cd45a7d9176f}{get\+Property\+Annotations}} (Reflection\+Property \$property)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_aa52e552da812c6389870e957cc4c0123}{get\+Property\+Annotation}} (Reflection\+Property \$property, \$annotation\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_adb682caafd154dafe919c8b9cb1e19ed}{get\+Method\+Annotations}} (Reflection\+Method \$method)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a3e6756115cd6ed14ef03e3b8f6383b32}{get\+Method\+Annotation}} (Reflection\+Method \$method, \$annotation\+Name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a811ab2c90434da638de8ee6220856b02}{get\+Function\+Annotations}} (Reflection\+Function \$function)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_ac09ad9896ea525705f6f197d86004a0e}{get\+Function\+Annotation}} (Reflection\+Function \$function, string \$annotation\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a6b5397cf5491767b4e3fa0fc73946335}{add\+Global\+Ignored\+Name}} (\$name)
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_afeda0fb45209d88f5ac043583ff3a239}{add\+Global\+Ignored\+Namespace}} (\$namespace)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A reader for docblock annotations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a3826bab08fe913e22971805568705618}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a3826bab08fe913e22971805568705618}} 
+\index{AnnotationReader@{AnnotationReader}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_parser}{Doc\+Parser}}}]{\$parser = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Initializes a new \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader}{Annotation\+Reader}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_exception}{Annotation\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a6b5397cf5491767b4e3fa0fc73946335}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a6b5397cf5491767b4e3fa0fc73946335}} 
+\index{AnnotationReader@{AnnotationReader}!addGlobalIgnoredName@{addGlobalIgnoredName}}
+\index{addGlobalIgnoredName@{addGlobalIgnoredName}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{addGlobalIgnoredName()}{addGlobalIgnoredName()}}
+{\footnotesize\ttfamily static add\+Global\+Ignored\+Name (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Add a new annotation to the globally ignored annotation names with regard to exception handling.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_afeda0fb45209d88f5ac043583ff3a239}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_afeda0fb45209d88f5ac043583ff3a239}} 
+\index{AnnotationReader@{AnnotationReader}!addGlobalIgnoredNamespace@{addGlobalIgnoredNamespace}}
+\index{addGlobalIgnoredNamespace@{addGlobalIgnoredNamespace}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{addGlobalIgnoredNamespace()}{addGlobalIgnoredNamespace()}}
+{\footnotesize\ttfamily static add\+Global\+Ignored\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$namespace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Add a new annotation to the globally ignored annotation namespaces with regard to exception handling.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$namespace} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_acd636e6443bf054516efe263b49b1b83}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_acd636e6443bf054516efe263b49b1b83}} 
+\index{AnnotationReader@{AnnotationReader}!getClassAnnotation@{getClassAnnotation}}
+\index{getClassAnnotation@{getClassAnnotation}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getClassAnnotation()}{getClassAnnotation()}}
+{\footnotesize\ttfamily get\+Class\+Annotation (\begin{DoxyParamCaption}\item[{Reflection\+Class}]{\$class,  }\item[{}]{\$annotation\+Name }\end{DoxyParamCaption})}
+
+Gets a class annotation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Reflection\+Class & {\em \$class} & The Reflection\+Class of the class from which the class annotations should be read. \\
+\hline
+ & {\em class-\/string$<$\+T$>$} & \$annotation\+Name The name of the annotation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T$\vert$null The \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation}{Annotation}} or NULL, if the requested annotation does not exist.
+\end{DoxyReturn}
+@template T 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_annotations_1_1_reader_acd636e6443bf054516efe263b49b1b83}{Reader}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a89ddf90e2b24041392edcb3441be8ea2}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a89ddf90e2b24041392edcb3441be8ea2}} 
+\index{AnnotationReader@{AnnotationReader}!getClassAnnotations@{getClassAnnotations}}
+\index{getClassAnnotations@{getClassAnnotations}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getClassAnnotations()}{getClassAnnotations()}}
+{\footnotesize\ttfamily get\+Class\+Annotations (\begin{DoxyParamCaption}\item[{Reflection\+Class}]{\$class }\end{DoxyParamCaption})}
+
+Gets the annotations applied to a class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Reflection\+Class & {\em \$class} & The Reflection\+Class of the class from which the class annotations should be read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$object$>$ An array of Annotations.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_annotations_1_1_reader_a89ddf90e2b24041392edcb3441be8ea2}{Reader}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_ac09ad9896ea525705f6f197d86004a0e}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_ac09ad9896ea525705f6f197d86004a0e}} 
+\index{AnnotationReader@{AnnotationReader}!getFunctionAnnotation@{getFunctionAnnotation}}
+\index{getFunctionAnnotation@{getFunctionAnnotation}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getFunctionAnnotation()}{getFunctionAnnotation()}}
+{\footnotesize\ttfamily get\+Function\+Annotation (\begin{DoxyParamCaption}\item[{Reflection\+Function}]{\$function,  }\item[{string}]{\$annotation\+Name }\end{DoxyParamCaption})}
+
+Gets a function annotation.
+
+\begin{DoxyReturn}{Returns}
+object$\vert$null The \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation}{Annotation}} or NULL, if the requested annotation does not exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a811ab2c90434da638de8ee6220856b02}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a811ab2c90434da638de8ee6220856b02}} 
+\index{AnnotationReader@{AnnotationReader}!getFunctionAnnotations@{getFunctionAnnotations}}
+\index{getFunctionAnnotations@{getFunctionAnnotations}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getFunctionAnnotations()}{getFunctionAnnotations()}}
+{\footnotesize\ttfamily get\+Function\+Annotations (\begin{DoxyParamCaption}\item[{Reflection\+Function}]{\$function }\end{DoxyParamCaption})}
+
+Gets the annotations applied to a function.
+
+@phpstan-\/return list$<$object$>$ An array of Annotations. \mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a3e6756115cd6ed14ef03e3b8f6383b32}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a3e6756115cd6ed14ef03e3b8f6383b32}} 
+\index{AnnotationReader@{AnnotationReader}!getMethodAnnotation@{getMethodAnnotation}}
+\index{getMethodAnnotation@{getMethodAnnotation}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getMethodAnnotation()}{getMethodAnnotation()}}
+{\footnotesize\ttfamily get\+Method\+Annotation (\begin{DoxyParamCaption}\item[{Reflection\+Method}]{\$method,  }\item[{}]{\$annotation\+Name }\end{DoxyParamCaption})}
+
+Gets a method annotation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Reflection\+Method & {\em \$method} & The Reflection\+Method to read the annotations from. \\
+\hline
+ & {\em class-\/string$<$\+T$>$} & \$annotation\+Name The name of the annotation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T$\vert$null The \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation}{Annotation}} or NULL, if the requested annotation does not exist.
+\end{DoxyReturn}
+@template T 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_annotations_1_1_reader_a3e6756115cd6ed14ef03e3b8f6383b32}{Reader}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_adb682caafd154dafe919c8b9cb1e19ed}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_adb682caafd154dafe919c8b9cb1e19ed}} 
+\index{AnnotationReader@{AnnotationReader}!getMethodAnnotations@{getMethodAnnotations}}
+\index{getMethodAnnotations@{getMethodAnnotations}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getMethodAnnotations()}{getMethodAnnotations()}}
+{\footnotesize\ttfamily get\+Method\+Annotations (\begin{DoxyParamCaption}\item[{Reflection\+Method}]{\$method }\end{DoxyParamCaption})}
+
+Gets the annotations applied to a method.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Reflection\+Method & {\em \$method} & The Reflection\+Method of the method from which the annotations should be read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$object$>$ An array of Annotations.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_annotations_1_1_reader_adb682caafd154dafe919c8b9cb1e19ed}{Reader}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_aa52e552da812c6389870e957cc4c0123}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_aa52e552da812c6389870e957cc4c0123}} 
+\index{AnnotationReader@{AnnotationReader}!getPropertyAnnotation@{getPropertyAnnotation}}
+\index{getPropertyAnnotation@{getPropertyAnnotation}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getPropertyAnnotation()}{getPropertyAnnotation()}}
+{\footnotesize\ttfamily get\+Property\+Annotation (\begin{DoxyParamCaption}\item[{Reflection\+Property}]{\$property,  }\item[{}]{\$annotation\+Name }\end{DoxyParamCaption})}
+
+Gets a property annotation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Reflection\+Property & {\em \$property} & The Reflection\+Property to read the annotations from. \\
+\hline
+ & {\em class-\/string$<$\+T$>$} & \$annotation\+Name The name of the annotation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T$\vert$null The \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_annotation}{Annotation}} or NULL, if the requested annotation does not exist.
+\end{DoxyReturn}
+@template T 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_annotations_1_1_reader_aa52e552da812c6389870e957cc4c0123}{Reader}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a8fc9a2e58c3526e4e838cd45a7d9176f}\label{class_doctrine_1_1_common_1_1_annotations_1_1_annotation_reader_a8fc9a2e58c3526e4e838cd45a7d9176f}} 
+\index{AnnotationReader@{AnnotationReader}!getPropertyAnnotations@{getPropertyAnnotations}}
+\index{getPropertyAnnotations@{getPropertyAnnotations}!AnnotationReader@{AnnotationReader}}
+\doxysubsubsection{\texorpdfstring{getPropertyAnnotations()}{getPropertyAnnotations()}}
+{\footnotesize\ttfamily get\+Property\+Annotations (\begin{DoxyParamCaption}\item[{Reflection\+Property}]{\$property }\end{DoxyParamCaption})}
+
+Gets the annotations applied to a property.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Reflection\+Property & {\em \$property} & The Reflection\+Property of the property from which the annotations should be read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$<$object$>$ An array of Annotations.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_annotations_1_1_reader_a8fc9a2e58c3526e4e838cd45a7d9176f}{Reader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/annotations/lib/\+Doctrine/\+Common/\+Annotations/Annotation\+Reader.\+php\end{DoxyCompactItemize}

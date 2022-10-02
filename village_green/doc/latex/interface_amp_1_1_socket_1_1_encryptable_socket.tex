@@ -1,0 +1,115 @@
+\hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket}{}\doxysection{Encryptable\+Socket Interface Reference}
+\label{interface_amp_1_1_socket_1_1_encryptable_socket}\index{EncryptableSocket@{EncryptableSocket}}
+Inheritance diagram for Encryptable\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_amp_1_1_socket_1_1_encryptable_socket}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}{setup\+Tls}} (?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation\+Token=null)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_ae9598ecf264d1175243c9813d0b08e2e}{shutdown\+Tls}} (?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation\+Token=null)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_a7a12b94f2f7cb44923c3d61574aed171}{get\+Tls\+State}} ()
+\item 
+\mbox{\hyperlink{interface_amp_1_1_socket_1_1_encryptable_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}{get\+Tls\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_a6189cc15a0cbc8dc3bc1d72d8678c25c}\label{interface_amp_1_1_socket_1_1_encryptable_socket_a6189cc15a0cbc8dc3bc1d72d8678c25c}} 
+const {\bfseries TLS\+\_\+\+STATE\+\_\+\+DISABLED} = 0
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_a6d0f76ce8d8be539e160a1b1ccd3655a}\label{interface_amp_1_1_socket_1_1_encryptable_socket_a6d0f76ce8d8be539e160a1b1ccd3655a}} 
+const {\bfseries TLS\+\_\+\+STATE\+\_\+\+SETUP\+\_\+\+PENDING} = 1
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_aba22f9f8261e883d9024eb10ea4343b8}\label{interface_amp_1_1_socket_1_1_encryptable_socket_aba22f9f8261e883d9024eb10ea4343b8}} 
+const {\bfseries TLS\+\_\+\+STATE\+\_\+\+ENABLED} = 2
+\item 
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_adaf2072ff69f57af053799c656cbf635}\label{interface_amp_1_1_socket_1_1_encryptable_socket_adaf2072ff69f57af053799c656cbf635}} 
+const {\bfseries TLS\+\_\+\+STATE\+\_\+\+SHUTDOWN\+\_\+\+PENDING} = 3
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}\label{interface_amp_1_1_socket_1_1_encryptable_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}} 
+\index{EncryptableSocket@{EncryptableSocket}!getTlsInfo@{getTlsInfo}}
+\index{getTlsInfo@{getTlsInfo}!EncryptableSocket@{EncryptableSocket}}
+\doxysubsubsection{\texorpdfstring{getTlsInfo()}{getTlsInfo()}}
+{\footnotesize\ttfamily get\+Tls\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Tls\+Info$\vert$null The TLS (crypto) context info if TLS is enabled on the socket or null otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_upgraded_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}{Upgraded\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a6dbdbfe84a7d269d29c6a767d80d9d58}{Resource\+Socket}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_a7a12b94f2f7cb44923c3d61574aed171}\label{interface_amp_1_1_socket_1_1_encryptable_socket_a7a12b94f2f7cb44923c3d61574aed171}} 
+\index{EncryptableSocket@{EncryptableSocket}!getTlsState@{getTlsState}}
+\index{getTlsState@{getTlsState}!EncryptableSocket@{EncryptableSocket}}
+\doxysubsubsection{\texorpdfstring{getTlsState()}{getTlsState()}}
+{\footnotesize\ttfamily get\+Tls\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int One of the TLS\+\_\+\+STATE\+\_\+$\ast$ constants defined in this interface. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_upgraded_socket_a7a12b94f2f7cb44923c3d61574aed171}{Upgraded\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a7a12b94f2f7cb44923c3d61574aed171}{Resource\+Socket}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}\label{interface_amp_1_1_socket_1_1_encryptable_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}} 
+\index{EncryptableSocket@{EncryptableSocket}!setupTls@{setupTls}}
+\index{setupTls@{setupTls}!EncryptableSocket@{EncryptableSocket}}
+\doxysubsubsection{\texorpdfstring{setupTls()}{setupTls()}}
+{\footnotesize\ttfamily setup\+Tls (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation\+Token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} | null & {\em \$cancellation\+Token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$void$>$ Resolved when TLS is successfully set up on the socket.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} fails and the socket is closed if setting up TLS fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_upgraded_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}{Upgraded\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_a6aa2edcd9eb1f13700c5d4386259bdb6}{Resource\+Socket}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_socket_1_1_encryptable_socket_ae9598ecf264d1175243c9813d0b08e2e}\label{interface_amp_1_1_socket_1_1_encryptable_socket_ae9598ecf264d1175243c9813d0b08e2e}} 
+\index{EncryptableSocket@{EncryptableSocket}!shutdownTls@{shutdownTls}}
+\index{shutdownTls@{shutdownTls}!EncryptableSocket@{EncryptableSocket}}
+\doxysubsubsection{\texorpdfstring{shutdownTls()}{shutdownTls()}}
+{\footnotesize\ttfamily shutdown\+Tls (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation\+Token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} | null & {\em \$cancellation\+Token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$void$>$ Resolved when TLS is successfully shutdown.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} fails and the socket is closed if shutting down TLS fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_connection_1_1_upgraded_socket_ae9598ecf264d1175243c9813d0b08e2e}{Upgraded\+Socket}}, and \mbox{\hyperlink{class_amp_1_1_socket_1_1_resource_socket_ae9598ecf264d1175243c9813d0b08e2e}{Resource\+Socket}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Encryptable\+Socket.\+php\end{DoxyCompactItemize}

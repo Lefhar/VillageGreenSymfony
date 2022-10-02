@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause}{}\doxysection{Simple\+Select\+Clause Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause}\index{SimpleSelectClause@{SimpleSelectClause}}
+Inheritance diagram for Simple\+Select\+Clause\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a0e50b2dcd39f73f8e7516f83bda99478}{\+\_\+\+\_\+construct}} (\$simple\+Select\+Expression, \$is\+Distinct)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a9e4314eeba648160cde14d94363c6f33}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a9e4314eeba648160cde14d94363c6f33}} 
+{\bfseries \$is\+Distinct} = false
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a78a1050c8c718ef4ae4756d5cfe9792c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a78a1050c8c718ef4ae4756d5cfe9792c}} 
+{\bfseries \$simple\+Select\+Expression}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause}{Simple\+Select\+Clause}} \+::= \char`\"{}\+SELECT\char`\"{} \mbox{[}\char`\"{}\+DISTINCT\char`\"{}\mbox{]} \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_expression}{Simple\+Select\+Expression}}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a0e50b2dcd39f73f8e7516f83bda99478}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a0e50b2dcd39f73f8e7516f83bda99478}} 
+\index{SimpleSelectClause@{SimpleSelectClause}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SimpleSelectClause@{SimpleSelectClause}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$simple\+Select\+Expression,  }\item[{}]{\$is\+Distinct }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_expression}{Simple\+Select\+Expression}} & {\em \$simple\+Select\+Expression} & \\
+\hline
+bool & {\em \$is\+Distinct} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_simple_select_clause_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{SimpleSelectClause@{SimpleSelectClause}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!SimpleSelectClause@{SimpleSelectClause}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Simple\+Select\+Clause.\+php\end{DoxyCompactItemize}

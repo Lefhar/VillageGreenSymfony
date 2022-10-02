@@ -1,0 +1,29 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events}{}\doxysection{Tool\+Events Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events}\index{ToolEvents@{ToolEvents}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events_a3ebe9a7b1f8f4734a8377bf221faa87e}{post\+Generate\+Schema\+Table}} = \textquotesingle{}post\+Generate\+Schema\+Table\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events_a96bb5f631cfa97df6b039d28e09f4212}{post\+Generate\+Schema}} = \textquotesingle{}post\+Generate\+Schema\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events_a96bb5f631cfa97df6b039d28e09f4212}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events_a96bb5f631cfa97df6b039d28e09f4212}} 
+\index{ToolEvents@{ToolEvents}!postGenerateSchema@{postGenerateSchema}}
+\index{postGenerateSchema@{postGenerateSchema}!ToolEvents@{ToolEvents}}
+\doxysubsubsection{\texorpdfstring{postGenerateSchema}{postGenerateSchema}}
+{\footnotesize\ttfamily const post\+Generate\+Schema = \textquotesingle{}post\+Generate\+Schema\textquotesingle{}}
+
+The post\+Generate\+Schema event is triggered in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a83723aec983430c288e79f79d02548b9}{Schema\+Tool\+::get\+Schema\+From\+Metadata()}} after all entity classes have been transformed into the related Schema structure. The Event\+Args contain the \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} and the created Schema instance. \mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events_a3ebe9a7b1f8f4734a8377bf221faa87e}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_tool_events_a3ebe9a7b1f8f4734a8377bf221faa87e}} 
+\index{ToolEvents@{ToolEvents}!postGenerateSchemaTable@{postGenerateSchemaTable}}
+\index{postGenerateSchemaTable@{postGenerateSchemaTable}!ToolEvents@{ToolEvents}}
+\doxysubsubsection{\texorpdfstring{postGenerateSchemaTable}{postGenerateSchemaTable}}
+{\footnotesize\ttfamily const post\+Generate\+Schema\+Table = \textquotesingle{}post\+Generate\+Schema\+Table\textquotesingle{}}
+
+The post\+Generate\+Schema\+Table event occurs in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_schema_tool_a83723aec983430c288e79f79d02548b9}{Schema\+Tool\+::get\+Schema\+From\+Metadata()}} whenever an entity class is transformed into its table representation. It receives the current non-\/complete Schema instance, the Entity Metadata Class instance and the Schema Table instance of this entity. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/Tool\+Events.\+php\end{DoxyCompactItemize}

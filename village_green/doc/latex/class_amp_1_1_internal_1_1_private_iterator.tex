@@ -1,0 +1,67 @@
+\hypertarget{class_amp_1_1_internal_1_1_private_iterator}{}\doxysection{Private\+Iterator Class Reference}
+\label{class_amp_1_1_internal_1_1_private_iterator}\index{PrivateIterator@{PrivateIterator}}
+Inheritance diagram for Private\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_internal_1_1_private_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_private_iterator_aa17c2f5f8231f86246856110f6a21c2c}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_amp_1_1_iterator}{Iterator}} \$iterator)
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_private_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}{advance}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_internal_1_1_private_iterator_ad926899d7cac34a3f1a90e552d8eb27d}{get\+Current}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps an \mbox{\hyperlink{interface_amp_1_1_iterator}{Iterator}} instance that has public methods to emit, complete, and fail into an object that only allows access to the public API methods.
+
+@template-\/covariant TValue @template-\/implements Iterator$<$\+TValue$>$ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_private_iterator_aa17c2f5f8231f86246856110f6a21c2c}\label{class_amp_1_1_internal_1_1_private_iterator_aa17c2f5f8231f86246856110f6a21c2c}} 
+\index{PrivateIterator@{PrivateIterator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PrivateIterator@{PrivateIterator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_amp_1_1_iterator}{Iterator}}}]{\$iterator }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_amp_1_1_iterator}{Iterator}} & {\em \$iterator} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param Iterator$<$\+TValue$>$ \$iterator 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_private_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}\label{class_amp_1_1_internal_1_1_private_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}} 
+\index{PrivateIterator@{PrivateIterator}!advance@{advance}}
+\index{advance@{advance}!PrivateIterator@{PrivateIterator}}
+\doxysubsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily advance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Promise$<$bool$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_iterator_a18d42fb84f7ac42f482bc70ca78d5f5a}{Iterator}}.
+
+\mbox{\Hypertarget{class_amp_1_1_internal_1_1_private_iterator_ad926899d7cac34a3f1a90e552d8eb27d}\label{class_amp_1_1_internal_1_1_private_iterator_ad926899d7cac34a3f1a90e552d8eb27d}} 
+\index{PrivateIterator@{PrivateIterator}!getCurrent@{getCurrent}}
+\index{getCurrent@{getCurrent}!PrivateIterator@{PrivateIterator}}
+\doxysubsubsection{\texorpdfstring{getCurrent()}{getCurrent()}}
+{\footnotesize\ttfamily get\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@psalm-\/return TValue 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_iterator_ad926899d7cac34a3f1a90e552d8eb27d}{Iterator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/\+Internal/Private\+Iterator.\+php\end{DoxyCompactItemize}

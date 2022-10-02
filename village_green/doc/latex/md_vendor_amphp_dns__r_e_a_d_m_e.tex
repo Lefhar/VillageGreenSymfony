@@ -1,0 +1,37 @@
+\href{https://travis-ci.org/amphp/dns}{\texttt{ }} \href{https://coveralls.io/github/amphp/dns?branch=master}{\texttt{ }} 
+
+{\ttfamily amphp/dns} provides asynchronous DNS name resolution for \href{https://github.com/amphp/amp}{\texttt{ Amp}}.\hypertarget{md_vendor_amphp_dns__r_e_a_d_m_e_autotoc_md13}{}\doxysection{Installation}\label{md_vendor_amphp_dns__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require amphp/dns}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_amphp_dns__r_e_a_d_m_e_autotoc_md14}{}\doxysection{Example}\label{md_vendor_amphp_dns__r_e_a_d_m_e_autotoc_md14}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{require \_\_DIR\_\_ . \textcolor{stringliteral}{'/examples/\_bootstrap.php'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{use Amp\(\backslash\)Dns;}
+\DoxyCodeLine{use \mbox{\hyperlink{namespace_amp_1_1_loop}{Amp\(\backslash\)Loop}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{Loop::run(\textcolor{keyword}{function} () \{}
+\DoxyCodeLine{    \$githubIpv4 = yield Dns\(\backslash\)resolve(\textcolor{stringliteral}{"{}github.com"{}}, Dns\(\backslash\)Record::A);}
+\DoxyCodeLine{    pretty\_print\_records(\textcolor{stringliteral}{"{}github.com"{}}, \$githubIpv4);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$googleIpv4 = Amp\(\backslash\)Dns\(\backslash\)resolve(\textcolor{stringliteral}{"{}google.com"{}}, Dns\(\backslash\)Record::A);}
+\DoxyCodeLine{    \$googleIpv6 = Amp\(\backslash\)Dns\(\backslash\)resolve(\textcolor{stringliteral}{"{}google.com"{}}, Dns\(\backslash\)Record::AAAA);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$firstGoogleResult = yield Amp\(\backslash\)Promise\(\backslash\)first([\$googleIpv4, \$googleIpv6]);}
+\DoxyCodeLine{    pretty\_print\_records(\textcolor{stringliteral}{"{}google.com"{}}, \$firstGoogleResult);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$combinedGoogleResult = yield Amp\(\backslash\)Dns\(\backslash\)resolve(\textcolor{stringliteral}{"{}google.com"{}});}
+\DoxyCodeLine{    pretty\_print\_records(\textcolor{stringliteral}{"{}google.com"{}}, \$combinedGoogleResult);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$googleMx = yield Amp\(\backslash\)Dns\(\backslash\)query(\textcolor{stringliteral}{"{}google.com"{}}, Amp\(\backslash\)Dns\(\backslash\)Record::MX);}
+\DoxyCodeLine{    pretty\_print\_records(\textcolor{stringliteral}{"{}google.com"{}}, \$googleMx);}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+ 

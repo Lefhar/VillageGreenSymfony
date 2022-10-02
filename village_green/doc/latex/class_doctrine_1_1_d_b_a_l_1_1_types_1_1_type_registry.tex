@@ -1,0 +1,108 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry}{}\doxysection{Type\+Registry Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry}\index{TypeRegistry@{TypeRegistry}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a3e30cd83cb093c4ff31c5cc12d296880}{\+\_\+\+\_\+construct}} (array \$instances=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a004397797e263171281784084cf4a502}{get}} (string \$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a6366b2b0a099ff946656e2b4581547fe}{lookup\+Name}} (\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a36c5aea84ecb000ab035e47ec3f351c3}{has}} (string \$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a6230ed2d5fc790446375ac2ee461ca4e}{register}} (string \$name, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a1c079b1a4f292f5fe1ef15513cd757c8}{override}} (string \$name, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}} \$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a831bfd2e8f3f041f518f9815cb503bda}{get\+Map}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The type registry is responsible for holding a map of all known DBAL types. The types are stored using the flyweight pattern so that one type only exists as exactly one instance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a3e30cd83cb093c4ff31c5cc12d296880}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a3e30cd83cb093c4ff31c5cc12d296880}} 
+\index{TypeRegistry@{TypeRegistry}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$instances = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,Type$>$} & \$instances \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a004397797e263171281784084cf4a502}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a004397797e263171281784084cf4a502}} 
+\index{TypeRegistry@{TypeRegistry}!get@{get}}
+\index{get@{get}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Finds a type by the given name.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a831bfd2e8f3f041f518f9815cb503bda}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a831bfd2e8f3f041f518f9815cb503bda}} 
+\index{TypeRegistry@{TypeRegistry}!getMap@{getMap}}
+\index{getMap@{getMap}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{getMap()}{getMap()}}
+{\footnotesize\ttfamily get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the map of all registered types and their corresponding type instances. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a36c5aea84ecb000ab035e47ec3f351c3}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a36c5aea84ecb000ab035e47ec3f351c3}} 
+\index{TypeRegistry@{TypeRegistry}!has@{has}}
+\index{has@{has}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}}
+{\footnotesize\ttfamily has (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Checks if there is a type of the given name. \mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a6366b2b0a099ff946656e2b4581547fe}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a6366b2b0a099ff946656e2b4581547fe}} 
+\index{TypeRegistry@{TypeRegistry}!lookupName@{lookupName}}
+\index{lookupName@{lookupName}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{lookupName()}{lookupName()}}
+{\footnotesize\ttfamily lookup\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}}}]{\$type }\end{DoxyParamCaption})}
+
+Finds a name for the given type.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a1c079b1a4f292f5fe1ef15513cd757c8}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a1c079b1a4f292f5fe1ef15513cd757c8}} 
+\index{TypeRegistry@{TypeRegistry}!override@{override}}
+\index{override@{override}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{override()}{override()}}
+{\footnotesize\ttfamily override (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}}}]{\$type }\end{DoxyParamCaption})}
+
+Overrides an already defined type to use a different implementation.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a6230ed2d5fc790446375ac2ee461ca4e}\label{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type_registry_a6230ed2d5fc790446375ac2ee461ca4e}} 
+\index{TypeRegistry@{TypeRegistry}!register@{register}}
+\index{register@{register}!TypeRegistry@{TypeRegistry}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_types_1_1_type}{Type}}}]{\$type }\end{DoxyParamCaption})}
+
+Registers a custom type to the type map.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Types/Type\+Registry.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor}{}\doxysection{Query\+Expression\+Visitor Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor}\index{QueryExpressionVisitor@{QueryExpressionVisitor}}
+Inheritance diagram for Query\+Expression\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_aa2a514841c39aa537799656fbea497ef}{\+\_\+\+\_\+construct}} (\$query\+Aliases)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a015cb52e5774a1972d296c9694d2a3c3}{get\+Parameters}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a93e6a40ae59319b4d2312d3d971b87be}{clear\+Parameters}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a4258f6e6a49a2684b965ff2cdcab82d3}{walk\+Composite\+Expression}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression}{Composite\+Expression}} \$expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a785424be63544ab0c70a25b2a4133ae2}{walk\+Comparison}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_comparison}{Comparison}} \$comparison)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_ac19b57dc9aa80f71569c13501a61c8ed}{walk\+Value}} (\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_value}{Value}} \$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converts Collection expressions to \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} expressions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_aa2a514841c39aa537799656fbea497ef}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_aa2a514841c39aa537799656fbea497ef}} 
+\index{QueryExpressionVisitor@{QueryExpressionVisitor}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!QueryExpressionVisitor@{QueryExpressionVisitor}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$query\+Aliases }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} & {\em \$query\+Aliases} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a93e6a40ae59319b4d2312d3d971b87be}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a93e6a40ae59319b4d2312d3d971b87be}} 
+\index{QueryExpressionVisitor@{QueryExpressionVisitor}!clearParameters@{clearParameters}}
+\index{clearParameters@{clearParameters}!QueryExpressionVisitor@{QueryExpressionVisitor}}
+\doxysubsubsection{\texorpdfstring{clearParameters()}{clearParameters()}}
+{\footnotesize\ttfamily clear\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears parameters.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a015cb52e5774a1972d296c9694d2a3c3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a015cb52e5774a1972d296c9694d2a3c3}} 
+\index{QueryExpressionVisitor@{QueryExpressionVisitor}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!QueryExpressionVisitor@{QueryExpressionVisitor}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}}
+{\footnotesize\ttfamily get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets bound parameters. Filled after \mbox{\hyperlink{}{dispach()}}.
+
+\begin{DoxyReturn}{Returns}
+Array\+Collection$<$int, mixed$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a785424be63544ab0c70a25b2a4133ae2}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a785424be63544ab0c70a25b2a4133ae2}} 
+\index{QueryExpressionVisitor@{QueryExpressionVisitor}!walkComparison@{walkComparison}}
+\index{walkComparison@{walkComparison}!QueryExpressionVisitor@{QueryExpressionVisitor}}
+\doxysubsubsection{\texorpdfstring{walkComparison()}{walkComparison()}}
+{\footnotesize\ttfamily walk\+Comparison (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_comparison}{Comparison}}}]{\$comparison }\end{DoxyParamCaption})}
+
+Converts a comparison expression into the target query language output.
+
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression_visitor_a785424be63544ab0c70a25b2a4133ae2}{Expression\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a4258f6e6a49a2684b965ff2cdcab82d3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_a4258f6e6a49a2684b965ff2cdcab82d3}} 
+\index{QueryExpressionVisitor@{QueryExpressionVisitor}!walkCompositeExpression@{walkCompositeExpression}}
+\index{walkCompositeExpression@{walkCompositeExpression}!QueryExpressionVisitor@{QueryExpressionVisitor}}
+\doxysubsubsection{\texorpdfstring{walkCompositeExpression()}{walkCompositeExpression()}}
+{\footnotesize\ttfamily walk\+Composite\+Expression (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_composite_expression}{Composite\+Expression}}}]{\$expr }\end{DoxyParamCaption})}
+
+Converts a composite expression into the target query language output.
+
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression_visitor_a4258f6e6a49a2684b965ff2cdcab82d3}{Expression\+Visitor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_ac19b57dc9aa80f71569c13501a61c8ed}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_query_expression_visitor_ac19b57dc9aa80f71569c13501a61c8ed}} 
+\index{QueryExpressionVisitor@{QueryExpressionVisitor}!walkValue@{walkValue}}
+\index{walkValue@{walkValue}!QueryExpressionVisitor@{QueryExpressionVisitor}}
+\doxysubsubsection{\texorpdfstring{walkValue()}{walkValue()}}
+{\footnotesize\ttfamily walk\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_value}{Value}}}]{\$value }\end{DoxyParamCaption})}
+
+Converts a value expression into the target query language part.
+
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expr_1_1_expression_visitor_ac19b57dc9aa80f71569c13501a61c8ed}{Expression\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Query\+Expression\+Visitor.\+php\end{DoxyCompactItemize}

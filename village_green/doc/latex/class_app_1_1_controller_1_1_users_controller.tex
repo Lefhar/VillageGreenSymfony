@@ -1,0 +1,59 @@
+\hypertarget{class_app_1_1_controller_1_1_users_controller}{}\doxysection{Users\+Controller Class Reference}
+\label{class_app_1_1_controller_1_1_users_controller}\index{UsersController@{UsersController}}
+Inheritance diagram for Users\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controller_1_1_users_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_users_controller_acc76e646fa42b9e6d46776f5c303b6bd}{login}} (Authentication\+Utils \$authentication\+Utils, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$\mbox{\hyperlink{class_app_1_1_controller_1_1_users_controller_ab4b9969cf450b5671b42bbcbcbb16f39}{profil}})
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_users_controller_a082405d89acd6835c3a7c7a08a7adbab}{logout}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_users_controller_ab4b9969cf450b5671b42bbcbcbb16f39}{profil}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$profil, \mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_users_controller_adc0b7c73726030978f40f138d480dc15}{profil\+Insert}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, Request \$request, Entity\+Manager\+Interface \$manger, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$client, \mbox{\hyperlink{class_app_1_1_repository_1_1_live_repository}{Live\+Repository}} \$habiter)
+\item 
+\mbox{\hyperlink{class_app_1_1_controller_1_1_users_controller_ad5d4310166605d18a4b3781175b90caa}{mescommandes}} (\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}} \$cat, \mbox{\hyperlink{class_app_1_1_repository_1_1_orders_repository}{Orders\+Repository}} \$repo, \mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}} \$user)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controller_1_1_users_controller_acc76e646fa42b9e6d46776f5c303b6bd}\label{class_app_1_1_controller_1_1_users_controller_acc76e646fa42b9e6d46776f5c303b6bd}} 
+\index{UsersController@{UsersController}!login@{login}}
+\index{login@{login}!UsersController@{UsersController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily login (\begin{DoxyParamCaption}\item[{Authentication\+Utils}]{\$authentication\+Utils,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$profil }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/login\char`\"{}, name=\char`\"{}app\+\_\+login\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_users_controller_a082405d89acd6835c3a7c7a08a7adbab}\label{class_app_1_1_controller_1_1_users_controller_a082405d89acd6835c3a7c7a08a7adbab}} 
+\index{UsersController@{UsersController}!logout@{logout}}
+\index{logout@{logout}!UsersController@{UsersController}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/logout\char`\"{}, name=\char`\"{}app\+\_\+logout\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_users_controller_ad5d4310166605d18a4b3781175b90caa}\label{class_app_1_1_controller_1_1_users_controller_ad5d4310166605d18a4b3781175b90caa}} 
+\index{UsersController@{UsersController}!mescommandes@{mescommandes}}
+\index{mescommandes@{mescommandes}!UsersController@{UsersController}}
+\doxysubsubsection{\texorpdfstring{mescommandes()}{mescommandes()}}
+{\footnotesize\ttfamily mescommandes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_orders_repository}{Orders\+Repository}}}]{\$repo,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$user }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/profil/mescommandes\char`\"{}, name=\char`\"{}mescommandes\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_users_controller_ab4b9969cf450b5671b42bbcbcbb16f39}\label{class_app_1_1_controller_1_1_users_controller_ab4b9969cf450b5671b42bbcbcbb16f39}} 
+\index{UsersController@{UsersController}!profil@{profil}}
+\index{profil@{profil}!UsersController@{UsersController}}
+\doxysubsubsection{\texorpdfstring{profil()}{profil()}}
+{\footnotesize\ttfamily profil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$profil,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/profil\char`\"{}, name=\char`\"{}app\+\_\+profil\char`\"{}) \mbox{\Hypertarget{class_app_1_1_controller_1_1_users_controller_adc0b7c73726030978f40f138d480dc15}\label{class_app_1_1_controller_1_1_users_controller_adc0b7c73726030978f40f138d480dc15}} 
+\index{UsersController@{UsersController}!profilInsert@{profilInsert}}
+\index{profilInsert@{profilInsert}!UsersController@{UsersController}}
+\doxysubsubsection{\texorpdfstring{profilInsert()}{profilInsert()}}
+{\footnotesize\ttfamily profil\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_categories_repository}{Categories\+Repository}}}]{\$cat,  }\item[{Request}]{\$request,  }\item[{Entity\+Manager\+Interface}]{\$manger,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_customers_repository}{Customers\+Repository}}}]{\$client,  }\item[{\mbox{\hyperlink{class_app_1_1_repository_1_1_live_repository}{Live\+Repository}}}]{\$habiter }\end{DoxyParamCaption})}
+
+@\+Route(\char`\"{}/profil/post\char`\"{}, name=\char`\"{}profil\+Update\char`\"{}) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/Users\+Controller.\+php\end{DoxyCompactItemize}

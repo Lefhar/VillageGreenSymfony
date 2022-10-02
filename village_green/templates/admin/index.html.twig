@@ -1,0 +1,47 @@
+{% extends 'base.admin.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <div class="row p-2">
+
+                <div class="col-12">
+                    <h1>Liste des commandes ! ✅</h1>
+                </div>
+                {% for rowOrder in order %}
+                    <div class="col-12 mb-2  border border-dark">
+                        <p>Commande numero : {{ rowOrder.id }}  </p>
+
+                        <p>Date : {{ rowOrder.orderDate|date('Y-m-d h:i:s') }} </p>
+                        <p>{{ (rowOrder.LivesBilling.customers|first).gender|capitalize }}
+                            {{ (rowOrder.LivesBilling.customers|first).lastname|capitalize }}
+                            {{ (rowOrder.LivesBilling.customers|first).firstname|capitalize }}</p>
+                        <p>{{ rowOrder.LivesBilling.address }}  </p>
+                        <p>{{ rowOrder.LivesBilling.zipcode }} {{ rowOrder.LivesBilling.city|capitalize }}
+                            {{ rowOrder.LivesBilling.country|capitalize }} </p>
+                        {% set total = 0 %}
+                        {% set quantite = 0 %}
+                        {% for rowOrdDet in rowOrder.ordersDetails %}
+                        {%  set total = total + rowOrdDet.unitPrice * rowOrdDet.quantite %}
+                        {%  set quantite = quantite + rowOrdDet.quantite %}
+                        {% endfor %}
+                        <p>Nombre d'articles : {{ quantite }}</p>
+                        <p>Pour un total de <span class="text-success"> {{ total }}€</span> </p>
+                        <p><a class="btn btn-info" href="{{ path('facturePdf',{order:rowOrder.id}) }}" download>Télécharger
+                                la facture
+                                <i class="fa fa-file-pdf-o fa-2x text-danger bg-light"></i>
+                            </a>
+                        </p>
+                    </div>
+{#                                        {{ dump((rowOrder.LivesBilling)) }}#}
+
+                {% endfor %}
+                {#                {{ dump(order) }} #}
+
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

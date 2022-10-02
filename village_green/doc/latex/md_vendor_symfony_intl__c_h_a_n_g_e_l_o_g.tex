@@ -1,0 +1,30 @@
+\hypertarget{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1639}{}\doxysection{5.\+3}\label{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1639}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Currencies\+::get\+Cash\+Fraction\+Digits()} and {\ttfamily Currencies\+::get\+Cash\+Rounding\+Increment()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1640}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1640}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Resource\+Bundle} namespace
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1641}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1641}
+
+\begin{DoxyItemize}
+\item excluded language code {\ttfamily root}
+\item added to both {\ttfamily Countries} and {\ttfamily Languages} the methods {\ttfamily get\+Alpha3\+Codes}, {\ttfamily get\+Alpha3\+Code}, {\ttfamily get\+Alpha2\+Code}, {\ttfamily alpha3\+Code\+Exists}, {\ttfamily get\+Alpha3\+Name} and {\ttfamily get\+Alpha3\+Names}
+\item excluded localized languages (e.\+g. {\ttfamily en\+\_\+\+US}) from {\ttfamily Languages} in {\ttfamily get\+Language\+Codes()} and {\ttfamily get\+Names()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1642}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1642}
+
+\begin{DoxyItemize}
+\item deprecated {\ttfamily Resource\+Bundle} namespace
+\item added {\ttfamily Currencies} in favor of {\ttfamily Intl\+::get\+Currency\+Bundle()}
+\item added {\ttfamily Languages} and {\ttfamily Scripts} in favor of {\ttfamily Intl\+::get\+Language\+Bundle()}
+\item added {\ttfamily Locales} in favor of {\ttfamily Intl\+::get\+Locale\+Bundle()}
+\item added {\ttfamily Countries} in favor of {\ttfamily Intl\+::get\+Region\+Bundle()}
+\item added {\ttfamily Timezones}
+\item made country codes ISO 3166 compliant
+\item excluded script code {\ttfamily Zzzz}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1643}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_intl__c_h_a_n_g_e_l_o_g_autotoc_md1643}
+
+\begin{DoxyItemize}
+\item excluded language codes {\ttfamily mis}, {\ttfamily mul}, {\ttfamily und} and {\ttfamily zxx} 
+\end{DoxyItemize}

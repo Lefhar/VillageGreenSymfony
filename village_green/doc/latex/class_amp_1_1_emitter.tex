@@ -1,0 +1,80 @@
+\hypertarget{class_amp_1_1_emitter}{}\doxysection{Emitter Class Reference}
+\label{class_amp_1_1_emitter}\index{Emitter@{Emitter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_emitter_ad39c70322389b8d8c48a65e41b5a93c7}{iterate}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_emitter_a0060b191dbb4ce03b77fded4d66860b8}{emit}} (\$value)
+\item 
+\mbox{\hyperlink{class_amp_1_1_emitter_a97c73acf76965d89f77bcc5d6d158d22}{complete}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_emitter_a5df97dc03c3c97cdf40b90fbf101f54f}{fail}} (\textbackslash{}Throwable \$reason)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_amp_1_1_emitter}{Emitter}} is a container for an iterator that can emit values using the \mbox{\hyperlink{class_amp_1_1_emitter_a0060b191dbb4ce03b77fded4d66860b8}{emit()}} method and completed using the \mbox{\hyperlink{class_amp_1_1_emitter_a97c73acf76965d89f77bcc5d6d158d22}{complete()}} and \mbox{\hyperlink{class_amp_1_1_emitter_a5df97dc03c3c97cdf40b90fbf101f54f}{fail()}} methods of this object. The contained iterator may be accessed using the \mbox{\hyperlink{class_amp_1_1_emitter_ad39c70322389b8d8c48a65e41b5a93c7}{iterate()}} method. This object should not be part of a public API, but used internally to create and emit values to an iterator.
+
+@template TValue 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_emitter_a97c73acf76965d89f77bcc5d6d158d22}\label{class_amp_1_1_emitter_a97c73acf76965d89f77bcc5d6d158d22}} 
+\index{Emitter@{Emitter}!complete@{complete}}
+\index{complete@{complete}!Emitter@{Emitter}}
+\doxysubsubsection{\texorpdfstring{complete()}{complete()}}
+{\footnotesize\ttfamily complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Completes the iterator.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Undefined\+Interface\+Method\mbox{\Hypertarget{class_amp_1_1_emitter_a0060b191dbb4ce03b77fded4d66860b8}\label{class_amp_1_1_emitter_a0060b191dbb4ce03b77fded4d66860b8}} 
+\index{Emitter@{Emitter}!emit@{emit}}
+\index{emit@{emit}!Emitter@{Emitter}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}}
+{\footnotesize\ttfamily emit (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Emits a value to the iterator.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+@psalm-\/param TValue \$value
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} @psalm-\/return Promise$<$null$>$ @psalm-\/suppress Mixed\+Inferred\+Return\+Type @psalm-\/suppress Mixed\+Return\+Statement 
+\end{DoxyReturn}
+@psalm-\/suppress Undefined\+Interface\+Method\mbox{\Hypertarget{class_amp_1_1_emitter_a5df97dc03c3c97cdf40b90fbf101f54f}\label{class_amp_1_1_emitter_a5df97dc03c3c97cdf40b90fbf101f54f}} 
+\index{Emitter@{Emitter}!fail@{fail}}
+\index{fail@{fail}!Emitter@{Emitter}}
+\doxysubsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily fail (\begin{DoxyParamCaption}\item[{\textbackslash{}Throwable}]{\$reason }\end{DoxyParamCaption})}
+
+Fails the iterator with the given reason.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable & {\em \$reason} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Undefined\+Interface\+Method\mbox{\Hypertarget{class_amp_1_1_emitter_ad39c70322389b8d8c48a65e41b5a93c7}\label{class_amp_1_1_emitter_ad39c70322389b8d8c48a65e41b5a93c7}} 
+\index{Emitter@{Emitter}!iterate@{iterate}}
+\index{iterate@{iterate}!Emitter@{Emitter}}
+\doxysubsubsection{\texorpdfstring{iterate()}{iterate()}}
+{\footnotesize\ttfamily iterate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_iterator}{Iterator}} @psalm-\/return Iterator$<$\+TValue$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Emitter.\+php\end{DoxyCompactItemize}

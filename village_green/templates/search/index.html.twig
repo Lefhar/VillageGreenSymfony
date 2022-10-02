@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listes des produits!{% endblock %}
+{% block description %}Listes des produits{% endblock %}
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+
+                    <li class="breadcrumb-item active" aria-current="page">Listes des produits</li>
+                </ol>
+            </nav>
+            <div class="row p-4">
+                {% if app.request.query.get('q') %}
+
+
+                    <h2>Resultat de votre recherche pour <span
+                                class="text-success">{{ app.request.query.get('q') }}</span></h2>
+                {% else %}
+                    <h2>Aucun paramettre de recherche indiqué</h2>
+                {% endif %}
+            </div>
+
+            {% for row in produits %}
+                <div class="row p-4">
+                    <h2>{{ row.catprod.name }} {{ row.name }}</h2>
+                </div>
+                <div class="row pt-2 pb-2">
+                    <div class="col-sm-3">
+                        <img class="img-fluid" height="200" src="/assets/src/{{ row.photo }}" alt="{{ row.name }}">
+                    </div>
+
+                    <div class="col-sm-9">
+                        <p>{{ row.description |raw }}</p>
+                        <p><strong>Prix:</strong> <span class="text-success">{{ row.price }} €</span></p>
+                        <div class="mb-2">
+                            <form action="{{ path("paniers_add") }}" method="post">
+                                <input type="hidden" name="produit" value="{{ row.id }}">
+                                <input type="hidden" name="name" value="{{ row.name }}">
+                                <input type="hidden" name="photo" value="{{ row.photo }}">
+                                {#                        {{ dump(app.session.get('panier')[details.id]["qte"]) }} #}
+
+
+                                {% if row.status == 1 %}
+
+                                    <div class="form-row">
+                                        <div class="col-2">
+
+                                            <input type="number" class="form-control" name="qte" id="qte" min="0"
+                                                   max="{{ row.stock }}"
+                                                   value="{% if row.id in app.session.get('panier')|keys %}{{ app.session.get('panier')[row.id]['qte'] }}{% else %}1{% endif %}">
+                                        </div>
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-success">Ajouter au panier</button>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-warning" role="alert">
+                                        Produit indisponible
+                                    </div>
+                                {% endif %}
+                            </form>
+                        </div>
+                        <p><a class="btn btn-dark" href="{{ path('produit_details', {id : row.id}) }}">Detail</a></p>
+                    </div>
+
+
+                </div>
+                <hr>
+
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,20 @@
+Make sure you read our \href{https://www.doctrine-project.org/contribute}{\texttt{ contributing guide}}.\hypertarget{md_vendor_doctrine_sql_formatter__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md345}{}\doxysection{Installing dependencies}\label{md_vendor_doctrine_sql_formatter__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md345}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer install}
+\DoxyCodeLine{composer bin all install}
+
+\end{DoxyCode}
+\hypertarget{md_vendor_doctrine_sql_formatter__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md346}{}\doxysection{Running checks locally}\label{md_vendor_doctrine_sql_formatter__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md346}
+Here is a script to run all checks, you can use it as a git hook\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#!/bin/bash -\/eu}
+\DoxyCodeLine{vendor/bin/phpunit -\/-\/testdox}
+\DoxyCodeLine{vendor/bin/psalm}
+\DoxyCodeLine{echo '' | vendor/bin/phpcs}
+\DoxyCodeLine{vendor/bin/phpstan analyze}
+
+\end{DoxyCode}
+ 

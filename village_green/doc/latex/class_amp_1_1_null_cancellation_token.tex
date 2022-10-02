@@ -1,0 +1,135 @@
+\hypertarget{class_amp_1_1_null_cancellation_token}{}\doxysection{Null\+Cancellation\+Token Class Reference}
+\label{class_amp_1_1_null_cancellation_token}\index{NullCancellationToken@{NullCancellationToken}}
+Inheritance diagram for Null\+Cancellation\+Token\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_null_cancellation_token}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_null_cancellation_token_ad1f2575ecb334202c2f958e919449b7f}{subscribe}} (callable \$callback)
+\item 
+\mbox{\hyperlink{class_amp_1_1_null_cancellation_token_ad8c005224d75b764171e3c7f00ac48f5}{unsubscribe}} (string \$id)
+\item 
+\mbox{\hyperlink{class_amp_1_1_null_cancellation_token_aa7227a476847dc1c4bb4cb12905f92c4}{is\+Requested}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_null_cancellation_token_ac117b7ba0afbba014db27bf26a611d4d}{throw\+If\+Requested}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{class_amp_1_1_null_cancellation_token}{Null\+Cancellation\+Token}} can be used to avoid conditionals to check whether a token has been provided.
+
+Instead of writing
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (\$token) \{}
+\DoxyCodeLine{    \$token-\/>throwIfRequested();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+potentially multiple times, it allows writing
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$token = \$token ?? \textcolor{keyword}{new} NullCancellationToken;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// ...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$token-\/>throwIfRequested();}
+
+\end{DoxyCode}
+
+
+instead. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_null_cancellation_token_aa7227a476847dc1c4bb4cb12905f92c4}\label{class_amp_1_1_null_cancellation_token_aa7227a476847dc1c4bb4cb12905f92c4}} 
+\index{NullCancellationToken@{NullCancellationToken}!isRequested@{isRequested}}
+\index{isRequested@{isRequested}!NullCancellationToken@{NullCancellationToken}}
+\doxysubsubsection{\texorpdfstring{isRequested()}{isRequested()}}
+{\footnotesize\ttfamily is\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether cancellation has been requested yet.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cancellation_token_aa7227a476847dc1c4bb4cb12905f92c4}{Cancellation\+Token}}.
+
+\mbox{\Hypertarget{class_amp_1_1_null_cancellation_token_ad1f2575ecb334202c2f958e919449b7f}\label{class_amp_1_1_null_cancellation_token_ad1f2575ecb334202c2f958e919449b7f}} 
+\index{NullCancellationToken@{NullCancellationToken}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!NullCancellationToken@{NullCancellationToken}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily subscribe (\begin{DoxyParamCaption}\item[{callable}]{\$callback }\end{DoxyParamCaption})}
+
+Subscribes a new handler to be invoked on a cancellation request.
+
+This handler might be invoked immediately in case the token has already been cancelled. Returned generators will automatically be run as coroutines. Any unhandled exceptions will be throw into the event loop.
+
+
+\begin{DoxyParams}{Parameters}
+{\em callable(\+Cancelled\+Exception)} & \$callback Callback to be invoked on a cancellation request. Will receive a {\ttfamily \mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}}} as first argument that may be used to fail the operation\textquotesingle{}s promise.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Identifier that can be used to cancel the subscription.
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cancellation_token_ad1f2575ecb334202c2f958e919449b7f}{Cancellation\+Token}}.
+
+\mbox{\Hypertarget{class_amp_1_1_null_cancellation_token_ac117b7ba0afbba014db27bf26a611d4d}\label{class_amp_1_1_null_cancellation_token_ac117b7ba0afbba014db27bf26a611d4d}} 
+\index{NullCancellationToken@{NullCancellationToken}!throwIfRequested@{throwIfRequested}}
+\index{throwIfRequested@{throwIfRequested}!NullCancellationToken@{NullCancellationToken}}
+\doxysubsubsection{\texorpdfstring{throwIfRequested()}{throwIfRequested()}}
+{\footnotesize\ttfamily throw\+If\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Throws the {\ttfamily \mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}}} if cancellation has been requested, otherwise does nothing.
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cancellation_token_ac117b7ba0afbba014db27bf26a611d4d}{Cancellation\+Token}}.
+
+\mbox{\Hypertarget{class_amp_1_1_null_cancellation_token_ad8c005224d75b764171e3c7f00ac48f5}\label{class_amp_1_1_null_cancellation_token_ad8c005224d75b764171e3c7f00ac48f5}} 
+\index{NullCancellationToken@{NullCancellationToken}!unsubscribe@{unsubscribe}}
+\index{unsubscribe@{unsubscribe}!NullCancellationToken@{NullCancellationToken}}
+\doxysubsubsection{\texorpdfstring{unsubscribe()}{unsubscribe()}}
+{\footnotesize\ttfamily unsubscribe (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Unsubscribes a previously registered handler.
+
+The handler will no longer be called as long as this method isn\textquotesingle{}t invoked from a subscribed callback.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_amp_1_1_cancellation_token_ad8c005224d75b764171e3c7f00ac48f5}{Cancellation\+Token}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Null\+Cancellation\+Token.\+php\end{DoxyCompactItemize}

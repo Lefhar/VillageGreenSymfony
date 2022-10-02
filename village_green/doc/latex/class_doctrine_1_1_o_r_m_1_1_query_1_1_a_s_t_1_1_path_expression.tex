@@ -1,0 +1,95 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression}{}\doxysection{Path\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression}\index{PathExpression@{PathExpression}}
+Inheritance diagram for Path\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_aca10f8ed19918f3a6f25154b32138a51}{\+\_\+\+\_\+construct}} (\$expected\+Type, \$identification\+Variable, \$field=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a9242968cc8550364eac9b9fb259abb46}{dispatch}} (\$walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_aaa84e30db836429dccca690c15d5fc58}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_aaa84e30db836429dccca690c15d5fc58}} 
+const {\bfseries TYPE\+\_\+\+COLLECTION\+\_\+\+VALUED\+\_\+\+ASSOCIATION} = 2
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a236cf00f146d283d2c95f17b3336288f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a236cf00f146d283d2c95f17b3336288f}} 
+const {\bfseries TYPE\+\_\+\+SINGLE\+\_\+\+VALUED\+\_\+\+ASSOCIATION} = 4
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a0d2eb3ad7fd3fe12af9098108a71b743}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a0d2eb3ad7fd3fe12af9098108a71b743}} 
+const {\bfseries TYPE\+\_\+\+STATE\+\_\+\+FIELD} = 8
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a9a4a6fba2208984cabb3afacadf33919}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a9a4a6fba2208984cabb3afacadf33919}} 
+{\bfseries \$type}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a0ce9d5267b4753dbb54ae93c89fd6d6e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a0ce9d5267b4753dbb54ae93c89fd6d6e}} 
+{\bfseries \$expected\+Type}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_afea93c662fcf92e607e49828396a513d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_afea93c662fcf92e607e49828396a513d}} 
+{\bfseries \$identification\+Variable}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a83e4d6721f3491a4fd780dbd3ce1a3c0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a83e4d6721f3491a4fd780dbd3ce1a3c0}} 
+{\bfseries \$field}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Association\+Path\+Expression \+::= Collection\+Valued\+Path\+Expression $\vert$ Single\+Valued\+Association\+Path\+Expression Single\+Valued\+Path\+Expression \+::= State\+Field\+Path\+Expression $\vert$ Single\+Valued\+Association\+Path\+Expression State\+Field\+Path\+Expression \+::= Simple\+State\+Field\+Path\+Expression $\vert$ Simple\+State\+Field\+Association\+Path\+Expression Single\+Valued\+Association\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} Single\+Valued\+Association\+Field Collection\+Valued\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} Collection\+Valued\+Association\+Field State\+Field \+::= \{Embedded\+Class\+State\+Field \char`\"{}.\char`\"{}\}$\ast$ Simple\+State\+Field Simple\+State\+Field\+Path\+Expression \+::= Identification\+Variable \char`\"{}.\char`\"{} State\+Field 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_aca10f8ed19918f3a6f25154b32138a51}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_aca10f8ed19918f3a6f25154b32138a51}} 
+\index{PathExpression@{PathExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PathExpression@{PathExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$expected\+Type,  }\item[{}]{\$identification\+Variable,  }\item[{}]{\$field = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$expected\+Type} & \\
+\hline
+string & {\em \$identification\+Variable} & \\
+\hline
+string | null & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a9242968cc8550364eac9b9fb259abb46}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression_a9242968cc8550364eac9b9fb259abb46}} 
+\index{PathExpression@{PathExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!PathExpression@{PathExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Path\+Expression.\+php\end{DoxyCompactItemize}

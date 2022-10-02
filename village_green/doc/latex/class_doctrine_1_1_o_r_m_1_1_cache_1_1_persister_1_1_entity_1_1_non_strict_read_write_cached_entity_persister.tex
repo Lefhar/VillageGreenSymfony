@@ -1,0 +1,99 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister}{}\doxysection{Non\+Strict\+Read\+Write\+Cached\+Entity\+Persister Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister}\index{NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}}
+Inheritance diagram for Non\+Strict\+Read\+Write\+Cached\+Entity\+Persister\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a69fd009392446b047b2b1fa09345680d}{after\+Transaction\+Complete}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a070eb74b461495bcaeba211fcd775f0a}{after\+Transaction\+Rolled\+Back}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a4e8fafc58c59edd43fb68f9912f85f0c}{delete}} (\$entity)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a73a92552282d02a30c3e1b6ec7835ec7}{update}} (\$entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Specific non-\/strict read/write cached entity persister 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a69fd009392446b047b2b1fa09345680d}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a69fd009392446b047b2b1fa09345680d}} 
+\index{NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}!afterTransactionComplete@{afterTransactionComplete}}
+\index{afterTransactionComplete@{afterTransactionComplete}!NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}}
+\doxysubsubsection{\texorpdfstring{afterTransactionComplete()}{afterTransactionComplete()}}
+{\footnotesize\ttfamily after\+Transaction\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Perform whatever processing is encapsulated here after completion of the transaction.\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a69fd009392446b047b2b1fa09345680d}{Cached\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a070eb74b461495bcaeba211fcd775f0a}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a070eb74b461495bcaeba211fcd775f0a}} 
+\index{NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}!afterTransactionRolledBack@{afterTransactionRolledBack}}
+\index{afterTransactionRolledBack@{afterTransactionRolledBack}!NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}}
+\doxysubsubsection{\texorpdfstring{afterTransactionRolledBack()}{afterTransactionRolledBack()}}
+{\footnotesize\ttfamily after\+Transaction\+Rolled\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Perform whatever processing is encapsulated here after completion of the rolled-\/back.\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_cached_persister_a070eb74b461495bcaeba211fcd775f0a}{Cached\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a4e8fafc58c59edd43fb68f9912f85f0c}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a4e8fafc58c59edd43fb68f9912f85f0c}} 
+\index{NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}!delete@{delete}}
+\index{delete@{delete}!NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+\{Deletes a managed entity.
+
+The entity to delete must be managed and have a persistent identifier. The deletion happens instantaneously.
+
+Subclasses may override this method to customize the semantics of entity deletion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the entity got deleted in the database, FALSE otherwise.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_entity_persister_a4e8fafc58c59edd43fb68f9912f85f0c}{Entity\+Persister}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a73a92552282d02a30c3e1b6ec7835ec7}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_non_strict_read_write_cached_entity_persister_a73a92552282d02a30c3e1b6ec7835ec7}} 
+\index{NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}!update@{update}}
+\index{update@{update}!NonStrictReadWriteCachedEntityPersister@{NonStrictReadWriteCachedEntityPersister}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+\{Updates a managed entity. The entity is updated according to its current changeset in the running \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_unit_of_work}{Unit\+Of\+Work}}. If there is no changeset, nothing is updated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$entity} & The entity to update.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_persisters_1_1_entity_1_1_entity_persister_a73a92552282d02a30c3e1b6ec7835ec7}{Entity\+Persister}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_persister_1_1_entity_1_1_read_only_cached_entity_persister_a73a92552282d02a30c3e1b6ec7835ec7}{Read\+Only\+Cached\+Entity\+Persister}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/\+Persister/\+Entity/Non\+Strict\+Read\+Write\+Cached\+Entity\+Persister.\+php\end{DoxyCompactItemize}

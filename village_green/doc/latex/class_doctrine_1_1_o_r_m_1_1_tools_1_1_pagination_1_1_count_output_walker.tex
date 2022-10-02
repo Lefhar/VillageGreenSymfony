@@ -1,0 +1,73 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker}{}\doxysection{Count\+Output\+Walker Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker}\index{CountOutputWalker@{CountOutputWalker}}
+Inheritance diagram for Count\+Output\+Walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker_a84443a0f93eaa8b3ff990a4865dfc22c}{\+\_\+\+\_\+construct}} (\$query, \$parser\+Result, array \$query\+Components)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker_a3610174d13cc7a5b18cf1196be4c76e4}{walk\+Select\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Wraps the query in order to accurately count the root objects.
+
+Given a DQL like {\ttfamily SELECT u FROM User u} it will generate an SQL query like\+: SELECT COUNT($\ast$) (SELECT DISTINCT $<$id$>$ FROM ($<$original SQL$>$))
+
+Works with composite keys but cannot deal with queries that have multiple root entities (e.\+g. {\ttfamily SELECT f, b from Foo, Bar}) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker_a84443a0f93eaa8b3ff990a4865dfc22c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker_a84443a0f93eaa8b3ff990a4865dfc22c}} 
+\index{CountOutputWalker@{CountOutputWalker}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CountOutputWalker@{CountOutputWalker}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$parser\+Result,  }\item[{array}]{\$query\+Components }\end{DoxyParamCaption})}
+
+Stores various parameters that are otherwise unavailable because Doctrine\textbackslash{}\+ORM\textbackslash{}\+Query\textbackslash{}\+Sql\+Walker keeps everything private without accessors.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} & {\em \$query} & \\
+\hline
+Parser\+Result & {\em \$parser\+Result} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$query\+Components} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker_a84443a0f93eaa8b3ff990a4865dfc22c}{Sql\+Walker}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker_a3610174d13cc7a5b18cf1196be4c76e4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_count_output_walker_a3610174d13cc7a5b18cf1196be4c76e4}} 
+\index{CountOutputWalker@{CountOutputWalker}!walkSelectStatement@{walkSelectStatement}}
+\index{walkSelectStatement@{walkSelectStatement}!CountOutputWalker@{CountOutputWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatement()}{walkSelectStatement()}}
+{\footnotesize\ttfamily walk\+Select\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+Walks down a Select\+Statement AST node, wrapping it in a COUNT (SELECT DISTINCT).
+
+Note that the ORDER BY clause is not removed. Many SQL implementations (e.\+g. My\+SQL) are able to cache subqueries. By keeping the ORDER BY clause intact, the limit\+Sub\+Query that will most likely be executed next can be read from the native SQL cache.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Pagination/Count\+Output\+Walker.\+php\end{DoxyCompactItemize}

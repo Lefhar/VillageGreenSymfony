@@ -1,0 +1,84 @@
+\hypertarget{class_monolog_1_1_handler_1_1_amqp_handler}{}\doxysection{Amqp\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_amqp_handler}\index{AmqpHandler@{AmqpHandler}}
+Inheritance diagram for Amqp\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_amqp_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_amqp_handler_add423dddbc5ac1fb702b7776a54a6719}{\+\_\+\+\_\+construct}} (\$exchange, ?string \$exchange\+Name=null, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_amqp_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_amqp_handler_a0775e470d30cec0394717dfa43b59bcb}{get\+Routing\+Key}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_amqp_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_amqp_handler_a051615d9f2f49453fb0028da3cddd764}\label{class_monolog_1_1_handler_1_1_amqp_handler_a051615d9f2f49453fb0028da3cddd764}} 
+{\bfseries \$exchange}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_amqp_handler_a2cba2c7921ef99832d4870ce01b34b7c}\label{class_monolog_1_1_handler_1_1_amqp_handler_a2cba2c7921ef99832d4870ce01b34b7c}} 
+{\bfseries \$exchange\+Name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_amqp_handler_add423dddbc5ac1fb702b7776a54a6719}\label{class_monolog_1_1_handler_1_1_amqp_handler_add423dddbc5ac1fb702b7776a54a6719}} 
+\index{AmqpHandler@{AmqpHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AmqpHandler@{AmqpHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$exchange,  }\item[{?string}]{\$exchange\+Name = {\ttfamily null},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+AMQPExchange | AMQPChannel & {\em \$exchange} & AMQPExchange (php AMQP ext) or PHP AMQP lib channel, ready for use \\
+\hline
+string | null & {\em \$exchange\+Name} & Optional exchange name, for AMQPChannel (Php\+Amqp\+Lib) only \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_amqp_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_amqp_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{AmqpHandler@{AmqpHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!AmqpHandler@{AmqpHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_amqp_handler_a0775e470d30cec0394717dfa43b59bcb}\label{class_monolog_1_1_handler_1_1_amqp_handler_a0775e470d30cec0394717dfa43b59bcb}} 
+\index{AmqpHandler@{AmqpHandler}!getRoutingKey@{getRoutingKey}}
+\index{getRoutingKey@{getRoutingKey}!AmqpHandler@{AmqpHandler}}
+\doxysubsubsection{\texorpdfstring{getRoutingKey()}{getRoutingKey()}}
+{\footnotesize\ttfamily get\+Routing\+Key (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gets the routing key for the AMQP exchange
+
+@phpstan-\/param Record \$record \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_amqp_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_amqp_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{AmqpHandler@{AmqpHandler}!write@{write}}
+\index{write@{write}!AmqpHandler@{AmqpHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Amqp\+Handler.\+php\end{DoxyCompactItemize}

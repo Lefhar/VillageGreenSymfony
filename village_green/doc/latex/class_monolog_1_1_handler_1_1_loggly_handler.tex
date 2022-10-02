@@ -1,0 +1,159 @@
+\hypertarget{class_monolog_1_1_handler_1_1_loggly_handler}{}\doxysection{Loggly\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_loggly_handler}\index{LogglyHandler@{LogglyHandler}}
+Inheritance diagram for Loggly\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_loggly_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_a3e9b2a6b0f610fa5d0bf5487ddd47ed4}{\+\_\+\+\_\+construct}} (string \$token, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_a29ac399818206c510be536c2dea9540c}{set\+Tag}} (\$tag)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_a5b548a3558ba411599eaa8328ebd8f02}{add\+Tag}} (\$tag)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_a944865926b0302ad2d802bea1eec3a57}{handle\+Batch}} (array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_a4675a39b56a84380dfa4decf1a8c3ad8}{get\+Curl\+Handler}} (string \$endpoint)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_loggly_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_ac8861350606834c68e45a2a35c8989dd}\label{class_monolog_1_1_handler_1_1_loggly_handler_ac8861350606834c68e45a2a35c8989dd}} 
+{\bfseries send} (string \$data, string \$endpoint)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_loggly_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+{\bfseries get\+Default\+Formatter} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a6768772c01f2d4f111fabd25012e8259}\label{class_monolog_1_1_handler_1_1_loggly_handler_a6768772c01f2d4f111fabd25012e8259}} 
+const {\bfseries HOST} = \textquotesingle{}logs-\/01.loggly.\+com\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_ab97b4f07ef0eb53111671d5737f91f62}\label{class_monolog_1_1_handler_1_1_loggly_handler_ab97b4f07ef0eb53111671d5737f91f62}} 
+const {\bfseries ENDPOINT\+\_\+\+SINGLE} = \textquotesingle{}inputs\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a0ea34a0ef97fef71d979f2f2351fcef8}\label{class_monolog_1_1_handler_1_1_loggly_handler_a0ea34a0ef97fef71d979f2f2351fcef8}} 
+const {\bfseries ENDPOINT\+\_\+\+BATCH} = \textquotesingle{}bulk\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a31cff20b30ffaf8e8888e6813d7769eb}\label{class_monolog_1_1_handler_1_1_loggly_handler_a31cff20b30ffaf8e8888e6813d7769eb}} 
+{\bfseries \$curl\+Handlers} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a00ae4fcafb1145f5e968bdf920f83e2e}\label{class_monolog_1_1_handler_1_1_loggly_handler_a00ae4fcafb1145f5e968bdf920f83e2e}} 
+{\bfseries \$token}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a81d5015d41ed8ec66e9db8cdc5db9555}\label{class_monolog_1_1_handler_1_1_loggly_handler_a81d5015d41ed8ec66e9db8cdc5db9555}} 
+{\bfseries \$tag} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sends errors to Loggly.
+
+\begin{DoxyAuthor}{Author}
+Przemek Sobstel \href{mailto:przemek@sobstel.org}{\texttt{ przemek@sobstel.\+org}} 
+
+Adam Pancutt \href{mailto:adam@pancutt.com}{\texttt{ adam@pancutt.\+com}} 
+
+Gregory Barchard \href{mailto:gregory@barchard.net}{\texttt{ gregory@barchard.\+net}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a3e9b2a6b0f610fa5d0bf5487ddd47ed4}\label{class_monolog_1_1_handler_1_1_loggly_handler_a3e9b2a6b0f610fa5d0bf5487ddd47ed4}} 
+\index{LogglyHandler@{LogglyHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogglyHandler@{LogglyHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$token,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$token} & API token supplied by Loggly\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_monolog_1_1_handler_1_1_missing_extension_exception}{Missing\+Extension\+Exception}}} & If the curl extension is missing \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a5b548a3558ba411599eaa8328ebd8f02}\label{class_monolog_1_1_handler_1_1_loggly_handler_a5b548a3558ba411599eaa8328ebd8f02}} 
+\index{LogglyHandler@{LogglyHandler}!addTag@{addTag}}
+\index{addTag@{addTag}!LogglyHandler@{LogglyHandler}}
+\doxysubsubsection{\texorpdfstring{addTag()}{addTag()}}
+{\footnotesize\ttfamily add\+Tag (\begin{DoxyParamCaption}\item[{}]{\$tag }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string & {\em \$tag} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a4675a39b56a84380dfa4decf1a8c3ad8}\label{class_monolog_1_1_handler_1_1_loggly_handler_a4675a39b56a84380dfa4decf1a8c3ad8}} 
+\index{LogglyHandler@{LogglyHandler}!getCurlHandler@{getCurlHandler}}
+\index{getCurlHandler@{getCurlHandler}!LogglyHandler@{LogglyHandler}}
+\doxysubsubsection{\texorpdfstring{getCurlHandler()}{getCurlHandler()}}
+{\footnotesize\ttfamily get\+Curl\+Handler (\begin{DoxyParamCaption}\item[{string}]{\$endpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Loads and returns the shared curl handler for the given endpoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$endpoint} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resource$\vert$\+Curl\+Handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a944865926b0302ad2d802bea1eec3a57}\label{class_monolog_1_1_handler_1_1_loggly_handler_a944865926b0302ad2d802bea1eec3a57}} 
+\index{LogglyHandler@{LogglyHandler}!handleBatch@{handleBatch}}
+\index{handleBatch@{handleBatch}!LogglyHandler@{LogglyHandler}}
+\doxysubsubsection{\texorpdfstring{handleBatch()}{handleBatch()}}
+{\footnotesize\ttfamily handle\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Handles a set of records at once.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & The records to handle (an array of record arrays)\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_a944865926b0302ad2d802bea1eec3a57}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_a29ac399818206c510be536c2dea9540c}\label{class_monolog_1_1_handler_1_1_loggly_handler_a29ac399818206c510be536c2dea9540c}} 
+\index{LogglyHandler@{LogglyHandler}!setTag@{setTag}}
+\index{setTag@{setTag}!LogglyHandler@{LogglyHandler}}
+\doxysubsubsection{\texorpdfstring{setTag()}{setTag()}}
+{\footnotesize\ttfamily set\+Tag (\begin{DoxyParamCaption}\item[{}]{\$tag }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string & {\em \$tag} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_loggly_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_loggly_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{LogglyHandler@{LogglyHandler}!write@{write}}
+\index{write@{write}!LogglyHandler@{LogglyHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Loggly\+Handler.\+php\end{DoxyCompactItemize}

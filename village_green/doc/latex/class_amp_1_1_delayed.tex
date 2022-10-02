@@ -1,0 +1,68 @@
+\hypertarget{class_amp_1_1_delayed}{}\doxysection{Delayed Class Reference}
+\label{class_amp_1_1_delayed}\index{Delayed@{Delayed}}
+Inheritance diagram for Delayed\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_delayed}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_delayed_a537697ec3a140f0cd1f2f15aa5414ee5}{\+\_\+\+\_\+construct}} (int \$time, \$value=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_delayed_aa46bdf577fe031bf1287312dfbebb9a6}{reference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_delayed_a8098142e52cdc2bf80db924208412038}{unreference}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates a promise that resolves itself with a given value after a number of milliseconds.
+
+@template-\/covariant TReturn @template-\/implements Promise$<$\+TReturn$>$ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_delayed_a537697ec3a140f0cd1f2f15aa5414ee5}\label{class_amp_1_1_delayed_a537697ec3a140f0cd1f2f15aa5414ee5}} 
+\index{Delayed@{Delayed}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Delayed@{Delayed}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$time,  }\item[{}]{\$value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$time} & Milliseconds before succeeding the promise. \\
+\hline
+TReturn & {\em \$value} & Succeed the promise with this value. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_delayed_aa46bdf577fe031bf1287312dfbebb9a6}\label{class_amp_1_1_delayed_aa46bdf577fe031bf1287312dfbebb9a6}} 
+\index{Delayed@{Delayed}!reference@{reference}}
+\index{reference@{reference}!Delayed@{Delayed}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+References the internal watcher in the event loop, keeping the loop running while this promise is pending.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_delayed_a8098142e52cdc2bf80db924208412038}\label{class_amp_1_1_delayed_a8098142e52cdc2bf80db924208412038}} 
+\index{Delayed@{Delayed}!unreference@{unreference}}
+\index{unreference@{unreference}!Delayed@{Delayed}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Unreferences the internal watcher in the event loop, allowing the loop to stop while this promise is pending if no other events are pending in the loop.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Delayed.\+php\end{DoxyCompactItemize}

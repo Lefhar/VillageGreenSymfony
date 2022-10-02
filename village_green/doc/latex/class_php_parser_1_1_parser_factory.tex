@@ -1,0 +1,50 @@
+\hypertarget{class_php_parser_1_1_parser_factory}{}\doxysection{Parser\+Factory Class Reference}
+\label{class_php_parser_1_1_parser_factory}\index{ParserFactory@{ParserFactory}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_parser_factory_a88379ce3118db4691d4d6cc3d01cdd7e}{create}} (int \$kind, \mbox{\hyperlink{class_php_parser_1_1_lexer}{Lexer}} \$lexer=null, array \$parser\+Options=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_parser_factory_a6cb5c8b69d76ac8bbf4bfd968c95c6f6}\label{class_php_parser_1_1_parser_factory_a6cb5c8b69d76ac8bbf4bfd968c95c6f6}} 
+const {\bfseries PREFER\+\_\+\+PHP7} = 1
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_parser_factory_a5b66ce731f3594598d4fc8bff0bd163d}\label{class_php_parser_1_1_parser_factory_a5b66ce731f3594598d4fc8bff0bd163d}} 
+const {\bfseries PREFER\+\_\+\+PHP5} = 2
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_parser_factory_a34956483cff8c307f7c189f1db40c600}\label{class_php_parser_1_1_parser_factory_a34956483cff8c307f7c189f1db40c600}} 
+const {\bfseries ONLY\+\_\+\+PHP7} = 3
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_parser_factory_a2a372ae772754ff5fd0ec0bd1b10b8ae}\label{class_php_parser_1_1_parser_factory_a2a372ae772754ff5fd0ec0bd1b10b8ae}} 
+const {\bfseries ONLY\+\_\+\+PHP5} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_parser_factory_a88379ce3118db4691d4d6cc3d01cdd7e}\label{class_php_parser_1_1_parser_factory_a88379ce3118db4691d4d6cc3d01cdd7e}} 
+\index{ParserFactory@{ParserFactory}!create@{create}}
+\index{create@{create}!ParserFactory@{ParserFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}\item[{int}]{\$kind,  }\item[{\mbox{\hyperlink{class_php_parser_1_1_lexer}{Lexer}}}]{\$lexer = {\ttfamily null},  }\item[{array}]{\$parser\+Options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{interface_php_parser_1_1_parser}{Parser}} instance, according to the provided kind.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$kind} & One of \+::\+PREFER\+\_\+\+PHP7, \+::\+PREFER\+\_\+\+PHP5, \+::\+ONLY\+\_\+\+PHP7 or \+::\+ONLY\+\_\+\+PHP5 \\
+\hline
+\mbox{\hyperlink{class_php_parser_1_1_lexer}{Lexer}} | null & {\em \$lexer} & \mbox{\hyperlink{class_php_parser_1_1_lexer}{Lexer}} to use. Defaults to emulative lexer when not specified \\
+\hline
+array & {\em \$parser\+Options} & \mbox{\hyperlink{interface_php_parser_1_1_parser}{Parser}} options. See \mbox{\hyperlink{class_php_parser_1_1_parser_abstract_ac9f73a337d9c9b57b7de6ac708330373}{Parser\+Abstract\+::\+\_\+\+\_\+construct()}} argument\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_php_parser_1_1_parser}{Parser}} The parser instance 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/Parser\+Factory.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker}{}\doxysection{Limit\+Subquery\+Output\+Walker Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker}\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+Inheritance diagram for Limit\+Subquery\+Output\+Walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a84443a0f93eaa8b3ff990a4865dfc22c}{\+\_\+\+\_\+construct}} (\$query, \$parser\+Result, array \$query\+Components)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a3610174d13cc7a5b18cf1196be4c76e4}{walk\+Select\+Statement}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a25f7bb5b3c101a2cb91df2e042996acf}{walk\+Select\+Statement\+With\+Row\+Number}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_ab776db33937e39a510640d3a4f81c1f8}{walk\+Select\+Statement\+Without\+Row\+Number}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}} \$AST, \$add\+Missing\+Items\+From\+Order\+By\+To\+Select=true)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_aa0d93355e68d3d1f89b6bbb6b49858de}{get\+Order\+By\+Path\+Expressions}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a11ea4deb22c4c08e897b727cf86d8438}{walk\+Path\+Expression}} (\$path\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a718d6be7bd8568f7b6df9cfc32f7d178}{walk\+Sub\+Select}} (\$subselect)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Wraps the query in order to select root entity IDs for pagination.
+
+Given a DQL like {\ttfamily SELECT u FROM User u} it will generate an SQL query like\+: SELECT DISTINCT $<$id$>$ FROM ($<$original SQL$>$) LIMIT x OFFSET y
+
+Works with composite keys but cannot deal with queries that have multiple root entities (e.\+g. {\ttfamily SELECT f, b from Foo, Bar}) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a84443a0f93eaa8b3ff990a4865dfc22c}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a84443a0f93eaa8b3ff990a4865dfc22c}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$query,  }\item[{}]{\$parser\+Result,  }\item[{array}]{\$query\+Components }\end{DoxyParamCaption})}
+
+Stores various parameters that are otherwise unavailable because Doctrine\textbackslash{}\+ORM\textbackslash{}\+Query\textbackslash{}\+Sql\+Walker keeps everything private without accessors.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query}{Query}} & {\em \$query} & \\
+\hline
+Parser\+Result & {\em \$parser\+Result} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$query\+Components} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker_a84443a0f93eaa8b3ff990a4865dfc22c}{Sql\+Walker}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_aa0d93355e68d3d1f89b6bbb6b49858de}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_aa0d93355e68d3d1f89b6bbb6b49858de}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!getOrderByPathExpressions@{getOrderByPathExpressions}}
+\index{getOrderByPathExpressions@{getOrderByPathExpressions}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{getOrderByPathExpressions()}{getOrderByPathExpressions()}}
+{\footnotesize\ttfamily get\+Order\+By\+Path\+Expressions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+getter for \$order\+By\+Path\+Expressions
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a11ea4deb22c4c08e897b727cf86d8438}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a11ea4deb22c4c08e897b727cf86d8438}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!walkPathExpression@{walkPathExpression}}
+\index{walkPathExpression@{walkPathExpression}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{walkPathExpression()}{walkPathExpression()}}
+{\footnotesize\ttfamily walk\+Path\+Expression (\begin{DoxyParamCaption}\item[{}]{\$path\+Expr }\end{DoxyParamCaption})}
+
+\{\{Walks down a Path\+Expression AST node, thereby generating the appropriate SQL.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$path\+Expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL.
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker_a11ea4deb22c4c08e897b727cf86d8438}{Sql\+Walker}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a3610174d13cc7a5b18cf1196be4c76e4}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a3610174d13cc7a5b18cf1196be4c76e4}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!walkSelectStatement@{walkSelectStatement}}
+\index{walkSelectStatement@{walkSelectStatement}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatement()}{walkSelectStatement()}}
+{\footnotesize\ttfamily walk\+Select\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+Walks down a Select\+Statement AST node, wrapping it in a SELECT DISTINCT.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_ab776db33937e39a510640d3a4f81c1f8}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_ab776db33937e39a510640d3a4f81c1f8}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!walkSelectStatementWithoutRowNumber@{walkSelectStatementWithoutRowNumber}}
+\index{walkSelectStatementWithoutRowNumber@{walkSelectStatementWithoutRowNumber}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatementWithoutRowNumber()}{walkSelectStatementWithoutRowNumber()}}
+{\footnotesize\ttfamily walk\+Select\+Statement\+Without\+Row\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST,  }\item[{}]{\$add\+Missing\+Items\+From\+Order\+By\+To\+Select = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Walks down a Select\+Statement AST node, wrapping it in a SELECT DISTINCT. This method is for platforms which DO NOT support ROW\+\_\+\+NUMBER.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$add\+Missing\+Items\+From\+Order\+By\+To\+Select} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a25f7bb5b3c101a2cb91df2e042996acf}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a25f7bb5b3c101a2cb91df2e042996acf}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!walkSelectStatementWithRowNumber@{walkSelectStatementWithRowNumber}}
+\index{walkSelectStatementWithRowNumber@{walkSelectStatementWithRowNumber}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{walkSelectStatementWithRowNumber()}{walkSelectStatementWithRowNumber()}}
+{\footnotesize\ttfamily walk\+Select\+Statement\+With\+Row\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_select_statement}{Select\+Statement}}}]{\$\+AST }\end{DoxyParamCaption})}
+
+Walks down a Select\+Statement AST node, wrapping it in a SELECT DISTINCT. This method is for use with platforms which support ROW\+\_\+\+NUMBER.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a718d6be7bd8568f7b6df9cfc32f7d178}\label{class_doctrine_1_1_o_r_m_1_1_tools_1_1_pagination_1_1_limit_subquery_output_walker_a718d6be7bd8568f7b6df9cfc32f7d178}} 
+\index{LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}!walkSubSelect@{walkSubSelect}}
+\index{walkSubSelect@{walkSubSelect}!LimitSubqueryOutputWalker@{LimitSubqueryOutputWalker}}
+\doxysubsubsection{\texorpdfstring{walkSubSelect()}{walkSubSelect()}}
+{\footnotesize\ttfamily walk\+Sub\+Select (\begin{DoxyParamCaption}\item[{}]{\$subselect }\end{DoxyParamCaption})}
+
+\{\} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Tools/\+Pagination/Limit\+Subquery\+Output\+Walker.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator}{}\doxysection{Entity\+Hydrator Interface Reference}
+\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator}\index{EntityHydrator@{EntityHydrator}}
+Inheritance diagram for Entity\+Hydrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator_a9e15de264da75a8b3a1a3762f415d259}{build\+Cache\+Entry}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} \$key, \$entity)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator_a7fbdff3cc9fb802085c1ed8bf2b33369}{load\+Cache\+Entry}} (\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} \$key, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{Entity\+Cache\+Entry}} \$entry, \$entity=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hydrator cache entry for entities 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator_a9e15de264da75a8b3a1a3762f415d259}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator_a9e15de264da75a8b3a1a3762f415d259}} 
+\index{EntityHydrator@{EntityHydrator}!buildCacheEntry@{buildCacheEntry}}
+\index{buildCacheEntry@{buildCacheEntry}!EntityHydrator@{EntityHydrator}}
+\doxysubsubsection{\texorpdfstring{buildCacheEntry()}{buildCacheEntry()}}
+{\footnotesize\ttfamily build\+Cache\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}}}]{\$key,  }\item[{}]{\$entity }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$metadata} & The entity metadata. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} & {\em \$key} & The entity cache key. \\
+\hline
+object & {\em \$entity} & The entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{Entity\+Cache\+Entry}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_entity_hydrator_a9e15de264da75a8b3a1a3762f415d259}{Default\+Entity\+Hydrator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator_a7fbdff3cc9fb802085c1ed8bf2b33369}\label{interface_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_hydrator_a7fbdff3cc9fb802085c1ed8bf2b33369}} 
+\index{EntityHydrator@{EntityHydrator}!loadCacheEntry@{loadCacheEntry}}
+\index{loadCacheEntry@{loadCacheEntry}!EntityHydrator@{EntityHydrator}}
+\doxysubsubsection{\texorpdfstring{loadCacheEntry()}{loadCacheEntry()}}
+{\footnotesize\ttfamily load\+Cache\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}}}]{\$key,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{Entity\+Cache\+Entry}}}]{\$entry,  }\item[{}]{\$entity = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Class\+Metadata & {\em \$metadata} & The entity metadata. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_key}{Entity\+Cache\+Key}} & {\em \$key} & The entity cache key. \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{Entity\+Cache\+Entry}} & {\em \$entry} & The entity cache entry. \\
+\hline
+object | null & {\em \$entity} & The entity to load the cache into. If not specified, a new entity is created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_default_entity_hydrator_a7fbdff3cc9fb802085c1ed8bf2b33369}{Default\+Entity\+Hydrator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/Entity\+Hydrator.\+php\end{DoxyCompactItemize}

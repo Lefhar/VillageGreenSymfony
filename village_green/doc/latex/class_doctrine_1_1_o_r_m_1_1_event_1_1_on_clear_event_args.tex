@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args}{}\doxysection{On\+Clear\+Event\+Args Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args}\index{OnClearEventArgs@{OnClearEventArgs}}
+Inheritance diagram for On\+Clear\+Event\+Args\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a0dd5b8b285187509f8e929c3673bf63e}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em, \$entity\+Class=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_ae2b0e1dbe7640aefaf7d54c6a94d08fe}{get\+Entity\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a82bf7d9129d40bb5d953f2b08210fccc}{get\+Entity\+Class}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a085b29e5f0fa7b53cf9aabb8630a405b}{clears\+All\+Entities}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Provides event arguments for the on\+Clear event.
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a0dd5b8b285187509f8e929c3673bf63e}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a0dd5b8b285187509f8e929c3673bf63e}} 
+\index{OnClearEventArgs@{OnClearEventArgs}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!OnClearEventArgs@{OnClearEventArgs}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em,  }\item[{}]{\$entity\+Class = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$entity\+Class} & Optional entity class. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a085b29e5f0fa7b53cf9aabb8630a405b}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a085b29e5f0fa7b53cf9aabb8630a405b}} 
+\index{OnClearEventArgs@{OnClearEventArgs}!clearsAllEntities@{clearsAllEntities}}
+\index{clearsAllEntities@{clearsAllEntities}!OnClearEventArgs@{OnClearEventArgs}}
+\doxysubsubsection{\texorpdfstring{clearsAllEntities()}{clearsAllEntities()}}
+{\footnotesize\ttfamily clears\+All\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if event clears all entities.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a82bf7d9129d40bb5d953f2b08210fccc}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_a82bf7d9129d40bb5d953f2b08210fccc}} 
+\index{OnClearEventArgs@{OnClearEventArgs}!getEntityClass@{getEntityClass}}
+\index{getEntityClass@{getEntityClass}!OnClearEventArgs@{OnClearEventArgs}}
+\doxysubsubsection{\texorpdfstring{getEntityClass()}{getEntityClass()}}
+{\footnotesize\ttfamily get\+Entity\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Name of the entity class that is cleared, or empty if all are cleared.
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_ae2b0e1dbe7640aefaf7d54c6a94d08fe}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_clear_event_args_ae2b0e1dbe7640aefaf7d54c6a94d08fe}} 
+\index{OnClearEventArgs@{OnClearEventArgs}!getEntityManager@{getEntityManager}}
+\index{getEntityManager@{getEntityManager}!OnClearEventArgs@{OnClearEventArgs}}
+\doxysubsubsection{\texorpdfstring{getEntityManager()}{getEntityManager()}}
+{\footnotesize\ttfamily get\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves associated \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}}.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Event/On\+Clear\+Event\+Args.\+php\end{DoxyCompactItemize}

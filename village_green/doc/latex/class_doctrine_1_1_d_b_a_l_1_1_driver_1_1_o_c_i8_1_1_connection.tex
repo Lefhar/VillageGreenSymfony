@@ -1,0 +1,246 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection}{}\doxysection{Connection Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection}\index{Connection@{Connection}}
+Inheritance diagram for Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a155afedbdfa01f1c0b813ca97642cdab}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a155afedbdfa01f1c0b813ca97642cdab}} 
+{\bfseries \+\_\+\+\_\+construct} (\$connection)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a2d047b148eb053baba2150cc7d5d9545}{get\+Server\+Version}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{prepare}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{quote}} (\$value, \$type=\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{exec}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{last\+Insert\+Id}} (\$name=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af3380f3b13931d581fa973a382946b32}{begin\+Transaction}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{commit}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{roll\+Back}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{get\+Native\+Connection}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af3380f3b13931d581fa973a382946b32}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af3380f3b13931d581fa973a382946b32}} 
+\index{Connection@{Connection}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af3380f3b13931d581fa973a382946b32}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}} 
+\index{Connection@{Connection}!commit@{commit}}
+\index{commit@{commit}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}} 
+\index{Connection@{Connection}!exec@{exec}}
+\index{exec@{exec}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily exec (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+{\em Parser} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}} 
+\index{Connection@{Connection}!getNativeConnection@{getNativeConnection}}
+\index{getNativeConnection@{getNativeConnection}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getNativeConnection()}{getNativeConnection()}}
+{\footnotesize\ttfamily get\+Native\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+resource 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ac1d4ee2c8d64c4b11651fbbce9f6bfc1}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a2d047b148eb053baba2150cc7d5d9545}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a2d047b148eb053baba2150cc7d5d9545}} 
+\index{Connection@{Connection}!getServerVersion@{getServerVersion}}
+\index{getServerVersion@{getServerVersion}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{getServerVersion()}{getServerVersion()}}
+{\footnotesize\ttfamily get\+Server\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns information about the version of the database server connected to.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_server_info_aware_connection_a2d047b148eb053baba2150cc7d5d9545}{Server\+Info\+Aware\+Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}} 
+\index{Connection@{Connection}!lastInsertId@{lastInsertId}}
+\index{lastInsertId@{lastInsertId}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{lastInsertId()}{lastInsertId()}}
+{\footnotesize\ttfamily last\+Insert\+Id (\begin{DoxyParamCaption}\item[{}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Returns the ID of the last inserted row, or the last value from a sequence object, depending on the underlying driver.
+
+Note\+: This method may not return a meaningful or consistent result across different drivers, because the underlying database may not even support the notion of AUTO\+\_\+\+INCREMENT/\+IDENTITY columns or sequences.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$name} & Name of the sequence object from which the ID should be returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$int$\vert$false A string representation of the last inserted ID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\vert$false
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Parser} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a9f9cb8ca720d7bbcb03869def521336e}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a0f741e7b39d5685c909a704708ed1033}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_a0f741e7b39d5685c909a704708ed1033}} 
+\index{Connection@{Connection}!prepare@{prepare}}
+\index{prepare@{prepare}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily prepare (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Parser} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}} 
+\index{Connection@{Connection}!query@{query}}
+\index{query@{query}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily query (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+{\em Parser} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}} 
+\index{Connection@{Connection}!quote@{quote}}
+\index{quote@{quote}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{quote()}{quote()}}
+{\footnotesize\ttfamily quote (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$type = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}} }\end{DoxyParamCaption})}
+
+\{The usage of this method is discouraged. Use prepared statements or \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_platforms_1_1_abstract_platform_a720faaf167cbc9cbfccb43b8879aea7f}{Abstract\+Platform\+::quote\+String\+Literal()}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+int | string | Type | null & {\em \$type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_ab156fe0296cd40afecf0c10f5f1256cc}{Connection}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_o_c_i8_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}} 
+\index{Connection@{Connection}!rollBack@{rollBack}}
+\index{rollBack@{rollBack}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{rollBack()}{rollBack()}}
+{\footnotesize\ttfamily roll\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cancels any database changes done during the current transaction.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{Connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Driver/\+OCI8/Connection.\+php\end{DoxyCompactItemize}

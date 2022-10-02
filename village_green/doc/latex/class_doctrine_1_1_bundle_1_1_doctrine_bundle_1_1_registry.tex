@@ -1,0 +1,80 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry}{}\doxysection{Registry Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry}\index{Registry@{Registry}}
+Inheritance diagram for Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab37f70a4cebfa05185f503c055b975c9}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_psr_1_1_container_1_1_container_interface}{Container\+Interface}} \$container, array \$connections, array \$entity\+Managers, string \$default\+Connection, string \$default\+Entity\+Manager)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab235b819d0c647fcaed905d8c49037d5}{get\+Alias\+Namespace}} (\$alias)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+References all Doctrine connections and entity managers in a given Container. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab37f70a4cebfa05185f503c055b975c9}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab37f70a4cebfa05185f503c055b975c9}} 
+\index{Registry@{Registry}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_psr_1_1_container_1_1_container_interface}{Container\+Interface}}}]{\$container,  }\item[{array}]{\$connections,  }\item[{array}]{\$entity\+Managers,  }\item[{string}]{\$default\+Connection,  }\item[{string}]{\$default\+Entity\+Manager }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$connections} & \\
+\hline
+string\mbox{[}$\,$\mbox{]} & {\em \$entity\+Managers} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab235b819d0c647fcaed905d8c49037d5}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_ab235b819d0c647fcaed905d8c49037d5}} 
+\index{Registry@{Registry}!getAliasNamespace@{getAliasNamespace}}
+\index{getAliasNamespace@{getAliasNamespace}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{getAliasNamespace()}{getAliasNamespace()}}
+{\footnotesize\ttfamily get\+Alias\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$alias }\end{DoxyParamCaption})}
+
+Resolves a registered namespace alias to the full namespace.
+
+This method looks for the alias in all registered entity managers.
+
+\begin{DoxySeeAlso}{See also}
+Configuration\+::get\+Entity\+Namespace
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$alias} & The alias\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The full namespace 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry_ab235b819d0c647fcaed905d8c49037d5}{Manager\+Registry}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_a4a20559544fdf4dcb457e258dc976cf8}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_registry_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{Registry@{Registry}!reset@{reset}}
+\index{reset@{reset}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_contracts_1_1_service_1_1_reset_interface}{Reset\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/Registry.\+php\end{DoxyCompactItemize}

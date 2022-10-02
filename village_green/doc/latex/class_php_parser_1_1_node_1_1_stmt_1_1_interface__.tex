@@ -1,0 +1,82 @@
+\hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_interface__}{}\doxysection{Interface\+\_\+ Class Reference}
+\label{class_php_parser_1_1_node_1_1_stmt_1_1_interface__}\index{Interface\_@{Interface\_}}
+Inheritance diagram for Interface\+\_\+\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_php_parser_1_1_node_1_1_stmt_1_1_interface__}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a9259a7bd20e9d82a8a2cfec8efbb068b}{\+\_\+\+\_\+construct}} (\$name, array \$sub\+Nodes=\mbox{[}$\,$\mbox{]}, array \$attributes=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a7e06a91cc526dc52826d18313e64798a}{get\+Sub\+Node\+Names}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_interface___afc0e87808a6f40ccf687fbbc823b0ebd}\label{class_php_parser_1_1_node_1_1_stmt_1_1_interface___afc0e87808a6f40ccf687fbbc823b0ebd}} 
+{\bfseries \$extends}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a9259a7bd20e9d82a8a2cfec8efbb068b}\label{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a9259a7bd20e9d82a8a2cfec8efbb068b}} 
+\index{Interface\_@{Interface\_}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Interface\_@{Interface\_}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array}]{\$sub\+Nodes = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$attributes = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructs a class node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Node\textbackslash{}\+Identifier & {\em \$name} & \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} \\
+\hline
+array & {\em \$sub\+Nodes} & Array of the following optional subnodes\+: \textquotesingle{}extends\textquotesingle{} =\texorpdfstring{$>$}{>} array()\+: \mbox{\hyperlink{class_php_parser_1_1_node_1_1_name}{Name}} of extended interfaces \textquotesingle{}stmts\textquotesingle{} =\texorpdfstring{$>$}{>} array()\+: Statements \textquotesingle{}attr\+Groups\textquotesingle{} =\texorpdfstring{$>$}{>} array()\+: PHP attribute groups \\
+\hline
+array & {\em \$attributes} & Additional attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a7e06a91cc526dc52826d18313e64798a}\label{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a7e06a91cc526dc52826d18313e64798a}} 
+\index{Interface\_@{Interface\_}!getSubNodeNames@{getSubNodeNames}}
+\index{getSubNodeNames@{getSubNodeNames}!Interface\_@{Interface\_}}
+\doxysubsubsection{\texorpdfstring{getSubNodeNames()}{getSubNodeNames()}}
+{\footnotesize\ttfamily get\+Sub\+Node\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of the sub nodes.
+
+\begin{DoxyReturn}{Returns}
+array Names of sub nodes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a7e06a91cc526dc52826d18313e64798a}{Node}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a830b5c75df72b32396701bc563fbe3c7}\label{class_php_parser_1_1_node_1_1_stmt_1_1_interface___a830b5c75df72b32396701bc563fbe3c7}} 
+\index{Interface\_@{Interface\_}!getType@{getType}}
+\index{getType@{getType}!Interface\_@{Interface\_}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the type of the node.
+
+\begin{DoxyReturn}{Returns}
+string Type of the node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_php_parser_1_1_node_a830b5c75df72b32396701bc563fbe3c7}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Stmt/Interface\+\_\+.\+php\end{DoxyCompactItemize}

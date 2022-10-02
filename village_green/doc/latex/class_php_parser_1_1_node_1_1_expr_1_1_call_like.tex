@@ -1,0 +1,58 @@
+\hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_call_like}{}\doxysection{Call\+Like Class Reference}
+\label{class_php_parser_1_1_node_1_1_expr_1_1_call_like}\index{CallLike@{CallLike}}
+Inheritance diagram for Call\+Like\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.307693cm]{class_php_parser_1_1_node_1_1_expr_1_1_call_like}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a708bac503954c8db0ecc0ed451946b67}{get\+Raw\+Args}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_call_like_ab3ddcb7b8ca0b8d8c662a34a4c728a37}{is\+First\+Class\+Callable}} ()
+\item 
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a19dde99d8deb1c2e72d40e191fee96b0}{get\+Args}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a19dde99d8deb1c2e72d40e191fee96b0}\label{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a19dde99d8deb1c2e72d40e191fee96b0}} 
+\index{CallLike@{CallLike}!getArgs@{getArgs}}
+\index{getArgs@{getArgs}!CallLike@{CallLike}}
+\doxysubsubsection{\texorpdfstring{getArgs()}{getArgs()}}
+{\footnotesize\ttfamily get\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Assert that this is not a first-\/class callable and return only ordinary Args.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_php_parser_1_1_node_1_1_arg}{Arg}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a708bac503954c8db0ecc0ed451946b67}\label{class_php_parser_1_1_node_1_1_expr_1_1_call_like_a708bac503954c8db0ecc0ed451946b67}} 
+\index{CallLike@{CallLike}!getRawArgs@{getRawArgs}}
+\index{getRawArgs@{getRawArgs}!CallLike@{CallLike}}
+\doxysubsubsection{\texorpdfstring{getRawArgs()}{getRawArgs()}}
+{\footnotesize\ttfamily get\+Raw\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Return raw arguments, which may be actual Args, or Variadic\+Placeholders for first-\/class callables.
+
+\begin{DoxyReturn}{Returns}
+array\texorpdfstring{$<$}{<}Arg$\vert$\+Variadic\+Placeholder\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_func_call_a708bac503954c8db0ecc0ed451946b67}{Func\+Call}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_method_call_a708bac503954c8db0ecc0ed451946b67}{Method\+Call}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_new___a708bac503954c8db0ecc0ed451946b67}{New\+\_\+}}, \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_nullsafe_method_call_a708bac503954c8db0ecc0ed451946b67}{Nullsafe\+Method\+Call}}, and \mbox{\hyperlink{class_php_parser_1_1_node_1_1_expr_1_1_static_call_a708bac503954c8db0ecc0ed451946b67}{Static\+Call}}.
+
+\mbox{\Hypertarget{class_php_parser_1_1_node_1_1_expr_1_1_call_like_ab3ddcb7b8ca0b8d8c662a34a4c728a37}\label{class_php_parser_1_1_node_1_1_expr_1_1_call_like_ab3ddcb7b8ca0b8d8c662a34a4c728a37}} 
+\index{CallLike@{CallLike}!isFirstClassCallable@{isFirstClassCallable}}
+\index{isFirstClassCallable@{isFirstClassCallable}!CallLike@{CallLike}}
+\doxysubsubsection{\texorpdfstring{isFirstClassCallable()}{isFirstClassCallable()}}
+{\footnotesize\ttfamily is\+First\+Class\+Callable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether this call expression is actually a first class callable. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/nikic/php-\/parser/lib/\+Php\+Parser/\+Node/\+Expr/Call\+Like.\+php\end{DoxyCompactItemize}

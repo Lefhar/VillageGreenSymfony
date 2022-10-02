@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre paniers{% endblock %}
+{% block description %}Listes de vos articles dans votre paniers{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container bg-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="{{ path('paniers') }}">Panier</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Information de livraison</li>
+                </ol>
+            </nav>
+            <div class="row p-4">
+                <h2>Vos information</h2>
+            </div>
+            <div class="row p-4">
+
+                {% for row in profil.lives %}
+
+                    <div class="col-sm-12 col-lg-6 col-xl-6 ">
+                        <h2>Vos information de livraison</h2>
+                        <div class="col-sm-12 p-2 border border-dark">
+                            <p>{{ profil.gender |capitalize }} {{ profil.lastname |capitalize }} {{ profil.firstname|capitalize }}</p>
+                            <p>{{ row.address }}</p>
+                            <p>{{ row.zipcode }} {{ row.city|capitalize }} {{ row.country|capitalize }}</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 col-xl-6">
+                        <h2>Vos information de facturation</h2>
+                        <div class="col-sm-12 p-2  border border-dark">
+                            <p>{{ profil.gender |capitalize }} {{ profil.lastname |capitalize }} {{ profil.firstname|capitalize }}</p>
+                            <p>{{ row.address }}</p>
+                            <p>{{ row.zipcode }} {{ row.city|capitalize }} {{ row.country|capitalize }}</p>
+                        </div>
+                    </div>
+                    <div class="col-12 pt-2">
+                        <a href="{{ path("validation") }}" class="btn btn-success btn-block">Procéder au paiement</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+{% endblock %}

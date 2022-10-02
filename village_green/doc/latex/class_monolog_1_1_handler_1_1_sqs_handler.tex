@@ -1,0 +1,69 @@
+\hypertarget{class_monolog_1_1_handler_1_1_sqs_handler}{}\doxysection{Sqs\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_sqs_handler}\index{SqsHandler@{SqsHandler}}
+Inheritance diagram for Sqs\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_sqs_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_sqs_handler_ada2d2aef7695edf57c63b6b91fc90ee6}\label{class_monolog_1_1_handler_1_1_sqs_handler_ada2d2aef7695edf57c63b6b91fc90ee6}} 
+{\bfseries \+\_\+\+\_\+construct} (Sqs\+Client \$sqs\+Client, string \$queue\+Url, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_sqs_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_sqs_handler_a61f0ccb3fce8659953ac797a444e22eb}{MAX\+\_\+\+MESSAGE\+\_\+\+SIZE}} = 262144
+\item 
+const \mbox{\hyperlink{class_monolog_1_1_handler_1_1_sqs_handler_a942cbf63e7d98e3678c322e678d4f8f1}{HEAD\+\_\+\+MESSAGE\+\_\+\+SIZE}} = 102400
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Writes to any sqs queue.
+
+\begin{DoxyAuthor}{Author}
+Martijn van Calker \href{mailto:git@amvc.nl}{\texttt{ git@amvc.\+nl}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_sqs_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_sqs_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{SqsHandler@{SqsHandler}!write@{write}}
+\index{write@{write}!SqsHandler@{SqsHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_sqs_handler_a942cbf63e7d98e3678c322e678d4f8f1}\label{class_monolog_1_1_handler_1_1_sqs_handler_a942cbf63e7d98e3678c322e678d4f8f1}} 
+\index{SqsHandler@{SqsHandler}!HEAD\_MESSAGE\_SIZE@{HEAD\_MESSAGE\_SIZE}}
+\index{HEAD\_MESSAGE\_SIZE@{HEAD\_MESSAGE\_SIZE}!SqsHandler@{SqsHandler}}
+\doxysubsubsection{\texorpdfstring{HEAD\_MESSAGE\_SIZE}{HEAD\_MESSAGE\_SIZE}}
+{\footnotesize\ttfamily const HEAD\+\_\+\+MESSAGE\+\_\+\+SIZE = 102400\hspace{0.3cm}{\ttfamily [protected]}}
+
+100 KB in bytes -\/ head message size for new error log \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_sqs_handler_a61f0ccb3fce8659953ac797a444e22eb}\label{class_monolog_1_1_handler_1_1_sqs_handler_a61f0ccb3fce8659953ac797a444e22eb}} 
+\index{SqsHandler@{SqsHandler}!MAX\_MESSAGE\_SIZE@{MAX\_MESSAGE\_SIZE}}
+\index{MAX\_MESSAGE\_SIZE@{MAX\_MESSAGE\_SIZE}!SqsHandler@{SqsHandler}}
+\doxysubsubsection{\texorpdfstring{MAX\_MESSAGE\_SIZE}{MAX\_MESSAGE\_SIZE}}
+{\footnotesize\ttfamily const MAX\+\_\+\+MESSAGE\+\_\+\+SIZE = 262144\hspace{0.3cm}{\ttfamily [protected]}}
+
+256 KB in bytes -\/ maximum message size in SQS 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Sqs\+Handler.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name}{}\doxysection{Domain\+Name Class Reference}
+\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name}\index{DomainName@{DomainName}}
+Inheritance diagram for Domain\+Name\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a9d43e12d2604f73bcacc439ac24e104a}{\+\_\+\+\_\+construct}} (\$value=null)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a7494441b6ed08a391704971873f31432}{set\+Value}} (\$value)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_aab911942017890df6a1413a7b8382a5f}{get\+Labels}} (\$tld\+First=false)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a9a6865284924349ca4aeba263bdeef90}{set\+Labels}} (array \$labels, \$tld\+First=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a6d0ea36e69c1f69a7a4c01b577e84968}\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a6d0ea36e69c1f69a7a4c01b577e84968}} 
+const {\bfseries FLAG\+\_\+\+NO\+\_\+\+COMPRESSION} = 0x80000000
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a0f298096f322952a72a50f98a74c7b60}\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a0f298096f322952a72a50f98a74c7b60}} 
+{\bfseries \$value} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a9d43e12d2604f73bcacc439ac24e104a}\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a9d43e12d2604f73bcacc439ac24e104a}} 
+\index{DomainName@{DomainName}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DomainName@{DomainName}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$value = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | string\mbox{[}$\,$\mbox{]} & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception When the supplied value is not a valid domain name 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_aab911942017890df6a1413a7b8382a5f}\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_aab911942017890df6a1413a7b8382a5f}} 
+\index{DomainName@{DomainName}!getLabels@{getLabels}}
+\index{getLabels@{getLabels}!DomainName@{DomainName}}
+\doxysubsubsection{\texorpdfstring{getLabels()}{getLabels()}}
+{\footnotesize\ttfamily get\+Labels (\begin{DoxyParamCaption}\item[{}]{\$tld\+First = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the domain name labels
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$tld\+First} & Whether to return the label list ordered with the TLD label first \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a9a6865284924349ca4aeba263bdeef90}\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a9a6865284924349ca4aeba263bdeef90}} 
+\index{DomainName@{DomainName}!setLabels@{setLabels}}
+\index{setLabels@{setLabels}!DomainName@{DomainName}}
+\doxysubsubsection{\texorpdfstring{setLabels()}{setLabels()}}
+{\footnotesize\ttfamily set\+Labels (\begin{DoxyParamCaption}\item[{array}]{\$labels,  }\item[{}]{\$tld\+First = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Set the domain name labels
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$labels} & The new label list \\
+\hline
+bool & {\em \$tld\+First} & Whether the supplied label list is ordered with the TLD label first \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception When the supplied label list is not a valid domain name \mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a7494441b6ed08a391704971873f31432}\label{class_lib_d_n_s_1_1_records_1_1_types_1_1_domain_name_a7494441b6ed08a391704971873f31432}} 
+\index{DomainName@{DomainName}!setValue@{setValue}}
+\index{setValue@{setValue}!DomainName@{DomainName}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily set\+Value (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the internal value
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & The new value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Unexpected\+Value\+Exception When the supplied value is not a valid domain name 
+
+Reimplemented from \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_types_1_1_type_a7494441b6ed08a391704971873f31432}{Type}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Records/\+Types/Domain\+Name.\+php\end{DoxyCompactItemize}

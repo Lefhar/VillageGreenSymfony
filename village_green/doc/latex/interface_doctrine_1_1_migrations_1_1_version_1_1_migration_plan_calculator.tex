@@ -1,0 +1,54 @@
+\hypertarget{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator}{}\doxysection{Migration\+Plan\+Calculator Interface Reference}
+\label{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator}\index{MigrationPlanCalculator@{MigrationPlanCalculator}}
+Inheritance diagram for Migration\+Plan\+Calculator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_ae8ce9c7270516d2c18f7b975f8ef341a}{get\+Plan\+For\+Versions}} (array \$versions, string \$direction)
+\item 
+\mbox{\Hypertarget{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_ad2f7a6ab098361c369603228cd925912}\label{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_ad2f7a6ab098361c369603228cd925912}} 
+{\bfseries get\+Plan\+Until\+Version} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_version}{Version}} \$to)
+\item 
+\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_a3583ebc222fae66ef115ee70d8b56595}{get\+Migrations}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator}{Migration\+Plan\+Calculator}} is responsible for calculating the plan for migrating from the current version to another version. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_a3583ebc222fae66ef115ee70d8b56595}\label{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_a3583ebc222fae66ef115ee70d8b56595}} 
+\index{MigrationPlanCalculator@{MigrationPlanCalculator}!getMigrations@{getMigrations}}
+\index{getMigrations@{getMigrations}!MigrationPlanCalculator@{MigrationPlanCalculator}}
+\doxysubsubsection{\texorpdfstring{getMigrations()}{getMigrations()}}
+{\footnotesize\ttfamily get\+Migrations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a sorted list of migrations. 
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_sorted_migration_plan_calculator_a3583ebc222fae66ef115ee70d8b56595}{Sorted\+Migration\+Plan\+Calculator}}.
+
+\mbox{\Hypertarget{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_ae8ce9c7270516d2c18f7b975f8ef341a}\label{interface_doctrine_1_1_migrations_1_1_version_1_1_migration_plan_calculator_ae8ce9c7270516d2c18f7b975f8ef341a}} 
+\index{MigrationPlanCalculator@{MigrationPlanCalculator}!getPlanForVersions@{getPlanForVersions}}
+\index{getPlanForVersions@{getPlanForVersions}!MigrationPlanCalculator@{MigrationPlanCalculator}}
+\doxysubsubsection{\texorpdfstring{getPlanForVersions()}{getPlanForVersions()}}
+{\footnotesize\ttfamily get\+Plan\+For\+Versions (\begin{DoxyParamCaption}\item[{array}]{\$versions,  }\item[{string}]{\$direction }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_version}{Version}}\mbox{[}$\,$\mbox{]} & {\em \$versions} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_sorted_migration_plan_calculator_ae8ce9c7270516d2c18f7b975f8ef341a}{Sorted\+Migration\+Plan\+Calculator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Version/Migration\+Plan\+Calculator.\+php\end{DoxyCompactItemize}

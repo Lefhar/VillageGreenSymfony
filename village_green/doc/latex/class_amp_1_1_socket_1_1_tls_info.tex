@@ -1,0 +1,90 @@
+\hypertarget{class_amp_1_1_socket_1_1_tls_info}{}\doxysection{Tls\+Info Class Reference}
+\label{class_amp_1_1_socket_1_1_tls_info}\index{TlsInfo@{TlsInfo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_afa8e7a3a646144eab50188b7a805a389}\label{class_amp_1_1_socket_1_1_tls_info_afa8e7a3a646144eab50188b7a805a389}} 
+{\bfseries get\+Version} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_a81862fc3f30d4bfbebdf417a960694ce}\label{class_amp_1_1_socket_1_1_tls_info_a81862fc3f30d4bfbebdf417a960694ce}} 
+{\bfseries get\+Cipher\+Name} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_ae97c784003821a76051b41273f5e0dcd}\label{class_amp_1_1_socket_1_1_tls_info_ae97c784003821a76051b41273f5e0dcd}} 
+{\bfseries get\+Cipher\+Bits} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_a3580e54ecc69e7e068dac3cda66ee32c}\label{class_amp_1_1_socket_1_1_tls_info_a3580e54ecc69e7e068dac3cda66ee32c}} 
+{\bfseries get\+Cipher\+Version} ()
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_a6f68399c58d125658b4f86534e947a0a}\label{class_amp_1_1_socket_1_1_tls_info_a6f68399c58d125658b4f86534e947a0a}} 
+{\bfseries get\+Application\+Layer\+Protocol} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_tls_info_aa507b7465d8e8171260ab00fd678ac33}{get\+Peer\+Certificates}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_socket_1_1_tls_info_a866747aef6105a8e5959864fde86df5b}{from\+Stream\+Resource}} (\$resource)
+\item 
+static \mbox{\hyperlink{class_amp_1_1_socket_1_1_tls_info_a6d4ac379edf69e3c983d5704fc086d9d}{from\+Meta\+Data}} (array \$crypto\+Info, array \$tls\+Context)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exposes a connection\textquotesingle{}s negotiated TLS parameters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_a6d4ac379edf69e3c983d5704fc086d9d}\label{class_amp_1_1_socket_1_1_tls_info_a6d4ac379edf69e3c983d5704fc086d9d}} 
+\index{TlsInfo@{TlsInfo}!fromMetaData@{fromMetaData}}
+\index{fromMetaData@{fromMetaData}!TlsInfo@{TlsInfo}}
+\doxysubsubsection{\texorpdfstring{fromMetaData()}{fromMetaData()}}
+{\footnotesize\ttfamily static from\+Meta\+Data (\begin{DoxyParamCaption}\item[{array}]{\$crypto\+Info,  }\item[{array}]{\$tls\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Constructs a new instance from PHP\textquotesingle{}s internal info.
+
+Always pass the info as obtained from PHP as this method might extract additional fields in the future.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$crypto\+Info} & Crypto info obtained via {\ttfamily stream\+\_\+get\+\_\+meta\+\_\+data(\$socket-\/\texorpdfstring{$>$}{>}get\+Resource())\mbox{[}\char`\"{}crypto\char`\"{}\mbox{]}}. \\
+\hline
+array & {\em \$tls\+Context} & Context obtained via {\ttfamily stream\+\_\+context\+\_\+get\+\_\+options(\$socket-\/\texorpdfstring{$>$}{>}get\+Resource())\mbox{[}\char`\"{}ssl\char`\"{}\mbox{]})}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_a866747aef6105a8e5959864fde86df5b}\label{class_amp_1_1_socket_1_1_tls_info_a866747aef6105a8e5959864fde86df5b}} 
+\index{TlsInfo@{TlsInfo}!fromStreamResource@{fromStreamResource}}
+\index{fromStreamResource@{fromStreamResource}!TlsInfo@{TlsInfo}}
+\doxysubsubsection{\texorpdfstring{fromStreamResource()}{fromStreamResource()}}
+{\footnotesize\ttfamily static from\+Stream\+Resource (\begin{DoxyParamCaption}\item[{}]{\$resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Constructs a new instance from a stream socket resource.
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$resource} & Stream socket resource.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self$\vert$null Returns null if TLS is not enabled on the stream socket. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_tls_info_aa507b7465d8e8171260ab00fd678ac33}\label{class_amp_1_1_socket_1_1_tls_info_aa507b7465d8e8171260ab00fd678ac33}} 
+\index{TlsInfo@{TlsInfo}!getPeerCertificates@{getPeerCertificates}}
+\index{getPeerCertificates@{getPeerCertificates}!TlsInfo@{TlsInfo}}
+\doxysubsubsection{\texorpdfstring{getPeerCertificates()}{getPeerCertificates()}}
+{\footnotesize\ttfamily get\+Peer\+Certificates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_certificate}{Certificate}}\mbox{[}\mbox{]}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & If peer certificates were not captured. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Tls\+Info.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,188 @@
+\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1822}{}\doxysection{5.\+4}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1822}
+
+\begin{DoxyItemize}
+\item Add support of PHP backed enumerations
+\item Add support for serializing empty array as object
+\item Return empty collections as {\ttfamily Array\+Object} from {\ttfamily Serializer\+::normalize()} when {\ttfamily PRESERVE\+\_\+\+EMPTY\+\_\+\+OBJECTS} is set
+\item Add support for collecting type errors during denormalization
+\item Add missing arguments in {\ttfamily Missing\+Constructor\+Arguments\+Exception}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1823}{}\doxysection{5.\+3}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1823}
+
+\begin{DoxyItemize}
+\item Add the ability to provide (de)normalization context using metadata (e.\+g. {\ttfamily @Symfony\textbackslash{}Component\textbackslash{}Serializer\textbackslash{}Annotation\textbackslash{}Context})
+\item Deprecate {\ttfamily Array\+Denormalizer\+::set\+Serializer()}, call {\ttfamily set\+Denormalizer()} instead
+\item Add normalization formats to {\ttfamily Uid\+Normalizer}
+\item Add {\ttfamily Csv\+Encoder\+::\+END\+\_\+\+OF\+\_\+\+LINE} context option
+\item Deprecate creating instances of the annotation classes by passing an array of parameters, use named arguments instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1824}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1824}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Compiled\+Class\+Metadata\+Factory} and {\ttfamily Class\+Metadata\+Factory\+Compiler} for faster metadata loading.
+\item added {\ttfamily Uid\+Normalizer}
+\item added {\ttfamily Form\+Error\+Normalizer}
+\item added {\ttfamily Mime\+Message\+Normalizer}
+\item serializer mapping can be configured using php attributes
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1825}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1825}
+
+\begin{DoxyItemize}
+\item added support for scalar values denormalization
+\item added support for {\ttfamily \textbackslash{}std\+Class} to {\ttfamily Object\+Normalizer}
+\item added the ability to ignore properties using metadata (e.\+g. {\ttfamily @Symfony\textbackslash{}Component\textbackslash{}Serializer\textbackslash{}Annotation\textbackslash{}Ignore})
+\item added an option to serialize constraint violations payloads (e.\+g. severity)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1826}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1826}
+
+\begin{DoxyItemize}
+\item throw an exception when creating a {\ttfamily Serializer} with normalizers which neither implement {\ttfamily Normalizer\+Interface} nor {\ttfamily Denormalizer\+Interface}
+\item throw an exception when creating a {\ttfamily Serializer} with encoders which neither implement {\ttfamily Encoder\+Interface} nor {\ttfamily Decoder\+Interface}
+\item changed the default value of the {\ttfamily Csv\+Encoder} \char`\"{}as\+\_\+collection\char`\"{} option to {\ttfamily true}
+\item removed {\ttfamily Abstract\+Normalizer\+::\$circular\+Reference\+Limit}, {\ttfamily Abstract\+Normalizer\+::\$circular\+Reference\+Handler}, {\ttfamily Abstract\+Normalizer\+::\$callbacks}, {\ttfamily Abstract\+Normalizer\+::\$ignored\+Attributes}, {\ttfamily Abstract\+Normalizer\+::\$camelized\+Attributes}, {\ttfamily Abstract\+Normalizer\+::set\+Circular\+Reference\+Limit()}, {\ttfamily Abstract\+Normalizer\+::set\+Circular\+Reference\+Handler()}, {\ttfamily Abstract\+Normalizer\+::set\+Callbacks()} and {\ttfamily Abstract\+Normalizer\+::set\+Ignored\+Attributes()}, use the default context instead.
+\item removed {\ttfamily Abstract\+Object\+Normalizer\+::\$max\+Depth\+Handler} and {\ttfamily Abstract\+Object\+Normalizer\+::set\+Max\+Depth\+Handler()}, use the default context instead.
+\item removed {\ttfamily Xml\+Encoder\+::set\+Root\+Node\+Name()} \& {\ttfamily Xml\+Encoder\+::get\+Root\+Node\+Name()}, use the default context instead.
+\item removed individual encoders/normalizers options as constructor arguments.
+\item removed support for instantiating a {\ttfamily Data\+Uri\+Normalizer} with a default MIME type guesser when the {\ttfamily symfony/mime} component isn\textquotesingle{}t installed.
+\item removed the {\ttfamily Xml\+Encoder\+::\+TYPE\+\_\+\+CASE\+\_\+\+ATTRIBUTES} constant. Use {\ttfamily Xml\+Encoder\+::\+TYPE\+\_\+\+CAST\+\_\+\+ATTRIBUTES} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1827}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1827}
+
+\begin{DoxyItemize}
+\item deprecated the {\ttfamily Xml\+Encoder\+::\+TYPE\+\_\+\+CASE\+\_\+\+ATTRIBUTES} constant, use {\ttfamily Xml\+Encoder\+::\+TYPE\+\_\+\+CAST\+\_\+\+ATTRIBUTES} instead
+\item added option to output a UTF-\/8 BOM in CSV encoder via {\ttfamily Csv\+Encoder\+::\+OUTPUT\+\_\+\+UTF8\+\_\+\+BOM\+\_\+\+KEY} context option
+\item added {\ttfamily Problem\+Normalizer} to normalize errors according to the API Problem spec (RFC 7807)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1828}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1828}
+
+\begin{DoxyItemize}
+\item added the list of constraint violations\textquotesingle{} parameters in {\ttfamily Constraint\+Violation\+List\+Normalizer}
+\item added support for serializing {\ttfamily Date\+Time\+Zone} objects
+\item added a {\ttfamily deep\+\_\+object\+\_\+to\+\_\+populate} context option to recursive denormalize on {\ttfamily object\+\_\+to\+\_\+populate} object.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1829}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1829}
+
+\begin{DoxyItemize}
+\item using the default context is the new recommended way to configure normalizers and encoders
+\item added a {\ttfamily skip\+\_\+null\+\_\+values} context option to not serialize properties with a {\ttfamily null} values
+\item {\ttfamily Abstract\+Normalizer\+::handle\+Circular\+Reference} is now final and receives two optional extra arguments\+: the format and the context
+\item added support for XML comment encoding (encoding `\mbox{[}'\#comment\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{} foo \textquotesingle{}\mbox{]}{\ttfamily results}{\ttfamily )}
+\item {\ttfamily added optional}int\mbox{[}\mbox{]} \$encoder\+Ignored\+Node\+Types{\ttfamily argument to}Xml\+Encoder\+::\+\_\+\+\_\+construct\`{} to configure node types to be ignored during encoding
+\item added {\ttfamily Advanced\+Name\+Converter\+Interface} to access the class, the format and the context in a name converter
+\item the {\ttfamily Abstract\+Normalizer\+::handle\+Circular\+Reference()} method will have two new {\ttfamily \$format} and {\ttfamily \$context} arguments in version 5.\+0, not defining them is deprecated
+\item deprecated creating a {\ttfamily Serializer} with normalizers which do not implement either {\ttfamily Normalizer\+Interface} or {\ttfamily Denormalizer\+Interface}
+\item deprecated creating a {\ttfamily Serializer} with normalizers which do not implement either {\ttfamily Normalizer\+Interface} or {\ttfamily Denormalizer\+Interface}
+\item deprecated creating a {\ttfamily Serializer} with encoders which do not implement either {\ttfamily Encoder\+Interface} or {\ttfamily Decoder\+Interface}
+\item added the optional {\ttfamily \$object\+Class\+Resolver} argument in {\ttfamily Abstract\+Object\+Normalizer} and {\ttfamily Object\+Normalizer} constructor
+\item added {\ttfamily Metadata\+Aware\+Name\+Converter} to configure the serialized name of properties through metadata
+\item {\ttfamily Yaml\+Encoder} now handles the {\ttfamily .yml} extension too
+\item {\ttfamily Abstract\+Normalizer\+::\$circular\+Reference\+Limit}, {\ttfamily Abstract\+Normalizer\+::\$circular\+Reference\+Handler}, {\ttfamily Abstract\+Normalizer\+::\$callbacks}, {\ttfamily Abstract\+Normalizer\+::\$ignored\+Attributes}, {\ttfamily Abstract\+Normalizer\+::\$camelized\+Attributes}, {\ttfamily Abstract\+Normalizer\+::set\+Circular\+Reference\+Limit()}, {\ttfamily Abstract\+Normalizer\+::set\+Circular\+Reference\+Handler()}, {\ttfamily Abstract\+Normalizer\+::set\+Callbacks()} and {\ttfamily Abstract\+Normalizer\+::set\+Ignored\+Attributes()} are deprecated, use the default context instead.
+\item {\ttfamily Abstract\+Object\+Normalizer\+::\$max\+Depth\+Handler} and {\ttfamily Abstract\+Object\+Normalizer\+::set\+Max\+Depth\+Handler()} are deprecated, use the default context instead.
+\item passing configuration options directly to the constructor of {\ttfamily Csv\+Encoder}, {\ttfamily Json\+Decode} and {\ttfamily Xml\+Encoder} is deprecated since Symfony 4.\+2, use the default context instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1830}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1830}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Cacheable\+Supports\+Method\+Interface} for normalizers and denormalizers that use only the type and the format in their {\ttfamily supports$\ast$()} methods
+\item added {\ttfamily Missing\+Constructor\+Arguments\+Exception} new exception for deserialization failure of objects that needs data insertion in constructor
+\item added an optional {\ttfamily default\+\_\+constructor\+\_\+arguments} option of context to specify a default data in case the object is not initializable by its constructor because of data missing
+\item added optional {\ttfamily bool \$escape\+Formulas = false} argument to {\ttfamily Csv\+Encoder\+::\+\_\+\+\_\+construct}
+\item added {\ttfamily Abstract\+Object\+Normalizer\+::set\+Max\+Depth\+Handler} to set a handler to call when the configured maximum depth is reached
+\item added optional {\ttfamily int\mbox{[}\mbox{]} \$ignored\+Node\+Types} argument to {\ttfamily Xml\+Encoder\+::\+\_\+\+\_\+construct}. XML decoding now ignores comment node types by default.
+\item added {\ttfamily Constraint\+Violation\+List\+Normalizer}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1831}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1831}
+
+\begin{DoxyItemize}
+\item removed the {\ttfamily Serializer\+Aware\+Encoder} and {\ttfamily Serializer\+Aware\+Normalizer} classes, use the {\ttfamily Serializer\+Aware\+Trait} instead
+\item removed the {\ttfamily Serializer\+::\$normalizer\+Cache} and {\ttfamily Serializer\+::\$denormalizer\+Cache} properties
+\item added an optional {\ttfamily string \$format = null} argument to {\ttfamily Abstract\+Normalizer\+::instantiate\+Object}
+\item added an optional {\ttfamily array \$context = \mbox{[}\mbox{]}} to {\ttfamily Serializer\+::supports\+Normalization}, {\ttfamily Serializer\+::supports\+Denormalization}, {\ttfamily Serializer\+::supports\+Encoding} and {\ttfamily Serializer\+::supports\+Decoding}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1832}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1832}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Abstract\+Object\+Normalizer\+::\+DISABLE\+\_\+\+TYPE\+\_\+\+ENFORCEMENT} context option to disable throwing an {\ttfamily Unexpected\+Value\+Exception} on a type mismatch
+\item added support for serializing {\ttfamily Date\+Interval} objects
+\item added getter for extra attributes in {\ttfamily Extra\+Attributes\+Exception}
+\item improved {\ttfamily Csv\+Encoder} to handle variable nested structures
+\item CSV headers can be passed to the {\ttfamily Csv\+Encoder} via the {\ttfamily csv\+\_\+headers} serialization context variable
+\item added {\ttfamily \$context} when checking for encoding, decoding and normalizing in {\ttfamily Serializer}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1833}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1833}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Serializer\+Pass}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1834}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1834}
+
+\begin{DoxyItemize}
+\item added support for serializing objects that implement {\ttfamily Json\+Serializable}
+\item added the {\ttfamily Denormalizer\+Aware\+Trait} and {\ttfamily Normalizer\+Aware\+Trait} traits to support normalizer/denormalizer awareness
+\item added the {\ttfamily Denormalizer\+Aware\+Interface} and {\ttfamily Normalizer\+Aware\+Interface} interfaces to support normalizer/denormalizer awareness
+\item added a PSR-\/6 compatible adapter for caching metadata
+\item added a {\ttfamily Max\+Depth} option to limit the depth of the object graph when serializing objects
+\item added support for serializing {\ttfamily Spl\+File\+Info} objects
+\item added support for serializing objects that implement {\ttfamily Date\+Time\+Interface}
+\item added {\ttfamily Abstract\+Object\+Normalizer} as a base class for normalizers that deal with objects
+\item added support to relation deserialization
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1835}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1835}
+
+\begin{DoxyItemize}
+\item added support for serialization and deserialization groups including annotations, XML and YAML mapping.
+\item added {\ttfamily Abstract\+Normalizer} to factorise code and ease normalizers development
+\item added circular references handling for {\ttfamily Property\+Normalizer}
+\item added support for a context key called {\ttfamily object\+\_\+to\+\_\+populate} in {\ttfamily Abstract\+Normalizer} to reuse existing objects in the deserialization process
+\item added {\ttfamily Name\+Converter\+Interface} and {\ttfamily Camel\+Case\+To\+Snake\+Case\+Name\+Converter}
+\item \mbox{[}DEPRECATION\mbox{]} {\ttfamily Get\+Set\+Method\+Normalizer\+::set\+Camelized\+Attributes()} and {\ttfamily Property\+Normalizer\+::set\+Camelized\+Attributes()} are replaced by {\ttfamily Camel\+Case\+To\+Snake\+Case\+Name\+Converter}
+\item \mbox{[}DEPRECATION\mbox{]} the {\ttfamily Exception} interface has been renamed to {\ttfamily Exception\+Interface}
+\item added {\ttfamily Object\+Normalizer} leveraging the {\ttfamily Property\+Access} component to normalize objects containing both properties and getters / setters / issers / hassers methods.
+\item added {\ttfamily xml\+\_\+type\+\_\+cast\+\_\+attributes} context option for allowing users to opt-\/out of typecasting xml attributes.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1836}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1836}
+
+\begin{DoxyItemize}
+\item added a new serializer\+: {\ttfamily Property\+Normalizer}. Like {\ttfamily Get\+Set\+Method\+Normalizer}, this normalizer will map an object\textquotesingle{}s properties to an array.
+\item added circular references handling for {\ttfamily Get\+Set\+Method\+Normalizer}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1837}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1837}
+
+\begin{DoxyItemize}
+\item added support for {\ttfamily is.$\ast$} getters in {\ttfamily Get\+Set\+Method\+Normalizer}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1838}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1838}
+
+\begin{DoxyItemize}
+\item added {\ttfamily \$context} support for XMLEncoder.
+\item \mbox{[}DEPRECATION\mbox{]} Json\+Encode and Json\+Decode where modified to throw an exception if error found. No need for {\ttfamily get$\ast$\+Error()} functions
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1839}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1839}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Get\+Set\+Method\+Normalizer\+::set\+Camelized\+Attributes} to allow calling camel cased methods for underscored properties
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1840}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1840}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} All Serializer, \mbox{\hyperlink{class_normalizer}{Normalizer}} and \mbox{\hyperlink{namespace_encoder}{Encoder}} interfaces have been modified to include an optional {\ttfamily \$context} array parameter.
+\item The XML Root name can now be configured with the {\ttfamily xml\+\_\+root\+\_\+name} parameter in the context option to the {\ttfamily Xml\+Encoder}.
+\item Options to {\ttfamily json\+\_\+encode} and {\ttfamily json\+\_\+decode} can be passed through the context options of {\ttfamily Json\+Encode} and {\ttfamily Json\+Decode} encoder/decoders.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1841}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_serializer__c_h_a_n_g_e_l_o_g_autotoc_md1841}
+
+\begin{DoxyItemize}
+\item added Decoder\+Interface\+::supports\+Decoding(), Encoder\+Interface\+::supports\+Encoding()
+\item removed Normalizable\+Interface\+::denormalize(), Normalizer\+Interface\+::denormalize(), Normalizer\+Interface\+::supports\+Denormalization()
+\item removed normalize() denormalize() encode() decode() supports\+Serialization() supports\+Deserialization() supports\+Encoding() supports\+Decoding() get\+Encoder() from Serializer\+Interface
+\item Serializer now implements Normalizer\+Interface, Denormalizer\+Interface, Encoder\+Interface, Decoder\+Interface in addition to Serializer\+Interface
+\item added Denormalizable\+Interface and Denormalizer\+Interface
+\item \mbox{[}BC BREAK\mbox{]} changed {\ttfamily Get\+Set\+Method\+Normalizer}\textquotesingle{}s key names from all lowercased to camel\+Cased (e.\+g. {\ttfamily mypropertyvalue} to {\ttfamily my\+Property\+Value})
+\item \mbox{[}BC BREAK\mbox{]} convert the {\ttfamily item} XML tag to an array
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?xml version="{}1.0"{}?>}
+\DoxyCodeLine{<response>}
+\DoxyCodeLine{    <item><title><![CDATA[title1]]></title></item><item><title><![CDATA[title2]]></title></item>}
+\DoxyCodeLine{</response>}
+
+\end{DoxyCode}
+
+
+Before\+: \begin{DoxyVerb}Array()
+\end{DoxyVerb}
+ After\+: \begin{DoxyVerb}Array(
+    [item] => Array(
+        [0] => Array(
+            [title] => title1
+        )
+        [1] => Array(
+            [title] => title2
+        )
+    )
+)
+\end{DoxyVerb}
+ 
+\end{DoxyItemize}

@@ -1,0 +1,85 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{}\doxysection{Entity\+Cache\+Entry Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}\index{EntityCacheEntry@{EntityCacheEntry}}
+Inheritance diagram for Entity\+Cache\+Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_af41a771c0a8db9e2c7346c15c9ba1e3b}{\+\_\+\+\_\+construct}} (\$class, array \$data)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_af6ff62372717a2d251cd845be559ee72}{resolve\+Association\+Entries}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$em)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a18c4374407d3bc85b39152f7337cb1ec}{\+\_\+\+\_\+set\+\_\+state}} (array \$values)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a6efc15b5a2314dd4b5aaa556a375c6d6}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a6efc15b5a2314dd4b5aaa556a375c6d6}} 
+{\bfseries \$data}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a252ba022809910ea710a068fc1bab657}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a252ba022809910ea710a068fc1bab657}} 
+{\bfseries \$class}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entity cache entry 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_af41a771c0a8db9e2c7346c15c9ba1e3b}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_af41a771c0a8db9e2c7346c15c9ba1e3b}} 
+\index{EntityCacheEntry@{EntityCacheEntry}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!EntityCacheEntry@{EntityCacheEntry}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & The entity class. \\
+\hline
+ & {\em array$<$string,mixed$>$} & \$data The entity data. @psalm-\/param class-\/string \$class \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a18c4374407d3bc85b39152f7337cb1ec}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_a18c4374407d3bc85b39152f7337cb1ec}} 
+\index{EntityCacheEntry@{EntityCacheEntry}!\_\_set\_state@{\_\_set\_state}}
+\index{\_\_set\_state@{\_\_set\_state}!EntityCacheEntry@{EntityCacheEntry}}
+\doxysubsubsection{\texorpdfstring{\_\_set\_state()}{\_\_set\_state()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+set\+\_\+state (\begin{DoxyParamCaption}\item[{array}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{Entity\+Cache\+Entry}}
+
+This method allow Doctrine\textbackslash{}\+Common\textbackslash{}\+Cache\textbackslash{}\+Php\+File\+Cache compatibility
+
+
+\begin{DoxyParams}{Parameters}
+{\em array$<$string,mixed$>$} & \$values array containing property values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry}{Entity\+Cache\+Entry}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_af6ff62372717a2d251cd845be559ee72}\label{class_doctrine_1_1_o_r_m_1_1_cache_1_1_entity_cache_entry_af6ff62372717a2d251cd845be559ee72}} 
+\index{EntityCacheEntry@{EntityCacheEntry}!resolveAssociationEntries@{resolveAssociationEntries}}
+\index{resolveAssociationEntries@{resolveAssociationEntries}!EntityCacheEntry@{EntityCacheEntry}}
+\doxysubsubsection{\texorpdfstring{resolveAssociationEntries()}{resolveAssociationEntries()}}
+{\footnotesize\ttfamily resolve\+Association\+Entries (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$em }\end{DoxyParamCaption})}
+
+Retrieves the entity data resolving cache entries
+
+\begin{DoxyReturn}{Returns}
+array$<$string, mixed$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Cache/Entity\+Cache\+Entry.\+php\end{DoxyCompactItemize}

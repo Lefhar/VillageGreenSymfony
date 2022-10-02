@@ -1,0 +1,17 @@
+Nous vous remercions de votre commande !
+
+
+Bonjour {{ order.customer.gender|capitalize }} {{ order.customer.firstname|capitalize }} {{ order.customer.lastname|capitalize }}
+
+Veuillez trouver  votre facture: {{ app.request.getSchemeAndHttpHost() }}{{ path('facturePdf',{order:order.id}) }} .
+
+
+Nous vous tiendrons informé par e-mail lorsque les articles de votre commande auront été expédiés.
+
+Vous pouvez suivre l’état de votre commande ou modifier celle-ci dans Vos commandes sur village green.
+
+Montant Total de la commande : {{ total }} €
+
+Cordialement Village green !
+
+

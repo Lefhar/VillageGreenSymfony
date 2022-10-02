@@ -1,0 +1,140 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain}{}\doxysection{Mapping\+Driver\+Chain Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain}\index{MappingDriverChain@{MappingDriverChain}}
+Inheritance diagram for Mapping\+Driver\+Chain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a0bd119b90d7c1935b1c6ce8b8aed09e0}{get\+Default\+Driver}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_afda8347a070472b82246d9e09d3b7992}{set\+Default\+Driver}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver}{Mapping\+Driver}} \$driver)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a9e1f5ce116cecbddff358a12e65d833a}{add\+Driver}} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver}{Mapping\+Driver}} \$nested\+Driver, \$namespace)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a20ff691fd28df2624186aacd3f154a4b}{get\+Drivers}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_ad327635eed919cc071fe20c12e00fafb}{load\+Metadata\+For\+Class}} (\$class\+Name, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a1079716efc88aab78c6f1d0d44d6354e}{get\+All\+Class\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a03d93fdac535730e6895bf73dcfab09d}{is\+Transient}} (\$class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Driver\+Chain allows you to add multiple other mapping drivers for certain namespaces. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a9e1f5ce116cecbddff358a12e65d833a}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a9e1f5ce116cecbddff358a12e65d833a}} 
+\index{MappingDriverChain@{MappingDriverChain}!addDriver@{addDriver}}
+\index{addDriver@{addDriver}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{addDriver()}{addDriver()}}
+{\footnotesize\ttfamily add\+Driver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver}{Mapping\+Driver}}}]{\$nested\+Driver,  }\item[{}]{\$namespace }\end{DoxyParamCaption})}
+
+Adds a nested driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$namespace} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a1079716efc88aab78c6f1d0d44d6354e}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a1079716efc88aab78c6f1d0d44d6354e}} 
+\index{MappingDriverChain@{MappingDriverChain}!getAllClassNames@{getAllClassNames}}
+\index{getAllClassNames@{getAllClassNames}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{getAllClassNames()}{getAllClassNames()}}
+{\footnotesize\ttfamily get\+All\+Class\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of all mapped classes known to this driver.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The names of all mapped classes known to this driver. @psalm-\/return list\texorpdfstring{$<$}{<}class-\/string\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a1079716efc88aab78c6f1d0d44d6354e}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a0bd119b90d7c1935b1c6ce8b8aed09e0}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a0bd119b90d7c1935b1c6ce8b8aed09e0}} 
+\index{MappingDriverChain@{MappingDriverChain}!getDefaultDriver@{getDefaultDriver}}
+\index{getDefaultDriver@{getDefaultDriver}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{getDefaultDriver()}{getDefaultDriver()}}
+{\footnotesize\ttfamily get\+Default\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the default driver.
+
+\begin{DoxyReturn}{Returns}
+Mapping\+Driver$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a20ff691fd28df2624186aacd3f154a4b}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a20ff691fd28df2624186aacd3f154a4b}} 
+\index{MappingDriverChain@{MappingDriverChain}!getDrivers@{getDrivers}}
+\index{getDrivers@{getDrivers}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{getDrivers()}{getDrivers()}}
+{\footnotesize\ttfamily get\+Drivers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the array of nested drivers.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver}{Mapping\+Driver}}\mbox{[}\mbox{]} \$drivers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a03d93fdac535730e6895bf73dcfab09d}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_a03d93fdac535730e6895bf73dcfab09d}} 
+\index{MappingDriverChain@{MappingDriverChain}!isTransient@{isTransient}}
+\index{isTransient@{isTransient}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{isTransient()}{isTransient()}}
+{\footnotesize\ttfamily is\+Transient (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Returns whether the class with the specified name should have its metadata loaded. This is only the case if it is either mapped as an Entity or a Mapped\+Superclass.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a03d93fdac535730e6895bf73dcfab09d}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_ad327635eed919cc071fe20c12e00fafb}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_ad327635eed919cc071fe20c12e00fafb}} 
+\index{MappingDriverChain@{MappingDriverChain}!loadMetadataForClass@{loadMetadataForClass}}
+\index{loadMetadataForClass@{loadMetadataForClass}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{loadMetadataForClass()}{loadMetadataForClass()}}
+{\footnotesize\ttfamily load\+Metadata\+For\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})}
+
+Loads the metadata for the specified class into the provided container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name @psalm-\/param Class\+Metadata$<$\+T$>$ \$metadata\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@template T of object 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_ad327635eed919cc071fe20c12e00fafb}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_afda8347a070472b82246d9e09d3b7992}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_chain_afda8347a070472b82246d9e09d3b7992}} 
+\index{MappingDriverChain@{MappingDriverChain}!setDefaultDriver@{setDefaultDriver}}
+\index{setDefaultDriver@{setDefaultDriver}!MappingDriverChain@{MappingDriverChain}}
+\doxysubsubsection{\texorpdfstring{setDefaultDriver()}{setDefaultDriver()}}
+{\footnotesize\ttfamily set\+Default\+Driver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver}{Mapping\+Driver}}}]{\$driver }\end{DoxyParamCaption})}
+
+Set the default driver.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/\+Driver/Mapping\+Driver\+Chain.\+php\end{DoxyCompactItemize}

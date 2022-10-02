@@ -1,0 +1,82 @@
+\hypertarget{class_monolog_1_1_handler_1_1_mandrill_handler}{}\doxysection{Mandrill\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_mandrill_handler}\index{MandrillHandler@{MandrillHandler}}
+Inheritance diagram for Mandrill\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.540541cm]{class_monolog_1_1_handler_1_1_mandrill_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mandrill_handler_a601620bec97f20f7c3e26520aea71f8d}{\+\_\+\+\_\+construct}} (string \$api\+Key, \$message, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}, bool \$bubble=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mandrill_handler_a7986db5d2c2ac3aee83038720fde8b45}{send}} (string \$content, array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mandrill_handler_abf17cb2dba2ed17cb28aa5f37deb5293}\label{class_monolog_1_1_handler_1_1_mandrill_handler_abf17cb2dba2ed17cb28aa5f37deb5293}} 
+{\bfseries \$message}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mandrill_handler_a084e3db37d1b117a3cc7212cf2eed533}\label{class_monolog_1_1_handler_1_1_mandrill_handler_a084e3db37d1b117a3cc7212cf2eed533}} 
+{\bfseries \$api\+Key}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_mandrill_handler}{Mandrill\+Handler}} uses c\+URL to send the emails to the Mandrill API
+
+\begin{DoxyAuthor}{Author}
+Adam Nicholson \href{mailto:adamnicholson10@gmail.com}{\texttt{ adamnicholson10@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mandrill_handler_a601620bec97f20f7c3e26520aea71f8d}\label{class_monolog_1_1_handler_1_1_mandrill_handler_a601620bec97f20f7c3e26520aea71f8d}} 
+\index{MandrillHandler@{MandrillHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MandrillHandler@{MandrillHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$api\+Key,  }\item[{}]{\$message,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a7f79d7b73cfb40bb7855d4260393cc0f}{Logger\+::\+ERROR}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+@psalm-\/param Swift\+\_\+\+Message$\vert$callable()\+: Swift\+\_\+\+Message \$message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$api\+Key} & A valid Mandrill API key \\
+\hline
+callable | Swift\+\_\+\+Message & {\em \$message} & An example message for real messages, only the body will be replaced \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_mandrill_handler_a7986db5d2c2ac3aee83038720fde8b45}\label{class_monolog_1_1_handler_1_1_mandrill_handler_a7986db5d2c2ac3aee83038720fde8b45}} 
+\index{MandrillHandler@{MandrillHandler}!send@{send}}
+\index{send@{send}!MandrillHandler@{MandrillHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{string}]{\$content,  }\item[{array}]{\$records }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send a mail with the given content
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & formatted email body to be sent \\
+\hline
+array & {\em \$records} & the array of log records that formed this content\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records @phpstan-\/ignore-\/next-\/line
+
+@phpstan-\/ignore-\/next-\/line
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_mail_handler_a7986db5d2c2ac3aee83038720fde8b45}{Mail\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Mandrill\+Handler.\+php\end{DoxyCompactItemize}

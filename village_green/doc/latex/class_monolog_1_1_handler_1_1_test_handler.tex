@@ -1,0 +1,201 @@
+\hypertarget{class_monolog_1_1_handler_1_1_test_handler}{}\doxysection{Test\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_test_handler}\index{TestHandler@{TestHandler}}
+Inheritance diagram for Test\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_test_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_ac3cf5a88085580b7a687ee3ed9f3b605}{get\+Records}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a4be59dbe9d2aa721275957148e3753a0}{set\+Skip\+Reset}} (bool \$skip\+Reset)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a29fe0a6ab04913b2e4a79dacd625dcc9}{has\+Records}} (\$level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_acdb037f1c737db11f7070d40e253f268}{has\+Record}} (\$record, \$level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a8e5bc7c7388b2a4fd51b60ef81d03f4c}{has\+Record\+That\+Contains}} (string \$message, \$level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a3288149e367add31f4cc79305bec5bac}{has\+Record\+That\+Matches}} (string \$regex, \$level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a582ce27b33fde0ee744fe633a6ed705b}{has\+Record\+That\+Passes}} (callable \$predicate, \$level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_a9f1179240d068c94a040021326032bed}{\+\_\+\+\_\+call}} (\$method, \$args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_test_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a6cb1988642ff4f03fdfb3658cdd14fa0}\label{class_monolog_1_1_handler_1_1_test_handler_a6cb1988642ff4f03fdfb3658cdd14fa0}} 
+{\bfseries \$records} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a69dd595592ec395c48d00c72e2ffa5f2}\label{class_monolog_1_1_handler_1_1_test_handler_a69dd595592ec395c48d00c72e2ffa5f2}} 
+{\bfseries \$records\+By\+Level} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used for testing purposes.
+
+It records all records and gives you access to them for verification.
+
+\begin{DoxyAuthor}{Author}
+Jordi Boggiano \href{mailto:j.boggiano@seld.be}{\texttt{ j.\+boggiano@seld.\+be}}
+\end{DoxyAuthor}
+@method bool has\+Emergency(\$record) @method bool has\+Alert(\$record) @method bool has\+Critical(\$record) @method bool has\+Error(\$record) @method bool has\+Warning(\$record) @method bool has\+Notice(\$record) @method bool has\+Info(\$record) @method bool has\+Debug(\$record)
+
+@method bool has\+Emergency\+Records() @method bool has\+Alert\+Records() @method bool has\+Critical\+Records() @method bool has\+Error\+Records() @method bool has\+Warning\+Records() @method bool has\+Notice\+Records() @method bool has\+Info\+Records() @method bool has\+Debug\+Records()
+
+@method bool has\+Emergency\+That\+Contains(\$message) @method bool has\+Alert\+That\+Contains(\$message) @method bool has\+Critical\+That\+Contains(\$message) @method bool has\+Error\+That\+Contains(\$message) @method bool has\+Warning\+That\+Contains(\$message) @method bool has\+Notice\+That\+Contains(\$message) @method bool has\+Info\+That\+Contains(\$message) @method bool has\+Debug\+That\+Contains(\$message)
+
+@method bool has\+Emergency\+That\+Matches(\$message) @method bool has\+Alert\+That\+Matches(\$message) @method bool has\+Critical\+That\+Matches(\$message) @method bool has\+Error\+That\+Matches(\$message) @method bool has\+Warning\+That\+Matches(\$message) @method bool has\+Notice\+That\+Matches(\$message) @method bool has\+Info\+That\+Matches(\$message) @method bool has\+Debug\+That\+Matches(\$message)
+
+@method bool has\+Emergency\+That\+Passes(\$message) @method bool has\+Alert\+That\+Passes(\$message) @method bool has\+Critical\+That\+Passes(\$message) @method bool has\+Error\+That\+Passes(\$message) @method bool has\+Warning\+That\+Passes(\$message) @method bool has\+Notice\+That\+Passes(\$message) @method bool has\+Info\+That\+Passes(\$message) @method bool has\+Debug\+That\+Passes(\$message)
+
+@phpstan-\/import-\/type Record from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a9f1179240d068c94a040021326032bed}\label{class_monolog_1_1_handler_1_1_test_handler_a9f1179240d068c94a040021326032bed}} 
+\index{TestHandler@{TestHandler}!\_\_call@{\_\_call}}
+\index{\_\_call@{\_\_call}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_call()}{\_\_call()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+call (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$args }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_aa821bec12eaa7e0f649397c9675ff505}\label{class_monolog_1_1_handler_1_1_test_handler_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{TestHandler@{TestHandler}!clear@{clear}}
+\index{clear@{clear}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_ac3cf5a88085580b7a687ee3ed9f3b605}\label{class_monolog_1_1_handler_1_1_test_handler_ac3cf5a88085580b7a687ee3ed9f3b605}} 
+\index{TestHandler@{TestHandler}!getRecords@{getRecords}}
+\index{getRecords@{getRecords}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{getRecords()}{getRecords()}}
+{\footnotesize\ttfamily get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array
+\end{DoxyReturn}
+@phpstan-\/return Record\mbox{[}\mbox{]} \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_acdb037f1c737db11f7070d40e253f268}\label{class_monolog_1_1_handler_1_1_test_handler_acdb037f1c737db11f7070d40e253f268}} 
+\index{TestHandler@{TestHandler}!hasRecord@{hasRecord}}
+\index{hasRecord@{hasRecord}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{hasRecord()}{hasRecord()}}
+{\footnotesize\ttfamily has\+Record (\begin{DoxyParamCaption}\item[{}]{\$record,  }\item[{}]{\$level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | array & {\em \$record} & Either a message string or an array containing message and optionally context keys that will be checked against all records \\
+\hline
+string | int & {\em \$level} & Logging level value or name\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param array\{message\+: string, context?\+: mixed\mbox{[}\mbox{]}\}$\vert$string \$record @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a29fe0a6ab04913b2e4a79dacd625dcc9}\label{class_monolog_1_1_handler_1_1_test_handler_a29fe0a6ab04913b2e4a79dacd625dcc9}} 
+\index{TestHandler@{TestHandler}!hasRecords@{hasRecords}}
+\index{hasRecords@{hasRecords}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{hasRecords()}{hasRecords()}}
+{\footnotesize\ttfamily has\+Records (\begin{DoxyParamCaption}\item[{}]{\$level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$level} & Logging level value or name\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a8e5bc7c7388b2a4fd51b60ef81d03f4c}\label{class_monolog_1_1_handler_1_1_test_handler_a8e5bc7c7388b2a4fd51b60ef81d03f4c}} 
+\index{TestHandler@{TestHandler}!hasRecordThatContains@{hasRecordThatContains}}
+\index{hasRecordThatContains@{hasRecordThatContains}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{hasRecordThatContains()}{hasRecordThatContains()}}
+{\footnotesize\ttfamily has\+Record\+That\+Contains (\begin{DoxyParamCaption}\item[{string}]{\$message,  }\item[{}]{\$level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$level} & Logging level value or name\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a3288149e367add31f4cc79305bec5bac}\label{class_monolog_1_1_handler_1_1_test_handler_a3288149e367add31f4cc79305bec5bac}} 
+\index{TestHandler@{TestHandler}!hasRecordThatMatches@{hasRecordThatMatches}}
+\index{hasRecordThatMatches@{hasRecordThatMatches}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{hasRecordThatMatches()}{hasRecordThatMatches()}}
+{\footnotesize\ttfamily has\+Record\+That\+Matches (\begin{DoxyParamCaption}\item[{string}]{\$regex,  }\item[{}]{\$level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$level} & Logging level value or name\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a582ce27b33fde0ee744fe633a6ed705b}\label{class_monolog_1_1_handler_1_1_test_handler_a582ce27b33fde0ee744fe633a6ed705b}} 
+\index{TestHandler@{TestHandler}!hasRecordThatPasses@{hasRecordThatPasses}}
+\index{hasRecordThatPasses@{hasRecordThatPasses}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{hasRecordThatPasses()}{hasRecordThatPasses()}}
+{\footnotesize\ttfamily has\+Record\+That\+Passes (\begin{DoxyParamCaption}\item[{callable}]{\$predicate,  }\item[{}]{\$level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$level} & Logging level value or name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+@psalm-\/param callable(\+Record, int)\+: mixed \$predicate @phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$level \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a4a20559544fdf4dcb457e258dc976cf8}\label{class_monolog_1_1_handler_1_1_test_handler_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{TestHandler@{TestHandler}!reset@{reset}}
+\index{reset@{reset}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Processing\+Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_a4be59dbe9d2aa721275957148e3753a0}\label{class_monolog_1_1_handler_1_1_test_handler_a4be59dbe9d2aa721275957148e3753a0}} 
+\index{TestHandler@{TestHandler}!setSkipReset@{setSkipReset}}
+\index{setSkipReset@{setSkipReset}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{setSkipReset()}{setSkipReset()}}
+{\footnotesize\ttfamily set\+Skip\+Reset (\begin{DoxyParamCaption}\item[{bool}]{\$skip\+Reset }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_test_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_test_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{TestHandler@{TestHandler}!write@{write}}
+\index{write@{write}!TestHandler@{TestHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Test\+Handler.\+php\end{DoxyCompactItemize}

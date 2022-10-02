@@ -1,0 +1,83 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression}{}\doxysection{Collection\+Member\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression}\index{CollectionMemberExpression@{CollectionMemberExpression}}
+Inheritance diagram for Collection\+Member\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_ad529b30f84e6fc4ace6a2e8ae7d3cc95}{\+\_\+\+\_\+construct}} (\$entity\+Expr, \$coll\+Valued\+Path\+Expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a9242968cc8550364eac9b9fb259abb46}{dispatch}} (\$walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_ab6cab7f3cc8142ddf22adc8c958a8323}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_ab6cab7f3cc8142ddf22adc8c958a8323}} 
+{\bfseries \$entity\+Expression}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a929e0e75cf2c37f257e341c9c05c6a37}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a929e0e75cf2c37f257e341c9c05c6a37}} 
+{\bfseries \$collection\+Valued\+Path\+Expression}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a8b27111eae5a465f0dfd8d1e45d0d118}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a8b27111eae5a465f0dfd8d1e45d0d118}} 
+{\bfseries \$not}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression}{Collection\+Member\+Expression}} \+::= Entity\+Expression \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+MEMBER\char`\"{} \mbox{[}\char`\"{}\+OF\char`\"{}\mbox{]} Collection\+Valued\+Path\+Expression
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_ad529b30f84e6fc4ace6a2e8ae7d3cc95}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_ad529b30f84e6fc4ace6a2e8ae7d3cc95}} 
+\index{CollectionMemberExpression@{CollectionMemberExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CollectionMemberExpression@{CollectionMemberExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$entity\+Expr,  }\item[{}]{\$coll\+Valued\+Path\+Expr }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$entity\+Expr} & \\
+\hline
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_path_expression}{Path\+Expression}} & {\em \$coll\+Valued\+Path\+Expr} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a9242968cc8550364eac9b9fb259abb46}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_collection_member_expression_a9242968cc8550364eac9b9fb259abb46}} 
+\index{CollectionMemberExpression@{CollectionMemberExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!CollectionMemberExpression@{CollectionMemberExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Collection\+Member\+Expression.\+php\end{DoxyCompactItemize}

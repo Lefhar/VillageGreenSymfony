@@ -1,0 +1,73 @@
+\hypertarget{class_doctrine_1_1_sql_formatter_1_1_sql_formatter}{}\doxysection{Sql\+Formatter Class Reference}
+\label{class_doctrine_1_1_sql_formatter_1_1_sql_formatter}\index{SqlFormatter@{SqlFormatter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a61098a7888c43a446c10974c8b4f1a12}\label{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a61098a7888c43a446c10974c8b4f1a12}} 
+{\bfseries \+\_\+\+\_\+construct} (?\mbox{\hyperlink{interface_doctrine_1_1_sql_formatter_1_1_highlighter}{Highlighter}} \$highlighter=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a616775bdd1f163e77e56c7bfd9dccd0e}{format}} (string \$string, string \$indent\+String=\textquotesingle{} \textquotesingle{})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a1968e9c0c1f9047ab46008923ec2cd33}{highlight}} (string \$string)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_ad7734265f4dbeecc7970bc3659d8a6f1}{compress}} (string \$string)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_ad7734265f4dbeecc7970bc3659d8a6f1}\label{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_ad7734265f4dbeecc7970bc3659d8a6f1}} 
+\index{SqlFormatter@{SqlFormatter}!compress@{compress}}
+\index{compress@{compress}!SqlFormatter@{SqlFormatter}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily compress (\begin{DoxyParamCaption}\item[{string}]{\$string }\end{DoxyParamCaption})}
+
+Compress a query by collapsing white space and removing comments
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The SQL string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL string without comments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a616775bdd1f163e77e56c7bfd9dccd0e}\label{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a616775bdd1f163e77e56c7bfd9dccd0e}} 
+\index{SqlFormatter@{SqlFormatter}!format@{format}}
+\index{format@{format}!SqlFormatter@{SqlFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily format (\begin{DoxyParamCaption}\item[{string}]{\$string,  }\item[{string}]{\$indent\+String = {\ttfamily \textquotesingle{}~~\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Format the whitespace in a SQL string to make it easier to read.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The SQL string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL string with HTML styles and formatting wrapped in a 
+\begin{DoxyPre} tag
+\end{DoxyPre}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a1968e9c0c1f9047ab46008923ec2cd33}\label{class_doctrine_1_1_sql_formatter_1_1_sql_formatter_a1968e9c0c1f9047ab46008923ec2cd33}} 
+\index{SqlFormatter@{SqlFormatter}!highlight@{highlight}}
+\index{highlight@{highlight}!SqlFormatter@{SqlFormatter}}
+\doxysubsubsection{\texorpdfstring{highlight()}{highlight()}}
+{\footnotesize\ttfamily highlight (\begin{DoxyParamCaption}\item[{string}]{\$string }\end{DoxyParamCaption})}
+
+Add syntax highlighting to a SQL string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The SQL string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The SQL string with HTML styles applied 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/sql-\/formatter/src/Sql\+Formatter.\+php\end{DoxyCompactItemize}

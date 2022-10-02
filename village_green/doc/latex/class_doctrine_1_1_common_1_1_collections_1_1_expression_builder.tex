@@ -1,0 +1,282 @@
+\hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder}{}\doxysection{Expression\+Builder Class Reference}
+\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder}\index{ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_aa1122e55ec25986e691f6346a83ce0dd}{andX}} (\$x=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a27afaa0677da87f83b0b481e045a80dd}{orX}} (\$x=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ab9e7b25e56b0ace1ede3d80c89cf0571}{eq}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_afa3949327e014e229c25056a2e4ed7bf}{gt}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ac63b4a4b106bc9bcd35f7ba549892967}{lt}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a82ff3cfb8a2b441a5522ad2ace76e287}{gte}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae6167fbd183c47e8678fe0b3f2d67275}{lte}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_abbc969604eef7d1d15824de854338078}{neq}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a9b610386bc29b8fbc08d398512a55851}{is\+Null}} (\$field)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a94cfafb51356d982722421279e6f93ae}{in}} (\$field, array \$values)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ad96a4c0a2100258275b8c8c97d8ca4a9}{not\+In}} (\$field, array \$values)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_abaa57d917dffe87d1f34fe006a48dafd}{contains}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae002461bd3fcc8a0d963d465ba9d6308}{member\+Of}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae972c68bea21891e1b6971c2562d3937}{starts\+With}} (\$field, \$value)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ab9bf992fb3ce6f8614f2a53b0ae75ece}{ends\+With}} (\$field, \$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Builder for Expressions in the \mbox{\hyperlink{interface_doctrine_1_1_common_1_1_collections_1_1_selectable}{Selectable}} interface.
+
+Important Notice for interoperable code\+: You have to use scalar values only for comparisons, otherwise the behavior of the comparison may be different between implementations (Array vs ORM vs ODM). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_aa1122e55ec25986e691f6346a83ce0dd}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_aa1122e55ec25986e691f6346a83ce0dd}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!andX@{andX}}
+\index{andX@{andX}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{andX()}{andX()}}
+{\footnotesize\ttfamily andX (\begin{DoxyParamCaption}\item[{}]{\$x = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & ...\$x\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Composite\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_abaa57d917dffe87d1f34fe006a48dafd}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_abaa57d917dffe87d1f34fe006a48dafd}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!contains@{contains}}
+\index{contains@{contains}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ab9bf992fb3ce6f8614f2a53b0ae75ece}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ab9bf992fb3ce6f8614f2a53b0ae75ece}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!endsWith@{endsWith}}
+\index{endsWith@{endsWith}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{endsWith()}{endsWith()}}
+{\footnotesize\ttfamily ends\+With (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ab9e7b25e56b0ace1ede3d80c89cf0571}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ab9e7b25e56b0ace1ede3d80c89cf0571}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!eq@{eq}}
+\index{eq@{eq}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily eq (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_afa3949327e014e229c25056a2e4ed7bf}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_afa3949327e014e229c25056a2e4ed7bf}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!gt@{gt}}
+\index{gt@{gt}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{gt()}{gt()}}
+{\footnotesize\ttfamily gt (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a82ff3cfb8a2b441a5522ad2ace76e287}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a82ff3cfb8a2b441a5522ad2ace76e287}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!gte@{gte}}
+\index{gte@{gte}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{gte()}{gte()}}
+{\footnotesize\ttfamily gte (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a94cfafb51356d982722421279e6f93ae}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a94cfafb51356d982722421279e6f93ae}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!in@{in}}
+\index{in@{in}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{in()}{in()}}
+{\footnotesize\ttfamily in (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{array}]{\$values }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$values} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a9b610386bc29b8fbc08d398512a55851}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a9b610386bc29b8fbc08d398512a55851}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!isNull@{isNull}}
+\index{isNull@{isNull}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily is\+Null (\begin{DoxyParamCaption}\item[{}]{\$field }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ac63b4a4b106bc9bcd35f7ba549892967}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ac63b4a4b106bc9bcd35f7ba549892967}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!lt@{lt}}
+\index{lt@{lt}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{lt()}{lt()}}
+{\footnotesize\ttfamily lt (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae6167fbd183c47e8678fe0b3f2d67275}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae6167fbd183c47e8678fe0b3f2d67275}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!lte@{lte}}
+\index{lte@{lte}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{lte()}{lte()}}
+{\footnotesize\ttfamily lte (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae002461bd3fcc8a0d963d465ba9d6308}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae002461bd3fcc8a0d963d465ba9d6308}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!memberOf@{memberOf}}
+\index{memberOf@{memberOf}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{memberOf()}{memberOf()}}
+{\footnotesize\ttfamily member\+Of (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_abbc969604eef7d1d15824de854338078}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_abbc969604eef7d1d15824de854338078}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!neq@{neq}}
+\index{neq@{neq}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{neq()}{neq()}}
+{\footnotesize\ttfamily neq (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ad96a4c0a2100258275b8c8c97d8ca4a9}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ad96a4c0a2100258275b8c8c97d8ca4a9}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!notIn@{notIn}}
+\index{notIn@{notIn}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{notIn()}{notIn()}}
+{\footnotesize\ttfamily not\+In (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{array}]{\$values }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$values} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a27afaa0677da87f83b0b481e045a80dd}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_a27afaa0677da87f83b0b481e045a80dd}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!orX@{orX}}
+\index{orX@{orX}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{orX()}{orX()}}
+{\footnotesize\ttfamily orX (\begin{DoxyParamCaption}\item[{}]{\$x = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mixed} & ...\$x\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Composite\+Expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae972c68bea21891e1b6971c2562d3937}\label{class_doctrine_1_1_common_1_1_collections_1_1_expression_builder_ae972c68bea21891e1b6971c2562d3937}} 
+\index{ExpressionBuilder@{ExpressionBuilder}!startsWith@{startsWith}}
+\index{startsWith@{startsWith}!ExpressionBuilder@{ExpressionBuilder}}
+\doxysubsubsection{\texorpdfstring{startsWith()}{startsWith()}}
+{\footnotesize\ttfamily starts\+With (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$field} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Comparison 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/collections/lib/\+Doctrine/\+Common/\+Collections/Expression\+Builder.\+php\end{DoxyCompactItemize}

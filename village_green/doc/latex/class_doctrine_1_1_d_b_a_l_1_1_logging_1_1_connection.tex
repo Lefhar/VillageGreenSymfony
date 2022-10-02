@@ -1,0 +1,141 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection}{}\doxysection{Connection Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection}\index{Connection@{Connection}}
+Inheritance diagram for Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a2a55d9b9769b8c2a2aca2613a074869e}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a2a55d9b9769b8c2a2aca2613a074869e}} 
+{\bfseries \+\_\+\+\_\+construct} (Connection\+Interface \$connection, \mbox{\hyperlink{interface_psr_1_1_log_1_1_logger_interface}{Logger\+Interface}} \$logger)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a0f741e7b39d5685c909a704708ed1033}{prepare}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}{query}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{exec}} (string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af3380f3b13931d581fa973a382946b32}{begin\+Transaction}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}{commit}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}{roll\+Back}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af3380f3b13931d581fa973a382946b32}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af3380f3b13931d581fa973a382946b32}} 
+\index{Connection@{Connection}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_af3380f3b13931d581fa973a382946b32}{Abstract\+Connection\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_af5674c27d4a92f6228565010eacbb9cb}} 
+\index{Connection@{Connection}!commit@{commit}}
+\index{commit@{commit}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_af5674c27d4a92f6228565010eacbb9cb}{Abstract\+Connection\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a4d3f28a96b9c9975aae6e2e89ff1ccc4}} 
+\index{Connection@{Connection}!exec@{exec}}
+\index{exec@{exec}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily exec (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+BC layer for a wide-\/spread use-\/case of old DBAL APIs
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000054}{Deprecated}}]This API is deprecated and will be removed after 2022 \end{DoxyRefDesc}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_a4d3f28a96b9c9975aae6e2e89ff1ccc4}{Abstract\+Connection\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a0f741e7b39d5685c909a704708ed1033}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_a0f741e7b39d5685c909a704708ed1033}} 
+\index{Connection@{Connection}!prepare@{prepare}}
+\index{prepare@{prepare}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily prepare (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+Prepares an SQL statement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sql} & The SQL statement to prepare.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_a0f741e7b39d5685c909a704708ed1033}{Abstract\+Connection\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aa2abfe403c1c4c09147743788d76d1ae}} 
+\index{Connection@{Connection}!query@{query}}
+\index{query@{query}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily query (\begin{DoxyParamCaption}\item[{string}]{\$sql }\end{DoxyParamCaption})}
+
+BC layer for a wide-\/spread use-\/case of old DBAL APIs
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000053}{Deprecated}}]This API is deprecated and will be removed after 2022 \end{DoxyRefDesc}
+
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_aa2abfe403c1c4c09147743788d76d1ae}{Abstract\+Connection\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_connection_aebaea4cae21e0e75ec1489c1648caeb3}} 
+\index{Connection@{Connection}!rollBack@{rollBack}}
+\index{rollBack@{rollBack}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{rollBack()}{rollBack()}}
+{\footnotesize\ttfamily roll\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Cancels any database changes done during the current transaction.
+
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_connection_middleware_aebaea4cae21e0e75ec1489c1648caeb3}{Abstract\+Connection\+Middleware}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Logging/Connection.\+php\end{DoxyCompactItemize}

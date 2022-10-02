@@ -1,0 +1,203 @@
+\hypertarget{class_amp_1_1_socket_1_1_datagram_socket}{}\doxysection{Datagram\+Socket Class Reference}
+\label{class_amp_1_1_socket_1_1_datagram_socket}\index{DatagramSocket@{DatagramSocket}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a9c8dd7737c0955373556cb3087c657db}{\+\_\+\+\_\+construct}} (\$socket, int \$chunk\+Size=self\+::\+DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE)
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_ac805eb3a4eb25b19c1ab093023da4d35}{receive}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a7552e2c27133212f01a1da4343d88631}{send}} (\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}} \$address, string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a8c5a689e9be7d35d0d01d0194637a7d2}{get\+Resource}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_aa46bdf577fe031bf1287312dfbebb9a6}{reference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a8098142e52cdc2bf80db924208412038}{unreference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a80d6b5b35631ea18a4316608bbbc8aea}{is\+Closed}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a59bc5cde6d5044bb76ee8464738a87a2}{get\+Address}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_a905a179d8462e758e2e26b3db7b222c5}{set\+Chunk\+Size}} (int \$chunk\+Size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket_aa625d8d2d4b242a3e35eb24e1e4acad5}{bind}} (string \$uri, ?\mbox{\hyperlink{class_amp_1_1_socket_1_1_bind_context}{Bind\+Context}} \$context=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a0ff55380fb3b64bee19cfb8cc966d3ff}\label{class_amp_1_1_socket_1_1_datagram_socket_a0ff55380fb3b64bee19cfb8cc966d3ff}} 
+const {\bfseries DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE} = 8192
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a9c8dd7737c0955373556cb3087c657db}\label{class_amp_1_1_socket_1_1_datagram_socket_a9c8dd7737c0955373556cb3087c657db}} 
+\index{DatagramSocket@{DatagramSocket}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$socket,  }\item[{int}]{\$chunk\+Size = {\ttfamily self\+:\+:DEFAULT\+\_\+CHUNK\+\_\+SIZE} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$socket} & A bound udp socket resource \\
+\hline
+int & {\em \$chunk\+Size} & Maximum chunk size for the\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If a stream resource is not given for \$socket. @psalm-\/suppress Type\+Does\+Not\+Contain\+Type
+
+@psalm-\/suppress Redundant\+Condition Resolution of the deferred above might read immediately again\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a421831a265621325e1fdd19aace0c758}\label{class_amp_1_1_socket_1_1_datagram_socket_a421831a265621325e1fdd19aace0c758}} 
+\index{DatagramSocket@{DatagramSocket}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Automatically cancels the loop watcher. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_aa625d8d2d4b242a3e35eb24e1e4acad5}\label{class_amp_1_1_socket_1_1_datagram_socket_aa625d8d2d4b242a3e35eb24e1e4acad5}} 
+\index{DatagramSocket@{DatagramSocket}!bind@{bind}}
+\index{bind@{bind}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily static bind (\begin{DoxyParamCaption}\item[{string}]{\$uri,  }\item[{?\mbox{\hyperlink{class_amp_1_1_socket_1_1_bind_context}{Bind\+Context}}}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a new Datagram (UDP server) on the specified server address.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$uri} & URI in scheme\+://host\+:port format. UDP is assumed if no scheme is present. \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_bind_context}{Bind\+Context}} | null & {\em \$context} & Context options for listening.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_datagram_socket}{Datagram\+Socket}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & If binding to the specified URI failed. \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If an invalid scheme is given. \mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_socket_1_1_datagram_socket_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{DatagramSocket@{DatagramSocket}!close@{close}}
+\index{close@{close}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the datagram socket and stops receiving data. Any pending read is resolved with null. @psalm-\/suppress Invalid\+Property\+Assignment\+Value\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a59bc5cde6d5044bb76ee8464738a87a2}\label{class_amp_1_1_socket_1_1_datagram_socket_a59bc5cde6d5044bb76ee8464738a87a2}} 
+\index{DatagramSocket@{DatagramSocket}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a8c5a689e9be7d35d0d01d0194637a7d2}\label{class_amp_1_1_socket_1_1_datagram_socket_a8c5a689e9be7d35d0d01d0194637a7d2}} 
+\index{DatagramSocket@{DatagramSocket}!getResource@{getResource}}
+\index{getResource@{getResource}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Raw stream socket resource.
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a80d6b5b35631ea18a4316608bbbc8aea}\label{class_amp_1_1_socket_1_1_datagram_socket_a80d6b5b35631ea18a4316608bbbc8aea}} 
+\index{DatagramSocket@{DatagramSocket}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_ac805eb3a4eb25b19c1ab093023da4d35}\label{class_amp_1_1_socket_1_1_datagram_socket_ac805eb3a4eb25b19c1ab093023da4d35}} 
+\index{DatagramSocket@{DatagramSocket}!receive@{receive}}
+\index{receive@{receive}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}array\{0\+: \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}}, 1\+: string\}$\vert$null\texorpdfstring{$>$}{>} Resolves with null if the socket is closed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_pending_receive_error}{Pending\+Receive\+Error}}} & If a receive request is already pending. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_aa46bdf577fe031bf1287312dfbebb9a6}\label{class_amp_1_1_socket_1_1_datagram_socket_aa46bdf577fe031bf1287312dfbebb9a6}} 
+\index{DatagramSocket@{DatagramSocket}!reference@{reference}}
+\index{reference@{reference}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+References the receive watcher.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}{Loop\+::reference()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a7552e2c27133212f01a1da4343d88631}\label{class_amp_1_1_socket_1_1_datagram_socket_a7552e2c27133212f01a1da4343d88631}} 
+\index{DatagramSocket@{DatagramSocket}!send@{send}}
+\index{send@{send}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}}}]{\$address,  }\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}} & {\em \$address} & \\
+\hline
+string & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$int$>$ Resolves with the number of bytes written to the socket.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & If the UDP socket closes before the data can be sent. \\
+\hline
+\end{DoxyExceptions}
+@psalm-\/suppress Type\+Does\+Not\+Contain\+Type\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a905a179d8462e758e2e26b3db7b222c5}\label{class_amp_1_1_socket_1_1_datagram_socket_a905a179d8462e758e2e26b3db7b222c5}} 
+\index{DatagramSocket@{DatagramSocket}!setChunkSize@{setChunkSize}}
+\index{setChunkSize@{setChunkSize}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{setChunkSize()}{setChunkSize()}}
+{\footnotesize\ttfamily set\+Chunk\+Size (\begin{DoxyParamCaption}\item[{int}]{\$chunk\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$chunk\+Size} & The new maximum packet size to receive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_datagram_socket_a8098142e52cdc2bf80db924208412038}\label{class_amp_1_1_socket_1_1_datagram_socket_a8098142e52cdc2bf80db924208412038}} 
+\index{DatagramSocket@{DatagramSocket}!unreference@{unreference}}
+\index{unreference@{unreference}!DatagramSocket@{DatagramSocket}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Unreferences the receive watcher.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}{Loop\+::unreference()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Datagram\+Socket.\+php\end{DoxyCompactItemize}

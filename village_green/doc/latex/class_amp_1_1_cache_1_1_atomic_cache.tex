@@ -1,0 +1,216 @@
+\hypertarget{class_amp_1_1_cache_1_1_atomic_cache}{}\doxysection{Atomic\+Cache Class Reference}
+\label{class_amp_1_1_cache_1_1_atomic_cache}\index{AtomicCache@{AtomicCache}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_a6bada3d8785a27301945e8615e6c1c4b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache}{Serialized\+Cache}} \$cache, \mbox{\hyperlink{interface_amp_1_1_sync_1_1_keyed_mutex}{Keyed\+Mutex}} \$mutex)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_a5ba2409326fbc4d818527b235351dcb7}{compute}} (string \$key, callable \$create, ?int \$ttl=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_ab5c88603df61e8ad7a94a4fba8844875}{compute\+If\+Absent}} (string \$key, callable \$create, ?int \$ttl=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_af7112ab5164d5cb63f74d5533ec159b7}{compute\+If\+Present}} (string \$key, callable \$create, ?int \$ttl=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_a3ae167f48770390fe0d27399bf87de7d}{set}} (string \$key, \$value, ?int \$ttl=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_a0cf528a9877eb7b5aa22e841a0c81669}{get}} (string \$key, \$default=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_atomic_cache_ac03d0331371567f0a97a6782746abd55}{delete}} (string \$key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@template TValue 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_a6bada3d8785a27301945e8615e6c1c4b}\label{class_amp_1_1_cache_1_1_atomic_cache_a6bada3d8785a27301945e8615e6c1c4b}} 
+\index{AtomicCache@{AtomicCache}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache}{Serialized\+Cache}}}]{\$cache,  }\item[{\mbox{\hyperlink{interface_amp_1_1_sync_1_1_keyed_mutex}{Keyed\+Mutex}}}]{\$mutex }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Serialized\+Cache$<$\+TValue$>$} & \$cache \\
+\hline
+Keyed\+Mutex & {\em \$mutex} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_a5ba2409326fbc4d818527b235351dcb7}\label{class_amp_1_1_cache_1_1_atomic_cache_a5ba2409326fbc4d818527b235351dcb7}} 
+\index{AtomicCache@{AtomicCache}!compute@{compute}}
+\index{compute@{compute}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily compute (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{callable}]{\$create,  }\item[{?int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Obtains the lock for the given key, then invokes the \$create callback with the current cached value (which may be null if the key did not exist in the cache). The value returned from the callback is stored in the cache and the promise returned from this method is resolved with the value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+ & {\em callable(string,mixed$\vert$null)} & mixed \$create Receives \$key and \$value as parameters. \\
+\hline
+int | null & {\em \$ttl} & Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$mixed$>$
+\end{DoxyReturn}
+@psalm-\/param callable(string, TValue$\vert$null)\+:(TValue$\vert$\+Promise$<$\+TValue$>$$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, mixed, mixed, TValue\texorpdfstring{$>$}{>}) \$create @psalm-\/return Promise$<$\+TValue$>$
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & If the \$create callback throws an exception while generating the value. \\
+\hline
+{\em Serialization\+Exception} & If serializing the value returned from the callback fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_ab5c88603df61e8ad7a94a4fba8844875}\label{class_amp_1_1_cache_1_1_atomic_cache_ab5c88603df61e8ad7a94a4fba8844875}} 
+\index{AtomicCache@{AtomicCache}!computeIfAbsent@{computeIfAbsent}}
+\index{computeIfAbsent@{computeIfAbsent}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{computeIfAbsent()}{computeIfAbsent()}}
+{\footnotesize\ttfamily compute\+If\+Absent (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{callable}]{\$create,  }\item[{?int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Attempts to get the value for the given key. If the key is not found, the key is locked, the \$create callback is invoked with the key as the first parameter. The value returned from the callback is stored in the cache and the promise returned from this method is resolved with the value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+ & {\em callable(string)} & mixed \$create Receives \$key as parameter. \\
+\hline
+int | null & {\em \$ttl} & Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$mixed$>$
+\end{DoxyReturn}
+@psalm-\/param callable(string, TValue$\vert$null)\+:(TValue$\vert$\+Promise$<$\+TValue$>$$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, mixed, mixed, TValue\texorpdfstring{$>$}{>}) \$create @psalm-\/return Promise$<$\+TValue$>$
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & If the \$create callback throws an exception while generating the value. \\
+\hline
+{\em Serialization\+Exception} & If serializing the value returned from the callback fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_af7112ab5164d5cb63f74d5533ec159b7}\label{class_amp_1_1_cache_1_1_atomic_cache_af7112ab5164d5cb63f74d5533ec159b7}} 
+\index{AtomicCache@{AtomicCache}!computeIfPresent@{computeIfPresent}}
+\index{computeIfPresent@{computeIfPresent}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{computeIfPresent()}{computeIfPresent()}}
+{\footnotesize\ttfamily compute\+If\+Present (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{callable}]{\$create,  }\item[{?int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Attempts to get the value for the given key. If the key exists, the key is locked, the \$create callback is invoked with the key as the first parameter and the current key value as the second parameter. The value returned from the callback is stored in the cache and the promise returned from this method is resolved with the value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+ & {\em callable(string,mixed)} & mixed \$create Receives \$key and \$value as parameters. \\
+\hline
+int | null & {\em \$ttl} & Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$mixed$>$
+\end{DoxyReturn}
+@psalm-\/param callable(string, TValue$\vert$null)\+: (TValue$\vert$\+Promise$<$\+TValue$>$$\vert$\textbackslash{}\+Generator\texorpdfstring{$<$}{<}mixed, mixed, mixed, TValue\texorpdfstring{$>$}{>}) \$create @psalm-\/return Promise$<$\+TValue$>$
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & If the \$create callback throws an exception while generating the value. \\
+\hline
+{\em Serialization\+Exception} & If serializing the value returned from the callback fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_ac03d0331371567f0a97a6782746abd55}\label{class_amp_1_1_cache_1_1_atomic_cache_ac03d0331371567f0a97a6782746abd55}} 
+\index{AtomicCache@{AtomicCache}!delete@{delete}}
+\index{delete@{delete}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+The lock is obtained for the key before deleting the key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}bool$\vert$null\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache_ac03d0331371567f0a97a6782746abd55}{Serialized\+Cache\+::delete()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_a0cf528a9877eb7b5aa22e841a0c81669}\label{class_amp_1_1_cache_1_1_atomic_cache_a0cf528a9877eb7b5aa22e841a0c81669}} 
+\index{AtomicCache@{AtomicCache}!get@{get}}
+\index{get@{get}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{}]{\$default = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Returns the cached value for the key or the given default value if the key does not exist.
+
+@template TDefault
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+mixed & {\em \$default} & Default value returned if the key does not exist. Null by default.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}mixed$\vert$null\texorpdfstring{$>$}{>} Resolved with null iff \$default is null.
+\end{DoxyReturn}
+@psalm-\/param TDefault \$default @psalm-\/return \mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}TValue$\vert$\+TDefault\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & \\
+\hline
+{\em Serialization\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache_ac009cde80e71e456bac8af41d5d021c6}{Serialized\+Cache\+::get()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_cache_1_1_atomic_cache_a3ae167f48770390fe0d27399bf87de7d}\label{class_amp_1_1_cache_1_1_atomic_cache_a3ae167f48770390fe0d27399bf87de7d}} 
+\index{AtomicCache@{AtomicCache}!set@{set}}
+\index{set@{set}!AtomicCache@{AtomicCache}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{}]{\$value,  }\item[{?int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+The lock is obtained for the key before setting the value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+mixed & {\em \$value} & Value to cache. \\
+\hline
+int | null & {\em \$ttl} & Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$void$>$ Resolves either successfully or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure.
+\end{DoxyReturn}
+@psalm-\/param TValue \$value @psalm-\/return Promise$<$void$>$
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}}} & \\
+\hline
+{\em Serialization\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_cache_1_1_serialized_cache_aaca1a6d3cb4e65def1552d4705c9854d}{Serialized\+Cache\+::set()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/cache/lib/Atomic\+Cache.\+php\end{DoxyCompactItemize}

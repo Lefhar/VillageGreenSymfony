@@ -1,0 +1,155 @@
+\hypertarget{class_monolog_1_1_handler_1_1_elastica_handler}{}\doxysection{Elastica\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_elastica_handler}\index{ElasticaHandler@{ElasticaHandler}}
+Inheritance diagram for Elastica\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_elastica_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_a74db697212aa9a377b79f0aaee997487}{\+\_\+\+\_\+construct}} (Client \$client, array \$options=\mbox{[}$\,$\mbox{]}, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_a87804f2347dd817752ef1faa1f0dea05}{set\+Formatter}} (\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}} \$formatter)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_a944865926b0302ad2d802bea1eec3a57}{handle\+Batch}} (array \$records)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_a0bd80b04e1992562f7eacea2097d3d9d}{get\+Default\+Formatter}} ()
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler_a79287725003bcfef219a6442ec4204de}{bulk\+Send}} (array \$documents)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_ad1405dc1ba2e288764378e79bff7a87d}\label{class_monolog_1_1_handler_1_1_elastica_handler_ad1405dc1ba2e288764378e79bff7a87d}} 
+{\bfseries \$client}
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a011800c63ece4cbbfa77136a20607023}\label{class_monolog_1_1_handler_1_1_elastica_handler_a011800c63ece4cbbfa77136a20607023}} 
+{\bfseries \$options} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Elastic Search handler
+
+Usage example\+:
+
+\$client = new \textbackslash{}\+Elastica\textbackslash{}\+Client(); \$options = array( \textquotesingle{}index\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}elastic\+\_\+index\+\_\+name\textquotesingle{}, \textquotesingle{}type\textquotesingle{} =\texorpdfstring{$>$}{>} \textquotesingle{}elastic\+\_\+doc\+\_\+type\textquotesingle{}, \mbox{\hyperlink{namespace_types}{Types}} have been removed in Elastica 7 ); \$handler = new \mbox{\hyperlink{class_monolog_1_1_handler_1_1_elastica_handler}{Elastica\+Handler}}(\$client, \$options); \$log = new \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}}(\textquotesingle{}application\textquotesingle{}); \$log-\/\texorpdfstring{$>$}{>}push\+Handler(\$handler);
+
+\begin{DoxyAuthor}{Author}
+Jelle Vink \href{mailto:jelle.vink@gmail.com}{\texttt{ jelle.\+vink@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a74db697212aa9a377b79f0aaee997487}\label{class_monolog_1_1_handler_1_1_elastica_handler_a74db697212aa9a377b79f0aaee997487}} 
+\index{ElasticaHandler@{ElasticaHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Client}]{\$client,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}},  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Client & {\em \$client} & Elastica Client object \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$options} & \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} configuration \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a79287725003bcfef219a6442ec4204de}\label{class_monolog_1_1_handler_1_1_elastica_handler_a79287725003bcfef219a6442ec4204de}} 
+\index{ElasticaHandler@{ElasticaHandler}!bulkSend@{bulkSend}}
+\index{bulkSend@{bulkSend}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{bulkSend()}{bulkSend()}}
+{\footnotesize\ttfamily bulk\+Send (\begin{DoxyParamCaption}\item[{array}]{\$documents }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Use Elasticsearch bulk API to send list of documents
+
+
+\begin{DoxyParams}[1]{Parameters}
+Document\mbox{[}$\,$\mbox{]} & {\em \$documents} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Runtime\+Exception \mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a0bd80b04e1992562f7eacea2097d3d9d}\label{class_monolog_1_1_handler_1_1_elastica_handler_a0bd80b04e1992562f7eacea2097d3d9d}} 
+\index{ElasticaHandler@{ElasticaHandler}!getDefaultFormatter@{getDefaultFormatter}}
+\index{getDefaultFormatter@{getDefaultFormatter}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{getDefaultFormatter()}{getDefaultFormatter()}}
+{\footnotesize\ttfamily get\+Default\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a1a49b8dded6e91a52e2fd07195d334da}\label{class_monolog_1_1_handler_1_1_elastica_handler_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{ElasticaHandler@{ElasticaHandler}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a944865926b0302ad2d802bea1eec3a57}\label{class_monolog_1_1_handler_1_1_elastica_handler_a944865926b0302ad2d802bea1eec3a57}} 
+\index{ElasticaHandler@{ElasticaHandler}!handleBatch@{handleBatch}}
+\index{handleBatch@{handleBatch}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{handleBatch()}{handleBatch()}}
+{\footnotesize\ttfamily handle\+Batch (\begin{DoxyParamCaption}\item[{array}]{\$records }\end{DoxyParamCaption})}
+
+Handles a set of records at once.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$records} & The records to handle (an array of record arrays)\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Record\mbox{[}\mbox{]} \$records 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler_a944865926b0302ad2d802bea1eec3a57}{Handler}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_a87804f2347dd817752ef1faa1f0dea05}\label{class_monolog_1_1_handler_1_1_elastica_handler_a87804f2347dd817752ef1faa1f0dea05}} 
+\index{ElasticaHandler@{ElasticaHandler}!setFormatter@{setFormatter}}
+\index{setFormatter@{setFormatter}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{setFormatter()}{setFormatter()}}
+{\footnotesize\ttfamily set\+Formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_monolog_1_1_formatter_1_1_formatter_interface}{Formatter\+Interface}}}]{\$formatter }\end{DoxyParamCaption})}
+
+Sets the formatter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Formatter\+Interface & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_monolog_1_1_handler_1_1_handler_interface}{Handler\+Interface}} self
+\end{DoxyReturn}
+ 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_formattable_handler_interface_a87804f2347dd817752ef1faa1f0dea05}{Formattable\+Handler\+Interface}}.
+
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_elastica_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_elastica_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{ElasticaHandler@{ElasticaHandler}!write@{write}}
+\index{write@{write}!ElasticaHandler@{ElasticaHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the record down to the log of the implementing handler
+
+@phpstan-\/param Formatted\+Record \$record 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Elastica\+Handler.\+php\end{DoxyCompactItemize}

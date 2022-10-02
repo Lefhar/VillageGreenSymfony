@@ -1,0 +1,120 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream}{}\doxysection{Resource\+Output\+Stream Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_resource_output_stream}\index{ResourceOutputStream@{ResourceOutputStream}}
+Inheritance diagram for Resource\+Output\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_resource_output_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_a8c29af408105ba75bc2b973aa4bc1bf7}{write}} (string \$data)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_a2c139e2abe8f411b886615bb65729864}{end}} (string \$final\+Data=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_a8c5a689e9be7d35d0d01d0194637a7d2}{get\+Resource}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_a905a179d8462e758e2e26b3db7b222c5}{set\+Chunk\+Size}} (int \$chunk\+Size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_aab6289679a96904041617c6ad2d90e62}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_aab6289679a96904041617c6ad2d90e62}} 
+const {\bfseries MAX\+\_\+\+CONSECUTIVE\+\_\+\+EMPTY\+\_\+\+WRITES} = 3
+\item 
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_a3daa25ae891c92f422ec46573272aa1e}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_a3daa25ae891c92f422ec46573272aa1e}} 
+const {\bfseries LARGE\+\_\+\+CHUNK\+\_\+\+SIZE} = 128 $\ast$ 1024
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Output stream abstraction for PHP\textquotesingle{}s stream resources. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{ResourceOutputStream@{ResourceOutputStream}!close@{close}}
+\index{close@{close}!ResourceOutputStream@{ResourceOutputStream}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the stream forcefully. Multiple {\ttfamily \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close()}}} calls are ignored.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+@psalm-\/suppress Invalid\+Property\+Assignment\+Value psalm reports this as closed-\/resource\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_a2c139e2abe8f411b886615bb65729864}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_a2c139e2abe8f411b886615bb65729864}} 
+\index{ResourceOutputStream@{ResourceOutputStream}!end@{end}}
+\index{end@{end}!ResourceOutputStream@{ResourceOutputStream}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily end (\begin{DoxyParamCaption}\item[{string}]{\$final\+Data = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Closes the stream after all pending writes have been completed. Optionally writes a final data chunk before.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$final\+Data} & Bytes to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Succeeds once the data has been successfully written to the stream.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_closed_exception}{Closed\+Exception}}} & If the stream has already been closed. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_output_stream_a2c139e2abe8f411b886615bb65729864}{Output\+Stream}}.
+
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_a8c5a689e9be7d35d0d01d0194637a7d2}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_a8c5a689e9be7d35d0d01d0194637a7d2}} 
+\index{ResourceOutputStream@{ResourceOutputStream}!getResource@{getResource}}
+\index{getResource@{getResource}!ResourceOutputStream@{ResourceOutputStream}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null Stream resource or null if \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_resource_output_stream_a2c139e2abe8f411b886615bb65729864}{end()}} has been called or the stream closed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_a905a179d8462e758e2e26b3db7b222c5}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_a905a179d8462e758e2e26b3db7b222c5}} 
+\index{ResourceOutputStream@{ResourceOutputStream}!setChunkSize@{setChunkSize}}
+\index{setChunkSize@{setChunkSize}!ResourceOutputStream@{ResourceOutputStream}}
+\doxysubsubsection{\texorpdfstring{setChunkSize()}{setChunkSize()}}
+{\footnotesize\ttfamily set\+Chunk\+Size (\begin{DoxyParamCaption}\item[{int}]{\$chunk\+Size }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_resource_output_stream_a8c29af408105ba75bc2b973aa4bc1bf7}\label{class_amp_1_1_byte_stream_1_1_resource_output_stream_a8c29af408105ba75bc2b973aa4bc1bf7}} 
+\index{ResourceOutputStream@{ResourceOutputStream}!write@{write}}
+\index{write@{write}!ResourceOutputStream@{ResourceOutputStream}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+Writes data to the stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & Bytes to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} Succeeds once the data has been successfully written to the stream.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_closed_exception}{Closed\+Exception}}} & If the stream has already been closed. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_output_stream_a8c29af408105ba75bc2b973aa4bc1bf7}{Output\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/Resource\+Output\+Stream.\+php\end{DoxyCompactItemize}

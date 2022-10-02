@@ -1,0 +1,35 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_manager}{}\doxysection{Driver\+Manager Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_driver_manager}\index{DriverManager@{DriverManager}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_manager_ad9bdac1c5dfa2d96210795e7711b8b93}{get\+Available\+Drivers}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory for creating \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}}\} instances.
+\end{DoxySeeAlso}
+@psalm-\/type Override\+Params = array\{ charset?\+: string, dbname?\+: string, default\+\_\+dbname?\+: string, driver?\+: key-\/of\texorpdfstring{$<$}{<}self\+::\+DRIVER\+\_\+\+MAP\texorpdfstring{$>$}{>}, driver\+Class?\+: class-\/string$<$\+Driver$>$, driver\+Options?\+: array$<$mixed$>$, host?\+: string, password?\+: string, path?\+: string, pdo?\+: \textbackslash{}\+PDO, platform?\+: Platforms\textbackslash{}\+Abstract\+Platform, port?\+: int, user?\+: string, unix\+\_\+socket?\+: string, \} @psalm-\/type Params = array\{ charset?\+: string, dbname?\+: string, default\+\_\+dbname?\+: string, driver?\+: key-\/of\texorpdfstring{$<$}{<}self\+::\+DRIVER\+\_\+\+MAP\texorpdfstring{$>$}{>}, driver\+Class?\+: class-\/string$<$\+Driver$>$, driver\+Options?\+: array$<$mixed$>$, host?\+: string, keep\+Slave?\+: bool, keep\+Replica?\+: bool, master?\+: Override\+Params, memory?\+: bool, password?\+: string, path?\+: string, pdo?\+: \textbackslash{}\+PDO, platform?\+: Platforms\textbackslash{}\+Abstract\+Platform, port?\+: int, primary?\+: Override\+Params, replica?\+: array$<$\+Override\+Params$>$, sharding?\+: array$<$string,mixed$>$, slaves?\+: array$<$\+Override\+Params$>$, user?\+: string, wrapper\+Class?\+: class-\/string$<$\+Connection$>$, unix\+\_\+socket?\+: string, \} \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_c_1_2wamp64_2racine_2www_2cda_2fil_rouge_2village_green_2vendor_2doctrine_2dbal_2src_2_connectica8edfb7f984df198905cb67636281b1}{C\+:/wamp64/racine/www/cda/fil\+\_\+rouge/village\+\_\+green/vendor/doctrine/dbal/src/\+Connections/\+Primary\+Read\+Replica\+Connection.\+php}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_driver_manager_ad9bdac1c5dfa2d96210795e7711b8b93}\label{class_doctrine_1_1_d_b_a_l_1_1_driver_manager_ad9bdac1c5dfa2d96210795e7711b8b93}} 
+\index{DriverManager@{DriverManager}!getAvailableDrivers@{getAvailableDrivers}}
+\index{getAvailableDrivers@{getAvailableDrivers}!DriverManager@{DriverManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableDrivers()}{getAvailableDrivers()}}
+{\footnotesize\ttfamily static get\+Available\+Drivers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the list of supported drivers.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/Driver\+Manager.\+php\end{DoxyCompactItemize}

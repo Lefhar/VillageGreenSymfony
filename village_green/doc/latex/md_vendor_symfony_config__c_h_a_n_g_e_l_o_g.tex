@@ -1,0 +1,105 @@
+\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1367}{}\doxysection{5.\+3.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1367}
+
+\begin{DoxyItemize}
+\item Add support for generating {\ttfamily Config\+Builder} for extensions
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1368}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1368}
+
+\begin{DoxyItemize}
+\item updated the signature of method {\ttfamily Node\+Definition\+::set\+Deprecated()} to {\ttfamily Node\+Definition\+::set\+Deprecation(string \$package, string \$version, string \$message)}
+\item updated the signature of method {\ttfamily Base\+Node\+::set\+Deprecated()} to {\ttfamily Base\+Node\+::set\+Deprecation(string \$package, string \$version, string \$message)}
+\item deprecated passing a null message to {\ttfamily Base\+Node\+::set\+Deprecated()} to un-\/deprecate a node
+\item deprecated {\ttfamily Base\+Node\+::get\+Deprecation\+Message()}, use {\ttfamily Base\+Node\+::get\+Deprecation()} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1369}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1369}
+
+\begin{DoxyItemize}
+\item Dropped support for constructing a {\ttfamily Tree\+Builder} without passing root node information.
+\item Removed the {\ttfamily root()} method in {\ttfamily Tree\+Builder}, pass the root node information to the constructor instead
+\item Added method {\ttfamily get\+Child\+Node\+Definitions()} to Parent\+Node\+Definition\+Interface
+\item Removed {\ttfamily File\+Loader\+Load\+Exception}, use {\ttfamily Loader\+Load\+Exception} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1370}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1370}
+
+\begin{DoxyItemize}
+\item added a way to exclude patterns of resources from being imported by the {\ttfamily import()} method
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1371}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1371}
+
+\begin{DoxyItemize}
+\item deprecated using environment variables with {\ttfamily cannot\+Be\+Empty()} if the value is validated with {\ttfamily validate()}
+\item made {\ttfamily Resource\textbackslash{}$\ast$} classes final and not implement {\ttfamily Serializable} anymore
+\item deprecated the {\ttfamily root()} method in {\ttfamily Tree\+Builder}, pass the root node information to the constructor instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1372}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1372}
+
+\begin{DoxyItemize}
+\item deprecated constructing a {\ttfamily Tree\+Builder} without passing root node information
+\item renamed {\ttfamily File\+Loader\+Load\+Exception} to {\ttfamily Loader\+Load\+Exception}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1373}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1373}
+
+\begin{DoxyItemize}
+\item added {\ttfamily set\+Path\+Separator} method to {\ttfamily Node\+Builder} class
+\item added third {\ttfamily \$path\+Separator} constructor argument to {\ttfamily Base\+Node}
+\item the {\ttfamily Processor} class has been made final
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1374}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1374}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Config\+Cache\+Pass}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1375}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1375}
+
+\begin{DoxyItemize}
+\item added {\ttfamily set\+Deprecated()} method to indicate a deprecated node
+\item added {\ttfamily Xml\+Utils\+::parse()} method to parse an XML string
+\item deprecated {\ttfamily Config\+Cache\+Pass}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1376}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1376}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Reflection\+Class\+Resource} class
+\item added second {\ttfamily \$exists} constructor argument to {\ttfamily Class\+Existence\+Resource}
+\item made {\ttfamily Class\+Existence\+Resource} work with interfaces and traits
+\item added {\ttfamily Config\+Cache\+Pass} (originally in Framework\+Bundle)
+\item added {\ttfamily cast\+To\+Array()} helper to turn any config value into an array
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1377}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1377}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Reference\+Dumper} class
+\item removed the {\ttfamily Resource\+Interface\+::is\+Fresh()} method
+\item removed {\ttfamily BCResource\+Interface\+Checker} class
+\item removed {\ttfamily Resource\+Interface\+::get\+Resource()} method
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1378}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1378}
+The edge case of defining just one value for nodes of type Enum is now allowed\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$rootNode}
+\DoxyCodeLine{    -\/>children()}
+\DoxyCodeLine{        -\/>enumNode(\textcolor{stringliteral}{'variable'})}
+\DoxyCodeLine{            -\/>values([\textcolor{stringliteral}{'value'}])}
+\DoxyCodeLine{        -\/>end()}
+\DoxyCodeLine{    -\/>end()}
+\DoxyCodeLine{;}
+
+\end{DoxyCode}
+
+
+Before\+: {\ttfamily Invalid\+Argument\+Exception} (variable must contain at least two distinct elements). After\+: the code will work as expected and it will restrict the values of the {\ttfamily variable} option to just {\ttfamily value}.
+
+
+\begin{DoxyItemize}
+\item deprecated the {\ttfamily Resource\+Interface\+::is\+Fresh()} method. If you implement custom resource types and they can be validated that way, make them implement the new {\ttfamily Self\+Checking\+Resource\+Interface}.
+\item deprecated the get\+Resource() method in Resource\+Interface. You can still call this method on concrete classes implementing the interface, but it does not make sense at the interface level as you need to know about the particular type of resource at hand to understand the semantics of the returned value.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1379}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1379}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Config\+Cache\+Interface}, {\ttfamily Config\+Cache\+Factory\+Interface} and a basic {\ttfamily Config\+Cache\+Factory} implementation to delegate creation of Config\+Cache instances
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1380}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1380}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Array\+Node\+Definition\+::can\+Be\+Enabled()} and {\ttfamily Array\+Node\+Definition\+::can\+Be\+Disabled()} to ease configuration when some sections are respectively disabled / enabled by default.
+\item added a {\ttfamily normalize\+Keys()} method for array nodes (to avoid key normalization)
+\item added numerical type handling for config definitions
+\item added convenience methods for optional configuration sections to {\ttfamily Array\+Node\+Definition}
+\item added a utils class for XML manipulations
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1381}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_config__c_h_a_n_g_e_l_o_g_autotoc_md1381}
+
+\begin{DoxyItemize}
+\item added a way to add documentation on configuration
+\item implemented {\ttfamily Serializable} on resources
+\item {\ttfamily Loader\+Resolver\+Interface} is now used instead of {\ttfamily Loader\+Resolver} for type hinting 
+\end{DoxyItemize}

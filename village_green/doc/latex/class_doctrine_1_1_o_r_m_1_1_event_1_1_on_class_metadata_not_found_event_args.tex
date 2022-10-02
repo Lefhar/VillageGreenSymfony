@@ -1,0 +1,76 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args}{}\doxysection{On\+Class\+Metadata\+Not\+Found\+Event\+Args Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args}\index{OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}}
+Inheritance diagram for On\+Class\+Metadata\+Not\+Found\+Event\+Args\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_a1ccb838537ca5dfa2e13763ccf050382}{\+\_\+\+\_\+construct}} (\$class\+Name, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}} \$object\+Manager)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_acd3ec2c5e8e106c95983ad623dc0db42}{set\+Found\+Metadata}} (?\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$class\+Metadata=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_a835a05ec88ac3a6496065a8adc453b31}{get\+Found\+Metadata}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_ab8f8ee56588ebf5091c288e44ebdfaf4}{get\+Class\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class that holds event arguments for a {\ttfamily on\+Class\+Metadata\+Not\+Found} event.
+
+This object is mutable by design, allowing callbacks having access to it to set the found metadata in it, and therefore \char`\"{}cancelling\char`\"{} a {\ttfamily on\+Class\+Metadata\+Not\+Found} event 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_a1ccb838537ca5dfa2e13763ccf050382}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_a1ccb838537ca5dfa2e13763ccf050382}} 
+\index{OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_object_manager}{Object\+Manager}}}]{\$object\+Manager }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_ab8f8ee56588ebf5091c288e44ebdfaf4}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_ab8f8ee56588ebf5091c288e44ebdfaf4}} 
+\index{OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}!getClassName@{getClassName}}
+\index{getClassName@{getClassName}!OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}}
+\doxysubsubsection{\texorpdfstring{getClassName()}{getClassName()}}
+{\footnotesize\ttfamily get\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve class name for which a failed metadata fetch attempt was executed
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_a835a05ec88ac3a6496065a8adc453b31}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_a835a05ec88ac3a6496065a8adc453b31}} 
+\index{OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}!getFoundMetadata@{getFoundMetadata}}
+\index{getFoundMetadata@{getFoundMetadata}!OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}}
+\doxysubsubsection{\texorpdfstring{getFoundMetadata()}{getFoundMetadata()}}
+{\footnotesize\ttfamily get\+Found\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Class\+Metadata$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_acd3ec2c5e8e106c95983ad623dc0db42}\label{class_doctrine_1_1_o_r_m_1_1_event_1_1_on_class_metadata_not_found_event_args_acd3ec2c5e8e106c95983ad623dc0db42}} 
+\index{OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}!setFoundMetadata@{setFoundMetadata}}
+\index{setFoundMetadata@{setFoundMetadata}!OnClassMetadataNotFoundEventArgs@{OnClassMetadataNotFoundEventArgs}}
+\doxysubsubsection{\texorpdfstring{setFoundMetadata()}{setFoundMetadata()}}
+{\footnotesize\ttfamily set\+Found\+Metadata (\begin{DoxyParamCaption}\item[{?\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$class\+Metadata = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Event/On\+Class\+Metadata\+Not\+Found\+Event\+Args.\+php\end{DoxyCompactItemize}

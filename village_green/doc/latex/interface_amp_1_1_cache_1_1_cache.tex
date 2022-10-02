@@ -1,0 +1,97 @@
+\hypertarget{interface_amp_1_1_cache_1_1_cache}{}\doxysection{Cache Interface Reference}
+\label{interface_amp_1_1_cache_1_1_cache}\index{Cache@{Cache}}
+Inheritance diagram for Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_cache_1_1_cache}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ac009cde80e71e456bac8af41d5d021c6}{get}} (string \$key)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}{set}} (string \$key, string \$value, int \$ttl=null)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache_ac03d0331371567f0a97a6782746abd55}{delete}} (string \$key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_cache_1_1_cache_ac03d0331371567f0a97a6782746abd55}\label{interface_amp_1_1_cache_1_1_cache_ac03d0331371567f0a97a6782746abd55}} 
+\index{Cache@{Cache}!delete@{delete}}
+\index{delete@{delete}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Deletes a value associated with the given key if it exists.
+
+Implementations SHOULD return boolean {\ttfamily true} or {\ttfamily false} to indicate whether the specified key existed at the time the delete operation was requested. If such information is not available, the implementation MUST resolve the promise with {\ttfamily null}.
+
+Implementations MUST transparently succeed operations for non-\/existent keys.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}bool$\vert$null\texorpdfstring{$>$}{>} Resolves to {\ttfamily true} / {\ttfamily false} to indicate whether the key existed or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure. May also resolve with {\ttfamily null} if that information is not available. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_cache_1_1_array_cache_ac03d0331371567f0a97a6782746abd55}{Array\+Cache}}, \mbox{\hyperlink{class_amp_1_1_cache_1_1_null_cache_ac03d0331371567f0a97a6782746abd55}{Null\+Cache}}, and \mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_ac03d0331371567f0a97a6782746abd55}{Prefix\+Cache}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_cache_1_1_cache_ac009cde80e71e456bac8af41d5d021c6}\label{interface_amp_1_1_cache_1_1_cache_ac009cde80e71e456bac8af41d5d021c6}} 
+\index{Cache@{Cache}!get@{get}}
+\index{get@{get}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{string}]{\$key }\end{DoxyParamCaption})}
+
+Gets a value associated with the given key.
+
+If the specified key doesn\textquotesingle{}t exist implementations MUST succeed the resulting promise with {\ttfamily null}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>} Resolves to the cached value nor {\ttfamily null} if it doesn\textquotesingle{}t exist or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_cache_1_1_array_cache_ac009cde80e71e456bac8af41d5d021c6}{Array\+Cache}}, \mbox{\hyperlink{class_amp_1_1_cache_1_1_null_cache_ac009cde80e71e456bac8af41d5d021c6}{Null\+Cache}}, and \mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_ac009cde80e71e456bac8af41d5d021c6}{Prefix\+Cache}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_cache_1_1_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}\label{interface_amp_1_1_cache_1_1_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}} 
+\index{Cache@{Cache}!set@{set}}
+\index{set@{set}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{string}]{\$key,  }\item[{string}]{\$value,  }\item[{int}]{\$ttl = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Sets a value associated with the given key. Overrides existing values (if they exist).
+
+The eventual resolution value of the resulting promise is unimportant. The success or failure of the promise indicates the operation\textquotesingle{}s success.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$key} & string \mbox{\hyperlink{interface_amp_1_1_cache_1_1_cache}{Cache}} key. \\
+\hline
+{\em \$value} & string Value to cache. \\
+\hline
+{\em \$ttl} & int Timeout in seconds. The default {\ttfamily null} \$ttl value indicates no timeout. Values less than 0 MUST throw an \textbackslash{}\+Error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$void$>$ Resolves either successfully or fails with a \mbox{\hyperlink{class_amp_1_1_cache_1_1_cache_exception}{Cache\+Exception}} on failure. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_cache_1_1_prefix_cache_ad23ed25b771e6fda5d85cb6fbf4b21ac}{Prefix\+Cache}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/cache/lib/Cache.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+\hypertarget{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1582}{}\doxysection{5.\+4}\label{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1582}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily Mock\+Http\+Client\+::set\+Response\+Factory()} method to be able to set response factory after client creating
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1583}{}\doxysection{5.\+3}\label{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1583}
+
+\begin{DoxyItemize}
+\item Implement {\ttfamily Http\+Client\+Interface\+::with\+Options()} from {\ttfamily symfony/contracts} v2.\+4
+\item Add {\ttfamily Decorator\+Trait} to ease writing simple decorators
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1584}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1584}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Async\+Decorator\+Trait} to ease processing responses without breaking async
+\item added support for pausing responses with a new {\ttfamily pause\+\_\+handler} callable exposed as an info item
+\item added {\ttfamily Streamable\+Interface} to ease turning responses into PHP streams
+\item added {\ttfamily Mock\+Response\+::get\+Request\+Method()} and {\ttfamily get\+Request\+Url()} to allow inspecting which request has been sent
+\item added {\ttfamily Event\+Source\+Http\+Client} a Server-\/\+Sent events stream implementing the \href{https://www.w3.org/TR/eventsource/\#eventsource}{\texttt{ Event\+Source specification}}
+\item added option \char`\"{}extra.\+curl\char`\"{} to allow setting additional curl options in {\ttfamily Curl\+Http\+Client}
+\item added {\ttfamily Retryable\+Http\+Client} to automatically retry failed HTTP requests.
+\item added {\ttfamily extra.\+trace\+\_\+content} option to {\ttfamily Traceable\+Http\+Client} to prevent it from keeping the content in memory
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1585}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1585}
+
+\begin{DoxyItemize}
+\item added {\ttfamily No\+Private\+Network\+Http\+Client} decorator
+\item added {\ttfamily Amp\+Http\+Client}, a portable HTTP/2 implementation based on Amp
+\item added {\ttfamily Logger\+Aware\+Interface} to {\ttfamily Scoping\+Http\+Client} and {\ttfamily Traceable\+Http\+Client}
+\item made {\ttfamily Http\+Client\+::create()} return an {\ttfamily Amp\+Http\+Client} when {\ttfamily amphp/http-\/client} is found but curl is not or too old
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1586}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1586}
+
+\begin{DoxyItemize}
+\item added {\ttfamily canceled} to {\ttfamily Response\+Interface\+::get\+Info()}
+\item added {\ttfamily Http\+Client\+::create\+For\+Base\+Uri()}
+\item added {\ttfamily Httplug\+Client} with support for sync and async requests
+\item added {\ttfamily max\+\_\+duration} option
+\item added support for NTLM authentication
+\item added {\ttfamily Stream\+Wrapper} to cast any {\ttfamily Response\+Interface} instances to PHP streams.
+\item added {\ttfamily \$response-\/\texorpdfstring{$>$}{>}to\+Stream()} to cast responses to regular PHP streams
+\item made {\ttfamily Psr18\+Client} implement relevant PSR-\/17 factories and have streaming responses
+\item added {\ttfamily Traceable\+Http\+Client}, {\ttfamily Http\+Client\+Data\+Collector} and {\ttfamily Http\+Client\+Pass} to integrate with the web profiler
+\item allow enabling buffering conditionally with a Closure
+\item allow option \char`\"{}buffer\char`\"{} to be a stream resource
+\item allow arbitrary values for the \char`\"{}json\char`\"{} option
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1587}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_http_client__c_h_a_n_g_e_l_o_g_autotoc_md1587}
+
+\begin{DoxyItemize}
+\item added the component 
+\end{DoxyItemize}

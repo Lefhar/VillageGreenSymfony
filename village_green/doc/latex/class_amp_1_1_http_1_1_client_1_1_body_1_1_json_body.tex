@@ -1,0 +1,101 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body}{}\doxysection{Json\+Body Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body}\index{JsonBody@{JsonBody}}
+Inheritance diagram for Json\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_aa2761a5ddf52b6aff74740193416255e}{\+\_\+\+\_\+construct}} (\$data, int \$options=0, int \$depth=512)
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a157e0005d82edaa21cbea07fdc5c62da}{get\+Headers}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a79fd9be53b1ab8783733113e557a1c7d}{create\+Body\+Stream}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a67da67f6676fbfc2a87e7c2567a5b260}{get\+Body\+Length}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_aa2761a5ddf52b6aff74740193416255e}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_aa2761a5ddf52b6aff74740193416255e}} 
+\index{JsonBody@{JsonBody}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!JsonBody@{JsonBody}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{int}]{\$options = {\ttfamily 0},  }\item[{int}]{\$depth = {\ttfamily 512} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body}{Json\+Body}} constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & \\
+\hline
+int & {\em \$options} & \\
+\hline
+int & {\em \$depth} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_http_exception}{Http\+Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a79fd9be53b1ab8783733113e557a1c7d}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a79fd9be53b1ab8783733113e557a1c7d}} 
+\index{JsonBody@{JsonBody}!createBodyStream@{createBodyStream}}
+\index{createBodyStream@{createBodyStream}!JsonBody@{JsonBody}}
+\doxysubsubsection{\texorpdfstring{createBodyStream()}{createBodyStream()}}
+{\footnotesize\ttfamily create\+Body\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create the HTTP message body to be sent.
+
+Further calls MUST return a new stream to make it possible to resend bodies on redirects.
+
+\begin{DoxyReturn}{Returns}
+Input\+Stream 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a79fd9be53b1ab8783733113e557a1c7d}{Request\+Body}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a67da67f6676fbfc2a87e7c2567a5b260}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a67da67f6676fbfc2a87e7c2567a5b260}} 
+\index{JsonBody@{JsonBody}!getBodyLength@{getBodyLength}}
+\index{getBodyLength@{getBodyLength}!JsonBody@{JsonBody}}
+\doxysubsubsection{\texorpdfstring{getBodyLength()}{getBodyLength()}}
+{\footnotesize\ttfamily get\+Body\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the HTTP message body length. If not available, return -\/1.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a67da67f6676fbfc2a87e7c2567a5b260}{Request\+Body}}.
+
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a157e0005d82edaa21cbea07fdc5c62da}\label{class_amp_1_1_http_1_1_client_1_1_body_1_1_json_body_a157e0005d82edaa21cbea07fdc5c62da}} 
+\index{JsonBody@{JsonBody}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!JsonBody@{JsonBody}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve a key-\/value array of headers to add to the outbound request.
+
+The resolved promise value must be a key-\/value array mapping header fields to values.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_request_body_a157e0005d82edaa21cbea07fdc5c62da}{Request\+Body}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Body/Json\+Body.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy}{}\doxysection{Error\+Level\+Activation\+Strategy Class Reference}
+\label{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy}\index{ErrorLevelActivationStrategy@{ErrorLevelActivationStrategy}}
+Inheritance diagram for Error\+Level\+Activation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy_a1b553b856848b6af7b1b948f1b1be38f}{\+\_\+\+\_\+construct}} (\$action\+Level)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}{is\+Handler\+Activated}} (array \$record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Error level based activation strategy.
+
+\begin{DoxyAuthor}{Author}
+Johannes M. Schmitt \href{mailto:schmittjoh@gmail.com}{\texttt{ schmittjoh@gmail.\+com}}
+\end{DoxyAuthor}
+@phpstan-\/import-\/type Level from \textbackslash{}\+Monolog\textbackslash{}\+Logger @phpstan-\/import-\/type Level\+Name from \textbackslash{}\+Monolog\textbackslash{}\+Logger 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy_a1b553b856848b6af7b1b948f1b1be38f}\label{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy_a1b553b856848b6af7b1b948f1b1be38f}} 
+\index{ErrorLevelActivationStrategy@{ErrorLevelActivationStrategy}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ErrorLevelActivationStrategy@{ErrorLevelActivationStrategy}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$action\+Level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$action\+Level} & Level or name or value\\
+\hline
+\end{DoxyParams}
+@phpstan-\/param Level$\vert$\+Level\+Name$\vert$\+Log\+Level\+::$\ast$ \$action\+Level 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}\label{class_monolog_1_1_handler_1_1_fingers_crossed_1_1_error_level_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}} 
+\index{ErrorLevelActivationStrategy@{ErrorLevelActivationStrategy}!isHandlerActivated@{isHandlerActivated}}
+\index{isHandlerActivated@{isHandlerActivated}!ErrorLevelActivationStrategy@{ErrorLevelActivationStrategy}}
+\doxysubsubsection{\texorpdfstring{isHandlerActivated()}{isHandlerActivated()}}
+{\footnotesize\ttfamily is\+Handler\+Activated (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})}
+
+Returns whether the given record activates the handler.
+
+@phpstan-\/param Record \$record 
+
+Implements \mbox{\hyperlink{interface_monolog_1_1_handler_1_1_fingers_crossed_1_1_activation_strategy_interface_a0e278ca4f1f1f74ef438d80fba7a0c7d}{Activation\+Strategy\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_fingers_crossed_1_1_http_code_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}{Http\+Code\+Activation\+Strategy}}, and \mbox{\hyperlink{class_symfony_1_1_bridge_1_1_monolog_1_1_handler_1_1_fingers_crossed_1_1_not_found_activation_strategy_a0e278ca4f1f1f74ef438d80fba7a0c7d}{Not\+Found\+Activation\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/\+Fingers\+Crossed/Error\+Level\+Activation\+Strategy.\+php\end{DoxyCompactItemize}

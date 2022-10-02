@@ -1,0 +1,55 @@
+\hypertarget{class_amp_1_1_byte_stream_1_1_in_memory_stream}{}\doxysection{In\+Memory\+Stream Class Reference}
+\label{class_amp_1_1_byte_stream_1_1_in_memory_stream}\index{InMemoryStream@{InMemoryStream}}
+Inheritance diagram for In\+Memory\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_byte_stream_1_1_in_memory_stream}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_in_memory_stream_af8ee8fee3b49227b8c1a4d18db0a2fd9}{\+\_\+\+\_\+construct}} (string \$contents=null)
+\item 
+\mbox{\hyperlink{class_amp_1_1_byte_stream_1_1_in_memory_stream_a64571309bfb3238c65fd3c2898f92440}{read}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input stream with a single already known data chunk. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_in_memory_stream_af8ee8fee3b49227b8c1a4d18db0a2fd9}\label{class_amp_1_1_byte_stream_1_1_in_memory_stream_af8ee8fee3b49227b8c1a4d18db0a2fd9}} 
+\index{InMemoryStream@{InMemoryStream}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!InMemoryStream@{InMemoryStream}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$contents = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | null & {\em \$contents} & Data chunk or {\ttfamily null} for no data chunk. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_byte_stream_1_1_in_memory_stream_a64571309bfb3238c65fd3c2898f92440}\label{class_amp_1_1_byte_stream_1_1_in_memory_stream_a64571309bfb3238c65fd3c2898f92440}} 
+\index{InMemoryStream@{InMemoryStream}!read@{read}}
+\index{read@{read}!InMemoryStream@{InMemoryStream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads data from the stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}string$\vert$null\texorpdfstring{$>$}{>} Resolves with the full contents or {\ttfamily null} if the stream has closed / already been consumed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_byte_stream_1_1_input_stream_a64571309bfb3238c65fd3c2898f92440}{Input\+Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/byte-\/stream/lib/In\+Memory\+Stream.\+php\end{DoxyCompactItemize}

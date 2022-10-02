@@ -1,0 +1,139 @@
+\hypertarget{class_monolog_1_1_registry}{}\doxysection{Registry Class Reference}
+\label{class_monolog_1_1_registry}\index{Registry@{Registry}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_registry_a070c916ecc58142db3db5e3a07d06146}{add\+Logger}} (\mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} \$logger, ?string \$name=null, bool \$overwrite=false)
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_registry_a1c2174fb7c3d9f299a6992a05ab23a40}{has\+Logger}} (\$logger)
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_registry_a47d149835d7e7c187131192a6a2a39ae}{remove\+Logger}} (\$logger)
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_registry_a342b1676bf9651477ec79ed93f606244}{clear}} ()
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_registry_a0ebda2d4f8517d892a36a5c08e879415}{get\+Instance}} (\$name)
+\item 
+static \mbox{\hyperlink{class_monolog_1_1_registry_a61a19cb43fb2530a2f880c0d0672c471}{\+\_\+\+\_\+call\+Static}} (\$name, \$arguments)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Monolog log registry
+
+Allows to get {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}}} instances in the global scope via static method calls on this class.
+
+{\ttfamily  \$application = new Monolog\textbackslash{}\+Logger(\textquotesingle{}application\textquotesingle{}); \$api = new Monolog\textbackslash{}\+Logger(\textquotesingle{}api\textquotesingle{});}
+
+{\ttfamily Monolog\textbackslash{}\+Registry\+::add\+Logger(\$application); Monolog\textbackslash{}\+Registry\+::add\+Logger(\$api);}
+
+{\ttfamily function test\+Logger() \{ Monolog\textbackslash{}\+Registry\+::api()-\/\texorpdfstring{$>$}{>}error(\textquotesingle{}Sent to \$api \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance\textquotesingle{}); Monolog\textbackslash{}\+Registry\+::application()-\/\texorpdfstring{$>$}{>}error(\textquotesingle{}Sent to \$application \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance\textquotesingle{}); \} }
+
+\begin{DoxyAuthor}{Author}
+Tomas Tatarko \href{mailto:tomas@tatarko.sk}{\texttt{ tomas@tatarko.\+sk}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_registry_a61a19cb43fb2530a2f880c0d0672c471}\label{class_monolog_1_1_registry_a61a19cb43fb2530a2f880c0d0672c471}} 
+\index{Registry@{Registry}!\_\_callStatic@{\_\_callStatic}}
+\index{\_\_callStatic@{\_\_callStatic}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{\_\_callStatic()}{\_\_callStatic()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+call\+Static (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance from the registry via static method call
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the requested \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance \\
+\hline
+mixed\mbox{[}$\,$\mbox{]} & {\em \$arguments} & Arguments passed to static method call \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception If named \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance is not in the registry \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} Requested instance of \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_registry_a070c916ecc58142db3db5e3a07d06146}\label{class_monolog_1_1_registry_a070c916ecc58142db3db5e3a07d06146}} 
+\index{Registry@{Registry}!addLogger@{addLogger}}
+\index{addLogger@{addLogger}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{addLogger()}{addLogger()}}
+{\footnotesize\ttfamily static add\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_monolog_1_1_logger}{Logger}}}]{\$logger,  }\item[{?string}]{\$name = {\ttfamily null},  }\item[{bool}]{\$overwrite = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds new logging channel to the registry
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} & {\em \$logger} & Instance of the logging channel \\
+\hline
+string | null & {\em \$name} & Name of the logging channel (\$logger-\/\texorpdfstring{$>$}{>}get\+Name() by default) \\
+\hline
+bool & {\em \$overwrite} & Overwrite instance in the registry if the given name already exists? \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception If \$overwrite set to false and named \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance already exists \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monolog_1_1_registry_a342b1676bf9651477ec79ed93f606244}\label{class_monolog_1_1_registry_a342b1676bf9651477ec79ed93f606244}} 
+\index{Registry@{Registry}!clear@{clear}}
+\index{clear@{clear}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily static clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Clears the registry \mbox{\Hypertarget{class_monolog_1_1_registry_a0ebda2d4f8517d892a36a5c08e879415}\label{class_monolog_1_1_registry_a0ebda2d4f8517d892a36a5c08e879415}} 
+\index{Registry@{Registry}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance from the registry
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the requested \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception If named \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} instance is not in the registry \mbox{\Hypertarget{class_monolog_1_1_registry_a1c2174fb7c3d9f299a6992a05ab23a40}\label{class_monolog_1_1_registry_a1c2174fb7c3d9f299a6992a05ab23a40}} 
+\index{Registry@{Registry}!hasLogger@{hasLogger}}
+\index{hasLogger@{hasLogger}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{hasLogger()}{hasLogger()}}
+{\footnotesize\ttfamily static has\+Logger (\begin{DoxyParamCaption}\item[{}]{\$logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if such logging channel exists by name or instance
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} & {\em \$logger} & Name or logger instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_monolog_1_1_registry_a47d149835d7e7c187131192a6a2a39ae}\label{class_monolog_1_1_registry_a47d149835d7e7c187131192a6a2a39ae}} 
+\index{Registry@{Registry}!removeLogger@{removeLogger}}
+\index{removeLogger@{removeLogger}!Registry@{Registry}}
+\doxysubsubsection{\texorpdfstring{removeLogger()}{removeLogger()}}
+{\footnotesize\ttfamily static remove\+Logger (\begin{DoxyParamCaption}\item[{}]{\$logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Removes instance from registry by name or instance
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | \mbox{\hyperlink{class_monolog_1_1_logger}{Logger}} & {\em \$logger} & Name or logger instance \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/Registry.\+php\end{DoxyCompactItemize}

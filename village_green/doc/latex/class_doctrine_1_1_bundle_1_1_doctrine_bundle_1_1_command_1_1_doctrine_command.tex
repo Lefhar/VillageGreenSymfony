@@ -1,0 +1,91 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command}{}\doxysection{Doctrine\+Command Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command}\index{DoctrineCommand@{DoctrineCommand}}
+Inheritance diagram for Doctrine\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.616822cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a64b8f0f8fcaec691e36a51c7e44a1837}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a64b8f0f8fcaec691e36a51c7e44a1837}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}} \$doctrine)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_ade1d7cc436a99fd9b2fa26ea046a0dba}{get\+Entity\+Generator}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a00c6a185817c56d142faf8a2d0335ac9}{get\+Entity\+Manager}} (\$name, \$shard\+Id=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a3ee6c557cc697428bb25147c529c86b6}{get\+Doctrine\+Connection}} (\$name)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_acc3f6d56ba900ce5cd6f6e14a95d4e51}{get\+Doctrine}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for Doctrine console commands to extend from. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_acc3f6d56ba900ce5cd6f6e14a95d4e51}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_acc3f6d56ba900ce5cd6f6e14a95d4e51}} 
+\index{DoctrineCommand@{DoctrineCommand}!getDoctrine@{getDoctrine}}
+\index{getDoctrine@{getDoctrine}!DoctrineCommand@{DoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{getDoctrine()}{getDoctrine()}}
+{\footnotesize\ttfamily get\+Doctrine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+Manager\+Registry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a3ee6c557cc697428bb25147c529c86b6}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a3ee6c557cc697428bb25147c529c86b6}} 
+\index{DoctrineCommand@{DoctrineCommand}!getDoctrineConnection@{getDoctrineConnection}}
+\index{getDoctrineConnection@{getDoctrineConnection}!DoctrineCommand@{DoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{getDoctrineConnection()}{getDoctrineConnection()}}
+{\footnotesize\ttfamily get\+Doctrine\+Connection (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get a doctrine dbal connection by symfony name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Connection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_ade1d7cc436a99fd9b2fa26ea046a0dba}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_ade1d7cc436a99fd9b2fa26ea046a0dba}} 
+\index{DoctrineCommand@{DoctrineCommand}!getEntityGenerator@{getEntityGenerator}}
+\index{getEntityGenerator@{getEntityGenerator}!DoctrineCommand@{DoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{getEntityGenerator()}{getEntityGenerator()}}
+{\footnotesize\ttfamily get\+Entity\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+get a doctrine entity generator
+
+\begin{DoxyReturn}{Returns}
+Entity\+Generator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a00c6a185817c56d142faf8a2d0335ac9}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_command_1_1_doctrine_command_a00c6a185817c56d142faf8a2d0335ac9}} 
+\index{DoctrineCommand@{DoctrineCommand}!getEntityManager@{getEntityManager}}
+\index{getEntityManager@{getEntityManager}!DoctrineCommand@{DoctrineCommand}}
+\doxysubsubsection{\texorpdfstring{getEntityManager()}{getEntityManager()}}
+{\footnotesize\ttfamily get\+Entity\+Manager (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$shard\+Id = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get a doctrine entity manager by symfony name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+int | null & {\em \$shard\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity\+Manager 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Command/Doctrine\+Command.\+php\end{DoxyCompactItemize}

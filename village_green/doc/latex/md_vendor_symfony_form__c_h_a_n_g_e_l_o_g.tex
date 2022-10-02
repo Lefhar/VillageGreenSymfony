@@ -1,0 +1,498 @@
+\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1532}{}\doxysection{5.\+4}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1532}
+
+\begin{DoxyItemize}
+\item Deprecate calling {\ttfamily Form\+Error\+Iterator\+::children()} if the current element is not iterable.
+\item Allow to pass {\ttfamily Translatable\+Message} objects to the {\ttfamily help} option
+\item Add the {\ttfamily Enum\+Type}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1533}{}\doxysection{5.\+3}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1533}
+
+\begin{DoxyItemize}
+\item Changed {\ttfamily \$forms} parameter type of the {\ttfamily Data\+Mapper\+Interface\+::map\+Data\+To\+Forms()} method from {\ttfamily iterable} to {\ttfamily \textbackslash{}Traversable}.
+\item Changed {\ttfamily \$forms} parameter type of the {\ttfamily Data\+Mapper\+Interface\+::map\+Forms\+To\+Data()} method from {\ttfamily iterable} to {\ttfamily \textbackslash{}Traversable}.
+\item Deprecated passing an array as the second argument of the {\ttfamily Data\+Mapper\+::map\+Data\+To\+Forms()} method, pass {\ttfamily \textbackslash{}Traversable} instead.
+\item Deprecated passing an array as the first argument of the {\ttfamily Data\+Mapper\+::map\+Forms\+To\+Data()} method, pass {\ttfamily \textbackslash{}Traversable} instead.
+\item Deprecated passing an array as the second argument of the {\ttfamily Checkbox\+List\+Mapper\+::map\+Data\+To\+Forms()} method, pass {\ttfamily \textbackslash{}Traversable} instead.
+\item Deprecated passing an array as the first argument of the {\ttfamily Checkbox\+List\+Mapper\+::map\+Forms\+To\+Data()} method, pass {\ttfamily \textbackslash{}Traversable} instead.
+\item Deprecated passing an array as the second argument of the {\ttfamily Radio\+List\+Mapper\+::map\+Data\+To\+Forms()} method, pass {\ttfamily \textbackslash{}Traversable} instead.
+\item Deprecated passing an array as the first argument of the {\ttfamily Radio\+List\+Mapper\+::map\+Forms\+To\+Data()} method, pass {\ttfamily \textbackslash{}Traversable} instead.
+\item Added a {\ttfamily choice\+\_\+translation\+\_\+parameters} option to {\ttfamily Choice\+Type}
+\item Add {\ttfamily Uuid\+Type} and {\ttfamily Ulid\+Type}
+\item Dependency on {\ttfamily symfony/intl} was removed. Install {\ttfamily symfony/intl} if you are using {\ttfamily Locale\+Type}, {\ttfamily Country\+Type}, {\ttfamily Currency\+Type}, {\ttfamily Language\+Type} or {\ttfamily Timezone\+Type}.
+\item Add {\ttfamily priority} option to {\ttfamily Base\+Type} and sorting view fields
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1534}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1534}
+
+\begin{DoxyItemize}
+\item Added support for using the {\ttfamily \{\{ label \}\}} placeholder in constraint messages, which is replaced in the {\ttfamily Violation\+Mapper} by the corresponding field form label.
+\item Added {\ttfamily Data\+Mapper}, {\ttfamily Chain\+Accessor}, {\ttfamily Property\+Path\+Accessor} and {\ttfamily Callback\+Accessor} with new callable {\ttfamily getter} and {\ttfamily setter} options for each form type
+\item Deprecated {\ttfamily Property\+Path\+Mapper} in favor of {\ttfamily Data\+Mapper} and {\ttfamily Property\+Path\+Accessor}
+\item Added an {\ttfamily html5} option to {\ttfamily Money\+Type} and {\ttfamily Percent\+Type}, to use {\ttfamily \texorpdfstring{$<$}{<}input type=\char`\"{}number\char`\"{} /\texorpdfstring{$>$}{>}}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1535}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1535}
+
+\begin{DoxyItemize}
+\item Deprecated not configuring the {\ttfamily rounding\+\_\+mode} option of the {\ttfamily Percent\+Type}. It will default to {\ttfamily \textbackslash{}Number\+Formatter\+::\+ROUND\+\_\+\+HALFUP} in Symfony 6.
+\item Deprecated not passing a rounding mode to the constructor of {\ttfamily Percent\+To\+Localized\+String\+Transformer}. It will default to {\ttfamily \textbackslash{}Number\+Formatter\+::\+ROUND\+\_\+\+HALFUP} in Symfony 6.
+\item Added {\ttfamily collection\+\_\+entry} block prefix to {\ttfamily Collection\+Type} entries
+\item Added a {\ttfamily choice\+\_\+filter} option to {\ttfamily Choice\+Type}
+\item Added argument {\ttfamily callable$\vert$null \$filter} to {\ttfamily Choice\+List\+Factory\+Interface\+::create\+List\+From\+Choices()} and {\ttfamily create\+List\+From\+Loader()} -\/ not defining them is deprecated.
+\item Added a {\ttfamily Choice\+List} facade to leverage explicit choice list caching based on options
+\item Added an {\ttfamily Abstract\+Choice\+Loader} to simplify implementations and handle global optimizations
+\item The {\ttfamily view\+\_\+timezone} option defaults to the {\ttfamily model\+\_\+timezone} if no {\ttfamily reference\+\_\+date} is configured.
+\item Implementing the {\ttfamily Form\+Config\+Interface} without implementing the {\ttfamily get\+Is\+Empty\+Callback()} method is deprecated. The method will be added to the interface in 6.\+0.
+\item Implementing the {\ttfamily Form\+Config\+Builder\+Interface} without implementing the {\ttfamily set\+Is\+Empty\+Callback()} method is deprecated. The method will be added to the interface in 6.\+0.
+\item Added a {\ttfamily rounding\+\_\+mode} option for the Percent\+Type and correctly round the value when submitted
+\item Deprecated {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Extension\textbackslash{}Validator\textbackslash{}Util\textbackslash{}Server\+Params} in favor of its parent class {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Util\textbackslash{}Server\+Params}
+\item Added the {\ttfamily html5} option to the {\ttfamily Color\+Type} to validate the input
+\item Deprecated {\ttfamily Number\+To\+Localized\+String\+Transformer\+::\+ROUND\+\_\+$\ast$} constants, use {\ttfamily \textbackslash{}Number\+Formatter\+::\+ROUND\+\_\+$\ast$} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1536}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1536}
+
+\begin{DoxyItemize}
+\item Removed support for using different values for the \char`\"{}model\+\_\+timezone\char`\"{} and \char`\"{}view\+\_\+timezone\char`\"{} options of the {\ttfamily Time\+Type} without configuring a reference date.
+\item Removed the {\ttfamily scale} option of the {\ttfamily Integer\+Type}.
+\item Using the {\ttfamily date\+\_\+format}, {\ttfamily date\+\_\+widget}, and {\ttfamily time\+\_\+widget} options of the {\ttfamily Date\+Time\+Type} when the {\ttfamily widget} option is set to {\ttfamily single\+\_\+text} is not supported anymore.
+\item The {\ttfamily format} option of {\ttfamily Date\+Type} and {\ttfamily Date\+Time\+Type} cannot be used when the {\ttfamily html5} option is enabled.
+\item Using names for buttons that do not start with a letter, a digit, or an underscore throw an exception
+\item Using names for buttons that do not contain only letters, digits, underscores, hyphens, and colons throw an exception.
+\item removed the {\ttfamily Choice\+Loader\+Interface} implementation in {\ttfamily Country\+Type}, {\ttfamily Language\+Type}, {\ttfamily Locale\+Type} and {\ttfamily Currency\+Type}
+\item removed {\ttfamily get\+Extended\+Type()} method of the {\ttfamily Form\+Type\+Extension\+Interface}
+\item added static {\ttfamily get\+Extended\+Types()} method to the {\ttfamily Form\+Type\+Extension\+Interface}
+\item calling to {\ttfamily Form\+Renderer\+::search\+And\+Render\+Block()} method for fields which were already rendered throw a {\ttfamily Bad\+Method\+Call\+Exception}
+\item removed the {\ttfamily regions} option of the {\ttfamily Timezone\+Type}
+\item removed the {\ttfamily \$scale} argument of the {\ttfamily Integer\+To\+Localized\+String\+Transformer}
+\item removed {\ttfamily Templating\+Extension} and {\ttfamily Templating\+Renderer\+Engine} classes, use Twig instead
+\item passing a null message when instantiating a {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Form\+Error} is not allowed
+\item removed support for using {\ttfamily int} or {\ttfamily float} as data for the {\ttfamily Number\+Type} when the {\ttfamily input} option is set to {\ttfamily string}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1537}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1537}
+
+\begin{DoxyItemize}
+\item add new {\ttfamily Week\+Type}
+\item using different values for the \char`\"{}model\+\_\+timezone\char`\"{} and \char`\"{}view\+\_\+timezone\char`\"{} options of the {\ttfamily Time\+Type} without configuring a reference date is deprecated
+\item preferred choices are repeated in the list of all choices
+\item deprecated using {\ttfamily int} or {\ttfamily float} as data for the {\ttfamily Number\+Type} when the {\ttfamily input} option is set to {\ttfamily string}
+\item The type guesser guesses the HTML accept attribute when a mime type is configured in the File or Image constraint.
+\item Overriding the methods {\ttfamily Form\+Integration\+Test\+Case\+::set\+Up()}, {\ttfamily Type\+Test\+Case\+::set\+Up()} and {\ttfamily Type\+Test\+Case\+::tear\+Down()} without the {\ttfamily void} return-\/type is deprecated.
+\item marked all dispatched event classes as {\ttfamily @final}
+\item Added the {\ttfamily validate} option to {\ttfamily Submit\+Type} to toggle the browser built-\/in form validation.
+\item Added the {\ttfamily alpha3} option to {\ttfamily Language\+Type} and {\ttfamily Country\+Type} to use alpha3 instead of alpha2 codes
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1538}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1538}
+
+\begin{DoxyItemize}
+\item added a {\ttfamily symbol} option to the {\ttfamily Percent\+Type} that allows to disable or customize the output of the percent character
+\item Using the {\ttfamily format} option of {\ttfamily Date\+Type} and {\ttfamily Date\+Time\+Type} when the {\ttfamily html5} option is enabled is deprecated.
+\item Using names for buttons that do not start with a letter, a digit, or an underscore is deprecated and will lead to an exception in 5.\+0.
+\item Using names for buttons that do not contain only letters, digits, underscores, hyphens, and colons is deprecated and will lead to an exception in 5.\+0.
+\item added {\ttfamily html5} option to {\ttfamily Number\+Type} that allows to render {\ttfamily type=\char`\"{}number\char`\"{}} input fields
+\item deprecated using the {\ttfamily date\+\_\+format}, {\ttfamily date\+\_\+widget}, and {\ttfamily time\+\_\+widget} options of the {\ttfamily Date\+Time\+Type} when the {\ttfamily widget} option is set to {\ttfamily single\+\_\+text}
+\item added {\ttfamily block\+\_\+prefix} option to {\ttfamily Base\+Type}.
+\item added {\ttfamily help\+\_\+html} option to display the {\ttfamily help} text as HTML.
+\item {\ttfamily Form\+Error} doesn\textquotesingle{}t implement {\ttfamily Serializable} anymore
+\item {\ttfamily Form\+Data\+Collector} has been marked as {\ttfamily final}
+\item added {\ttfamily label\+\_\+translation\+\_\+parameters}, {\ttfamily attr\+\_\+translation\+\_\+parameters}, {\ttfamily help\+\_\+translation\+\_\+parameters} options to {\ttfamily Form\+Type} to pass translation parameters to form labels, attributes ({\ttfamily placeholder} and {\ttfamily title}) and help text respectively. The passed parameters will replace placeholders in translation messages.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }OrderType \textcolor{keyword}{extends} AbstractType}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} buildForm(FormBuilderInterface \$builder, array \$options)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$builder-\/>add(\textcolor{stringliteral}{'comment'}, TextType::class, [}
+\DoxyCodeLine{            \textcolor{stringliteral}{'label'} => \textcolor{stringliteral}{'Comment to the order to \%company\%'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'label\_translation\_parameters'} => [}
+\DoxyCodeLine{                \textcolor{stringliteral}{'\%company\%'} => \textcolor{stringliteral}{'Acme'},}
+\DoxyCodeLine{            ],}
+\DoxyCodeLine{            \textcolor{stringliteral}{'help'} => \textcolor{stringliteral}{'The address of the \%company\% is \%address\%'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'help\_translation\_parameters'} => [}
+\DoxyCodeLine{                \textcolor{stringliteral}{'\%company\%'} => \textcolor{stringliteral}{'Acme Ltd.'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'\%address\%'} => \textcolor{stringliteral}{'4 Form street, Symfonyville'},}
+\DoxyCodeLine{            ],}
+\DoxyCodeLine{        ])}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item added the {\ttfamily input\+\_\+format} option to {\ttfamily Date\+Type}, {\ttfamily Date\+Time\+Type}, and {\ttfamily Time\+Type} to specify the input format when setting the {\ttfamily input} option to {\ttfamily string}
+\item dispatch {\ttfamily Pre\+Submit\+Event} on {\ttfamily form.\+pre\+\_\+submit}
+\item dispatch {\ttfamily Submit\+Event} on {\ttfamily form.\+submit}
+\item dispatch {\ttfamily Post\+Submit\+Event} on {\ttfamily form.\+post\+\_\+submit}
+\item dispatch {\ttfamily Pre\+Set\+Data\+Event} on {\ttfamily form.\+pre\+\_\+set\+\_\+data}
+\item dispatch {\ttfamily Post\+Set\+Data\+Event} on {\ttfamily form.\+post\+\_\+set\+\_\+data}
+\item added an {\ttfamily input} option to {\ttfamily Number\+Type}
+\item removed default option grouping in {\ttfamily Timezone\+Type}, use {\ttfamily group\+\_\+by} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1539}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1539}
+
+\begin{DoxyItemize}
+\item The {\ttfamily get\+Extended\+Type()} method of the {\ttfamily Form\+Type\+Extension\+Interface} is deprecated and will be removed in 5.\+0. Type extensions must implement the static {\ttfamily get\+Extended\+Types()} method instead and return an iterable of extended types.
+
+Before\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }FooTypeExtension \textcolor{keyword}{extends} AbstractTypeExtension}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{function} getExtendedType()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} FormType::class;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// ...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+After\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }FooTypeExtension \textcolor{keyword}{extends} AbstractTypeExtension}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{function} getExtendedTypes(): iterable}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} [FormType::class];}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// ...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item deprecated the {\ttfamily \$scale} argument of the {\ttfamily Integer\+To\+Localized\+String\+Transformer}
+\item added {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Clearable\+Errors\+Interface}
+\item deprecated calling {\ttfamily Form\+Renderer\+::search\+And\+Render\+Block} for fields which were already rendered
+\item added a cause when a CSRF error has occurred
+\item deprecated the {\ttfamily scale} option of the {\ttfamily Integer\+Type}
+\item removed restriction on allowed HTTP methods
+\item deprecated the {\ttfamily regions} option of the {\ttfamily Timezone\+Type}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1540}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1540}
+
+\begin{DoxyItemize}
+\item added {\ttfamily input=datetime\+\_\+immutable} to {\ttfamily Date\+Type}, {\ttfamily Time\+Type}, {\ttfamily Date\+Time\+Type}
+\item added {\ttfamily rounding\+\_\+mode} option to {\ttfamily Money\+Type}
+\item added {\ttfamily choice\+\_\+translation\+\_\+locale} option to {\ttfamily Country\+Type}, {\ttfamily Language\+Type}, {\ttfamily Locale\+Type} and {\ttfamily Currency\+Type}
+\item deprecated the {\ttfamily Choice\+Loader\+Interface} implementation in {\ttfamily Country\+Type}, {\ttfamily Language\+Type}, {\ttfamily Locale\+Type} and {\ttfamily Currency\+Type}
+\item added {\ttfamily input=datetime\+\_\+immutable} to Date\+Type, Time\+Type, Date\+Time\+Type
+\item added {\ttfamily rounding\+\_\+mode} option to Money\+Type
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1541}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1541}
+
+\begin{DoxyItemize}
+\item using the {\ttfamily choices} option in {\ttfamily Country\+Type}, {\ttfamily Currency\+Type}, {\ttfamily Language\+Type}, {\ttfamily Locale\+Type}, and {\ttfamily Timezone\+Type} when the {\ttfamily choice\+\_\+loader} option is not {\ttfamily null} is not supported anymore and the configured choices will be ignored
+\item callable strings that are passed to the options of the {\ttfamily Choice\+Type} are treated as property paths
+\item the {\ttfamily choices\+\_\+as\+\_\+values} option of the {\ttfamily Choice\+Type} has been removed
+\item removed the support for caching loaded choice lists in {\ttfamily Lazy\+Choice\+List}, cache the choice list in the used {\ttfamily Choice\+Loader\+Interface} implementation instead
+\item removed the support for objects implementing both {\ttfamily \textbackslash{}Traversable} and {\ttfamily \textbackslash{}Array\+Access} in {\ttfamily Resize\+Form\+Listener\+::pre\+Submit()}
+\item removed the ability to use {\ttfamily Form\+Data\+Collector} without the {\ttfamily symfony/var-\/dumper} component
+\item removed passing a {\ttfamily Value\+Exporter} instance to the {\ttfamily Form\+Data\+Extractor\+::\+\_\+\+\_\+construct()} method
+\item removed passing guesser services ids as the fourth argument of {\ttfamily Dependency\+Injection\+Extension\+::\+\_\+\+\_\+construct()}
+\item removed the ability to validate an unsubmitted form.
+\item removed {\ttfamily Choice\+Loader\+Interface} implementation in {\ttfamily Timezone\+Type}
+\item added the {\ttfamily false\+\_\+values} option to the {\ttfamily Checkbox\+Type} which allows to configure custom values which will be treated as {\ttfamily false} during submission
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1542}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1542}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Debug\+Command}
+\item deprecated {\ttfamily Choice\+Loader\+Interface} implementation in {\ttfamily Timezone\+Type}
+\item added options \char`\"{}input\char`\"{} and \char`\"{}regions\char`\"{} to {\ttfamily Timezone\+Type}
+\item added an option to {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Form\+Renderer\+Engine\+Interface\+::set\+Theme()} and {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Form\+Renderer\+Interface\+::set\+Theme()} to disable usage of default themes when rendering a form
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1543}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1543}
+
+\begin{DoxyItemize}
+\item deprecated using \char`\"{}choices\char`\"{} option in {\ttfamily Country\+Type}, {\ttfamily Currency\+Type}, {\ttfamily Language\+Type}, {\ttfamily Locale\+Type}, and {\ttfamily Timezone\+Type} when \char`\"{}choice\+\_\+loader\char`\"{} is not {\ttfamily null}
+\item added {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Form\+Error\+Iterator\+::find\+By\+Codes()}
+\item added {\ttfamily get\+Typed\+Extensions}, {\ttfamily get\+Types}, and {\ttfamily get\+Type\+Guessers} to {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Test\textbackslash{}Form\+Integration\+Test\+Case}
+\item added {\ttfamily Form\+Pass}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1544}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1544}
+
+\begin{DoxyItemize}
+\item added {\ttfamily Callback\+Choice\+Loader}
+\item implemented {\ttfamily Choice\+Loader\+Interface} in children of {\ttfamily Choice\+Type}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1545}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1545}
+
+\begin{DoxyItemize}
+\item deprecated the \char`\"{}choices\+\_\+as\+\_\+values\char`\"{} option of Choice\+Type
+\item deprecated support for data objects that implements both {\ttfamily Traversable} and {\ttfamily Array\+Access} in {\ttfamily Resize\+Form\+Listener\+::pre\+Submit} method
+\item Using callable strings as choice options in {\ttfamily Choice\+Type} has been deprecated and will be used as {\ttfamily Property\+Path} instead of callable in Symfony 4.\+0.
+\item implemented {\ttfamily Data\+Transformer\+Interface} in {\ttfamily Text\+Type}
+\item deprecated caching loaded choice list in {\ttfamily Lazy\+Choice\+List\+::\$loaded\+List}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1546}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1546}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Form\+Type\+Interface\+::set\+Default\+Options()} method
+\item removed {\ttfamily Abstract\+Type\+::set\+Default\+Options()} method
+\item removed {\ttfamily Form\+Type\+Extension\+Interface\+::set\+Default\+Options()} method
+\item removed {\ttfamily Abstract\+Type\+Extension\+::set\+Default\+Options()} method
+\item added {\ttfamily Form\+Type\+Interface\+::configure\+Options()} method
+\item added {\ttfamily Form\+Type\+Extension\+Interface\+::configure\+Options()} method
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1547}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1547}
+
+\begin{DoxyItemize}
+\item added option \char`\"{}choice\+\_\+translation\+\_\+domain\char`\"{} to Date\+Type, Time\+Type and Date\+Time\+Type.
+\item deprecated option \char`\"{}read\+\_\+only\char`\"{} in favor of \char`\"{}attr\mbox{[}\textquotesingle{}readonly\textquotesingle{}\mbox{]}\char`\"{}
+\item added the html5 \char`\"{}range\char`\"{} Form\+Type
+\item deprecated the \char`\"{}cascade\+\_\+validation\char`\"{} option in favor of setting \char`\"{}constraints\char`\"{} with the Valid constraint
+\item moved data trimming logic of Trim\+Listener into String\+Util
+\item \mbox{[}BC BREAK\mbox{]} When registering a type extension through the DI extension, the tag alias has to match the actual extended type.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1548}{}\doxysection{2.\+7.\+38}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1548}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} the {\ttfamily is\+File\+Upload()} method was added to the {\ttfamily Request\+Handler\+Interface}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1549}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1549}
+
+\begin{DoxyItemize}
+\item added option \char`\"{}choice\+\_\+translation\+\_\+domain\char`\"{} to Choice\+Type.
+\item deprecated option \char`\"{}precision\char`\"{} in favor of \char`\"{}scale\char`\"{}
+\item deprecated the overwriting of Abstract\+Type\+::set\+Default\+Options() in favor of overwriting Abstract\+Type\+::configure\+Options().
+\item deprecated the overwriting of Abstract\+Type\+Extension\+::set\+Default\+Options() in favor of overwriting Abstract\+Type\+Extension\+::configure\+Options().
+\item added new Choice\+List interface and implementations in the Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Choice\+List namespace
+\item added new Choice\+View in the Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Choice\+List\textbackslash{}\+View namespace
+\item choice groups are now represented by Choice\+Group\+View objects in the view
+\item deprecated the old Choice\+List interface and implementations
+\item deprecated the old Choice\+View class
+\item added Checkbox\+List\+Mapper and Radio\+List\+Mapper
+\item deprecated Choice\+To\+Boolean\+Array\+Transformer and Choices\+To\+Boolean\+Array\+Transformer
+\item deprecated Fix\+Checkbox\+Input\+Listener and Fix\+Radio\+Input\+Listener
+\item deprecated the \char`\"{}choice\+\_\+list\char`\"{} option of Choice\+Type
+\item added new options to Choice\+Type\+:
+\begin{DoxyItemize}
+\item \char`\"{}choices\+\_\+as\+\_\+values\char`\"{}
+\item \char`\"{}choice\+\_\+loader\char`\"{}
+\item \char`\"{}choice\+\_\+label\char`\"{}
+\item \char`\"{}choice\+\_\+name\char`\"{}
+\item \char`\"{}choice\+\_\+value\char`\"{}
+\item \char`\"{}choice\+\_\+attr\char`\"{}
+\item \char`\"{}group\+\_\+by\char`\"{}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1550}{}\doxysection{2.\+6.\+2}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1550}
+
+\begin{DoxyItemize}
+\item Added back the {\ttfamily model\+\_\+timezone} and {\ttfamily view\+\_\+timezone} options for {\ttfamily Time\+Type}, {\ttfamily Date\+Type} and {\ttfamily Birthday\+Type}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1551}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1551}
+
+\begin{DoxyItemize}
+\item added \char`\"{}html5\char`\"{} option to Date, Time and Date\+Time\+Form\+Type to be able to enable/disable HTML5 input date when widget option is \char`\"{}single\+\_\+text\char`\"{}
+\item added \char`\"{}label\+\_\+format\char`\"{} option with possible placeholders \char`\"{}\%name\%\char`\"{} and \char`\"{}\%id\%\char`\"{}
+\item \mbox{[}BC BREAK\mbox{]} drop support for model\+\_\+timezone and view\+\_\+timezone options in Time\+Type, Date\+Type and Birthday\+Type, update to 2.\+6.\+2 to get back support for these options
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1552}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1552}
+
+\begin{DoxyItemize}
+\item deprecated options \char`\"{}max\+\_\+length\char`\"{} and \char`\"{}pattern\char`\"{} in favor of putting these values in \char`\"{}attr\char`\"{} option
+\item added an option for multiple files upload
+\item form errors now reference their cause (constraint violation, exception, ...)
+\item form errors now remember which form they were originally added to
+\item \mbox{[}BC BREAK\mbox{]} added two optional parameters to Form\+Interface\+::get\+Errors() and changed the method to return a Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Form\+Error\+Iterator instance instead of an array
+\item errors mapped to unsubmitted forms are discarded now
+\item Object\+Choice\+List now compares choices by their value, if a value path is given
+\item you can now pass interface names in the \char`\"{}data\+\_\+class\char`\"{} option
+\item \mbox{[}BC BREAK\mbox{]} added {\ttfamily Form\+Interface\+::get\+Transformation\+Failure()}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1553}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1553}
+
+\begin{DoxyItemize}
+\item moved CSRF implementation to the new Security CSRF sub-\/component
+\item deprecated Csrf\+Provider\+Interface and its implementations
+\item deprecated options \char`\"{}csrf\+\_\+provider\char`\"{} and \char`\"{}intention\char`\"{} in favor of the new options \char`\"{}csrf\+\_\+token\+\_\+manager\char`\"{} and \char`\"{}csrf\+\_\+token\+\_\+id\char`\"{}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1554}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1554}
+
+\begin{DoxyItemize}
+\item deprecated Form\+Performance\+Test\+Case and Form\+Integration\+Test\+Case in the Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Tests namespace and moved them to the Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Test namespace
+\item deprecated Type\+Test\+Case in the Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Tests\textbackslash{}\+Extension\textbackslash{}\+Core\textbackslash{}\+Type namespace and moved it to the Symfony\textbackslash{}\+Component\textbackslash{}\+Form\textbackslash{}\+Test namespace
+\item changed Form\+Renderer\+::humanize() to humanize also camel cased field name
+\item added Request\+Handler\+Interface and Form\+Interface\+::handle\+Request()
+\item deprecated passing a Request instance to Form\+Interface\+::bind()
+\item added options \char`\"{}method\char`\"{} and \char`\"{}action\char`\"{} to Form\+Type
+\item deprecated option \char`\"{}virtual\char`\"{} in favor \char`\"{}inherit\+\_\+data\char`\"{}
+\item deprecated Virtual\+Form\+Aware\+Iterator in favor of Inherit\+Data\+Aware\+Iterator
+\item \mbox{[}BC BREAK\mbox{]} removed the \char`\"{}array\char`\"{} type hint from Data\+Mapper\+Interface
+\item improved forms inheriting their parent data to actually return that data from get\+Data(), get\+Norm\+Data() and get\+View\+Data()
+\item added component-\/level exceptions for various SPL exceptions changed all uses of the deprecated Exception class to use more specialized exceptions instead removed Not\+Initialized\+Exception, Not\+Valid\+Exception, Type\+Definition\+Exception, Type\+Loader\+Exception, Creation\+Exception
+\item added events PRE\+\_\+\+SUBMIT, SUBMIT and POST\+\_\+\+SUBMIT
+\item deprecated events PRE\+\_\+\+BIND, BIND and POST\+\_\+\+BIND
+\item \mbox{[}BC BREAK\mbox{]} renamed bind() and is\+Bound() in Form\+Interface to submit() and is\+Submitted()
+\item added methods submit() and is\+Submitted() to Form
+\item deprecated bind() and is\+Bound() in Form
+\item deprecated Already\+Bound\+Exception in favor of Already\+Submitted\+Exception
+\item added support for PATCH requests
+\item \mbox{[}BC BREAK\mbox{]} added initialize() to Form\+Interface
+\item \mbox{[}BC BREAK\mbox{]} added get\+Auto\+Initialize() to Form\+Config\+Interface
+\item \mbox{[}BC BREAK\mbox{]} added set\+Auto\+Initialize() to Form\+Config\+Builder\+Interface
+\item \mbox{[}BC BREAK\mbox{]} initialization for Form instances added to a form tree must be manually disabled
+\item PRE\+\_\+\+SET\+\_\+\+DATA is now guaranteed to be called after children were added by the form builder, unless Form\+Interface\+::set\+Data() is called manually
+\item fixed CSRF error message to be translated
+\item custom CSRF error messages can now be set through the \char`\"{}csrf\+\_\+message\char`\"{} option
+\item fixed\+: expanded single-\/choice fields now show a radio button for the empty value
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1555}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1555}
+
+\begin{DoxyItemize}
+\item Trim\+Listener now removes unicode whitespaces
+\item deprecated get\+Parent(), set\+Parent() and has\+Parent() in Form\+Builder\+Interface
+\item Form\+Interface\+::add() now accepts a Form\+Interface instance OR a field\textquotesingle{}s name, type and options
+\item removed special characters between the choice or text fields of Date\+Type unless the option \char`\"{}format\char`\"{} is set to a custom value
+\item deprecated Form\+Exception and introduced Exception\+Interface instead
+\item \mbox{[}BC BREAK\mbox{]} Form\+Exception is now an interface
+\item protected Form\+Builder methods from being called when it is turned into a Form\+Config\+Interface with get\+Form\+Config()
+\item \mbox{[}BC BREAK\mbox{]} inserted argument {\ttfamily \$message} in the constructor of {\ttfamily Form\+Error}
+\item the Property\+Path class and related classes were moved to a dedicated Property\+Access component. During the move, Invalid\+Property\+Exception was renamed to No\+Such\+Property\+Exception. Form\+Util was split\+: Form\+Util\+::singularify() can now be found in Symfony\textbackslash{}\+Component\textbackslash{}\+Property\+Access\textbackslash{}\+String\+Util. The methods get\+Value() and set\+Value() from Property\+Path were extracted into a new class Property\+Accessor.
+\item added an optional Property\+Accessor\+Interface parameter to Form\+Type, Object\+Choice\+List and Property\+Path\+Mapper
+\item \mbox{[}BC BREAK\mbox{]} Property\+Path\+Mapper and Form\+Type now have a constructor
+\item \mbox{[}BC BREAK\mbox{]} setting the option \char`\"{}validation\+\_\+groups\char`\"{} to {\ttfamily false} now disables validation instead of assuming group \char`\"{}\+Default\char`\"{}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1556}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_form__c_h_a_n_g_e_l_o_g_autotoc_md1556}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} {\ttfamily read\+\_\+only} field attribute now renders as {\ttfamily readonly=\char`\"{}readonly\char`\"{}}, use {\ttfamily disabled} instead
+\item \mbox{[}BC BREAK\mbox{]} child forms now aren\textquotesingle{}t validated anymore by default
+\item made validation of form children configurable (new option\+: cascade\+\_\+validation)
+\item added support for validation groups as callbacks
+\item made the translation catalogue configurable via the \char`\"{}translation\+\_\+domain\char`\"{} option
+\item added Form\+::get\+Errors\+As\+String() to help debugging forms
+\item allowed setting different options for Repeated\+Type fields (like the label)
+\item added support for empty form name at root level, this enables rendering forms without form name prefix in field names
+\item \mbox{[}BC BREAK\mbox{]} form and field names must start with a letter, digit or underscore and only contain letters, digits, underscores, hyphens and colons
+\item \mbox{[}BC BREAK\mbox{]} changed default name of the prototype in the \char`\"{}collection\char`\"{} type from \char`\"{}\$\$name\$\$\char`\"{} to \char`\"{}\textbackslash{}\+\_\+\+\_\+name\textbackslash{}\+\_\+\+\_\+\char`\"{}. No dollars are appended/prepended to custom names anymore.
+\item \mbox{[}BC BREAK\mbox{]} improved Choice\+List\+Interface
+\item \mbox{[}BC BREAK\mbox{]} added Simple\+Choice\+List and Lazy\+Choice\+List as replacement of Array\+Choice\+List
+\item added Choice\+List and Object\+Choice\+List to use objects as choices
+\item \mbox{[}BC BREAK\mbox{]} removed Entities\+To\+Array\+Transformer and Entity\+To\+Id\+Transformer. The former has been replaced by Collection\+To\+Array\+Transformer in combination with Entity\+Choice\+List, the latter is not required in the core anymore.
+\item \mbox{[}BC BREAK\mbox{]} renamed
+\begin{DoxyItemize}
+\item Array\+To\+Boolean\+Choices\+Transformer to Choices\+To\+Boolean\+Array\+Transformer
+\item Scalar\+To\+Boolean\+Choices\+Transformer to Choice\+To\+Boolean\+Array\+Transformer
+\item Array\+To\+Choices\+Transformer to Choices\+To\+Values\+Transformer
+\item Scalar\+To\+Choice\+Transformer to Choice\+To\+Value\+Transformer to be consistent with the naming in Choice\+List\+Interface. They were merged into Choice\+List and have no public equivalent anymore.
+\end{DoxyItemize}
+\item choice fields now throw a Form\+Exception if neither the \char`\"{}choices\char`\"{} nor the \char`\"{}choice\+\_\+list\char`\"{} option is set
+\item the radio type is now a child of the checkbox type
+\item the collection, choice (with multiple selection) and entity (with multiple selection) types now make use of add\+Xxx() and remove\+Xxx() methods in your model if you set \char`\"{}by\+\_\+reference\char`\"{} to false. For a custom, non-\/recognized singular form, set the \char`\"{}property\+\_\+path\char`\"{} option like this\+: \char`\"{}plural$\vert$singular\char`\"{}
+\item forms now don\textquotesingle{}t create an empty object anymore if they are completely empty and not required. The empty value for such forms is null.
+\item added constant Guess\+::\+VERY\+\_\+\+HIGH\+\_\+\+CONFIDENCE
+\item \mbox{[}BC BREAK\mbox{]} The methods {\ttfamily add}, {\ttfamily remove}, {\ttfamily set\+Parent}, {\ttfamily bind} and {\ttfamily set\+Data} in class Form now throw an exception if the form is already bound
+\item fields of constrained classes without a Not\+Blank or Not\+Null constraint are set to not required now, as stated in the docs
+\item fixed Time\+Type and Date\+Time\+Type to not display seconds when \char`\"{}widget\char`\"{} is \char`\"{}single\+\_\+text\char`\"{} unless \char`\"{}with\+\_\+seconds\char`\"{} is set to true
+\item checkboxes of in an expanded multiple-\/choice field don\textquotesingle{}t include the choice in their name anymore. Their names terminate with \char`\"{}\mbox{[}$\,$\mbox{]}\char`\"{} now.
+\item deprecated Form\+Validator\+Interface and substituted its implementations by event subscribers
+\item simplified CSRF protection and removed the csrf type
+\item deprecated Field\+Type and merged it into Form\+Type
+\item added new option \char`\"{}compound\char`\"{} that lets you switch between field and form behavior
+\item \mbox{[}BC BREAK\mbox{]} renamed theme blocks
+\begin{DoxyItemize}
+\item \char`\"{}field\+\_\+$\ast$\char`\"{} to \char`\"{}form\+\_\+$\ast$\char`\"{}
+\item \char`\"{}field\+\_\+widget\char`\"{} to \char`\"{}form\+\_\+widget\+\_\+simple\char`\"{}
+\item \char`\"{}widget\+\_\+choice\+\_\+options\char`\"{} to \char`\"{}choice\+\_\+widget\+\_\+options\char`\"{}
+\item \char`\"{}generic\+\_\+label\char`\"{} to \char`\"{}form\+\_\+label\char`\"{}
+\end{DoxyItemize}
+\item added theme blocks \char`\"{}form\+\_\+widget\+\_\+compound\char`\"{}, \char`\"{}choice\+\_\+widget\+\_\+expanded\char`\"{} and \char`\"{}choice\+\_\+widget\+\_\+collapsed\char`\"{} to make theming more modular
+\item Validator\+Type\+Guesser now guesses \char`\"{}collection\char`\"{} for array type constraint
+\item added method {\ttfamily guess\+Pattern} to Form\+Type\+Guesser\+Interface to guess which pattern to use in the HTML5 attribute \char`\"{}pattern\char`\"{}
+\item deprecated method {\ttfamily guess\+Min\+Length} in favor of {\ttfamily guess\+Pattern}
+\item labels don\textquotesingle{}t display field attributes anymore. Label attributes can be passed in the \char`\"{}label\+\_\+attr\char`\"{} option/variable
+\item added option \char`\"{}mapped\char`\"{} which should be used instead of setting \char`\"{}property\+\_\+path\char`\"{} to false
+\item \mbox{[}BC BREAK\mbox{]} \char`\"{}data\+\_\+class\char`\"{} now {\itshape must} be set if a form maps to an object and should be left empty otherwise
+\item improved error mapping on forms
+\begin{DoxyItemize}
+\item dot (\char`\"{}.\char`\"{}) rules are now allowed to map errors assigned to a form to one of its children
+\end{DoxyItemize}
+\item errors are not mapped to unsynchronized forms anymore
+\item \mbox{[}BC BREAK\mbox{]} changed Form constructor to accept a single {\ttfamily Form\+Config\+Interface} object
+\item \mbox{[}BC BREAK\mbox{]} changed argument order in the Form\+Builder constructor
+\item added Form method {\ttfamily get\+View\+Data}
+\item deprecated Form methods
+\begin{DoxyItemize}
+\item {\ttfamily get\+Types}
+\item {\ttfamily get\+Error\+Bubbling}
+\item {\ttfamily get\+Norm\+Transformers}
+\item {\ttfamily get\+Client\+Transformers}
+\item {\ttfamily get\+Attribute}
+\item {\ttfamily has\+Attribute}
+\item {\ttfamily get\+Client\+Data}
+\end{DoxyItemize}
+\item added Form\+Builder methods
+\begin{DoxyItemize}
+\item {\ttfamily get\+Types}
+\item {\ttfamily add\+View\+Transformer}
+\item {\ttfamily get\+View\+Transformers}
+\item {\ttfamily reset\+View\+Transformers}
+\item {\ttfamily add\+Model\+Transformer}
+\item {\ttfamily get\+Model\+Transformers}
+\item {\ttfamily reset\+Model\+Transformers}
+\end{DoxyItemize}
+\item deprecated Form\+Builder methods
+\begin{DoxyItemize}
+\item {\ttfamily prepend\+Client\+Transformer}
+\item {\ttfamily append\+Client\+Transformer}
+\item {\ttfamily get\+Client\+Transformers}
+\item {\ttfamily reset\+Client\+Transformers}
+\item {\ttfamily prepend\+Norm\+Transformer}
+\item {\ttfamily append\+Norm\+Transformer}
+\item {\ttfamily get\+Norm\+Transformers}
+\item {\ttfamily reset\+Norm\+Transformers}
+\end{DoxyItemize}
+\item deprecated the option \char`\"{}validation\+\_\+constraint\char`\"{} in favor of the new option \char`\"{}constraints\char`\"{}
+\item removed superfluous methods from Data\+Mapper\+Interface
+\begin{DoxyItemize}
+\item {\ttfamily map\+Form\+To\+Data}
+\item {\ttfamily map\+Data\+To\+Form}
+\end{DoxyItemize}
+\item added {\ttfamily set\+Default\+Options} to Form\+Type\+Interface and Form\+Type\+Extension\+Interface which accepts an Options\+Resolver\+Interface instance
+\item deprecated the methods {\ttfamily get\+Default\+Options} and {\ttfamily get\+Allowed\+Option\+Values} in Form\+Type\+Interface and Form\+Type\+Extension\+Interface
+\item options passed during construction can now be accessed from Form\+Config\+Interface
+\item added Form\+Builder\+Interface and Form\+Config\+Editor\+Interface
+\item \mbox{[}BC BREAK\mbox{]} the method {\ttfamily build\+Form} in Form\+Type\+Interface and Form\+Type\+Extension\+Interface now receives a Form\+Builder\+Interface instead of a Form\+Builder instance
+\item \mbox{[}BC BREAK\mbox{]} the method {\ttfamily build\+View\+Bottom\+Up} was renamed to {\ttfamily finish\+View} in Form\+Type\+Interface and Form\+Type\+Extension\+Interface
+\item \mbox{[}BC BREAK\mbox{]} the options array is now passed as last argument of the methods
+\begin{DoxyItemize}
+\item {\ttfamily build\+View}
+\item {\ttfamily finish\+View} in Form\+Type\+Interface and Form\+Type\+Extension\+Interface
+\end{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} no options are passed to {\ttfamily get\+Parent} of Form\+Type\+Interface anymore
+\item deprecated Data\+Event and Filter\+Data\+Event in favor of the new Form\+Event which is now passed to all events thrown by the component
+\item Form\+Events\+::\+BIND now replaces Form\+Events\+::\+BIND\+\_\+\+NORM\+\_\+\+DATA
+\item Form\+Events\+::\+PRE\+\_\+\+SET\+\_\+\+DATA now replaces Form\+Events\+::\+SET\+\_\+\+DATA
+\item Form\+Events\+::\+PRE\+\_\+\+BIND now replaces Form\+Events\+::\+BIND\+\_\+\+CLIENT\+\_\+\+DATA
+\item deprecated Form\+Events\+::\+SET\+\_\+\+DATA, Form\+Events\+::\+BIND\+\_\+\+CLIENT\+\_\+\+DATA and Form\+Events\+::\+BIND\+\_\+\+NORM\+\_\+\+DATA
+\item \mbox{[}BC BREAK\mbox{]} reversed the order of the first two arguments to {\ttfamily create\+Named} and {\ttfamily create\+Named\+Builder} in {\ttfamily Form\+Factory\+Interface}
+\item deprecated {\ttfamily get\+Children} in Form and Form\+Builder in favor of {\ttfamily all}
+\item deprecated {\ttfamily has\+Children} in Form and Form\+Builder in favor of {\ttfamily count}
+\item Form\+Builder now implements \textbackslash{}\+Iterator\+Aggregate
+\item \mbox{[}BC BREAK\mbox{]} compound forms now always need a data mapper
+\item Form\+Builder now maintains the order when explicitly adding form builders as children
+\item Choice\+Type now doesn\textquotesingle{}t add the empty value anymore if the choices already contain an empty element
+\item Date\+Type, Time\+Type and Date\+Time\+Type now show empty values again if not required
+\item \mbox{[}BC BREAK\mbox{]} fixed rendering of errors for Date\+Type, Birthday\+Type and similar ones
+\item \mbox{[}BC BREAK\mbox{]} fixed\+: form constraints are only validated if they belong to the validated group
+\item deprecated {\ttfamily bind\+Request} in {\ttfamily Form} and replaced it by a listener to Form\+Events\+::\+PRE\+\_\+\+BIND
+\item fixed\+: the \char`\"{}data\char`\"{} option supersedes default values from the model
+\item changed Date\+Type to refer to the \char`\"{}format\char`\"{} option for calculating the year and day choices instead of padding them automatically
+\item \mbox{[}BC BREAK\mbox{]} Date\+Type defaults to the format \char`\"{}yyyy-\/\+MM-\/dd\char`\"{} now if the widget is \char`\"{}single\+\_\+text\char`\"{}, in order to support the HTML 5 date field out of the box
+\item added the option \char`\"{}format\char`\"{} to Date\+Time\+Type
+\item \mbox{[}BC BREAK\mbox{]} Date\+Time\+Type now outputs RFC 3339 dates by default, as generated and consumed by HTML5 browsers, if the widget is \char`\"{}single\+\_\+text\char`\"{}
+\item deprecated the options \char`\"{}data\+\_\+timezone\char`\"{} and \char`\"{}user\+\_\+timezone\char`\"{} in Date\+Type, Date\+Time\+Type and Time\+Type and renamed them to \char`\"{}model\+\_\+timezone\char`\"{} and \char`\"{}view\+\_\+timezone\char`\"{}
+\item fixed\+: Transformation\+Failed\+Exceptions thrown in the model transformer are now caught by the form
+\item added Form\+Registry\+Interface, Resolved\+Form\+Type\+Interface and Resolved\+Form\+Type\+Factory\+Interface
+\item deprecated Form\+Factory methods
+\begin{DoxyItemize}
+\item {\ttfamily add\+Type}
+\item {\ttfamily has\+Type}
+\item {\ttfamily get\+Type}
+\end{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} Form\+Factory now expects a Form\+Registry\+Interface and a Resolved\+Form\+Type\+Factory\+Interface as constructor argument
+\item \mbox{[}BC BREAK\mbox{]} The method {\ttfamily create\+Builder} in Form\+Type\+Interface is not supported anymore for performance reasons
+\item \mbox{[}BC BREAK\mbox{]} Removed {\ttfamily set\+Types} from Form\+Builder
+\item deprecated Abstract\+Type methods
+\begin{DoxyItemize}
+\item {\ttfamily get\+Extensions}
+\item {\ttfamily set\+Extensions}
+\end{DoxyItemize}
+\item Choice\+Type now caches its created choice lists to improve performance
+\item \mbox{[}BC BREAK\mbox{]} Rows of a collection field cannot be themed individually anymore. All rows in the collection field now have the same block names, which contains \char`\"{}entry\char`\"{} where it previously contained the row index.
+\item \mbox{[}BC BREAK\mbox{]} When registering a type through the DI extension, the tag alias has to match the actual type name.
+\item added Form\+Renderer\+Interface, Form\+Renderer\+Engine\+Interface and implementations of these interfaces
+\item \mbox{[}BC BREAK\mbox{]} removed the following methods from Form\+Util\+:
+\begin{DoxyItemize}
+\item {\ttfamily to\+Array\+Key}
+\item {\ttfamily to\+Array\+Keys}
+\item {\ttfamily is\+Choice\+Group}
+\item {\ttfamily is\+Choice\+Selected}
+\end{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} renamed method {\ttfamily render\+Block} in Form\+Helper to {\ttfamily block} and changed its signature
+\item made Form\+View properties public and deprecated their accessor methods
+\item made the normalized data of a form accessible in the template through the variable \char`\"{}form.\+vars.\+data\char`\"{}
+\item made the original data of a choice accessible in the template through the property \char`\"{}choice.\+data\char`\"{}
+\item added convenience class Forms and Form\+Factory\+Builder\+Interface 
+\end{DoxyItemize}

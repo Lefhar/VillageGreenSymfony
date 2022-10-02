@@ -1,0 +1,62 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory}{}\doxysection{Container\+Repository\+Factory Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory}\index{ContainerRepositoryFactory@{ContainerRepositoryFactory}}
+Inheritance diagram for Container\+Repository\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a485ae35e25eed5f2bd7053b14a12bc78}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_psr_1_1_container_1_1_container_interface}{Container\+Interface}} \$container)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a40466ad6a4e0420051608ba107d7650b}{get\+Repository}} (\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} \$entity\+Manager, \$entity\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fetches repositories from the container or falls back to normal creation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a485ae35e25eed5f2bd7053b14a12bc78}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a485ae35e25eed5f2bd7053b14a12bc78}} 
+\index{ContainerRepositoryFactory@{ContainerRepositoryFactory}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ContainerRepositoryFactory@{ContainerRepositoryFactory}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_psr_1_1_container_1_1_container_interface}{Container\+Interface}}}]{\$container }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Container\+Interface & {\em \$container} & A service locator containing the repositories \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a40466ad6a4e0420051608ba107d7650b}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_repository_1_1_container_repository_factory_a40466ad6a4e0420051608ba107d7650b}} 
+\index{ContainerRepositoryFactory@{ContainerRepositoryFactory}!getRepository@{getRepository}}
+\index{getRepository@{getRepository}!ContainerRepositoryFactory@{ContainerRepositoryFactory}}
+\doxysubsubsection{\texorpdfstring{getRepository()}{getRepository()}}
+{\footnotesize\ttfamily get\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}}}]{\$entity\+Manager,  }\item[{}]{\$entity\+Name }\end{DoxyParamCaption})}
+
+\{Gets the repository for an entity class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_entity_manager_interface}{Entity\+Manager\+Interface}} & {\em \$entity\+Manager} & The \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_entity_manager}{Entity\+Manager}} instance. \\
+\hline
+string & {\em \$entity\+Name} & The name of the entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object\+Repository
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_o_r_m_1_1_repository_1_1_repository_factory_a40466ad6a4e0420051608ba107d7650b}{Repository\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Repository/Container\+Repository\+Factory.\+php\end{DoxyCompactItemize}

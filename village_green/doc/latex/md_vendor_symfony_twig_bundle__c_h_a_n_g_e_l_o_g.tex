@@ -1,0 +1,79 @@
+\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1898}{}\doxysection{5.\+3}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1898}
+
+\begin{DoxyItemize}
+\item Add support for the new {\ttfamily serialize} filter (from Twig Bridge)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1899}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1899}
+
+\begin{DoxyItemize}
+\item deprecated the public {\ttfamily twig} service to private
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1900}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1900}
+
+\begin{DoxyItemize}
+\item updated default value for the {\ttfamily strict\+\_\+variables} option to {\ttfamily kernel.\+debug\%} parameter
+\item removed support to load templates from the legacy directories {\ttfamily src/\+Resources/views/} and {\ttfamily src/\+Resources/\texorpdfstring{$<$}{<}Bundle\+Name\texorpdfstring{$>$}{>}/views/}
+\item removed {\ttfamily Twig\+Engine} class, use {\ttfamily Twig\textbackslash{}Environment} instead
+\item removed {\ttfamily Filesystem\+Loader} and {\ttfamily Native\+Filesystem\+Loader}, use Twig notation for templates instead
+\item removed {\ttfamily twig.\+exception\+\_\+controller} configuration option, use {\ttfamily framework.\+error\+\_\+controller} option instead
+\item removed {\ttfamily Exception\+Controller}, {\ttfamily Preview\+Error\+Controller} and all built-\/in error templates in favor of the new error renderer mechanism
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1901}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1901}
+
+\begin{DoxyItemize}
+\item marked the {\ttfamily Template\+Iterator} as {\ttfamily internal}
+\item added HTML comment to beginning and end of {\ttfamily exception\+\_\+full.\+html.\+twig}
+\item deprecated {\ttfamily Exception\+Controller} and {\ttfamily Preview\+Error\+Controller} controllers, use {\ttfamily Error\+Controller} from the {\ttfamily Http\+Kernel} component instead
+\item deprecated all built-\/in error templates in favor of the new error renderer mechanism
+\item deprecated {\ttfamily twig.\+exception\+\_\+controller} configuration option, set it to \char`\"{}null\char`\"{} and use {\ttfamily framework.\+error\+\_\+controller} configuration instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1902}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1902}
+
+\begin{DoxyItemize}
+\item deprecated support for legacy templates directories {\ttfamily src/\+Resources/views/} and {\ttfamily src/\+Resources/\texorpdfstring{$<$}{<}Bundle\+Name\texorpdfstring{$>$}{>}/views/}, use {\ttfamily templates/} and {\ttfamily templates/bundles/\texorpdfstring{$<$}{<}Bundle\+Name\texorpdfstring{$>$}{>}/} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1903}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1903}
+
+\begin{DoxyItemize}
+\item added priority to Twig extensions
+\item deprecated relying on the default value ({\ttfamily false}) of the {\ttfamily twig.\+strict\+\_\+variables} configuration option. The {\ttfamily kernel.\+debug\%} parameter will be the new default in 5.\+0
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1904}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1904}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily Container\+Aware\+Runtime\+Loader}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1905}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1905}
+
+\begin{DoxyItemize}
+\item added exclusive Twig namespace only for root bundles
+\item deprecated {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Twig\+Bundle\textbackslash{}Command\textbackslash{}Debug\+Command}, use {\ttfamily Symfony\textbackslash{}Bridge\textbackslash{}Twig\textbackslash{}Command\textbackslash{}Debug\+Command} instead
+\item deprecated relying on the {\ttfamily Container\+Aware\+Interface} implementation for {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Twig\+Bundle\textbackslash{}Command\textbackslash{}Lint\+Command}
+\item added option to configure default path templates (via {\ttfamily default\+\_\+path})
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1906}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1906}
+
+\begin{DoxyItemize}
+\item Deprecated {\ttfamily Container\+Aware\+Runtime\+Loader}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1907}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1907}
+
+\begin{DoxyItemize}
+\item made it possible to configure the default formats for both the {\ttfamily date} and the {\ttfamily number\+\_\+format} filter
+\item added support for the new Asset component (from Twig bridge)
+\item deprecated the assets extension (use the one from the Twig bridge instead)
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1908}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1908}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} changed exception.\+json.\+twig to match same structure as error.\+json.\+twig making clients independent of runtime environment.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1909}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1909}
+
+\begin{DoxyItemize}
+\item added option to configure a custom template escaping guesser (via {\ttfamily autoescape\+\_\+service} and {\ttfamily autoescape\+\_\+service\+\_\+method})
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1910}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1910}
+
+\begin{DoxyItemize}
+\item moved the exception controller to be a service ({\ttfamily twig.\+controller.\+exception\+:show\+Action} vs {\ttfamily Symfony\textbackslash{}\textbackslash{}Bundle\textbackslash{}\textbackslash{}Twig\+Bundle\textbackslash{}\textbackslash{}Controller\textbackslash{}\textbackslash{}Exception\+Controller\+::show\+Action})
+\item added support for multiple loaders via the \char`\"{}twig.\+loader\char`\"{} tag.
+\item added automatic registration of namespaced paths for registered bundles
+\item added support for namespaced paths
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1911}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_twig_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1911}
+
+\begin{DoxyItemize}
+\item added a new setting (\char`\"{}paths\char`\"{}) to configure more paths for the Twig filesystem loader
+\item added contextual escaping based on the template file name (disabled if you explicitly pass an autoescape option)
+\item added a command that extracts translation messages from templates
+\item added the real template name when an error occurs in a Twig template
+\item added the twig\+:lint command that will validate a Twig template syntax. 
+\end{DoxyItemize}

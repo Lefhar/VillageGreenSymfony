@@ -1,0 +1,155 @@
+\hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector}{}\doxysection{Doctrine\+Data\+Collector Class Reference}
+\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector}\index{DoctrineDataCollector@{DoctrineDataCollector}}
+Inheritance diagram for Doctrine\+Data\+Collector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_acf9bf8543baad375c006a0cbd02e74d7}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_acf9bf8543baad375c006a0cbd02e74d7}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_manager_registry}{Manager\+Registry}} \$registry, bool \$should\+Validate\+Schema=true)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a4b01fbb1de2b650cee726a4e62371e83}{collect}} (\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_request}{Request}} \$request, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_response}{Response}} \$response, ?Throwable \$exception=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_aa82dc2a5cf3517d255f654c8783b420e}{get\+Entities}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_af208f46c6722a824879c853206a002fa}{get\+Mapping\+Errors}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_af6ed9d1693d7ebe348135db223dcf250}{get\+Cache\+Hits\+Count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a970ca82d62a0e9f3ae2522541a3e0790}{get\+Cache\+Puts\+Count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_aebdaf7f25b5cea7c4db7cae64b5bc088}{get\+Cache\+Misses\+Count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_acc3881fd46c18498c29e665ebd8d9d9d}{get\+Cache\+Enabled}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a1a53492bfb7903bc7c6a4b9719bbb9e0}{get\+Cache\+Regions}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a28c60687df8a0d67dd6c41738442d2dd}{get\+Cache\+Counts}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a811c15f2bb735728ea4518974989a0a9}{get\+Invalid\+Entity\+Count}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a742e126dad845741162c44bdcc529d61}{get\+Grouped\+Queries}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a7fa28e47ec9787464dd382d9101111f6}{get\+Grouped\+Query\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+@psalm-\/type Query\+Type = array\{ execution\+MS\+: float, explainable\+: bool, sql\+: string, params\+: ?array\texorpdfstring{$<$}{<}array-\/key, mixed\texorpdfstring{$>$}{>}, runnable\+: bool, types\+: ?array\texorpdfstring{$<$}{<}array-\/key, Type$\vert$int$\vert$string$\vert$null\texorpdfstring{$>$}{>}, \} @psalm-\/type Data\+Type = array\{ caches\+: array\{ enabled\+: bool, counts\+: array\texorpdfstring{$<$}{<}\char`\"{}puts\char`\"{}$\vert$\char`\"{}hits\char`\"{}$\vert$\char`\"{}misses\char`\"{}, int\texorpdfstring{$>$}{>}, log\+\_\+enabled\+: bool, regions\+: array\texorpdfstring{$<$}{<}\char`\"{}puts\char`\"{}$\vert$\char`\"{}hits\char`\"{}$\vert$\char`\"{}misses\char`\"{}, array$<$string, int$>$\texorpdfstring{$>$}{>}, \}, connections\+: list$<$string$>$, entities\+: array\texorpdfstring{$<$}{<}string, array\texorpdfstring{$<$}{<}class-\/string, class-\/string\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}, errors\+: array\texorpdfstring{$<$}{<}string, array\texorpdfstring{$<$}{<}class-\/string, list$<$string$>$\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}, managers\+: list$<$string$>$, queries\+: array$<$string, list$<$\+Query\+Type$>$$>$, \} @psalm-\/property Data\+Type \$data 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a4b01fbb1de2b650cee726a4e62371e83}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a4b01fbb1de2b650cee726a4e62371e83}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!collect@{collect}}
+\index{collect@{collect}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily collect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_response}{Response}}}]{\$response,  }\item[{?Throwable}]{\$exception = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\} \mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a28c60687df8a0d67dd6c41738442d2dd}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a28c60687df8a0d67dd6c41738442d2dd}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getCacheCounts@{getCacheCounts}}
+\index{getCacheCounts@{getCacheCounts}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getCacheCounts()}{getCacheCounts()}}
+{\footnotesize\ttfamily get\+Cache\+Counts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_acc3881fd46c18498c29e665ebd8d9d9d}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_acc3881fd46c18498c29e665ebd8d9d9d}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getCacheEnabled@{getCacheEnabled}}
+\index{getCacheEnabled@{getCacheEnabled}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getCacheEnabled()}{getCacheEnabled()}}
+{\footnotesize\ttfamily get\+Cache\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_af6ed9d1693d7ebe348135db223dcf250}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_af6ed9d1693d7ebe348135db223dcf250}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getCacheHitsCount@{getCacheHitsCount}}
+\index{getCacheHitsCount@{getCacheHitsCount}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getCacheHitsCount()}{getCacheHitsCount()}}
+{\footnotesize\ttfamily get\+Cache\+Hits\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_aebdaf7f25b5cea7c4db7cae64b5bc088}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_aebdaf7f25b5cea7c4db7cae64b5bc088}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getCacheMissesCount@{getCacheMissesCount}}
+\index{getCacheMissesCount@{getCacheMissesCount}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getCacheMissesCount()}{getCacheMissesCount()}}
+{\footnotesize\ttfamily get\+Cache\+Misses\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a970ca82d62a0e9f3ae2522541a3e0790}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a970ca82d62a0e9f3ae2522541a3e0790}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getCachePutsCount@{getCachePutsCount}}
+\index{getCachePutsCount@{getCachePutsCount}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getCachePutsCount()}{getCachePutsCount()}}
+{\footnotesize\ttfamily get\+Cache\+Puts\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a1a53492bfb7903bc7c6a4b9719bbb9e0}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a1a53492bfb7903bc7c6a4b9719bbb9e0}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getCacheRegions@{getCacheRegions}}
+\index{getCacheRegions@{getCacheRegions}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getCacheRegions()}{getCacheRegions()}}
+{\footnotesize\ttfamily get\+Cache\+Regions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, array$<$string, int$>$$>$ @psalm-\/return array\texorpdfstring{$<$}{<}\char`\"{}puts\char`\"{}$\vert$\char`\"{}hits\char`\"{}$\vert$\char`\"{}misses\char`\"{}, array$<$string, int$>$\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_aa82dc2a5cf3517d255f654c8783b420e}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_aa82dc2a5cf3517d255f654c8783b420e}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getEntities@{getEntities}}
+\index{getEntities@{getEntities}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getEntities()}{getEntities()}}
+{\footnotesize\ttfamily get\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, array$<$string, string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a742e126dad845741162c44bdcc529d61}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a742e126dad845741162c44bdcc529d61}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getGroupedQueries@{getGroupedQueries}}
+\index{getGroupedQueries@{getGroupedQueries}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getGroupedQueries()}{getGroupedQueries()}}
+{\footnotesize\ttfamily get\+Grouped\+Queries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]}\mbox{[}\mbox{]} @psalm-\/return array\texorpdfstring{$<$}{<}string, list\texorpdfstring{$<$}{<}Query\+Type\&array\{count\+: int, index\+: int, execution\+Percent\+: float\}\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a7fa28e47ec9787464dd382d9101111f6}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a7fa28e47ec9787464dd382d9101111f6}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getGroupedQueryCount@{getGroupedQueryCount}}
+\index{getGroupedQueryCount@{getGroupedQueryCount}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getGroupedQueryCount()}{getGroupedQueryCount()}}
+{\footnotesize\ttfamily get\+Grouped\+Query\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a811c15f2bb735728ea4518974989a0a9}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_a811c15f2bb735728ea4518974989a0a9}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getInvalidEntityCount@{getInvalidEntityCount}}
+\index{getInvalidEntityCount@{getInvalidEntityCount}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getInvalidEntityCount()}{getInvalidEntityCount()}}
+{\footnotesize\ttfamily get\+Invalid\+Entity\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_af208f46c6722a824879c853206a002fa}\label{class_doctrine_1_1_bundle_1_1_doctrine_bundle_1_1_data_collector_1_1_doctrine_data_collector_af208f46c6722a824879c853206a002fa}} 
+\index{DoctrineDataCollector@{DoctrineDataCollector}!getMappingErrors@{getMappingErrors}}
+\index{getMappingErrors@{getMappingErrors}!DoctrineDataCollector@{DoctrineDataCollector}}
+\doxysubsubsection{\texorpdfstring{getMappingErrors()}{getMappingErrors()}}
+{\footnotesize\ttfamily get\+Mapping\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array$<$string, array$<$string, list$<$string$>$$>$$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/doctrine-\/bundle/\+Data\+Collector/Doctrine\+Data\+Collector.\+php\end{DoxyCompactItemize}

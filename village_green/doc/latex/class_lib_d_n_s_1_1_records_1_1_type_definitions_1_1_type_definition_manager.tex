@@ -1,0 +1,73 @@
+\hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager}{}\doxysection{Type\+Definition\+Manager Class Reference}
+\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager}\index{TypeDefinitionManager@{TypeDefinitionManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a599d6c495d62d7759ee7985ab419b33f}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_factory}{Type\+Definition\+Factory}} \$type\+Def\+Factory, \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_field_definition_factory}{Field\+Definition\+Factory}} \$field\+Def\+Factory)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a2e84a71593dc13e8e91e93fd35499397}{get\+Type\+Definition}} (int \$record\+Type)
+\item 
+\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a210fb62550b182f52dbb31ec2a116a23}{register\+Type\+Definition}} (int \$record\+Type, \$definition)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a599d6c495d62d7759ee7985ab419b33f}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a599d6c495d62d7759ee7985ab419b33f}} 
+\index{TypeDefinitionManager@{TypeDefinitionManager}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TypeDefinitionManager@{TypeDefinitionManager}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_factory}{Type\+Definition\+Factory}}}]{\$type\+Def\+Factory,  }\item[{\mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_field_definition_factory}{Field\+Definition\+Factory}}}]{\$field\+Def\+Factory }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Type\+Definitions\textbackslash{}\+Type\+Definition\+Factory & {\em \$type\+Def\+Factory} & \\
+\hline
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Type\+Definitions\textbackslash{}\+Field\+Definition\+Factory & {\em \$field\+Def\+Factory} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a2e84a71593dc13e8e91e93fd35499397}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a2e84a71593dc13e8e91e93fd35499397}} 
+\index{TypeDefinitionManager@{TypeDefinitionManager}!getTypeDefinition@{getTypeDefinition}}
+\index{getTypeDefinition@{getTypeDefinition}!TypeDefinitionManager@{TypeDefinitionManager}}
+\doxysubsubsection{\texorpdfstring{getTypeDefinition()}{getTypeDefinition()}}
+{\footnotesize\ttfamily get\+Type\+Definition (\begin{DoxyParamCaption}\item[{int}]{\$record\+Type }\end{DoxyParamCaption})}
+
+Get a type definition for a record type if it is known
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$record\+Type} & \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource}{Resource}} type, can be indicated using the \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_types}{Resource\+Types}} enum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Type\+Definitions\textbackslash{}\+Type\+Definition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a210fb62550b182f52dbb31ec2a116a23}\label{class_lib_d_n_s_1_1_records_1_1_type_definitions_1_1_type_definition_manager_a210fb62550b182f52dbb31ec2a116a23}} 
+\index{TypeDefinitionManager@{TypeDefinitionManager}!registerTypeDefinition@{registerTypeDefinition}}
+\index{registerTypeDefinition@{registerTypeDefinition}!TypeDefinitionManager@{TypeDefinitionManager}}
+\doxysubsubsection{\texorpdfstring{registerTypeDefinition()}{registerTypeDefinition()}}
+{\footnotesize\ttfamily register\+Type\+Definition (\begin{DoxyParamCaption}\item[{int}]{\$record\+Type,  }\item[{}]{\$definition }\end{DoxyParamCaption})}
+
+Register a custom type definition
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$record\+Type} & \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource}{Resource}} type, can be indicated using the \mbox{\hyperlink{class_lib_d_n_s_1_1_records_1_1_resource_types}{Resource\+Types}} enum \\
+\hline
+int\mbox{[}$\,$\mbox{]} | \textbackslash{}\+Lib\+DNS\textbackslash{}\+Records\textbackslash{}\+Type\+Definitions\textbackslash{}\+Type\+Definition & {\em \$definition} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Invalid\+Argument\+Exception When the type definition is invalid 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/daverandom/libdns/src/\+Records/\+Type\+Definitions/Type\+Definition\+Manager.\+php\end{DoxyCompactItemize}

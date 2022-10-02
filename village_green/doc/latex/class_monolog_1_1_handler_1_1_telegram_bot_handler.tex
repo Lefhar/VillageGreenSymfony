@@ -1,0 +1,79 @@
+\hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler}{}\doxysection{Telegram\+Bot\+Handler Class Reference}
+\label{class_monolog_1_1_handler_1_1_telegram_bot_handler}\index{TelegramBotHandler@{TelegramBotHandler}}
+Inheritance diagram for Telegram\+Bot\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.783784cm]{class_monolog_1_1_handler_1_1_telegram_bot_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_telegram_bot_handler_a3e71a209424d6efe410926a97abaeb30}{\+\_\+\+\_\+construct}} (string \$api\+Key, string \$channel, \$level=\mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}, bool \$bubble=true, string \$parse\+Mode=null, bool \$disable\+Web\+Page\+Preview=null, bool \$disable\+Notification=null)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler_a6c331e2f1fab88fedf13ed1e408f5d47}\label{class_monolog_1_1_handler_1_1_telegram_bot_handler_a6c331e2f1fab88fedf13ed1e408f5d47}} 
+{\bfseries set\+Parse\+Mode} (string \$parse\+Mode=null)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler_ad03a66157cec20eae9a968b10ef4ee31}\label{class_monolog_1_1_handler_1_1_telegram_bot_handler_ad03a66157cec20eae9a968b10ef4ee31}} 
+{\bfseries disable\+Web\+Page\+Preview} (bool \$disable\+Web\+Page\+Preview=null)
+\item 
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler_a89a18d26ad4b2a45f65fd5d7dbd42c4a}\label{class_monolog_1_1_handler_1_1_telegram_bot_handler_a89a18d26ad4b2a45f65fd5d7dbd42c4a}} 
+{\bfseries disable\+Notification} (bool \$disable\+Notification=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_telegram_bot_handler_afa17604fd899fffdc1ee326afe177cb5}{write}} (array \$record)
+\item 
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_telegram_bot_handler_ae31e44788e141824e55559b23770baf3}{send}} (string \$message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monolog_1_1_handler_1_1_handler}{Handler}} send logs to Telegram using Telegram Bot API.
+
+How to use\+: 1) Create telegram bot with \href{https://telegram.me/BotFather}{\texttt{ https\+://telegram.\+me/\+Bot\+Father}} 2) Create a telegram channel where logs will be recorded. 3) Add created bot from step 1 to the created channel from step 2.
+
+Use telegram bot API key from step 1 and channel name with \textquotesingle{}@\textquotesingle{} prefix from step 2 to create instance of \mbox{\hyperlink{class_monolog_1_1_handler_1_1_telegram_bot_handler}{Telegram\+Bot\+Handler}}
+
+\mbox{\hyperlink{}{Mazur Alexandr \href{mailto:alexandrmazur96@gmail.com}{\texttt{ alexandrmazur96@gmail.\+com}} -\/import-\/type Record from  }}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler_a3e71a209424d6efe410926a97abaeb30}\label{class_monolog_1_1_handler_1_1_telegram_bot_handler_a3e71a209424d6efe410926a97abaeb30}} 
+\index{TelegramBotHandler@{TelegramBotHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TelegramBotHandler@{TelegramBotHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{string}]{\$api\+Key,  }\item[{string}]{\$channel,  }\item[{}]{\$level = {\ttfamily \mbox{\hyperlink{class_monolog_1_1_logger_a758c150b67e476ecf77478f16b387c61}{Logger\+::\+DEBUG}}},  }\item[{bool}]{\$bubble = {\ttfamily true},  }\item[{string}]{\$parse\+Mode = {\ttfamily null},  }\item[{bool}]{\$disable\+Web\+Page\+Preview = {\ttfamily null},  }\item[{bool}]{\$disable\+Notification = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$api\+Key} & Telegram bot access token provided by Bot\+Father \\
+\hline
+string & {\em \$channel} & Telegram channel name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler_ae31e44788e141824e55559b23770baf3}\label{class_monolog_1_1_handler_1_1_telegram_bot_handler_ae31e44788e141824e55559b23770baf3}} 
+\index{TelegramBotHandler@{TelegramBotHandler}!send@{send}}
+\index{send@{send}!TelegramBotHandler@{TelegramBotHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{string}]{\$message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send request to \mbox{\hyperlink{}{on Send\+Message action.  string \$message }}\mbox{\Hypertarget{class_monolog_1_1_handler_1_1_telegram_bot_handler_afa17604fd899fffdc1ee326afe177cb5}\label{class_monolog_1_1_handler_1_1_telegram_bot_handler_afa17604fd899fffdc1ee326afe177cb5}} 
+\index{TelegramBotHandler@{TelegramBotHandler}!write@{write}}
+\index{write@{write}!TelegramBotHandler@{TelegramBotHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{array}]{\$record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@inherit\+Doc 
+
+Reimplemented from \mbox{\hyperlink{class_monolog_1_1_handler_1_1_abstract_processing_handler_afa17604fd899fffdc1ee326afe177cb5}{Abstract\+Processing\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/monolog/monolog/src/\+Monolog/\+Handler/Telegram\+Bot\+Handler.\+php\end{DoxyCompactItemize}

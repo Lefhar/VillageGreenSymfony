@@ -1,0 +1,121 @@
+\hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver}{}\doxysection{Static\+PHPDriver Class Reference}
+\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver}\index{StaticPHPDriver@{StaticPHPDriver}}
+Inheritance diagram for Static\+PHPDriver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_ae4ae3beaa3044505b959f0c804d0aed4}{\+\_\+\+\_\+construct}} (\$paths)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a890c50a29d55a9e83e340282ce206d87}{add\+Paths}} (array \$paths)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_ad327635eed919cc071fe20c12e00fafb}{load\+Metadata\+For\+Class}} (\$class\+Name, \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} \$metadata)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a1079716efc88aab78c6f1d0d44d6354e}{get\+All\+Class\+Names}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a03d93fdac535730e6895bf73dcfab09d}{is\+Transient}} (\$class\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver}{Static\+PHPDriver}} calls a static load\+Metadata() method on your entity classes where you can manually populate the \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}} instance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_ae4ae3beaa3044505b959f0c804d0aed4}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_ae4ae3beaa3044505b959f0c804d0aed4}} 
+\index{StaticPHPDriver@{StaticPHPDriver}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!StaticPHPDriver@{StaticPHPDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$paths }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} | string & {\em \$paths} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a890c50a29d55a9e83e340282ce206d87}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a890c50a29d55a9e83e340282ce206d87}} 
+\index{StaticPHPDriver@{StaticPHPDriver}!addPaths@{addPaths}}
+\index{addPaths@{addPaths}!StaticPHPDriver@{StaticPHPDriver}}
+\doxysubsubsection{\texorpdfstring{addPaths()}{addPaths()}}
+{\footnotesize\ttfamily add\+Paths (\begin{DoxyParamCaption}\item[{array}]{\$paths }\end{DoxyParamCaption})}
+
+Adds paths.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$paths} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a1079716efc88aab78c6f1d0d44d6354e}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a1079716efc88aab78c6f1d0d44d6354e}} 
+\index{StaticPHPDriver@{StaticPHPDriver}!getAllClassNames@{getAllClassNames}}
+\index{getAllClassNames@{getAllClassNames}!StaticPHPDriver@{StaticPHPDriver}}
+\doxysubsubsection{\texorpdfstring{getAllClassNames()}{getAllClassNames()}}
+{\footnotesize\ttfamily get\+All\+Class\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the names of all mapped classes known to this driver.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} The names of all mapped classes known to this driver. @psalm-\/return list\texorpdfstring{$<$}{<}class-\/string\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000042}{Todo}}]Same code exists in \mbox{\hyperlink{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_annotation_driver}{Annotation\+Driver}}, should we re-\/use it somehow or not worry about it? \end{DoxyRefDesc}
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a1079716efc88aab78c6f1d0d44d6354e}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a03d93fdac535730e6895bf73dcfab09d}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_a03d93fdac535730e6895bf73dcfab09d}} 
+\index{StaticPHPDriver@{StaticPHPDriver}!isTransient@{isTransient}}
+\index{isTransient@{isTransient}!StaticPHPDriver@{StaticPHPDriver}}
+\doxysubsubsection{\texorpdfstring{isTransient()}{isTransient()}}
+{\footnotesize\ttfamily is\+Transient (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+\{Returns whether the class with the specified name should have its metadata loaded. This is only the case if it is either mapped as an Entity or a Mapped\+Superclass.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string \$class\+Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_a03d93fdac535730e6895bf73dcfab09d}{Mapping\+Driver}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_ad327635eed919cc071fe20c12e00fafb}\label{class_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_static_p_h_p_driver_ad327635eed919cc071fe20c12e00fafb}} 
+\index{StaticPHPDriver@{StaticPHPDriver}!loadMetadataForClass@{loadMetadataForClass}}
+\index{loadMetadataForClass@{loadMetadataForClass}!StaticPHPDriver@{StaticPHPDriver}}
+\doxysubsubsection{\texorpdfstring{loadMetadataForClass()}{loadMetadataForClass()}}
+{\footnotesize\ttfamily load\+Metadata\+For\+Class (\begin{DoxyParamCaption}\item[{}]{\$class\+Name,  }\item[{\mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_class_metadata}{Class\+Metadata}}}]{\$metadata }\end{DoxyParamCaption})}
+
+\{Loads the metadata for the specified class into the provided container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & @psalm-\/param class-\/string$<$\+T$>$ \$class\+Name @psalm-\/param Class\+Metadata$<$\+T$>$ \$metadata\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+@template T of object\} 
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_persistence_1_1_mapping_1_1_driver_1_1_mapping_driver_ad327635eed919cc071fe20c12e00fafb}{Mapping\+Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/persistence/lib/\+Doctrine/\+Persistence/\+Mapping/\+Driver/Static\+PHPDriver.\+php\end{DoxyCompactItemize}

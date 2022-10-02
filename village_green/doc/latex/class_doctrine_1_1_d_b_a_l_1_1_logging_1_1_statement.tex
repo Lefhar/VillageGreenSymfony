@@ -1,0 +1,129 @@
+\hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement}{}\doxysection{Statement Class Reference}
+\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement}\index{Statement@{Statement}}
+Inheritance diagram for Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_ad970c188cecac52131fa621a8ad948fe}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_ad970c188cecac52131fa621a8ad948fe}} 
+{\bfseries \+\_\+\+\_\+construct} (Statement\+Interface \$statement, \mbox{\hyperlink{interface_psr_1_1_log_1_1_logger_interface}{Logger\+Interface}} \$logger, string \$sql)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_a96968444927e79aa3b3de64f133886e6}{bind\+Param}} (\$param, \&\$variable, \$type=\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}, \$length=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}{bind\+Value}} (\$param, \$value, \$type=\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}})
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_abf65f493280888db7095b3b820131181}{execute}} (\$params=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_a96968444927e79aa3b3de64f133886e6}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_a96968444927e79aa3b3de64f133886e6}} 
+\index{Statement@{Statement}!bindParam@{bindParam}}
+\index{bindParam@{bindParam}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{bindParam()}{bindParam()}}
+{\footnotesize\ttfamily bind\+Param (\begin{DoxyParamCaption}\item[{}]{\$param,  }\item[{\&}]{\$variable,  }\item[{}]{\$type = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}},  }\item[{}]{\$length = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\{Binds a PHP variable to a corresponding named (not supported by mysqli driver, see comment below) or question mark placeholder in the SQL statement that was use to prepare the statement. Unlike \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}{bind\+Value()}}\}, the variable is bound as a reference and will only be evaluated at the time that PDOStatement-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_statement_abf65f493280888db7095b3b820131181}{execute()}} is called.
+\end{DoxySeeAlso}
+As mentioned above, the named parameters are not natively supported by the mysqli driver, use execute\+Query(), fetch\+All(), fetch\+Array(), fetch\+Column(), fetch\+Assoc() methods to have the named parameter emulated by doctrine.
+
+Most parameters are input parameters, that is, parameters that are used in a read-\/only fashion to build up the query. Some drivers support the invocation of stored procedures that return data as output parameters, and some also as input/output parameters that both send in data and are updated to receive it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$param} & Parameter identifier. For a prepared statement using named placeholders, this will be a parameter name of the form \+:name. For a prepared statement using question mark placeholders, this will be the 1-\/indexed position of the parameter. \\
+\hline
+mixed & {\em \$variable} & Name of the PHP variable to bind to the SQL statement parameter. \\
+\hline
+int & {\em \$type} & Explicit data type for the parameter using the \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type}{Parameter\+Type}}\} constants. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int | null & {\em \$length} & You must specify maxlength when using an OUT bind so that PHP allocates enough memory to hold the returned value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE on success or FALSE on failure.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_statement_middleware_a96968444927e79aa3b3de64f133886e6}{Abstract\+Statement\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_a28bae5ff1fb210d36c3c2805ce0401e3}} 
+\index{Statement@{Statement}!bindValue@{bindValue}}
+\index{bindValue@{bindValue}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{bindValue()}{bindValue()}}
+{\footnotesize\ttfamily bind\+Value (\begin{DoxyParamCaption}\item[{}]{\$param,  }\item[{}]{\$value,  }\item[{}]{\$type = {\ttfamily \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type_a4741c51e0511fadf27ab3b4028479ae0}{Parameter\+Type\+::\+STRING}}} }\end{DoxyParamCaption})}
+
+\{\{Binds a value to a corresponding named (not supported by mysqli driver, see comment below) or positional placeholder in the SQL statement that was used to prepare the statement.
+
+As mentioned above, the named parameters are not natively supported by the mysqli driver, use execute\+Query(), fetch\+All(), fetch\+Array(), fetch\+Column(), fetch\+Assoc() methods to have the named parameter emulated by doctrine.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | int & {\em \$param} & Parameter identifier. For a prepared statement using named placeholders, this will be a parameter name of the form \+:name. For a prepared statement using question mark placeholders, this will be the 1-\/indexed position of the parameter. \\
+\hline
+mixed & {\em \$value} & The value to bind to the parameter. \\
+\hline
+int & {\em \$type} & Explicit data type for the parameter using the \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_parameter_type}{Parameter\+Type}}\} constants.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+bool TRUE on success or FALSE on failure.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_statement_middleware_a28bae5ff1fb210d36c3c2805ce0401e3}{Abstract\+Statement\+Middleware}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_abf65f493280888db7095b3b820131181}\label{class_doctrine_1_1_d_b_a_l_1_1_logging_1_1_statement_abf65f493280888db7095b3b820131181}} 
+\index{Statement@{Statement}!execute@{execute}}
+\index{execute@{execute}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\{Executes a prepared statement
+
+If the prepared statement included parameter markers, you must either\+: call \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_statement_a96968444927e79aa3b3de64f133886e6}{bind\+Param()}}\} to bind PHP variables to the parameter markers\+: bound variables pass their value as input and receive the output value, if any, of their associated parameter markers or pass an array of input-\/only parameter values.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+mixed\mbox{[}$\,$\mbox{]} | null & {\em \$params} & A numeric array of values with as many elements as there are bound parameters in the SQL statement being executed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{interface_doctrine_1_1_d_b_a_l_1_1_driver_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_driver_1_1_middleware_1_1_abstract_statement_middleware_abf65f493280888db7095b3b820131181}{Abstract\+Statement\+Middleware}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/dbal/src/\+Logging/Statement.\+php\end{DoxyCompactItemize}

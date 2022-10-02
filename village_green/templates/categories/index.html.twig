@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ (categories|first).name }}!{% endblock %}
+{% block description %}ma catégorie! {{ (categories|first).name }}{% endblock %}
+{% block body %}
+<section>
+    <div class="container bg-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('accueil') }}">Accueil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ (categories|first).souscat.name }}</li>
+            </ol>
+        </nav>
+<div class="row p-4">
+    <h2>Nos sous Catégories</h2>
+</div>
+<div class="row pt-2 pb-2">
+    {% for row in categories %}
+        {% if row.souscat is not null %}
+            <div class="col-sm-3 p-1">
+                <div class="overlay-image border border-dark">
+                    <a href="{{ path('produits_listes',{id:row.id}) }}">
+                        <img class="w-100" src="/assets/src/{{ row.picture }}" alt="{{ row.name }}" height="183"  >
+                        <div class="hover">
+                            <div class="cathover">
+                                {{ row.name }}
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+{#            {{ dump(row.souscat) }}#}
+
+        {% endif %}
+    {% endfor %}
+</div>
+</div>
+</section>
+{% endblock %}

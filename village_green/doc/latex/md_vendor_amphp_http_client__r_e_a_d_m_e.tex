@@ -1,0 +1,59 @@
+\doxysection*{}
+
+This package provides an asynchronous HTTP client for PHP based on \href{https://github.com/amphp/amp}{\texttt{ Amp}}. Its API simplifies standards-\/compliant HTTP resource traversal and RESTful web service consumption without obscuring the underlying protocol. The library manually implements HTTP over TCP sockets; as such it has no dependency on {\ttfamily ext/curl}.\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md35}{}\doxysubsection{Features}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md35}
+
+\begin{DoxyItemize}
+\item Supports HTTP/1 and HTTP/2
+\item \href{examples/concurrency/1-concurrent-fetch.php}{\texttt{ Requests concurrently by default}}
+\item \href{examples/pooling/1-connection-count.php}{\texttt{ Pools persistent connections (keep-\/alive @ HTTP/1.\+1, multiplexing @ HTTP/2)}}
+\item \href{https://amphp.org/http-client/follow-redirects}{\texttt{ Transparently follows redirects}}
+\item \href{examples/basic/7-gzip.php}{\texttt{ Decodes compressed entity bodies (gzip, deflate)}}
+\item \href{examples/basic/1-get-request.php}{\texttt{ Exposes headers and message data}}
+\item \href{examples/streaming/1-large-response.php}{\texttt{ Streams entity bodies for memory management with large transfers}}
+\item \href{https://amphp.org/http-client/requests\#request-method}{\texttt{ Supports all standard and custom HTTP method verbs}}
+\item \href{examples/basic/4-forms.php}{\texttt{ Simplifies HTTP form submissions}}
+\item \href{examples/basic/1-get-request.php}{\texttt{ Implements secure-\/by-\/default TLS ({\ttfamily https\+://})}}
+\item \href{https://github.com/amphp/http-client-cookies}{\texttt{ Supports cookies and sessions}}
+\item \href{https://github.com/amphp/http-tunnel}{\texttt{ Functions seamlessly behind HTTP proxies}}
+\end{DoxyItemize}\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md36}{}\doxysubsection{Installation}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md36}
+This package can be installed as a \href{https://getcomposer.org/}{\texttt{ Composer}} dependency.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require amphp/http-\/client}
+
+\end{DoxyCode}
+
+
+Additionally, you might want to install the {\ttfamily nghttp2} library to take advantage of FFI to speed up and reduce the memory usage on PHP 7.\+4.\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md37}{}\doxysubsection{Documentation}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md37}
+Documentation is bundled within this repository in the \href{./docs}{\texttt{ {\ttfamily docs}}} directory.\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md38}{}\doxysubsection{Examples}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md38}
+More extensive code examples reside in the \href{./examples}{\texttt{ {\ttfamily examples}}} directory.\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md39}{}\doxysubsection{Versioning}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md39}
+{\ttfamily amphp/http-\/client} follows the \href{http://semver.org/}{\texttt{ semver}} semantic versioning specification like all other {\ttfamily amphp} packages.
+
+Everything in an {\ttfamily Internal} namespace or marked as {\ttfamily @internal} is not public API and therefore not covered by BC guarantees.
+
+\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md40}%
+\Hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md40}%
+ \doxysubparagraph*{4.\+x}
+
+Stable and recommended version.
+
+\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md41}%
+\Hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md41}%
+ \doxysubparagraph*{\href{https://github.com/amphp/artax/tree/master}{\texttt{ 3.\+x}}}
+
+Legacy version. Use \href{https://github.com/amphp/artax}{\texttt{ {\ttfamily amphp/artax}}} as package name instead.
+
+\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md42}%
+\Hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md42}%
+ \doxysubparagraph*{\href{https://github.com/amphp/artax/tree/2.x}{\texttt{ 2.\+x}}}
+
+No longer maintained. Use \href{https://github.com/amphp/artax}{\texttt{ {\ttfamily amphp/artax}}} as package name instead.
+
+\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md43}%
+\Hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md43}%
+ \doxysubparagraph*{\href{https://github.com/amphp/artax/tree/1.x}{\texttt{ 1.\+x}}}
+
+No longer maintained. Use \href{https://github.com/amphp/artax}{\texttt{ {\ttfamily amphp/artax}}} as package name instead.\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md44}{}\doxysubsection{Security}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md44}
+If you discover any security related issues, please email \href{mailto:me@kelunik.com}{\texttt{ {\ttfamily me@kelunik.\+com}}} instead of using the issue tracker.\hypertarget{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md45}{}\doxysubsection{License}\label{md_vendor_amphp_http_client__r_e_a_d_m_e_autotoc_md45}
+The MIT License (MIT). Please see \href{./LICENSE}{\texttt{ {\ttfamily LICENSE}}} for more information. 

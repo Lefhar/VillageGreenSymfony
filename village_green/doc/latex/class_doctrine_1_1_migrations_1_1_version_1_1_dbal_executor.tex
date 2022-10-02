@@ -1,0 +1,60 @@
+\hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor}{}\doxysection{Dbal\+Executor Class Reference}
+\label{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor}\index{DbalExecutor@{DbalExecutor}}
+Inheritance diagram for Dbal\+Executor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a0a4d2931ae736bda446c37e7fffda0de}\label{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a0a4d2931ae736bda446c37e7fffda0de}} 
+{\bfseries \+\_\+\+\_\+construct} (\mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_metadata_1_1_storage_1_1_metadata_storage}{Metadata\+Storage}} \$metadata\+Storage, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_event_dispatcher}{Event\+Dispatcher}} \$dispatcher, \mbox{\hyperlink{class_doctrine_1_1_d_b_a_l_1_1_connection}{Connection}} \$connection, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_provider_1_1_schema_diff_provider}{Schema\+Diff\+Provider}} \$schema\+Provider, \mbox{\hyperlink{interface_psr_1_1_log_1_1_logger_interface}{Logger\+Interface}} \$logger, \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_parameter_formatter}{Parameter\+Formatter}} \$parameter\+Formatter, \mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch}{Stopwatch}} \$stopwatch)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_ad53d6d06affd7337d46e4efce0f6b2a1}{get\+Sql}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a73a4f220e14bbe9d4e1359bfdb203d15}{add\+Sql}} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_query_1_1_query}{Query}} \$sql\+Query)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a1d2809ce57e1100afe6a9ded08867fba}{execute}} (\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_metadata_1_1_migration_plan}{Migration\+Plan}} \$plan, \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_migrator_configuration}{Migrator\+Configuration}} \$configuration)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor}{Dbal\+Executor}} class is responsible for executing a single migration version. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a73a4f220e14bbe9d4e1359bfdb203d15}\label{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a73a4f220e14bbe9d4e1359bfdb203d15}} 
+\index{DbalExecutor@{DbalExecutor}!addSql@{addSql}}
+\index{addSql@{addSql}!DbalExecutor@{DbalExecutor}}
+\doxysubsubsection{\texorpdfstring{addSql()}{addSql()}}
+{\footnotesize\ttfamily add\+Sql (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_query_1_1_query}{Query}}}]{\$sql\+Query }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_executor}{Executor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a1d2809ce57e1100afe6a9ded08867fba}\label{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_a1d2809ce57e1100afe6a9ded08867fba}} 
+\index{DbalExecutor@{DbalExecutor}!execute@{execute}}
+\index{execute@{execute}!DbalExecutor@{DbalExecutor}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_metadata_1_1_migration_plan}{Migration\+Plan}}}]{\$plan,  }\item[{\mbox{\hyperlink{class_doctrine_1_1_migrations_1_1_migrator_configuration}{Migrator\+Configuration}}}]{\$configuration }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_doctrine_1_1_migrations_1_1_version_1_1_executor}{Executor}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_ad53d6d06affd7337d46e4efce0f6b2a1}\label{class_doctrine_1_1_migrations_1_1_version_1_1_dbal_executor_ad53d6d06affd7337d46e4efce0f6b2a1}} 
+\index{DbalExecutor@{DbalExecutor}!getSql@{getSql}}
+\index{getSql@{getSql}!DbalExecutor@{DbalExecutor}}
+\doxysubsubsection{\texorpdfstring{getSql()}{getSql()}}
+{\footnotesize\ttfamily get\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Query\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/migrations/lib/\+Doctrine/\+Migrations/\+Version/Dbal\+Executor.\+php\end{DoxyCompactItemize}

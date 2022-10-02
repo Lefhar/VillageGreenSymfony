@@ -1,0 +1,81 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression}{}\doxysection{Instance\+Of\+Expression Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression}\index{InstanceOfExpression@{InstanceOfExpression}}
+Inheritance diagram for Instance\+Of\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a57140ef776bf1feacf7d8181e5a47976}{\+\_\+\+\_\+construct}} (\$ident\+Variable)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}{dispatch}} (\$sql\+Walker)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a8b27111eae5a465f0dfd8d1e45d0d118}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a8b27111eae5a465f0dfd8d1e45d0d118}} 
+{\bfseries \$not}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_afea93c662fcf92e607e49828396a513d}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_afea93c662fcf92e607e49828396a513d}} 
+{\bfseries \$identification\+Variable}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a0f298096f322952a72a50f98a74c7b60}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a0f298096f322952a72a50f98a74c7b60}} 
+{\bfseries \$value}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression}{Instance\+Of\+Expression}} \+::= Identification\+Variable \mbox{[}\char`\"{}\+NOT\char`\"{}\mbox{]} \char`\"{}\+INSTANCE\char`\"{} \mbox{[}\char`\"{}\+OF\char`\"{}\mbox{]} (Instance\+Of\+Parameter $\vert$ \char`\"{}(\char`\"{} Instance\+Of\+Parameter \{\char`\"{},\char`\"{} Instance\+Of\+Parameter\}$\ast$ \char`\"{})\char`\"{}) Instance\+Of\+Parameter \+::= Abstract\+Schema\+Name $\vert$ \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_input_parameter}{Input\+Parameter}}
+
+\mbox{\hyperlink{}{www.\+doctrine-\/project.\+org}}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a57140ef776bf1feacf7d8181e5a47976}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a57140ef776bf1feacf7d8181e5a47976}} 
+\index{InstanceOfExpression@{InstanceOfExpression}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!InstanceOfExpression@{InstanceOfExpression}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$ident\+Variable }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ident\+Variable} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_instance_of_expression_a4f994f3cbd9dd5b71d5b3526cc187e22}} 
+\index{InstanceOfExpression@{InstanceOfExpression}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!InstanceOfExpression@{InstanceOfExpression}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$sql\+Walker }\end{DoxyParamCaption})}
+
+\{Double-\/dispatch method, supposed to dispatch back to the walker.
+
+Implementation is not mandatory for all nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_sql_walker}{Sql\+Walker}} & {\em \$walker} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_a_s_t_exception}{ASTException}}} & \\
+\hline
+\end{DoxyExceptions}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_a_s_t_1_1_node_a9242968cc8550364eac9b9fb259abb46}{Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/\+AST/Instance\+Of\+Expression.\+php\end{DoxyCompactItemize}

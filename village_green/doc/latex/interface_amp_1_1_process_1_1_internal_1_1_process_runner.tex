@@ -1,0 +1,131 @@
+\hypertarget{interface_amp_1_1_process_1_1_internal_1_1_process_runner}{}\doxysection{Process\+Runner Interface Reference}
+\label{interface_amp_1_1_process_1_1_internal_1_1_process_runner}\index{ProcessRunner@{ProcessRunner}}
+Inheritance diagram for Process\+Runner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_process_1_1_internal_1_1_process_runner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad8ea66eadabe78db6e542ef1603c760a}{start}} (string \$command, string \$cwd=null, array \$env=\mbox{[}$\,$\mbox{]}, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad2f383711201386f88418ba759131a37}{join}} (\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} \$handle)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a9728f2bd18893ae67aa911478e229c2d}{kill}} (\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} \$handle)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a5a643d8f69819dcab98ca3ca65517f4c}{signal}} (\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} \$handle, int \$signo)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_process_1_1_internal_1_1_process_runner_abecbfe3bcb16729f723b6904e9b5ca09}{destroy}} (\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} \$handle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_process_1_1_internal_1_1_process_runner_abecbfe3bcb16729f723b6904e9b5ca09}\label{interface_amp_1_1_process_1_1_internal_1_1_process_runner_abecbfe3bcb16729f723b6904e9b5ca09}} 
+\index{ProcessRunner@{ProcessRunner}!destroy@{destroy}}
+\index{destroy@{destroy}!ProcessRunner@{ProcessRunner}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}}]{\$handle }\end{DoxyParamCaption})}
+
+Release all resources held by the process handle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} & {\em \$handle} & The process descriptor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad2f383711201386f88418ba759131a37}\label{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad2f383711201386f88418ba759131a37}} 
+\index{ProcessRunner@{ProcessRunner}!join@{join}}
+\index{join@{join}!ProcessRunner@{ProcessRunner}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}}]{\$handle }\end{DoxyParamCaption})}
+
+Wait for the child process to end.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} & {\em \$handle} & The process descriptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} $<$int$>$ Succeeds with exit code of the process or fails if the process is killed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a9728f2bd18893ae67aa911478e229c2d}\label{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a9728f2bd18893ae67aa911478e229c2d}} 
+\index{ProcessRunner@{ProcessRunner}!kill@{kill}}
+\index{kill@{kill}!ProcessRunner@{ProcessRunner}}
+\doxysubsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily kill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}}]{\$handle }\end{DoxyParamCaption})}
+
+Forcibly end the child process.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} & {\em \$handle} & The process descriptor.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If terminating the process fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a5a643d8f69819dcab98ca3ca65517f4c}\label{interface_amp_1_1_process_1_1_internal_1_1_process_runner_a5a643d8f69819dcab98ca3ca65517f4c}} 
+\index{ProcessRunner@{ProcessRunner}!signal@{signal}}
+\index{signal@{signal}!ProcessRunner@{ProcessRunner}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}}]{\$handle,  }\item[{int}]{\$signo }\end{DoxyParamCaption})}
+
+Send a signal signal to the child process.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}} & {\em \$handle} & The process descriptor. \\
+\hline
+int & {\em \$signo} & Signal number to send to process.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If sending the signal fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_a5a643d8f69819dcab98ca3ca65517f4c}{Runner}}, and \mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_windows_1_1_runner_a5a643d8f69819dcab98ca3ca65517f4c}{Runner}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad8ea66eadabe78db6e542ef1603c760a}\label{interface_amp_1_1_process_1_1_internal_1_1_process_runner_ad8ea66eadabe78db6e542ef1603c760a}} 
+\index{ProcessRunner@{ProcessRunner}!start@{start}}
+\index{start@{start}!ProcessRunner@{ProcessRunner}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}\item[{string}]{\$command,  }\item[{string}]{\$cwd = {\ttfamily null},  }\item[{array}]{\$env = {\ttfamily \mbox{[}\mbox{]}},  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Start a process using the supplied parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$command} & The command to execute. \\
+\hline
+string | null & {\em \$cwd} & The working directory for the child process. \\
+\hline
+array & {\em \$env} & Environment variables to pass to the child process. \\
+\hline
+array & {\em \$options} & {\ttfamily proc\+\_\+open()} options.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_process_handle}{Process\+Handle}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_process_1_1_process_exception}{Process\+Exception}}} & If starting the process fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_posix_1_1_runner_ad8ea66eadabe78db6e542ef1603c760a}{Runner}}, and \mbox{\hyperlink{class_amp_1_1_process_1_1_internal_1_1_windows_1_1_runner_ad8ea66eadabe78db6e542ef1603c760a}{Runner}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/process/lib/\+Internal/Process\+Runner.\+php\end{DoxyCompactItemize}

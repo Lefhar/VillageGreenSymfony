@@ -1,0 +1,161 @@
+\hypertarget{class_amp_1_1_socket_1_1_server}{}\doxysection{Server Class Reference}
+\label{class_amp_1_1_socket_1_1_server}\index{Server@{Server}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_a0accb55532d2c375655c70f9b056c406}{\+\_\+\+\_\+construct}} (\$socket, int \$chunk\+Size=Resource\+Socket\+::\+DEFAULT\+\_\+\+CHUNK\+\_\+\+SIZE)
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_acb64affba32059c09533892d9ded224a}{accept}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_a80d6b5b35631ea18a4316608bbbc8aea}{is\+Closed}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_aa46bdf577fe031bf1287312dfbebb9a6}{reference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_a8098142e52cdc2bf80db924208412038}{unreference}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_a59bc5cde6d5044bb76ee8464738a87a2}{get\+Address}} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server_a8c5a689e9be7d35d0d01d0194637a7d2}{get\+Resource}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_amp_1_1_socket_1_1_server_af3f867f3d36e28c3a7c58705b1ce7a0d}{listen}} (string \$uri, ?\mbox{\hyperlink{class_amp_1_1_socket_1_1_bind_context}{Bind\+Context}} \$context=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_a0accb55532d2c375655c70f9b056c406}\label{class_amp_1_1_socket_1_1_server_a0accb55532d2c375655c70f9b056c406}} 
+\index{Server@{Server}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$socket,  }\item[{int}]{\$chunk\+Size = {\ttfamily ResourceSocket\+:\+:DEFAULT\+\_\+CHUNK\+\_\+SIZE} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$socket} & A bound socket server resource \\
+\hline
+int & {\em \$chunk\+Size} & Chunk size for the input and output stream.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If a stream resource is not given for \$socket. @psalm-\/suppress Redundant\+Condition Resolution of the deferred above might accept immediately again\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_a421831a265621325e1fdd19aace0c758}\label{class_amp_1_1_socket_1_1_server_a421831a265621325e1fdd19aace0c758}} 
+\index{Server@{Server}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Automatically cancels the loop watcher. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_acb64affba32059c09533892d9ded224a}\label{class_amp_1_1_socket_1_1_server_acb64affba32059c09533892d9ded224a}} 
+\index{Server@{Server}!accept@{accept}}
+\index{accept@{accept}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}}\texorpdfstring{$<$}{<}Resource\+Socket$\vert$null\texorpdfstring{$>$}{>}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_pending_accept_error}{Pending\+Accept\+Error}}} & If another accept request is pending. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_amp_1_1_socket_1_1_server_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{Server@{Server}!close@{close}}
+\index{close@{close}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the server and stops accepting connections. Any socket clients accepted will not be closed. @psalm-\/suppress Invalid\+Property\+Assignment\+Value\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_a59bc5cde6d5044bb76ee8464738a87a2}\label{class_amp_1_1_socket_1_1_server_a59bc5cde6d5044bb76ee8464738a87a2}} 
+\index{Server@{Server}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_address}{Socket\+Address}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_a8c5a689e9be7d35d0d01d0194637a7d2}\label{class_amp_1_1_socket_1_1_server_a8c5a689e9be7d35d0d01d0194637a7d2}} 
+\index{Server@{Server}!getResource@{getResource}}
+\index{getResource@{getResource}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Raw stream socket resource.
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_a80d6b5b35631ea18a4316608bbbc8aea}\label{class_amp_1_1_socket_1_1_server_a80d6b5b35631ea18a4316608bbbc8aea}} 
+\index{Server@{Server}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_af3f867f3d36e28c3a7c58705b1ce7a0d}\label{class_amp_1_1_socket_1_1_server_af3f867f3d36e28c3a7c58705b1ce7a0d}} 
+\index{Server@{Server}!listen@{listen}}
+\index{listen@{listen}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily static listen (\begin{DoxyParamCaption}\item[{string}]{\$uri,  }\item[{?\mbox{\hyperlink{class_amp_1_1_socket_1_1_bind_context}{Bind\+Context}}}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Listen for client connections on the specified server address.
+
+If you want to accept TLS connections, you have to use {\ttfamily yield \$socket-\/\texorpdfstring{$>$}{>}setup\+Tls()} after accepting new clients.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$uri} & URI in scheme\+://host\+:port format. TCP is assumed if no scheme is present. \\
+\hline
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_bind_context}{Bind\+Context}} | null & {\em \$context} & Context options for listening.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_amp_1_1_socket_1_1_server}{Server}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_amp_1_1_socket_1_1_socket_exception}{Socket\+Exception}}} & If binding to the specified URI failed. \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Error If an invalid scheme is given. \mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_aa46bdf577fe031bf1287312dfbebb9a6}\label{class_amp_1_1_socket_1_1_server_aa46bdf577fe031bf1287312dfbebb9a6}} 
+\index{Server@{Server}!reference@{reference}}
+\index{reference@{reference}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+References the accept watcher.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a595dc390542fadffe8ac3c22051fc318}{Loop\+::reference()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_amp_1_1_socket_1_1_server_a8098142e52cdc2bf80db924208412038}\label{class_amp_1_1_socket_1_1_server_a8098142e52cdc2bf80db924208412038}} 
+\index{Server@{Server}!unreference@{unreference}}
+\index{unreference@{unreference}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{unreference()}{unreference()}}
+{\footnotesize\ttfamily unreference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+Unreferences the accept watcher.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_amp_1_1_loop_a77d8514b2e464b897e2f8003fd2c0597}{Loop\+::unreference()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/socket/src/Server.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,382 @@
+\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1558}{}\doxysection{5.\+4}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1558}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily set\+\_\+locale\+\_\+from\+\_\+accept\+\_\+language} config option to automatically set the request locale based on the {\ttfamily Accept-\/\+Language} HTTP request header and the {\ttfamily framework.\+enabled\+\_\+locales} config option
+\item Add {\ttfamily set\+\_\+content\+\_\+language\+\_\+from\+\_\+locale} config option to automatically set the {\ttfamily Content-\/\+Language} HTTP response header based on the Request locale
+\item Deprecate the {\ttfamily framework.\+translator.\+enabled\+\_\+locales}, use {\ttfamily framework.\+enabled\+\_\+locales} instead
+\item Add autowiring alias for {\ttfamily Http\+Cache\textbackslash{}Store\+Interface}
+\item Add the ability to enable the profiler using a request query parameter, body parameter or attribute
+\item Deprecate the {\ttfamily Adapter\+Interface} autowiring alias, use {\ttfamily Cache\+Item\+Pool\+Interface} instead
+\item Deprecate the public {\ttfamily profiler} service to private
+\item Deprecate {\ttfamily get()}, {\ttfamily has()}, {\ttfamily get\+Doctrine()}, and {\ttfamily dispatch\+Message()} in {\ttfamily Abstract\+Controller}, use method/constructor injection instead
+\item Deprecate the {\ttfamily cache.\+adapter.\+doctrine} service
+\item Add support for resetting container services after each messenger message
+\item Add {\ttfamily configure\+Container()}, {\ttfamily configure\+Routes()}, {\ttfamily get\+Config\+Dir()} and {\ttfamily get\+Bundles\+Path()} to {\ttfamily Micro\+Kernel\+Trait}
+\item Add support for configuring log level, and status code by exception class
+\item Bind the {\ttfamily default\+\_\+context} parameter onto serializer\textquotesingle{}s encoders and normalizers
+\item Add support for {\ttfamily status\+Code} default parameter when loading a template directly from route using the {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Controller\textbackslash{}Template\+Controller} controller
+\item Deprecate {\ttfamily translation\+:update} command, use {\ttfamily translation\+:extract} instead
+\item Add {\ttfamily Php\+Stan\+Extractor} support for the Property\+Info component
+\item Add {\ttfamily cache.\+adapter.\+doctrine\+\_\+dbal} service to replace {\ttfamily cache.\+adapter.\+pdo} when a Doctrine DBAL connection is used.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1559}{}\doxysection{5.\+3}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1559}
+
+\begin{DoxyItemize}
+\item Deprecate the {\ttfamily session.\+storage} alias and {\ttfamily session.\+storage.$\ast$} services, use the {\ttfamily session.\+storage.\+factory} alias and {\ttfamily session.\+storage.\+factory.$\ast$} services instead
+\item Deprecate the {\ttfamily framework.\+session.\+storage\+\_\+id} configuration option, use the {\ttfamily framework.\+session.\+storage\+\_\+factory\+\_\+id} configuration option instead
+\item Deprecate the {\ttfamily session} service and the {\ttfamily Session\+Interface} alias, use the {\ttfamily Request\+::get\+Session()} or the new {\ttfamily Request\+Stack\+::get\+Session()} methods instead
+\item Add {\ttfamily Abstract\+Controller\+::render\+Form()} to render a form and set the appropriate HTTP status code
+\item Add support for configuring PHP error level to log levels
+\item Add the {\ttfamily dispatcher} option to {\ttfamily debug\+:event-\/dispatcher}
+\item Add the {\ttfamily event\+\_\+dispatcher.\+dispatcher} tag
+\item Add {\ttfamily assert\+Response\+Format\+Same()} in {\ttfamily Browser\+Kit\+Assertions\+Trait}
+\item Add support for configuring UUID factory services
+\item Add tag {\ttfamily assets.\+package} to register asset packages
+\item Add support to use a PSR-\/6 compatible cache for Doctrine annotations
+\item Deprecate all other values than \char`\"{}none\char`\"{}, \char`\"{}php\+\_\+array\char`\"{} and \char`\"{}file\char`\"{} for {\ttfamily framework.\+annotation.\+cache}
+\item Add {\ttfamily Kernel\+Test\+Case\+::get\+Container()} as the best way to get a container in tests
+\item Rename the container parameter {\ttfamily profiler\+\_\+listener.\+only\+\_\+master\+\_\+requests} to {\ttfamily profiler\+\_\+listener.\+only\+\_\+main\+\_\+requests}
+\item Add service {\ttfamily fragment.\+uri\+\_\+generator} to generate the URI of a fragment
+\item Deprecate registering workflow services as public
+\item Deprecate option {\ttfamily -\/-\/xliff-\/version} of the {\ttfamily translation\+:update} command, use e.\+g. {\ttfamily -\/-\/format=xlf20} instead
+\item Deprecate option {\ttfamily -\/-\/output-\/format} of the {\ttfamily translation\+:update} command, use e.\+g. {\ttfamily -\/-\/format=xlf20} instead
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1560}{}\doxysection{5.\+2.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1560}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily framework.\+http\+\_\+cache} configuration tree
+\item Added {\ttfamily framework.\+trusted\+\_\+proxies} and {\ttfamily framework.\+trusted\+\_\+headers} configuration options
+\item Deprecated the public {\ttfamily form.\+factory}, {\ttfamily form.\+type.\+file}, {\ttfamily translator}, {\ttfamily security.\+csrf.\+token\+\_\+manager}, {\ttfamily serializer}, {\ttfamily cache\+\_\+clearer}, {\ttfamily filesystem} and {\ttfamily validator} services to private.
+\item Added {\ttfamily Template\+Aware\+Data\+Collector\+Interface} and {\ttfamily Abstract\+Data\+Collector} to simplify custom data collector creation and leverage autoconfiguration
+\item Add {\ttfamily cache.\+adapter.\+redis\+\_\+tag\+\_\+aware} tag to use {\ttfamily Redis\+Cache\+Aware\+Adapter}
+\item added {\ttfamily framework.\+http\+\_\+client.\+retry\+\_\+failing} configuration tree
+\item added {\ttfamily assert\+Checkbox\+Checked()} and {\ttfamily assert\+Checkbox\+Not\+Checked()} in {\ttfamily Web\+Test\+Case}
+\item added {\ttfamily assert\+Form\+Value()} and {\ttfamily assert\+No\+Form\+Value()} in {\ttfamily Web\+Test\+Case}
+\item Added \char`\"{}-\/-\/as-\/tree=3\char`\"{} option to {\ttfamily translation\+:update} command to dump messages as a tree-\/like structure. The given value defines the level where to switch to inline YAML
+\item Deprecated the {\ttfamily lock.\+RESOURCE\+\_\+\+NAME} and {\ttfamily lock.\+RESOURCE\+\_\+\+NAME.\+store} services and the {\ttfamily lock}, {\ttfamily Lock\+Interface}, {\ttfamily lock.\+store} and {\ttfamily Persisting\+Store\+Interface} aliases, use {\ttfamily lock.\+RESOURCE\+\_\+\+NAME.\+factory}, {\ttfamily lock.\+factory} or {\ttfamily Lock\+Factory} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1561}{}\doxysection{5.\+1.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1561}
+
+\begin{DoxyItemize}
+\item Removed {\ttfamily -\/-\/no-\/backup} option from {\ttfamily translation\+:update} command (broken since {\ttfamily 5.\+0.\+0})
+\item Added link to source for controllers registered as named services
+\item Added link to source on controller on {\ttfamily router\+:match}/{\ttfamily debug\+:router} (when {\ttfamily framework.\+ide} is configured)
+\item Added the {\ttfamily framework.\+router.\+default\+\_\+uri} configuration option to configure the default {\ttfamily Request\+Context}
+\item Made {\ttfamily Micro\+Kernel\+Trait\+::configure\+Container()} compatible with {\ttfamily Container\+Configurator}
+\item Added a new {\ttfamily mailer.\+message\+\_\+bus} option to configure or disable the message bus to use to send mails.
+\item Added flex-\/compatible default implementation for {\ttfamily Micro\+Kernel\+Trait\+::register\+Bundles()}
+\item Deprecated passing a {\ttfamily Route\+Collection\+Builder} to {\ttfamily Micro\+Kernel\+Trait\+::configure\+Routes()}, type-\/hint {\ttfamily Routing\+Configurator} instead
+\item The {\ttfamily Template\+Controller} now accepts context argument
+\item Deprecated {\itshape not} setting the \char`\"{}framework.\+router.\+utf8\char`\"{} configuration option as it will default to {\ttfamily true} in Symfony 6.\+0
+\item Added tag {\ttfamily routing.\+expression\+\_\+language\+\_\+function} to define functions available in route conditions
+\item Added {\ttfamily debug\+:container -\/-\/deprecations} option to see compile-\/time deprecations.
+\item Made {\ttfamily Browser\+Kit\+Assertions\+Trait} report the original error message in case of a failure
+\item Added ability for {\ttfamily config\+:dump-\/reference} and {\ttfamily debug\+:config} to dump and debug kernel container extension configuration.
+\item Deprecated {\ttfamily session.\+attribute\+\_\+bag} service and {\ttfamily session.\+flash\+\_\+bag} service.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1562}{}\doxysection{5.\+0.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1562}
+
+\begin{DoxyItemize}
+\item Removed support to load translation resources from the legacy directories {\ttfamily src/\+Resources/translations/} and {\ttfamily src/\+Resources/\texorpdfstring{$<$}{<}Bundle\+Name\texorpdfstring{$>$}{>}/translations/}
+\item Removed {\ttfamily Controller\+Name\+Parser}.
+\item Removed {\ttfamily Resolve\+Controller\+Name\+Subscriber}
+\item Removed support for {\ttfamily bundle\+:controller\+:action} to reference controllers. Use {\ttfamily service\+Or\+Fqcn\+::method} instead
+\item Removed support for PHP templating, use Twig instead
+\item Removed {\ttfamily Controller}, use {\ttfamily Abstract\+Controller} instead
+\item Removed {\ttfamily Client}, use {\ttfamily Kernel\+Browser} instead
+\item Removed {\ttfamily Container\+Aware\+Command}, use dependency injection instead
+\item Removed the {\ttfamily validation.\+strict\+\_\+email} option, use {\ttfamily validation.\+email\+\_\+validation\+\_\+mode} instead
+\item Removed the {\ttfamily cache.\+app.\+simple} service and its corresponding PSR-\/16 autowiring alias
+\item Removed cache-\/related compiler passes and {\ttfamily Request\+Data\+Collector}
+\item Removed the {\ttfamily translator.\+selector} and {\ttfamily session.\+save\+\_\+listener} services
+\item Removed {\ttfamily Security\+User\+Value\+Resolver}, use {\ttfamily User\+Value\+Resolver} instead
+\item Removed {\ttfamily routing.\+loader.\+service}.
+\item Service route loaders must be tagged with {\ttfamily routing.\+route\+\_\+loader}.
+\item Added {\ttfamily slugger} service and {\ttfamily Slugger\+Interface} alias
+\item Removed the {\ttfamily lock.\+store.\+flock}, {\ttfamily lock.\+store.\+semaphore}, {\ttfamily lock.\+store.\+memcached.\+abstract} and {\ttfamily lock.\+store.\+redis.\+abstract} services.
+\item Removed the {\ttfamily router.\+cache\+\_\+class\+\_\+prefix} parameter.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1563}{}\doxysection{4.\+4.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1563}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily lint\+:container} command to check that services wiring matches type declarations
+\item Added {\ttfamily Mailer\+Assertions\+Trait}
+\item Deprecated support for {\ttfamily templating} engine in {\ttfamily Template\+Controller}, use Twig instead
+\item Deprecated the {\ttfamily \$parser} argument of {\ttfamily Controller\+Resolver\+::\+\_\+\+\_\+construct()} and {\ttfamily Delegating\+Loader\+::\+\_\+\+\_\+construct()}
+\item Deprecated the {\ttfamily controller\+\_\+name\+\_\+converter} and {\ttfamily resolve\+\_\+controller\+\_\+name\+\_\+subscriber} services
+\item The {\ttfamily Controller\+Resolver} and {\ttfamily Delegating\+Loader} classes have been marked as {\ttfamily final}
+\item Added support for configuring chained cache pools
+\item Deprecated calling {\ttfamily Web\+Test\+Case\+::create\+Client()} while a kernel has been booted, ensure the kernel is shut down before calling the method
+\item Deprecated {\ttfamily routing.\+loader.\+service}, use {\ttfamily routing.\+loader.\+container} instead.
+\item Not tagging service route loaders with {\ttfamily routing.\+route\+\_\+loader} has been deprecated.
+\item Overriding the methods {\ttfamily Kernel\+Test\+Case\+::tear\+Down()} and {\ttfamily Web\+Test\+Case\+::tear\+Down()} without the {\ttfamily void} return-\/type is deprecated.
+\item Added new {\ttfamily error\+\_\+controller} configuration to handle system exceptions
+\item Added sort option for {\ttfamily translation\+:update} command.
+\item \mbox{[}BC Break\mbox{]} The {\ttfamily framework.\+messenger.\+routing.\+senders} config key is not deeply merged anymore.
+\item Added {\ttfamily secrets\+:$\ast$} commands to deal with secrets seamlessly.
+\item Made {\ttfamily framework.\+session.\+handler\+\_\+id} accept a DSN
+\item Marked the {\ttfamily Router\+Data\+Collector} class as {\ttfamily @final}.
+\item \mbox{[}BC Break\mbox{]} The {\ttfamily framework.\+messenger.\+buses.\texorpdfstring{$<$}{<}name\texorpdfstring{$>$}{>}.middleware} config key is not deeply merged anymore.
+\item Moved {\ttfamily Mailer\+Assertions\+Trait} in {\ttfamily Kernel\+Test\+Case}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1564}{}\doxysection{4.\+3.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1564}
+
+\begin{DoxyItemize}
+\item Deprecated the {\ttfamily framework.\+templating} option, configure the Twig bundle instead.
+\item Added {\ttfamily Web\+Test\+Assertions\+Trait} (included by default in {\ttfamily Web\+Test\+Case})
+\item Renamed {\ttfamily Client} to {\ttfamily Kernel\+Browser}
+\item Not passing the project directory to the constructor of the {\ttfamily Assets\+Install\+Command} is deprecated. This argument will be mandatory in 5.\+0.
+\item Deprecated the \char`\"{}\+Psr\textbackslash{}\+Simple\+Cache\textbackslash{}\+Cache\+Interface\char`\"{} / \char`\"{}cache.\+app.\+simple\char`\"{} service, use \char`\"{}\+Symfony\textbackslash{}\+Contracts\textbackslash{}\+Cache\textbackslash{}\+Cache\+Interface\char`\"{} / \char`\"{}cache.\+app\char`\"{} instead
+\item Added the ability to specify a custom {\ttfamily serializer} option for each transport under{\ttfamily framework.\+messenger.\+transports}.
+\item Added the {\ttfamily Register\+Locale\+Aware\+Services\+Pass} and configured the {\ttfamily Locale\+Aware\+Listener}
+\item \mbox{[}BC Break\mbox{]} When using Messenger, the default transport changed from using Symfony\textquotesingle{}s serializer service to use {\ttfamily Php\+Serializer}, which uses PHP\textquotesingle{}s native {\ttfamily serialize()} and {\ttfamily unserialize()} functions. To use the original serialization method, set the {\ttfamily framework.\+messenger.\+default\+\_\+serializer} config option to {\ttfamily messenger.\+transport.\+symfony\+\_\+serializer}. Or set the {\ttfamily serializer} option under one specific {\ttfamily transport}.
+\item \mbox{[}BC Break\mbox{]} The {\ttfamily framework.\+messenger.\+serializer} config key changed to {\ttfamily framework.\+messenger.\+default\+\_\+serializer}, which holds the string service id and {\ttfamily framework.\+messenger.\+symfony\+\_\+serializer}, which configures the options if you\textquotesingle{}re using Symfony\textquotesingle{}s serializer.
+\item \mbox{[}BC Break\mbox{]} Removed the {\ttfamily framework.\+messenger.\+routing.\+send\+\_\+and\+\_\+handle} configuration. Instead of setting it to true, configure a {\ttfamily Sync\+Transport} and route messages to it.
+\item Added information about deprecated aliases in {\ttfamily debug\+:autowiring}
+\item Added php ini session options {\ttfamily sid\+\_\+length} and {\ttfamily sid\+\_\+bits\+\_\+per\+\_\+character} to the {\ttfamily session} section of the configuration
+\item Added support for Translator paths, Twig paths in translation commands.
+\item Added support for PHP files with translations in translation commands.
+\item Added support for boolean container parameters within routes.
+\item Added the {\ttfamily messenger\+:setup-\/transports} command to setup messenger transports
+\item Added a {\ttfamily In\+Memory\+Transport} to Messenger. Use it with a DSN starting with {\ttfamily in-\/memory\+://}.
+\item Added {\ttfamily framework.\+property\+\_\+access.\+throw\+\_\+exception\+\_\+on\+\_\+invalid\+\_\+property\+\_\+path} config option.
+\item Added {\ttfamily cache\+:pool\+:list} command to list all available cache pools.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1565}{}\doxysection{4.\+2.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1565}
+
+\begin{DoxyItemize}
+\item Added a {\ttfamily Abstract\+Controller\+::add\+Link()} method to add Link headers to the current response
+\item Allowed configuring taggable cache pools via a new {\ttfamily framework.\+cache.\+pools.\+tags} option (bool$\vert$service-\/id)
+\item Allowed configuring PDO-\/based cache pools via a new {\ttfamily cache.\+adapter.\+pdo} abstract service
+\item Deprecated auto-\/injection of the container in Abstract\+Controller instances, register them as service subscribers instead
+\item Deprecated processing of services tagged {\ttfamily security.\+expression\+\_\+language\+\_\+provider} in favor of a new {\ttfamily Add\+Expression\+Language\+Providers\+Pass} in Security\+Bundle.
+\item Deprecated the {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Controller\textbackslash{}Controller} class in favor of {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Controller\textbackslash{}Abstract\+Controller}.
+\item Enabled autoconfiguration for {\ttfamily Psr\textbackslash{}Log\textbackslash{}Logger\+Aware\+Interface}
+\item Added new \char`\"{}auto\char`\"{} mode for {\ttfamily framework.\+session.\+cookie\+\_\+secure} to turn it on when HTTPS is used
+\item Removed the {\ttfamily framework.\+messenger.\+encoder} and {\ttfamily framework.\+messenger.\+decoder} options. Use the {\ttfamily framework.\+messenger.\+serializer.\+id} option to replace the Messenger serializer.
+\item Deprecated the {\ttfamily Container\+Aware\+Command} class in favor of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Console\textbackslash{}Command\textbackslash{}Command}
+\item Made {\ttfamily debug\+:container} and {\ttfamily debug\+:autowiring} ignore backslashes in service ids
+\item Deprecated the {\ttfamily Templating\textbackslash{}Helper\textbackslash{}Translator\+Helper\+::trans\+Choice()} method, use the {\ttfamily trans()} one instead with a {\ttfamily count\%} parameter
+\item Deprecated {\ttfamily Cache\+Collector\+Pass}. Use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Cache\textbackslash{}Dependency\+Injection\textbackslash{}Cache\+Collector\+Pass} instead.
+\item Deprecated {\ttfamily Cache\+Pool\+Clearer\+Pass}. Use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Cache\textbackslash{}Dependency\+Injection\textbackslash{}Cache\+Pool\+Clearer\+Pass} instead.
+\item Deprecated {\ttfamily Cache\+Pool\+Pass}. Use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Cache\textbackslash{}Dependency\+Injection\textbackslash{}Cache\+Pool\+Pass} instead.
+\item Deprecated {\ttfamily Cache\+Pool\+Pruner\+Pass}. Use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Cache\textbackslash{}Dependency\+Injection\textbackslash{}Cache\+Pool\+Pruner\+Pass} instead.
+\item Deprecated support for legacy translations directories {\ttfamily src/\+Resources/translations/} and {\ttfamily src/\+Resources/\texorpdfstring{$<$}{<}Bundle\+Name\texorpdfstring{$>$}{>}/translations/}, use {\ttfamily translations/} instead.
+\item Deprecated support for the legacy directory structure in {\ttfamily translation\+:update} and {\ttfamily debug\+:translation} commands.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1566}{}\doxysection{4.\+1.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1566}
+
+\begin{DoxyItemize}
+\item Allowed to pass an optional {\ttfamily Logger\+Interface \$logger} instance to the {\ttfamily Router}
+\item Added a new {\ttfamily parameter\+\_\+bag} service with related autowiring aliases to access parameters as-\/a-\/service
+\item Allowed the {\ttfamily Router} to work with any PSR-\/11 container
+\item Added option in workflow dump command to label graph with a custom label
+\item Using a {\ttfamily Router\+Interface} that does not implement the {\ttfamily Warmable\+Interface} is deprecated.
+\item Warming up a router in {\ttfamily Router\+Cache\+Warmer} that does not implement the {\ttfamily Warmable\+Interface} is deprecated and will not be supported anymore in 5.\+0.
+\item The {\ttfamily Request\+Data\+Collector} class has been deprecated. Use the {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Data\+Collector\textbackslash{}Request\+Data\+Collector} class instead.
+\item The {\ttfamily Redirect\+Controller} class allows for 307/308 HTTP status codes
+\item Deprecated {\ttfamily bundle\+:controller\+:action} syntax to reference controllers. Use {\ttfamily service\+Or\+Fqcn\+::method} instead where {\ttfamily service\+Or\+Fqcn} is either the service ID or the FQCN of the controller.
+\item Deprecated {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Controller\textbackslash{}Controller\+Name\+Parser}
+\item The {\ttfamily container.\+service\+\_\+locator} tag of {\ttfamily Service\+Locator}s is now autoconfigured.
+\item Add the ability to search a route in {\ttfamily debug\+:router}.
+\item Add the ability to use Same\+Site cookies for sessions.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1567}{}\doxysection{4.\+0.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1567}
+
+\begin{DoxyItemize}
+\item The default {\ttfamily type} option of the {\ttfamily framework.\+workflows.$\ast$} configuration entries is {\ttfamily state\+\_\+machine}
+\item removed {\ttfamily Add\+Console\+Command\+Pass}, {\ttfamily Add\+Constraint\+Validators\+Pass}, {\ttfamily Add\+Validator\+Initializers\+Pass}, {\ttfamily Compiler\+Debug\+Dump\+Pass}, {\ttfamily Config\+Cache\+Pass}, {\ttfamily Controller\+Argument\+Value\+Resolver\+Pass}, {\ttfamily Form\+Pass}, {\ttfamily Property\+Info\+Pass}, {\ttfamily Routing\+Resolver\+Pass}, {\ttfamily Serializer\+Pass}, {\ttfamily Validate\+Workflows\+Pass}
+\item made {\ttfamily Translator\+::\+\_\+\+\_\+construct()} {\ttfamily \$default\+Locale} argument required
+\item removed {\ttfamily Session\+Listener}, {\ttfamily Test\+Session\+Listener}
+\item Removed {\ttfamily cache\+:clear} warmup part along with the {\ttfamily -\/-\/no-\/optional-\/warmers} option
+\item Removed core form types services registration when unnecessary
+\item Removed {\ttfamily framework.\+serializer.\+cache} option and {\ttfamily serializer.\+mapping.\+cache.\+apc}, {\ttfamily serializer.\+mapping.\+cache.\+doctrine.\+apc} services
+\item Removed {\ttfamily Constraint\+Validator\+Factory}
+\item Removed class parameters related to routing
+\item Removed absolute template paths support in the template name parser
+\item Removed support of the {\ttfamily KERNEL\+\_\+\+DIR} environment variable with {\ttfamily Kernel\+Test\+Case\+::get\+Kernel\+Class()}.
+\item Removed the {\ttfamily Kernel\+Test\+Case\+::get\+Php\+Unit\+Xml\+Dir()} and {\ttfamily Kernel\+Test\+Case\+::get\+Php\+Unit\+Cli\+Config\+Argument()} methods.
+\item Removed the \char`\"{}framework.\+validation.\+cache\char`\"{} configuration option. Configure the \char`\"{}cache.\+validator\char`\"{} service under \char`\"{}framework.\+cache.\+pools\char`\"{} instead.
+\item Removed {\ttfamily Php\+String\+Token\+Parser}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Extractor\textbackslash{}Php\+String\+Token\+Parser} instead.
+\item Removed {\ttfamily Php\+Extractor}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Extractor\textbackslash{}Php\+Extractor} instead.
+\item Removed the {\ttfamily use\+\_\+strict\+\_\+mode} session option, it\textquotesingle{}s is now enabled by default
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1568}{}\doxysection{3.\+4.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1568}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily translator.\+default\+\_\+path} option and parameter
+\item Session {\ttfamily use\+\_\+strict\+\_\+mode} is now enabled by default and the corresponding option has been deprecated
+\item Made the {\ttfamily cache\+:clear} command to {\itshape not} clear \char`\"{}app\char`\"{} PSR-\/6 cache pools anymore, but to still clear \char`\"{}system\char`\"{} ones; use the {\ttfamily cache\+:pool\+:clear} command to clear \char`\"{}app\char`\"{} pools instead
+\item Always register a minimalist logger that writes in {\ttfamily stderr}
+\item Deprecated {\ttfamily profiler.\+matcher} option
+\item Added support for {\ttfamily Event\+Subscriber\+Interface} on {\ttfamily Micro\+Kernel\+Trait}
+\item Removed {\ttfamily doctrine/cache} from the list of required dependencies in {\ttfamily composer.\+json}
+\item Deprecated {\ttfamily validator.\+mapping.\+cache.\+doctrine.\+apc} service
+\item The {\ttfamily symfony/stopwatch} dependency has been removed, require it via {\ttfamily composer require symfony/stopwatch} in your {\ttfamily dev} environment.
+\item Deprecated using the {\ttfamily KERNEL\+\_\+\+DIR} environment variable with {\ttfamily Kernel\+Test\+Case\+::get\+Kernel\+Class()}.
+\item Deprecated the {\ttfamily Kernel\+Test\+Case\+::get\+Php\+Unit\+Xml\+Dir()} and {\ttfamily Kernel\+Test\+Case\+::get\+Php\+Unit\+Cli\+Config\+Argument()} methods.
+\item Deprecated {\ttfamily Add\+Cache\+Clearer\+Pass}, use tagged iterator arguments instead.
+\item Deprecated {\ttfamily Add\+Cache\+Warmer\+Pass}, use tagged iterator arguments instead.
+\item Deprecated {\ttfamily Translation\+Dumper\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Dependency\+Injection\textbackslash{}Translation\+Dumper\+Pass} instead
+\item Deprecated {\ttfamily Translation\+Extractor\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Dependency\+Injection\textbackslash{}Translation\+Extractor\+Pass} instead
+\item Deprecated {\ttfamily Translator\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Dependency\+Injection\textbackslash{}Translator\+Pass} instead
+\item Added {\ttfamily command} attribute to the {\ttfamily console.\+command} tag which takes the command name as value, using it makes the command lazy
+\item Added {\ttfamily cache\+:pool\+:prune} command to allow manual stale cache item pruning of supported PSR-\/6 and PSR-\/16 cache pool implementations
+\item Deprecated {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Translation\textbackslash{}Translation\+Loader}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Reader\textbackslash{}Translation\+Reader} instead
+\item Deprecated {\ttfamily translation.\+loader} service, use {\ttfamily translation.\+reader} instead
+\item {\ttfamily Assets\+Install\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Filesystem\textbackslash{}Filesystem} as first argument
+\item {\ttfamily Cache\+Clear\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Cache\+Clearer\textbackslash{}Cache\+Clearer\+Interface} as first argument
+\item {\ttfamily Cache\+Pool\+Clear\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Cache\+Clearer\textbackslash{}Psr6\+Cache\+Clearer} as first argument
+\item {\ttfamily Event\+Dispatcher\+Debug\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Event\+Dispatcher\textbackslash{}Event\+Dispatcher\+Interface} as first argument
+\item {\ttfamily Router\+Debug\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Routing\textbackslash{}Router\+Interface} as first argument
+\item {\ttfamily Router\+Match\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Routing\textbackslash{}Router\+Interface} as first argument
+\item {\ttfamily Translation\+Debug\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Translator\+Interface} as first argument
+\item {\ttfamily Translation\+Update\+Command\+::\+\_\+\+\_\+construct()} now takes an instance of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Translator\+Interface} as first argument
+\item {\ttfamily Assets\+Install\+Command}, {\ttfamily Cache\+Clear\+Command}, {\ttfamily Cache\+Pool\+Clear\+Command}, {\ttfamily Event\+Dispatcher\+Debug\+Command}, {\ttfamily Router\+Debug\+Command}, {\ttfamily Router\+Match\+Command}, {\ttfamily Translation\+Debug\+Command}, {\ttfamily Translation\+Update\+Command}, {\ttfamily Xliff\+Lint\+Command} and {\ttfamily Yaml\+Lint\+Command} classes have been marked as final
+\item Added {\ttfamily asset.\+request\+\_\+context.\+base\+\_\+path} and {\ttfamily asset.\+request\+\_\+context.\+secure} parameters to provide a default request context in case the stack is empty (similar to {\ttfamily router.\+request\+\_\+context.$\ast$} parameters)
+\item Display environment variables managed by {\ttfamily Dotenv} in {\ttfamily About\+Command}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1569}{}\doxysection{3.\+3.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1569}
+
+\begin{DoxyItemize}
+\item Not defining the {\ttfamily type} option of the {\ttfamily framework.\+workflows.$\ast$} configuration entries is deprecated. The default value will be {\ttfamily state\+\_\+machine} in Symfony 4.\+0.
+\item Deprecated the {\ttfamily Compiler\+Debug\+Dump\+Pass} class
+\item Deprecated the \char`\"{}framework.\+trusted\+\_\+proxies\char`\"{} configuration option and the corresponding \char`\"{}kernel.\+trusted\+\_\+proxies\char`\"{} parameter
+\item Added a new version strategy option called \char`\"{}json\+\_\+manifest\+\_\+path\char`\"{} that allows you to use the {\ttfamily Json\+Manifest\+Version\+Strategy}.
+\item Added {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Controller\textbackslash{}Abstract\+Controller}. It provides the same helpers as the {\ttfamily Controller} class, but does not allow accessing the dependency injection container, in order to encourage explicit dependency declarations.
+\item Added support for the {\ttfamily controller.\+service\+\_\+arguments} tag, for injecting services into controllers\textquotesingle{} actions
+\item Changed default configuration for assets/forms/validation/translation/serialization/csrf from {\ttfamily can\+Be\+Enabled()} to {\ttfamily can\+Be\+Disabled()} when Flex is used
+\item The server\+:$\ast$ commands and their associated router files were moved to Web\+Server\+Bundle
+\item Translation related services are not loaded anymore when the {\ttfamily framework.\+translator} option is disabled.
+\item Added {\ttfamily Global\+Variables\+::get\+Token()}
+\item Deprecated {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Dependency\+Injection\textbackslash{}Compiler\textbackslash{}Add\+Console\+Command\+Pass}. Use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Console\textbackslash{}Dependency\+Injection\textbackslash{}Add\+Console\+Command\+Pass} instead.
+\item Added configurable paths for validation files
+\item Deprecated {\ttfamily Serializer\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Serializer\textbackslash{}Dependency\+Injection\textbackslash{}Serializer\+Pass} instead
+\item Deprecated {\ttfamily Form\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Form\textbackslash{}Dependency\+Injection\textbackslash{}Form\+Pass} instead
+\item Deprecated {\ttfamily Session\+Listener}
+\item Deprecated {\ttfamily Test\+Session\+Listener}
+\item Deprecated {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Dependency\+Injection\textbackslash{}Compiler\textbackslash{}Config\+Cache\+Pass}. Use tagged iterator arguments instead.
+\item Deprecated {\ttfamily Property\+Info\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Property\+Info\textbackslash{}Dependency\+Injection\textbackslash{}Property\+Info\+Pass} instead
+\item Deprecated {\ttfamily Controller\+Argument\+Value\+Resolver\+Pass}. Use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Dependency\+Injection\textbackslash{}Controller\+Argument\+Value\+Resolver\+Pass} instead
+\item Deprecated {\ttfamily Routing\+Resolver\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Routing\textbackslash{}Dependency\+Injection\textbackslash{}Routing\+Resolver\+Pass} instead
+\item \mbox{[}BC BREAK\mbox{]} The {\ttfamily server\+:run}, {\ttfamily server\+:start}, {\ttfamily server\+:stop} and {\ttfamily server\+:status} console commands have been moved to a dedicated bundle. Require {\ttfamily symfony/web-\/server-\/bundle} in your composer.\+json and register {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Web\+Server\+Bundle\textbackslash{}Web\+Server\+Bundle} in your App\+Kernel to use them.
+\item Added {\ttfamily \$default\+Locale} as 3rd argument of {\ttfamily Translator\+::\+\_\+\+\_\+construct()} making {\ttfamily Translator} works with any PSR-\/11 container
+\item Added {\ttfamily framework.\+serializer.\+mapping} config option allowing to define custom serialization mapping files and directories
+\item Deprecated {\ttfamily Add\+Validator\+Initializers\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Validator\textbackslash{}Dependency\+Injection\textbackslash{}Add\+Validator\+Initializers\+Pass} instead
+\item Deprecated {\ttfamily Add\+Constraint\+Validators\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Validator\textbackslash{}Dependency\+Injection\textbackslash{}Add\+Constraint\+Validators\+Pass} instead
+\item Deprecated {\ttfamily Validate\+Workflows\+Pass}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Workflow\textbackslash{}Dependency\+Injection\textbackslash{}Validate\+Workflows\+Pass} instead
+\item Deprecated {\ttfamily Constraint\+Validator\+Factory}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Validator\textbackslash{}Container\+Constraint\+Validator\+Factory} instead.
+\item Deprecated {\ttfamily Php\+String\+Token\+Parser}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Extractor\textbackslash{}Php\+String\+Token\+Parser} instead.
+\item Deprecated {\ttfamily Php\+Extractor}, use {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Translation\textbackslash{}Extractor\textbackslash{}Php\+Extractor} instead.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1570}{}\doxysection{3.\+2.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1570}
+
+\begin{DoxyItemize}
+\item Removed {\ttfamily doctrine/annotations} from the list of required dependencies in {\ttfamily composer.\+json}
+\item Removed {\ttfamily symfony/security-\/core} and {\ttfamily symfony/security-\/csrf} from the list of required dependencies in {\ttfamily composer.\+json}
+\item Removed {\ttfamily symfony/templating} from the list of required dependencies in {\ttfamily composer.\+json}
+\item Removed {\ttfamily symfony/translation} from the list of required dependencies in {\ttfamily composer.\+json}
+\item Removed {\ttfamily symfony/asset} from the list of required dependencies in {\ttfamily composer.\+json}
+\item The {\ttfamily Resources/public/images/$\ast$} files have been removed.
+\item The {\ttfamily Resources/public/css/$\ast$.css} files have been removed (they are now inlined in Twig\+Bundle).
+\item Added possibility to prioritize form type extensions with `\textquotesingle{}priority'{\ttfamily attribute on tags}form.\+type\+\_\+extension\`{}
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1571}{}\doxysection{3.\+1.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1571}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Controller\+::json} to simplify creating JSON responses when using the Serializer component
+\item Deprecated absolute template paths support in the template name parser
+\item Deprecated using core form types without dependencies as services
+\item Added {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Hernel\textbackslash{}Data\+Collector\textbackslash{}Request\+Data\+Collector\+::on\+Kernel\+Response()}
+\item Added {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Data\+Collector\textbackslash{}Request\+Data\+Collector}
+\item The {\ttfamily framework.\+serializer.\+cache} option and the service {\ttfamily serializer.\+mapping.\+cache.\+apc} have been deprecated. APCu should now be automatically used when available.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1572}{}\doxysection{3.\+0.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1572}
+
+\begin{DoxyItemize}
+\item removed {\ttfamily validator.\+api} parameter
+\item removed {\ttfamily alias} option of the {\ttfamily form.\+type} tag
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1573}{}\doxysection{2.\+8.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1573}
+
+\begin{DoxyItemize}
+\item Deprecated the {\ttfamily alias} option of the {\ttfamily form.\+type\+\_\+extension} tag in favor of the {\ttfamily extended\+\_\+type}/{\ttfamily extended-\/type} option
+\item Deprecated the {\ttfamily alias} option of the {\ttfamily form.\+type} tag
+\item Deprecated the Shell
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1574}{}\doxysection{2.\+7.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1574}
+
+\begin{DoxyItemize}
+\item Added possibility to extract translation messages from a file or files besides extracting from a directory
+\item Added {\ttfamily Translations\+Cache\+Warmer} to create catalogues at warmup
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1575}{}\doxysection{2.\+6.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1575}
+
+\begin{DoxyItemize}
+\item Added helper commands ({\ttfamily server\+:start}, {\ttfamily server\+:stop} and {\ttfamily server\+:status}) to control the built-\/in web server in the background
+\item Added {\ttfamily Controller\+::is\+Csrf\+Token\+Valid} helper
+\item Added configuration for the Property\+Access component
+\item Added {\ttfamily Controller\+::redirect\+To\+Route} helper
+\item Added {\ttfamily Controller\+::add\+Flash} helper
+\item Added {\ttfamily Controller\+::is\+Granted} helper
+\item Added {\ttfamily Controller\+::deny\+Access\+Unless\+Granted} helper
+\item Deprecated {\ttfamily app.\+security} in twig as {\ttfamily app.\+user} and {\ttfamily is\+\_\+granted()} are already available
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1576}{}\doxysection{2.\+5.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1576}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily translation\+:debug} command
+\item Added {\ttfamily -\/-\/no-\/backup} option to {\ttfamily translation\+:update} command
+\item Added {\ttfamily config\+:debug} command
+\item Added {\ttfamily yaml\+:lint} command
+\item Deprecated the {\ttfamily Router\+Apache\+Dumper\+Command} which will be removed in Symfony 3.\+0.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1577}{}\doxysection{2.\+4.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1577}
+
+\begin{DoxyItemize}
+\item allowed multiple IP addresses in profiler matcher settings
+\item added stopwatch helper to time templates with the Web\+Profiler\+Bundle
+\item added service definition for \char`\"{}security.\+secure\+\_\+random\char`\"{} service
+\item added service definitions for the new Security CSRF sub-\/component
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1578}{}\doxysection{2.\+3.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1578}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC BREAK\mbox{]} added a way to disable the profiler (when disabling the profiler, it is now completely removed) To get the same \char`\"{}disabled\char`\"{} behavior as before, set {\ttfamily enabled} to {\ttfamily true} and {\ttfamily collect} to {\ttfamily false}
+\item \mbox{[}BC BREAK\mbox{]} the {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Dependency\+Injection\textbackslash{}Compiler\textbackslash{}Register\+Kernel\+Listeners\+Pass} was moved to {\ttfamily Component\textbackslash{}Http\+Kernel\textbackslash{}Dependency\+Injection\textbackslash{}Register\+Listeners\+Pass}
+\item added Controller\+Name\+Parser\+::build() which converts a controller short notation (a\+:b\+:c) to a class\+::method notation
+\item added possibility to run PHP built-\/in server in production environment
+\item added possibility to load the serializer component in the service container
+\item added route debug information when using the {\ttfamily router\+:match} command
+\item added {\ttfamily Timed\+Php\+Engine}
+\item added {\ttfamily -\/-\/clean} option to the {\ttfamily translation\+:update} command
+\item added {\ttfamily http\+\_\+method\+\_\+override} option
+\item added support for default templates per render tag
+\item added Form\+Helper\+::form(), Form\+Helper\+::start() and Form\+Helper\+::end()
+\item deprecated Form\+Helper\+::enctype() in favor of Form\+Helper\+::start()
+\item Redirect\+Controller actions now receive the Request instance via the method signature.
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1579}{}\doxysection{2.\+2.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1579}
+
+\begin{DoxyItemize}
+\item added a new {\ttfamily uri\+\_\+signer} service to help sign URIs
+\item deprecated {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Http\+Kernel\+::render()} and {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Http\+Kernel\+::forward()}
+\item deprecated the {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Http\+Kernel} class in favor of {\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Dependency\+Injection\textbackslash{}Container\+Aware\+Http\+Kernel}
+\item added support for adding new HTTP content rendering strategies (like ESI and Hinclude) in the DIC via the {\ttfamily kernel.\+fragment\+\_\+renderer} tag
+\item \mbox{[}BC BREAK\mbox{]} restricted the {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Http\+Kernel\+::render()} method to only accept URIs or Controller\+Reference instances
+\begin{DoxyItemize}
+\item {\ttfamily Symfony\textbackslash{}Bundle\textbackslash{}Framework\+Bundle\textbackslash{}Http\+Kernel\+::render()} method signature changed and the first argument must now be a URI or a Controller\+Reference instance (the {\ttfamily generate\+Internal\+Uri()} method was removed)
+\item The internal routes ({\ttfamily Resources/config/routing/internal.\+xml}) have been removed and replaced with a listener ({\ttfamily Symfony\textbackslash{}Component\textbackslash{}Http\+Kernel\textbackslash{}Event\+Listener\textbackslash{}Fragment\+Listener})
+\item The {\ttfamily render} method of the {\ttfamily actions} templating helper signature and arguments changed
+\end{DoxyItemize}
+\item replaced Symfony\textbackslash{}\+Bundle\textbackslash{}\+Framework\+Bundle\textbackslash{}\+Controller\textbackslash{}\+Traceable\+Controller\+Resolver by Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Kernel\textbackslash{}\+Controller\textbackslash{}\+Traceable\+Controller\+Resolver
+\item replaced Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Kernel\textbackslash{}\+Debug\textbackslash{}\+Container\+Aware\+Traceable\+Event\+Dispatcher by Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Kernel\textbackslash{}\+Debug\textbackslash{}\+Traceable\+Event\+Dispatcher
+\item added Client\+::enable\+Profiler()
+\item a new parameter has been added to the DIC\+: {\ttfamily router.\+request\+\_\+context.\+base\+\_\+url} You can customize it for your functional tests or for generating URLs with the right base URL when your are in the CLI context.
+\item added support for default templates per render tag
+\end{DoxyItemize}\hypertarget{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1580}{}\doxysection{2.\+1.\+0}\label{md_vendor_symfony_framework_bundle__c_h_a_n_g_e_l_o_g_autotoc_md1580}
+
+\begin{DoxyItemize}
+\item moved the translation files to the Form and Validator components
+\item changed the default extension for XLIFF files from .xliff to .xlf
+\item moved Symfony\textbackslash{}\+Bundle\textbackslash{}\+Framework\+Bundle\textbackslash{}\+Container\+Aware\+Event\+Dispatcher to Symfony\textbackslash{}\+Component\textbackslash{}\+Event\+Dispatcher\textbackslash{}\+Container\+Aware\+Event\+Dispatcher
+\item moved Symfony\textbackslash{}\+Bundle\textbackslash{}\+Framework\+Bundle\textbackslash{}\+Debug\textbackslash{}\+Traceable\+Event\+Dispatcher to Symfony\textbackslash{}\+Component\textbackslash{}\+Event\+Dispatcher\textbackslash{}\+Container\+Aware\+Traceable\+Event\+Dispatcher
+\item added a router\+:match command
+\item added a config\+:dump-\/reference command
+\item added a server\+:run command
+\item added kernel.\+event\+\_\+subscriber tag
+\item added a way to create relative symlinks when running assets\+:install command (--relative option)
+\item added Controller\+::get\+User()
+\item \mbox{[}BC BREAK\mbox{]} assets\+\_\+base\+\_\+urls and base\+\_\+urls merging strategy has changed
+\item changed the default profiler storage to use the filesystem instead of SQLite
+\item added support for placeholders in route defaults and requirements (replaced by the value set in the service container)
+\item added Filesystem component as a dependency
+\item added support for hinclude (use {\ttfamily standalone\+: \textquotesingle{}js\textquotesingle{}} in render tag)
+\item session options\+: lifetime, path, domain, secure, httponly were deprecated. Prefixed versions should now be used instead\+: cookie\+\_\+lifetime, cookie\+\_\+path, cookie\+\_\+domain, cookie\+\_\+secure, cookie\+\_\+httponly
+\item \mbox{[}BC BREAK\mbox{]} following session options\+: \textquotesingle{}lifetime\textquotesingle{}, \textquotesingle{}path\textquotesingle{}, \textquotesingle{}domain\textquotesingle{}, \textquotesingle{}secure\textquotesingle{}, \textquotesingle{}httponly\textquotesingle{} are now prefixed with cookie\+\_\+ when dumped to the container
+\item Added {\ttfamily handler\+\_\+id} configuration under {\ttfamily session} key to represent {\ttfamily session.\+handler} service, defaults to {\ttfamily session.\+handler.\+native\+\_\+file}.
+\item Added {\ttfamily gc\+\_\+maxlifetime}, {\ttfamily gc\+\_\+probability}, and {\ttfamily gc\+\_\+divisor} to session configuration. This means session garbage collection has a {\ttfamily gc\+\_\+probability}/{\ttfamily gc\+\_\+divisor} chance of being run. The {\ttfamily gc\+\_\+maxlifetime} defines how long a session can idle for. It is different from cookie lifetime which declares how long a cookie can be stored on the remote client.
+\item Removed \textquotesingle{}auto\+\_\+start\textquotesingle{} configuration parameter from session config. The session will start on demand.
+\item \mbox{[}BC BREAK\mbox{]} Template\+Name\+Parser\+::parse\+From\+Filename() has been moved to a dedicated parser\+: Template\+Filename\+Parser\+::parse().
+\item \mbox{[}BC BREAK\mbox{]} Kernel parameters are replaced by their value wherever they appear in Route patterns, requirements and defaults. Use \textquotesingle{}\%\textquotesingle{} as the escaped value for \textquotesingle{}\textquotesingle{}.
+\item \mbox{[}BC BREAK\mbox{]} Switched behavior of flash messages to expire flash messages on retrieval using Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Foundation\textbackslash{}\+Session\textbackslash{}\+Flash\textbackslash{}\+Flash\+Bag as opposed to on next pageload regardless of whether they are displayed or not. 
+\end{DoxyItemize}

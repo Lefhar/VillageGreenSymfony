@@ -1,0 +1,346 @@
+\hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer}{}\doxysection{Abstract\+Lexer Class Reference}
+\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer}\index{AbstractLexer@{AbstractLexer}}
+Inheritance diagram for Abstract\+Lexer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_acdbd2280cbfbe555eafd0f1109afa753}{set\+Input}} (\$input)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a298fa9baf3a061f2529eefa152d2647c}{reset\+Peek}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_aa713e207d18dfc6fcd998b47c54be751}{reset\+Position}} (\$position=0)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_af735fed57c4708cee3f980e14ad3938c}{get\+Input\+Until\+Position}} (\$position)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a91d33a6b58973da65e918a877e77fd18}{is\+Next\+Token}} (\$token)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a42cb11a129b02ea1e4e6700cdad29b06}{is\+Next\+Token\+Any}} (array \$tokens)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a48fd19b25f0dcaf817c9702abeb66a81}{move\+Next}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4d6c0d4bfdc09c3df47675652c138665}{skip\+Until}} (\$type)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a5038826e63dbdb34cc55792fb2222f32}{isA}} (\$value, \$token)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_af0d2b98b49496eaef856a5b277fa775b}{peek}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ae488cce41c677169993fdea6b3928080}{glimpse}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ab80fe6ce109845a9beb5bc12f9654405}{get\+Literal}} (\$token)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ac7a2f8ba99c504f2ec1beca2114a5980}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ac7a2f8ba99c504f2ec1beca2114a5980}} 
+{\bfseries \$lookahead}
+\item 
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a00ae4fcafb1145f5e968bdf920f83e2e}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a00ae4fcafb1145f5e968bdf920f83e2e}} 
+{\bfseries \$token}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ac3e1de93fd944eaa13c1a9cd72bd5a5c}{scan}} (\$input)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a781d75979d7792ce3e5e4dcf79a623c9}{get\+Modifiers}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{get\+Catchable\+Patterns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a6bb3a12156350eef1fd452d13d059eb7}{get\+Non\+Catchable\+Patterns}} ()
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a95469fa51da1c43b32e7678225452daf}{get\+Type}} (\&\$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for writing simple lexers, i.\+e. for creating small DSLs. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_addb2dbe6fac3115b8b4bad070f0beb43}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_addb2dbe6fac3115b8b4bad070f0beb43}} 
+\index{AbstractLexer@{AbstractLexer}!getCatchablePatterns@{getCatchablePatterns}}
+\index{getCatchablePatterns@{getCatchablePatterns}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{getCatchablePatterns()}{getCatchablePatterns()}}
+{\footnotesize\ttfamily get\+Catchable\+Patterns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Lexical catchable patterns.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{Doc\+Lexer}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{Lexer}}, and \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_addb2dbe6fac3115b8b4bad070f0beb43}{Email\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_af735fed57c4708cee3f980e14ad3938c}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_af735fed57c4708cee3f980e14ad3938c}} 
+\index{AbstractLexer@{AbstractLexer}!getInputUntilPosition@{getInputUntilPosition}}
+\index{getInputUntilPosition@{getInputUntilPosition}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{getInputUntilPosition()}{getInputUntilPosition()}}
+{\footnotesize\ttfamily get\+Input\+Until\+Position (\begin{DoxyParamCaption}\item[{}]{\$position }\end{DoxyParamCaption})}
+
+Retrieve the original lexer\textquotesingle{}s input until a given position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ab80fe6ce109845a9beb5bc12f9654405}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ab80fe6ce109845a9beb5bc12f9654405}} 
+\index{AbstractLexer@{AbstractLexer}!getLiteral@{getLiteral}}
+\index{getLiteral@{getLiteral}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{getLiteral()}{getLiteral()}}
+{\footnotesize\ttfamily get\+Literal (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Gets the literal for a given token.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\vert$string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a781d75979d7792ce3e5e4dcf79a623c9}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a781d75979d7792ce3e5e4dcf79a623c9}} 
+\index{AbstractLexer@{AbstractLexer}!getModifiers@{getModifiers}}
+\index{getModifiers@{getModifiers}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{getModifiers()}{getModifiers()}}
+{\footnotesize\ttfamily get\+Modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Regex modifiers
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a781d75979d7792ce3e5e4dcf79a623c9}{Email\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a6bb3a12156350eef1fd452d13d059eb7}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a6bb3a12156350eef1fd452d13d059eb7}} 
+\index{AbstractLexer@{AbstractLexer}!getNonCatchablePatterns@{getNonCatchablePatterns}}
+\index{getNonCatchablePatterns@{getNonCatchablePatterns}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{getNonCatchablePatterns()}{getNonCatchablePatterns()}}
+{\footnotesize\ttfamily get\+Non\+Catchable\+Patterns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Lexical non-\/catchable patterns.
+
+\begin{DoxyReturn}{Returns}
+string\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_lexer_a6bb3a12156350eef1fd452d13d059eb7}{Doc\+Lexer}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a6bb3a12156350eef1fd452d13d059eb7}{Lexer}}, and \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a6bb3a12156350eef1fd452d13d059eb7}{Email\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a95469fa51da1c43b32e7678225452daf}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a95469fa51da1c43b32e7678225452daf}} 
+\index{AbstractLexer@{AbstractLexer}!getType@{getType}}
+\index{getType@{getType}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}\item[{\&}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Retrieve token type. Also processes the token value if necessary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\vert$string$\vert$null 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_doctrine_1_1_common_1_1_annotations_1_1_doc_lexer_a95469fa51da1c43b32e7678225452daf}{Doc\+Lexer}}, \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_lexer_a95469fa51da1c43b32e7678225452daf}{Lexer}}, and \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a95469fa51da1c43b32e7678225452daf}{Email\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ae488cce41c677169993fdea6b3928080}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ae488cce41c677169993fdea6b3928080}} 
+\index{AbstractLexer@{AbstractLexer}!glimpse@{glimpse}}
+\index{glimpse@{glimpse}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{glimpse()}{glimpse()}}
+{\footnotesize\ttfamily glimpse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Peeks at the next token, returns it and immediately resets the peek.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}$\vert$null The next token or NULL if there are no more tokens ahead. @psalm-\/return array\{value\+: string, type\+: string$\vert$int$\vert$null, position\+: int\}$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a5038826e63dbdb34cc55792fb2222f32}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a5038826e63dbdb34cc55792fb2222f32}} 
+\index{AbstractLexer@{AbstractLexer}!isA@{isA}}
+\index{isA@{isA}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{isA()}{isA()}}
+{\footnotesize\ttfamily isA (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Checks if given value is identical to the given token.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+int | string & {\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a91d33a6b58973da65e918a877e77fd18}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a91d33a6b58973da65e918a877e77fd18}} 
+\index{AbstractLexer@{AbstractLexer}!isNextToken@{isNextToken}}
+\index{isNextToken@{isNextToken}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{isNextToken()}{isNextToken()}}
+{\footnotesize\ttfamily is\+Next\+Token (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+Checks whether a given token matches the current lookahead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string & {\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a42cb11a129b02ea1e4e6700cdad29b06}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a42cb11a129b02ea1e4e6700cdad29b06}} 
+\index{AbstractLexer@{AbstractLexer}!isNextTokenAny@{isNextTokenAny}}
+\index{isNextTokenAny@{isNextTokenAny}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{isNextTokenAny()}{isNextTokenAny()}}
+{\footnotesize\ttfamily is\+Next\+Token\+Any (\begin{DoxyParamCaption}\item[{array}]{\$tokens }\end{DoxyParamCaption})}
+
+Checks whether any of the given tokens matches the current lookahead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string\mbox{[}$\,$\mbox{]} & {\em \$tokens} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a48fd19b25f0dcaf817c9702abeb66a81}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a48fd19b25f0dcaf817c9702abeb66a81}} 
+\index{AbstractLexer@{AbstractLexer}!moveNext@{moveNext}}
+\index{moveNext@{moveNext}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{moveNext()}{moveNext()}}
+{\footnotesize\ttfamily move\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves to the next token in the input string.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a48fd19b25f0dcaf817c9702abeb66a81}{Email\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_af0d2b98b49496eaef856a5b277fa775b}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_af0d2b98b49496eaef856a5b277fa775b}} 
+\index{AbstractLexer@{AbstractLexer}!peek@{peek}}
+\index{peek@{peek}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the lookahead token forward.
+
+\begin{DoxyReturn}{Returns}
+mixed\mbox{[}\mbox{]}$\vert$null The next token or NULL if there are no more tokens ahead. @psalm-\/return array\{value\+: string, type\+: string$\vert$int$\vert$null, position\+: int\}$\vert$null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4a20559544fdf4dcb457e258dc976cf8}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{AbstractLexer@{AbstractLexer}!reset@{reset}}
+\index{reset@{reset}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets the lexer.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_egulias_1_1_email_validator_1_1_email_lexer_a4a20559544fdf4dcb457e258dc976cf8}{Email\+Lexer}}.
+
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a298fa9baf3a061f2529eefa152d2647c}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a298fa9baf3a061f2529eefa152d2647c}} 
+\index{AbstractLexer@{AbstractLexer}!resetPeek@{resetPeek}}
+\index{resetPeek@{resetPeek}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{resetPeek()}{resetPeek()}}
+{\footnotesize\ttfamily reset\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets the peek pointer to 0.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_aa713e207d18dfc6fcd998b47c54be751}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_aa713e207d18dfc6fcd998b47c54be751}} 
+\index{AbstractLexer@{AbstractLexer}!resetPosition@{resetPosition}}
+\index{resetPosition@{resetPosition}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{resetPosition()}{resetPosition()}}
+{\footnotesize\ttfamily reset\+Position (\begin{DoxyParamCaption}\item[{}]{\$position = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Resets the lexer position on the input to the given position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$position} & Position to place the lexical scanner.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ac3e1de93fd944eaa13c1a9cd72bd5a5c}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_ac3e1de93fd944eaa13c1a9cd72bd5a5c}} 
+\index{AbstractLexer@{AbstractLexer}!scan@{scan}}
+\index{scan@{scan}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{scan()}{scan()}}
+{\footnotesize\ttfamily scan (\begin{DoxyParamCaption}\item[{}]{\$input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Scans the input string for tokens.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & A query string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_acdbd2280cbfbe555eafd0f1109afa753}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_acdbd2280cbfbe555eafd0f1109afa753}} 
+\index{AbstractLexer@{AbstractLexer}!setInput@{setInput}}
+\index{setInput@{setInput}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{setInput()}{setInput()}}
+{\footnotesize\ttfamily set\+Input (\begin{DoxyParamCaption}\item[{}]{\$input }\end{DoxyParamCaption})}
+
+Sets the input data to be tokenized.
+
+The Lexer is immediately reset and the new input tokenized. Any unprocessed tokens from any previous input are lost.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$input} & The input to be tokenized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4d6c0d4bfdc09c3df47675652c138665}\label{class_doctrine_1_1_common_1_1_lexer_1_1_abstract_lexer_a4d6c0d4bfdc09c3df47675652c138665}} 
+\index{AbstractLexer@{AbstractLexer}!skipUntil@{skipUntil}}
+\index{skipUntil@{skipUntil}!AbstractLexer@{AbstractLexer}}
+\doxysubsubsection{\texorpdfstring{skipUntil()}{skipUntil()}}
+{\footnotesize\ttfamily skip\+Until (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Tells the lexer to skip input tokens until it sees a token with the given value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & The token type to skip until.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/lexer/lib/\+Doctrine/\+Common/\+Lexer/Abstract\+Lexer.\+php\end{DoxyCompactItemize}

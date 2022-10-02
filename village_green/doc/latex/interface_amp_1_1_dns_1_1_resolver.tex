@@ -1,0 +1,73 @@
+\hypertarget{interface_amp_1_1_dns_1_1_resolver}{}\doxysection{Resolver Interface Reference}
+\label{interface_amp_1_1_dns_1_1_resolver}\index{Resolver@{Resolver}}
+Inheritance diagram for Resolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_amp_1_1_dns_1_1_resolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_amp_1_1_dns_1_1_resolver_a618880b35059a426d4b29792ca930d3d}{resolve}} (string \$name, int \$type\+Restriction=null)
+\item 
+\mbox{\hyperlink{interface_amp_1_1_dns_1_1_resolver_a24c59d3ebf2ef740ad76caf1ce2c5fcd}{query}} (string \$name, int \$type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_amp_1_1_dns_1_1_resolver_a24c59d3ebf2ef740ad76caf1ce2c5fcd}\label{interface_amp_1_1_dns_1_1_resolver_a24c59d3ebf2ef740ad76caf1ce2c5fcd}} 
+\index{Resolver@{Resolver}!query@{query}}
+\index{query@{query}!Resolver@{Resolver}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily query (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{int}]{\$type }\end{DoxyParamCaption})}
+
+Query specific DNS records.
+
+Upon success the returned promise resolves to an array of \mbox{\hyperlink{class_amp_1_1_dns_1_1_record}{Record}} objects.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \mbox{\hyperlink{class_amp_1_1_dns_1_1_record}{Record}} to question, A, AAAA and PTR queries are automatically normalized. \\
+\hline
+int & {\em \$type} & Use constants of Amp\textbackslash{}\+Dns\textbackslash{}\+Record.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_dns_1_1_blocking_fallback_resolver_a24c59d3ebf2ef740ad76caf1ce2c5fcd}{Blocking\+Fallback\+Resolver}}.
+
+\mbox{\Hypertarget{interface_amp_1_1_dns_1_1_resolver_a618880b35059a426d4b29792ca930d3d}\label{interface_amp_1_1_dns_1_1_resolver_a618880b35059a426d4b29792ca930d3d}} 
+\index{Resolver@{Resolver}!resolve@{resolve}}
+\index{resolve@{resolve}!Resolver@{Resolver}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily resolve (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{int}]{\$type\+Restriction = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Resolves a hostname name to an IP address \mbox{[}hostname as defined by RFC 3986\mbox{]}.
+
+Upon success the returned promise resolves to an array of \mbox{\hyperlink{class_amp_1_1_dns_1_1_record}{Record}} objects.
+
+A null \$ttl value indicates the DNS name was resolved from the cache or the local hosts file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The hostname to resolve. \\
+\hline
+int & {\em \$type\+Restriction} & Optional type restriction to {\ttfamily Record\+::A} or {\ttfamily Record\+::\+AAAA}, otherwise {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_amp_1_1_promise}{Promise}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_amp_1_1_dns_1_1_blocking_fallback_resolver_a618880b35059a426d4b29792ca930d3d}{Blocking\+Fallback\+Resolver}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/dns/lib/Resolver.\+php\end{DoxyCompactItemize}

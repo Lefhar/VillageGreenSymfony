@@ -1,0 +1,865 @@
+\hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{}\doxysection{Expr Class Reference}
+\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}\index{Expr@{Expr}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa1122e55ec25986e691f6346a83ce0dd}{andX}} (\$x=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a27afaa0677da87f83b0b481e045a80dd}{orX}} (\$x=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a63a8980005ba5e7985650412d3480d13}{asc}} (\$expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1392cda0ab007b44143bbb519f8f2a68}{desc}} (\$expr)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1c179a63f1e3011f8fac578a6965de91}{eq}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_adbfefd2c1da1eecf676c3e9f76a388b5}{neq}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ac75f1c9092d729cd0e593dbe4eaefee3}{lt}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_af2e3ff4f2fc9c42741e6db3d70a0f45c}{lte}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae6d39418d501036480581fb5d976d0ed}{gt}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa5a5e1a4f6ff04dfdaa8a8d0145c45f9}{gte}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a194f96f9d4d4f822613ceb81c96efd9f}{avg}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aad186c745d76c5473107e07c2ffd8076}{max}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a6100aac6482ba43ef334d73b766a0bad}{min}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a82244524f2115bd968dce653cad3cc1c}{count}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_acba1a7707e9137d3aac5ba9c8fab259f}{count\+Distinct}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a20e36c5ec6ebe2244024013b1fca1c34}{exists}} (\$subquery)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae36cbf7050e56901b03a98a2caadb24e}{all}} (\$subquery)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aafc5719ca3abec5671f8158b8a4f5f6a}{some}} (\$subquery)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a183f9e056e6804ca8ac959f58d8318a0}{any}} (\$subquery)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae326881cd815ba8e88ce52819563bc58}{not}} (\$restriction)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ab2ce4358888e023e37121992bccc1225}{abs}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a4f566cbea6662e62898a13b44135556a}{mod}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ad02f311399703e62b63ded3bf18eb861}{prod}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ade09befd34804e5e593f5f88dae18e5e}{diff}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aacca8626c8d1840c2c92d061b4428627}{sum}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a9c940a84d6d8fd5811b79019354593f6}{quot}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_acb2a9beed2514545f730966fc843b44e}{sqrt}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a5006edb7d50ec9c740061e7ce062de26}{in}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a87cb092c529326983e263b0db898a793}{not\+In}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a542f14ac67027b3c4ca88691da4f112f}{is\+Null}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a5365df829c68cf2948884437e31bf4d8}{is\+Not\+Null}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aaef87111d564662d98460c604cce7249}{like}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a4a9cfe45355bd36eba768c1fe4bfda26}{not\+Like}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae41d6b41b89bded7b34a9a7e9c45caa6}{concat}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a2f46bf98f9095699ce5a05c7b51031a8}{substring}} (\$x, \$from, \$len=null)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a02f6f9dd6d92d79fd91cc07c5dcf2ba5}{lower}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a7dd2e86f6a4a1543a6b6ffecc78d9bf7}{upper}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ade92de229f5ad099463cc1e9d9507471}{length}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa9f8a3d819d5b29ebe9faf9fa15ad99b}{literal}} (\$literal)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1c099228f03d9d7e828c5ec332d37021}{between}} (\$val, \$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aca8928b42dbf2f6860cc00ea3c696575}{trim}} (\$x)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a38c5cdb8e70771d4b28c56055c0dd29f}{is\+Member\+Of}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a2f2f36ee9e85be57d3c89fd8c56d0ba5}{is\+Instance\+Of}} (\$x, \$y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to generate DQL expressions via a set of PHP static functions.
+
+\mbox{\hyperlink{}{todo 27. }}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ab2ce4358888e023e37121992bccc1225}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ab2ce4358888e023e37121992bccc1225}} 
+\index{Expr@{Expr}!abs@{abs}}
+\index{abs@{abs}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily abs (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an ABS() function expression with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in ABS() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae36cbf7050e56901b03a98a2caadb24e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae36cbf7050e56901b03a98a2caadb24e}} 
+\index{Expr@{Expr}!all@{all}}
+\index{all@{all}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily all (\begin{DoxyParamCaption}\item[{}]{\$subquery }\end{DoxyParamCaption})}
+
+Creates an instance of ALL() function, with the given DQL Subquery.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$subquery} & DQL Subquery to be used in ALL() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa1122e55ec25986e691f6346a83ce0dd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa1122e55ec25986e691f6346a83ce0dd}} 
+\index{Expr@{Expr}!andX@{andX}}
+\index{andX@{andX}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{andX()}{andX()}}
+{\footnotesize\ttfamily andX (\begin{DoxyParamCaption}\item[{}]{\$x = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Creates a conjunction of the given boolean expressions.
+
+Example\+: \begin{DoxyVerb}[php]
+// (u.type = ?1) AND (u.role = ?2)
+$expr->andX($expr->eq('u.type', ':1'), $expr->eq('u.role', ':2'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+Expr\textbackslash{}\+Comparison | Expr\textbackslash{}\+Func | Expr\textbackslash{}\+Andx | Expr\textbackslash{}\+Orx | string & {\em \$x} & Optional clause. Defaults to null, but requires at least one defined when converting to string. @psalm-\/param \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison$\vert$\+Expr\textbackslash{}\+Func$\vert$\+Expr\textbackslash{}\+Andx$\vert$\+Expr\textbackslash{}\+Orx$\vert$string ...\$x\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Andx 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a183f9e056e6804ca8ac959f58d8318a0}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a183f9e056e6804ca8ac959f58d8318a0}} 
+\index{Expr@{Expr}!any@{any}}
+\index{any@{any}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}}
+{\footnotesize\ttfamily any (\begin{DoxyParamCaption}\item[{}]{\$subquery }\end{DoxyParamCaption})}
+
+Creates an ANY() function expression with the given DQL subquery.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$subquery} & DQL Subquery to be used in ANY() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a63a8980005ba5e7985650412d3480d13}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a63a8980005ba5e7985650412d3480d13}} 
+\index{Expr@{Expr}!asc@{asc}}
+\index{asc@{asc}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{asc()}{asc()}}
+{\footnotesize\ttfamily asc (\begin{DoxyParamCaption}\item[{}]{\$expr }\end{DoxyParamCaption})}
+
+Creates an ASCending order expression.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Order\+By 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a194f96f9d4d4f822613ceb81c96efd9f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a194f96f9d4d4f822613ceb81c96efd9f}} 
+\index{Expr@{Expr}!avg@{avg}}
+\index{avg@{avg}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{avg()}{avg()}}
+{\footnotesize\ttfamily avg (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an instance of AVG() function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in AVG() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1c099228f03d9d7e828c5ec332d37021}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1c099228f03d9d7e828c5ec332d37021}} 
+\index{Expr@{Expr}!between@{between}}
+\index{between@{between}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{between()}{between()}}
+{\footnotesize\ttfamily between (\begin{DoxyParamCaption}\item[{}]{\$val,  }\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of BETWEEN() function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$val} & Valued to be inspected by range values. \\
+\hline
+int | string & {\em \$x} & Starting range value to be used in BETWEEN() function. \\
+\hline
+int | string & {\em \$y} & End point value to be used in BETWEEN() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A BETWEEN expression. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae41d6b41b89bded7b34a9a7e9c45caa6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae41d6b41b89bded7b34a9a7e9c45caa6}} 
+\index{Expr@{Expr}!concat@{concat}}
+\index{concat@{concat}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily concat (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a CONCAT() function expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & First argument to be used in CONCAT() function. \\
+\hline
+mixed & {\em \$y,...} & Other arguments to be used in CONCAT() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a82244524f2115bd968dce653cad3cc1c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a82244524f2115bd968dce653cad3cc1c}} 
+\index{Expr@{Expr}!count@{count}}
+\index{count@{count}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an instance of COUNT() function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in COUNT() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_acba1a7707e9137d3aac5ba9c8fab259f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_acba1a7707e9137d3aac5ba9c8fab259f}} 
+\index{Expr@{Expr}!countDistinct@{countDistinct}}
+\index{countDistinct@{countDistinct}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{countDistinct()}{countDistinct()}}
+{\footnotesize\ttfamily count\+Distinct (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an instance of COUNT(\+DISTINCT) function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in COUNT(\+DISTINCT) function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1392cda0ab007b44143bbb519f8f2a68}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1392cda0ab007b44143bbb519f8f2a68}} 
+\index{Expr@{Expr}!desc@{desc}}
+\index{desc@{desc}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{desc()}{desc()}}
+{\footnotesize\ttfamily desc (\begin{DoxyParamCaption}\item[{}]{\$expr }\end{DoxyParamCaption})}
+
+Creates a DESCending order expression.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$expr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Order\+By 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ade09befd34804e5e593f5f88dae18e5e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ade09befd34804e5e593f5f88dae18e5e}} 
+\index{Expr@{Expr}!diff@{diff}}
+\index{diff@{diff}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}}
+{\footnotesize\ttfamily diff (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a difference mathematical expression with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ -\/ $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.monthlySubscriptionCount - 1
+$q->expr()->diff('u.monthlySubscriptionCount', '1')
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Math 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1c179a63f1e3011f8fac578a6965de91}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a1c179a63f1e3011f8fac578a6965de91}} 
+\index{Expr@{Expr}!eq@{eq}}
+\index{eq@{eq}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily eq (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an equality comparison expression with the given arguments.
+
+First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ = $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.id = ?1
+$expr->eq('u.id', '?1');
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a20e36c5ec6ebe2244024013b1fca1c34}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a20e36c5ec6ebe2244024013b1fca1c34}} 
+\index{Expr@{Expr}!exists@{exists}}
+\index{exists@{exists}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily exists (\begin{DoxyParamCaption}\item[{}]{\$subquery }\end{DoxyParamCaption})}
+
+Creates an instance of EXISTS() function, with the given DQL Subquery.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$subquery} & DQL Subquery to be used in EXISTS() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae6d39418d501036480581fb5d976d0ed}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae6d39418d501036480581fb5d976d0ed}} 
+\index{Expr@{Expr}!gt@{gt}}
+\index{gt@{gt}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{gt()}{gt()}}
+{\footnotesize\ttfamily gt (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison, with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ \texorpdfstring{$>$}{>} $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.id > ?1
+$q->where($q->expr()->gt('u.id', '?1'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa5a5e1a4f6ff04dfdaa8a8d0145c45f9}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa5a5e1a4f6ff04dfdaa8a8d0145c45f9}} 
+\index{Expr@{Expr}!gte@{gte}}
+\index{gte@{gte}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{gte()}{gte()}}
+{\footnotesize\ttfamily gte (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison, with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ \texorpdfstring{$>$}{>}= $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.id >= ?1
+$q->where($q->expr()->gte('u.id', '?1'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a5006edb7d50ec9c740061e7ce062de26}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a5006edb7d50ec9c740061e7ce062de26}} 
+\index{Expr@{Expr}!in@{in}}
+\index{in@{in}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{in()}{in()}}
+{\footnotesize\ttfamily in (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an IN() expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Field in string format to be restricted by IN() function. \\
+\hline
+mixed & {\em \$y} & Argument to be used in IN() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a2f2f36ee9e85be57d3c89fd8c56d0ba5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a2f2f36ee9e85be57d3c89fd8c56d0ba5}} 
+\index{Expr@{Expr}!isInstanceOf@{isInstanceOf}}
+\index{isInstanceOf@{isInstanceOf}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{isInstanceOf()}{isInstanceOf()}}
+{\footnotesize\ttfamily is\+Instance\+Of (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of INSTANCE OF function, with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Value to be checked \\
+\hline
+string & {\em \$y} & Value to be checked against\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a38c5cdb8e70771d4b28c56055c0dd29f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a38c5cdb8e70771d4b28c56055c0dd29f}} 
+\index{Expr@{Expr}!isMemberOf@{isMemberOf}}
+\index{isMemberOf@{isMemberOf}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{isMemberOf()}{isMemberOf()}}
+{\footnotesize\ttfamily is\+Member\+Of (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of MEMBER OF function, with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Value to be checked \\
+\hline
+string & {\em \$y} & Value to be checked against\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a5365df829c68cf2948884437e31bf4d8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a5365df829c68cf2948884437e31bf4d8}} 
+\index{Expr@{Expr}!isNotNull@{isNotNull}}
+\index{isNotNull@{isNotNull}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{isNotNull()}{isNotNull()}}
+{\footnotesize\ttfamily is\+Not\+Null (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an IS NOT NULL expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Field in string format to be restricted by IS NOT NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a542f14ac67027b3c4ca88691da4f112f}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a542f14ac67027b3c4ca88691da4f112f}} 
+\index{Expr@{Expr}!isNull@{isNull}}
+\index{isNull@{isNull}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily is\+Null (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an IS NULL expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Field in string format to be restricted by IS NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ade92de229f5ad099463cc1e9d9507471}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ade92de229f5ad099463cc1e9d9507471}} 
+\index{Expr@{Expr}!length@{length}}
+\index{length@{length}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily length (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates a LENGTH() function expression with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used as argument of LENGTH() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func A LENGTH function expression. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aaef87111d564662d98460c604cce7249}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aaef87111d564662d98460c604cce7249}} 
+\index{Expr@{Expr}!like@{like}}
+\index{like@{like}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{like()}{like()}}
+{\footnotesize\ttfamily like (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a LIKE() comparison expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Field in string format to be inspected by LIKE() comparison. \\
+\hline
+mixed & {\em \$y} & Argument to be used in LIKE() comparison.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa9f8a3d819d5b29ebe9faf9fa15ad99b}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aa9f8a3d819d5b29ebe9faf9fa15ad99b}} 
+\index{Expr@{Expr}!literal@{literal}}
+\index{literal@{literal}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{literal()}{literal()}}
+{\footnotesize\ttfamily literal (\begin{DoxyParamCaption}\item[{}]{\$literal }\end{DoxyParamCaption})}
+
+Creates a literal expression of the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$literal} & Argument to be converted to literal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Literal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a02f6f9dd6d92d79fd91cc07c5dcf2ba5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a02f6f9dd6d92d79fd91cc07c5dcf2ba5}} 
+\index{Expr@{Expr}!lower@{lower}}
+\index{lower@{lower}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{lower()}{lower()}}
+{\footnotesize\ttfamily lower (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates a LOWER() function expression with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in LOWER() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func A LOWER function expression. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ac75f1c9092d729cd0e593dbe4eaefee3}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ac75f1c9092d729cd0e593dbe4eaefee3}} 
+\index{Expr@{Expr}!lt@{lt}}
+\index{lt@{lt}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{lt()}{lt()}}
+{\footnotesize\ttfamily lt (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison, with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ \texorpdfstring{$<$}{<} $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.id < ?1
+$q->where($q->expr()->lt('u.id', '?1'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_af2e3ff4f2fc9c42741e6db3d70a0f45c}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_af2e3ff4f2fc9c42741e6db3d70a0f45c}} 
+\index{Expr@{Expr}!lte@{lte}}
+\index{lte@{lte}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{lte()}{lte()}}
+{\footnotesize\ttfamily lte (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison, with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ \texorpdfstring{$<$}{<}= $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.id <= ?1
+$q->where($q->expr()->lte('u.id', '?1'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aad186c745d76c5473107e07c2ffd8076}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aad186c745d76c5473107e07c2ffd8076}} 
+\index{Expr@{Expr}!max@{max}}
+\index{max@{max}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily max (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an instance of MAX() function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in MAX() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a6100aac6482ba43ef334d73b766a0bad}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a6100aac6482ba43ef334d73b766a0bad}} 
+\index{Expr@{Expr}!min@{min}}
+\index{min@{min}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily min (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an instance of MIN() function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in MIN() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a4f566cbea6662e62898a13b44135556a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a4f566cbea6662e62898a13b44135556a}} 
+\index{Expr@{Expr}!mod@{mod}}
+\index{mod@{mod}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{mod()}{mod()}}
+{\footnotesize\ttfamily mod (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a MOD(\$x, \$y) function expression to return the remainder of \$x divided by \$y.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & \\
+\hline
+mixed & {\em \$y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_adbfefd2c1da1eecf676c3e9f76a388b5}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_adbfefd2c1da1eecf676c3e9f76a388b5}} 
+\index{Expr@{Expr}!neq@{neq}}
+\index{neq@{neq}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{neq()}{neq()}}
+{\footnotesize\ttfamily neq (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates an instance of \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison, with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ \texorpdfstring{$<$}{<}\texorpdfstring{$>$}{>} $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.id <> ?1
+$q->where($q->expr()->neq('u.id', '?1'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae326881cd815ba8e88ce52819563bc58}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ae326881cd815ba8e88ce52819563bc58}} 
+\index{Expr@{Expr}!not@{not}}
+\index{not@{not}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{not()}{not()}}
+{\footnotesize\ttfamily not (\begin{DoxyParamCaption}\item[{}]{\$restriction }\end{DoxyParamCaption})}
+
+Creates a negation expression of the given restriction.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$restriction} & Restriction to be used in NOT() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a87cb092c529326983e263b0db898a793}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a87cb092c529326983e263b0db898a793}} 
+\index{Expr@{Expr}!notIn@{notIn}}
+\index{notIn@{notIn}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{notIn()}{notIn()}}
+{\footnotesize\ttfamily not\+In (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a NOT IN() expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Field in string format to be restricted by NOT IN() function. \\
+\hline
+mixed & {\em \$y} & Argument to be used in NOT IN() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a4a9cfe45355bd36eba768c1fe4bfda26}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a4a9cfe45355bd36eba768c1fe4bfda26}} 
+\index{Expr@{Expr}!notLike@{notLike}}
+\index{notLike@{notLike}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{notLike()}{notLike()}}
+{\footnotesize\ttfamily not\+Like (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a NOT LIKE() comparison expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$x} & Field in string format to be inspected by LIKE() comparison. \\
+\hline
+mixed & {\em \$y} & Argument to be used in LIKE() comparison.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a27afaa0677da87f83b0b481e045a80dd}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a27afaa0677da87f83b0b481e045a80dd}} 
+\index{Expr@{Expr}!orX@{orX}}
+\index{orX@{orX}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{orX()}{orX()}}
+{\footnotesize\ttfamily orX (\begin{DoxyParamCaption}\item[{}]{\$x = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Creates a disjunction of the given boolean expressions.
+
+Example\+: \begin{DoxyVerb}[php]
+// (u.type = ?1) OR (u.role = ?2)
+$q->where($q->expr()->orX('u.type = ?1', 'u.role = ?2'));
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+Expr\textbackslash{}\+Comparison | Expr\textbackslash{}\+Func | Expr\textbackslash{}\+Andx | Expr\textbackslash{}\+Orx | string & {\em \$x} & Optional clause. Defaults to null, but requires at least one defined when converting to string. @psalm-\/param \mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Comparison$\vert$\+Expr\textbackslash{}\+Func$\vert$\+Expr\textbackslash{}\+Andx$\vert$\+Expr\textbackslash{}\+Orx$\vert$string ...\$x\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Orx 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ad02f311399703e62b63ded3bf18eb861}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_ad02f311399703e62b63ded3bf18eb861}} 
+\index{Expr@{Expr}!prod@{prod}}
+\index{prod@{prod}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{prod()}{prod()}}
+{\footnotesize\ttfamily prod (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a product mathematical expression with the given arguments.
+
+First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ $\ast$ $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.salary * u.percentAnnualSalaryIncrease
+$q->expr()->prod('u.salary', 'u.percentAnnualSalaryIncrease')
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Math 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a9c940a84d6d8fd5811b79019354593f6}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a9c940a84d6d8fd5811b79019354593f6}} 
+\index{Expr@{Expr}!quot@{quot}}
+\index{quot@{quot}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{quot()}{quot()}}
+{\footnotesize\ttfamily quot (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a quotient mathematical expression with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ / $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.total / u.period
+$expr->quot('u.total', 'u.period')
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Math 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aafc5719ca3abec5671f8158b8a4f5f6a}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aafc5719ca3abec5671f8158b8a4f5f6a}} 
+\index{Expr@{Expr}!some@{some}}
+\index{some@{some}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{some()}{some()}}
+{\footnotesize\ttfamily some (\begin{DoxyParamCaption}\item[{}]{\$subquery }\end{DoxyParamCaption})}
+
+Creates a SOME() function expression with the given DQL subquery.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$subquery} & DQL Subquery to be used in SOME() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_acb2a9beed2514545f730966fc843b44e}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_acb2a9beed2514545f730966fc843b44e}} 
+\index{Expr@{Expr}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{sqrt()}{sqrt()}}
+{\footnotesize\ttfamily sqrt (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates a SQRT() function expression with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in SQRT() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a2f46bf98f9095699ce5a05c7b51031a8}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a2f46bf98f9095699ce5a05c7b51031a8}} 
+\index{Expr@{Expr}!substring@{substring}}
+\index{substring@{substring}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{substring()}{substring()}}
+{\footnotesize\ttfamily substring (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$from,  }\item[{}]{\$len = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Creates a SUBSTRING() function expression with the given arguments.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used as string to be cropped by SUBSTRING() function. \\
+\hline
+int & {\em \$from} & Initial offset to start cropping string. May accept negative values. \\
+\hline
+int | null & {\em \$len} & Length of crop. May accept negative values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aacca8626c8d1840c2c92d061b4428627}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aacca8626c8d1840c2c92d061b4428627}} 
+\index{Expr@{Expr}!sum@{sum}}
+\index{sum@{sum}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily sum (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+Creates a sum mathematical expression with the given arguments. First argument is considered the left expression and the second is the right expression. When converted to string, it will generated a $<$left expr$>$ + $<$right expr$>$. Example\+: \begin{DoxyVerb}[php]
+// u.numChildren + 1
+$q->expr()->sum('u.numChildren', '1')
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Left expression. \\
+\hline
+mixed & {\em \$y} & Right expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Math 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aca8928b42dbf2f6860cc00ea3c696575}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_aca8928b42dbf2f6860cc00ea3c696575}} 
+\index{Expr@{Expr}!trim@{trim}}
+\index{trim@{trim}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily trim (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an instance of TRIM() function, with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used as argument of TRIM() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func a TRIM expression. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a7dd2e86f6a4a1543a6b6ffecc78d9bf7}\label{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr_a7dd2e86f6a4a1543a6b6ffecc78d9bf7}} 
+\index{Expr@{Expr}!upper@{upper}}
+\index{upper@{upper}!Expr@{Expr}}
+\doxysubsubsection{\texorpdfstring{upper()}{upper()}}
+{\footnotesize\ttfamily upper (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+Creates an UPPER() function expression with the given argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$x} & Argument to be used in UPPER() function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_doctrine_1_1_o_r_m_1_1_query_1_1_expr}{Expr}}\textbackslash{}\+Func An UPPER function expression. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/doctrine/orm/lib/\+Doctrine/\+ORM/\+Query/Expr.\+php\end{DoxyCompactItemize}

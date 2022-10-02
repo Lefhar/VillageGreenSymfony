@@ -1,0 +1,50 @@
+\hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response}{}\doxysection{Decompress\+Response Class Reference}
+\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response}\index{DecompressResponse@{DecompressResponse}}
+Inheritance diagram for Decompress\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response_a21313999056388b905ec44c70899f2b7}{request\+Via\+Network}} (\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} \$request, \mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} \$cancellation, \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream}{Stream}} \$stream)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response_a21313999056388b905ec44c70899f2b7}\label{class_amp_1_1_http_1_1_client_1_1_interceptor_1_1_decompress_response_a21313999056388b905ec44c70899f2b7}} 
+\index{DecompressResponse@{DecompressResponse}!requestViaNetwork@{requestViaNetwork}}
+\index{requestViaNetwork@{requestViaNetwork}!DecompressResponse@{DecompressResponse}}
+\doxysubsubsection{\texorpdfstring{requestViaNetwork()}{requestViaNetwork()}}
+{\footnotesize\ttfamily request\+Via\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}}}]{\$cancellation,  }\item[{\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_connection_1_1_stream}{Stream}}}]{\$stream }\end{DoxyParamCaption})}
+
+Intercepts an HTTP request after the connection to the remote server has been established.
+
+The implementation might modify the request and/or modify the response after the promise returned from {\ttfamily \$stream-\/\texorpdfstring{$>$}{>}request(...)} resolved.
+
+A \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor}{Network\+Interceptor}} SHOULD NOT short-\/circuit and SHOULD delegate to the {\ttfamily \$stream} passed as third argument exactly once. The only exception to this is throwing an exception, e.\+g. because the TLS settings used are unacceptable. If you need short circuits, use an \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_application_interceptor}{Application\+Interceptor}}\} instead.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_amp_1_1_http_1_1_client_1_1_request}{Request}} & {\em \$request} & \\
+\hline
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} & {\em \$cancellation} & \\
+\hline
+Stream & {\em \$stream} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promise$<$\+Response$>$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_amp_1_1_http_1_1_client_1_1_network_interceptor_a21313999056388b905ec44c70899f2b7}{Network\+Interceptor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/http-\/client/src/\+Interceptor/Decompress\+Response.\+php\end{DoxyCompactItemize}

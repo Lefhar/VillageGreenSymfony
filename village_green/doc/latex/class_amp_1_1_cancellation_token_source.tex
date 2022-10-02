@@ -1,0 +1,68 @@
+\hypertarget{class_amp_1_1_cancellation_token_source}{}\doxysection{Cancellation\+Token\+Source Class Reference}
+\label{class_amp_1_1_cancellation_token_source}\index{CancellationTokenSource@{CancellationTokenSource}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_amp_1_1_cancellation_token_source_a211a2979c22afcd7d9056a2bb55aa449}\label{class_amp_1_1_cancellation_token_source_a211a2979c22afcd7d9056a2bb55aa449}} 
+{\bfseries get\+Token} ()
+\item 
+\mbox{\hyperlink{class_amp_1_1_cancellation_token_source_a1a989fb48736d610ba88eec819ff9f20}{cancel}} (\textbackslash{}Throwable \$previous=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A cancellation token source provides a mechanism to cancel operations.
+
+Cancellation of operation works by creating a cancellation token source and passing the corresponding token when starting the operation. To cancel the operation, invoke {\ttfamily \mbox{\hyperlink{class_amp_1_1_cancellation_token_source_a1a989fb48736d610ba88eec819ff9f20}{Cancellation\+Token\+Source\+::cancel()}}}.
+
+Any operation can decide what to do on a cancellation request, it has \char`\"{}don\textquotesingle{}t care\char`\"{} semantics. An operation SHOULD be aborted, but MAY continue. Example\+: A DNS client might continue to receive and cache the response, as the query has been sent anyway. An HTTP client would usually close a connection, but might not do so in case a response is close to be fully received to reuse the connection.
+
+{\bfseries{Example}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$tokenSource = \textcolor{keyword}{new} CancellationTokenSource;}
+\DoxyCodeLine{\$token = \$tokenSource-\/>getToken();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$response = yield \$httpClient-\/>request(\textcolor{stringliteral}{"{}https://example.com/stream"{}}, \$token);}
+\DoxyCodeLine{\$responseBody = \$response-\/>getBody();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while} ((\$chunk = yield \$response-\/>read()) !== \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{    \textcolor{comment}{// consume \$chunk}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\$noLongerInterested) \{}
+\DoxyCodeLine{        \$cancellationTokenSource-\/>cancel();}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_amp_1_1_cancellation_token}{Cancellation\+Token}} 
+
+\mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_amp_1_1_cancellation_token_source_a1a989fb48736d610ba88eec819ff9f20}\label{class_amp_1_1_cancellation_token_source_a1a989fb48736d610ba88eec819ff9f20}} 
+\index{CancellationTokenSource@{CancellationTokenSource}!cancel@{cancel}}
+\index{cancel@{cancel}!CancellationTokenSource@{CancellationTokenSource}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily cancel (\begin{DoxyParamCaption}\item[{\textbackslash{}Throwable}]{\$previous = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Throwable | null & {\em \$previous} & Exception to be used as the previous exception to \mbox{\hyperlink{class_amp_1_1_cancelled_exception}{Cancelled\+Exception}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/amphp/amp/lib/Cancellation\+Token\+Source.\+php\end{DoxyCompactItemize}
