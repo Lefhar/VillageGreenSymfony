@@ -18,9 +18,9 @@ class FactureController extends AbstractController
 
     public function facturePdf(Pdf $knpSnappyPdf, Orders $order, CustomersRepository $cust)
     {
-        if ($order->getCustomer() !== $cust->findOneBy(['users' => $this->getUser()]) and $this->getUser()->getRoles() == "ROLE_USER") {
-            return $this->redirectToRoute('accueil');
-        }
+//        if ($order->getCustomer() !== $cust->findOneBy(['users' => $this->getUser()]) and $this->getUser()->getRoles() == "ROLE_USER") {
+//            return $this->redirectToRoute('accueil');
+//        }
         $html = $this->renderView('facture/index.html.twig', array(
             'order' => $order
         ));
