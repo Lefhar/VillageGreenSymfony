@@ -26,7 +26,7 @@ class FactureController extends AbstractController
         ));
         return new PdfResponse(
             $knpSnappyPdf->getOutputFromHtml($html),
-            'facture-numero-' . $order->getId() . '.pdf'
+            'facture_numero_'. $order->getId().'.pdf'
         );
     }
 
@@ -36,10 +36,10 @@ class FactureController extends AbstractController
 
     public function facture(Orders $order, CustomersRepository $cust): Response
     {
-        if ($order->getCustomer() !== $cust->findOneBy(['users' => $this->getUser()]) and !in_array("ROLE_ADMIN", $this->getUser()->getRoles())) {
-
-            return $this->redirectToRoute('accueil');
-        }
+//        if ($order->getCustomer() !== $cust->findOneBy(['users' => $this->getUser()]) and !in_array("ROLE_ADMIN", $this->getUser()->getRoles())) {
+//
+//            return $this->redirectToRoute('accueil');
+//        }
         return $this->render('facture/index.html.twig', [
                 'order' => $order
             ]
