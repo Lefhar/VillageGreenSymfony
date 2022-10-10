@@ -17,7 +17,6 @@ class FactureController extends AbstractController
      * @IsGranted("ROLE_USER")
      * @Route("/facture/pdf/{order}", name="facturePdf")
      */
-
     public function facturePdf(Pdf $knpSnappyPdf, Orders $order)
     {
         if ($order->getCustomer()->getUsers() !== $this->getUser()) {
@@ -31,12 +30,12 @@ class FactureController extends AbstractController
             'facture_numero_'. $order->getId().'.pdf'
         );
     }
+
     /**
      * @IsGranted("ROLE_ADMIN")
      * @Route("/facture/pdfadmin/{order}", name="facturePdfadmin")
      */
-
-    public function factureAdminPdf(Pdf $knpSnappyPdf, Orders $order)
+    public function factureAdminPdf(Pdf $knpSnappyPdf, Orders $order): PdfResponse
     {
 
         $html = $this->renderView('facture/index.html.twig', array(
@@ -52,7 +51,6 @@ class FactureController extends AbstractController
      * @isGranted("ROLE_USER")
      * @Route("/facture/vu/{order}", name="facture")
      */
-
     public function facture(Orders $order, CustomersRepository $cust): Response
     {
         if ($order->getCustomer() !== $cust->findOneBy(['users' => $this->getUser()]) and !in_array("ROLE_ADMIN", $this->getUser()->getRoles())) {
