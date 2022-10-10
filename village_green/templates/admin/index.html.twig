@@ -29,7 +29,7 @@
                         {% endfor %}
                         <p>Nombre d'articles : {{ quantite }}</p>
                         <p>Pour un total de <span class="text-success"> {{ total }}€</span> </p>
-                        <p><a class="btn btn-info" href="{{ path('facturePdf',{order:rowOrder.id}) }}" download>Télécharger
+                        <p><a class="btn btn-info" href="{{ path('facturePdfadmin',{order:rowOrder.id}) }}" download>Télécharger
                                 la facture
                                 <i class="fa fa-file-pdf-o fa-2x text-danger bg-light"></i>
                             </a>
