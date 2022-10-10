@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>facture</title>
+    <title>Tuto tableau</title>
     <style>
         body {
             /*font-size: 20px;*/
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 1.5;
@@ -85,10 +86,11 @@
 <body>
 <div class="container">
     <div class="entreprise">
-        <a class="LinkLogo" href="{{ app.request.schemeAndHttpHost|replace({'http://':'https://'}) }}">
+        <a class="LinkLogo" href="/">
             <span class="textLogo bgcaddie">Village</span><i class="fa fa-solid fa-guitar"></i><span
                     class="textLogo text-dark">Green</span>
         </a>
+
         <p>10 rue de la guitare</p>
         <p>80000 Amiens</p>
     </div>
@@ -99,11 +101,15 @@
         <p>{{ order.LivesBilling.address }}  </p>
         <p>{{ order.LivesBilling.zipcode }} {{ order.LivesBilling.city|capitalize }}
             {{ order.LivesBilling.country|capitalize }} </p>
+        </p>
         <p><strong>Téléphone :</strong> {{ order.customer.telephone }} </p>
         <p><strong>Email :</strong> {{ order.customer.users.email }} </p>
         <p><strong>Date :</strong> {{ order.orderDate|date('Y-m-d h:i:s') }} </p>
+
     </div>
 </div>
+
+
 <table class="table-facture">
     <caption>Facture n°{{ order.id }}</caption>
     <thead>
@@ -118,6 +124,7 @@
     {% set quantite = 0 %}
     {% for row in order.ordersDetails %}
         <tr>
+
             <td class="fld-log">{{ row.product.catprod.name }} {{ row.product.name }}</td>
             <td class="fld-num">{{ row.quantite }}</td>
             <td class="lib-acti">{{ row.unitPrice|number_format(2, '.', ' ') }}€</td>
@@ -125,6 +132,7 @@
         {% set total = total + row.unitPrice * row.quantite %}
     {% endfor %}
     </tbody>
+
     <tfoot>
     <tr>
         <th colspan="2">Sous Total HT</th>
@@ -135,6 +143,7 @@
         {% set tva = total *0.2 %}
         <td class="lib-acti">{{ tva|number_format(2, '.', ' ') }}€</td>
     </tr>
+
     <tr>
         <th colspan="2">Total TTC</th>
         <td class="lib-acti">{{ (total + tva)|number_format(2, '.', ' ') }}€</td>
